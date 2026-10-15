@@ -33,4 +33,4 @@ Fix findings or record why they're wrong in the lesson's PR.
 3. Re-run layer 1, then layer 2 for every cite into a changed law (`grep -rn '"<key>:' src/content src/data`).
 
 ## 5. Human review
-Only a qualified person (certified driving instructor or someone with equivalent expertise) adds a `reviewed: [{by, date, scope}]` entry to a lesson's frontmatter. Unreviewed lessons show a notice to learners. Reports from learners arrive as GitHub issues via the footer link.
+Only a qualified person (certified driving instructor or someone with equivalent expertise) adds a `reviewed: [{by, date, scope}]` entry to a lesson's frontmatter. Unreviewed lessons show a notice to learners. Reports from learners arrive as GitHub issues via the report link (page footer, home page, About).

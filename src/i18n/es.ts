@@ -5,7 +5,7 @@ export const es = {
   nav: {
     home: 'Curso',
     review: 'Repaso',
-    exam: 'Examen de práctica',
+    exam: 'Examen',
     notes: 'Notas',
     glossary: 'Glosario',
     progress: 'Mi progreso',

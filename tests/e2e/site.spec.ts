@@ -67,6 +67,20 @@ test('the home page counts the questions of a lesson whose latest answer is corr
   await expect(score).toHaveText(/^1 \/ \d+$/);
 });
 
+test('on a phone each lesson row puts a labelled score and read status under the title', async ({ page }) => {
+  await page.setViewportSize({ width: 375, height: 800 });
+  await page.goto(LESSON);
+  await page.locator('.qa-mark-done').check();
+  await page.goto('/es/');
+  const read = page.locator(`.qa-lesson-row:has(a.qa-lesson-link[href$="${LESSON}"])`);
+  await expect(read).toContainText(/Correctas: \d+ \/ \d+/);
+  await expect(read).toContainText('Leída');
+  const title = await read.locator('.qa-lesson-link').boundingBox();
+  const score = await read.locator('.qa-lesson-score').boundingBox();
+  expect(score!.y).toBeGreaterThan(title!.y + title!.height - 1);
+  await expect(page.locator('.qa-lesson-row').nth(1).locator('.qa-unread')).toBeVisible();
+});
+
 test('the theme toggle switches to dark mode and the choice survives a reload', async ({ page }) => {
   await page.emulateMedia({ colorScheme: 'light' });
   await page.goto('/es/');
@@ -76,6 +90,23 @@ test('the theme toggle switches to dark mode and the choice survives a reload', 
   await expect(html).toHaveAttribute('data-theme', 'dark');
   await page.reload();
   await expect(html).toHaveAttribute('data-theme', 'dark');
+});
+
+test('the nav marks the current section: Curso on a lesson, Glosario on the glossary', async ({ page }) => {
+  await page.goto(LESSON);
+  await expect(page.locator('.qa-nav-active')).toHaveCount(1);
+  await expect(page.locator('.qa-nav-active')).toHaveAttribute('href', '/es/');
+  await page.goto('/es/glosario/');
+  await expect(page.locator('.qa-nav-active')).toHaveCount(1);
+  await expect(page.locator('.qa-nav-active')).toHaveAttribute('href', '/es/glosario/');
+  await expect(page.locator('.qa-nav-active')).toHaveAttribute('aria-current', 'page');
+});
+
+test('every page links the favicon', async ({ page }) => {
+  await page.goto('/es/');
+  const icon = await page.locator('link[rel="icon"][type="image/svg+xml"]').getAttribute('href');
+  const res = await page.request.get(icon!);
+  expect(await res.text()).toContain('#ea580c');
 });
 
 test('a lesson note survives a reload and is listed on the notes page', async ({ page }) => {

@@ -18,6 +18,7 @@ src/
   components/            Astro components for MDX + Preact islands
   components/diagram/    parametric SVG junctions (Preact, render on server and inside quizzes)
   i18n/es.ts             UI strings
+  styles/                global.css (theme, `tooltip` utility, lesson prose), dark.css (dark palette)
   pages/es/...           routes; / redirects to /es/
 public/signs/<code>.webp official RVV bijlage 1 images
 public/img/              reviewed AI scene images
@@ -41,6 +42,16 @@ docs/                    this folder
 - `<Img src alt caption />` -> reviewed AI image from `public/img/`, marked as illustrative.
 - `<Check id="..." />` -> one practice question inline in the prose, by its global id.
 - The lesson's quiz file renders after the lesson automatically.
+
+## UI
+- Dark mode: `Layout.astro` sets `data-theme` on `<html>` before first paint (stored choice in localStorage `rijtheorie:theme`, else the OS setting); the header toggle flips it. `dark.css` redefines the Tailwind color variables under `[data-theme='dark']` by reversing each scale (50↔950 ...), so ordinary utilities like `bg-white`/`text-slate-700` need no `dark:` variants. Junction SVGs and sign images keep their own colors. The toggle adds `.theme-fade` for 500ms so colors fade.
+- Phones (< 40rem): `global.css` shrinks `--text-xl/2xl/3xl` so headings wrap less.
+- Nav: the link with the longest matching path prefix is marked `aria-current="page"` (lessons mark "Curso").
+- Favicon: `public/favicon.svg` (Bootstrap car-front on brand orange); `favicon.ico` and `apple-touch-icon.png` are renders of it.
+- Icons: Bootstrap Icons font (`<i class="bi bi-...">`), imported in `Layout.astro`.
+- `class="tooltip" data-tip="..."` (utility in `global.css`) shows a hover/focus bubble; not shown on touch, so never put essential info only there.
+- Unofficial-course notices: the amber `.qa-disclaimer` box on the home page, the About page, and the per-lesson "not reviewed" notice. The footer holds only the report link.
+- Home page: one `ChapterTable` island per chapter (lessons, questions whose latest answer is correct / total, read check). A CSS grid list: three columns from `sm` up, two lines per lesson on phones.
 
 ## Client state
 - `src/lib/store.ts`: one versioned JSON blob in localStorage (`rijtheorie:v1`), accessed only through the `Store` interface so a synced backend can replace it. Holds per-question answer records with Leitner boxes, a log of the last 500 graded answers, lessons done, notes, mock exams and placement tests. Export/import as a JSON file on the "Mi progreso" page.

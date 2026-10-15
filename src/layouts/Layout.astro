@@ -16,6 +16,8 @@ const nav = [
   ['es/progreso/', es.nav.progress, 'bi-graph-up'],
   ['es/acerca/', es.nav.about, 'bi-info-circle'],
 ] as const;
+// Longest matching prefix wins, so lesson pages (under /es/<chapter>/) highlight "Curso".
+const current = nav.map(([p]) => href(p)).filter((p) => Astro.url.pathname.startsWith(p)).sort((a, b) => b.length - a.length)[0];
 ---
 
 <html lang="es">
@@ -24,6 +26,9 @@ const nav = [
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title === SITE_NAME ? title : `${title} | ${SITE_NAME}`}</title>
     {description && <meta name="description" content={description} />}
+    <link rel="icon" href={href('favicon.svg')} type="image/svg+xml" />
+    <link rel="icon" href={href('favicon.ico')} sizes="32x32" />
+    <link rel="apple-touch-icon" href={href('apple-touch-icon.png')} />
     <script is:inline>
       // Before first paint, so the page never flashes the wrong theme. No stored choice: follow the OS.
       let theme = null;
@@ -35,12 +40,15 @@ const nav = [
     <header class="border-b border-slate-200 bg-white">
       <div class="mx-auto flex max-w-4xl flex-wrap items-center gap-x-4 gap-y-2 px-4 py-3">
         <a href={href('es/')} class="font-bold text-brand-700">{SITE_NAME}</a>
-        <nav class="flex flex-wrap gap-x-3 gap-y-1 text-sm">
-          {nav.map(([p, label, icon]) => <a class="text-slate-600 hover:text-brand-700" href={href(p)}><i class={`bi ${icon} mr-1`} aria-hidden="true"></i>{label}</a>)}
-        </nav>
         <button type="button" id="theme-toggle" class="qa-theme-toggle ml-auto rounded-lg px-2 py-1 text-lg text-slate-600 hover:bg-slate-100" aria-label={es.theme}>
           <i class="bi bi-moon-fill dark:hidden" aria-hidden="true"></i><i class="bi bi-sun-fill hidden dark:inline" aria-hidden="true"></i>
         </button>
+        <nav class="flex w-full flex-wrap gap-x-3 gap-y-3 text-sm sm:gap-y-1">
+          {nav.map(([p, label, icon]) => {
+            const active = href(p) === current;
+            return <a class:list={['qa-nav-link hover:text-brand-700', active ? 'qa-nav-active font-semibold text-brand-700 underline decoration-2 underline-offset-6' : 'text-slate-600']} aria-current={active ? 'page' : undefined} href={href(p)}><i class={`bi ${icon} mr-1`} aria-hidden="true"></i>{label}</a>;
+          })}
+        </nav>
       </div>
     </header>
     <div id="storage-banner" class="qa-storage-banner hidden bg-red-100 px-4 py-2 text-center text-sm text-red-900">{es.storage}</div>
@@ -61,6 +69,9 @@ const nav = [
       }
       document.getElementById('theme-toggle')!.addEventListener('click', () => {
         const root = document.documentElement;
+        // .theme-fade (global.css) transitions colors only while switching, so hovers elsewhere stay instant.
+        root.classList.add('theme-fade');
+        setTimeout(() => root.classList.remove('theme-fade'), 500);
         root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
         try { localStorage.setItem('rijtheorie:theme', root.dataset.theme); } catch {}
       });

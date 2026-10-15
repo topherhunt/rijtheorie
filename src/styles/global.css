@@ -11,6 +11,25 @@
   --color-brand-900: #7c2d12;
 }
 
+/* Phones: smaller large text sizes (mostly headings) so titles wrap less, like Bootstrap's responsive font sizes. */
+@media (width < 40rem) {
+  :root {
+    --text-3xl: 1.625rem;
+    --text-2xl: 1.375rem;
+    --text-xl: 1.1875rem;
+  }
+}
+
+/* Added by the theme toggle for 500ms so the switch fades instead of blinking. */
+@media (prefers-reduced-motion: no-preference) {
+  .theme-fade,
+  .theme-fade *,
+  .theme-fade *::before,
+  .theme-fade *::after {
+    transition: color 0.5s, background-color 0.5s, border-color 0.5s, outline-color 0.5s, text-decoration-color 0.5s, fill 0.5s, stroke 0.5s !important;
+  }
+}
+
 /* `class="tooltip" data-tip="..."`: black bubble above the element on hover or keyboard focus. */
 @utility tooltip {
   position: relative;
@@ -31,6 +50,9 @@
     pointer-events: none;
     opacity: 0;
     transition: opacity 0.15s;
+  }
+  [data-theme='dark'] &::after {
+    outline: 1px solid #64748b;
   }
   &:hover::after,
   &:focus-visible::after {

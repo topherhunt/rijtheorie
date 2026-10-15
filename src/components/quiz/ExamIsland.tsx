@@ -96,9 +96,10 @@ export default function ExamIsland({ pool, all, lessonCount }: { pool: ClientQue
       <div class="rounded-xl border border-slate-200 bg-white p-4">
         <h2 class="text-lg font-bold">🔒 El examen de práctica está bloqueado</h2>
         <p class="mt-2 text-slate-700">
-          Aprobar el examen del CBR no basta para conducir bien: hay muchas reglas que el examen casi no pregunta. Aquí el examen de práctica se desbloquea solo cuando demuestras que dominas <strong>todo</strong> el curso.
+          Aprobar el examen del CBR no basta para conducir bien: hay muchas reglas que el examen casi no pregunta. Aquí el examen de práctica se desbloquea solo cuando demuestras que dominas <strong>todo</strong> el curso. Hay <strong>dos formas</strong> de hacerlo; basta con una.
         </p>
-        <ul class="mt-3 flex flex-col gap-1">
+        <h3 class="mt-4 font-semibold">Forma 1: cumple las <strong>cuatro</strong> condiciones</h3>
+        <ul class="mt-2 flex flex-col gap-1">
           <CheckRow qa="coverage" c={g.coverage} label="Has respondido todas las preguntas del curso" />
           <CheckRow qa="last" c={g.lastCorrect} label="Tu última respuesta en cada pregunta es correcta" />
           <CheckRow qa="accuracy" c={g.accuracy} label={`De tus últimas ${GATE.window} respuestas, al menos ${Math.ceil(GATE.window * GATE.minAccuracy)} son correctas`} />
@@ -106,7 +107,7 @@ export default function ExamIsland({ pool, all, lessonCount }: { pool: ClientQue
         </ul>
       </div>
       <div class="rounded-xl border border-slate-200 bg-white p-4">
-        <h2 class="text-lg font-bold">¿Ya sabes todo? Haz la prueba de nivel</h2>
+        <h3 class="text-lg font-bold">Forma 2: ¿ya sabes todo? Aprueba la prueba de nivel</h3>
         <p class="mt-2 text-slate-700">
           {pn} preguntas, al menos una de cada lección. Tienes que acertar <strong>todas</strong>. Si fallas una, podrás intentarlo de nuevo en {GATE.placementCooldownHours} horas; mientras tanto, repasa las lecciones.
         </p>
