@@ -1,0 +1,76 @@
+questions:
+  - id: adelantado-no-acelerar
+    type: mc
+    prompt: "Un auto empieza a adelantarte. ¿Qué haces con tu velocidad?"
+    options: [No la aumento, La aumento para que pase rápido, La aumento solo en rectas, Freno hasta parar]
+    answer: 0
+    explain: "Según la Rijprocedure B, al ser adelantado no se aumenta la velocidad."
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: adelantado-lado
+    type: mc
+    prompt: "Te adelantan por la izquierda y hay espacio a tu derecha. ¿Qué haces, si hace falta?"
+    options: [Me aparto a la derecha, Me aparto a la izquierda, Me quedo exactamente donde estoy, Cruzo al carril contrario]
+    answer: 0
+    explain: "Si te adelantan por la izquierda, te apartas a la derecha si es necesario y posible."
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: adelantado-peligro
+    type: yesno
+    prompt: "Un auto quiere adelantarte, pero el espacio es tan poco que podría ser peligroso. ¿Puedes ir de modo que adelantarte sea imposible?"
+    answer: true
+    explain: "Sí, pero solo cuando al ser adelantado pudiera surgir una situación peligrosa."
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: adelantado-contra
+    type: multi
+    prompt: "Mientras te adelantan, el tráfico que viene de frente está en peligro. ¿Qué puedes hacer tú, el adelantado?"
+    options: [Bajar la velocidad, Apartarte, Parar si hace falta, Acelerar para que pase antes]
+    answer: [0, 1, 2]
+    explain: "Debes tratar de eliminar la situación: bajar la velocidad, apartarte o parar. Acelerar contradice la regla de no aumentar la velocidad."
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: adelantado-motos
+    type: mc
+    prompt: "Circulas lento en una fila y una moto se acerca por el lado. ¿Qué haces?"
+    options: ['No reduzco el espacio y, si puedo, lo amplío', Me pego a un lado, Cierro el hueco, Toco la bocina]
+    answer: 0
+    explain: "Las motos adelantan por la izquierda o la derecha según el espacio. Hay que sentarse de modo que no se reduzca, y si es posible ampliarlo."
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: tegemoetkomen-definicion
+    type: mc
+    prompt: "¿Cuándo se habla de tegemoetkomen en la Rijprocedure B?"
+    options: [Cuando el espacio no alcanza para pasarse sin molestias, Siempre que pasa un auto de frente, Solo en autopistas, Solo con ciclistas]
+    answer: 0
+    explain: "Solo si el espacio disponible no alcanza para pasarse sin molestias."
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: tegemoetkomen-velocidad
+    type: mc
+    prompt: "¿De qué depende sobre todo cuánto bajas la velocidad al cruzarte con un vehículo?"
+    options: [Del ancho de la calzada, Del color del vehículo, Del tipo de neumáticos, De la hora]
+    answer: 0
+    explain: "Depende sobre todo del ancho de la calzada."
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: tegemoetkomen-contacto
+    type: yesno
+    prompt: "La calzada es demasiado estrecha para pasar a la vez que otro auto. ¿Puedes parar y resolverlo con contacto visual o gestos?"
+    answer: true
+    explain: "Es lo que indica la Rijprocedure B si el ancho no permite continuar."
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: tegemoetkomen-obligacion
+    type: yesno
+    prompt: "Al cruzarte con otro vehículo en poco espacio, ¿tiene solo uno de los dos la obligación de evitar el peligro?"
+    answer: false
+    explain: "Ambos conductores tienen la misma obligación (art. 5 WVW) uno hacia el otro."
+    cites: ["cbr-rijprocedure:3.2", "wvw:5"]
+
+  - id: tegemoetkomen-derecha
+    type: yesno
+    prompt: "Al apartarte a la derecha para cruzarte con otro vehículo, ¿debes tener en cuenta a quienes están en el lado derecho de la vía?"
+    answer: true
+    explain: "Sí, hay que tener en cuenta a los usuarios que están a ese lado de la vía."
+    cites: ["cbr-rijprocedure:3.2"]

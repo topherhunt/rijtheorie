@@ -1,0 +1,89 @@
+questions:
+  - id: permisos-y-controles-rijverbod
+    type: mc
+    prompt: ¿Qué es un "rijverbod"?
+    options: [Una prohibición inmediata de conducir, Un permiso nuevo, Una multa de estacionamiento, Un curso]
+    answer: 0
+    explain: Rijverbod es la prohibición inmediata de conducir (hasta 24 horas, impuesta por la policía).
+    cites: ["cbr-examenplan:4", "wvw:162"]
+    exam: false
+
+  - id: permisos-y-controles-rijontzegging
+    type: mc
+    prompt: ¿Qué es una "rijontzegging"?
+    options: [La retirada del derecho a conducir por un juez, Un curso del CBR, Un examen práctico, Una multa de velocidad]
+    answer: 0
+    explain: Rijontzegging es la prohibición de conducir impuesta por un juez.
+    cites: ["cbr-examenplan:4", "wvw:179"]
+    exam: false
+
+  - id: permisos-y-controles-ademanalyse
+    type: mc
+    prompt: ¿Qué es una "ademanalyse"?
+    options: [Un análisis de aliento, Un análisis de sangre, Una prueba de saliva, Un examen de la vista]
+    answer: 0
+    explain: Ademanalyse es el análisis de aliento.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: permisos-y-controles-speeksel
+    type: mc
+    prompt: ¿Qué detecta la "speekseltest"?
+    options: [Drogas, Alcohol, Fatiga, Velocidad]
+    answer: 0
+    explain: La prueba de saliva se usa para drogas.
+    cites: ["cbr-examenplan:4", "wvw:160.5"]
+    exam: false
+
+  - id: permisos-y-controles-kentekenplaat
+    type: mc
+    prompt: ¿Qué es la "kentekenplaat"?
+    options: [La placa de matrícula, El permiso de conducir, El seguro, La inspección técnica]
+    answer: 0
+    explain: Kentekenplaat es la placa con el kenteken.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: permisos-y-controles-apk
+    type: mc
+    prompt: ¿Qué significa "APK-gekeurd"?
+    options: [Con la inspección técnica aprobada, Con el seguro pagado, Con permiso nuevo, Recién matriculado]
+    answer: 0
+    explain: APK-gekeurd significa que pasó la inspección APK.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: permisos-y-controles-emg
+    type: mc
+    prompt: ¿Qué es la EMG?
+    options: [Un curso obligatorio sobre comportamiento en el tráfico, Un curso sobre alcohol y tráfico, Un examen práctico, Una multa]
+    answer: 0
+    explain: EMG es la Educatieve maatregel gedrag en verkeer.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: permisos-y-controles-lema
+    type: mc
+    prompt: ¿Qué es la EMA/LEMA?
+    options: [Un curso obligatorio sobre alcohol y tráfico, Un curso sobre velocidad, Una prueba de drogas, Un permiso]
+    answer: 0
+    explain: LEMA/EMA es la Educatieve maatregel alcohol en verkeer.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: permisos-y-controles-blaastest
+    type: yesno
+    prompt: ¿"Blaastest" es la prueba de soplar en el control de alcohol?
+    answer: true
+    explain: Blaastest es el alcoholímetro rápido.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: permisos-y-controles-politiebureau
+    type: mc
+    prompt: ¿Qué es un "politiebureau"?
+    options: [Una comisaría, Un auto de policía, Un control, Un tribunal]
+    answer: 0
+    explain: Politiebureau es la comisaría.
+    cites: ["cbr-examenplan:4"]
+    exam: false

@@ -10,7 +10,9 @@ How the material was produced and why it looks the way it does. Update the relev
 ## Syllabus
 - The CBR *Theorie-examenplan auto* is the syllabus: 8 topics, each lesson declares which it covers (`cbrTopics` frontmatter), and the audit checks coverage.
 - Legal basis listed in the plan: Regeling eisen theorie-examen B (BWBR0015601) art. 1-3, which enumerates the articles of RVV 1990, WVW 1994, BABW, Reglement rijbewijzen, Regeling voertuigen, Kentekenreglement and WAM that the exam may test.
-- Exam format (from the plan): 50 scored questions + 2 unscored test questions, 44 correct to pass, 30 minutes (45 with extra time / individual guidance). The mock exam mirrors this.
+- The CBR plan is the floor, not the ceiling. Passing the exam doesn't make a safe driver, so lessons and questions also cover the practical procedures the theory exam barely tests (merging onto the motorway at traffic speed, mirror and shoulder checks, lane changes, where to look), sourced from the CBR *Rijprocedure B*.
+- Exam format (from the plan): 50 scored questions + 2 unscored test questions, 44 correct to pass. The plan states no time limit, so the mock exam shows elapsed time only.
+- The mock exam is gated behind demonstrated mastery of every lesson (see BLUEPRINT "Mock-exam gate"), at the owner's request: passing it should mean knowing the rules thoroughly, not scraping 44/50. The thresholds (98% over 100 answers, spaced recall, 100% placement) are deliberately strict.
 - Exam assumptions (from the plan), repeated in chapter 0: you drive the CBR car, others follow the rules, normal road and weather conditions unless stated.
 
 ## Sources

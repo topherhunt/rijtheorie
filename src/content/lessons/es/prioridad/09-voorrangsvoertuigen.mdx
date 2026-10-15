@@ -1,0 +1,63 @@
+---
+title: Vehículos prioritarios
+summary: Qué es un vehículo prioritario, por qué todos debemos dejarlo pasar y qué reglas puede saltarse.
+cbrTopics: [voorrang]
+---
+
+## Qué es un vehículo prioritario
+
+<Rule cite="rvv:29" title="Luz azul y bocina de dos tonos">
+Los motorvehículos de la policía, los bomberos, los servicios de atención médica urgente y otros servicios de ayuda designados llevan luz azul (giratoria, de destellos o intermitente) y una bocina de dos tonos. Así indican que cumplen una tarea urgente.
+</Rule>
+
+<Rule cite="rvv:1" title="Voorrangsvoertuig">
+Un <T id="voorrangsvoertuig" /> es un motorvehículo que lleva las señales luminosas y sonoras del art. 29. La definición exige las dos señales: luz azul y bocina de dos tonos.
+</Rule>
+
+## Todos deben dejarlo pasar
+
+<Rule cite="rvv:50" title="Dejar pasar">
+Todos los usuarios de la vía (*weggebruikers*) deben dejar pasar (<T id="voor-laten-gaan" />) a un vehículo prioritario.
+</Rule>
+
+La palabra es *weggebruikers*, no solo "conductores": incluye ciclistas y peatones.
+
+<Junction
+  arms={{ n: {}, e: {}, s: {}, w: {} }}
+  vehicles={[
+    { label: 'A', kind: 'car', from: 's', to: 'straight', you: true },
+    { label: 'B', kind: 'ambulance', from: 'w', to: 'straight', siren: true },
+  ]}
+  alt="Cruce sin señales. Tú (A) vienes del sur y sigues recto. Una ambulancia (B) con luz azul y sirena viene del oeste, por tu izquierda, y sigue recto."
+  caption="Por la derecha no hay nadie, pero la ambulancia que viene por la izquierda tiene preferencia: la dejas pasar."
+/>
+
+<Check id="voorrangsvoertuigen-ambulancia-izquierda" />
+
+<Junction
+  arms={{ n: {}, e: {}, s: {}, w: {} }}
+  vehicles={[
+    { label: 'A', kind: 'car', from: 's', to: 'left', you: true },
+    { label: 'B', kind: 'police', from: 'n', to: 'straight', siren: true },
+  ]}
+  alt="Cruce sin señales. Tú (A) vienes del sur y giras a la izquierda. Un auto de policía (B) con luz azul y sirena viene de frente, del norte, y sigue recto."
+  caption="Giras a la izquierda: la policía con sirena viene de frente y pasa primero."
+/>
+
+<Check id="voorrangsvoertuigen-policia-frente" />
+
+## Qué reglas pueden saltarse
+
+<Rule cite="rvv:91" title="Desviarse de las reglas">
+Los conductores de un vehículo prioritario pueden desviarse de las reglas del reglamento en la medida en que su tarea lo exija.
+</Rule>
+
+<Warn>
+Esa libertad es solo para el vehículo prioritario. Tú no puedes saltarte un semáforo o una señal "para dejarlo pasar" sin más: busca una forma segura y legal de dejarle espacio. El art. 50 solo dice que debes dejarlo pasar y no describe cómo hacerlo.
+</Warn>
+
+<Check id="voorrangsvoertuigen-desviarse" />
+
+<Tip>
+En el examen, la pregunta casi siempre es la misma: vehículo con luz azul y sirena, ¿qué haces? Lo dejas pasar.
+</Tip>

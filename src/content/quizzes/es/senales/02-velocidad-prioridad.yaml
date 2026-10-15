@@ -1,0 +1,112 @@
+questions:
+  - id: velocidad-a1-significado
+    type: mc
+    prompt: ¿Qué significa esta señal?
+    sign: A1
+    options: ["Velocidad máxima", "Velocidad recomendada", "Velocidad mínima", "Fin de velocidad máxima"]
+    answer: 0
+    explain: A1 es la maximumsnelheid, el límite indicado en km/h.
+    cites: ["rvv:bijlage1.A1"]
+
+  - id: velocidad-a2-significado
+    type: mc
+    prompt: ¿Qué significa esta señal?
+    sign: A2
+    options: ["Velocidad recomendada", "Fin de velocidad máxima", "Velocidad máxima de 50", "Fin de la zona urbana"]
+    answer: 1
+    explain: A2 es "Einde maximumsnelheid".
+    cites: ["rvv:bijlage1.A2"]
+
+  - id: velocidad-a4-recomendada
+    type: yesno
+    prompt: Esta señal azul indica 60 en una curva. ¿Es un límite legal de 60 km/h?
+    sign: A4
+    answer: false
+    explain: A4 es una velocidad recomendada (adviessnelheid), no un límite. El límite legal lo marca A1.
+    cites: ["rvv:bijlage1.A4"]
+
+  - id: velocidad-a5-significado
+    type: mc
+    prompt: ¿Qué significa esta señal?
+    sign: A5
+    options: ["Fin de velocidad máxima", "Fin de velocidad recomendada", "Fin de la prohibición de adelantar", "Fin de zona urbana"]
+    answer: 1
+    explain: A5 cierra la velocidad recomendada (Einde adviessnelheid).
+    cites: ["rvv:bijlage1.A5"]
+
+  - id: velocidad-camion-100
+    type: number
+    prompt: Conduces un camión (vrachtauto) y una señal A1 indica 100 km/h. ¿A qué velocidad máxima puedes ir?
+    answer: 80
+    unit: km/h
+    explain: El camión tiene un máximo propio de 80 km/h. Si la señal permite más, vale la velocidad más baja.
+    cites: ["rvv:63b.1", "rvv:22"]
+
+  - id: velocidad-snorfiets-60
+    type: yesno
+    prompt: Una señal A1 indica 60 km/h. ¿Puede una snorfiets ir a 60 km/h?
+    sign: A1
+    answer: false
+    explain: La snorfiets tiene un máximo de 25 km/h. Si la señal permite más, vale el límite más bajo.
+    cites: ["rvv:63b.1", "rvv:22"]
+
+  - id: velocidad-b1-significado
+    type: mc
+    prompt: ¿Qué significa esta señal?
+    sign: B1
+    options: ["Vía con prioridad", "Cruce con prioridad", "Ceda el paso", "Fin de vía con prioridad"]
+    answer: 0
+    explain: B1 es la voorrangsweg. Con B3 se anuncia un cruce con prioridad.
+    cites: ["rvv:bijlage1.B1"]
+
+  - id: velocidad-b2-significado
+    type: mc
+    prompt: ¿Qué significa esta señal?
+    sign: B2
+    options: ["Fin de vía con prioridad", "Fin de la zona urbana", "Cruce sin prioridad", "Stop"]
+    answer: 0
+    explain: B2 es "Einde voorrangsweg".
+    cites: ["rvv:bijlage1.B2"]
+
+  - id: velocidad-b3-significado
+    type: mc
+    prompt: ¿Qué significa esta señal?
+    sign: B3
+    options: ["Cruce con prioridad señalizada", "Ceda el paso", "Cruce peligroso", "Fin de vía con prioridad"]
+    answer: 0
+    explain: B3 es el voorrangskruispunt, un cruce con prioridad.
+    cites: ["rvv:bijlage1.B3"]
+
+  - id: velocidad-b6-significado
+    type: mc
+    prompt: ¿Qué debes hacer ante esta señal?
+    sign: B6
+    options: ["Ceder el paso a los conductores de la vía que cruzas", "Detenerte siempre", "Pasar primero", "Reducir a 30 km/h"]
+    answer: 0
+    explain: B6 dice "verleen voorrang aan bestuurders op de kruisende weg". No obliga a parar si no hace falta.
+    cites: ["rvv:bijlage1.B6"]
+
+  - id: velocidad-b7-siempre
+    type: yesno
+    prompt: Llegas a esta señal y ves que no viene nadie por el cruce. ¿Puedes pasar sin detenerte?
+    sign: B7
+    answer: false
+    explain: B7 es un stop: debes detenerte (y ceder el paso), aunque no venga nadie.
+    cites: ["rvv:bijlage1.B7"]
+
+  - id: velocidad-b7-donde
+    type: mc
+    prompt: Ante una señal de stop hay una línea de detención pintada. ¿Dónde paras?
+    sign: B7
+    options: ["Antes de la línea", "Encima de la línea", "Después de la línea, para ver mejor el cruce"]
+    answer: 0
+    explain: Si hay una stopstreep para ti, paras detrás de ella. Solo sin línea paras donde veas bien el cruce.
+    cites: ["rvv:79", "cbr-rijprocedure:3.3"]
+
+  - id: velocidad-b4-b5
+    type: mc
+    prompt: ¿Cuál de estas señales avisa de un cruce con prioridad donde una vía lateral entra por la derecha?
+    options: ["B4", "B5", "B3", "B6"]
+    answer: 1
+    explain: B5 muestra la vía lateral a la derecha. B4 la muestra a la izquierda y B3 no muestra vía lateral.
+    cites: ["rvv:bijlage1.B4", "rvv:bijlage1.B5"]

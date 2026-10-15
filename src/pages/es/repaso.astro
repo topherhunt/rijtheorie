@@ -1,0 +1,15 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ReviewIsland from '../../components/quiz/ReviewIsland.tsx';
+import { allQuestions } from '../../lib/questions.ts';
+
+const pool = await allQuestions();
+---
+
+<Layout title="Repaso">
+  <h1 class="text-3xl font-bold">Repaso</h1>
+  <p class="mt-2 mb-6 text-slate-600">
+    Las preguntas que ya respondiste vuelven a aparecer aquí: las que fallaste, enseguida; las que aciertas, cada vez más espaciadas (1, 3, 7 y 21 días). Repasar así ayuda a no olvidar.
+  </p>
+  <ReviewIsland client:load pool={pool} />
+</Layout>

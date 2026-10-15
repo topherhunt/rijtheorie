@@ -1,0 +1,153 @@
+questions:
+  - id: gh-g1-significado
+    type: mc
+    prompt: ¿Qué indica esta señal?
+    sign: G1
+    options: ["Autosnelweg (autopista)", "Autoweg", "Fin de zona urbana", "Vía con prioridad"]
+    answer: 0
+    explain: G1 es la autosnelweg. G3 es la autoweg.
+    cites: ["rvv:bijlage1.G1"]
+
+  - id: gh-g3-significado
+    type: mc
+    prompt: ¿Qué indica esta señal?
+    sign: G3
+    options: ["Autoweg", "Autosnelweg", "Erf", "Calle sin salida"]
+    answer: 0
+    explain: G3 es la autoweg.
+    cites: ["rvv:bijlage1.G3"]
+
+  - id: gh-minimo
+    type: number
+    prompt: ¿Cuál es la velocidad mínima con la que un vehículo debe poder circular para usar una autosnelweg?
+    answer: 60
+    unit: km/h
+    explain: La autosnelweg es para vehículos que pueden y deben ir al menos a 60 km/h. Para la autoweg el mínimo es 50.
+    cites: ["rvv:42"]
+
+  - id: gh-minimo-autoweg
+    type: number
+    prompt: ¿Cuál es la velocidad mínima con la que un vehículo debe poder circular para usar una autoweg?
+    answer: 50
+    unit: km/h
+    explain: En la autoweg el mínimo es 50 km/h.
+    cites: ["rvv:42.2"]
+
+  - id: gh-erf-velocidad
+    type: number
+    prompt: ¿Qué velocidad máxima rige dentro de un erf?
+    sign: G5
+    answer: 15
+    unit: km/h
+    explain: Dentro de un erf no puedes ir a más de 15 km/h.
+    cites: ["rvv:45"]
+
+  - id: gh-erf
+    type: yesno
+    prompt: Dentro de un erf, ¿pueden los peatones usar todo el ancho del camino?
+    sign: G5
+    answer: true
+    explain: Los peatones pueden usar los caminos del erf en toda su anchura.
+    cites: ["rvv:44"]
+
+  - id: gh-erf-parking
+    type: yesno
+    prompt: Dentro de un erf, ¿puedes estacionar tu auto donde quieras si no molestas?
+    sign: G5
+    answer: false
+    explain: Dentro de un erf los vehículos de motor solo pueden estacionar en plazas marcadas o indicadas como tales.
+    cites: ["rvv:46.1"]
+
+  - id: gh-g7-significado
+    type: mc
+    prompt: ¿Qué indica esta señal?
+    sign: G7
+    options: ["Senda peatonal", "Paso de peatones", "Carril bici", "Camino para jinetes"]
+    answer: 0
+    explain: G7 es el voetpad. El paso de peatones es L2/J22.
+    cites: ["rvv:bijlage1.G7"]
+
+  - id: gh-g9-significado
+    type: mc
+    prompt: ¿Qué indica esta señal?
+    sign: G9
+    options: ["Camino para jinetes", "Carril bici", "Senda peatonal", "Zona de ganado"]
+    answer: 0
+    explain: G9 es el ruiterpad.
+    cites: ["rvv:bijlage1.G9"]
+
+  - id: gh-g11-obligatorio
+    type: mc
+    prompt: ¿Qué significa esta señal para un ciclista?
+    sign: G11
+    options: ["Debe usar el carril bici", "Puede usar el carril bici si quiere", "Debe usar la calzada", "Prohibido para bicicletas"]
+    answer: 0
+    explain: G11 es el verplicht fietspad: los ciclistas deben usarlo.
+    cites: ["rvv:5.1", "rvv:bijlage1.G11"]
+
+  - id: gh-g13-opcional
+    type: mc
+    prompt: ¿Qué significa esta señal para un ciclista?
+    sign: G13
+    options: ["Puede usar el carril bici, pero no está obligado", "Debe usar el carril bici", "No puede usar el carril bici", "Debe ir por la acera"]
+    answer: 0
+    explain: G13 es el onverplicht fietspad.
+    cites: ["rvv:5.3", "rvv:bijlage1.G13"]
+
+  - id: gh-g12a-significado
+    type: mc
+    prompt: ¿Quién debe usar el camino con esta señal?
+    sign: G12a
+    options: ["Bicicletas y ciclomotores (bromfietsen)", "Solo bicicletas", "Solo peatones", "Todos los vehículos de motor"]
+    answer: 0
+    explain: G12a es el fiets/bromfietspad.
+    cites: ["rvv:bijlage1.G12a", "rvv:6.1"]
+
+  - id: gh-fietspad-auto
+    type: yesno
+    prompt: Conduces un auto. ¿Puedes estacionar sobre un carril bici (fietspad)?
+    answer: false
+    explain: Los conductores que no son ciclistas ni jinetes usan la calzada y, para estacionar, no pueden usar el fietspad.
+    cites: ["rvv:10.1"]
+
+  - id: gh-h1-h2
+    type: mc
+    prompt: ¿Qué significa esta señal?
+    sign: H1
+    options: ["Inicio de la zona urbana (bebouwde kom)", "Fin de la zona urbana", "Entrada a un erf", "Inicio de una autoweg"]
+    answer: 0
+    explain: H1 es "Bebouwde kom". H2 es el final.
+    cites: ["rvv:bijlage1.H1"]
+
+  - id: gh-h2-significado
+    type: mc
+    prompt: ¿Qué significa esta señal?
+    sign: H2
+    options: ["Fin de la zona urbana", "Inicio de la zona urbana", "Fin del erf", "Fin de la autoweg"]
+    answer: 0
+    explain: H2 es "Einde bebouwde kom".
+    cites: ["rvv:bijlage1.H2"]
+
+  - id: gh-velocidad-kom
+    type: number
+    prompt: Sin otras señales, ¿cuál es la velocidad máxima de un auto dentro de la zona urbana?
+    answer: 50
+    unit: km/h
+    explain: Dentro de la bebouwde kom, 50 km/h para vehículos de motor.
+    cites: ["rvv:20"]
+
+  - id: gh-velocidad-fuera
+    type: number
+    prompt: Sin otras señales, ¿cuál es la velocidad máxima de un auto en una vía fuera de zona urbana que no es autoweg ni autosnelweg?
+    answer: 80
+    unit: km/h
+    explain: En las demás vías fuera de la bebouwde kom, 80 km/h.
+    cites: ["rvv:21"]
+
+  - id: gh-zone
+    type: mc
+    prompt: Sobre una señal está escrita la palabra "zone", sin indicar un área. ¿Hasta dónde vale?
+    options: ["Hasta la señal que marca el fin de la zona", "Solo hasta el siguiente cruce", "Solo en el punto donde está la señal"]
+    answer: 0
+    explain: Sin indicar el área, la señal vale hasta la señal que marca el fin de la zona.
+    cites: ["rvv:66.2"]

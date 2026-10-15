@@ -1,0 +1,164 @@
+questions:
+  - id: tunel-senal-l13
+    type: mc
+    prompt: ¿Qué indica esta señal?
+    sign: L13
+    options: [Un paso a nivel, Un túnel, Una vluchthaven, Una salida de emergencia]
+    answer: 1
+    explain: L13 es "verkeerstunnel".
+    cites: ["rvv:bijlage1.L13"]
+
+  - id: tunel-senal-l14
+    type: mc
+    prompt: ¿Qué indica esta señal?
+    sign: L14
+    options: [Una vluchthaven, Un teléfono de emergencia, Un extintor, Un lugar de estacionamiento]
+    answer: 0
+    explain: L14 es "vluchthaven", un lugar para detenerse en emergencias.
+    cites: ["rvv:bijlage1.L14"]
+
+  - id: tunel-senal-l18
+    type: mc
+    prompt: ¿Qué indica esta señal?
+    sign: L18
+    options: [Solo un teléfono de emergencia, Solo un extintor, Teléfono de emergencia y extintor, La salida más cercana]
+    answer: 2
+    explain: L18 es "noodtelefoon en brandblusapparaat".
+    cites: ["rvv:bijlage1.L18"]
+
+  - id: tunel-senal-l19
+    type: mc
+    prompt: ¿Qué indica esta señal?
+    sign: L19
+    options: [La salida más cercana y su distancia, Una vluchthaven, El fin del túnel, Un teléfono de emergencia]
+    answer: 0
+    explain: L19 indica la salida (o las dos salidas) más cercana(s) en la dirección y a la distancia que muestra el cartel.
+    cites: ["rvv:bijlage1.L19"]
+
+  - id: tunel-parar
+    type: yesno
+    prompt: ¿Está prohibido por la ley detenerte (stilstaan) en un túnel?
+    answer: true
+    explain: Detenerse en un túnel está prohibido en general.
+    cites: ["rvv:23.1"]
+
+  - id: tunel-parar-pasajero
+    type: yesno
+    prompt: Estás en un túnel y un pasajero quiere bajar. ¿Está permitido detenerte para que baje, según la ley?
+    answer: false
+    explain: La excepción de subir y bajar personas solo existe para el caso de las paradas de bus. En un túnel la prohibición no tiene esa excepción.
+    cites: ["rvv:23.1", "rvv:23.2"]
+
+  - id: tunel-marcha-atras
+    type: yesno
+    prompt: Hay un atasco en un túnel y quieres dar marcha atrás para salir. ¿Es correcto?
+    answer: false
+    explain: Nunca des la vuelta ni vayas marcha atrás en un túnel. En una autosnelweg o autoweg además la ley lo prohíbe.
+    cites: ["rws-tunnel", "anwb-tunnel", "rvv:43.1"]
+
+  - id: tunel-luces
+    type: mc
+    prompt: Según la ANWB, ¿cuándo enciendes las luces cortas al ir a un túnel?
+    options:
+      - Cuando ya estás dentro
+      - Antes de entrar
+      - Solo si es de noche
+      - Nunca, el túnel tiene luz
+    answer: 1
+    explain: La ANWB recomienda encender las luces cortas antes de entrar, y quitarse las gafas de sol.
+    cites: ["anwb-tunnel"]
+
+  - id: tunel-atasco
+    type: number
+    prompt: Según la ANWB, ¿qué distancia mantienes con el auto de adelante en un atasco dentro de un túnel?
+    answer: 5
+    unit: m
+    explain: En un atasco la ANWB recomienda unos 5 m. Con tráfico normal, una distancia amplia.
+    cites: ["anwb-tunnel"]
+
+  - id: tunel-contrario
+    type: mc
+    prompt: Hay tráfico en sentido contrario en un túnel. ¿Qué recomienda la ANWB?
+    options:
+      - Ir por el centro de la calzada
+      - Mantenerte a la derecha y no cruzar nunca la línea central
+      - Adelantar con cuidado
+      - Ir por la izquierda para estar lejos de la pared
+    answer: 1
+    explain: Mantente a la derecha y no cruces la línea central.
+    cites: ["anwb-tunnel"]
+
+  - id: tunel-averia-sitio
+    type: mc
+    prompt: Tu auto se avería en un túnel y puedes seguir un poco. ¿Qué recomienda Rijkswaterstaat?
+    options:
+      - Detenerte en el carril, no mover el auto
+      - Salir del túnel o llegar a una vluchtstrook o vluchthaven si puedes
+      - Dar marcha atrás hasta la entrada
+      - Cruzar la calzada hasta el otro lado
+    answer: 1
+    explain: Intenta conducir hasta salir o hasta una vluchtstrook o vluchthaven. Si no puedes, luces de emergencia y detenerte lo más cerca de la pared.
+    cites: ["rws-tunnel"]
+
+  - id: tunel-averia-pasajeros
+    type: mc
+    prompt: Después de una avería en un túnel, ¿dónde esperan tus pasajeros según Rijkswaterstaat?
+    options:
+      - Dentro del auto
+      - A unos 50 m más allá del vehículo
+      - Delante del auto, en el carril
+      - Cruzando al otro lado
+    answer: 1
+    explain: Los pasajeros esperan unos 50 m más allá del vehículo. Nunca cruzan la calzada.
+    cites: ["rws-tunnel"]
+
+  - id: tunel-averia-llamar
+    type: mc
+    prompt: ¿A quién llamas desde el teléfono de emergencia (hulppost) de un túnel?
+    options: [A la Wegenwacht, Al wegverkeersleider, A la policía local, A tu seguro]
+    answer: 1
+    explain: Desde el teléfono de emergencia se llama al wegverkeersleider.
+    cites: ["rws-tunnel"]
+
+  - id: tunel-atasco-radio
+    type: mc
+    prompt: Estás en un atasco dentro de un túnel. ¿Qué recomienda Rijkswaterstaat?
+    options:
+      - Apagar las luces para ahorrar batería
+      - Mantener la distancia, luces de emergencia, radio en FM y ver dónde está la salida más cercana
+      - Salir del auto y caminar
+      - Adelantar por la vluchtstrook
+    answer: 1
+    explain: Mantén distancia, enciende las luces de emergencia, sintoniza FM y localiza la salida más cercana.
+    cites: ["rws-tunnel"]
+
+  - id: tunel-fuego-llave
+    type: mc
+    prompt: Tu auto se incendia en un túnel y no puedes seguir. ¿Qué haces con el motor y la llave?
+    options:
+      - Motor encendido y llave puesta
+      - Apagas el motor y dejas la llave puesta
+      - Apagas el motor y te llevas la llave
+      - Apagas el motor y la tiras
+    answer: 1
+    explain: Rijkswaterstaat recomienda apagar el motor y dejar la llave puesta.
+    cites: ["rws-tunnel"]
+
+  - id: tunel-fuego-otro
+    type: mc
+    prompt: Se incendia otro auto delante de ti en el túnel. ¿Qué recomienda Rijkswaterstaat?
+    options:
+      - Pasar al lado lo más rápido posible
+      - Guardar distancia, luces de emergencia y detenerte lo más a la derecha posible
+      - Dar marcha atrás
+      - Intentar apagar el fuego con el extintor
+    answer: 1
+    explain: Si se incendia otro auto, guarda distancia, enciende las luces de emergencia y detente lo más a la derecha posible.
+    cites: ["rws-tunnel"]
+
+  - id: tunel-fuego-extintor
+    type: yesno
+    prompt: ¿Debes usar el extintor del armario de emergencia para cualquier incendio en el túnel?
+    answer: false
+    explain: El extintor solo es para apagar un fuego pequeño que acaba de empezar. En otro caso, sal del auto y camina hacia la salida más cercana.
+    cites: ["rws-tunnel"]

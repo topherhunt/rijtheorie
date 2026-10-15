@@ -1,0 +1,94 @@
+---
+title: Dientes de tiburón, B6 y B7
+summary: Cómo se te indica que debes ceder el paso al llegar a una vía lateral, y la diferencia entre ceder el paso y parar.
+cbrTopics: [voorrang]
+---
+
+## Dientes de tiburón
+
+<Rule cite="rvv:80, rvv:1" title="Haaientanden">
+Los <T id="haaientanden" /> son triángulos pintados en el pavimento (*voorrangsdriehoeken*). Si están en tu carril, debes dar prioridad (*voorrang verlenen*) a los conductores de la vía que cruzas.
+</Rule>
+
+Las puntas de los triángulos apuntan hacia ti. Si te acercas a una vía y ves los dientes frente a ti, cede el paso.
+
+<Junction
+  arms={{ n: {}, e: {}, s: { shark: true }, w: {} }}
+  vehicles={[
+    { label: 'A', kind: 'car', from: 's', to: 'straight', you: true },
+    { label: 'B', kind: 'car', from: 'w', to: 'straight' },
+  ]}
+  alt="Cruce. Tú (A) vienes del sur y ves dientes de tiburón pintados frente a ti. B viene del oeste, por tu izquierda, por la vía que cruzas."
+  caption="Los dientes de tiburón están en tu carril: cedes el paso a B, aunque venga por la izquierda."
+/>
+
+<Check id="haaientanden-b-izquierda" />
+
+## B6: cede el paso
+
+<Sign code="B6" />
+
+<Rule cite="rvv:bijlage1.B6" title="B6">
+B6 significa *Verleen voorrang aan bestuurders op de kruisende weg*: cede el paso a los conductores de la vía que cruzas.
+</Rule>
+
+Con B6 en tu vía, los otros tienen prioridad sobre ti. Esta señal suele ir acompañada de dientes de tiburón.
+
+<Junction
+  arms={{ n: {}, e: {}, s: { sign: 'B6', shark: true }, w: {} }}
+  vehicles={[
+    { label: 'A', kind: 'car', from: 's', to: 'right', you: true },
+    { label: 'B', kind: 'car', from: 'w', to: 'straight' },
+  ]}
+  alt="Cruce. Tú (A) vienes del sur con la señal B6 y dientes de tiburón, y giras a la derecha. B viene del oeste, por tu izquierda, y sigue recto."
+  caption="También al girar a la derecha cedes el paso a B."
+/>
+
+<Check id="haaientanden-b6-giro" />
+
+<Warn>
+B6 no te obliga a parar. Obliga a ceder el paso: si la vía está libre, puedes seguir sin detenerte. Lo que no puedes hacer es obligar al otro a frenar o a esquivarte.
+</Warn>
+
+## B7: stop
+
+<Sign code="B7" />
+
+<Rule cite="rvv:bijlage1.B7, rvv:79" title="B7 y la línea de detención">
+B7 significa *Stop; verleen voorrang aan bestuurders op de kruisende weg*. Debes detenerte antes de la <T id="stopstreep" /> cuando debes parar, y luego ceder el paso a los conductores de la vía que cruzas.
+</Rule>
+
+La diferencia clave: con B6 cedes el paso y solo te detienes si hace falta. Con B7 **siempre te detienes**.
+
+<Check id="haaientanden-b7-parar" />
+
+## Cómo acercarte
+
+<Rule cite="cbr-rijprocedure:3.3" title="Acercarse a B6 y B7">
+En el examen práctico el CBR pide que, ante B6 o B7, mires con mucha atención y adaptes la velocidad. Acércate de modo que el tráfico con prioridad confíe en que le vas a ceder el paso.
+</Rule>
+
+<Rule cite="cbr-rijprocedure:3.3" title="Aunque tengas prioridad">
+Si eres tú quien tiene prioridad pero ves que el tráfico de una vía lateral no parece que te va a ceder el paso, adapta tu velocidad.
+</Rule>
+
+<Check id="haaientanden-acercarse" />
+
+## Orden de varios vehículos
+
+<Junction
+  arms={{ n: {}, e: {}, s: { sign: 'B6', shark: true }, w: {} }}
+  vehicles={[
+    { label: 'A', kind: 'car', from: 's', to: 'straight', you: true },
+    { label: 'B', kind: 'car', from: 'e', to: 'straight' },
+    { label: 'C', kind: 'car', from: 'w', to: 'left' },
+  ]}
+  alt="Cruce. Tú (A) vienes del sur con B6 y dientes de tiburón y sigues recto. B viene del este y sigue recto. C viene del oeste y gira a la izquierda hacia el norte."
+  caption="¿Quién pasa primero?"
+/>
+
+<Check id="haaientanden-orden" />
+
+<Tip>
+Mira siempre primero el pavimento y las señales: dientes de tiburón, B6 o B7 en tu lado significan que cedes el paso, sin importar por dónde viene el otro.
+</Tip>

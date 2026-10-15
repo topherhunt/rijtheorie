@@ -1,0 +1,60 @@
+questions:
+  - id: horario-dia
+    type: number
+    prompt: "En la mayoría de las autopistas, ¿cuál es el límite entre las 06.00 y las 19.00?"
+    answer: 100
+    unit: km/h
+    explain: "Rijkswaterstaat indica 100 km/h entre las 06.00 y las 19.00 en la mayoría de autopistas."
+    cites: ["rws-maximumsnelheid"]
+
+  - id: horario-noche
+    type: mc
+    prompt: "Fuera de las 06.00-19.00 en una autopista con ese régimen, ¿qué límite vale donde hay que ir a más?"
+    options: [120 o 130 km/h según la señal o la situación, 100 km/h, 50 km/h, No hay límite]
+    answer: 0
+    explain: "Fuera de ese horario el límite es 120 o 130 km/h donde esté señalizado o sea seguro."
+    cites: ["rws-maximumsnelheid"]
+
+  - id: horario-sin-horario
+    type: yesno
+    prompt: "Una señal de 100 km/h en una autopista sin horario adicional, ¿vale las 24 horas?"
+    answer: true
+    explain: "Sin horario, la señal vale todo el día."
+    cites: ["rws-maximumsnelheid"]
+
+  - id: horario-con-horario
+    type: yesno
+    prompt: "Una señal de 100 km/h con horario de 6 a 19 h, ¿vale a las 22.00?"
+    answer: false
+    explain: "Solo vale dentro del horario; fuera de él vale el máximo general."
+    cites: ["rws-maximumsnelheid"]
+
+  - id: horario-doble
+    type: mc
+    prompt: "Una señal muestra 100 y debajo 120 con horarios diferentes. ¿Qué indica?"
+    options: [Un límite de día y otro de noche, Dos carriles distintos, Un mínimo y un máximo, Un límite para autos y otro para camiones]
+    answer: 0
+    explain: "Las señales con doble horario muestran un límite de día y uno de noche."
+    cites: ["rws-maximumsnelheid"]
+
+  - id: horario-sin-senal
+    type: yesno
+    prompt: "Donde de noche vale 130, ¿tiene que haber una señal que lo diga?"
+    answer: false
+    explain: "Solo se señalizan las desviaciones del máximo general."
+    cites: ["rws-maximumsnelheid"]
+
+  - id: horario-senal-manda
+    type: yesno
+    prompt: "Recuerdas que el límite es 130 pero ves una señal de 100 km/h. ¿Cuál obedeces?"
+    answer: true
+    explain: "Las señales prevalecen sobre las reglas generales: obedeces los 100."
+    cites: ["rvv:62", "rvv:63"]
+
+  - id: horario-rvv-130
+    type: number
+    prompt: "¿Cuál es el máximo que da el RVV (art. 21) a un auto en una autosnelweg, sin otras señales?"
+    answer: 130
+    unit: km/h
+    explain: "El RVV dice 130 km/h; las señales pueden bajarlo."
+    cites: ["rvv:21"]

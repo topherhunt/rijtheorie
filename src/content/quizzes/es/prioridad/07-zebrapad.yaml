@@ -1,0 +1,102 @@
+questions:
+  - id: zebrapad-peaton-espera
+    type: yesno
+    prompt: Un peatón espera en el borde de un paso de peatones, claramente a punto de cruzar. ¿Debes dejarlo pasar?
+    sign: L2
+    diagram:
+      arms: { n: {}, e: {}, s: { sign: L2 }, w: {} }
+      vehicles:
+        - { label: P, kind: pedestrian, from: s, pos: 0 }
+        - { label: A, kind: car, from: s, to: straight, pos: 1, you: true }
+      alt: Cruce. Un peatón (P) está en el paso de peatones de la entrada sur, a punto de cruzar. Tú (A) vienes del sur, detrás del peatón, y sigues recto.
+    answer: true
+    explain: Debes dejar pasar a los peatones que cruzan o que están evidentemente a punto de cruzar un paso de peatones.
+    cites: ["rvv:49.2", "cbr-rijprocedure:3.6"]
+
+  - id: zebrapad-significado
+    type: mc
+    prompt: ¿Qué tipo de lugar indica esta señal?
+    sign: L2
+    options: [Paso de peatones, Parada de bus o tranvía, Zona residencial (erf), Rotonda]
+    answer: 0
+    explain: L2 es la Voetgangersoversteekplaats, el paso de peatones.
+    cites: ["rvv:bijlage1.L2"]
+
+  - id: zebrapad-acercarse
+    type: mc
+    prompt: Según el CBR, ¿cómo te acercas a un paso de peatones?
+    options: [Con cuidado y a velocidad moderada, A toda velocidad si no hay peatones, Tocando la bocina, Cambiando de carril]
+    answer: 0
+    explain: El CBR pide acercarse con cuidado y a velocidad moderada.
+    cites: ["cbr-rijprocedure:3.6"]
+
+  - id: zebrapad-ciego
+    type: mc
+    prompt: Ves a una persona con bastón blanco con anillos rojos cruzando. ¿Qué debes hacer?
+    options: [Dejarla pasar, Tocar la bocina, Pasar rápido, Esperar solo si hay paso de peatones]
+    answer: 0
+    explain: Los ciegos con bastón blanco con anillos rojos y las personas que se mueven con dificultad siempre deben ser dejadas pasar.
+    cites: ["rvv:49.1"]
+
+  - id: zebrapad-dificultad
+    type: yesno
+    prompt: La obligación de dejar pasar a las personas que se mueven con dificultad solo vale en el paso de peatones.
+    answer: false
+    explain: El art. 49.1 no limita esa obligación al paso de peatones.
+    cites: ["rvv:49.1"]
+
+  - id: zebrapad-gehandicapten
+    type: yesno
+    prompt: Un vehículo para personas con discapacidad cruza un paso de peatones. ¿Debes dejarlo pasar como a un peatón?
+    answer: true
+    explain: El art. 49.2 cubre a peatones y a conductores de gehandicaptenvoertuigen.
+    cites: ["rvv:49.2"]
+
+  - id: zebrapad-semaforo
+    type: yesno
+    prompt: El semáforo peatonal está en rojo para los peatones. ¿Aplica la obligación de dejar pasar del art. 49.2?
+    answer: false
+    explain: Con luz roja de peatones no aplica la obligación de dejarlos pasar.
+    cites: ["rvv:49.4"]
+
+  - id: zebrapad-amarillo
+    type: mc
+    prompt: Con luz amarilla intermitente para peatones, ¿qué es correcto?
+    options:
+      - Los peatones pueden cruzar si dejan pasar al tráfico, y tú sigues teniéndolos en cuenta
+      - Los peatones tienen prioridad absoluta
+      - Los peatones no pueden cruzar
+      - Debes parar siempre
+    answer: 0
+    explain: Con amarillo intermitente los peatones pueden cruzar siempre que dejen pasar al resto del tráfico, pero el CBR dice que debes tenerlos en cuenta.
+    cites: ["rvv:74.2", "cbr-rijprocedure:3.6"]
+
+  - id: zebrapad-colonne
+    type: yesno
+    prompt: Un motorvehículo de una columna militar debe dejar pasar a los peatones del paso de peatones, igual que los demás.
+    answer: false
+    explain: El art. 49.3 los exceptúa de la obligación del art. 49.2.
+    cites: ["rvv:49.3"]
+
+  - id: zebrapad-adelantar
+    type: yesno
+    prompt: Puedes adelantar a otro vehículo justo antes de un paso de peatones si la vía está libre.
+    answer: false
+    explain: Está prohibido adelantar justo antes de un paso de peatones o sobre él.
+    cites: ["rvv:12"]
+
+  - id: zebrapad-cinco-metros
+    type: number
+    prompt: ¿A qué distancia mínima de un paso de peatones puedes dejar tu auto parado?
+    answer: 5
+    unit: metros
+    explain: No puedes dejar el vehículo parado sobre el paso ni a menos de cinco metros.
+    cites: ["rvv:23.1.c"]
+
+  - id: zebrapad-vehiculo-detenido
+    type: mc
+    prompt: Hay un auto detenido delante del paso de peatones por otro motivo. ¿Qué dice el CBR?
+    options: [Pasar con muchísimo cuidado, Adelantarlo, Tocar la bocina, Seguir sin cambiar nada]
+    answer: 0
+    explain: El auto detenido puede tapar a un peatón que cruza, así que pasa con gran cuidado.
+    cites: ["cbr-rijprocedure:3.6"]

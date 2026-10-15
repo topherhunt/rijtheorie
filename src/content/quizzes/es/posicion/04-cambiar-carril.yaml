@@ -1,0 +1,98 @@
+questions:
+  - id: cambiar-carril-ceder
+    type: mc
+    prompt: Cambias de un carril a otro y en el carril al que entras viene un auto desde atrás. ¿Quién cede el paso?
+    options: [Tú (quien cambia de carril), El auto que viene por el carril al que entras, El más rápido, El que tenga el intermitente puesto]
+    answer: 0
+    explain: Cambiar de carril es una maniobra especial, y quien la hace debe dejar pasar al resto del tráfico.
+    cites: ["rvv:54"]
+
+  - id: cambiar-carril-incorporacion
+    type: multi
+    prompt: ¿Cuáles de estas maniobras te obligan a dejar pasar al resto del tráfico según el art. 54?
+    options: [Cambiar de carril, Incorporarte a la calzada principal desde un carril de incorporación, Seguir recto en tu carril, Entrar al carril de salida desde la calzada principal]
+    answer: [0, 1, 3]
+    explain: El art. 54 cita el cambio de carril, la incorporación a la calzada principal y la entrada al carril de salida. Seguir recto en tu carril no es una maniobra especial.
+    cites: ["rvv:54"]
+
+  - id: cambiar-carril-lugar-ajeno
+    type: yesno
+    prompt: Otro conductor se prepara claramente para ocupar un hueco en el carril de al lado. ¿Está permitido que tú cambies de carril y tomes ese lugar?
+    answer: false
+    explain: La Rijprocedure B no permite cambiar de carril y ocupar un lugar para el que otro conductor se está preparando de forma clara.
+    cites: ["cbr-rijprocedure:3.5"]
+
+  - id: cambiar-carril-intermitente
+    type: mc
+    prompt: ¿Cuándo das la señal con el intermitente para cambiar de carril según la Rijprocedure B?
+    options: [Después de haber mirado y con bastante antelación antes de empezar el movimiento, Mientras ya estás cruzando la línea, Solo si ves otro auto, Antes de mirar]
+    answer: 0
+    explain: Primero se mira si se puede hacer sin peligro ni estorbo, y luego se avisa con tiempo antes de empezar.
+    cites: ["cbr-rijprocedure:3.5", "rvv:55"]
+
+  - id: cambiar-carril-obligatorio-intermitente
+    type: yesno
+    prompt: Conduces un auto y quieres cambiar de carril. ¿Estás obligado a dar la señal con el intermitente?
+    answer: true
+    explain: El art. 55 obliga a los conductores de vehículos de motor a señalar con el intermitente al cambiar de carril, y en cualquier otro movimiento lateral importante.
+    cites: ["rvv:55"]
+
+  - id: cambiar-carril-terminar-senal
+    type: mc
+    prompt: ¿Cuándo terminas la señal después de un cambio de carril?
+    options: [Cuando el cambio de carril esté completo, Antes de empezar a moverte, Un minuto después, Nunca porque se apaga sola]
+    answer: 0
+    explain: La señal termina en cuanto el cambio de carril o el movimiento lateral está completo.
+    cites: ["cbr-rijprocedure:3.5"]
+
+  - id: cambiar-carril-orden-mirar
+    type: mc
+    prompt: Vas a cambiar al carril izquierdo. ¿En qué orden miras según la Rijprocedure B?
+    options: ['Delante, retrovisor interior, retrovisor exterior izquierdo, hombro izquierdo', 'Hombro izquierdo, delante, retrovisor interior, retrovisor derecho', 'Retrovisor exterior izquierdo, delante, hombro derecho, retrovisor interior', Solo el retrovisor interior]
+    answer: 0
+    explain: "Para ir a la izquierda: delante, retrovisor interior, retrovisor exterior izquierdo y por encima del hombro izquierdo."
+    cites: ["cbr-rijprocedure:3.5"]
+
+  - id: cambiar-carril-hombro
+    type: yesno
+    prompt: ¿Sirve mirar por encima del hombro para controlar el ángulo muerto junto al auto?
+    answer: true
+    explain: Es su único fin. No debe convertirse en mirar hacia atrás ni hacerse muy seguido o durante demasiado tiempo.
+    cites: ["cbr-rijprocedure:3.5"]
+
+  - id: cambiar-carril-hombro-largo
+    type: yesno
+    prompt: Para estar más seguro, ¿es buena idea mirar por encima del hombro un buen rato?
+    answer: false
+    explain: Mirar demasiado o demasiado tiempo puede cambiar tu rumbo sin querer, y no ves lo que ocurre delante del auto.
+    cites: ["cbr-rijprocedure:3.5"]
+
+  - id: cambiar-carril-varios
+    type: yesno
+    prompt: Estás en el carril derecho y quieres ir al izquierdo de una autovía de tres carriles. ¿Puedes cruzar los dos carriles en un solo movimiento?
+    answer: false
+    explain: "Cruzar varios carriles en una sola maniobra no está permitido: hay que hacerlo carril por carril."
+    cites: ["cbr-rijprocedure:3.5"]
+
+  - id: cambiar-carril-recto
+    type: mc
+    prompt: Acabas de cambiar de carril y quieres cambiar otra vez. ¿Qué haces antes?
+    options: [Voy un rato en línea recta en el carril, Cambio de inmediato, Freno, Aviso con la bocina]
+    answer: 0
+    explain: En un carril debe conducirse recto algún tiempo antes de cambiar (de nuevo) de carril.
+    cites: ["cbr-rijprocedure:3.5"]
+
+  - id: cambiar-carril-curva
+    type: mc
+    prompt: Vas por una curva con varios carriles en tu sentido. ¿Qué recomienda la Rijprocedure B?
+    options: [Seguir el carril elegido y cambiar después de la curva (tras ir un rato en línea recta), Cambiar de carril en medio de la curva, Pasar al carril interior, Pasar al carril exterior]
+    answer: 0
+    explain: En una curva se sigue el carril elegido. Después de la curva y un rato recto, se puede cambiar.
+    cites: ["cbr-rijprocedure:3.5"]
+
+  - id: cambiar-carril-velocidad
+    type: yesno
+    prompt: ¿Debes adaptar tu velocidad al resto del tráfico antes de cambiar de carril?
+    answer: true
+    explain: Si la velocidad está bien adaptada al resto del tráfico, se puede cambiar de carril.
+    cites: ["cbr-rijprocedure:3.5"]

@@ -1,0 +1,26 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { REPO_URL, href } from '../../config.ts';
+---
+
+<Layout title="Acerca de este curso">
+  <div class="prose-lesson qa-about">
+    <h1 class="text-3xl font-bold">Acerca de este curso</h1>
+    <h2>Esto NO es un curso oficial</h2>
+    <p>Este curso lo hacen voluntarios. No es del CBR, ni de una autoescuela, ni del gobierno. Lo escribimos con cuidado y enlazamos cada regla a la ley, pero <strong>puede tener errores</strong> y las reglas cambian.</p>
+    <p>Por eso te recomendamos:</p>
+    <ul>
+      <li><strong>Estudia también con material oficial o reconocido</strong>: un libro de teoría actualizado, un curso de una autoescuela o una plataforma de práctica. El examen usa palabras en neerlandés y tienes que acostumbrarte a ellas.</li>
+      <li><strong>Comprueba lo importante</strong> en el enlace a la fuente que aparece junto a cada regla.</li>
+      <li><strong>Si la ley o el CBR dicen otra cosa, vale lo que dicen ellos</strong>, no este curso.</li>
+    </ul>
+    <h2>¿Para quién es?</h2>
+    <p>Para hispanohablantes, sobre todo de América Latina, que viven en los Países Bajos y quieren sacar el permiso de conducir B (<i lang="nl">rijbewijs B</i>). Usamos las palabras neerlandesas del examen junto al español, para que llegues al examen conociéndolas.</p>
+    <h2>¿Encontraste un error?</h2>
+    <p>Nos ayuda muchísimo. <a class="qa-about-report" href={`${REPO_URL}/issues/new?template=problema.yml`}>Reporta el problema aquí</a>: errores en las reglas, partes que no se entienden, imágenes incorrectas, fallos de la página o erratas. Hace falta una cuenta gratuita de GitHub.</p>
+    <h2>Tu privacidad</h2>
+    <p>No hay cuentas, ni anuncios, ni rastreo. Tu progreso y tus notas se guardan solo en tu navegador. Puedes descargarlos o borrarlos en <a href={href('es/progreso/')}>Mi progreso</a>.</p>
+    <h2>Código abierto</h2>
+    <p>Todo el curso es abierto: <a href={REPO_URL}>código y textos en GitHub</a>. Ver también <a href={href('es/fuentes/')}>Fuentes y licencias</a>.</p>
+  </div>
+</Layout>

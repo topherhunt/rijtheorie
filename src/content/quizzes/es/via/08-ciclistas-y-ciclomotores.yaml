@@ -1,0 +1,70 @@
+questions:
+  - id: ciclistas-obligatorio
+    type: mc
+    prompt: Hay un fietspad obligatorio (G11) junto a la calzada. ¿Qué debe hacer un ciclista?
+    sign: G11
+    options: [Usar el fietspad, Usar la calzada, Elegir cualquiera de los dos, Ir por la acera]
+    answer: 0
+    explain: Los ciclistas usan el verplicht fietspad o el fiets/bromfietspad. Solo si no hay, usan la rijbaan.
+    cites: ["rvv:5.1", "rvv:5.2"]
+
+  - id: ciclistas-opcional
+    type: yesno
+    prompt: Ves la señal G13. ¿Puede un ciclista usar la calzada en vez del fietspad?
+    sign: G13
+    answer: true
+    explain: El fietspad onverplicht (G13) se puede usar, pero no es obligatorio.
+    cites: ["rvv:5.3", "rvv:bijlage1.G13"]
+
+  - id: ciclistas-snorfiets-motor
+    type: mc
+    prompt: Una snorfiets con motor de combustión, ¿cómo puede usar el fietspad opcional?
+    options: [Con el motor encendido, Solo con el motor apagado, No puede usarlo nunca, Solo de noche]
+    answer: 1
+    explain: Las snorfietsen con motor de combustión pueden usar el onverplicht fietspad solo con el motor apagado.
+    cites: ["rvv:5.3"]
+
+  - id: ciclistas-ancho
+    type: number
+    prompt: ¿Más ancha que cuántos metros, con la carga, debe ser una bicicleta con remolque para poder usar la calzada?
+    answer: 0.75
+    unit: m
+    explain: Las bicicletas con más de dos ruedas o con remolque que, con la carga, sean más anchas de 0,75 m pueden usar la rijbaan.
+    cites: ["rvv:5.4"]
+
+  - id: ciclistas-dos
+    type: yesno
+    prompt: Dos ciclistas van uno al lado del otro. ¿Es una infracción por sí mismo?
+    answer: false
+    explain: Los ciclistas pueden ir de a dos. Los snorfietsers no.
+    cites: ["rvv:3.2"]
+
+  - id: ciclistas-dos-snorfiets
+    type: yesno
+    prompt: Dos snorfietsers pueden ir uno al lado del otro.
+    answer: false
+    explain: El permiso de ir de a dos no vale para los snorfietsers.
+    cites: ["rvv:3.2"]
+
+  - id: ciclistas-bromfiets
+    type: mc
+    prompt: Un bromfietser, ¿dónde va si hay un fiets/bromfietspad?
+    options: [Por el fiets/bromfietspad, Por la calzada, Por la acera, Por donde quiera]
+    answer: 0
+    explain: Los bromfietsers usan el fiets/bromfietspad, y si no hay, la rijbaan.
+    cites: ["rvv:6.1", "rvv:6.2"]
+
+  - id: ciclistas-bromfiets-fietspad
+    type: yesno
+    prompt: Una bromfiets con remolque, de más de 0,75 m de ancho con carga, ¿va por la rijbaan?
+    answer: true
+    explain: Las bromfietsen con más de dos ruedas o con remolque, de más de 0,75 m con carga, usan la rijbaan.
+    cites: ["rvv:6.3"]
+
+  - id: ciclistas-fietsstrook
+    type: mc
+    prompt: ¿Quién puede usar un fietsstrook con líneas continuas?
+    options: [Todos los conductores, Los ciclistas y los gehandicaptenvoertuigen, Solo los autos, Nadie]
+    answer: 1
+    explain: Los demás conductores no pueden usar fietsstroken con líneas continuas.
+    cites: ["rvv:10.2"]

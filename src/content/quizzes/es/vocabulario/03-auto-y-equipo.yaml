@@ -1,0 +1,126 @@
+questions:
+  - id: auto-y-equipo-oliepeil
+    type: mc
+    prompt: ¿Qué es el "oliepeil"?
+    options: [El nivel de aceite, El filtro de aire, La presión de los neumáticos, El consumo]
+    answer: 0
+    explain: Oliepeil es el nivel de aceite.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: auto-y-equipo-reserveband
+    type: mc
+    prompt: ¿Qué es una "reserveband"?
+    options: [Una rueda de repuesto, Un neumático de invierno, Un freno, Una llanta deportiva]
+    answer: 0
+    explain: Reserveband es la rueda de repuesto.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: auto-y-equipo-bandenspanning
+    type: mc
+    prompt: ¿Cómo se dice "presión de los neumáticos" en neerlandés?
+    options: [bandenspanning, slijtage, toerental, brandstofverbruik]
+    answer: 0
+    explain: Bandenspanning es la presión de los neumáticos.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: auto-y-equipo-slijtage
+    type: mc
+    prompt: '"Slijtage" significa...'
+    options: [Desgaste, Frenada, Derrape, Consumo]
+    answer: 0
+    explain: Slijtage es desgaste.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: auto-y-equipo-toerental
+    type: mc
+    prompt: '"Toerental" significa...'
+    options: [Revoluciones del motor, Velocidad máxima, Consumo, Nivel de aceite]
+    answer: 0
+    explain: Toerental es el número de revoluciones del motor.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: auto-y-equipo-gevarendriehoek
+    type: mc
+    prompt: ¿Qué es la "gevarendriehoek"?
+    options: [El triángulo de emergencia, El triángulo de ceda el paso, Un reflector, Un cinturón]
+    answer: 0
+    explain: Gevarendriehoek es el triángulo de emergencia.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: auto-y-equipo-hamer
+    type: mc
+    prompt: ¿Para qué sirve la "veiligheidshamer"?
+    options: [Para romper vidrios en una emergencia, Para ajustar el motor, Para inflar neumáticos, Para clavar el triángulo]
+    answer: 0
+    explain: Veiligheidshamer es un martillo de emergencia para romper vidrios.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: auto-y-equipo-gordel
+    type: mc
+    prompt: ¿Qué es una "driepuntsgordel"?
+    options: [Un cinturón de tres puntos, Un cinturón de dos puntos, Un airbag, Una silla infantil]
+    answer: 0
+    explain: Driepuntsgordel es el cinturón de tres puntos; heupgordel es el abdominal.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: auto-y-equipo-dode-hoek
+    type: mc
+    prompt: ¿Qué es la "dode hoek"?
+    options: [El ángulo muerto, Una curva cerrada, Una esquina de la calle, Un estacionamiento]
+    answer: 0
+    explain: Dode hoek es el ángulo muerto.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: auto-y-equipo-richting
+    type: mc
+    prompt: ¿Cómo se dice "intermitente" en neerlandés?
+    options: [richtingaanwijzer, waarschuwingslichten, mistachterlicht, dagrijlicht]
+    answer: 0
+    explain: Richtingaanwijzer es el intermitente (direccional).
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: auto-y-equipo-waarschuwing
+    type: mc
+    prompt: ¿Qué son los "waarschuwingslichten"?
+    options: [Las luces de emergencia, Las luces largas, Las luces de freno, Las luces diurnas]
+    answer: 0
+    explain: Waarschuwingslichten son las luces de emergencia.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: auto-y-equipo-fietsdrager
+    type: mc
+    prompt: ¿Qué es una "fietsdrager"?
+    options: [Un portabicicletas, Un casco, Un candado, Un soporte para el móvil]
+    answer: 0
+    explain: Fietsdrager es un portabicicletas.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: auto-y-equipo-parkeerrem
+    type: mc
+    prompt: ¿Cómo se dice "freno de mano" (de estacionamiento)?
+    options: [parkeerrem, reminrichting, remweg, abs]
+    answer: 0
+    explain: Parkeerrem es el freno de estacionamiento.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: auto-y-equipo-ruitensproei
+    type: mc
+    prompt: ¿Qué es "ruitensproeiervloeistof"?
+    options: [Líquido limpiaparabrisas, Aceite, Refrigerante, Combustible]
+    answer: 0
+    explain: Es el líquido del limpiaparabrisas.
+    cites: ["cbr-examenplan:4"]
+    exam: false

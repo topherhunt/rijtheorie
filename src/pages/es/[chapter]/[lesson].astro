@@ -1,0 +1,60 @@
+---
+import { render } from 'astro:content';
+import Layout from '../../../layouts/Layout.astro';
+import T from '../../../components/T.astro';
+import Rule from '../../../components/Rule.astro';
+import Tip from '../../../components/Tip.astro';
+import Warn from '../../../components/Warn.astro';
+import Sign from '../../../components/Sign.astro';
+import Signs from '../../../components/Signs.astro';
+import Img from '../../../components/Img.astro';
+import Diagram from '../../../components/Diagram.astro';
+import Check from '../../../components/Check.astro';
+import QuizIsland from '../../../components/quiz/QuizIsland.tsx';
+import LessonTools from '../../../components/LessonTools.tsx';
+import { lessons, type LessonInfo } from '../../../lib/lessons.ts';
+import { questionsByLesson } from '../../../lib/questions.ts';
+import { href } from '../../../config.ts';
+import { es } from '../../../i18n/es.ts';
+
+export async function getStaticPaths() {
+  const all = await lessons('es');
+  return all.map((l, i) => ({
+    params: { chapter: l.chapter.id, lesson: l.slug },
+    props: { l, prev: all[i - 1], next: all[i + 1] },
+  }));
+}
+
+interface Props { l: LessonInfo; prev?: LessonInfo; next?: LessonInfo }
+const { l, prev, next } = Astro.props;
+const { Content } = await render(l.entry);
+const questions = (await questionsByLesson()).get(l.id) ?? [];
+const fm = l.entry.data;
+---
+
+<Layout title={fm.title} description={fm.summary}>
+  <p class="text-sm text-slate-500">
+    <a class="hover:underline" href={href(`es/#${l.chapter.id}`)}>{es.chapter} {l.chapter.n}: {l.chapter.title}</a>
+  </p>
+  <h1 class="qa-lesson-title mt-1 text-3xl font-bold">{fm.title}</h1>
+  <p class="mt-2 text-lg text-slate-600">{fm.summary}</p>
+  {fm.reviewed.length === 0 && <p class="qa-unreviewed mt-3 text-sm text-amber-800">{es.lesson.unreviewed}</p>}
+
+  <article class="prose-lesson mt-6">
+    <Content components={{ T, Rule, Tip, Warn, Sign, Signs, Img, Junction: Diagram, Check }} />
+  </article>
+
+  {questions.length > 0 && (
+    <section class="mt-12">
+      <h2 class="mb-4 text-2xl font-bold">{es.lesson.quizTitle}</h2>
+      <QuizIsland client:visible questions={questions} />
+    </section>
+  )}
+
+  <LessonTools client:load lessonId={l.id} />
+
+  <nav class="mt-8 flex justify-between gap-4 text-sm">
+    {prev ? <a class="qa-prev text-brand-700 underline" href={href(prev.path)}>← {prev.entry.data.title}</a> : <span />}
+    {next && <a class="qa-next text-right text-brand-700 underline" href={href(next.path)}>{next.entry.data.title} →</a>}
+  </nav>
+</Layout>

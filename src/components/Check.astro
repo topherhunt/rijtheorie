@@ -1,0 +1,14 @@
+---
+// Inline practice question inside lesson prose, looked up by its globally unique id.
+import QuizIsland from './quiz/QuizIsland.tsx';
+import { allQuestions } from '../lib/questions.ts';
+
+interface Props { id: string }
+const { id } = Astro.props;
+const q = (await allQuestions()).find((x) => x.id === id);
+if (!q) throw new Error(`<Check id="${id}">: no question with that id in src/content/quizzes`);
+---
+
+<div class="qa-check-inline my-6">
+  <QuizIsland client:visible questions={[q]} numbered={false} />
+</div>

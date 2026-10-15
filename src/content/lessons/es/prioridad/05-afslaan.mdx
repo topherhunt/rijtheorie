@@ -1,0 +1,106 @@
+---
+title: Girar en un cruce
+summary: Qué debes hacer antes de girar y a quién debes dejar pasar cuando giras a la izquierda o a la derecha.
+cbrTopics: [voorrang]
+---
+
+## Antes de girar
+
+Girar (<T id="afslaan" />) tiene sus propias reglas, además de la prioridad del cruce.
+
+<Rule cite="rvv:17.1, rvv:17.2" title="Preseleccionar y señalizar">
+Antes de girar puedes colocarte (<T id="voorsorteren" />): para girar a la derecha, lo más a la derecha posible; para girar a la izquierda, junto al eje de la vía (o lo más a la izquierda en una vía de sentido único). Además debes avisar con el intermitente (o con el brazo) antes de girar.
+</Rule>
+
+El CBR añade que debes preseleccionar siempre que no hacerlo sea inseguro o entorpezca el flujo del tráfico (`cbr-rijprocedure:3.3`).
+
+<Check id="afslaan-senalizar" />
+
+## A quién dejas pasar cuando giras
+
+<Rule cite="rvv:18.1" title="Quien gira deja pasar">
+Si giras, debes dejar pasar (<T id="voor-laten-gaan" />) al tráfico que viene de frente por la misma vía y al tráfico que va a tu lado o pegado detrás de ti, a derecha o izquierda, en la misma vía.
+</Rule>
+
+Esto vale además de la regla de la derecha y de las señales: aunque tengas prioridad, si giras a la izquierda debes dejar pasar al que viene de frente.
+
+<Junction
+  arms={{ n: {}, e: {}, s: {}, w: {} }}
+  vehicles={[
+    { label: 'A', kind: 'car', from: 's', to: 'left', you: true },
+    { label: 'B', kind: 'car', from: 'n', to: 'straight' },
+  ]}
+  alt="Cruce sin señales. Tú (A) vienes del sur y giras a la izquierda hacia el oeste. B viene del norte, de frente, y sigue recto."
+  caption="Giras a la izquierda: dejas pasar a B, que viene de frente."
+/>
+
+<Check id="afslaan-izquierda-frente" />
+
+<Warn>
+Girar a la izquierda **no** te da prioridad por ir por la vía con prioridad. Aunque tengas B1, el que gira a la izquierda deja pasar al tráfico de frente.
+</Warn>
+
+<Junction
+  arms={{ n: { sign: 'B1' }, e: {}, s: { sign: 'B1' }, w: {} }}
+  vehicles={[
+    { label: 'A', kind: 'car', from: 's', to: 'left', you: true },
+    { label: 'B', kind: 'car', from: 'n', to: 'straight' },
+  ]}
+  alt="Cruce en una vía con prioridad B1. Tú (A) vienes del sur y giras a la izquierda. B viene del norte, de frente, y sigue recto."
+  caption="Estás en la vía con prioridad, pero giras: B pasa primero."
+/>
+
+<Check id="afslaan-b1-izquierda" />
+
+## Dos giros que se cruzan
+
+<Rule cite="rvv:18.2" title="Izquierda cede a derecha">
+Si tú giras a la izquierda y el que viene de frente gira a la derecha en el mismo cruce, tú lo dejas pasar a él.
+</Rule>
+
+<Junction
+  arms={{ n: {}, e: {}, s: {}, w: {} }}
+  vehicles={[
+    { label: 'A', kind: 'car', from: 's', to: 'left', you: true },
+    { label: 'B', kind: 'car', from: 'n', to: 'right' },
+  ]}
+  alt="Cruce sin señales. Tú (A) vienes del sur y giras a la izquierda. B viene del norte, de frente, y gira a su derecha, hacia el oeste."
+  caption="Los dos giráis: el que gira a la izquierda (tú) cede."
+/>
+
+<Check id="afslaan-izq-der" />
+
+## Varios vehículos a la vez
+
+Cuando hay tres, aplica las reglas por parejas: la regla de la derecha (art. 15) y el deber de quien gira (art. 18).
+
+<Junction
+  arms={{ n: {}, e: {}, s: {}, w: {} }}
+  vehicles={[
+    { label: 'A', kind: 'car', from: 's', to: 'left', you: true },
+    { label: 'B', kind: 'car', from: 'n', to: 'straight' },
+    { label: 'C', kind: 'car', from: 'e', to: 'straight' },
+  ]}
+  alt="Cruce sin señales. Tú (A) vienes del sur y giras a la izquierda. B viene del norte y sigue recto. C viene del este y sigue recto."
+  caption="¿En qué orden pasan?"
+/>
+
+<Check id="afslaan-orden" />
+
+## No bloquees el cruce
+
+<Rule cite="rvv:14" title="No bloquear el cruce">
+No puedes bloquear un cruce con tu vehículo.
+</Rule>
+
+Si esperas para girar a la izquierda mientras pasan los que vienen de frente, el CBR pide que mantengas el cruce libre y que tengas las ruedas delanteras rectas, no giradas (`cbr-rijprocedure:3.3`). No hace falta con semáforos ni si tu vía tiene prioridad. La razón de tener las ruedas rectas es de seguridad: si te golpean por detrás, no te empujan hacia el tráfico de frente.
+
+<Check id="afslaan-ruedas" />
+
+## Dónde mirar
+
+<Rule cite="cbr-rijprocedure:3.3" title="Mirar antes de girar">
+Para girar a la derecha, el orden recomendado es: retrovisor interior, adelante, retrovisor exterior derecho y mirada por encima del hombro derecho. Para girar a la izquierda es el análogo por el lado izquierdo.
+</Rule>
+
+<Check id="afslaan-mirar" />

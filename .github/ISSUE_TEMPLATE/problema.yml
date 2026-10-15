@@ -1,0 +1,41 @@
+name: Reportar un problema
+description: Un error en una regla, una pregunta confusa, una imagen incorrecta o un fallo de la página.
+title: "[Problema] "
+labels: [contenido]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por ayudar a mejorar el curso. Si el problema es sobre una regla, dinos dónde viste la regla correcta (libro oficial, autoescuela, wetten.overheid.nl) si lo sabes.
+  - type: input
+    id: url
+    attributes:
+      label: Página
+      description: La dirección de la página donde viste el problema (se rellena sola si usaste el enlace del pie de página).
+    validations:
+      required: true
+  - type: dropdown
+    id: tipo
+    attributes:
+      label: Tipo de problema
+      options:
+        - Una regla o dato está mal
+        - Una pregunta tiene una respuesta equivocada o dos respuestas posibles
+        - Algo no se entiende
+        - Una imagen o diagrama está mal
+        - Error de español o de neerlandés
+        - La página no funciona
+        - Otro
+    validations:
+      required: true
+  - type: textarea
+    id: detalle
+    attributes:
+      label: ¿Qué está mal?
+      description: Si es una pregunta, copia su texto.
+    validations:
+      required: true
+  - type: textarea
+    id: fuente
+    attributes:
+      label: ¿Dónde viste la información correcta? (opcional)

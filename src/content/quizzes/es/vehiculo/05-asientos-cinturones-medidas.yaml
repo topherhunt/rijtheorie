@@ -1,0 +1,74 @@
+questions:
+  - id: asientos-cinturones-medidas-largo
+    type: number
+    prompt: ¿Cuál es el largo máximo, en metros, de un auto?
+    answer: 12
+    unit: m
+    explain: Un auto puede medir como máximo 12,00 m de largo.
+    cites: ["rv:5.2.6"]
+
+  - id: asientos-cinturones-medidas-ancho
+    type: number
+    prompt: ¿Cuál es el ancho máximo, en metros, de un auto?
+    answer: 2.55
+    unit: m
+    explain: El ancho máximo es 2,55 m.
+    cites: ["rv:5.2.6"]
+
+  - id: asientos-cinturones-medidas-alto
+    type: number
+    prompt: ¿Cuál es la altura máxima, en metros, de un auto?
+    answer: 4
+    unit: m
+    explain: La altura máxima es 4,00 m.
+    cites: ["rv:5.2.6"]
+
+  - id: asientos-cinturones-medidas-estado
+    type: yesno
+    prompt: ¿Está prohibido conducir un vehículo que no esté en buen estado de construcción y mantenimiento?
+    answer: true
+    explain: Es una prohibición general, que incluye también dejar que otro lo conduzca.
+    cites: ["rv:5.1.1"]
+
+  - id: asientos-cinturones-medidas-todos
+    type: yesno
+    prompt: Un auto puesto en uso en 2015 tiene cinturón solo en los asientos delanteros. ¿Cumple?
+    answer: false
+    explain: Para autos puestos en uso después del 30 de septiembre de 2000, todos los asientos deben tener cinturón.
+    cites: ["rv:5.2.47"]
+
+  - id: asientos-cinturones-medidas-airbag
+    type: yesno
+    prompt: En un auto de 2021 se enciende el aviso de defecto del airbag. ¿Cumple los requisitos?
+    answer: false
+    explain: Los avisos del airbag y del pretensor no deben indicar un defecto en autos posteriores a 2017.
+    cites: ["rv:5.2.47"]
+
+  - id: asientos-cinturones-medidas-lado
+    type: yesno
+    prompt: ¿Puede un auto puesto en uso en 2020 tener asientos orientados de lado?
+    answer: false
+    explain: Los autos puestos en uso después de 2014 no pueden tenerlos.
+    cites: ["rv:5.2.46"]
+
+  - id: asientos-cinturones-medidas-barra
+    type: yesno
+    prompt: La barra de remolque tiene una grieta. ¿Cumple?
+    answer: false
+    explain: La barra debe estar firmemente fijada y sin grietas.
+    cites: ["rv:5.2.66"]
+
+  - id: asientos-cinturones-medidas-masa
+    type: mc
+    prompt: ¿Dónde se ven las masas máximas permitidas del auto?
+    options: [En el kentekenbewijs o el registro, En el manual de la radio, En la factura del taller, En la placa de la calle]
+    answer: 0
+    explain: La masa total y las cargas por eje no pueden superar lo que figura en el kentekenbewijs o registro.
+    cites: ["rv:5.2.7"]
+
+  - id: asientos-cinturones-medidas-escape
+    type: yesno
+    prompt: ¿Debe ser hermético el sistema de escape?
+    answer: true
+    explain: El escape debe ser hermético a los gases, estar fijado y cumplir los límites de ruido.
+    cites: ["rv:5.2.11"]

@@ -1,0 +1,68 @@
+questions:
+  - id: seguimiento-regla
+    type: mc
+    prompt: "¿Qué dice la regla de los dos segundos?"
+    options: [Dejar la distancia que recorres en dos segundos, Dejar siempre dos metros, Dejar dos autos de distancia, Frenar durante dos segundos]
+    answer: 0
+    explain: "La volgafstand equivale a la distancia que recorres en dos segundos a tu velocidad."
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: seguimiento-calculo
+    type: number
+    prompt: "Vas a 90 km/h. Con la regla de la mitad, ¿cuántos metros de distancia de seguimiento aproximados dejas?"
+    answer: 45
+    unit: metros
+    explain: "La distancia en metros es aproximadamente la mitad de la velocidad en km/h: 90 / 2 = 45."
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: seguimiento-calculo-100
+    type: number
+    prompt: "Vas a 100 km/h. Con la regla de la mitad, ¿cuántos metros dejas?"
+    answer: 50
+    unit: metros
+    explain: "100 / 2 = 50 metros."
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: seguimiento-mas
+    type: multi
+    prompt: "¿En cuáles de estas situaciones hace falta más distancia?"
+    options: [Detrás de un vehículo opaco, Con tiempo mojado, Cuando te siguen muy de cerca, Con la calzada seca y buena visibilidad]
+    answer: [0, 1, 2]
+    explain: "La Rijprocedure B lo pide detrás de un vehículo opaco, con tiempo mojado y cuando otro te sigue muy de cerca."
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: seguimiento-lluvia
+    type: yesno
+    prompt: "Llueve. ¿Mantienes la misma distancia que con calzada seca?"
+    answer: false
+    explain: "Con tiempo mojado hace falta una distancia mayor."
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: seguimiento-opaco
+    type: yesno
+    prompt: "Vas detrás de una furgoneta que no te deja ver lo de delante. ¿Dejas más distancia?"
+    answer: true
+    explain: "Detrás de un vehículo opaco hace falta más distancia."
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: seguimiento-fila
+    type: mc
+    prompt: "Estás en una fila de tráfico lento. ¿Qué distancia con el auto de delante recomienda la Rijprocedure B?"
+    options: [Lo más constante posible, Lo más corta posible, Cada vez menos, Ninguna]
+    answer: 0
+    explain: "En fila se mantiene la distancia lo más constante posible."
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: seguimiento-grave
+    type: yesno
+    prompt: "¿Aparece en el art. 5a WVW el ir muy cerca detrás de otro vehículo entre las conductas graves?"
+    answer: true
+    explain: "Sí: onderdeel h, zeer dicht achter een ander voertuig rijden."
+    cites: ["wvw:5a"]
+
+  - id: seguimiento-siguen
+    type: yesno
+    prompt: "Un auto te sigue demasiado pegado. ¿Conviene dejar tú algo más de distancia delante?"
+    answer: true
+    explain: "Con un vehículo muy pegado detrás hace falta más distancia, y esa situación debe evitarse en lo posible."
+    cites: ["cbr-rijprocedure:3.2"]

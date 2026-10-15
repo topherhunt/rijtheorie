@@ -1,0 +1,64 @@
+questions:
+  - id: vulnerables-ninos
+    type: yesno
+    prompt: Según el CBR, ¿los niños son impredecibles cerca de la vía?
+    answer: true
+    explain: La guía los describe como impredecibles, por eso hay que anticipar.
+    cites: ["cbr-rijprocedure:2"]
+
+  - id: vulnerables-oido
+    type: mc
+    prompt: ¿En qué se apoyan sobre todo las personas ciegas para orientarse en el tráfico?
+    options: ["En la vista", "En el oído", "En el olfato", "En las señales luminosas"]
+    answer: 1
+    explain: Las personas ciegas se orientan por el oído, según la guía del CBR.
+    cites: ["cbr-rijprocedure:2"]
+
+  - id: vulnerables-baston
+    type: yesno
+    prompt: Una persona con bastón blanco con anillos rojos quiere cruzar. ¿Debes dejarla pasar?
+    answer: true
+    explain: Debes dejar pasar a ciegos con bastón blanco con anillos rojos y a quienes se mueven con dificultad.
+    cites: ["rvv:49.1"]
+
+  - id: vulnerables-cebra
+    type: yesno
+    prompt: Un peatón cruza por un paso de peatones. ¿Debes dejarlo pasar?
+    answer: true
+    explain: Debes dejar pasar a quienes cruzan por un paso de peatones.
+    cites: ["rvv:49.2"]
+
+  - id: vulnerables-cebra-listo
+    type: yesno
+    prompt: Un peatón está de pie en el borde de un paso de peatones y evidentemente va a cruzar. ¿Debes dejarlo pasar?
+    answer: true
+    explain: El artículo 49 lid 2 incluye a quien evidentemente está a punto de cruzar.
+    cites: ["rvv:49.2"]
+
+  - id: vulnerables-bus-parado
+    type: yesno
+    prompt: Un autobús está detenido y pasajeros bajan por el lado por donde quieres pasar. ¿Debes darles la oportunidad de bajar?
+    answer: true
+    explain: Debes darles la oportunidad de subir o bajar.
+    cites: ["rvv:52"]
+
+  - id: vulnerables-bus-sale
+    type: yesno
+    prompt: En una zona urbana, un autobús señala con la luz intermitente que quiere salir de la parada. ¿Debes darle la oportunidad?
+    answer: true
+    explain: Dentro de la zona urbana debes dar al autobús la oportunidad de salir de la parada.
+    cites: ["rvv:56.1"]
+
+  - id: vulnerables-hombro
+    type: yesno
+    prompt: ¿Sirve mirar por encima del hombro para revisar el ángulo muerto?
+    answer: true
+    explain: Esa es su única finalidad según la guía del CBR.
+    cites: ["cbr-rijprocedure:3"]
+
+  - id: vulnerables-hombro-error
+    type: yesno
+    prompt: ¿Está bien mirar por encima del hombro durante mucho tiempo para estar seguro?
+    answer: false
+    explain: Puede provocar una desviación no deseada del rumbo y no ves lo que ocurre delante del auto.
+    cites: ["cbr-rijprocedure:3"]

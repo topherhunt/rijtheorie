@@ -1,0 +1,88 @@
+questions:
+  - id: triangulo-distancia
+    type: number
+    prompt: ¿A qué distancia aproximada del vehículo se coloca el triángulo de emergencia?
+    answer: 30
+    unit: m
+    explain: La ley dice "ongeveer 30 meter" (unos 30 m) del vehículo.
+    cites: ["rvv:58.2"]
+
+  - id: triangulo-cuando
+    type: mc
+    prompt: ¿Cuándo exige la ley colocar el triángulo?
+    options: [Siempre que te detienes en cualquier lugar, Cuando el vehículo parado es un obstáculo que los demás no pueden ver a tiempo y no llevas luces de emergencia, Solo de noche, Solo en una autosnelweg]
+    answer: 1
+    explain: Artículo 58 lid 1 y 3. Si es un obstáculo no visible a tiempo, se señala con triángulo, salvo que lleves luces de emergencia intermitentes.
+    cites: ["rvv:58.1", "rvv:58.3"]
+
+  - id: triangulo-direccion
+    type: mc
+    prompt: ¿Dónde se coloca el triángulo respecto al tráfico?
+    options: [En la dirección del tráfico para el que el vehículo es un peligro y bien visible, Detrás del vehículo, pegado al parachoques, Delante del vehículo, En la berma sin importar la dirección]
+    answer: 0
+    explain: Debe colocarse en la vía, bien visible, hacia el tráfico que se acerca y para el que eres un peligro.
+    cites: ["rvv:58.2"]
+
+  - id: triangulo-moto
+    type: yesno
+    prompt: ¿La obligación del artículo 58 vale para un vehículo de motor de más de dos ruedas y para un remolque?
+    answer: true
+    explain: El artículo habla de motorvoertuigen op meer dan twee wielen en aanhangwagens.
+    cites: ["rvv:58.1"]
+
+  - id: alarma-cuando
+    type: multi
+    prompt: Según el CBR, ¿en cuáles de estas situaciones se usan las luces de emergencia (waarschuwingslichten)?
+    options: [Al llegar al final de una cola que se forma, Al detenerte en un lugar poco visible, Para estacionar un momento donde está prohibido, Al saludar a otro conductor]
+    answer: [0, 1]
+    explain: "La Rijprocedure las recomienda cuando hay que reducir mucho la velocidad o parar de repente: colas, lugares poco visibles y poca visibilidad."
+    cites: ["cbr-rijprocedure:2"]
+
+  - id: alarma-infraccion
+    type: yesno
+    prompt: Si pones las luces de emergencia, ¿puedes parar en un lugar donde está prohibido detenerse?
+    answer: false
+    explain: Las luces de emergencia no legalizan una infracción.
+    cites: ["cbr-rijprocedure:2"]
+
+  - id: alarma-triangulo
+    type: yesno
+    prompt: Tu auto parado lleva las luces de emergencia intermitentes encendidas. ¿La ley exige además poner el triángulo?
+    answer: false
+    explain: El artículo 58 lid 3 dice que el deber de triángulo no se aplica cuando hay luz intermitente de emergencia. Aun así, lo prudente es usar ambos si es seguro.
+    cites: ["rvv:58.3"]
+
+  - id: autopista-averia-calzada
+    type: yesno
+    prompt: ¿Está permitido detener el auto en la calzada de una autosnelweg?
+    answer: false
+    explain: Está prohibido detenerse en la calzada de una autosnelweg o autoweg.
+    cites: ["rvv:43.2"]
+
+  - id: autopista-vluchtstrook-no-emergencia
+    type: yesno
+    prompt: Quieres revisar el navegador y paras un momento en la vluchtstrook, sin ninguna emergencia. ¿Está permitido?
+    answer: false
+    explain: La vluchtstrook solo se usa en caso de emergencia.
+    cites: ["rvv:43.3"]
+
+  - id: autopista-vluchtstrook-emergencia
+    type: yesno
+    prompt: Tu motor se para en una autosnelweg. ¿Puedes llegar a la vluchtstrook?
+    answer: true
+    explain: Una avería es un caso de emergencia, el único en que se puede usar la vluchtstrook.
+    cites: ["rvv:43.3"]
+
+  - id: autopista-vuelta
+    type: yesno
+    prompt: Te pasaste de la salida de una autosnelweg. ¿Puedes dar marcha atrás por la vluchtstrook hasta ella?
+    answer: false
+    explain: Dar la vuelta y la marcha atrás están prohibidos en una autosnelweg o autoweg.
+    cites: ["rvv:43.1"]
+
+  - id: autopista-noche-luces
+    type: yesno
+    prompt: De noche, tu auto averiado está parado en la vluchtstrook. ¿Debe llevar luces de posición y luz trasera?
+    answer: true
+    explain: El artículo 38 lo exige en la vluchtstrook de una autosnelweg o autoweg.
+    cites: ["rvv:38"]

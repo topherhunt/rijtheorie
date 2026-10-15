@@ -1,0 +1,59 @@
+---
+import '../styles/global.css';
+import { REPO_URL, SITE_NAME, href } from '../config.ts';
+import { es } from '../i18n/es.ts';
+
+interface Props { title: string; description?: string }
+const { title, description } = Astro.props;
+const reportUrl = `${REPO_URL}/issues/new?template=problema.yml&url=${encodeURIComponent(Astro.url.pathname)}`;
+const nav = [
+  ['es/', es.nav.home],
+  ['es/repaso/', es.nav.review],
+  ['es/examen/', es.nav.exam],
+  ['es/notas/', es.nav.notes],
+  ['es/glosario/', es.nav.glossary],
+  ['es/progreso/', es.nav.progress],
+  ['es/acerca/', es.nav.about],
+] as const;
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title === SITE_NAME ? title : `${title} | ${SITE_NAME}`}</title>
+    {description && <meta name="description" content={description} />}
+  </head>
+  <body class="min-h-screen bg-slate-50 text-slate-900">
+    <div class="qa-disclaimer border-b border-amber-300 bg-amber-100 px-4 py-2 text-center text-sm text-amber-950">
+      <strong>⚠</strong> {es.disclaimer} <a class="underline" href={href('es/acerca/')}>{es.disclaimerLink}</a>
+    </div>
+    <header class="border-b border-slate-200 bg-white">
+      <div class="mx-auto flex max-w-4xl flex-wrap items-center gap-x-4 gap-y-2 px-4 py-3">
+        <a href={href('es/')} class="font-bold text-brand-700">{SITE_NAME}</a>
+        <nav class="flex flex-wrap gap-x-3 gap-y-1 text-sm">
+          {nav.map(([p, label]) => <a class="text-slate-600 hover:text-brand-700" href={href(p)}>{label}</a>)}
+        </nav>
+      </div>
+    </header>
+    <div id="storage-banner" class="qa-storage-banner hidden bg-red-100 px-4 py-2 text-center text-sm text-red-900">{es.storage}</div>
+    <main class="mx-auto max-w-4xl px-4 py-8">
+      <slot />
+    </main>
+    <footer class="border-t border-slate-200 bg-white">
+      <div class="mx-auto flex max-w-4xl flex-col gap-2 px-4 py-6 text-sm text-slate-600">
+        <a class="qa-report-link font-semibold text-brand-700 underline" href={reportUrl} target="_blank" rel="noopener">{es.report}</a>
+        <span>{es.reportHint}</span>
+        <span>{es.footer.license} <a class="underline" href={href('es/fuentes/')}>{es.footer.sources}</a></span>
+      </div>
+    </footer>
+    <script>
+      try {
+        localStorage.setItem('rijtheorie:probe', '1');
+        localStorage.removeItem('rijtheorie:probe');
+      } catch {
+        document.getElementById('storage-banner')!.classList.remove('hidden');
+      }
+    </script>
+  </body>
+</html>

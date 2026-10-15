@@ -1,0 +1,122 @@
+questions:
+  - id: c-c1-significado
+    type: mc
+    prompt: ¿Qué significa esta señal?
+    sign: C1
+    options: ["Cerrado en ambos sentidos para vehículos", "Sentido único", "Cerrado para vehículos de motor", "Prohibido estacionar"]
+    answer: 0
+    explain: C1 cierra la vía en los dos sentidos a vehículos, jinetes y conductores de animales.
+    cites: ["rvv:bijlage1.C1"]
+
+  - id: c-c2-significado
+    type: mc
+    prompt: Llegas a una calle y ves esta señal frente a ti. ¿Qué significa?
+    sign: C2
+    options: ["No puedes entrar en esta dirección", "Calle de sentido único en tu dirección: puedes entrar", "Cerrado en ambos sentidos", "Solo pueden entrar los residentes"]
+    answer: 0
+    explain: C2 es un eenrichtingsweg visto desde el lado prohibido: en esta dirección está cerrado para vehículos.
+    cites: ["rvv:bijlage1.C2"]
+
+  - id: c-c5-entrada
+    type: mc
+    prompt: ¿Qué significa esta señal?
+    sign: C5
+    options: ["Se permite entrar: sentido único en esta dirección", "Prohibido entrar", "Cerrado para ciclistas", "Fin de zona"]
+    answer: 0
+    explain: C5 indica que puedes entrar, porque la calle es de sentido único en tu dirección.
+    cites: ["rvv:bijlage1.C5"]
+
+  - id: c-c6-c12
+    type: mc
+    prompt: Conduces un auto y ves esta señal. ¿Puedes entrar?
+    sign: C6
+    options: ["No, está cerrado para vehículos de motor de más de dos ruedas", "Sí, solo está cerrado para camiones", "Sí, solo está cerrado para motocicletas", "Sí, si vas despacio"]
+    answer: 0
+    explain: C6 cierra los vehículos de motor de más de dos ruedas. Tu auto lo es.
+    cites: ["rvv:bijlage1.C6"]
+
+  - id: c-c12-motos
+    type: yesno
+    prompt: Con esta señal, ¿puede entrar una motocicleta?
+    sign: C12
+    answer: false
+    explain: C12 cierra todos los vehículos de motor, motos incluidas.
+    cites: ["rvv:bijlage1.C12"]
+
+  - id: c-c7-auto
+    type: yesno
+    prompt: Con esta señal, ¿puede entrar tu auto?
+    sign: C7
+    answer: true
+    explain: C7 cierra solo los camiones. Un auto puede entrar.
+    cites: ["rvv:bijlage1.C7"]
+
+  - id: c-c11-significado
+    type: mc
+    prompt: ¿Para qué vehículos está cerrada esta vía?
+    sign: C11
+    options: ["Motocicletas", "Camiones", "Ciclomotores", "Todos los vehículos de motor"]
+    answer: 0
+    explain: C11 es "Gesloten voor motorfietsen".
+    cites: ["rvv:bijlage1.C11"]
+
+  - id: c-c10-remolque
+    type: yesno
+    prompt: Conduces un auto con remolque. ¿Puedes entrar donde hay esta señal?
+    sign: C10
+    answer: false
+    explain: C10 cierra los vehículos de motor con remolque.
+    cites: ["rvv:bijlage1.C10"]
+
+  - id: c-c14-significado
+    type: mc
+    prompt: ¿Quién no puede pasar con esta señal?
+    sign: C14
+    options: ["Ciclistas", "Peatones", "Ciclomotores", "Autobuses"]
+    answer: 0
+    explain: C14 cierra bicicletas y vehículos para personas con discapacidad sin motor.
+    cites: ["rvv:bijlage1.C14"]
+
+  - id: c-c16-significado
+    type: mc
+    prompt: ¿Quién no puede pasar con esta señal?
+    sign: C16
+    options: ["Peatones", "Ciclistas", "Autos", "Jinetes"]
+    answer: 0
+    explain: C16 es "Gesloten voor voetgangers".
+    cites: ["rvv:bijlage1.C16"]
+
+  - id: c-c19-altura
+    type: mc
+    prompt: ¿Qué cierra esta señal?
+    sign: C19
+    options: ["Vehículos más altos de lo indicado, con carga incluida", "Vehículos más anchos", "Vehículos más pesados", "Vehículos más largos"]
+    answer: 0
+    explain: C19 cierra los vehículos más altos de lo indicado, contando la carga.
+    cites: ["rvv:bijlage1.C19"]
+
+  - id: c-c21-masa
+    type: mc
+    prompt: ¿Qué significa C21 con un número?
+    sign: C21
+    options: ["Cerrado para vehículos con masa total mayor a la indicada", "Velocidad máxima", "Cerrado para vehículos más altos", "Peso mínimo"]
+    answer: 0
+    explain: C21 limita la masa total (o suma de cargas por eje) del vehículo o la combinación.
+    cites: ["rvv:bijlage1.C21"]
+
+  - id: c-c22e-milieuzone
+    type: mc
+    prompt: Esta señal marca una zona con restricción por emisiones. ¿A qué vehículos se aplica una milieuzone?
+    sign: C22e
+    options: ["Autos, furgonetas, camiones o autobuses diésel, según el panel", "Todos los vehículos de gasolina", "Solo a motocicletas", "A todos los vehículos de motor"]
+    answer: 0
+    explain: La prohibición de una milieuzone se aplica a vehículos con motor diésel, según la clase de emisión que indique el panel.
+    cites: ["rvv:86d.1", "rvv:bijlage1.C22e"]
+
+  - id: c-ontheffing
+    type: yesno
+    prompt: ¿Puede alguien tener un permiso especial (ontheffing) para pasar por una señal C12?
+    sign: C12
+    answer: true
+    explain: El art. 87 permite que la autoridad dé una ontheffing para C6 a C21 (entre ellas C12).
+    cites: ["rvv:87"]

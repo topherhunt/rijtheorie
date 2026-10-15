@@ -1,0 +1,75 @@
+questions:
+  - id: adaptar-parar
+    type: mc
+    prompt: "¿Qué exige el art. 19 RVV sobre tu velocidad?"
+    options: [Poder detenerte en la distancia que ves libre, Ir siempre al máximo permitido, Ir 10 km/h por debajo del máximo, Seguir al auto de delante]
+    answer: 0
+    explain: "Debes poder parar dentro de la distancia en que puedes ver la vía y está libre."
+    cites: ["rvv:19"]
+
+  - id: adaptar-curva-ciega
+    type: yesno
+    prompt: "En una curva sin visibilidad, la vía está dentro del límite de velocidad. ¿Basta con respetar el máximo?"
+    answer: false
+    explain: "Además debes poder detenerte en la distancia que ves libre; el máximo no sustituye esta regla."
+    cites: ["rvv:19"]
+
+  - id: adaptar-lluvia
+    type: yesno
+    prompt: "Según la Rijprocedure B, ¿debes ajustar la velocidad al clima y a la densidad del tráfico?"
+    answer: true
+    explain: "Debes ajustarla al tipo y estado de la vía, el clima, el tráfico y las obras."
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: adaptar-lento
+    type: yesno
+    prompt: "Sin necesidad, ¿conviene circular excepcionalmente despacio respecto al resto del tráfico?"
+    answer: false
+    explain: "Causa estorbo innecesario y puede ser peligroso."
+    cites: ["cbr-rijprocedure:3.2", "wvw:5"]
+
+  - id: adaptar-curva
+    type: mc
+    prompt: "Te acercas a una curva. ¿Cuándo regulas la velocidad?"
+    options: [Antes de entrar en la curva, En medio de la curva, Al salir de la curva, No hace falta]
+    answer: 0
+    explain: "Se adapta antes de entrar, para recorrerla de forma segura y responsable."
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: adaptar-salida-curva
+    type: mc
+    prompt: "Sales de una curva con visibilidad. ¿Qué haces con la velocidad?"
+    options: [La vuelvo a subir hasta el máximo vigente, Me quedo lento, Freno, La subo por encima del máximo]
+    answer: 0
+    explain: "Al salir se sube la velocidad conforme al máximo vigente."
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: adaptar-curva-ciega-subir
+    type: mc
+    prompt: "En una curva sin visibilidad, ¿cuándo subes la velocidad?"
+    options: [Cuando ves toda la curva, Al entrar, Nunca, Cuando aparece otro auto]
+    answer: 0
+    explain: "En curvas sin visibilidad se sube la velocidad solo cuando la curva se ve completa."
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: adaptar-no-aumentar
+    type: yesno
+    prompt: "Alguien te está adelantando. ¿Debes aumentar tu velocidad?"
+    answer: false
+    explain: "Al ser adelantado no se aumenta la velocidad."
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: adaptar-espacio
+    type: mc
+    prompt: "Hay menos espacio entre tu auto y los demás usuarios. ¿Qué haces?"
+    options: [Voy más despacio, Voy igual, Voy más rápido, Cambio de carril]
+    answer: 0
+    explain: "Cuanto menos espacio, más despacio."
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: adaptar-peligro
+    type: yesno
+    prompt: "¿Prohíbe la ley comportarte de modo que cause peligro o estorbe al tráfico?"
+    answer: true
+    explain: "Art. 5 WVW."
+    cites: ["wvw:5"]

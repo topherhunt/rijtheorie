@@ -1,0 +1,71 @@
+questions:
+  - id: ag-agente-sobre-semaforo
+    type: mc
+    prompt: El semáforo está en rojo, pero un agente te hace señas para que avances. ¿Qué haces?
+    options: ["Sigo la instrucción del agente", "Espero el verde", "Avanzo solo si no viene nadie y luego sigo al agente", "Ignoro al agente"]
+    answer: 0
+    explain: Las instrucciones de personas autorizadas van por encima de los verkeerstekens y las reglas.
+    cites: ["rvv:84"]
+
+  - id: ag-quien
+    type: multi
+    prompt: ¿De quién debes seguir las instrucciones orales o con gestos?
+    options: ["Un funcionario competente y reconocible", "Un militar de la Koninklijke Marechaussee", "Un verkeersregelaar competente y reconocible", "Cualquier peatón que haga gestos"]
+    answer: [0, 1, 2]
+    explain: Art. 82.1. Un peatón cualquiera no tiene autoridad.
+    cites: ["rvv:82.1"]
+
+  - id: ag-oral
+    type: yesno
+    prompt: ¿Debes obedecer una instrucción dada solo de palabra por un agente reconocible?
+    answer: true
+    explain: Las instrucciones valen tanto orales como con gestos.
+    cites: ["rvv:82.1"]
+
+  - id: ag-brigadier
+    type: yesno
+    prompt: Un verkeersbrigadier reconocible te muestra la instrucción de parar. ¿Estás obligado a obedecer?
+    answer: true
+    explain: El art. 82.3 obliga a los conductores a obedecerla.
+    cites: ["rvv:82.3"]
+
+  - id: ag-lampara-roja
+    type: mc
+    prompt: Alguien te muestra una lámpara roja. ¿Qué debes hacer?
+    options: ["Detenerme", "Reducir la velocidad", "Ceder el paso", "Continuar con cuidado"]
+    answer: 0
+    explain: Art. 83: una lámpara roja es una señal de stop.
+    cites: ["rvv:83"]
+
+  - id: ag-stop-politie
+    type: mc
+    prompt: Un coche de la policía tiene un letrero iluminado con las palabras "stop politie" en rojo. ¿Qué debes hacer?
+    options: ["Detenerme", "Adelantar", "Reducir y continuar", "Ignorarlo si voy con prisa"]
+    answer: 0
+    explain: El letrero iluminado en un vehículo policial con "stop" o "stop politie" obliga a parar.
+    cites: ["rvv:83"]
+
+  - id: ag-f10-rail
+    type: yesno
+    prompt: El acompañante de un vehículo sobre raíles te muestra una bandera roja. ¿Debes parar?
+    sign: F10
+    answer: true
+    explain: Art. 82.4: señal F10, bandera roja o lámpara roja.
+    cites: ["rvv:82.4"]
+
+  - id: ag-gestos-anexo
+    type: mc
+    prompt: ¿Qué modelos siguen, en lo posible, los gestos de los controladores?
+    options: ["Los del anexo II del RVV", "Los del anexo 1 (señales)", "Los que decida cada agente", "Los del reglamento europeo"]
+    answer: 0
+    explain: Art. 82.2.
+    cites: ["rvv:82.2"]
+    exam: false
+
+  - id: ag-orden
+    type: mc
+    prompt: ¿Cuál de estas cosas manda sobre todas las demás?
+    options: ["La instrucción de un agente o controlador", "El semáforo", "Una señal de prioridad", "La regla general de tráfico"]
+    answer: 0
+    explain: Las instrucciones van sobre los verkeerstekens y las reglas (art. 84). Los semáforos van sobre las señales de prioridad (art. 64).
+    cites: ["rvv:84", "rvv:64"]

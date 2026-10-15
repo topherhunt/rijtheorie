@@ -1,0 +1,10 @@
+---
+import Sign from './Sign.astro';
+
+interface Props { codes: string }
+const codes = Astro.props.codes.split(',').map((c) => c.trim());
+---
+
+<div class="qa-signs my-5 flex flex-wrap gap-4">
+  {codes.map((code) => <Sign code={code} size="sm" />)}
+</div>

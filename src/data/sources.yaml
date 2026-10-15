@@ -1,5 +1,6 @@
 # Citation registry. A cite is "<key>:<locator>", e.g. "rvv:15.1" (RVV 1990 article 15, lid 1) or "cbr-examenplan:2".
 # Law entries (bwb) link to wetten.overheid.nl; locator = article[.lid[.onderdeel]], or "bijlage<N>[.<code>]".
+# `dotted: true` laws have dotted article numbers, so the lid follows a slash: "rv:5.2.45/2.a".
 # Other entries (url) link to the page; locator is shown as text (section, page).
 rvv:
   bwb: BWBR0004825
@@ -21,6 +22,7 @@ rv:
   bwb: BWBR0025798
   short: Regeling voertuigen
   title: Regeling voertuigen
+  dotted: true
 kr:
   bwb: BWBR0006951
   short: Kentekenreglement
@@ -37,6 +39,10 @@ cbr-examenplan:
   url: https://www.cbr.nl/nl/service/nl/nl/theorie-examenplan-auto
   short: CBR examenplan
   title: CBR -- Theorie-examenplan auto (B)
+cbr-rijprocedure:
+  url: https://www.cbr.nl/nl/service/nl/artikel/rijprocedure-b-printversie
+  short: CBR Rijprocedure B
+  title: CBR -- Rijprocedure B (versie 1 januari 2024)
 cbr-vragen:
   url: https://www.cbr.nl/nl/rijbewijs-halen/auto/theorie-examen-auto/soort-vragen-tijdens-theorie
   short: CBR tipos de pregunta
@@ -49,7 +55,31 @@ cbr-taal:
   url: https://www.cbr.nl/nl/veelgestelde-vragen/kan-ik-het-theorie-examen-in-een-andere-taal-doen
   short: CBR otros idiomas
   title: CBR -- Kan ik het theorie-examen in een andere taal doen?
+curso:
+  url: https://github.com/OWNER/rijtheorie
+  short: Este curso
+  title: Reglas de funcionamiento de este curso (no son ley; ver docs/BLUEPRINT.md del repositorio)
+rws-maximumsnelheid:
+  url: https://www.rijkswaterstaat.nl/wegen/wetten-regels-en-vergunningen/verkeerswetten/maximumsnelheid
+  short: Rijkswaterstaat velocidad máxima
+  title: Rijkswaterstaat -- Maximumsnelheid
 cbr-onderwerpen:
   url: https://www.cbr.nl/nl/rijbewijs-halen/auto/theorie-examen-auto/onderwerpen-in-het-theorie-examen
   short: CBR temas del examen
   title: CBR -- Onderwerpen in het theorie-examen
+rws-tunnel:
+  url: https://www.rijkswaterstaat.nl/wegen/ongeval-en-pech/pech-file-ongeval-of-brand-in-een-tunnel
+  short: Rijkswaterstaat tunnel
+  title: Rijkswaterstaat -- Pech, file, ongeval of brand in een tunnel
+anwb-tunnel:
+  url: https://www.anwb.nl/verkeer/buitenland/tunnels/rijden-in-de-tunnel
+  short: ANWB tunnel
+  title: ANWB -- Rijden in de tunnel
+rws-pech:
+  url: https://www.rijkswaterstaat.nl/wegen/ongeval-en-pech/pech-op-de-snelweg
+  short: Rijkswaterstaat avería
+  title: Rijkswaterstaat -- Pech op de snelweg
+vvn-turborotonde:
+  url: https://vvn.nl/blijf-veilig-onderweg/auto/verkeersregels/turborotonde
+  short: VVN turborotonde
+  title: Veilig Verkeer Nederland -- Turborotonde

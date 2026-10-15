@@ -1,0 +1,69 @@
+questions:
+  - id: d-d1-significado
+    type: mc
+    prompt: ¿Qué indica esta señal?
+    sign: D1
+    options: ["Rotonda con sentido de circulación obligatorio", "Giro a la derecha obligatorio", "Calle de sentido único", "Peligro de rotonda"]
+    answer: 0
+    explain: D1 es "Rotonde; verplichte rijrichting". La J9 es la señal de peligro que la anuncia.
+    cites: ["rvv:bijlage1.D1"]
+
+  - id: d-d2-lado
+    type: mc
+    prompt: ¿Qué te ordena esta señal?
+    sign: D2
+    options: ["Pasarla por el lado que indica la flecha", "Pasarla por cualquier lado", "Detenerte antes de la señal", "Girar en la dirección de la flecha"]
+    answer: 0
+    explain: D2 es un gebod: debes pasar la señal por el lado que marca la flecha.
+    cites: ["rvv:bijlage1.D2"]
+
+  - id: d-d3-ambos
+    type: yesno
+    prompt: Con esta señal, ¿puedes pasarla tanto por su izquierda como por su derecha?
+    sign: D3
+    answer: true
+    explain: D3 significa que la señal puede pasarse por ambos lados.
+    cites: ["rvv:bijlage1.D3"]
+
+  - id: d-d4-significado
+    type: mc
+    prompt: Llegas a un cruce con esta señal. ¿Qué haces?
+    sign: D4
+    options: ["Sigo en la dirección que indica la flecha", "Puedo elegir cualquier dirección", "Solo cedo el paso", "Giro a la izquierda"]
+    answer: 0
+    explain: D4 te obliga a seguir la dirección de la flecha.
+    cites: ["rvv:bijlage1.D4"]
+
+  - id: d-d6-varias
+    type: yesno
+    prompt: Esta señal muestra flechas hacia adelante y hacia la derecha. ¿Puedes girar a la izquierda?
+    sign: D6
+    answer: false
+    explain: D6 te obliga a seguir una de las direcciones indicadas. Ir a la izquierda no es una de ellas.
+    cites: ["rvv:bijlage1.D6"]
+
+  - id: d-d6-recto
+    type: yesno
+    prompt: Esta señal muestra flechas hacia adelante y hacia la derecha. ¿Puedes seguir recto?
+    sign: D6
+    answer: true
+    explain: Una de las direcciones indicadas es seguir recto.
+    cites: ["rvv:bijlage1.D6"]
+
+  - id: d-d5-significado
+    type: mc
+    prompt: ¿Qué significa esta señal?
+    sign: D5
+    options: ["Dirección obligatoria indicada por la flecha", "Prohibido girar", "Una de las direcciones es obligatoria", "Calle de sentido único"]
+    answer: 0
+    explain: D4 y D5 obligan a seguir la dirección de la flecha. D6 y D7 son las que dan varias.
+    cites: ["rvv:bijlage1.D5"]
+
+  - id: d-familia
+    type: mc
+    prompt: ¿Qué tipo de señal es una D (círculo azul con flecha blanca)?
+    options: ["Un gebod (orden)", "Un aviso de peligro", "Una prohibición", "Una información"]
+    answer: 0
+    explain: Las señales D son órdenes. Las C son prohibiciones, las J avisan de peligros.
+    cites: ["rvv:62", "rvv:bijlage1.D4"]
+    exam: false

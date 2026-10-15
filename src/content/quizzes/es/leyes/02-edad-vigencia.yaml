@@ -1,0 +1,69 @@
+questions:
+  - id: edad-vigencia-edad
+    type: number
+    prompt: ¿Desde qué edad (en años) puedes conducir un auto de la categoría B sin acompañante?
+    answer: 18
+    unit: años
+    explain: La edad mínima para B y BE es 18 años.
+    cites: ["rr:5.1.f"]
+
+  - id: edad-vigencia-17
+    type: yesno
+    prompt: Tienes 17 años, un permiso B y una begeleiderspas válida. ¿Puedes conducir si vas con tu acompañante registrado?
+    answer: true
+    explain: A los 17 años se puede conducir la categoría B con permiso B, begeleiderspas válida y un acompañante.
+    cites: ["rr:5.8"]
+
+  - id: edad-vigencia-17-solo
+    type: yesno
+    prompt: Tienes 17 años, un permiso B y una begeleiderspas válida. ¿Puedes conducir solo?
+    answer: false
+    explain: A los 17 años solo puedes conducir si te acompaña un acompañante (begeleider). Solo, necesitas tener 18.
+    cites: ["rr:5.8", "rr:5.1.f"]
+
+  - id: edad-vigencia-toets
+    type: mc
+    prompt: ¿Desde qué edad se puede hacer el examen intermedio del conducir acompañado?
+    options: [15 años, 16 años y 6 meses, 17 años, 18 años]
+    answer: 1
+    explain: El examen intermedio para el begeleid rijden se puede hacer a los 16 años y 6 meses.
+    cites: ["rr:5.9"]
+
+  - id: edad-vigencia-vigencia
+    type: number
+    prompt: Te dan el permiso B a los 30 años. ¿Cuántos años de vigencia tiene?
+    answer: 10
+    unit: años
+    explain: Si tienes menos de 65 años cuando lo emiten, vale 10 años.
+    cites: ["rr:25a"]
+
+  - id: edad-vigencia-70
+    type: number
+    prompt: Te dan o renuevan el permiso B a los 72 años. ¿Cuántos años de vigencia tiene?
+    answer: 5
+    unit: años
+    explain: Con 70 años o más al emitirlo, la vigencia es de 5 años.
+    cites: ["rr:25a"]
+
+  - id: edad-vigencia-65
+    type: mc
+    prompt: Te dan el permiso B a los 66 años. ¿Hasta cuándo vale?
+    options: [Por 10 años, Hasta que cumplas 75 años, Por 5 años, Para siempre]
+    answer: 1
+    explain: Entre 65 y menos de 70 años, el permiso vale hasta que cumplas 75.
+    cites: ["rr:25a"]
+
+  - id: edad-vigencia-perdido
+    type: yesno
+    prompt: Reportaste tu permiso como perdido y te dieron uno nuevo. ¿Sigue valiendo el antiguo si lo encuentras?
+    answer: false
+    explain: Un permiso deja de valer cuando se reporta perdido o cuando lo reemplazan por otro.
+    cites: ["wvw:123"]
+
+  - id: edad-vigencia-multi
+    type: multi
+    prompt: ¿En cuáles de estos casos el permiso deja de ser válido?
+    options: [Durante una rijontzegging, Después de cambiar tu nombre sin actualizar el permiso, Cuando lo reportas perdido, Cuando cumples 40 años]
+    answer: [0, 1, 2]
+    explain: Pierde validez durante una rijontzegging, si cambia el nombre o la fecha de nacimiento, y si se reporta perdido. Cumplir 40 años no lo afecta.
+    cites: ["wvw:123"]

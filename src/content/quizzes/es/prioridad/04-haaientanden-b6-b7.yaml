@@ -1,0 +1,137 @@
+questions:
+  - id: haaientanden-b-izquierda
+    type: mc
+    prompt: Ves dientes de tiburón frente a ti. B viene por tu izquierda en la vía que cruzas. ¿Quién pasa primero?
+    diagram:
+      arms: { n: {}, e: {}, s: { shark: true }, w: {} }
+      vehicles:
+        - { label: A, kind: car, from: s, to: straight, you: true }
+        - { label: B, kind: car, from: w, to: straight }
+      alt: Cruce. Tú (A) vienes del sur y ves dientes de tiburón pintados frente a ti. B viene del oeste, por tu izquierda, por la vía que cruzas.
+    options: [Tú (A), El auto B]
+    answer: 1
+    explain: Los dientes de tiburón te obligan a ceder el paso a los conductores de la vía que cruzas, vengan por la izquierda o por la derecha.
+    cites: ["rvv:80"]
+
+  - id: haaientanden-significado
+    type: mc
+    prompt: ¿Qué significan los dientes de tiburón en tu carril?
+    options:
+      - Debes ceder el paso a los conductores de la vía que cruzas
+      - Tienes prioridad sobre la vía que cruzas
+      - Debes parar siempre
+      - Solo vale para bicicletas
+    answer: 0
+    explain: Los haaientanden indican que debes dar voorrang a los conductores de la vía que cruzas.
+    cites: ["rvv:80"]
+
+  - id: haaientanden-punta
+    type: mc
+    prompt: ¿Hacia dónde apuntan las puntas de los dientes de tiburón?
+    options: [Hacia ti, Hacia el cruce, Hacia la derecha, Hacia atrás]
+    answer: 0
+    explain: Las puntas apuntan hacia el conductor que debe ceder el paso.
+    cites: ["rvv:80"]
+
+  - id: haaientanden-b6-nombre
+    type: mc
+    prompt: ¿Qué significa la señal B6?
+    sign: B6
+    options:
+      - Cede el paso a los conductores de la vía que cruzas
+      - Stop
+      - Fin de la vía con prioridad
+      - Vía con prioridad
+    answer: 0
+    explain: B6 dice "Verleen voorrang aan bestuurders op de kruisende weg".
+    cites: ["rvv:bijlage1.B6"]
+
+  - id: haaientanden-b6-giro
+    type: mc
+    prompt: Con B6 y dientes de tiburón giras a la derecha. B viene por tu izquierda y sigue recto. ¿Quién pasa primero?
+    sign: B6
+    diagram:
+      arms: { n: {}, e: {}, s: { sign: B6, shark: true }, w: {} }
+      vehicles:
+        - { label: A, kind: car, from: s, to: right, you: true }
+        - { label: B, kind: car, from: w, to: straight }
+      alt: Cruce. Tú (A) vienes del sur con la señal B6 y dientes de tiburón, y giras a la derecha. B viene del oeste, por tu izquierda, y sigue recto.
+    options: [Tú (A), El auto B]
+    answer: 1
+    explain: B6 te obliga a ceder el paso a la vía que cruzas, también si giras a la derecha.
+    cites: ["rvv:bijlage1.B6", "rvv:80"]
+
+  - id: haaientanden-b6-parar
+    type: yesno
+    prompt: Con B6, ¿debes detenerte siempre antes del cruce?
+    sign: B6
+    answer: false
+    explain: B6 obliga a ceder el paso, no a parar. Te detienes solo si hace falta para no estorbar a quien tiene prioridad.
+    cites: ["rvv:bijlage1.B6", "rvv:1"]
+
+  - id: haaientanden-b7-nombre
+    type: mc
+    prompt: ¿Cómo se llama la señal B7?
+    sign: B7
+    options: ["Stop; verleen voorrang aan bestuurders op de kruisende weg", Verleen voorrang aan bestuurders op de kruisende weg, Voorrangsweg, Einde voorrangsweg]
+    answer: 0
+    explain: B7 es la señal de Stop y también obliga a ceder el paso a la vía que cruzas.
+    cites: ["rvv:bijlage1.B7"]
+
+  - id: haaientanden-b7-parar
+    type: yesno
+    prompt: Con B7, ¿debes detenerte aunque no venga nadie?
+    sign: B7
+    answer: true
+    explain: B7 es Stop: debes detenerte antes de la línea de detención y luego ceder el paso. B6, en cambio, no obliga a parar.
+    cites: ["rvv:bijlage1.B7", "rvv:79"]
+
+  - id: haaientanden-b7-donde
+    type: mc
+    prompt: Con B7, ¿dónde debes detenerte?
+    sign: B7
+    options: [Antes de la línea de detención, Dentro del cruce, Después del cruce, Donde quieras]
+    answer: 0
+    explain: Si debes parar, lo haces antes de la stopstreep.
+    cites: ["rvv:79"]
+
+  - id: haaientanden-ciclista
+    type: yesno
+    prompt: Con B6 viene un ciclista por la vía que cruzas. ¿Debes cederle el paso?
+    sign: B6
+    answer: true
+    explain: B6 obliga a ceder el paso a los conductores (bestuurders) de la vía que cruzas, y los ciclistas son conductores.
+    cites: ["rvv:bijlage1.B6", "rvv:1"]
+
+  - id: haaientanden-acercarse
+    type: mc
+    prompt: Según el CBR, ¿cómo debes acercarte a un cruce con B6 o B7?
+    options:
+      - Mirando con atención extra y adaptando la velocidad
+      - Acelerando para pasar antes
+      - Sin mirar, porque la señal protege
+      - Siempre a menos de 10 km/h
+    answer: 0
+    explain: El CBR pide mirar con más atención y adaptar la velocidad ante B6 y B7.
+    cites: ["cbr-rijprocedure:3.3"]
+
+  - id: haaientanden-tu-prioridad
+    type: yesno
+    prompt: Tienes prioridad, pero ves que un auto de la vía lateral no parece ir a cederte el paso. ¿Debes adaptar tu velocidad?
+    answer: true
+    explain: El CBR indica adaptar la velocidad cuando el tráfico lateral no parece que cederá, aunque tengas prioridad.
+    cites: ["cbr-rijprocedure:3.3"]
+
+  - id: haaientanden-orden
+    type: order
+    prompt: ¿En qué orden pasan? Tú (A) tienes B6 y dientes de tiburón. B sigue recto y C gira a la izquierda hacia el norte.
+    diagram:
+      arms: { n: {}, e: {}, s: { sign: B6, shark: true }, w: {} }
+      vehicles:
+        - { label: A, kind: car, from: s, to: straight, you: true }
+        - { label: B, kind: car, from: e, to: straight }
+        - { label: C, kind: car, from: w, to: left }
+      alt: Cruce. Tú (A) vienes del sur con B6 y dientes de tiburón y sigues recto. B viene del este y sigue recto. C viene del oeste y gira a la izquierda hacia el norte.
+    answer: [B, C, A]
+    explain: A cede el paso a los dos, así que va último. C gira a la izquierda y debe dejar pasar al tráfico que viene de frente, B, así que B va primero.
+    cites: ["rvv:80", "rvv:18.1"]

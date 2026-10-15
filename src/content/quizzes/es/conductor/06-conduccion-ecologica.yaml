@@ -1,0 +1,67 @@
+questions:
+  - id: eco-neumaticos
+    type: mc
+    prompt: ¿Con qué frecuencia recomienda el CBR revisar la presión de los neumáticos?
+    options: ["Una vez al año", "Una vez al mes", "Solo antes de las vacaciones", "Cada semana"]
+    answer: 1
+    explain: La guía recomienda revisarla una vez al mes.
+    cites: ["cbr-rijprocedure:1"]
+
+  - id: eco-peso
+    type: yesno
+    prompt: ¿Conviene dejar un cofre de techo puesto aunque no lo uses, según el CBR?
+    answer: false
+    explain: Evita el peso innecesario y los portaequipajes o cofres de techo sin uso.
+    cites: ["cbr-rijprocedure:1"]
+
+  - id: eco-electricidad
+    type: yesno
+    prompt: ¿Recomienda el CBR evitar el uso innecesario de electricidad, como el aire acondicionado?
+    answer: true
+    explain: Aire acondicionado y lunetas calefactadas consumen combustible.
+    cites: ["cbr-rijprocedure:1"]
+
+  - id: eco-revoluciones
+    type: mc
+    prompt: ¿Entre qué revoluciones por minuto recomienda el CBR cambiar de marcha, cuando es seguro?
+    options: ["1000 y 1500", "2000 y 2500", "3000 y 3500", "4000 y 4500"]
+    answer: 1
+    explain: Entre 2000 y 2500 rpm.
+    cites: ["cbr-rijprocedure:1"]
+
+  - id: eco-acelerar
+    type: yesno
+    prompt: Si la distancia con el auto de delante lo permite, ¿recomienda el CBR acelerar con decisión?
+    answer: true
+    explain: Se recomienda acelerar con decisión, al menos hasta la mitad del recorrido del pedal.
+    cites: ["cbr-rijprocedure:1"]
+
+  - id: eco-levantar
+    type: mc
+    prompt: ¿Qué recomienda el CBR al reducir la velocidad?
+    options: ["Poner el punto muerto enseguida", "Levantar el pie del acelerador con anticipación y dejar el auto engranado", "Frenar solo al final con fuerza", "Pisar el embrague desde lejos"]
+    answer: 1
+    explain: Se levanta el pie con anticipación y se mantiene engranado; el embrague se pisa justo antes de detenerse.
+    cites: ["cbr-rijprocedure:1"]
+
+  - id: eco-apagar
+    type: number
+    prompt: A partir de cuántos minutos de parada prevista recomienda el CBR apagar el motor?
+    answer: 1
+    unit: minuto
+    explain: Si vas a estar parado más de un minuto, apaga el motor.
+    cites: ["cbr-rijprocedure:1"]
+
+  - id: eco-crucero
+    type: yesno
+    prompt: ¿Puede ayudar el control de crucero a mantener una velocidad constante?
+    answer: true
+    explain: La guía lo menciona como ayuda para una velocidad constante.
+    cites: ["cbr-rijprocedure:1"]
+
+  - id: eco-luces
+    type: yesno
+    prompt: Apagas el motor en una parada larga de noche. ¿Debes mantener las luces obligatorias encendidas?
+    answer: true
+    explain: Al apagar el motor se mantienen las luces que son obligatorias.
+    cites: ["cbr-rijprocedure:1"]

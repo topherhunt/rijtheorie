@@ -1,0 +1,80 @@
+questions:
+  - id: especial-remolque
+    type: number
+    prompt: "Conduces un auto con un remolque de masa máxima autorizada de 750 kg en una autosnelweg sin otras señales. ¿Cuál es tu velocidad máxima?"
+    answer: 90
+    unit: km/h
+    explain: "Un auto con remolque de hasta 3500 kg de masa máxima autorizada: 90 km/h (art. 22 onderdeel e)."
+    cites: ["rvv:22"]
+
+  - id: especial-remolque-otros
+    type: number
+    prompt: "Un camión con remolque circula por una autosnelweg sin otras señales. ¿Cuál es su velocidad máxima?"
+    answer: 80
+    unit: km/h
+    explain: "Los demás vehículos de motor con remolque: 80 km/h."
+    cites: ["rvv:22"]
+
+  - id: especial-camion
+    type: number
+    prompt: "¿Cuál es la velocidad máxima de un camión (sin remolque) en una autosnelweg sin otras señales?"
+    answer: 80
+    unit: km/h
+    explain: "Los camiones tienen 80 km/h según el art. 22 onderdeel a."
+    cites: ["rvv:22"]
+
+  - id: especial-bus
+    type: number
+    prompt: "¿Cuál es la velocidad máxima de un autobús normal (no T100) en una autosnelweg?"
+    answer: 80
+    unit: km/h
+    explain: "Autobuses (menos T100-bussen): 80 km/h."
+    cites: ["rvv:22"]
+
+  - id: especial-t100
+    type: number
+    prompt: "¿Cuál es la velocidad máxima de una T100-bus sin remolque?"
+    answer: 100
+    unit: km/h
+    explain: "Las T100-bussen tienen 100 km/h según el art. 22 onderdeel b."
+    cites: ["rvv:22"]
+
+  - id: especial-autocaravana
+    type: mc
+    prompt: "Una autocaravana registrada como bedrijfsauto con masa máxima de 3800 kg circula en una autosnelweg sin otras señales. ¿Cuál es su máximo?"
+    options: [80 km/h, 90 km/h, 100 km/h, 130 km/h]
+    answer: 0
+    explain: "Autocaravanas registradas como bedrijfsauto con más de 3500 kg: 80 km/h."
+    cites: ["rvv:22"]
+
+  - id: especial-brommobiel
+    type: number
+    prompt: "¿Cuál es la velocidad máxima de un brommobiel?"
+    answer: 45
+    unit: km/h
+    explain: "Art. 22 onderdeel c."
+    cites: ["rvv:22"]
+
+  - id: especial-snorfiets
+    type: number
+    prompt: "¿Cuál es la velocidad máxima de una snorfiets?"
+    answer: 25
+    unit: km/h
+    explain: "Art. 22 onderdeel d."
+    cites: ["rvv:22"]
+
+  - id: especial-urbana
+    type: number
+    prompt: "Conduces un auto con remolque dentro de la zona urbana sin señales. ¿Cuál es tu máximo?"
+    answer: 50
+    unit: km/h
+    explain: "Los 90 del remolque valen solo si no rige un máximo más bajo; dentro de la zona urbana rigen 50."
+    cites: ["rvv:22", "rvv:20"]
+
+  - id: especial-bromfiets
+    type: number
+    prompt: "¿Cuál es la velocidad máxima de un bromfiets en la calzada?"
+    answer: 45
+    unit: km/h
+    explain: "Art. 20 y 21: 45 km/h en la calzada."
+    cites: ["rvv:20", "rvv:21"]

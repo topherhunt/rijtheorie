@@ -1,0 +1,58 @@
+questions:
+  - id: paciencia-calma
+    type: mc
+    prompt: Otro conductor no te cede el paso cuando debía. ¿Qué recomienda el CBR?
+    options: ["Acelerar para no dejarlo pasar", "Frenar o detenerte y mantener la calma", "Tocar la bocina con insistencia", "Seguirlo de cerca para que se dé cuenta"]
+    answer: 1
+    explain: "Un buen conductor es paciente y no muestra agresividad: frena o se detiene."
+    cites: ["cbr-rijprocedure:2"]
+
+  - id: paciencia-peligro
+    type: yesno
+    prompt: ¿Está prohibido comportarte de modo que se cause peligro en la vía, aunque el otro conductor haya cometido un error?
+    answer: true
+    explain: El artículo 5 WVW se aplica a todos, sin importar quién empezó.
+    cites: ["wvw:5"]
+
+  - id: paciencia-claxon
+    type: yesno
+    prompt: ¿Puedes tocar la bocina porque el auto de delante arranca despacio en el semáforo?
+    answer: false
+    explain: Solo se puede usar la bocina o las luces para evitar un peligro inminente.
+    cites: ["rvv:28"]
+
+  - id: paciencia-social
+    type: multi
+    prompt: ¿Cuáles de estas son conductas sociales que menciona el CBR?
+    options: ["Hacer el ritsen", "Dejar pasar un cortejo fúnebre", "Dejar salir a quien sale de un acceso", "Pegarte al auto de delante"]
+    answer: [0, 1, 2]
+    explain: Pegarte al auto de delante es una conducta agresiva, no social.
+    cites: ["cbr-rijprocedure:2"]
+
+  - id: paciencia-charco
+    type: yesno
+    prompt: Hay un charco junto a una acera con peatones. ¿Es conducta social evitar salpicarlos?
+    answer: true
+    explain: El CBR menciona no salpicar a los peatones con los charcos.
+    cites: ["cbr-rijprocedure:2"]
+
+  - id: paciencia-ruido
+    type: yesno
+    prompt: ¿Está prohibido hacer ruido innecesario con un vehículo de motor?
+    answer: true
+    explain: El artículo 57 prohíbe el ruido innecesario a conductores de vehículos de motor, bromfietsen y snorfietsen.
+    cites: ["rvv:57"]
+
+  - id: paciencia-colarse
+    type: yesno
+    prompt: ¿Recomienda el CBR colarte por un costado ante un semáforo en rojo?
+    answer: false
+    explain: La guía recomienda no colarse antes de un semáforo en rojo o un puente.
+    cites: ["cbr-rijprocedure:2"]
+
+  - id: paciencia-irritado
+    type: yesno
+    prompt: ¿Recomienda el CBR salir de viaje estando irritado?
+    answer: false
+    explain: La guía recomienda no empezar un viaje cansado o irritado.
+    cites: ["cbr-rijprocedure:2"]

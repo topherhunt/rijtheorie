@@ -1,0 +1,93 @@
+questions:
+  - id: vehiculos-motorvoertuig
+    type: multi
+    prompt: ¿Cuáles de estos son motorvoertuigen según el RVV?
+    options: [Un auto, Una motocicleta, Una bromfiets, Una bicicleta con asistencia al pedaleo]
+    answer: [0, 1]
+    explain: Motorvoertuig excluye las bromfietsen, las bicicletas con asistencia al pedaleo, los gehandicaptenvoertuigen y los vehículos sobre rieles.
+    cites: ["rvv:1"]
+
+  - id: vehiculos-bromfiets-no
+    type: yesno
+    prompt: ¿Es una bromfiets un motorvoertuig para el RVV?
+    answer: false
+    explain: La definición de motorvoertuig excluye las bromfietsen.
+    cites: ["rvv:1"]
+
+  - id: vehiculos-autobus
+    type: number
+    prompt: ¿Más de cuántas personas, además del conductor, debe transportar un vehículo para ser un autobus?
+    answer: 8
+    unit: personas
+    explain: Autobus es un vehículo para más de 8 personas además del conductor.
+    cites: ["rvv:1"]
+
+  - id: vehiculos-vrachtauto
+    type: number
+    prompt: ¿Cuántos kilogramos de masa máxima debe superar un vehículo de motor para mercancías para ser vrachtauto?
+    answer: 3500
+    unit: kg
+    explain: Vrachtauto es el vehículo de motor que no es de pasajeros con masa máxima superior a 3500 kg. Hasta 3500 kg es un bestelauto.
+    cites: ["rvv:1"]
+
+  - id: vehiculos-motorfiets
+    type: yesno
+    prompt: Para el RVV, ¿una motocicleta con sidecar deja de ser motorfiets?
+    answer: false
+    explain: Motorfiets es un vehículo de dos ruedas, con o sin sidecar.
+    cites: ["rvv:1"]
+
+  - id: vehiculos-snorfiets
+    type: mc
+    prompt: ¿Para qué velocidad máxima está construida una snorfiets?
+    options: [15 km/h, 25 km/h, 45 km/h, 50 km/h]
+    answer: 1
+    explain: La snorfiets es una bromfiets construida para un máximo de 25 km/h según el registro de matrículas.
+    cites: ["rvv:1"]
+
+  - id: vehiculos-speed-pedelec
+    type: mc
+    prompt: ¿Qué hace que una bicicleta eléctrica sea una speed-pedelec y no una bicicleta con asistencia?
+    options: [Que tenga más de 2 ruedas, Que su fuerza de impulso continúe por encima de 25 km/h, Que sea más cara, Que tenga luces]
+    answer: 1
+    explain: La speed-pedelec es una bromfiets eléctrica cuya fuerza de impulso continúa por encima de 25 km/h. La bicicleta con asistencia la corta a 25 km/h.
+    cites: ["rvv:1", "wvw:1.1.ea"]
+
+  - id: vehiculos-brommobiel
+    type: mc
+    prompt: ¿Qué es una brommobiel?
+    options: [Una bicicleta eléctrica, Una bromfiets de más de dos ruedas con carrocería, Una motocicleta, Un gehandicaptenvoertuig]
+    answer: 1
+    explain: Brommobiel es una bromfiets de más de dos ruedas con carrocería.
+    cites: ["rvv:1"]
+
+  - id: vehiculos-reglas-brommobiel
+    type: mc
+    prompt: ¿Qué reglas sigue en general una brommobiel?
+    options: [Las de la bicicleta, Las del vehículo de motor, Las de los peatones, Las de la bromfiets en todo caso]
+    answer: 1
+    explain: Salvo que se diga otra cosa, la brommobiel sigue las reglas de los vehículos de motor y no las de la bromfiets.
+    cites: ["rvv:2a"]
+
+  - id: vehiculos-reglas-snorfiets
+    type: mc
+    prompt: ¿Qué reglas sigue en general una snorfiets?
+    options: [Las de la bicicleta, Las del vehículo de motor, Las de los peatones, Las de la brommobiel]
+    answer: 0
+    explain: Salvo que se diga otra cosa, la snorfiets sigue las reglas de la bicicleta y no las de la bromfiets.
+    cites: ["rvv:2b"]
+
+  - id: vehiculos-ebike
+    type: number
+    prompt: ¿A cuántos km/h se corta la asistencia de una bicicleta eléctrica normal?
+    answer: 25
+    unit: km/h
+    explain: La asistencia disminuye y se corta a 25 km/h, o antes si dejas de pedalear.
+    cites: ["wvw:1.1.ea"]
+
+  - id: vehiculos-gehandicapten
+    type: yesno
+    prompt: Un vehículo para una persona con discapacidad de 1,40 m de ancho, ¿es un gehandicaptenvoertuig según el RVV?
+    answer: false
+    explain: El gehandicaptenvoertuig no puede ser más ancho que 1,10 m.
+    cites: ["rvv:1"]

@@ -1,0 +1,17 @@
+---
+import { sign } from '../lib/data.ts';
+import { href } from '../config.ts';
+
+interface Props { code: string; size?: 'sm' | 'md' }
+const { code, size = 'md' } = Astro.props;
+const s = sign(code);
+---
+
+<figure class={`qa-sign inline-flex flex-col items-center text-center align-top ${size === 'sm' ? 'w-24' : 'w-36'}`}>
+  <img src={href(s.img ?? `signs/${code}.webp`)} alt={`Señal ${code}: ${s.es}`} class={size === 'sm' ? 'h-16 w-16 object-contain' : 'h-24 w-24 object-contain'} loading="lazy" />
+  <figcaption class="mt-1 text-xs leading-tight">
+    <span class="font-mono text-slate-500">{code}</span>
+    <span class="block text-slate-800">{s.es}</span>
+    <i lang="nl" class="block text-brand-700">{s.nl}</i>
+  </figcaption>
+</figure>

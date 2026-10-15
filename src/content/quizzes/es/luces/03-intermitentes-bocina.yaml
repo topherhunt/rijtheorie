@@ -1,0 +1,86 @@
+questions:
+  - id: intermitente-cuando
+    type: multi
+    prompt: ¿En cuáles de estas maniobras debes dar una señal con el intermitente?
+    options: [Arrancar desde el borde, Cambiar de carril, Adelantar a otro vehículo de motor, Seguir recto por tu carril sin cambiar nada]
+    answer: [0, 1, 2]
+    explain: El artículo 55 incluye arrancar, adelantar, cambiar de carril y los desplazamientos laterales importantes. Seguir recto no.
+    cites: ["rvv:55"]
+
+  - id: intermitente-salir-autopista
+    type: yesno
+    prompt: Sales de una autosnelweg por el carril de salida. ¿Debes señalizar?
+    answer: true
+    explain: Entrar y salir de la calzada principal está entre los casos del artículo 55.
+    cites: ["rvv:55"]
+
+  - id: intermitente-girar
+    type: yesno
+    prompt: ¿Debes dar señal con el intermitente antes de girar?
+    answer: true
+    explain: Antes de girar hay que dar señal con el intermitente o con el brazo.
+    cites: ["rvv:17.2"]
+
+  - id: intermitente-prioridad
+    type: yesno
+    prompt: Pones el intermitente para cambiar de carril. ¿Eso obliga a los demás a dejarte pasar?
+    answer: false
+    explain: "Cambiar de carril es una maniobra especial: quien la hace debe dejar pasar al demás tráfico. El intermitente solo informa."
+    cites: ["rvv:54", "rvv:55"]
+
+  - id: intermitente-arrancar
+    type: yesno
+    prompt: Estás parado en el borde de la calzada y quieres arrancar. ¿Debes dar señal y también dejar pasar al tráfico que viene?
+    answer: true
+    explain: Arrancar exige señal con el intermitente y es una maniobra especial en la que se cede el paso.
+    cites: ["rvv:55", "rvv:54"]
+
+  - id: bocina-saludo
+    type: yesno
+    prompt: ¿Puedes tocar la bocina para saludar a un conocido?
+    answer: false
+    explain: La bocina solo se puede usar para evitar un peligro inminente.
+    cites: ["rvv:28", "rvv:31"]
+
+  - id: bocina-peligro
+    type: yesno
+    prompt: Un niño cruza corriendo hacia la calzada sin mirar y no te ve. ¿Puedes tocar la bocina?
+    answer: true
+    explain: Es un caso de peligro inminente, el uso permitido de la bocina.
+    cites: ["rvv:28"]
+
+  - id: bocina-apurar
+    type: yesno
+    prompt: El auto de delante no arranca cuando se pone el verde. ¿Puedes tocarle la bocina para que avance?
+    answer: false
+    explain: No hay peligro inminente, y el ruido innecesario está prohibido.
+    cites: ["rvv:28", "rvv:57"]
+
+  - id: rafaga-ceder
+    type: yesno
+    prompt: Quieres dejar pasar a otro conductor y le haces una ráfaga con las luces. ¿Es lo correcto según la ley?
+    answer: false
+    explain: Las ráfagas de luz, igual que la bocina, solo se permiten para evitar un peligro inminente.
+    cites: ["rvv:28", "rvv:31"]
+
+  - id: rafaga-peligro
+    type: mc
+    prompt: ¿Para qué puedes usar los knippersignalen (ráfagas de luz)?
+    options: [Para dar las gracias, Para avisar a un conductor que va a cometer un error cualquiera, Solo para evitar un peligro inminente, Para pedir paso en una calle estrecha]
+    answer: 2
+    explain: El artículo 28 limita bocina y ráfagas a evitar un peligro inminente.
+    cites: ["rvv:28"]
+
+  - id: ruido-innecesario
+    type: yesno
+    prompt: ¿Está prohibido hacer ruido innecesario con un vehículo de motor?
+    answer: true
+    explain: El artículo 57 lo prohíbe a conductores de vehículos de motor, ciclomotores y snorfietsen.
+    cites: ["rvv:57"]
+
+  - id: bus-parada
+    type: yesno
+    prompt: En una calle dentro de la zona urbana, el autobús pone el intermitente para salir de la parada. ¿Debes darle la oportunidad de salir?
+    answer: true
+    explain: Dentro de la bebouwde kom debes dejar que el autobús salga de la parada.
+    cites: ["rvv:56.1"]

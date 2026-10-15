@@ -1,0 +1,79 @@
+questions:
+  - id: examen-practica-por-que
+    type: mc
+    exam: false
+    prompt: ¿Por qué el examen de práctica de este curso está bloqueado hasta que domines todo?
+    options: [Porque el CBR lo exige, Porque el objetivo es conocer las reglas a fondo y no solo sacar el mínimo para aprobar, Porque es más difícil que el examen real, Para que pagues más]
+    answer: 1
+    explain: El objetivo del curso es que conozcas las reglas a fondo. Con 44 de 50 se aprueba el examen real, pero eso deja hasta 6 reglas falladas.
+    cites: ["curso", "cbr-examenplan:1"]
+
+  - id: examen-practica-98
+    type: number
+    prompt: Para el desbloqueo por dominio, ¿cuántas de tus últimas 100 respuestas deben ser correctas como mínimo?
+    exam: false
+    answer: 98
+    unit: respuestas
+    explain: Se piden al menos 98 aciertos entre las últimas 100 respuestas, y hace falta tener 100 respuestas registradas.
+    cites: ["curso"]
+
+  - id: examen-practica-dias
+    type: mc
+    exam: false
+    prompt: Una de las condiciones del dominio es haber acertado cada pregunta en días distintos. ¿Cuántos días distintos?
+    options: [Uno, Dos, Cinco, Treinta]
+    answer: 1
+    explain: Cada pregunta debe haberse acertado en dos días distintos, en el Repaso.
+    cites: ["curso"]
+
+  - id: examen-practica-todas-condiciones
+    type: multi
+    exam: false
+    prompt: ¿Cuáles de estas son condiciones del desbloqueo por dominio?
+    options: [Has respondido todas las preguntas del curso, Tu última respuesta a cada pregunta es correcta, Al menos 98 de tus últimas 100 respuestas son correctas, Has hecho el curso en menos de una semana, Has descargado tu progreso]
+    answer: [0, 1, 2]
+    explain: Las condiciones son responder todas las preguntas, que la última respuesta a cada una sea correcta, 98 de las últimas 100 correctas y acierto en días distintos. No hay límite de semanas ni hace falta descargar nada.
+    cites: ["curso"]
+
+  - id: examen-practica-nivel-minimo
+    type: number
+    exam: false
+    prompt: La prueba de nivel tiene al menos una pregunta de cada lección y un mínimo total. ¿Cuál es ese mínimo?
+    answer: 40
+    unit: preguntas
+    explain: La prueba de nivel tiene como mínimo 40 preguntas, con al menos una por lección.
+    cites: ["curso"]
+
+  - id: examen-practica-nivel-espera
+    type: number
+    exam: false
+    prompt: Fallas una pregunta de la prueba de nivel. ¿Cuántas horas debes esperar para intentarlo otra vez?
+    answer: 24
+    unit: horas
+    explain: Después de un fallo hay que esperar 24 horas.
+    cites: ["curso"]
+
+  - id: examen-practica-nivel-fallo
+    type: yesno
+    exam: false
+    prompt: En la prueba de nivel, ¿puedes fallar una pregunta y aun así desbloquear el examen de práctica?
+    answer: false
+    explain: No. En la prueba de nivel debes acertar todas las preguntas.
+    cites: ["curso"]
+
+  - id: examen-practica-aprobado
+    type: yesno
+    exam: false
+    prompt: ¿Hay un límite de tiempo en el examen de práctica de este curso?
+    answer: false
+    explain: No. El examen de práctica solo muestra el tiempo transcurrido, porque el plan del CBR no indica ningún límite de tiempo.
+    cites: ["curso", "cbr-examenplan:1"]
+
+  - id: examen-practica-camino
+    type: mc
+    exam: false
+    prompt: Ya conduces en otro país y crees saber todo. ¿Qué puedes hacer para saltarte el camino largo del dominio?
+    options: [Pedir que te lo desbloqueen, Hacer la prueba de nivel y acertar todas las preguntas, Esperar 24 horas, Descargar tu progreso]
+    answer: 1
+    explain: La prueba de nivel desbloquea el examen de práctica si aciertas todas sus preguntas.
+    cites: ["curso"]

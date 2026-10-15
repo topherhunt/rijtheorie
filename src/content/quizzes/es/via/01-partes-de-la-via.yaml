@@ -1,0 +1,70 @@
+questions:
+  - id: partes-via-weg
+    type: yesno
+    prompt: Un camino de grava propiedad de una empresa, abierto al tráfico público, ¿cuenta como "weg" para la ley?
+    answer: true
+    explain: Weg es todo camino abierto al tráfico público. No importa el dueño ni el pavimento.
+    cites: ["wvw:1.1.b"]
+
+  - id: partes-via-rijbaan
+    type: mc
+    prompt: ¿Qué es la "rijbaan"?
+    options: [Toda la vía incluida la berma, La parte de la vía destinada a vehículos en movimiento sin contar fietspaden, Solo los carriles con rayas, Solo la autopista]
+    answer: 1
+    explain: Rijbaan es la parte de la vía para vehículos en movimiento, excepto los fietspaden y fiets/bromfietspaden.
+    cites: ["rvv:1"]
+
+  - id: partes-via-berm
+    type: yesno
+    prompt: Según la definición legal de weg, ¿las bermas pertenecen a la vía?
+    answer: true
+    explain: La definición de weg incluye los caminos y bermas que pertenecen a ella. Pero la berma no es parte de la rijbaan.
+    cites: ["wvw:1.1.b"]
+
+  - id: partes-via-kruispunt
+    type: multi
+    prompt: ¿Cuáles de estas situaciones son un "kruispunt" para el RVV?
+    options: [Dos vías que se cruzan, Una vía que se divide en dos, Un tramo recto sin ninguna otra vía, Una vía que termina en un campo]
+    answer: [0, 1]
+    explain: Un kruispunt es una kruising (cruce) o una splitsing (bifurcación) de vías.
+    cites: ["rvv:1"]
+
+  - id: partes-via-parkeerhaven
+    type: mc
+    prompt: ¿Para qué es una parkeerhaven?
+    options: [Para circular rápido, Para vehículos detenidos o estacionados junto a la calzada, Para ciclistas, Para peatones]
+    answer: 1
+    explain: Es una superficie pavimentada junto a la calzada pensada para vehículos detenidos o estacionados.
+    cites: ["rvv:1"]
+
+  - id: partes-via-verdrijvingsvlak
+    type: mc
+    prompt: ¿Cómo reconoces un "verdrijvingsvlak"?
+    options: [Por un semáforo, Por rayas diagonales sobre la calzada, Por una valla, Por una señal azul]
+    answer: 1
+    explain: El verdrijvingsvlak es la parte de la calzada con rayas diagonales.
+    cites: ["rvv:1"]
+
+  - id: partes-via-voetpad
+    type: mc
+    prompt: Ves la señal G7. ¿Qué indica?
+    sign: G7
+    options: [Voetpad, Fietspad obligatorio, Ruiterpad, Fin de zona urbana]
+    answer: 0
+    explain: G7 es la señal de voetpad.
+    cites: ["rvv:bijlage1.G7"]
+
+  - id: partes-via-fietspad-rijbaan
+    type: yesno
+    prompt: Un fietspad junto a la calzada, ¿forma parte de la rijbaan?
+    answer: false
+    explain: La definición de rijbaan excluye los fietspaden y los fiets/bromfietspaden.
+    cites: ["rvv:1"]
+
+  - id: partes-via-puntstuk
+    type: mc
+    prompt: ¿Qué es un "puntstuk"?
+    options: [Una superficie con varios ángulos donde las vías se dividen o se unen, Un tipo de semáforo, Un carril para autobuses, Una señal de velocidad]
+    answer: 0
+    explain: El puntstuk es una superficie con varios ángulos en divisiones o uniones de vías.
+    cites: ["rvv:1"]

@@ -1,0 +1,49 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-600: #ea580c;
+  --color-brand-700: #c2410c;
+  --color-brand-900: #7c2d12;
+}
+
+/* Lesson prose: MDX renders plain elements, so style them by descendant instead of per-element classes. */
+@layer components {
+  .prose-lesson {
+    @apply leading-relaxed text-slate-800;
+  }
+  .prose-lesson h2 {
+    @apply mt-10 mb-3 text-2xl font-bold text-slate-900;
+  }
+  .prose-lesson h3 {
+    @apply mt-6 mb-2 text-xl font-semibold text-slate-900;
+  }
+  .prose-lesson p,
+  .prose-lesson ul,
+  .prose-lesson ol {
+    @apply my-3;
+  }
+  .prose-lesson ul {
+    @apply list-disc pl-6;
+  }
+  .prose-lesson ol {
+    @apply list-decimal pl-6;
+  }
+  .prose-lesson li {
+    @apply my-1;
+  }
+  .prose-lesson a {
+    @apply text-brand-700 underline;
+  }
+  .prose-lesson table {
+    @apply my-4 w-full border-collapse text-sm;
+  }
+  .prose-lesson th,
+  .prose-lesson td {
+    @apply border border-slate-300 px-2 py-1 text-left align-top;
+  }
+  .prose-lesson th {
+    @apply bg-slate-100;
+  }
+}

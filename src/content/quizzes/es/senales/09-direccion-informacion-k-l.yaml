@@ -1,0 +1,125 @@
+questions:
+  - id: kl-k2-preaviso
+    type: mc
+    prompt: ¿Qué te da esta señal en una autosnelweg?
+    sign: K2
+    options: ["Preaviso de salida con distancia, número y destinos", "Un desvío", "Un área de servicio", "El fin de la autopista"]
+    answer: 0
+    explain: K2 es el preaviso de salida en una autosnelweg.
+    cites: ["rvv:bijlage1.K2"]
+
+  - id: kl-k3-servicio
+    type: mc
+    prompt: ¿Qué indica esta señal en una autosnelweg?
+    sign: K3
+    options: ["Salida hacia un área de servicio", "Salida hacia una ciudad", "Parada de emergencia", "Peaje"]
+    answer: 0
+    explain: K3 es el indicador de salida hacia un área de servicio.
+    cites: ["rvv:bijlage1.K3"]
+
+  - id: kl-k4-portico
+    type: mc
+    prompt: Sobre los carriles de una autosnelweg ves esta señal. ¿Qué muestra?
+    sign: K4
+    options: ["Destinos por carril y la salida", "Velocidad máxima de cada carril", "Que el carril está cerrado", "Un peaje"]
+    answer: 0
+    explain: K4 es un cartel alto con un panel por carril para la dirección que continúa.
+    cites: ["rvv:bijlage1.K4"]
+
+  - id: kl-k9-omleiding
+    type: mc
+    prompt: ¿Qué indica esta señal?
+    sign: K9
+    options: ["Un desvío (omleiding)", "Calle sin salida", "Un destino de autopista", "Un barrio"]
+    answer: 0
+    explain: K9 es "Omleiding".
+    cites: ["rvv:bijlage1.K9"]
+
+  - id: kl-k14-peligrosas
+    type: mc
+    prompt: ¿Qué indica esta señal?
+    sign: K14
+    options: ["Ruta para transporte de ciertas mercancías peligrosas", "Cerrado para mercancías peligrosas", "Desvío", "Zona ambiental"]
+    answer: 0
+    explain: K14 es una ruta para ciertos transportes de mercancías peligrosas. La prohibición para esas mercancías es C22.
+    cites: ["rvv:bijlage1.K14"]
+
+  - id: kl-l1-altura
+    type: mc
+    prompt: ¿Qué indica esta señal?
+    sign: L1
+    options: ["La altura libre de un paso inferior", "Prohibido para vehículos altos", "El ancho de la vía", "Peso máximo"]
+    answer: 0
+    explain: L1 es "Hoogte onderdoorgang". Es informativa. La prohibición para vehículos altos es C19.
+    cites: ["rvv:bijlage1.L1"]
+
+  - id: kl-l3-parada
+    type: mc
+    prompt: ¿Qué indica esta señal?
+    sign: L3
+    options: ["Parada de autobús o tranvía", "Carril bus", "Parada de taxis", "Cruce de tranvía"]
+    answer: 0
+    explain: L3 es "Bushalte / tramhalte".
+    cites: ["rvv:bijlage1.L3"]
+
+  - id: kl-l5-fin-carril
+    type: mc
+    prompt: ¿Qué indica esta señal?
+    sign: L5
+    options: ["Fin de carril", "Bifurcación", "Preselección de carriles", "Estrechamiento"]
+    answer: 0
+    explain: L5 es "Einde rijstrook".
+    cites: ["rvv:bijlage1.L5"]
+
+  - id: kl-l8-sinsalida
+    type: mc
+    prompt: ¿Qué indica esta señal?
+    sign: L8
+    options: ["Calle sin salida", "Vía de sentido único", "Fin de zona urbana", "Callejón con prohibición"]
+    answer: 0
+    explain: L8 es "Doodlopende weg".
+    cites: ["rvv:bijlage1.L8"]
+
+  - id: kl-l11-carriles
+    type: yesno
+    prompt: Un panel L11 está bajo una señal sobre un carril. ¿La señal vale solo para los carriles indicados?
+    sign: L11
+    answer: true
+    explain: L11 indica que el verkeersbord solo vale para los carriles señalados.
+    cites: ["rvv:bijlage1.L11", "rvv:65.1"]
+
+  - id: kl-l13-tunel
+    type: mc
+    prompt: ¿Qué indica esta señal?
+    sign: L13
+    options: ["Túnel", "Paso inferior", "Puente", "Refugio de emergencia"]
+    answer: 0
+    explain: L13 es "Tunnel".
+    cites: ["rvv:bijlage1.L13"]
+
+  - id: kl-l14-refugio
+    type: mc
+    prompt: ¿Qué indica esta señal?
+    sign: L14
+    options: ["Refugio de emergencia (vluchthaven)", "Teléfono de emergencia", "Salida de emergencia", "Apartadero"]
+    answer: 0
+    explain: L14 es "Vluchthaven": ensanche para detenerte en caso de avería.
+    cites: ["rvv:bijlage1.L14"]
+
+  - id: kl-l16-l17
+    type: mc
+    prompt: ¿Qué indica esta señal?
+    sign: L17
+    options: ["Extintor", "Teléfono de emergencia", "Salida de emergencia", "Parada de bomberos"]
+    answer: 0
+    explain: L17 es el extintor. L16 es el teléfono de emergencia y L18 son ambos.
+    cites: ["rvv:bijlage1.L17"]
+
+  - id: kl-l20-apartadero
+    type: mc
+    prompt: ¿Qué indica esta señal?
+    sign: L20
+    options: ["Apartadero a la derecha de la vía", "Apartadero a la izquierda", "Estacionamiento", "Refugio de emergencia"]
+    answer: 0
+    explain: L20 es un uitwijkplaats a la derecha; L21 a la izquierda.
+    cites: ["rvv:bijlage1.L20", "rvv:bijlage1.L21"]

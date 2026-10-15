@@ -1,0 +1,72 @@
+questions:
+  - id: ob-solo-simbolos
+    type: mc
+    prompt: Bajo una señal de prohibición hay un panel que muestra solo el símbolo de un camión. ¿A quién se aplica la prohibición?
+    options: ["Solo a los camiones", "A todos menos a los camiones", "A todos los vehículos", "A nadie"]
+    answer: 0
+    explain: Un onderbord con solo símbolos limita la señal a los usuarios representados.
+    cites: ["rvv:67.1"]
+
+  - id: ob-uitgezonderd
+    type: mc
+    prompt: Bajo una señal de prohibición hay un panel con la palabra "uitgezonderd" y el símbolo de una bicicleta. ¿Qué significa?
+    options: ["La prohibición no se aplica a las bicicletas", "La prohibición se aplica solo a las bicicletas", "La prohibición se aplica a todos por igual", "La bicicleta debe esperar"]
+    answer: 0
+    explain: "Uitgezonderd" más símbolos excluye a los usuarios representados.
+    cites: ["rvv:67.1"]
+
+  - id: ob-texto
+    type: mc
+    prompt: Un panel complementario lleva un texto con días y horas. ¿De dónde sale el comportamiento que debes seguir?
+    options: ["Del propio onderbord", "De la señal de arriba únicamente", "De una ley local sin señal", "Del semáforo"]
+    answer: 0
+    explain: Si el comportamiento se indica con textos o signos, resulta del onderbord.
+    cites: ["rvv:67.2"]
+
+  - id: ob-lado-e1
+    type: yesno
+    prompt: La señal E1 (prohibido estacionar) está en el lado derecho de la calle. ¿Vale también para el lado izquierdo?
+    sign: E1
+    answer: false
+    explain: E1, E2 y E3 valen solo para el lado de la vía donde están colocadas.
+    cites: ["rvv:65.2"]
+
+  - id: ob-carril
+    type: yesno
+    prompt: En una vía con varios carriles, ¿puede una señal aplicarse solo a uno de ellos?
+    answer: true
+    explain: La aplicación de una señal puede limitarse a uno o varios carriles.
+    cites: ["rvv:65.1"]
+
+  - id: ob-zone-fin
+    type: mc
+    prompt: Una señal lleva la palabra "zone" y no indica área. ¿Hasta dónde vale?
+    options: ["Hasta la señal de fin de zona", "Hasta el siguiente cruce", "Solo en el punto de la señal", "Cien metros"]
+    answer: 0
+    explain: Sin área indicada, vale hasta la señal de fin de zona.
+    cites: ["rvv:66.2"]
+
+  - id: ob-zone-e10
+    type: yesno
+    prompt: ¿La regla de "zone" sin área indicada se aplica también a la señal E10?
+    sign: E10
+    answer: true
+    explain: El art. 66 menciona expresamente E10.
+    cites: ["rvv:66"]
+
+  - id: ob-c22e-panel
+    type: mc
+    prompt: ¿Para qué sirven los paneles C22e4 a C22e10 bajo la señal C22e?
+    sign: C22e
+    options: ["Indican qué vehículos y clases de emisión afecta la zona", "Indican el horario de la zona", "Indican la velocidad máxima", "Indican el fin de la zona"]
+    answer: 0
+    explain: Los paneles precisan los vehículos y las clases de emisión de la zona ambiental.
+    cites: ["rvv:86d"]
+
+  - id: ob-simbolos-anexo
+    type: yesno
+    prompt: ¿Los símbolos de un onderbord tienen el mismo significado que en el anexo 1 del RVV?
+    answer: true
+    explain: Los símbolos de los paneles tienen el mismo significado que en el anexo 1.
+    cites: ["rvv:67.3"]
+    exam: false

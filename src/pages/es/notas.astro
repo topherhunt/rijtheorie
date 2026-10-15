@@ -1,0 +1,13 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import NotesIsland from '../../components/NotesIsland.tsx';
+import { lessons } from '../../lib/lessons.ts';
+import { href } from '../../config.ts';
+
+const refs = (await lessons('es')).map((l) => ({ id: l.id, title: l.entry.data.title, url: href(l.path) }));
+---
+
+<Layout title="Mis notas">
+  <h1 class="mb-6 text-3xl font-bold">Mis notas</h1>
+  <NotesIsland client:load lessons={refs} />
+</Layout>

@@ -1,0 +1,129 @@
+questions:
+  - id: e-e1-significado
+    type: mc
+    prompt: ¿Qué significa esta señal?
+    sign: E1
+    options: ["Prohibido estacionar", "Prohibido detenerse", "Zona de estacionamiento", "Fin de zona de disco"]
+    answer: 0
+    explain: E1 es "Parkeerverbod".
+    cites: ["rvv:bijlage1.E1"]
+
+  - id: e-e1-e2
+    type: mc
+    prompt: ¿Qué diferencia hay entre E1 y E2?
+    sign: E2
+    options: ["E1 prohíbe estacionar; E2 prohíbe incluso detenerse", "E1 prohíbe detenerse; E2 prohíbe estacionar", "Son lo mismo", "E2 solo vale de noche"]
+    answer: 0
+    explain: E1 es Parkeerverbod. E2 es "Verbod stil te staan", más estricta.
+    cites: ["rvv:bijlage1.E1", "rvv:bijlage1.E2"]
+
+  - id: e-e2-significado
+    type: mc
+    prompt: ¿Qué significa esta señal?
+    sign: E2
+    options: ["Prohibido detenerse", "Prohibido estacionar", "Zona de carga y descarga", "Parada de taxis"]
+    answer: 0
+    explain: E2 es "Verbod stil te staan".
+    cites: ["rvv:bijlage1.E2"]
+
+  - id: e-lado
+    type: yesno
+    prompt: Una señal E1 está en el lado izquierdo de la calle. Tú estacionas en el lado derecho. ¿Te alcanza la prohibición?
+    sign: E1
+    answer: false
+    explain: E1, E2 y E3 solo valen para el lado de la vía donde están colocadas.
+    cites: ["rvv:65.2"]
+
+  - id: e-e3-significado
+    type: mc
+    prompt: ¿Qué prohíbe esta señal?
+    sign: E3
+    options: ["Dejar bicicletas y ciclomotores", "Estacionar autos", "Detenerse", "Estacionar camiones"]
+    answer: 0
+    explain: E3 es "Verbod fietsen en bromfietsen te plaatsen".
+    cites: ["rvv:bijlage1.E3"]
+
+  - id: e-e4-significado
+    type: mc
+    prompt: ¿Qué indica esta señal?
+    sign: E4
+    options: ["Una zona de estacionamiento", "Una parada de taxis", "Una zona de disco", "Estacionamiento para discapacitados"]
+    answer: 0
+    explain: E4 es "Parkeergelegenheid".
+    cites: ["rvv:bijlage1.E4"]
+
+  - id: e-e5-taxi
+    type: mc
+    prompt: ¿Qué indica esta señal?
+    sign: E5
+    options: ["Parada de taxis", "Zona de carga", "Estacionamiento con permiso", "Fin de zona azul"]
+    answer: 0
+    explain: E5 es la taxistandplaats.
+    cites: ["rvv:bijlage1.E5"]
+
+  - id: e-e6-discapacidad
+    type: yesno
+    prompt: Quieres estacionar un momento en una plaza con esta señal. No tienes tarjeta de discapacidad. ¿Puedes?
+    sign: E6
+    answer: false
+    explain: Solo puede estacionar quien tiene tarjeta válida visible (y transporta a esa persona) o un vehículo para personas con discapacidad.
+    cites: ["rvv:26.1"]
+
+  - id: e-e7-estacionar
+    type: yesno
+    prompt: Esta señal marca una zona para carga y descarga inmediata de mercancías. ¿Puedes estacionar tu auto allí para ir de compras?
+    sign: E7
+    answer: false
+    explain: En un lugar destinado a carga y descarga inmediata no se puede estacionar.
+    cites: ["rvv:24.1", "rvv:bijlage1.E7"]
+
+  - id: e-e9-permiso
+    type: yesno
+    prompt: Un parking tiene esta señal. No tienes permiso. ¿Puedes estacionar?
+    sign: E9
+    answer: false
+    explain: E9 es solo para titulares de permiso. Sin permiso, no puedes estacionar.
+    cites: ["rvv:24.1", "rvv:bijlage1.E9"]
+
+  - id: e-e10-disco
+    type: mc
+    prompt: ¿Qué debes hacer al estacionar en una zona con esta señal?
+    sign: E10
+    options: ["Poner el disco de estacionamiento visible detrás del parabrisas", "Pagar en el parquímetro", "Dejar el motor encendido", "Nada, es solo informativo"]
+    answer: 0
+    explain: En una parkeerschijf-zona el disco es obligatorio, y no puedes pasar del tiempo indicado.
+    cites: ["rvv:25.2", "rvv:bijlage1.E10"]
+
+  - id: e-e10-redondeo
+    type: mc
+    prompt: Llegas a una plaza de disco a las 10:10. ¿Qué hora puedes poner en el disco?
+    sign: E10
+    options: ["10:30, el siguiente medio hora", "10:00", "10:10 exactas, no se puede redondear", "11:00"]
+    answer: 0
+    explain: Puedes redondear hacia arriba al siguiente medio o hora entera. 10:30 es el siguiente. Redondear hacia abajo no es lo que dice la ley.
+    cites: ["rvv:25.4"]
+
+  - id: e-e11-significado
+    type: mc
+    prompt: ¿Qué significa esta señal?
+    sign: E11
+    options: ["Fin de la zona de disco", "Fin de zona de estacionamiento", "Inicio de zona azul", "Prohibido estacionar"]
+    answer: 0
+    explain: E11 es el final de la parkeerschijf-zone.
+    cites: ["rvv:bijlage1.E11"]
+
+  - id: e-panel-horas
+    type: yesno
+    prompt: Bajo una señal E4 hay un panel con "08-18 h, lunes a viernes". ¿Vale la orden de la señal también un sábado?
+    sign: E4
+    answer: false
+    explain: Si el panel indica días y horas, la señal solo vale en esos días y horas.
+    cites: ["rvv:24.2"]
+
+  - id: e-vakken
+    type: yesno
+    prompt: Un parking con señal E4 tiene plazas marcadas. ¿Puedes estacionar parcialmente fuera de ellas?
+    sign: E4
+    answer: false
+    explain: Si hay parkeervakken, solo puedes estacionar en esos espacios.
+    cites: ["rvv:24.4"]

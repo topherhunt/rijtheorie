@@ -1,0 +1,75 @@
+---
+title: Tranvías y autobuses
+summary: El tranvía tiene prioridad en los cruces, quien gira no le exige nada, y los autobuses y tranvías detenidos tienen sus propias reglas.
+cbrTopics: [voorrang]
+---
+
+## El tranvía tiene prioridad
+
+<Rule cite="rvv:15.2.b" title="Prioridad del tranvía">
+En un cruce, los conductores deben dar prioridad (*voorrang verlenen*) a los conductores de un <T id="tram" />. Esta es una excepción a la regla de la derecha: da igual por dónde venga.
+</Rule>
+
+<Junction
+  arms={{ n: {}, e: {}, s: {}, w: { tram: true } }}
+  vehicles={[
+    { label: 'A', kind: 'car', from: 's', to: 'straight', you: true },
+    { label: 'B', kind: 'tram', from: 'w', to: 'straight' },
+  ]}
+  alt="Cruce sin señales. Tú (A) vienes del sur y sigues recto. Un tranvía (B) viene del oeste por su vía en el centro de la calzada, por tu izquierda, y sigue recto."
+  caption="El tranvía viene por tu izquierda, pero tiene prioridad."
+/>
+
+<Check id="bus-tram-tranvia-izquierda" />
+
+<Junction
+  arms={{ n: { tram: true }, e: {}, s: {}, w: {} }}
+  vehicles={[
+    { label: 'A', kind: 'car', from: 's', to: 'left', you: true },
+    { label: 'B', kind: 'tram', from: 'n', to: 'straight' },
+  ]}
+  alt="Cruce. Tú (A) vienes del sur y giras a la izquierda. Un tranvía (B) viene de frente, del norte, y sigue recto."
+  caption="Giras a la izquierda: el tranvía de frente pasa primero."
+/>
+
+<Check id="bus-tram-tranvia-frente" />
+
+## El tranvía no tiene que dejar pasar al girar
+
+<Rule cite="rvv:18.3" title="Excepción para tranvías">
+Las reglas del art. 18 (dejar pasar al tráfico de frente y al de al lado cuando giras) **no** valen para el conductor de un tranvía.
+</Rule>
+
+<Check id="bus-tram-art18" />
+
+<Rule cite="rvv:11.5" title="Adelantar un tranvía">
+Se puede adelantar a un tranvía por la derecha.
+</Rule>
+
+<Check id="bus-tram-adelantar" />
+
+## Tranvía o autobús detenido en una parada
+
+<Sign code="L3" />
+
+<Rule cite="rvv:52" title="Pasar junto a un tranvía o autobús detenido">
+Si quieres pasar un tranvía o autobús detenido por el lado donde suben y bajan los pasajeros, debes darles la oportunidad de subir y bajar.
+</Rule>
+
+<Rule cite="cbr-rijprocedure:3.6" title="Pasajeros">
+Presta atención a pasajeros que aparecen por delante o por detrás del autobús.
+</Rule>
+
+<Check id="bus-tram-pasajeros" />
+
+## El autobús que quiere salir de la parada
+
+<Rule cite="rvv:56.1, rvv:56.2" title="Autobús que arranca de la parada">
+Dentro de la zona urbana (<T id="bebouwde-kom" />), debes darle la oportunidad de salir de una parada (*bushalte*) a un autobús cuyo conductor avisa con el intermitente. Esta regla no vale para motorvehículos de una columna militar o cortejo fúnebre.
+</Rule>
+
+<Check id="bus-tram-salir-parada" />
+
+<Tip>
+La pregunta típica es: ves un autobús con el intermitente puesto en una parada en zona urbana. Respuesta: lo dejas salir.
+</Tip>

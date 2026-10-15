@@ -1,0 +1,65 @@
+---
+title: La regla de la derecha y sus dos excepciones
+summary: En un cruce sin señales ni semáforos, cede el paso a quien viene por tu derecha. Salvo dos casos.
+cbrTopics: [voorrang]
+---
+
+## La regla básica
+
+En los Países Bajos hay muchos cruces sin señales, sobre todo en barrios y zonas residenciales. Allí vale una regla sencilla:
+
+<Rule cite="rvv:15.1" title="Derecha primero (rechts gaat voor)">
+En un <T id="kruispunt" /> cedes el paso a quien viene **por tu derecha**.
+</Rule>
+
+A un cruce así se le llama <T id="gelijkwaardig-kruispunt" />: ninguna de las vías tiene prioridad por señales.
+
+<Junction
+  arms={{ n: {}, e: {}, s: {}, w: {} }}
+  vehicles={[
+    { label: 'A', kind: 'car', from: 's', to: 'straight', you: true },
+    { label: 'B', kind: 'car', from: 'e', to: 'straight' },
+  ]}
+  alt="Cruce sin señales. Tu auto (A) viene del sur y sigue recto. Otro auto (B) viene del este, es decir, por tu derecha, y también sigue recto."
+  caption="B viene por tu derecha: B pasa primero."
+/>
+
+### También ciclistas y motos
+
+La ley habla de <T id="bestuurder">conductores</T>, y para la ley un conductor es **cualquier usuario de la vía excepto los peatones**. Por eso un ciclista que viene por tu derecha también tiene prioridad.
+
+<Rule cite="rvv:1">
+*Bestuurders: alle weggebruikers behalve voetgangers.* Ciclistas, motos, ciclomotores y jinetes cuentan como conductores.
+</Rule>
+
+<Warn>
+Muchos alumnos piensan que el auto siempre va antes que la bicicleta. No es así: en un cruce sin señales, la bicicleta que viene por tu derecha pasa primero.
+</Warn>
+
+<Check id="regla-derecha-bici" />
+
+## Excepción 1: camino sin pavimentar
+
+<Rule cite="rvv:15.2.a">
+Si vienes de un <T id="onverharde-weg" />, cedes el paso a quien va por una <T id="verharde-weg" />, aunque venga por tu izquierda.
+</Rule>
+
+<Junction
+  arms={{ n: {}, e: {}, s: { surface: 'unpaved' }, w: {} }}
+  vehicles={[
+    { label: 'A', kind: 'car', from: 's', to: 'straight', you: true },
+    { label: 'B', kind: 'car', from: 'w', to: 'straight' },
+  ]}
+  alt="Cruce. Tú (A) vienes del sur por un camino de tierra. Otro auto (B) viene del oeste, por tu izquierda, por una vía asfaltada."
+  caption="Tú vienes del camino de tierra: B pasa primero, aunque viene por tu izquierda."
+/>
+
+## Excepción 2: el tranvía
+
+<Rule cite="rvv:15.2.b">
+Cedes el paso al <T id="tram" />, venga de donde venga.
+</Rule>
+
+<Tip>
+En las preguntas de prioridad, primero busca señales, marcas o un agente. Solo si no hay nada, aplica la regla de la derecha, y después revisa las dos excepciones: ¿hay un camino sin pavimentar? ¿hay un tranvía?
+</Tip>

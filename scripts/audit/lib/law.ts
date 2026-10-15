@@ -23,8 +23,8 @@ const ENTITIES: Record<string, string> = { amp: '&', lt: '<', gt: '>', quot: '"'
 export function xmlText(fragment: string): string {
   return fragment
     .replace(/<(meta-data|redactie|jcis)\b[\s\S]*?<\/\1>/g, '')
-    .replace(/<li\.nr>([\s\S]*?)<\/li\.nr>/g, '\n$1 ')
-    .replace(/<lidnr>([\s\S]*?)<\/lidnr>/g, '\n$1 ')
+    .replace(/<li\.nr\b[^>]*>([\s\S]*?)<\/li\.nr>/g, '\n$1 ')
+    .replace(/<lidnr\b[^>]*>([\s\S]*?)<\/lidnr>/g, '\n$1 ')
     .replace(/<\/(al|kop|tussenkop|li|lid|row)>/g, '\n')
     .replace(/<\/entry>/g, ' | ')
     .replace(/<[^>]+>/g, '')
@@ -49,7 +49,7 @@ export function parseLaw(xml: string): Law {
     const body = m[2];
     const leden = new Map<string, string>();
     for (const l of body.matchAll(/<lid\b[^>]*>([\s\S]*?)<\/lid>/g)) {
-      const lidnr = /<lidnr>\s*([^<]+?)\.?\s*<\/lidnr>/.exec(l[1])?.[1];
+      const lidnr = /<lidnr\b[^>]*>\s*([^<]+?)\.?\s*<\/lidnr>/.exec(l[1])?.[1];
       if (lidnr) leden.set(lidnr.toLowerCase(), xmlText(l[1]));
     }
     // An article can appear in several places (e.g. bijlage tables); the first, main-text occurrence wins.

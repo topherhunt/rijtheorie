@@ -1,0 +1,63 @@
+questions:
+  - id: zona-h1
+    type: mc
+    prompt: ¿Qué indica esta señal?
+    sign: H1
+    options: [Comienzo de la bebouwde kom, Fin de la bebouwde kom, Autopista, Zona de residencia]
+    answer: 0
+    explain: H1 es la señal de bebouwde kom, el comienzo de la zona urbana.
+    cites: ["rvv:bijlage1.H1"]
+
+  - id: zona-h2
+    type: mc
+    prompt: ¿Qué indica esta señal?
+    sign: H2
+    options: [Comienzo de la bebouwde kom, Fin de la bebouwde kom, Fin de autopista, Fin de zona 30]
+    answer: 1
+    explain: H2 es la señal de einde bebouwde kom, el fin de la zona urbana.
+    cites: ["rvv:bijlage1.H2"]
+
+  - id: zona-limites
+    type: mc
+    prompt: ¿Quién decide dónde están los límites de una bebouwde kom?
+    options: [El CBR, El consejo municipal (gemeenteraad), El conductor, La policía en cada control]
+    answer: 1
+    explain: Los límites los fija una decisión del consejo municipal.
+    cites: ["wvw:20a.1"]
+
+  - id: zona-dia
+    type: mc
+    prompt: ¿Cuándo es "dag" para el RVV?
+    options: [De 6:00 a 18:00, Desde la salida del sol hasta su puesta, Mientras haya luz de farolas, De 8:00 a 20:00]
+    answer: 1
+    explain: Dag es el período entre la salida y la puesta del sol, no una hora fija.
+    cites: ["rvv:1"]
+
+  - id: zona-noche
+    type: yesno
+    prompt: Para el RVV, ¿"nacht" es el período entre la puesta y la salida del sol?
+    answer: true
+    explain: Nacht es desde la puesta del sol hasta su salida.
+    cites: ["rvv:1"]
+
+  - id: zona-reloj
+    type: yesno
+    prompt: ¿La definición legal de "nacht" es la misma hora del reloj todo el año?
+    answer: false
+    explain: Depende del sol, porque la salida y la puesta cambian durante el año.
+    cites: ["rvv:1"]
+
+  - id: zona-senal
+    type: multi
+    prompt: ¿Cuáles de estas señales marcan el comienzo o el fin de la bebouwde kom?
+    options: [H1, H2, G7, G13]
+    answer: [0, 1]
+    explain: H1 marca el comienzo y H2 el fin. G7 es voetpad y G13 es onverplicht fietspad.
+    cites: ["rvv:bijlage1.H1", "rvv:bijlage1.H2"]
+
+  - id: zona-solo-tu
+    type: yesno
+    prompt: ¿Puede cada conductor decidir por su cuenta dónde empieza la zona urbana?
+    answer: false
+    explain: Los límites los decide el consejo municipal y se marcan con las señales H1 y H2.
+    cites: ["wvw:20a.1", "rvv:bijlage1.H1"]

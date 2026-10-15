@@ -1,0 +1,57 @@
+questions:
+  - id: drogas-medicamento
+    type: yesno
+    prompt: Tomaste un medicamento recetado que te produce somnolencia. ¿Puedes conducir porque es legal?
+    answer: false
+    explain: Que sea legal no importa. Si una sustancia reduce tu capacidad y no estás en condiciones, está prohibido conducir.
+    cites: ["wvw:8.1"]
+
+  - id: drogas-bicicleta
+    type: yesno
+    prompt: ¿La prohibición de conducir bajo influencia de sustancias vale también para una bicicleta?
+    answer: true
+    explain: El artículo 8 lid 1 habla de conducir un vehículo, sin limitarlo a vehículos de motor.
+    cites: ["wvw:8.1"]
+
+  - id: drogas-limites
+    type: yesno
+    prompt: ¿Fija la ley límites de concentración en sangre para ciertas drogas?
+    answer: true
+    explain: El artículo 8 lid 5 enumera sustancias con sus límites en sangre.
+    cites: ["wvw:8.5"]
+
+  - id: drogas-acompanar
+    type: yesno
+    prompt: Acompañas a un conductor en práctica y estás bajo influencia de una sustancia que reduce tu capacidad. ¿Es una infracción?
+    answer: true
+    explain: El artículo 8 lid 1 prohíbe conducir y también acompañar en ese estado.
+    cites: ["wvw:8.1"]
+
+  - id: drogas-prestar
+    type: yesno
+    prompt: Sabes que un amigo consumió drogas. ¿Puedes dejarle conducir tu auto?
+    answer: false
+    explain: Está prohibido dejar conducir a quien sabes o deberías saber que no está en condiciones.
+    cites: ["wvw:8.6"]
+
+  - id: drogas-saliva
+    type: yesno
+    prompt: La policía quiere hacerte una prueba de saliva. ¿Debes colaborar?
+    answer: true
+    explain: Debes colaborar con las pruebas que ordene la policía.
+    cites: ["wvw:160.5"]
+
+  - id: drogas-rijverbod
+    type: yesno
+    prompt: ¿Puede la policía prohibirte conducir durante unas horas si no estás en condiciones?
+    answer: true
+    explain: Puede imponer un rijverbod de hasta 24 horas.
+    cites: ["wvw:162.1"]
+
+  - id: drogas-alcohol-tambien
+    type: mc
+    prompt: ¿Qué sustancias cubre el artículo 8 lid 1?
+    options: ["Solo el alcohol", "Solo las drogas ilegales", "Cualquier sustancia que pueda reducir tu capacidad para conducir", "Solo los medicamentos sin receta"]
+    answer: 2
+    explain: La regla habla de una sustancia que puede reducir la capacidad, sin limitarse a una clase.
+    cites: ["wvw:8.1"]

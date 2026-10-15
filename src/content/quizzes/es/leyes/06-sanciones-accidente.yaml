@@ -1,0 +1,107 @@
+questions:
+  - id: sanciones-accidente-24h
+    type: number
+    prompt: ¿Por cuántas horas como máximo puede la policía imponerte un rijverbod si estás bajo la influencia de una sustancia?
+    answer: 24
+    unit: horas
+    explain: El rijverbod dura el tiempo que se espera que dure tu estado, como máximo 24 horas.
+    cites: ["wvw:162"]
+
+  - id: sanciones-accidente-rijverbod
+    type: yesno
+    prompt: Tienes un rijverbod vigente. ¿Puedes conducir si ya te sientes mejor?
+    answer: false
+    explain: Está prohibido conducir mientras dure el rijverbod.
+    cites: ["wvw:162"]
+
+  - id: sanciones-accidente-huir
+    type: mc
+    prompt: Chocas con un auto estacionado y rompes un espejo. No hay nadie cerca. ¿Qué dice la ley?
+    options: [Puedes irte porque el daño es pequeño, No puedes irte sin dar la oportunidad de verificar tu identidad, Solo debes llamar al seguro al día siguiente, Puedes irte si pagas en efectivo]
+    answer: 1
+    explain: Está prohibido abandonar el lugar si hay daños a otra persona, salvo que hayas dado la oportunidad de verificar tu identidad y la del vehículo.
+    cites: ["wvw:7"]
+
+  - id: sanciones-accidente-herido
+    type: yesno
+    prompt: Hubo un herido en un accidente en el que participaste. ¿Está prohibido abandonar el lugar?
+    answer: true
+    explain: Está prohibido abandonar el lugar del accidente si alguien resultó herido o muerto, o si dejarías a un herido desamparado.
+    cites: ["wvw:7"]
+
+  - id: sanciones-accidente-12h
+    type: number
+    prompt: Si huiste de un accidente, ¿dentro de cuántas horas debes presentarte voluntariamente para no ser procesado por ello?
+    answer: 12
+    unit: horas
+    explain: Debes avisar voluntariamente dentro de 12 horas, con tu identidad, antes de ser detenido o interrogado.
+    cites: ["wvw:184"]
+
+  - id: sanciones-accidente-50
+    type: number
+    prompt: Te detienen por pasar el límite de velocidad en un auto. ¿Con cuántos km/h de exceso (o más) pueden retirarte el permiso en el acto?
+    answer: 50
+    unit: km/h
+    explain: Con 50 km/h o más sobre el máximo (en un vehículo que no sea bromfiets) se retira el permiso. Para la bromfiets son 30 km/h.
+    cites: ["wvw:164.2.d"]
+
+  - id: sanciones-accidente-bromfiets
+    type: number
+    prompt: Un conductor de bromfiets pasa el límite de velocidad y lo detienen. ¿Con cuántos km/h de exceso (o más) le retiran el permiso?
+    answer: 30
+    unit: km/h
+    explain: Para la bromfiets el umbral es de 30 km/h o más.
+    cites: ["wvw:164.2.e"]
+
+  - id: sanciones-accidente-cbr
+    type: number
+    prompt: ¿En cuántas semanas como máximo decide el CBR si impone una medida educativa o un examen de aptitud?
+    answer: 4
+    unit: semanas
+    explain: El CBR decide lo antes posible y como máximo 4 semanas después de recibir el aviso.
+    cites: ["wvw:131"]
+
+  - id: sanciones-accidente-ongeldig
+    type: mc
+    prompt: Si no cooperas con el CBR, ¿qué pasa con tu permiso?
+    options: [Nada, El CBR lo declara inválido y debes entregarlo, Te dan uno nuevo, Solo te multan]
+    answer: 1
+    explain: El CBR declara el permiso inválido; entra en vigor el séptimo día tras la notificación.
+    cites: ["wvw:132"]
+
+  - id: sanciones-accidente-rijontzegging
+    type: number
+    prompt: ¿Hasta cuántos años como máximo puede un juez imponerte una rijontzegging por, por ejemplo, conducir bajo influencia (caso normal, sin reincidencia)?
+    answer: 5
+    unit: años
+    explain: Para las infracciones graves del primer apartado la rijontzegging puede ser de hasta 5 años.
+    cites: ["wvw:179.1"]
+
+  - id: sanciones-accidente-2
+    type: number
+    prompt: ¿Hasta cuántos años puede ser la rijontzegging por una infracción como crear peligro en la vía (art. 5 WVW)?
+    answer: 2
+    unit: años
+    explain: Para el artículo 5 y otros, la rijontzegging puede ser de hasta 2 años.
+    cites: ["wvw:179.2"]
+
+  - id: sanciones-accidente-123b
+    type: yesno
+    prompt: Te condenan otra vez por conducir bajo influencia dentro de 5 años de una condena anterior similar. ¿Puede tu permiso perder validez para todas las categorías?
+    answer: true
+    explain: En ese caso el permiso pierde validez y, para obtener uno nuevo, debes demostrar tu aptitud.
+    cites: ["wvw:123b"]
+
+  - id: sanciones-accidente-peligro
+    type: yesno
+    prompt: ¿Está prohibido comportarte en el tráfico de manera que causes peligro u obstaculices el tráfico?
+    answer: true
+    explain: Así lo dice el artículo 5 de la WVW.
+    cites: ["wvw:5"]
+
+  - id: sanciones-accidente-carreras
+    type: yesno
+    prompt: ¿Se pueden hacer carreras en una vía pública si no hay tráfico?
+    answer: false
+    explain: Las carreras en la vía pública están prohibidas.
+    cites: ["wvw:10"]

@@ -1,0 +1,18 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ExamIsland from '../../components/quiz/ExamIsland.tsx';
+import { allQuestions } from '../../lib/questions.ts';
+import { lessons } from '../../lib/lessons.ts';
+
+const all = await allQuestions();
+const pool = all.filter((q) => q.exam);
+const lessonCount = (await lessons('es')).length;
+---
+
+<Layout title="Examen de práctica">
+  <h1 class="text-3xl font-bold">Examen de práctica</h1>
+  <p class="mt-2 mb-6 text-slate-600">
+    Como el examen real del CBR: 50 preguntas sobre reglas y comprensión del tráfico, y necesitas 44 correctas. Responde como si fueras quien conduce el auto del CBR, suponiendo que los demás cumplen las reglas y que el tiempo y la vía están normales, salvo que la pregunta diga otra cosa.
+  </p>
+  <ExamIsland client:load pool={pool} all={all} lessonCount={lessonCount} />
+</Layout>

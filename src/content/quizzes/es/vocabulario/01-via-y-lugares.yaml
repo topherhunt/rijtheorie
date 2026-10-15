@@ -1,0 +1,126 @@
+questions:
+  - id: via-y-lugares-berm
+    type: mc
+    prompt: ¿Qué significa "berm"?
+    options: [Acera, Arcén de tierra o cuneta, Carril bus, Paso a nivel]
+    answer: 1
+    explain: La berm es el arcén de tierra o cuneta junto a la calzada.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: via-y-lugares-vluchtstrook
+    type: mc
+    prompt: ¿Qué es una "vluchtstrook"?
+    options: [Un carril de hora punta, Un arcén de emergencia, Una calle sin salida, Un carril de incorporación]
+    answer: 1
+    explain: Vluchtstrook es el arcén de emergencia.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: via-y-lugares-trottoir
+    type: mc
+    prompt: '"Trottoir" en español es...'
+    options: [Acera, Calzada, Arcén, Rotonda]
+    answer: 0
+    explain: Trottoir es la acera.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: via-y-lugares-spits
+    type: mc
+    prompt: ¿Qué es una "spitsstrook"?
+    options: [Un carril que se abre en hora punta, Un carril de bicicletas, Un arcén, Una bahía de estacionamiento]
+    answer: 0
+    explain: Spits significa hora punta.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: via-y-lugares-invoeg
+    type: mc
+    prompt: ¿Qué es una "invoegstrook"?
+    options: [Carril para salir de la autopista, Carril para incorporarse a la autopista, Un carril solo para bus, Un carril de preselección]
+    answer: 1
+    explain: Invoegen es incorporarse; uitvoegen es salir.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: via-y-lugares-uitvoeg
+    type: mc
+    prompt: ¿Cuál es el carril para salir de una autopista?
+    options: [invoegstrook, uitvoegstrook, busstrook, spitsstrook]
+    answer: 1
+    explain: Uitvoegstrook es el carril de salida/desaceleración.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: via-y-lugares-doodlopend
+    type: mc
+    prompt: ¿Qué significa "doodlopende weg"?
+    options: [Calle de sentido único, Calle sin salida, Autopista, Camino de tierra]
+    answer: 1
+    explain: Doodlopende weg es una calle sin salida.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: via-y-lugares-eenrichting
+    type: mc
+    prompt: ¿Qué significa "eenrichtingsweg"?
+    options: [Calle de sentido único, Calle sin salida, Autoweg, Zona residencial]
+    answer: 0
+    explain: Eenrichtingsweg es una calle de sentido único.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: via-y-lugares-overweg
+    type: mc
+    prompt: ¿Qué es un "overweg"?
+    options: [Un puente, Un paso a nivel con tren, Un túnel, Un desvío]
+    answer: 1
+    explain: Overweg es un paso a nivel (cruce con tren).
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: via-y-lugares-uitwijkplaats
+    type: mc
+    prompt: ¿Qué es una "uitwijkplaats"?
+    options: [Un apartadero, Un semáforo, Una bahía de taxis, Un disco de estacionamiento]
+    answer: 0
+    explain: Uitwijkplaats es un apartadero para ceder paso en una vía estrecha.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: via-y-lugares-omleiding
+    type: mc
+    prompt: ¿Qué significa "wegomleiding"?
+    options: [Obras, Desvío, Estacionamiento, Peaje]
+    answer: 1
+    explain: Wegomleiding es un desvío.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: via-y-lugares-drempel
+    type: mc
+    prompt: ¿Qué es un "verkeersdrempel"?
+    options: [Un semáforo, Un reductor de velocidad (badén), Un paso de peatones, Un cruce]
+    answer: 1
+    explain: Verkeersdrempel es un reductor de velocidad.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: via-y-lugares-untranslated
+    type: multi
+    prompt: ¿Cuáles de estas palabras el CBR no traduce en sus exámenes en otros idiomas?
+    options: [autoweg, erf, trottoir, berm]
+    answer: [0, 1]
+    explain: Entre las palabras de la vía, autoweg y erf quedan en neerlandés.
+    cites: ["cbr-examenplan:6"]
+    exam: false
+
+  - id: via-y-lugares-stoep
+    type: mc
+    prompt: ¿Cómo se dice "paso de peatones" en neerlandés?
+    options: [overweg, voetgangersoversteekplaats, uitrit, viaduct]
+    answer: 1
+    explain: Voetgangersoversteekplaats es el paso de peatones.
+    cites: ["cbr-examenplan:4"]
+    exam: false

@@ -1,0 +1,81 @@
+---
+title: Señales de prioridad B1 a B5
+summary: Las señales de la serie B1 a B5 marcan quién tiene prioridad, y las señales mandan sobre la regla de la derecha.
+cbrTopics: [voorrang]
+---
+
+## Las señales mandan sobre la regla
+
+La regla de la derecha solo vale cuando nada dice lo contrario. Si hay una señal que regula la prioridad, la sigues y olvidas la derecha.
+
+<Rule cite="rvv:62, rvv:63" title="Las señales mandan">
+Debes obedecer las señales que mandan u obligan (*geboden* y *verboden*), y las señales van **por encima** de las reglas generales de tráfico.
+</Rule>
+
+Eso incluye la regla de la derecha del art. 15. Por ejemplo, un auto que viene por tu izquierda puede tener prioridad sobre ti si una señal lo dice.
+
+## B1 y B2: vía con prioridad
+
+<Signs codes="B1,B2" />
+
+<Rule cite="rvv:bijlage1.B1, rvv:bijlage1.B2" title="Voorrangsweg y su final">
+B1 es la señal *Voorrangsweg* (<T id="voorrangsweg" />): en los cruces tienes prioridad. B2 es *Einde voorrangsweg*: esa prioridad termina.
+</Rule>
+
+<Junction
+  arms={{ n: { sign: 'B1' }, e: {}, s: { sign: 'B1' }, w: {} }}
+  vehicles={[
+    { label: 'A', kind: 'car', from: 's', to: 'straight', you: true },
+    { label: 'B', kind: 'car', from: 'e', to: 'straight' },
+  ]}
+  alt="Cruce. Tú (A) vienes del sur por una vía con la señal B1 y sigues recto. B viene del este, por tu derecha, por una vía sin señal de prioridad."
+  caption="Estás en la vía con B1: pasas tú, aunque B venga por tu derecha."
+/>
+
+<Check id="voorrangsborden-b1-derecha" />
+
+<Warn>
+Cuando llegues a una B2, la prioridad ya terminó. En el cruce que viene después vuelve a valer la regla de la derecha, salvo que otra señal diga algo distinto.
+</Warn>
+
+<Junction
+  arms={{ n: {}, e: {}, s: { sign: 'B2' }, w: {} }}
+  vehicles={[
+    { label: 'A', kind: 'car', from: 's', to: 'straight', you: true },
+    { label: 'B', kind: 'car', from: 'e', to: 'straight' },
+  ]}
+  alt="Cruce. Tú (A) vienes del sur y pasas junto a la señal B2, que marca el final de la vía con prioridad. B viene del este, por tu derecha."
+  caption="Con B2 la prioridad terminó: B viene por tu derecha y pasa primero."
+/>
+
+<Check id="voorrangsborden-b2-fin" />
+
+## B3, B4 y B5: cruces con prioridad
+
+<Signs codes="B3,B4,B5" />
+
+<Rule cite="rvv:bijlage1.B3, rvv:bijlage1.B4, rvv:bijlage1.B5" title="Voorrangskruispunt">
+B3 es *Voorrangskruispunt*, B4 es *Voorrangskruispunt, zijweg links* y B5 es *Voorrangskruispunt, zijweg rechts*. Anuncian un <T id="voorrangskruispunt" /> más adelante, y B4 y B5 indican por qué lado se une una vía lateral.
+</Rule>
+
+En la práctica: si ves estas señales en tu vía, **tú tienes prioridad** en el cruce que viene, y los que vienen de las vías laterales deben cederte el paso. Si llegas por una vía lateral, busca B6, B7 o dientes de tiburón; los verás en la lección siguiente.
+
+<Check id="voorrangsborden-b4" />
+
+## Prioridad que dobla: el onderbord "afbuigende voorrang"
+
+A veces la vía con prioridad no sigue recta: gira. Un <T id="onderbord" /> (panel debajo de la señal) muestra el recorrido de la vía con prioridad.
+
+<Rule cite="cbr-rijprocedure:3.3" title="Afbuigende voorrang">
+Si el panel indica que la prioridad dobla (*afbuigende voorrang*), seguir **la vía que indica el panel** cuenta como ir recto. Salir de esa vía cuenta como girar.
+</Rule>
+
+Así, si sigues la vía con prioridad cuando dobla, no cuentas como alguien que gira, y mantienes la prioridad que te da la señal.
+
+<Check id="voorrangsborden-afbuigend" />
+
+<Tip>
+En el examen, primero busca señales en el dibujo (B1 a B7, dientes de tiburón, semáforos, agentes). Solo si no hay ninguna, aplica la derecha.
+</Tip>
+
+<Check id="voorrangsborden-b3-ventaja" />

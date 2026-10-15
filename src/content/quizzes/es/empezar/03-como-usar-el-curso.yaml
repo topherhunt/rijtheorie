@@ -1,0 +1,86 @@
+questions:
+  - id: como-usar-oficial
+    type: yesno
+    exam: false
+    prompt: Este curso es material oficial del CBR.
+    answer: false
+    explain: No. Es un curso no oficial hecho por voluntarios. Puede tener errores, por eso se recomienda estudiar también con material oficial o un curso acreditado.
+    cites: ["curso"]
+
+  - id: como-usar-conflicto
+    type: mc
+    exam: false
+    prompt: Lo que dice este curso contradice lo que dice la ley o el CBR. ¿Qué vale?
+    options: [Lo que dice este curso, Lo que dicen la ley o el CBR, Lo más estricto de los dos, Lo que dice tu instructor siempre]
+    answer: 1
+    explain: Este curso no es una fuente oficial. Si hay diferencias, valen la ley y el CBR.
+    cites: ["curso"]
+
+  - id: como-usar-reportar
+    type: mc
+    exam: false
+    prompt: Encuentras una regla que crees incorrecta. ¿Cómo la reportas?
+    options: [Con el enlace "Reportar un problema" del pie de la página, Llamando al CBR, Escribiendo una nota en la lección, No se puede reportar]
+    answer: 0
+    explain: El enlace "Reportar un problema" está en el pie de cada página y abre una plantilla de GitHub. Una nota en la lección es solo para ti y se guarda en tu navegador.
+    cites: ["curso"]
+
+  - id: como-usar-fuente
+    type: yesno
+    exam: false
+    prompt: Un cuadro de regla de una lección muestra una cita como "rvv:15.1". ¿Indica de dónde sale la regla?
+    answer: true
+    explain: La cita indica la fuente. "rvv:15.1" es el artículo 15, primer apartado del RVV 1990, y puedes comprobarlo ahí.
+    cites: ["curso"]
+
+  - id: como-usar-repaso
+    type: mc
+    exam: false
+    prompt: En el Repaso, ¿cuándo cuenta una pregunta como aprendida?
+    options: [Cuando la contestas bien una vez, Cuando la contestas bien en días distintos, Cuando la lees dos veces, Cuando terminas la lección]
+    answer: 1
+    explain: Una pregunta cuenta como aprendida solo cuando la has contestado bien en días distintos. Una sola respuesta correcta el mismo día no basta.
+    cites: ["curso"]
+
+  - id: como-usar-repaso-error
+    type: mc
+    exam: false
+    prompt: Contestas mal una pregunta en el Repaso. ¿Qué pasa con ella?
+    options: [Nada, sigue igual, Vuelve a empezar su ciclo de repaso, Se elimina del curso, Cuenta como aprendida igual]
+    answer: 1
+    explain: Si fallas, la pregunta vuelve al principio de su ciclo y tendrás que acertarla de nuevo en días distintos.
+    cites: ["curso"]
+
+  - id: como-usar-progreso
+    type: mc
+    exam: false
+    prompt: ¿Dónde se guardan tu progreso y tus notas?
+    options: [En una cuenta en un servidor, Solo en tu navegador, En el CBR, En tu correo]
+    answer: 1
+    explain: No hay cuentas. Todo se guarda en tu navegador, por eso conviene exportar tu progreso desde "Mi progreso".
+    cites: ["curso"]
+
+  - id: como-usar-cuentas
+    type: yesno
+    exam: false
+    prompt: Cambias de computador y no exportaste tu progreso. ¿Seguirá tu progreso disponible automáticamente en el computador nuevo?
+    answer: false
+    explain: No. El progreso está solo en el navegador del primer computador. Para pasarlo debes exportarlo y luego importarlo.
+    cites: ["curso"]
+
+  - id: como-usar-notas
+    type: yesno
+    exam: false
+    prompt: ¿Puedes descargar todas tus notas juntas desde la página Notas?
+    answer: true
+    explain: En la página Notas ves las notas de todas las lecciones y puedes descargarlas como un archivo Markdown.
+    cites: ["curso"]
+
+  - id: como-usar-consejo
+    type: mc
+    exam: false
+    prompt: En una lección ves un cuadro de "consejo" (Tip). ¿Qué es?
+    options: [Una regla de ley, Una técnica para el examen que no es ley, Una pregunta del CBR, Una cita de un artículo]
+    answer: 1
+    explain: Los consejos son técnicas de examen. Las reglas de ley van en cuadros de regla con su fuente.
+    cites: ["curso"]

@@ -1,0 +1,57 @@
+questions:
+  - id: atencion-celular
+    type: yesno
+    prompt: ¿Está prohibido sostener un celular en la mano mientras conduces?
+    answer: true
+    explain: El artículo 61a prohíbe sostener un aparato electrónico móvil durante la marcha.
+    cites: ["rvv:61a"]
+
+  - id: atencion-tableta
+    type: yesno
+    prompt: ¿La prohibición de sostener aparatos incluye una tableta?
+    answer: true
+    explain: El texto nombra en todo caso al celular, la tableta y el reproductor multimedia.
+    cites: ["rvv:61a"]
+
+  - id: atencion-reproductor
+    type: yesno
+    prompt: Conduces y sostienes un reproductor de música en la mano para cambiar de canción. ¿Está permitido?
+    answer: false
+    explain: Un reproductor multimedia es un aparato cubierto por el artículo 61a.
+    cites: ["rvv:61a"]
+
+  - id: atencion-peligro
+    type: yesno
+    prompt: ¿Está prohibido comportarte de modo que puedas causar peligro, aunque no ocurra nada?
+    answer: true
+    explain: El artículo 5 WVW habla de causar o poder causar peligro.
+    cites: ["wvw:5"]
+
+  - id: atencion-cansado
+    type: yesno
+    prompt: Según el CBR, ¿conviene empezar un viaje largo estando muy cansado?
+    answer: false
+    explain: La guía recomienda no emprender un viaje cansado o irritado.
+    cites: ["cbr-rijprocedure:2"]
+
+  - id: atencion-distracciones
+    type: multi
+    prompt: ¿De cuáles de estas cosas recomienda el CBR evitar distraerte al conducir?
+    options: ["Los pasajeros", "La radio", "El teléfono", "Los espejos retrovisores"]
+    answer: [0, 1, 2]
+    explain: La guía menciona pasajeros, radio y teléfono. Los espejos son parte de conducir bien.
+    cites: ["cbr-rijprocedure:2"]
+
+  - id: atencion-claxon
+    type: yesno
+    prompt: ¿Puedes tocar la bocina para saludar a un conocido?
+    answer: false
+    explain: Las señales sonoras y con luces solo se pueden dar para evitar un peligro inminente.
+    cites: ["rvv:28"]
+
+  - id: atencion-colarse
+    type: yesno
+    prompt: La cola ante un semáforo en rojo avanza despacio. ¿Es buena práctica colarte por el costado para ganar posiciones?
+    answer: false
+    explain: El CBR recomienda no colarse antes de un semáforo en rojo o un puente.
+    cites: ["cbr-rijprocedure:2"]

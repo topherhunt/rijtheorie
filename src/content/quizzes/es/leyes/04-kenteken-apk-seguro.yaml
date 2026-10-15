@@ -1,0 +1,67 @@
+questions:
+  - id: kenteken-apk-seguro-wam
+    type: yesno
+    prompt: ¿Debes tener un seguro de responsabilidad civil para un auto que circula por la vía pública?
+    answer: true
+    explain: La WAM obliga al poseedor y a la persona a cuyo nombre está registrado el auto a contratar y mantener ese seguro.
+    cites: ["wam:2.1"]
+
+  - id: kenteken-apk-seguro-quien
+    type: multi
+    prompt: ¿Quiénes están obligados por la WAM a contratar el seguro?
+    options: [El poseedor del auto, La persona a cuyo nombre está registrado, El vecino, El mecánico]
+    answer: [0, 1]
+    explain: La obligación recae en el poseedor (bezitter) y en quien figura en el registro de matrículas.
+    cites: ["wam:2.1"]
+
+  - id: kenteken-apk-seguro-tapar
+    type: yesno
+    prompt: ¿Puedes tapar la matrícula con un portabicicletas sin hacer nada más?
+    answer: false
+    explain: El kenteken debe verse. Si el portabultos tapa la placa, debe llevar una placa con el mismo kenteken.
+    cites: ["wvw:40", "rv:5.18.7/1.f"]
+
+  - id: kenteken-apk-seguro-falsa
+    type: yesno
+    prompt: ¿Está permitido poner una placa que se haga pasar por matrícula?
+    answer: false
+    explain: Está prohibido tapar el kenteken o poner una placa que pase por matrícula.
+    cites: ["wvw:41"]
+
+  - id: kenteken-apk-seguro-remolque
+    type: mc
+    prompt: Tu remolque pesa como máximo 600 kg y no tiene matrícula propia. ¿Qué placa lleva?
+    options: [Ninguna, La del auto que lo arrastra, Una placa temporal de papel, La de tu casa]
+    answer: 1
+    explain: Un remolque de hasta 750 kg sin kenteken propio lleva el kenteken del vehículo que lo arrastra.
+    cites: ["rv:5.18.10/1"]
+
+  - id: kenteken-apk-seguro-card
+    type: number
+    prompt: Compraste un auto y se puso a tu nombre. ¿A los cuántos días como máximo debes poder mostrar la kentekencard?
+    answer: 14
+    unit: días
+    explain: La obligación de mostrarla rige desde 14 días después de la tenaamstelling.
+    cites: ["kr:22"]
+
+  - id: kenteken-apk-seguro-apk
+    type: yesno
+    prompt: Según la ley, ¿deben ser válido y legible el keuringsbewijs (APK) de un vehículo con matrícula?
+    answer: true
+    explain: El keuringsbewijs debe cumplir los requisitos, ser válido y legible; el propietario y el conductor son responsables.
+    cites: ["wvw:72"]
+
+  - id: kenteken-apk-seguro-kr
+    type: mc
+    prompt: ¿Qué es un kenteken?
+    options: [Una combinación de letras y cifras, Un número de teléfono del taller, El número del chasis solamente, El nombre del propietario]
+    answer: 0
+    explain: El Kentekenreglement define el kenteken como una combinación de letras y cifras.
+    cites: ["kr:2"]
+
+  - id: kenteken-apk-seguro-papeles
+    type: yesno
+    prompt: ¿Debe el auto corresponder a los datos que figuran en el kentekenbewijs?
+    answer: true
+    explain: La WVW exige un kentekenbewijs válido y que el vehículo coincida con sus datos.
+    cites: ["wvw:36"]

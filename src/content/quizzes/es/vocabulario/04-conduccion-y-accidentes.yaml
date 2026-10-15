@@ -1,0 +1,117 @@
+questions:
+  - id: conduccion-y-accidentes-remweg
+    type: mc
+    prompt: ¿Qué es la "remweg"?
+    options: [La distancia de frenado, La distancia de detención total, El tiempo de reacción, El freno de mano]
+    answer: 0
+    explain: Remweg es la distancia de frenado; stopafstand incluye además la reacción.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: conduccion-y-accidentes-stopafstand
+    type: mc
+    prompt: ¿Qué es la "stopafstand"?
+    options: [La distancia de detención total, Solo la distancia de frenado, La distancia entre dos autos, La distancia de adelantamiento]
+    answer: 0
+    explain: Stopafstand es la distancia de detención (reacción más frenado).
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: conduccion-y-accidentes-blikschade
+    type: mc
+    prompt: ¿Qué es la "blikschade"?
+    options: [Daños solo materiales, Lesiones graves, Una multa, Un seguro]
+    answer: 0
+    explain: Blikschade es daño material (chapa) sin heridos.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: conduccion-y-accidentes-handheld
+    type: mc
+    prompt: ¿Qué significa "handheld bellen"?
+    options: [Hablar por el móvil sosteniéndolo en la mano, Hablar con manos libres, Enviar mensajes de voz, Usar el navegador]
+    answer: 0
+    explain: Handheld bellen es llamar con el móvil en la mano.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: conduccion-y-accidentes-zijwind
+    type: mc
+    prompt: '"Zijwind" significa...'
+    options: [Viento lateral, Viento de frente, Lluvia, Niebla]
+    answer: 0
+    explain: Zijwind es el viento lateral.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: conduccion-y-accidentes-slip
+    type: mc
+    prompt: '"Slipgevaar" significa...'
+    options: [Peligro de derrape, Peligro de incendio, Peligro de choque, Peligro de niebla]
+    answer: 0
+    explain: Slipgevaar es el peligro de derrape.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: conduccion-y-accidentes-schade
+    type: mc
+    prompt: ¿Qué es un "schadeformulier"?
+    options: [Un parte amistoso de accidente, Una multa, Un contrato de seguro, Un permiso]
+    answer: 0
+    explain: Schadeformulier es el formulario para registrar los datos de un accidente.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: conduccion-y-accidentes-wegenwacht
+    type: mc
+    prompt: ¿Qué es la "Wegenwacht"?
+    options: [La asistencia en carretera de la ANWB, La policía de tránsito, Una autopista, Una multa]
+    answer: 0
+    explain: Wegenwacht es la asistencia en carretera de la ANWB.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: conduccion-y-accidentes-matrix
+    type: mc
+    prompt: ¿Qué es un "matrixbord"?
+    options: [Un panel electrónico sobre el carril, Un semáforo, Una placa de matrícula, Un mapa]
+    answer: 0
+    explain: Matrixbord es el panel luminoso sobre el carril.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: conduccion-y-accidentes-doorstroming
+    type: mc
+    prompt: ¿Qué es la "doorstroming"?
+    options: [La fluidez del tráfico, Un atasco, Un desvío, Una obra]
+    answer: 0
+    explain: Doorstroming es la fluidez del tráfico; filevorming es la formación de atascos.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: conduccion-y-accidentes-aquaplaning
+    type: mc
+    prompt: ¿Cuál de estas palabras describe el peligro de derrape?
+    options: [slipgevaar, oplettendheid, doorstroming, wegligging]
+    answer: 0
+    explain: Slipgevaar es el peligro de derrape.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: conduccion-y-accidentes-reactie
+    type: mc
+    prompt: ¿Cómo se dice "tiempo de reacción" en neerlandés?
+    options: [reactietijd, stopafstand, remweg, vertraging]
+    answer: 0
+    explain: Reactietijd es el tiempo de reacción.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: conduccion-y-accidentes-gesloten
+    type: mc
+    prompt: ¿Qué es una "geslotenverklaring"?
+    options: [Una prohibición de acceso, Una autorización, Un desvío, Un preaviso]
+    answer: 0
+    explain: Geslotenverklaring es una prohibición de acceso a un tipo de tráfico.
+    cites: ["cbr-examenplan:4"]
+    exam: false

@@ -1,0 +1,64 @@
+questions:
+  - id: accidente-irse-herido
+    type: yesno
+    prompt: Estás implicado en un accidente y hay un herido que no puede valerse por sí mismo. ¿Puedes irte después de dejar tus datos?
+    answer: false
+    explain: "Dar tu identidad no cubre el caso c) del artículo 7 lid 1: dejar a un herido en estado de desamparo sigue prohibido."
+    cites: ["wvw:7.1", "wvw:7.2"]
+
+  - id: accidente-danos
+    type: mc
+    prompt: Rozaste un auto estacionado y causaste daños, sin heridos. ¿Qué debes hacer para no cometer una infracción al irte?
+    options: [Nada, no hay nadie, Dar la oportunidad de establecer tu identidad y la del vehículo en el lugar, Irte y llamar mañana, Solo apuntar tus datos en el parabrisas sin quedarte nada más]
+    answer: 1
+    explain: Si das en el lugar la oportunidad de verificar tu identidad (y la del vehículo), la prohibición de abandonar el lugar por daños no se aplica.
+    cites: ["wvw:7.2"]
+
+  - id: accidente-desamparo
+    type: yesno
+    prompt: ¿La excepción de dar tu identidad te permite dejar a un herido en estado de desamparo?
+    answer: false
+    explain: La excepción del apartado 2 solo cubre los casos a) y b); el c) no tiene excepción.
+    cites: ["wvw:7.1", "wvw:7.2"]
+
+  - id: accidente-sospecha
+    type: yesno
+    prompt: ¿Aplica la prohibición de abandonar el lugar si "debías suponer razonablemente" que hubo daños aunque no estés seguro?
+    answer: true
+    explain: "El artículo dice \"naar hij weet of redelijkerwijs moet vermoeden\": también cuenta lo que razonablemente debías suponer."
+    cites: ["wvw:7.1"]
+
+  - id: accidente-conductor-vehiculo
+    type: yesno
+    prompt: ¿El deber de dar la oportunidad de identificar también el vehículo vale para quien conducía un vehículo de motor?
+    answer: true
+    explain: El apartado 2 pide la identidad de la persona y, si conducía un motorrijtuig, también la del vehículo.
+    cites: ["wvw:7.2"]
+
+  - id: accidente-peligro
+    type: yesno
+    prompt: ¿Está prohibido comportarse de modo que se cause o pueda causarse peligro en la vía?
+    answer: true
+    explain: El artículo 5 de la WVW lo prohíbe a todos.
+    cites: ["wvw:5"]
+
+  - id: accidente-hinder
+    type: yesno
+    prompt: Según el artículo 5 WVW, ¿también está prohibido estorbar al tráfico, aunque no haya peligro?
+    answer: true
+    explain: El texto prohíbe causar peligro o estorbar al tráfico (gehinderd).
+    cites: ["wvw:5"]
+
+  - id: accidente-culpa
+    type: yesno
+    prompt: ¿Es una infracción específica causar por tu culpa un accidente en el que otra persona sufre lesiones graves?
+    answer: true
+    explain: El artículo 6 de la WVW lo prohíbe expresamente.
+    cites: ["wvw:6"]
+
+  - id: accidente-policia-parar
+    type: yesno
+    prompt: Un agente te ordena parar y mostrar tu permiso de conducir. ¿Debes hacerlo?
+    answer: true
+    explain: A la primera orden debes detener el vehículo y mostrar los documentos.
+    cites: ["wvw:160.1"]

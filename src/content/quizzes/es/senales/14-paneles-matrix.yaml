@@ -1,0 +1,97 @@
+questions:
+  - id: mx-velocidad-baja
+    type: mc
+    prompt: Una señal fija muestra 100 km/h y el panel electrónico sobre tu carril muestra 80. ¿Qué rige?
+    sign: A3
+    options: ["80 km/h", "100 km/h", "La media", "La que tú prefieras"]
+    answer: 0
+    explain: Cuando señal y panel muestran velocidades, rige la más baja.
+    cites: ["rvv:63b.2"]
+
+  - id: mx-limite-general
+    type: yesno
+    prompt: Una señal de velocidad muestra más que el máximo general para tu vehículo. ¿Puedes ir a esa velocidad mayor?
+    answer: false
+    explain: Rige la velocidad más baja entre la señal y los máximos generales.
+    cites: ["rvv:63b"]
+
+  - id: mx-cruz-roja
+    type: mc
+    prompt: Sobre tu carril aparece una cruz roja. ¿Qué haces?
+    options: ["Cambio de carril y no lo uso", "Reduzco y lo sigo usando", "Lo uso solo si no hay tráfico", "Paro en el carril"]
+    answer: 0
+    explain: Cruz roja: el carril no puede usarse.
+    cites: ["rvv:73"]
+
+  - id: mx-flecha-blanca
+    type: mc
+    prompt: Ves una flecha blanca inclinada sobre tu carril. ¿Qué anuncia?
+    options: ["Una cruz roja más adelante", "El fin de las prohibiciones", "Un carril solo para buses", "Límite de velocidad"]
+    answer: 0
+    explain: La flecha blanca es el aviso previo de una cruz roja.
+    cites: ["rvv:73"]
+
+  - id: mx-flecha-verde
+    type: yesno
+    prompt: Sobre el carril hay una flecha verde. ¿Puedes usarlo?
+    answer: true
+    explain: Flecha verde: el carril puede usarse.
+    cites: ["rvv:73"]
+
+  - id: mx-f9
+    type: mc
+    prompt: ¿Qué indica esta señal?
+    sign: F9
+    options: ["Fin de todas las prohibiciones indicadas en un panel electrónico", "Fin de la autopista", "Fin de zona urbana", "Fin del carril de hora punta"]
+    answer: 0
+    explain: F9 pone fin a las prohibiciones del panel electrónico.
+    cites: ["rvv:bijlage1.F9"]
+
+  - id: mx-a3
+    type: mc
+    prompt: ¿Qué indica esta señal?
+    sign: A3
+    options: ["Velocidad máxima en un panel electrónico", "Velocidad mínima", "Velocidad recomendada", "Fin del límite"]
+    answer: 0
+    explain: A3 es la velocidad máxima en un elektronisch signaleringsbord.
+    cites: ["rvv:bijlage1.A3"]
+
+  - id: mx-spitsstrook
+    type: mc
+    prompt: ¿Qué es un spitsstrook?
+    sign: C23-01
+    options: ["Una vluchtstrook designada como carril por la señal C23-01", "Un carril exclusivo de bus", "Un apartadero", "Un carril de incorporación"]
+    answer: 0
+    explain: Es la vluchtstrook designada como carril por C23-01.
+    cites: ["rvv:1"]
+
+  - id: mx-spits-cerrado
+    type: mc
+    prompt: ¿Qué indica esta señal sobre el carril de hora punta?
+    sign: C23-03
+    options: ["Fin del carril de hora punta", "Carril de hora punta abierto", "Desalojar el carril", "Carril solo para camiones"]
+    answer: 0
+    explain: C23-03 es "Einde spitsstrook".
+    cites: ["rvv:1"]
+
+  - id: mx-vluchtstrook
+    type: yesno
+    prompt: Hay mucho tráfico en la autosnelweg. ¿Puedes usar la vluchtstrook (sin ser spitsstrook abierto) para adelantar?
+    answer: false
+    explain: Salvo en emergencias no puedes usar la vluchtstrook en una autosnelweg o autoweg.
+    cites: ["rvv:43.3"]
+
+  - id: mx-parar-calzada
+    type: yesno
+    prompt: En una autosnelweg, ¿puedes dejar tu auto detenido en la calzada?
+    answer: false
+    explain: No puedes dejar que tu vehículo se quede detenido en la calzada de una autosnelweg o autoweg.
+    cites: ["rvv:43.2"]
+
+  - id: mx-camion
+    type: mc
+    prompt: Conduces un camión en una autosnelweg de tres carriles. ¿Qué carriles puedes usar?
+    options: ["Los dos de la derecha", "Los tres", "Solo el de la izquierda", "El del centro y el izquierdo"]
+    answer: 0
+    explain: Camiones y conjuntos de más de 7 m solo usan los dos carriles más a la derecha, salvo para preseleccionar.
+    cites: ["rvv:43.4"]

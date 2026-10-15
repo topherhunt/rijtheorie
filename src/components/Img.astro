@@ -1,0 +1,16 @@
+---
+// AI-generated scene. Always labelled illustrative: details (signs, markings) may not be accurate.
+import { href } from '../config.ts';
+import { es } from '../i18n/es.ts';
+
+interface Props { src: string; alt: string; caption?: string }
+const { src, alt, caption } = Astro.props;
+if (alt.length < 10) throw new Error(`Img ${src}: alt text too short`);
+---
+
+<figure class="qa-img my-6">
+  <img src={href(`img/${src}`)} alt={alt} class="w-full rounded-lg" loading="lazy" />
+  <figcaption class="mt-1 text-sm text-slate-600">
+    {caption} <span class="text-xs text-slate-400">({es.quiz.illustrative})</span>
+  </figcaption>
+</figure>

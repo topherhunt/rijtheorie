@@ -1,0 +1,68 @@
+questions:
+  - id: ordenes-quien
+    type: multi
+    prompt: ¿Cuáles de estas personas pueden darte órdenes que debes seguir, si son competentes y reconocibles?
+    options: [Un funcionario competente, Un militar de la Koninklijke Marechaussee, Un verkeersregelaar, Cualquier peatón]
+    answer: [0, 1, 2]
+    explain: Debes seguir las órdenes orales o con gestos de funcionarios competentes, de la Koninklijke Marechaussee y de verkeersregelaars competentes y reconocibles.
+    cites: ["rvv:82.1"]
+
+  - id: ordenes-gestos
+    type: yesno
+    prompt: Cuando se dan órdenes con gestos, ¿se usan en lo posible los gestos oficiales de la bijlage II?
+    answer: true
+    explain: El art. 82.2 dice que, en lo posible, se dan las indicaciones fijadas en la bijlage II.
+    cites: ["rvv:82.2"]
+
+  - id: ordenes-brigadier
+    type: yesno
+    prompt: Un verkeersbrigadier competente y reconocible te ordena parar. ¿Debes parar?
+    answer: true
+    explain: Los conductores deben obedecer la orden de parar de los verkeersbrigadiers competentes y reconocibles.
+    cites: ["rvv:82.3"]
+
+  - id: ordenes-rojo
+    type: mc
+    prompt: Un guardia de ferrocarril te muestra una lámpara roja. ¿Qué haces?
+    options: [Reduces la velocidad, Paras, Sigues si no ves el tren, Tocas la bocina]
+    answer: 1
+    explain: Debes parar cuando un guardia de ferrocarril muestra F10, una bandera roja o una lámpara roja.
+    cites: ["rvv:82.4"]
+
+  - id: ordenes-stop-politie
+    type: mc
+    prompt: Un auto de la policía muestra en su panel luminoso la palabra "stop politie" en letras rojas. ¿Qué debes hacer?
+    options: [Parar, Ignorarlo si no hay señales, Seguir despacio, Pasar si hay hueco]
+    answer: 0
+    explain: Debes parar cuando te muestran un stopteken, es decir, una lámpara roja o un panel luminoso de la policía o de Rijkswaterstaat con "stop" o "stop politie".
+    cites: ["rvv:83"]
+
+  - id: ordenes-sobre-senal
+    type: mc
+    prompt: Un semáforo está en verde, pero un agente te hace señal de parar. ¿Qué haces?
+    options: ["Sigo: el semáforo manda", "Paro: la orden del agente va por encima", Hago lo que hagan los demás, Elijo según la prisa]
+    answer: 1
+    explain: Las órdenes van por encima de las señales y de las reglas de tráfico.
+    cites: ["rvv:84"]
+
+  - id: ordenes-interes
+    type: multi
+    prompt: Según la Wegenverkeerswet, ¿en interés de qué pueden darse esas órdenes?
+    options: [La seguridad en la vía, El mantenimiento y la utilidad de la vía, La libertad del tráfico, El interés personal del agente]
+    answer: [0, 1, 2]
+    explain: El art. 12 WVW permite esas órdenes solo en interés de la seguridad, del mantenimiento y utilidad de la vía, o de la libertad del tráfico.
+    cites: ["wvw:12"]
+
+  - id: ordenes-82a
+    type: yesno
+    prompt: ¿Debes seguir las indicaciones de los paneles luminosos de ciertos vehículos de servicios especiales?
+    answer: true
+    explain: El art. 82a obliga a seguir las indicaciones de esos paneles luminosos.
+    cites: ["rvv:82a"]
+
+  - id: ordenes-voz
+    type: yesno
+    prompt: ¿Valen las órdenes de un funcionario competente solo si usa un gesto, no si habla?
+    answer: false
+    explain: Las órdenes valen si se dan oralmente o con gestos.
+    cites: ["rvv:82.1"]

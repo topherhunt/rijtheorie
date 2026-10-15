@@ -1,0 +1,66 @@
+questions:
+  - id: neumaticos-minimo
+    type: number
+    prompt: ¿Cuál es la profundidad mínima legal del dibujo de un neumático de auto, en milímetros?
+    answer: 1.6
+    unit: mm
+    explain: Las ranuras principales deben tener al menos 1,6 mm en toda la circunferencia.
+    cites: ["rv:5.2.27"]
+
+  - id: neumaticos-dano
+    type: yesno
+    prompt: Un neumático tiene un corte profundo y se ve la carcasa. ¿Cumple los requisitos legales?
+    answer: false
+    explain: Los neumáticos no pueden tener daños en los que se vea la carcasa.
+    cites: ["rv:5.2.27"]
+
+  - id: neumaticos-bulto
+    type: yesno
+    prompt: Un neumático tiene un bulto en el costado. ¿Está permitido circular así?
+    answer: false
+    explain: Los neumáticos no pueden tener bultos.
+    cites: ["rv:5.2.27"]
+
+  - id: neumaticos-circunferencia
+    type: mc
+    prompt: El dibujo mide 3 mm en casi todo el neumático pero solo 1 mm en una parte de la circunferencia. ¿Cumple?
+    options: ["Sí, porque el promedio es mayor a 1,6 mm", "No, el mínimo se exige en toda la circunferencia", "Sí, si el neumático es nuevo", "Solo en verano"]
+    answer: 1
+    explain: El mínimo de 1,6 mm rige sobre toda la circunferencia del dibujo.
+    cites: ["rv:5.2.27"]
+
+  - id: neumaticos-recortado
+    type: yesno
+    prompt: ¿Puedes recortar a mano un neumático gastado para recuperar dibujo?
+    answer: false
+    explain: Los neumáticos no pueden estar recortados, salvo los marcados "regroovable" y mientras no se vea la carcasa.
+    cites: ["rv:5.2.27"]
+
+  - id: neumaticos-misma-medida
+    type: yesno
+    prompt: ¿Deben ser de la misma medida los dos neumáticos del mismo eje (sin contar la rueda de repuesto de emergencia)?
+    answer: true
+    explain: Los neumáticos de un mismo eje deben tener la misma medida.
+    cites: ["rv:5.2.27"]
+
+  - id: neumaticos-presion
+    type: mc
+    prompt: ¿Quién fija la presión correcta de los neumáticos?
+    options: [El fabricante del auto, El vecino, La policía, El gasolinero]
+    answer: 0
+    explain: La presión debe ser la prescrita por el fabricante.
+    cites: ["rv:5.2.27"]
+
+  - id: neumaticos-sentido
+    type: yesno
+    prompt: Tu neumático tiene una flecha de sentido de giro. ¿Debe montarse de modo que coincida con el giro de la rueda hacia adelante?
+    answer: true
+    explain: El sentido indicado en el neumático debe coincidir con el giro de la rueda al avanzar.
+    cites: ["rv:5.2.27"]
+
+  - id: neumaticos-aviso
+    type: yesno
+    prompt: En un auto puesto en uso en 2019, el aviso de presión de neumáticos del tablero indica un defecto. ¿Cumple los requisitos?
+    answer: false
+    explain: Para autos puestos en uso después de 2017, el sistema de control de presión no debe indicar un defecto.
+    cites: ["rv:5.2.27"]

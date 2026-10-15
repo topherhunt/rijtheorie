@@ -1,0 +1,72 @@
+questions:
+  - id: stilstaan-def-parkeren
+    type: mc
+    prompt: Según la ley, ¿qué es parkeren?
+    options:
+      - Dejar el vehículo parado más de 10 minutos
+      - Dejar el vehículo parado salvo el tiempo necesario para subir o bajar personas, o cargar o descargar de inmediato
+      - Dejar el vehículo parado en una plaza señalada
+      - Dejar el vehículo parado con el motor apagado
+    answer: 1
+    explain: La ley define parkeren como dejar el vehículo parado, excepto durante el tiempo necesario para el ascenso o descenso inmediato de pasajeros o la carga o descarga inmediata de mercancías. No fija minutos.
+    cites: ["rvv:1"]
+
+  - id: stilstaan-subir-bajar
+    type: yesno
+    prompt: Te detienes en la calle solo el tiempo necesario para que un pasajero baje. ¿Estás estacionando (parkeren)?
+    answer: false
+    explain: Parar el tiempo necesario para que suban o bajen pasajeros de inmediato no es parkeren. Solo estás parado (stilstaan).
+    cites: ["rvv:1"]
+
+  - id: stilstaan-carga
+    type: yesno
+    prompt: Te detienes lo necesario para descargar de inmediato unas cajas. ¿Eso es parkeren?
+    answer: false
+    explain: La carga o descarga inmediata de mercancías queda fuera de la definición de parkeren.
+    cites: ["rvv:1"]
+
+  - id: stilstaan-esperar
+    type: mc
+    prompt: Te detienes en la calle y esperas diez minutos con el motor encendido a un amigo que todavía no baja. ¿Qué haces según la definición legal?
+    options:
+      - Solo estás parado, no estacionas
+      - Estás estacionando (parkeren), porque no es el tiempo necesario para el ascenso inmediato
+      - Depende de si apagas el motor
+      - Depende de si pones las luces de emergencia
+    answer: 1
+    explain: Esperar a alguien que todavía no sube o baja no es el tiempo necesario para el ascenso o descenso inmediato, así que cuenta como parkeren.
+    cites: ["rvv:1"]
+
+  - id: stilstaan-doble-fila
+    type: yesno
+    prompt: ¿Está prohibido estacionar en doble fila?
+    answer: true
+    explain: La ley prohíbe estacionar en doble fila (dubbel parkeren).
+    cites: ["rvv:24.3"]
+
+  - id: stilstaan-acera
+    type: yesno
+    prompt: ¿Puede un auto estacionar en el trottoir (acera)?
+    answer: false
+    explain: Para estacionar se pueden usar otras partes de la vía, pero no el trottoir, el voetpad, el fietspad, el fiets/bromfietspad ni el ruiterpad.
+    cites: ["rvv:10.1"]
+
+  - id: stilstaan-bici
+    type: multi
+    prompt: ¿Dónde se colocan, según la ley, las bicicletas y los ciclomotores?
+    options:
+      - En el trottoir
+      - En el voetpad
+      - En la berm
+      - En el centro de la calzada
+    answer: [0, 1, 2]
+    explain: Se colocan en el trottoir, en el voetpad, en la berm o en otros lugares que designe la autoridad.
+    cites: ["rvv:27"]
+
+  - id: stilstaan-lugar-previsto
+    type: yesno
+    prompt: Hay un tramo destinado a estacionar bicicletas. ¿Está permitido colocar allí una bicicleta aunque haya cerca una señal E3 (prohibido colocar bicicletas)?
+    answer: true
+    explain: La ley permite estacionar un vehículo y colocar una bicicleta o un ciclomotor en los tramos destinados a ello.
+    cites: ["rvv:65.3", "rvv:65.2"]
+    exam: false

@@ -1,0 +1,126 @@
+questions:
+  - id: overweg-j10
+    type: mc
+    prompt: ¿Qué indica esta señal?
+    sign: J10
+    options: [Paso a nivel sin barreras, Paso a nivel con barreras, Cruce con tranvía, Puente móvil]
+    answer: 1
+    explain: J10 es "overweg met slagbomen". Sin barreras sería J11.
+    cites: ["rvv:bijlage1.J10"]
+
+  - id: overweg-j13
+    type: mc
+    prompt: ¿Qué indica esta señal?
+    sign: J13
+    options: [Paso a nivel con una vía, Paso a nivel con dos o más vías, Cruce con tranvía, Paso a nivel con barreras]
+    answer: 1
+    explain: J13 es "overweg met twee of meer sporen". J12 es de una sola vía.
+    cites: ["rvv:bijlage1.J13"]
+
+  - id: overweg-fila
+    type: yesno
+    prompt: Llegas a un paso a nivel con la vía libre, pero después del paso hay una fila de autos parados. ¿Puedes entrar y esperar encima de la vía?
+    answer: false
+    explain: Solo puedes entrar si puedes seguir sin detenerte y dejar el paso totalmente libre.
+    cites: ["rvv:15a", "rvv:23.1"]
+
+  - id: overweg-detenerse
+    type: yesno
+    prompt: ¿Está prohibido detenerte en un paso a nivel?
+    answer: true
+    explain: No puedes detenerte (stilstaan) en un overweg.
+    cites: ["rvv:23.1"]
+
+  - id: overweg-tren-prioridad
+    type: mc
+    prompt: En un paso a nivel, ¿quién pasa primero?
+    options: [Quien llega antes, El vehículo ferroviario, El de más velocidad, El de la derecha]
+    answer: 1
+    explain: En los pasos a nivel dejas pasar primero al vehículo ferroviario y dejas el paso totalmente libre.
+    cites: ["rvv:15a"]
+
+  - id: overweg-blanca
+    type: mc
+    prompt: En un paso a nivel ves una luz blanca intermitente. ¿Qué significa?
+    options: [Alto, Precaución, No se acerca ningún tren, Un tren se acerca]
+    answer: 2
+    explain: La luz blanca intermitente significa que no se acerca ningún tren.
+    cites: ["rvv:71"]
+
+  - id: overweg-roja
+    type: mc
+    prompt: En un paso a nivel ves una luz roja intermitente. ¿Qué haces?
+    options: [Cruzas rápido, Te detienes, Reduces y cruzas, Tocas la bocina]
+    answer: 1
+    explain: La luz roja intermitente significa alto.
+    cites: ["rvv:71"]
+
+  - id: overweg-amarilla
+    type: mc
+    prompt: ¿Qué significa una luz amarilla intermitente?
+    options: [Alto, Punto peligroso: precaución, Via libre, Un tren se acerca]
+    answer: 1
+    explain: La luz amarilla intermitente indica un punto peligroso, donde se requiere precaución.
+    cites: ["rvv:75"]
+
+  - id: overweg-begeleider
+    type: multi
+    prompt: ¿Con cuáles de estas señales te debe detener un acompañante (begeleider) de un vehículo ferroviario?
+    options:
+      - Una señal F10
+      - Una bandera roja
+      - Una lámpara roja
+      - Una bandera verde
+    answer: [0, 1, 2]
+    explain: Debes detenerte si el begeleider muestra una señal F10, una bandera roja o una lámpara roja.
+    cites: ["rvv:82.4"]
+
+  - id: overweg-ahob
+    type: mc
+    prompt: En un paso con AHOB, ¿cuándo puedes cruzar según el procedimiento?
+    options:
+      - Cuando las barreras empiezan a subir
+      - Cuando la luz roja se apagó, es decir, con las barreras completamente arriba
+      - Cuando suena la campana
+      - Cuando no ves un tren
+    answer: 1
+    explain: Con AHOB la luz roja se apaga solo cuando las barreras están completamente arriba, y solo entonces cruzas.
+    cites: ["cbr-rijprocedure:3.6"]
+
+  - id: overweg-mirar
+    type: mc
+    prompt: Acabas de ver pasar un tren. ¿Qué haces antes de cruzar?
+    options:
+      - Cruzas de inmediato
+      - Compruebas si no viene otro tren por el otro lado
+      - Esperas a que suene la campana
+      - Tocas la bocina
+    answer: 1
+    explain: "Después de que pasa un tren, mira de nuevo: puede venir otro del otro lado."
+    cites: ["cbr-rijprocedure:3.6"]
+
+  - id: overweg-motor
+    type: mc
+    prompt: ¿Cómo reduces el riesgo de que el motor se cale en un paso a nivel?
+    options:
+      - Cruzas lo más lento posible
+      - Aprovechas la inercia del auto y haces que el arranque crítico ocurra lejos del paso
+      - Apagas el motor antes
+      - Cruzas en primera siempre
+    answer: 1
+    explain: El procedimiento recomienda usar el impulso del auto y arrancar lejos del paso.
+    cites: ["cbr-rijprocedure:3.6"]
+
+  - id: overweg-sol
+    type: yesno
+    prompt: Con el sol muy bajo de frente, ¿puede volverse invisible la luz roja de un paso a nivel?
+    answer: true
+    explain: El sol bajo puede cegar y hacer invisible la luz roja. Además los equipos pueden fallar.
+    cites: ["cbr-rijprocedure:3.6"]
+
+  - id: overweg-baliza
+    type: yesno
+    prompt: Cada raya diagonal de una baliza cerca de un paso a nivel indica una distancia de unos 80 m.
+    answer: true
+    explain: El procedimiento del CBR explica que cada raya indica unos 80 m hasta el paso.
+    cites: ["cbr-rijprocedure:3.6"]

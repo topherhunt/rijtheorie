@@ -1,0 +1,89 @@
+questions:
+  - id: dimlicht-cuando
+    type: multi
+    prompt: ¿En qué situaciones debe un auto llevar las luces de cruce?
+    options: [De noche, De día con niebla densa que reduce mucho la visibilidad, De día con sol y buen tiempo, Siempre que llueve ligeramente sin afectar la visibilidad]
+    answer: [0, 1]
+    explain: La ley exige dimlicht de noche y de día cuando la visibilidad está seriamente reducida. Con sol y buen tiempo no es obligatorio.
+    cites: ["rvv:32.1"]
+
+  - id: dimlicht-noche-def
+    type: mc
+    prompt: Según la ley, ¿qué es la "noche"?
+    options: [De 22:00 a 06:00, El periodo entre la puesta y la salida del sol, El periodo en que el alumbrado público está encendido, De 18:00 a 07:00]
+    answer: 1
+    explain: La ley define la noche por el sol, no por el reloj.
+    cites: ["rvv:1"]
+
+  - id: dimlicht-dia-def
+    type: mc
+    prompt: ¿Cómo define la ley el "día" (dag)?
+    options: [El periodo entre la salida y la puesta del sol, De 06:00 a 20:00, El periodo con luz suficiente para ver sin luces, Solo las horas de sol visible sin nubes]
+    answer: 0
+    explain: Día = entre zonsopgang y zonsondergang.
+    cites: ["rvv:1"]
+
+  - id: dimlicht-visibilidad
+    type: yesno
+    prompt: Conduces de día por un túnel corto y la luz natural es insuficiente para ver bien. ¿Es adecuado llevar luces de cruce?
+    answer: true
+    explain: La Rijprocedure cita la poca luz en túneles entre las circunstancias que reducen seriamente la visibilidad. Con visibilidad seriamente reducida, la ley exige dimlicht.
+    cites: ["rvv:32.1", "cbr-rijprocedure:1"]
+
+  - id: grootlicht-prohibido
+    type: multi
+    prompt: ¿En cuáles de estas situaciones está prohibido llevar luces de carretera?
+    options: [De día, Al cruzarte con otro usuario de la vía, Al seguir de cerca a otro vehículo, Por una carretera oscura sin nadie delante ni de frente]
+    answer: [0, 1, 2]
+    explain: Las tres primeras son las excepciones del artículo 32 lid 2. En una vía oscura y vacía las largas están permitidas.
+    cites: ["rvv:32.2"]
+
+  - id: grootlicht-bici
+    type: yesno
+    prompt: De noche, en una vía sin alumbrado, te cruzas con un ciclista. ¿Puedes mantener las luces de carretera?
+    answer: false
+    explain: La prohibición vale al cruzarte con cualquier "otro usuario de la vía", no solo con autos. El ciclista es un usuario de la vía.
+    cites: ["rvv:32.2"]
+
+  - id: grootlicht-seguir
+    type: yesno
+    prompt: De noche sigues a otro auto a poca distancia. ¿Puedes llevar luces de carretera si no hay nadie más?
+    answer: false
+    explain: Seguir de cerca a otro vehículo es una de las tres excepciones en que las largas no se permiten.
+    cites: ["rvv:32.2"]
+
+  - id: grootlicht-dia
+    type: yesno
+    prompt: Hay niebla densa de día y no hay nadie alrededor. ¿Puedes llevar luces de carretera en lugar de las de cruce?
+    answer: false
+    explain: De día las largas están prohibidas, aunque la visibilidad sea mala. Se usan luces de cruce.
+    cites: ["rvv:32.2"]
+
+  - id: dagrijlicht-junto
+    type: yesno
+    prompt: ¿Pueden estar encendidas a la vez las luces de circulación diurna y las luces de cruce?
+    answer: false
+    explain: El dagrijlicht no se lleva junto con ninguna otra luz delantera.
+    cites: ["rvv:41.1"]
+
+  - id: dagrijlicht-obligatorio
+    type: yesno
+    prompt: ¿La ley obliga a llevar luces de circulación diurna de día con buen tiempo?
+    answer: false
+    explain: La ley dice que el conductor "puede" llevarlas. Lo obligatorio es el dimlicht cuando la visibilidad está seriamente reducida y de noche.
+    cites: ["rvv:41.1", "rvv:32.1"]
+
+  - id: luz-trasera-junta
+    type: mc
+    prompt: ¿Cuándo debe estar encendida la luz trasera?
+    options: [Solo con luces de cruce, Siempre a la vez con largas, cruce, posición o antiniebla, Solo de noche y con lluvia, Solo si hay un vehículo detrás]
+    answer: 1
+    explain: Luz trasera y luz de la matrícula trasera acompañan siempre a las demás luces delanteras que se lleven.
+    cites: ["rvv:32.3"]
+
+  - id: dimlicht-principio
+    type: yesno
+    prompt: Según el CBR, ¿las luces no solo sirven para ver mejor sino también para que te vean?
+    answer: true
+    explain: "La Rijprocedure lo dice así: se lleva luz no solo para ver mejor, sino sobre todo para ser visto."
+    cites: ["cbr-rijprocedure:1"]

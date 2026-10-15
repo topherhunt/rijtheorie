@@ -1,0 +1,75 @@
+questions:
+  - id: sendas-g11
+    type: mc
+    prompt: ¿Qué indica esta señal?
+    sign: G11
+    options: [Verplicht fietspad, Onverplicht fietspad, Voetpad, Fin de zona urbana]
+    answer: 0
+    explain: G11 es el carril bici obligatorio.
+    cites: ["rvv:bijlage1.G11"]
+
+  - id: sendas-g13
+    type: mc
+    prompt: ¿Qué indica esta señal?
+    sign: G13
+    options: [Verplicht fietspad, Onverplicht fietspad, Ruiterpad, Autoweg]
+    answer: 1
+    explain: G13 es el carril bici no obligatorio.
+    cites: ["rvv:bijlage1.G13"]
+
+  - id: sendas-g12a
+    type: mc
+    prompt: ¿Qué indica esta señal?
+    sign: G12a
+    options: [Camino para jinetes, Camino para bicicletas y bromfietsen, Camino para peatones, Calzada para autobuses]
+    answer: 1
+    explain: G12a es el fiets/bromfietspad.
+    cites: ["rvv:bijlage1.G12a"]
+
+  - id: sendas-g9
+    type: mc
+    prompt: ¿Qué indica esta señal?
+    sign: G9
+    options: [Ruiterpad, Voetpad, Fietspad obligatorio, Erf]
+    answer: 0
+    explain: G9 es el ruiterpad, un camino para jinetes.
+    cites: ["rvv:bijlage1.G9"]
+
+  - id: sendas-fin
+    type: multi
+    prompt: ¿Cuáles de estas parejas señal-significado son correctas?
+    options: [G8 es el fin del voetpad, G12 es el fin del verplicht fietspad, G14 es el fin del onverplicht fietspad, G8 es el fin de zona urbana]
+    answer: [0, 1, 2]
+    explain: G8, G12 y G14 son las señales de fin de voetpad, verplicht fietspad y onverplicht fietspad. El fin de zona urbana es H2.
+    cites: ["rvv:bijlage1.G8", "rvv:bijlage1.G12", "rvv:bijlage1.G14"]
+
+  - id: sendas-fietsstrook
+    type: mc
+    prompt: ¿Qué hace que una franja sea un fietsstrook?
+    options: [Que sea roja, Que esté en la calzada, con líneas y dibujos de bicicleta, Que esté en la acera, Que tenga una señal G13]
+    answer: 1
+    explain: Fietsstrook es una parte de la rijbaan marcada con líneas continuas o discontinuas y con dibujos de bicicleta.
+    cites: ["rvv:1"]
+
+  - id: sendas-fietspad-vs-strook
+    type: yesno
+    prompt: Un fietsstrook es una parte de la rijbaan.
+    answer: true
+    explain: El fietsstrook está dentro de la rijbaan. El fietspad, en cambio, está fuera de ella.
+    cites: ["rvv:1"]
+
+  - id: sendas-suggestie
+    type: yesno
+    prompt: ¿Una suggestiestrook roja es lo mismo que un fietsstrook?
+    answer: false
+    explain: El fietsstrook se define en el RVV 1 por sus líneas y dibujos de bicicleta. La palabra suggestiestrook no aparece en el RVV.
+    cites: ["rvv:1"]
+
+  - id: sendas-g7
+    type: mc
+    prompt: ¿Qué indica esta señal?
+    sign: G7
+    options: [Voetpad, Verplicht fietspad, Ruiterpad, Calzada para autobuses]
+    answer: 0
+    explain: G7 es el voetpad.
+    cites: ["rvv:bijlage1.G7"]

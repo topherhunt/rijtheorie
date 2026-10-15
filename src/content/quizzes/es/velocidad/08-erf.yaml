@@ -1,0 +1,63 @@
+questions:
+  - id: erf-velocidad
+    type: number
+    prompt: "¿Cuál es la velocidad máxima dentro de un erf?"
+    answer: 15
+    unit: km/h
+    explain: "Art. 45 RVV: no más de 15 km/h."
+    cites: ["rvv:45"]
+
+  - id: erf-peatones
+    type: yesno
+    prompt: "Dentro de un erf, ¿pueden los peatones usar las vías en todo su ancho?"
+    answer: true
+    explain: "Art. 44 RVV."
+    cites: ["rvv:44"]
+
+  - id: erf-senales
+    type: mc
+    prompt: "¿Qué indica esta señal?"
+    options: [Entrada a un erf, Final de un erf, Zona urbana, Calle sin salida]
+    answer: 0
+    explain: "G5 es el comienzo del erf y G6 su final."
+    cites: ["rvv:bijlage1.G5"]
+    sign: G5
+
+  - id: erf-senal-fin
+    type: mc
+    prompt: "¿Qué indica esta señal?"
+    options: [Final de un erf, Entrada a un erf, Final de la zona urbana, Final de prioridad]
+    answer: 0
+    explain: "G6 es el final del erf."
+    cites: ["rvv:bijlage1.G6"]
+    sign: G6
+
+  - id: erf-derecha
+    type: yesno
+    prompt: "Dentro de un erf, ¿conviene seguir circulando lo más a la derecha posible según la Rijprocedure B?"
+    answer: true
+    explain: "Lo más a la derecha posible, según la forma del erf."
+    cites: ["cbr-rijprocedure:3.6"]
+
+  - id: erf-visibilidad
+    type: mc
+    prompt: "Dentro de un erf, ¿cómo debes mantener el campo de visión?"
+    options: [Lo más ancho y lejano posible, Solo hacia delante, Solo en los espejos, No importa]
+    answer: 0
+    explain: "Así puedes reaccionar, por ejemplo, ante un niño que cruza de repente."
+    cites: ["cbr-rijprocedure:3.6"]
+
+  - id: erf-ninos
+    type: yesno
+    prompt: "En un erf, ¿debes contar con peatones y niños en cualquier punto de la vía?"
+    answer: true
+    explain: "Pueden usar toda la zona."
+    cites: ["cbr-rijprocedure:3.6", "rvv:44"]
+
+  - id: erf-15-razon
+    type: mc
+    prompt: "Según la Rijprocedure B, ¿para qué sirve ir a 15 km/h como máximo en un erf?"
+    options: [Reaccionar bien y que los peatones puedan reaccionar al auto, Ahorrar combustible, Evitar multas de estacionamiento, Hacer ruido]
+    answer: 0
+    explain: "A esa velocidad ambos pueden reaccionar adecuadamente."
+    cites: ["cbr-rijprocedure:3.6"]

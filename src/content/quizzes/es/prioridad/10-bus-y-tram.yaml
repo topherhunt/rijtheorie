@@ -1,0 +1,100 @@
+questions:
+  - id: bus-tram-tranvia-izquierda
+    type: mc
+    prompt: Un tranvía viene por tu izquierda en un cruce sin señales. ¿Quién pasa primero?
+    diagram:
+      arms: { n: {}, e: {}, s: {}, w: { tram: true } }
+      vehicles:
+        - { label: A, kind: car, from: s, to: straight, you: true }
+        - { label: B, kind: tram, from: w, to: straight }
+      alt: Cruce sin señales. Tú (A) vienes del sur y sigues recto. Un tranvía (B) viene del oeste por su vía en el centro de la calzada, por tu izquierda, y sigue recto.
+    options: [Tú (A), El tranvía B]
+    answer: 1
+    explain: Los conductores deben dar prioridad a los tranvías, aunque vengan por la izquierda.
+    cites: ["rvv:15.2.b"]
+
+  - id: bus-tram-tranvia-frente
+    type: mc
+    prompt: Giras a la izquierda y un tranvía viene de frente. ¿Quién pasa primero?
+    diagram:
+      arms: { n: { tram: true }, e: {}, s: {}, w: {} }
+      vehicles:
+        - { label: A, kind: car, from: s, to: left, you: true }
+        - { label: B, kind: tram, from: n, to: straight }
+      alt: Cruce. Tú (A) vienes del sur y giras a la izquierda. Un tranvía (B) viene de frente, del norte, y sigue recto.
+    options: [Tú (A), El tranvía B]
+    answer: 1
+    explain: Dejas pasar al tráfico de frente al girar (art. 18) y además debes dar prioridad al tranvía (art. 15).
+    cites: ["rvv:18.1", "rvv:15.2.b"]
+
+  - id: bus-tram-prioridad
+    type: yesno
+    prompt: En un cruce, ¿los conductores deben dar prioridad a un tranvía incluso si viene por la izquierda?
+    answer: true
+    explain: El art. 15.2.b es una excepción a la regla de la derecha.
+    cites: ["rvv:15.2.b"]
+
+  - id: bus-tram-art18
+    type: yesno
+    prompt: El conductor de un tranvía que gira debe dejar pasar al tráfico de frente según el art. 18.
+    answer: false
+    explain: El art. 18.3 dice que los apartados 1 y 2 no valen para los conductores de tranvía.
+    cites: ["rvv:18.3"]
+
+  - id: bus-tram-adelantar
+    type: mc
+    prompt: ¿Por qué lado puedes adelantar un tranvía?
+    options: [Por la derecha, Solo por la izquierda, No se puede adelantar, Por cualquier lado sin señalizar]
+    answer: 0
+    explain: El art. 11.5 permite adelantar a los tranvías por la derecha.
+    cites: ["rvv:11.5"]
+
+  - id: bus-tram-pasajeros
+    type: mc
+    prompt: Quieres pasar un autobús detenido por el lado donde suben y bajan pasajeros. ¿Qué debes hacer?
+    options:
+      - Darles la oportunidad de subir y bajar
+      - Pasar rápido para no bloquear
+      - Tocar la bocina
+      - Adelantar siempre por la izquierda
+    answer: 0
+    explain: El art. 52 obliga a dar la oportunidad de subir y bajar a los pasajeros.
+    cites: ["rvv:52"]
+
+  - id: bus-tram-pasajeros-delante
+    type: yesno
+    prompt: Según el CBR, al pasar un autobús detenido debes vigilar a los pasajeros que aparecen por delante o por detrás del autobús.
+    answer: true
+    explain: Es parte del procedimiento práctico del CBR.
+    cites: ["cbr-rijprocedure:3.6"]
+
+  - id: bus-tram-salir-parada
+    type: yesno
+    prompt: Dentro de la zona urbana, un autobús en una parada avisa con el intermitente que quiere salir. ¿Debes darle la oportunidad de salir?
+    answer: true
+    explain: El art. 56.1 lo exige dentro de la zona urbana.
+    cites: ["rvv:56.1"]
+
+  - id: bus-tram-lugar
+    type: mc
+    prompt: ¿Dónde se aplica la obligación de dejar salir a un autobús de la parada?
+    options: [Dentro de la zona urbana (bebouwde kom), Solo en autopistas, Solo fuera de la zona urbana, Solo de noche]
+    answer: 0
+    explain: El art. 56.1 empieza con "Binnen de bebouwde kom".
+    cites: ["rvv:56.1"]
+
+  - id: bus-tram-colonne
+    type: yesno
+    prompt: Un motorvehículo que forma parte de una columna militar debe dejar salir a un autobús de la parada igual que los demás.
+    answer: false
+    explain: El art. 56.2 los exceptúa.
+    cites: ["rvv:56.2"]
+
+  - id: bus-tram-senal-l3
+    type: mc
+    prompt: ¿Qué indica esta señal?
+    sign: L3
+    options: [Parada de autobús o tranvía, Paso de peatones, Zona residencial, Rotonda]
+    answer: 0
+    explain: L3 es Bushalte / tramhalte.
+    cites: ["rvv:bijlage1.L3"]

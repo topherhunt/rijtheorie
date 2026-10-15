@@ -1,0 +1,65 @@
+questions:
+  - id: remolque-distancia
+    type: number
+    prompt: Al remolcar otro vehículo de motor, ¿cuál es la distancia máxima permitida entre la parte trasera de quien remolca y la delantera del remolcado?
+    answer: 5
+    unit: m
+    explain: Más de 5 metros está prohibido.
+    cites: ["rvv:53"]
+
+  - id: remolque-seis
+    type: yesno
+    prompt: Remolcas un auto con una cuerda de 6 metros entre los dos vehículos. ¿Está permitido?
+    answer: false
+    explain: La distancia entre la parte trasera del que remolca y la delantera del remolcado no puede ser mayor de 5 m.
+    cites: ["rvv:53"]
+
+  - id: remolque-tipo
+    type: yesno
+    prompt: ¿El artículo 53 se refiere a remolcar un vehículo de motor con otro vehículo de motor?
+    answer: true
+    explain: El texto habla de que un conductor de vehículo de motor remolque a otro vehículo de motor.
+    cites: ["rvv:53"]
+
+  - id: emergencia-luz
+    type: mc
+    prompt: ¿Qué color de luz y qué sonido llevan los vehículos prioritarios en una urgencia?
+    options: [Luz azul y bocina de dos tonos, Luz amarilla y bocina de un tono, Luz verde y sirena de un tono, Luz roja y sin sonido]
+    answer: 0
+    explain: Policía, bomberos y servicios médicos de urgencia llevan luz azul y bocina de dos tonos.
+    cites: ["rvv:29.1"]
+
+  - id: emergencia-amarilla
+    type: yesno
+    prompt: Ves un vehículo de trabajo con luz amarilla destellante, sin luz azul ni bocina de dos tonos. ¿Es la señal de urgencia que obliga a dejar pasar?
+    answer: false
+    explain: La luz amarilla o verde es la de vehículos de trabajo; la señal de urgencia de policía, bomberos y ambulancias es la luz azul con bocina de dos tonos.
+    cites: ["rvv:30.1", "rvv:29.1", "rvv:50"]
+
+  - id: emergencia-pasar
+    type: yesno
+    prompt: ¿Debes dejar pasar a una ambulancia con luz azul y sirena?
+    answer: true
+    explain: Todos los usuarios de la vía deben dejar pasar a un vehículo prioritario.
+    cites: ["rvv:50"]
+
+  - id: emergencia-peligro
+    type: yesno
+    prompt: Para dejar pasar a una ambulancia, ¿puedes hacer una maniobra que ponga en peligro a un ciclista?
+    answer: false
+    explain: "Hay que dejar pasar, pero sin causar peligro a otros: el artículo 5 de la WVW sigue vigente."
+    cites: ["wvw:5", "rvv:50"]
+
+  - id: emergencia-faros
+    type: yesno
+    prompt: ¿Pueden los vehículos de emergencia llevar de día, además, faros intermitentes?
+    answer: true
+    explain: El artículo 29 lid 2 lo permite.
+    cites: ["rvv:29.2"]
+
+  - id: agente-indicaciones
+    type: yesno
+    prompt: Un agente de policía te indica con la mano que sigas o pares en un cruce. ¿Debes seguir su indicación?
+    answer: true
+    explain: Los usuarios de la vía deben seguir las indicaciones que dan los agentes en relación con el tráfico.
+    cites: ["wvw:12.1"]

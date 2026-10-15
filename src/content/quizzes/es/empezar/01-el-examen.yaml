@@ -1,0 +1,123 @@
+questions:
+  - id: el-examen-aciertos
+    type: number
+    exam: false
+    prompt: ¿Cuántas preguntas debes contestar bien, como mínimo, para aprobar el examen teórico de auto?
+    answer: 44
+    unit: preguntas
+    explain: El examen tiene 50 preguntas que cuentan y hay que acertar al menos 44.
+    cites: ["cbr-examenplan:1"]
+
+  - id: el-examen-cuentan
+    type: number
+    exam: false
+    prompt: ¿Cuántas preguntas que cuentan para el resultado tiene el examen?
+    answer: 50
+    unit: preguntas
+    explain: Son 50 preguntas que cuentan. Aparte hay 2 preguntas de prueba que no cuentan.
+    cites: ["cbr-examenplan:1"]
+
+  - id: el-examen-total-pantalla
+    type: number
+    exam: false
+    prompt: Cuentas todas las preguntas que verás en la pantalla, las que cuentan y las de prueba. ¿Cuántas son?
+    answer: 52
+    unit: preguntas
+    explain: 50 preguntas que cuentan más 2 preguntas de prueba suman 52.
+    cites: ["cbr-examenplan:1"]
+
+  - id: el-examen-errores-max
+    type: number
+    exam: false
+    prompt: Si en el examen todo cuenta (50 preguntas), ¿cuántas respuestas incorrectas como máximo puedes tener y aun así aprobar?
+    answer: 6
+    unit: errores
+    explain: Necesitas 44 aciertos de 50, así que puedes fallar 6 como máximo.
+    cites: ["cbr-examenplan:1"]
+
+  - id: el-examen-testvragen
+    type: yesno
+    exam: false
+    prompt: En el examen, ¿se te indica cuáles son las 2 preguntas de prueba para que no les prestes atención?
+    answer: false
+    explain: No se ve cuáles son las preguntas de prueba. No cuentan para el resultado, pero tú no sabes cuáles son, así que responde todas con cuidado.
+    cites: ["cbr-examenplan:1"]
+
+  - id: el-examen-prueba-cuentan
+    type: mc
+    exam: false
+    prompt: ¿Qué pasa con las 2 preguntas de prueba (testvragen) del examen?
+    options: [Cuentan como cualquier otra, No cuentan para el resultado final, Solo cuentan si fallas más de 6 preguntas, Se corrigen aparte y se suman al final]
+    answer: 1
+    explain: Las testvragen no cuentan para el resultado final.
+    cites: ["cbr-examenplan:1"]
+
+  - id: el-examen-sleepvraag
+    type: mc
+    exam: false
+    prompt: En una sleepvraag con tres vehículos en un cruce, ¿qué número recibe el vehículo que pasa primero?
+    options: ["1", "2", "3", Depende del color del vehículo]
+    answer: 0
+    explain: "En la sleepvraag arrastras números a la imagen: el que puede pasar primero recibe el 1, el siguiente el 2 y el último el 3."
+    cites: ["cbr-vragen"]
+
+  - id: el-examen-invulvraag
+    type: mc
+    exam: false
+    prompt: ¿Cómo contestas una invulvraag?
+    options: [Arrastrando una marca a la imagen, Escribiendo el número correcto con el teclado de la pantalla, Tocando un punto de la imagen, Eligiendo sí o no]
+    answer: 1
+    explain: En una invulvraag escribes el número correcto (por ejemplo una velocidad o una distancia) con el teclado de la pantalla.
+    cites: ["cbr-vragen"]
+
+  - id: el-examen-hotspot
+    type: mc
+    exam: false
+    prompt: En una hotspotvraag, ¿qué haces?
+    options: [Arrastras números a la imagen, Escribes un número, Tocas la respuesta correcta dentro de la imagen, Marcas varias respuestas de una lista]
+    answer: 2
+    explain: En la hotspotvraag tocas el lugar correcto dentro de la imagen.
+    cites: ["cbr-vragen"]
+
+  - id: el-examen-multiple-response
+    type: yesno
+    exam: false
+    prompt: En una pregunta "multiple response", ¿puede haber más de una respuesta correcta?
+    answer: true
+    explain: Esa es la diferencia con la meerkeuzevraag normal. En la multiple response pueden ser correctas varias respuestas.
+    cites: ["cbr-vragen"]
+
+  - id: el-examen-single-sleep
+    type: mc
+    exam: false
+    prompt: ¿Qué se hace en una single-sleepvraag?
+    options: [Se arrastra una sola marca al lugar correcto de la imagen, Se arrastran tres números a la imagen, Se escribe un número, Se contesta sí o no]
+    answer: 0
+    explain: En la single-sleepvraag arrastras una sola marca (un visto) al lugar correcto de la imagen.
+    cites: ["cbr-vragen"]
+
+  - id: el-examen-niveles
+    type: mc
+    exam: false
+    prompt: ¿Cuál de estas preguntas corresponde al nivel "más que conocer" (K+) del CBR?
+    options: ["¿Qué significa esta señal?", "¿Cuál es el orden correcto en el que pasan estos vehículos?", "¿Cómo se llama esta señal en neerlandés?", "Nombra la regla de la derecha"]
+    answer: 1
+    explain: K+ significa tomar la decisión correcta en una situación y entender cómo funciona la regla. Ordenar quién pasa primero es un ejemplo del plan del CBR. Las otras tres piden solo nombrar o reconocer un hecho (nivel K).
+    cites: ["cbr-examenplan:1"]
+
+  - id: el-examen-niveles-kplus
+    type: yesno
+    exam: false
+    prompt: Un tema del examen marcado como K+ puede preguntarse tanto en nivel K como en nivel K+. ¿Es correcto?
+    answer: true
+    explain: El plan del CBR dice que K+ significa que el tema puede evaluarse en los dos niveles, porque para el nivel alto también hay que dominar el bajo.
+    cites: ["cbr-examenplan:1"]
+
+  - id: el-examen-temas
+    type: multi
+    exam: false
+    prompt: ¿Cuáles de estos son temas del examen teórico de auto?
+    options: [Prioridad y dejar pasar, Conocimiento del vehículo, Mecánica avanzada del motor, Señales y órdenes de agentes, Reparación de neumáticos]
+    answer: [0, 1, 3]
+    explain: Los ocho temas incluyen prioridad y dejar pasar, conocimiento del vehículo (carga, luces, tablero, espejos) y señales y órdenes. No incluyen mecánica avanzada ni reparar neumáticos.
+    cites: ["cbr-examenplan:1"]

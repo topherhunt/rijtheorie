@@ -1,0 +1,97 @@
+questions:
+  - id: parkeerverbod-kruispunt
+    type: number
+    prompt: ¿A menos de cuántos metros de un cruce está prohibido estacionar?
+    answer: 5
+    unit: m
+    explain: No puedes estacionar a menos de 5 m de un kruispunt.
+    cites: ["rvv:24.1"]
+
+  - id: parkeerverbod-inrit
+    type: yesno
+    prompt: ¿Puedes estacionar delante de la entrada o salida de un terreno (inrit o uitrit)?
+    answer: false
+    explain: Estacionar delante de una inrit o una uitrit está prohibido.
+    cites: ["rvv:24.1"]
+
+  - id: parkeerverbod-voorrangsweg
+    type: mc
+    prompt: ¿Cuál de estas situaciones tiene prohibido estacionar según el artículo 24?
+    options:
+      - Fuera de zona urbana, en la calzada de una voorrangsweg
+      - Dentro de zona urbana, en cualquier calle
+      - En un aparcamiento sin señales
+      - Junto a una línea blanca
+    answer: 0
+    explain: Fuera de la zona urbana no puedes estacionar en la calzada de una voorrangsweg.
+    cites: ["rvv:24.1"]
+
+  - id: parkeerverbod-gele-streep
+    type: mc
+    prompt: ¿Qué prohíbe una línea amarilla discontinua junto a la calzada?
+    options:
+      - Detenerse
+      - Estacionar
+      - Adelantar
+      - Nada
+    answer: 1
+    explain: Junto a una línea amarilla discontinua está prohibido parkeren. La continua prohíbe incluso stilstaan.
+    cites: ["rvv:24.1", "rvv:23.1"]
+
+  - id: parkeerverbod-laden
+    type: yesno
+    prompt: ¿Puedes estacionar en un lugar destinado a cargar y descargar mercancías de inmediato?
+    answer: false
+    explain: Está prohibido estacionar en esos lugares.
+    cites: ["rvv:24.1"]
+
+  - id: parkeerverbod-e9
+    type: yesno
+    prompt: Hay una plaza E9 (para titulares de permiso) y no tienes permiso para ella. ¿Puedes estacionar allí?
+    answer: false
+    explain: Sin permiso para esa plaza, estacionar en una plaza E9 está prohibido.
+    cites: ["rvv:24.1"]
+
+  - id: parkeerverbod-cruce-parar
+    type: yesno
+    prompt: A 3 m de un cruce, ¿puedes estacionar según el artículo 24?
+    answer: false
+    explain: A menos de 5 m de un kruispunt está prohibido parkeren. Dentro del cruce, además, ni siquiera puedes detenerte.
+    cites: ["rvv:24.1", "rvv:23.1"]
+
+  - id: parkeerverbod-amarilla-diferencia
+    type: multi
+    prompt: ¿Cuáles de estas afirmaciones son correctas?
+    options:
+      - Junto a una línea amarilla continua no puedes detenerte
+      - Junto a una línea amarilla discontinua no puedes estacionar
+      - Junto a una línea amarilla discontinua no puedes detenerte nunca
+      - Junto a una línea amarilla continua puedes estacionar
+    answer: [0, 1]
+    explain: La amarilla continua prohíbe stilstaan, la discontinua prohíbe parkeren.
+    cites: ["rvv:23.1", "rvv:24.1"]
+
+  - id: parkeerverbod-e1
+    type: mc
+    prompt: ¿Qué prohíbe esta señal?
+    sign: E1
+    options: [Detenerse, Estacionar, Colocar bicicletas, Adelantar]
+    answer: 1
+    explain: E1 es el parkeerverbod.
+    cites: ["rvv:bijlage1.E1"]
+
+  - id: parkeerverbod-e3
+    type: mc
+    prompt: ¿Qué prohíbe esta señal?
+    sign: E3
+    options: [Estacionar autos, Colocar bicicletas y ciclomotores, Detenerse, Estacionar camiones]
+    answer: 1
+    explain: E3 prohíbe colocar bicicletas y ciclomotores.
+    cites: ["rvv:bijlage1.E3"]
+
+  - id: parkeerverbod-e1-lado
+    type: yesno
+    prompt: Hay una señal E1 en el lado izquierdo de la calle. ¿Te afecta si estacionas en el lado derecho?
+    answer: false
+    explain: E1 vale solo para el lado de la vía donde está puesta.
+    cites: ["rvv:65.2"]

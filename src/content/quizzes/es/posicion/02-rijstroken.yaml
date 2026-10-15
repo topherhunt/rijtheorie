@@ -1,0 +1,108 @@
+questions:
+  - id: rijstroken-definicion
+    type: mc
+    prompt: ¿Cómo define el RVV un carril (rijstrook)?
+    options: [Cualquier parte de la calzada, Una parte de la calzada marcada con líneas continuas o discontinuas y lo bastante ancha para vehículos de motor de más de dos ruedas, Solo los carriles con flechas, Solo los carriles de autopista]
+    answer: 1
+    explain: El art. 1 RVV define rijstrook como la parte de la calzada marcada con líneas y con ancho suficiente para vehículos de motor de más de dos ruedas.
+    cites: ["rvv:1"]
+
+  - id: rijstroken-carril-defecto
+    type: mc
+    prompt: La calzada tiene tres carriles en tu sentido y no hay atasco ni adelantamientos. ¿Qué carril sigues en principio según la Rijprocedure B?
+    options: [El del medio, El carril derecho, El carril izquierdo, Cualquiera según tu velocidad]
+    answer: 1
+    explain: La Rijprocedure B dice que, si la calzada está dividida en carriles, se sigue en principio el carril derecho (también si hay un carril de hora punta abierto).
+    cites: ["cbr-rijprocedure:3.2", "rvv:3.1"]
+
+  - id: rijstroken-niebla
+    type: mc
+    prompt: Conduces en una autopista con niebla densa o lluvia fuerte. ¿Qué carril es mejor según la Rijprocedure B?
+    options: [El izquierdo, El del medio, El derecho (por la posibilidad de escape), El que tenga más tráfico]
+    answer: 2
+    explain: Con niebla, nieve, lluvia fuerte, oscuridad o agua que salpica se usa lo más posible el carril derecho, porque ofrece una posibilidad de escape.
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: rijstroken-weefvak
+    type: mc
+    prompt: Tu calzada se divide con una línea de bloques y señales de dirección sobre los carriles. Quieres seguir recto. ¿Qué carril sigues en principio?
+    options: [El carril más a la izquierda, El carril más a la derecha de la dirección que sigues, El carril del medio, Cualquiera pisando la línea de bloques]
+    answer: 1
+    explain: En un weefvak se sigue en principio el carril más a la derecha de la dirección que vas a seguir.
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: rijstroken-atasco-excepcion
+    type: yesno
+    prompt: Hay atasco y la calzada tiene dos carriles en tu sentido. ¿Estás obligado a seguir el carril más a la derecha?
+    answer: false
+    explain: En fileverkeer no es obligatorio seguir el carril más a la derecha.
+    cites: ["rvv:13.1"]
+
+  - id: rijstroken-camion
+    type: mc
+    prompt: ¿Qué carriles puede usar un camión en una autosnelweg con tres carriles en su sentido (sin preseleccionar)?
+    options: [Los tres, Solo los dos de la derecha, Solo el de la derecha, Solo el de la izquierda]
+    answer: 1
+    explain: En una autosnelweg con tres o más carriles, los camiones solo pueden usar los dos más a la derecha, salvo que deban preseleccionar.
+    cites: ["rvv:43.4"]
+
+  - id: rijstroken-remolque
+    type: yesno
+    prompt: Conduces un auto con un remolque. El conjunto mide más de 7 metros. En una autosnelweg de tres carriles, ¿puedes usar el carril izquierdo?
+    answer: false
+    explain: La prohibición del art. 43.4 afecta también a los conjuntos de vehículos con una longitud total de más de 7 metros, no solo a los camiones.
+    cites: ["rvv:43.4"]
+
+  - id: rijstroken-camion-preseleccionar
+    type: yesno
+    prompt: Un camión está en el carril de la derecha de una autosnelweg de tres carriles y necesita preseleccionar para tomar una salida a la izquierda. ¿Le está permitido usar un tercer carril?
+    answer: true
+    explain: La prohibición no vale cuando tienen que preseleccionar (voorsorteren).
+    cites: ["rvv:43.4"]
+
+  - id: rijstroken-cruz-roja
+    type: mc
+    prompt: Sobre tu carril aparece una cruz roja. ¿Qué significa?
+    options: [Preaviso de peligro, El carril no se puede usar, Velocidad máxima de 50, Solo para autobuses]
+    answer: 1
+    explain: Un rood kruis significa que el carril no se puede usar. La vía de emergencia solo en emergencias.
+    cites: ["rvv:73"]
+
+  - id: rijstroken-flecha-blanca
+    type: mc
+    prompt: Sobre el carril aparece una flecha blanca inclinada. ¿Qué significa?
+    options: [El carril se puede usar, Preaviso de una cruz roja, Fin del atasco, Carril solo para autobuses]
+    answer: 1
+    explain: "Una flecha blanca es el preaviso de una cruz roja: cambia de carril a tiempo."
+    cites: ["rvv:73"]
+
+  - id: rijstroken-flecha-verde
+    type: yesno
+    prompt: Sobre tu carril hay una flecha verde. ¿Puedes usar el carril?
+    answer: true
+    explain: Una flecha verde (o una velocidad máxima de la señal A3) significa que el carril puede usarse.
+    cites: ["rvv:73"]
+
+  - id: rijstroken-solo-un-carril
+    type: yesno
+    prompt: Una señal de prohibición en una calzada con varios carriles, ¿puede valer solo para uno de ellos?
+    answer: true
+    explain: Si la vía está dividida en carriles, la aplicación de una señal puede limitarse a uno o varios carriles.
+    cites: ["rvv:65.1"]
+
+  - id: rijstroken-spitsstrook-abierto
+    type: mc
+    sign: C23-01
+    prompt: Ves esta señal sobre el carril de emergencia. ¿Qué significa?
+    options: [El carril de hora punta está abierto y se puede usar, Prohibido el paso, Fin de la autopista, Zona de estacionamiento]
+    answer: 0
+    explain: La señal C23-01 indica que el spitsstrook está abierto.
+    cites: ["rvv:bijlage1.C23-01"]
+
+  - id: rijstroken-bus
+    type: mc
+    prompt: Sobre un carril aparece la palabra LIJNBUS. ¿Quién puede usar ese carril?
+    options: [Todos los autobuses, Solo los autobuses de línea, Solo autos, Cualquier vehículo pesado]
+    answer: 1
+    explain: LIJNBUS reserva el carril a conductores de autobús de línea. La palabra BUS lo abre además a otros autobuses.
+    cites: ["rvv:73"]

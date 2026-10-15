@@ -1,0 +1,85 @@
+questions:
+  - id: alcohol-novel-limite
+    type: number
+    prompt: ¿Cuál es el límite general de alcohol en el aliento, en microgramos por litro, para un conductor con experiencia?
+    answer: 220
+    unit: microgramos por litro
+    explain: Más de 220 microgramos por litro de aire espirado está prohibido (o más de 0,5 mg/ml en sangre).
+    cites: ["wvw:8.2"]
+
+  - id: alcohol-novel-sangre
+    type: mc
+    prompt: ¿Cuál es el límite general en sangre?
+    options: ["0,2 mg/ml", "0,5 mg/ml", "0,8 mg/ml", "1,3 mg/ml"]
+    answer: 1
+    explain: Más de 0,5 miligramos de alcohol por mililitro de sangre está prohibido para conductores en general.
+    cites: ["wvw:8.2"]
+
+  - id: alcohol-novel-novato
+    type: number
+    prompt: ¿Cuál es el límite de alcohol en el aliento, en microgramos por litro, para un conductor novel?
+    answer: 88
+    unit: microgramos por litro
+    explain: Para quien tiene el permiso hace poco el límite es 88 microgramos por litro (0,2 mg/ml en sangre).
+    cites: ["wvw:8.3"]
+
+  - id: alcohol-novel-anos
+    type: number
+    prompt: Te dieron tu primer permiso a los 25 años. ¿Durante cuántos años desde esa fecha rige el límite más bajo?
+    answer: 5
+    unit: años
+    explain: Si el primer permiso se emitió a los 18 años o más, el límite bajo rige 5 años desde esa fecha.
+    cites: ["wvw:8.3"]
+
+  - id: alcohol-novel-menor
+    type: number
+    prompt: Te dieron el permiso AM (ciclomotor) a los 16 años. ¿Cuántos años rige el límite bajo desde esa fecha?
+    answer: 7
+    unit: años
+    explain: Para un primer permiso AM o T obtenido siendo menor de 18, son 7 años.
+    cites: ["wvw:8.3"]
+
+  - id: alcohol-novel-b17
+    type: number
+    prompt: Te dieron tu primer permiso B a los 17 años (conducir acompañado). ¿Cuántos años rige el límite bajo desde esa fecha?
+    answer: 5
+    unit: años
+    explain: Para el primer permiso B emitido antes de los 18 años son 5 años desde la emisión.
+    cites: ["wvw:8.3"]
+
+  - id: alcohol-novel-dejar
+    type: yesno
+    prompt: Tu amigo está muy borracho. ¿Está prohibido dejarle conducir tu auto?
+    answer: true
+    explain: Está prohibido dejar conducir a alguien que está en un estado que no se lo permite.
+    cites: ["wvw:8.6"]
+
+  - id: alcohol-novel-drogas
+    type: yesno
+    prompt: Tomaste un medicamento que te hace menos capaz de conducir bien. ¿Está permitido conducir?
+    answer: false
+    explain: Está prohibido conducir bajo la influencia de una sustancia que reduce tu capacidad de conducir bien.
+    cites: ["wvw:8.1"]
+
+  - id: alcohol-novel-570
+    type: number
+    prompt: ¿Por encima de cuántos microgramos por litro de aliento se retira el permiso en el acto a un conductor con experiencia?
+    answer: 570
+    unit: microgramos por litro
+    explain: Con más de 570 microgramos por litro (o más de 1,3 mg/ml en sangre) se retira el permiso.
+    cites: ["wvw:164.2.a"]
+
+  - id: alcohol-novel-350
+    type: number
+    prompt: Para un conductor novel, ¿a partir de cuántos microgramos por litro de aliento (más de) se retira el permiso en el acto?
+    answer: 350
+    unit: microgramos por litro
+    explain: Para el novato el umbral de retiro es más de 350 microgramos por litro, o más de 0,8 mg/ml en sangre.
+    cites: ["wvw:164.2.b"]
+
+  - id: alcohol-novel-acompanante
+    type: yesno
+    prompt: ¿Rige el límite de 220 microgramos también para quien actúa como acompañante (begeleider)?
+    answer: true
+    explain: El artículo 8 prohíbe tanto conducir como actuar de acompañante pasado el límite.
+    cites: ["wvw:8.2"]

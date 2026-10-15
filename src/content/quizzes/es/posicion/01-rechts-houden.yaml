@@ -1,0 +1,83 @@
+questions:
+  - id: rechts-houden-regla
+    type: mc
+    prompt: ¿Qué dice la regla general sobre tu posición en la calzada?
+    options: [Debes circular por el centro de la calzada, Debes circular lo más a la derecha posible, Puedes elegir el lado que quieras si no hay tráfico, Debes circular por el carril izquierdo si vas rápido]
+    answer: 1
+    explain: Los conductores deben circular lo más a la derecha posible (rechts houden).
+    cites: ["rvv:3.1"]
+
+  - id: rechts-houden-centro-carril
+    type: mc
+    prompt: En un carril de ancho normal, ¿dónde esperan los examinadores que circules según la Rijprocedure B?
+    options: [Pegado a la línea derecha, En el centro del carril, Pegado a la línea izquierda, Sobre la línea que separa los carriles]
+    answer: 1
+    explain: Según la Rijprocedure B, en carriles de ancho normal se circula por el centro del carril. Es un procedimiento recomendado, no un artículo de ley.
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: rechts-houden-distancia-estacionados
+    type: mc
+    prompt: Pasas junto a una fila de autos estacionados a tu derecha. ¿Qué distancia lateral recomienda la Rijprocedure B?
+    options: [Pegarte lo más posible a los autos, Una puerta de ancho como mínimo, Medio metro exacto, Da igual si no hay nadie]
+    answer: 1
+    explain: Se mantiene una distancia segura, equivalente al ancho de una puerta (portierbreedte), por si alguien abre la puerta.
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: rechts-houden-huecos
+    type: yesno
+    prompt: A tu derecha hay autos estacionados a trechos. Si no te metes en cada hueco, no invades la mitad de la calzada del tráfico que viene de frente. ¿Debes meterte en cada hueco?
+    answer: false
+    explain: La Rijprocedure B dice que no te metas a la derecha en cada hueco si no es necesario, porque eso solo genera maniobras innecesarias.
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: rechts-houden-fietsstrook-continua
+    type: yesno
+    prompt: Puedes circular con tu auto sobre un carril bici (fietsstrook) marcado con líneas continuas.
+    answer: false
+    explain: Los conductores que no son ciclistas ni vehículos para personas con discapacidad no pueden usar una fietsstrook con líneas continuas.
+    cites: ["rvv:10.2"]
+
+  - id: rechts-houden-fietspad
+    type: mc
+    prompt: ¿Dónde circula un auto?
+    options: [En la calzada (rijbaan), En el carril bici separado (fietspad) si está libre, En la berma si hay poco tráfico, En cualquier parte si va despacio]
+    answer: 0
+    explain: Otros conductores distintos de ciclistas, ciclomotores, jinetes y vehículos para personas con discapacidad usan la calzada.
+    cites: ["rvv:10.1"]
+
+  - id: rechts-houden-dos-ciclistas
+    type: yesno
+    prompt: Dos ciclistas van uno al lado del otro en la calzada. ¿Es legal?
+    answer: true
+    explain: Los ciclistas pueden ir de dos en dos, uno al lado del otro.
+    cites: ["rvv:3.2"]
+
+  - id: rechts-houden-snorfiets
+    type: yesno
+    prompt: Dos conductores de snorfiets (ciclomotor lento, 25 km/h) van uno al lado del otro. ¿Es legal?
+    answer: false
+    explain: El permiso de ir de a dos en paralelo vale para ciclistas, no para los conductores de snorfiets.
+    cites: ["rvv:3.2"]
+
+  - id: rechts-houden-bici-ancha
+    type: mc
+    prompt: En una calle ancha hay ciclistas en la calzada. ¿Qué indica la Rijprocedure B?
+    options: [Esquivarlos siempre hacia la derecha, No esquivarlos sin necesidad si eso crea un tráfico agitado y seguir una línea recta, Adelantarlos por la derecha, Tocar la bocina]
+    answer: 1
+    explain: En calles anchas no hace falta ir y venir entre los ciclistas; se mantiene una línea lo más recta posible.
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: rechts-houden-curva-ciega
+    type: yesno
+    prompt: Según la WVW, no mantenerte lo suficiente a la derecha en un lugar sin visibilidad puede ser un ejemplo de infracción grave si lo haces a propósito y hay peligro de muerte o lesiones graves.
+    answer: true
+    explain: El art. 5a WVW enumera como ejemplo "onvoldoende rechts houden op onoverzichtelijke plaatsen".
+    cites: ["wvw:5a"]
+
+  - id: rechts-houden-peligro
+    type: mc
+    prompt: ¿Qué prohíbe en general la WVW art. 5?
+    options: [Conducir de noche, Comportarte de modo que se cause o pueda causarse peligro o estorbo al tráfico, Usar el carril izquierdo, Ir en paralelo con otro auto]
+    answer: 1
+    explain: El art. 5 WVW prohíbe comportarse de forma que se cause (o pueda causarse) peligro en la vía o que se estorbe al tráfico.
+    cites: ["wvw:5"]

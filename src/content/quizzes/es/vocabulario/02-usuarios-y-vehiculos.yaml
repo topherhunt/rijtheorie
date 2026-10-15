@@ -1,0 +1,108 @@
+questions:
+  - id: usuarios-y-vehiculos-ruiter
+    type: mc
+    prompt: ¿Qué es un "ruiter"?
+    options: [Un ciclista, Un jinete, Un peatón, Un motociclista]
+    answer: 1
+    explain: Ruiter es el jinete.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: usuarios-y-vehiculos-tegenpartij
+    type: mc
+    prompt: ¿Qué es la "tegenpartij" en un accidente?
+    options: [El testigo, La otra parte involucrada, El policía, La aseguradora]
+    answer: 1
+    explain: Tegenpartij es la otra parte.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: usuarios-y-vehiculos-slachtoffer
+    type: mc
+    prompt: '"Slachtoffer" en español es...'
+    options: [Culpable, Víctima, Conductor, Testigo]
+    answer: 1
+    explain: Slachtoffer es la víctima.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: usuarios-y-vehiculos-skeelers
+    type: mc
+    prompt: ¿Qué son los "skeelers"?
+    options: [Patines en línea, Scooters eléctricos, Bicicletas plegables, Patinetes de empuje]
+    answer: 0
+    explain: Skeelers son patines en línea.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: usuarios-y-vehiculos-medeweggebruiker
+    type: mc
+    prompt: ¿Qué significa "medeweggebruikers"?
+    options: [Los otros usuarios de la vía, Los dueños de la vía, Los obreros, Los policías]
+    answer: 0
+    explain: 'Mede- significa "con": los otros usuarios de la vía.'
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: usuarios-y-vehiculos-carpooler
+    type: mc
+    prompt: ¿Qué es un "carpooler"?
+    options: [Quien comparte el auto con otros, Un taxista, Un mecánico, Un ciclista]
+    answer: 0
+    explain: Carpooler es quien comparte auto.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: usuarios-y-vehiculos-motorfiets
+    type: mc
+    prompt: ¿Cómo se dice "motocicleta" en neerlandés?
+    options: [motorfiets, snorfiets, brommobiel, landbouwvoertuig]
+    answer: 0
+    explain: Motorfiets es la motocicleta.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: usuarios-y-vehiculos-kampeer
+    type: mc
+    prompt: ¿Qué es una "kampeerwagen"?
+    options: [Una autocaravana, Un camión, Un autobús, Un tractor]
+    answer: 0
+    explain: Kampeerwagen es una autocaravana.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: usuarios-y-vehiculos-veeg
+    type: mc
+    prompt: ¿Qué es una "veegwagen"?
+    options: [Una barredora, Una ambulancia, Una grúa, Un camión de bomberos]
+    answer: 0
+    explain: Veegwagen es una barredora.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: usuarios-y-vehiculos-uitvaart
+    type: mc
+    prompt: ¿Qué es una "uitvaartstoet"?
+    options: [Un cortejo fúnebre, Un desfile, Una caravana de camiones, Una carrera]
+    answer: 0
+    explain: Uitvaartstoet es un cortejo fúnebre.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: usuarios-y-vehiculos-novel
+    type: mc
+    prompt: ¿Cómo se dice "conductor novel" en neerlandés?
+    options: [beginnend bestuurder, medeweggebruiker, tegenpartij, verkeersregelaar]
+    answer: 0
+    explain: Beginnend bestuurder es el conductor novel.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: usuarios-y-vehiculos-regelaar
+    type: mc
+    prompt: ¿Qué hace un "verkeersregelaar"?
+    options: [Regula el tráfico, Repara autos, Cobra multas, Conduce un tranvía]
+    answer: 0
+    explain: Verkeersregelaar es quien regula el tráfico.
+    cites: ["cbr-examenplan:4"]
+    exam: false

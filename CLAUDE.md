@@ -5,6 +5,7 @@ Unofficial, open-source Spanish-language course for the Dutch car theory exam (C
 Read before working:
 - `docs/BLUEPRINT.md` -- architecture, content model, conventions, how to add a lesson/question/image.
 - `docs/ROADMAP.md` -- current status, next steps, wish list.
+- `docs/AUTHORING.md` -- how to write lessons and questions (components, question types, sourcing).
 - `docs/AUDIT.md` -- correctness audit and red-team procedure (run it after any content change).
 - `docs/PROCESS.md` -- how the content was produced: sources used, decisions made and why.
 
@@ -14,4 +15,4 @@ Hard rules for this project:
 - The owner creates the GitHub repo -- never run `gh repo create` or push.
 - `dev.env` holds `OPENROUTER_API_KEY` (gitignored). Image generation spends real money: total cap $20, stay within the approved image plan (`scripts/images/`).
 
-Commands: `npm run dev`, `npm run build`, `npm test` (vitest), `npm run test:e2e` (playwright), `npm run audit` (content checks), `npm run check` (astro check).
+Commands: `npm run dev`, `npm run build`, `npm test` (vitest), `npm run test:e2e` (build + playwright), `npm run typecheck` (tsc), `npm run audit` (content checks; `-- --strict` fails on warnings), `npm run law -- rvv:15.1` (print a cited article from the snapshots), `npm run check` (all gates).

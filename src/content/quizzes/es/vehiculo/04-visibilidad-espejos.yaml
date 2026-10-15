@@ -1,0 +1,73 @@
+questions:
+  - id: visibilidad-espejos-55
+    type: number
+    prompt: ¿Cuánta luz, como mínimo (en %), debe dejar pasar el parabrisas y las ventanillas delanteras?
+    answer: 55
+    unit: "%"
+    explain: La transmisión de luz debe ser de al menos 55%.
+    cites: ["rv:5.2.42"]
+
+  - id: visibilidad-espejos-espejos
+    type: multi
+    prompt: ¿Qué espejos debe tener un auto puesto en uso en 2022?
+    options: [Espejo exterior izquierdo, Espejo exterior derecho, Espejo interior, Un espejo en el techo]
+    answer: [0, 1, 2]
+    explain: Un auto puesto en uso después de enero de 2010 necesita espejo exterior izquierdo, derecho e interior.
+    cites: ["rv:5.2.45"]
+
+  - id: visibilidad-espejos-camara
+    type: yesno
+    prompt: ¿Puede un sistema de cámara y monitor sustituir a los espejos?
+    answer: true
+    explain: Los sistemas cámara-monitor pueden reemplazar los espejos.
+    cites: ["rv:5.2.45", "rv:5.18.4"]
+
+  - id: visibilidad-espejos-objetos
+    type: yesno
+    prompt: ¿Puedes tener objetos que bloqueen la vista en el parabrisas si no los usas?
+    answer: false
+    explain: No puede haber objetos innecesarios que bloqueen la vista.
+    cites: ["rv:5.2.42"]
+
+  - id: visibilidad-espejos-lavaparabrisas
+    type: yesno
+    prompt: ¿Debe el auto tener un lavaparabrisas que funcione además del limpiaparabrisas?
+    answer: true
+    explain: El auto debe tener limpiaparabrisas que funcione y sistema lavaparabrisas.
+    cites: ["rv:5.2.43"]
+
+  - id: visibilidad-espejos-desempanador
+    type: yesno
+    prompt: ¿Debe el auto tener un dispositivo para desempañar el parabrisas?
+    answer: true
+    explain: Es un requisito del equipo del auto.
+    cites: ["rv:5.2.44"]
+
+  - id: visibilidad-espejos-claxon
+    type: mc
+    prompt: ¿Cómo debe ser el sonido del claxon?
+    options: [Un tono fijo, Una melodía, Una sirena, Cualquiera]
+    answer: 0
+    explain: El claxon debe tener un tono fijo.
+    cites: ["rv:5.2.71"]
+
+  - id: visibilidad-espejos-velocimetro
+    type: yesno
+    prompt: ¿Debe poder leerse el velocímetro también de noche?
+    answer: true
+    explain: El velocímetro debe funcionar y ser legible de noche.
+    cites: ["rv:5.2.15"]
+
+  - id: visibilidad-espejos-estorbo
+    type: yesno
+    prompt: Llevas una maleta que te toca el brazo y te estorba al girar el volante. ¿Está permitido?
+    answer: false
+    explain: El conductor no puede ser estorbado por pasajeros, carga u otra cosa.
+    cites: ["rv:5.18.3/1"]
+
+  - id: visibilidad-espejos-interior
+    type: yesno
+    prompt: ¿Es siempre obligatorio el espejo interior, incluso si da vista nula hacia atrás?
+    answer: false
+    explain: No hace falta si no da vista hacia atrás.
+    cites: ["rv:5.2.45"]

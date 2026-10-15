@@ -1,0 +1,132 @@
+questions:
+  - id: rotonde-d1
+    type: mc
+    prompt: ¿Qué señal marca una rotonda en el sentido de la ley?
+    options: [B6, D1, J9, G1]
+    answer: 1
+    explain: La rotonda se marca con D1. J9 solo avisa de una rotonda, y B6 pide ceder el paso.
+    cites: ["cbr-rijprocedure:3.6", "rvv:bijlage1.D1"]
+
+  - id: rotonde-sin-d1
+    type: yesno
+    prompt: Llegas a una plaza circular sin la señal D1. ¿Valen las excepciones legales de las rotondas?
+    answer: false
+    explain: Las excepciones legales de las rotondas solo valen en plazas marcadas con D1.
+    cites: ["cbr-rijprocedure:3.6"]
+
+  - id: rotonde-adelantar
+    type: yesno
+    prompt: En una rotonda (con D1), ¿está permitido adelantar por la derecha?
+    answer: true
+    explain: La ley permite adelantar por la derecha cerca de una rotonda o en ella.
+    cites: ["rvv:48"]
+
+  - id: rotonde-no-derecha
+    type: yesno
+    prompt: Un conductor de auto que sigue la calzada, cerca de una rotonda, ¿puede ir por un lugar distinto del lado derecho?
+    answer: true
+    explain: La ley lo permite a conductores de vehículos de motor y a ciclomotores que siguen la calzada, cerca de rotondas o en ellas.
+    cites: ["rvv:47"]
+
+  - id: rotonde-mirar-entrar
+    type: mc
+    prompt: Justo antes de entrar a una rotonda, ¿hacia dónde miras para decidir si puedes entrar?
+    options: [Hacia delante y hacia la izquierda, Solo hacia la derecha, Solo por el espejo, Hacia atrás]
+    answer: 0
+    explain: Mira hacia delante y a la izquierda, y también los espejos para ver lo que pasa detrás. Con B6, todavía con más atención.
+    cites: ["cbr-rijprocedure:3.6"]
+
+  - id: rotonde-b6
+    type: mc
+    prompt: En la entrada a una rotonda hay una señal B6. ¿Qué significa?
+    sign: B6
+    options: [Tienes prioridad, Cede el paso a los conductores de la vía que cruza, Prohibido entrar, Rotonda con carriles]
+    answer: 1
+    explain: B6 dice "verleen voorrang aan bestuurders op de kruisende weg".
+    cites: ["rvv:bijlage1.B6"]
+
+  - id: rotonde-salir-ceder
+    type: mc
+    prompt: Vas a salir de una rotonda. ¿Qué haces con el tráfico que sigue dando vueltas?
+    options:
+      - Pasas antes, porque sales
+      - Le cedes el paso
+      - Depende de la velocidad
+      - Tocas la bocina
+    answer: 1
+    explain: Al salir se deja pasar al tráfico que sigue en la rotonda, también el del carril bici independiente.
+    cites: ["cbr-rijprocedure:3.6"]
+
+  - id: rotonde-salir-mirar
+    type: mc
+    prompt: Al salir de la rotonda, ¿hacia qué lado miras por encima del hombro?
+    options: [Izquierdo, Derecho, Ninguno, Los dos]
+    answer: 1
+    explain: Para observar el tráfico a tu derecha miras por el espejo interior, el exterior derecho y por encima del hombro derecho.
+    cites: ["cbr-rijprocedure:3.6"]
+
+  - id: rotonde-primera-salida
+    type: mc
+    prompt: Vas a tomar la primera salida de una rotonda. ¿Qué intermitente pones al acercarte?
+    options: [Derecho, Izquierdo, Ninguno hasta salir, Los dos]
+    answer: 0
+    explain: Para la primera salida, intermitente derecho al acercarte.
+    cites: ["cbr-rijprocedure:3.6"]
+
+  - id: rotonde-tres-cuartos
+    type: mc
+    prompt: Vas a dar tres cuartos de vuelta en una rotonda. ¿Qué intermitente pones al acercarte?
+    options: [Derecho, Izquierdo, Ninguno, Los dos]
+    answer: 1
+    explain: Para tres cuartos de vuelta, intermitente izquierdo al acercarte. Luego señalizas la salida.
+    cites: ["cbr-rijprocedure:3.6"]
+
+  - id: rotonde-carril-cuarto
+    type: mc
+    prompt: Rotonda de tres carriles sin flechas. Vas a tomar la primera salida. ¿Qué carril usas?
+    options: [Izquierdo, Medio, Derecho, Cualquiera]
+    answer: 2
+    explain: Para un cuarto de vuelta se usa el carril derecho.
+    cites: ["cbr-rijprocedure:3.6"]
+
+  - id: rotonde-carril-media
+    type: mc
+    prompt: Rotonda de tres carriles sin flechas. Vas a tomar la segunda salida (media vuelta). ¿Qué carril prefieres al entrar?
+    options: [Izquierdo, Medio, Derecho, Cualquiera]
+    answer: 1
+    explain: "Media vuelta: de preferencia el carril medio y, pasada la primera salida, el derecho."
+    cites: ["cbr-rijprocedure:3.6"]
+
+  - id: rotonde-carril-completa
+    type: mc
+    prompt: Rotonda de tres carriles sin flechas. Das una vuelta completa. ¿En qué orden usas los carriles?
+    options:
+      - Derecho, medio, izquierdo
+      - Izquierdo, medio, derecho
+      - Solo el medio
+      - Solo el izquierdo
+    answer: 1
+    explain: Primero el carril izquierdo, luego el medio (pasada la salida de media vuelta) y por último el derecho (pasada la de tres cuartos).
+    cites: ["cbr-rijprocedure:3.6"]
+
+  - id: rotonde-no-siempre
+    type: yesno
+    prompt: ¿Se aplica siempre el procedimiento de carriles de las rotondas de tres carriles?
+    answer: false
+    explain: No vale en plazas asimétricas, rotondas sin carriles, rotondas con semáforos y flechas, con tráfico intenso ni para todos los vehículos.
+    cites: ["cbr-rijprocedure:3.6"]
+
+  - id: rotonde-turbo-carril
+    type: mc
+    prompt: ¿Cuándo eliges el carril en una turborrotonda?
+    options: [Dentro de la rotonda, Antes de entrar, Justo antes de salir, Da igual]
+    answer: 1
+    explain: Elige el carril correcto antes de entrar a la turborrotonda.
+    cites: ["vvn-turborotonde"]
+
+  - id: rotonde-turbo-cambiar
+    type: yesno
+    prompt: Estás dentro de una turborrotonda en el carril equivocado. Según VVN, ¿puedes cambiar de carril?
+    answer: false
+    explain: En una turborrotonda no puedes cambiar de carril. Por eso eliges bien antes de entrar.
+    cites: ["vvn-turborotonde"]

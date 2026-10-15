@@ -1,0 +1,139 @@
+questions:
+  - id: erf-senal-g5
+    type: mc
+    prompt: ¿Qué indica esta señal?
+    sign: G5
+    options: [Autoweg, Entrada a un erf, Zona de estacionamiento, Zona de 30 km/h]
+    answer: 1
+    explain: G5 marca el inicio de un erf. G6 marca el final.
+    cites: ["rvv:bijlage1.G5"]
+
+  - id: erf-vel
+    type: number
+    prompt: ¿Cuál es la velocidad máxima dentro de un erf?
+    answer: 15
+    unit: km/h
+    explain: Dentro de un erf no se puede ir a más de 15 km/h.
+    cites: ["rvv:45"]
+
+  - id: erf-peatones
+    type: yesno
+    prompt: Dentro de un erf, ¿pueden los peatones usar todo el ancho de la calzada?
+    answer: true
+    explain: La ley permite a los peatones usar las vías dentro de un erf en todo su ancho.
+    cites: ["rvv:44"]
+
+  - id: erf-estacionar
+    type: mc
+    prompt: Dentro de un erf, ¿dónde puede estacionar un auto?
+    options:
+      - En cualquier lugar donde no moleste
+      - Solo en lugares señalados o marcados como estacionamiento
+      - En el borde de la calzada
+      - En ninguna parte
+    answer: 1
+    explain: Los conductores de vehículos de motor solo pueden estacionar en los lugares señalados o marcados como estacionamiento.
+    cites: ["rvv:46"]
+
+  - id: erf-zona-disco
+    type: yesno
+    prompt: Un erf es además zona de disco (parkeerschijf-zone). ¿Valen también las reglas de estacionamiento con disco?
+    answer: true
+    explain: Si el erf es también zona de disco, valen los artículos 25 y 26.
+    cites: ["rvv:46"]
+
+  - id: erf-parada-pasar
+    type: mc
+    prompt: Vas a pasar junto a un tranvía parado, por el lado donde bajan los pasajeros. ¿Qué haces?
+    options:
+      - Pasas rápido para no bloquear
+      - Les das oportunidad de subir y bajar
+      - Tocas la bocina
+      - Pasas por el otro lado siempre
+    answer: 1
+    explain: Debes darles oportunidad de subir y bajar si pasas por el lado donde lo hacen.
+    cites: ["rvv:52"]
+
+  - id: erf-parada-salida
+    type: mc
+    prompt: Estás en una calle dentro del pueblo. Un bus parado en la parada pone el intermitente. ¿Qué haces?
+    options:
+      - Le dejas salir de la parada
+      - Pasas antes que él
+      - Le tocas la bocina
+      - Frenas fuerte sin avisar
+    answer: 0
+    explain: Dentro de la bebouwde kom debes dar oportunidad de salir a un bus que avisa con el intermitente.
+    cites: ["rvv:56"]
+
+  - id: erf-parada-fuera
+    type: yesno
+    prompt: Según el artículo 56, ¿tiene que dejar salir de la parada a un bus que pone el intermitente fuera de la bebouwde kom?
+    answer: false
+    explain: El artículo 56 solo menciona la bebouwde kom (dentro del pueblo).
+    cites: ["rvv:56"]
+    exam: false
+
+  - id: erf-parada-charco
+    type: yesno
+    prompt: Hay gente esperando en una parada y un charco junto a ellos. Según el procedimiento, ¿pasas por el charco a la velocidad normal?
+    answer: false
+    explain: El procedimiento dice que no hay que pasar por charcos (o solo con muy poca velocidad) junto a gente que espera, para no salpicarles.
+    cites: ["cbr-rijprocedure:3.6"]
+
+  - id: erf-bus-quien
+    type: mc
+    prompt: Un carril tiene escrita la palabra BUS. ¿Quién puede usarlo?
+    options:
+      - Lijnbus, autobus y tranvía
+      - Solo lijnbus
+      - Todos los vehículos de motor
+      - Solo tranvías
+    answer: 0
+    explain: En carriles con BUS pueden ir lijnbus, autobus y tram.
+    cites: ["rvv:81"]
+
+  - id: erf-bus-lijnbus
+    type: mc
+    prompt: Un carril tiene escrita la palabra LIJNBUS. ¿Puede usarlo un autobús turístico?
+    options:
+      - Sí, porque es un autobús
+      - No, solo lijnbus y tranvía
+      - Sí, si lleva pasajeros
+      - Sí, con límite de velocidad
+    answer: 1
+    explain: Con LIJNBUS solo pueden usarlo lijnbus y tram.
+    cites: ["rvv:81"]
+
+  - id: erf-bus-semaforo
+    type: yesno
+    prompt: Usas legalmente un carril de bus y hay un semáforo de tranvía y bus para ese carril. ¿Tienes que obedecerlo?
+    answer: true
+    explain: Los tram/buslichten también valen para otros vehículos que usan una busbaan o busstrook.
+    cites: ["rvv:70.4"]
+
+  - id: erf-senal-f13
+    type: mc
+    prompt: ¿Qué indica esta señal?
+    sign: F13
+    options: [Carril solo para lijnbus, Carril solo para tranvía, Fin del carril de bus, Parada de bus]
+    answer: 0
+    explain: F13 es "rijbaan of -strook uitsluitend ten behoeve van lijnbussen".
+    cites: ["rvv:bijlage1.F13"]
+
+  - id: erf-puente
+    type: mc
+    prompt: Llegas a un puente móvil y ves luz roja o roja intermitente. ¿Qué significa?
+    options: [Precaución, Alto, Puedes pasar despacio, El puente está libre]
+    answer: 1
+    explain: En las luces del puente, rojo o rojo intermitente significa alto.
+    cites: ["rvv:72"]
+
+  - id: erf-senal-j15
+    type: mc
+    prompt: ¿Qué indica esta señal?
+    sign: J15
+    options: [Beweegbare brug (puente móvil), Paso a nivel, Cruce con tranvía, Túnel]
+    answer: 0
+    explain: J15 es "beweegbare brug".
+    cites: ["rvv:bijlage1.J15"]

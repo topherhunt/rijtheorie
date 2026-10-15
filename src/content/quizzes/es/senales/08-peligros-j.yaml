@@ -1,0 +1,188 @@
+questions:
+  - id: j-j2-significado
+    type: mc
+    prompt: ¿Qué avisa esta señal?
+    sign: J2
+    options: ["Curva a la derecha", "Curva a la izquierda", "Curvas en S", "Cruce peligroso"]
+    answer: 0
+    explain: J2 es curva a la derecha. J3 es a la izquierda.
+    cites: ["rvv:bijlage1.J2"]
+
+  - id: j-j4-s
+    type: mc
+    prompt: ¿Qué avisa esta señal?
+    sign: J4
+    options: ["Curvas en S, la primera a la derecha", "Curvas en S, la primera a la izquierda", "Una sola curva a la derecha", "Carretera estrecha"]
+    answer: 0
+    explain: J4 son curvas en S que empiezan hacia la derecha. J5 empieza hacia la izquierda.
+    cites: ["rvv:bijlage1.J4"]
+
+  - id: j-j6-j7
+    type: mc
+    prompt: ¿Qué avisa esta señal?
+    sign: J7
+    options: ["Bajada peligrosa", "Subida pronunciada", "Badén", "Pavimento en mal estado"]
+    answer: 0
+    explain: J7 es "Gevaarlijke daling". J6 es una subida pronunciada.
+    cites: ["rvv:bijlage1.J7"]
+
+  - id: j-j8-significado
+    type: mc
+    prompt: ¿Qué avisa esta señal?
+    sign: J8
+    options: ["Cruce peligroso", "Rotonda", "Fin de la vía con prioridad", "Semáforos"]
+    answer: 0
+    explain: J8 es "Gevaarlijk kruispunt".
+    cites: ["rvv:bijlage1.J8"]
+
+  - id: j-j9-significado
+    type: mc
+    prompt: ¿Qué avisa esta señal?
+    sign: J9
+    options: ["Rotonda", "Cruce peligroso", "Calle sin salida", "Curva cerrada"]
+    answer: 0
+    explain: J9 es "Rotonde". Es un aviso: la orden de circulación la da D1.
+    cites: ["rvv:bijlage1.J9"]
+
+  - id: j-j10-j11
+    type: mc
+    prompt: ¿Qué avisa esta señal?
+    sign: J11
+    options: ["Paso a nivel sin barreras", "Paso a nivel con barreras", "Cruce de tranvía", "Puente móvil"]
+    answer: 0
+    explain: J11 es "Overweg zonder slagbomen". J10 es con barreras.
+    cites: ["rvv:bijlage1.J11"]
+
+  - id: j-j10-significado
+    type: mc
+    prompt: ¿Qué avisa esta señal?
+    sign: J10
+    options: ["Paso a nivel con barreras", "Paso a nivel sin barreras", "Cruce de tranvía", "Puente móvil"]
+    answer: 0
+    explain: J10 es "Overweg met slagbomen".
+    cites: ["rvv:bijlage1.J10"]
+
+  - id: j-j14-tram
+    type: mc
+    prompt: ¿Qué avisa esta señal?
+    sign: J14
+    options: ["Cruce de tranvía", "Paso a nivel de tren", "Carril exclusivo de tranvías", "Parada de tranvía"]
+    answer: 0
+    explain: J14 es "Tram(kruising)", un aviso. La parada es L3.
+    cites: ["rvv:bijlage1.J14"]
+
+  - id: j-j15-puente
+    type: mc
+    prompt: ¿Qué avisa esta señal?
+    sign: J15
+    options: ["Puente móvil", "Muelle", "Estrechamiento", "Paso a nivel"]
+    answer: 0
+    explain: J15 es "Beweegbare brug".
+    cites: ["rvv:bijlage1.J15"]
+
+  - id: j-j16-obras
+    type: mc
+    prompt: ¿Qué avisa esta señal?
+    sign: J16
+    options: ["Obras", "Pavimento en mal estado", "Accidente", "Atasco"]
+    answer: 0
+    explain: J16 es "Werk in uitvoering".
+    cites: ["rvv:bijlage1.J16"]
+
+  - id: j-j17-estrechamiento
+    type: mc
+    prompt: ¿Qué avisa esta señal?
+    sign: J17
+    options: ["Estrechamiento de calzada", "Calle sin salida", "Fin de carril", "Vía de sentido único"]
+    answer: 0
+    explain: J17 es "Rijbaanversmalling".
+    cites: ["rvv:bijlage1.J17"]
+
+  - id: j-j20-derrape
+    type: mc
+    prompt: ¿Qué avisa esta señal?
+    sign: J20
+    options: ["Peligro de derrape", "Gravilla suelta", "Hielo o nieve", "Badén"]
+    answer: 0
+    explain: J20 es "Slipgevaar".
+    cites: ["rvv:bijlage1.J20"]
+
+  - id: j-j21-ninos
+    type: mc
+    prompt: ¿Qué avisa esta señal?
+    sign: J21
+    options: ["Niños", "Peatones", "Paso de peatones", "Ciclistas"]
+    answer: 0
+    explain: J21 es "Kinderen". J22 es la voetgangersoversteekplaats y J23 son peatones.
+    cites: ["rvv:bijlage1.J21"]
+
+  - id: j-j22-significado
+    type: mc
+    prompt: ¿Qué avisa esta señal?
+    sign: J22
+    options: ["Paso de peatones", "Niños", "Peatones en la calzada", "Parada de autobús"]
+    answer: 0
+    explain: J22 es "Voetgangersoversteekplaats".
+    cites: ["rvv:bijlage1.J22"]
+
+  - id: j-j24-ciclistas
+    type: mc
+    prompt: ¿Qué avisa esta señal?
+    sign: J24
+    options: ["Ciclistas y ciclomotoristas", "Carril bici obligatorio", "Prohibido para bicicletas", "Niños"]
+    answer: 0
+    explain: J24 es "Fietsers en bromfietsers", un aviso.
+    cites: ["rvv:bijlage1.J24"]
+
+  - id: j-j29-contrario
+    type: mc
+    prompt: ¿Qué avisa esta señal?
+    sign: J29
+    options: ["Tráfico en sentido contrario", "Sentido único", "Estrechamiento", "Prohibido adelantar"]
+    answer: 0
+    explain: J29 es "Tegenliggers": hay tráfico en ambos sentidos.
+    cites: ["rvv:bijlage1.J29"]
+
+  - id: j-j32-semaforos
+    type: mc
+    prompt: ¿Qué avisa esta señal?
+    sign: J32
+    options: ["Semáforos más adelante", "Cruce peligroso", "Atasco", "Obras"]
+    answer: 0
+    explain: J32 es "Verkeerslichten".
+    cites: ["rvv:bijlage1.J32"]
+
+  - id: j-j33-atasco
+    type: mc
+    prompt: ¿Qué avisa esta señal?
+    sign: J33
+    options: ["Atasco", "Accidente", "Obras", "Mala visibilidad"]
+    answer: 0
+    explain: J33 es "File".
+    cites: ["rvv:bijlage1.J33"]
+
+  - id: j-j38-baden
+    type: mc
+    prompt: ¿Qué avisa esta señal?
+    sign: J38
+    options: ["Badén o reductor de velocidad", "Pavimento en mal estado", "Gravilla suelta", "Estrechamiento"]
+    answer: 0
+    explain: J38 es "Verkeersdrempel".
+    cites: ["rvv:bijlage1.J38"]
+
+  - id: j-j37-onderbord
+    type: yesno
+    prompt: La señal J37 (peligro) lleva debajo un panel. ¿El panel dice de qué peligro se trata?
+    sign: J37
+    answer: true
+    explain: En J37 el tipo de peligro se indica en el onderbord.
+    cites: ["rvv:bijlage1.J37"]
+
+  - id: j-triangulo
+    type: mc
+    prompt: ¿Qué clase de señal es un triángulo con borde rojo?
+    options: ["Un aviso de peligro", "Una prohibición", "Una orden", "Una información de dirección"]
+    answer: 0
+    explain: Los triángulos son señales J: avisan de un peligro.
+    cites: ["rvv:bijlage1.J8"]
+    exam: false

@@ -1,0 +1,80 @@
+questions:
+  - id: rangorde-agente-semaforo
+    type: mc
+    prompt: El semáforo de tu dirección está en verde, pero un agente de policía te hace señal de parar. ¿Qué haces?
+    options: ["Sigues, porque el semáforo está en verde", "Paras, porque la indicación del agente manda sobre el semáforo", "Esperas a que el semáforo cambie a amarillo"]
+    answer: 1
+    explain: Las indicaciones de un agente o de un controlador autorizado van por encima de las señales, los semáforos y las reglas.
+    cites: ["rvv:84"]
+
+  - id: rangorde-agente-rojo
+    type: yesno
+    prompt: El semáforo está en rojo y un agente te hace señal de que avances. ¿Debes seguir al agente?
+    answer: true
+    explain: La indicación del agente manda sobre el semáforo, tanto para parar como para avanzar.
+    cites: ["rvv:84"]
+
+  - id: rangorde-semaforo-b1
+    type: mc
+    prompt: Estás en una vía con prioridad y llegas a un cruce con el semáforo en rojo. ¿Qué haces?
+    sign: B1
+    options: ["Sigues, porque tienes prioridad", "Paras, porque el semáforo manda sobre las señales de prioridad", "Reduces y sigues si no viene nadie"]
+    answer: 1
+    explain: Los semáforos van por encima de las señales que regulan la prioridad. Con luz roja, paras aunque la vía tenga prioridad.
+    cites: ["rvv:64", "rvv:68.1"]
+
+  - id: rangorde-b1-derecha
+    type: yesno
+    prompt: Circulas por una vía con esta señal. En un cruce sin semáforo, un auto viene por tu derecha por una calle lateral. ¿Pasas tú primero?
+    sign: B1
+    answer: true
+    explain: La señal de prioridad manda sobre la regla general de la derecha. En la vía con prioridad, pasas tú.
+    cites: ["rvv:63", "rvv:bijlage1.B1"]
+
+  - id: rangorde-orden-fuerza
+    type: mc
+    prompt: ¿Cuál de estas opciones ordena correctamente, de más fuerte a más débil?
+    options: ["Semáforo, agente, señal, regla general", "Agente, semáforo, señal, regla general", "Agente, señal, semáforo, regla general", "Señal, agente, semáforo, regla general"]
+    answer: 1
+    explain: Agente (art. 84), semáforo sobre las señales de prioridad (art. 64), señal sobre las reglas generales (art. 63).
+    cites: ["rvv:84", "rvv:64", "rvv:63"]
+
+  - id: rangorde-obedecer-prohibicion
+    type: yesno
+    prompt: Una señal con una prohibición, como la de cerrado para todos los vehículos de motor, está en una calle que siempre usas. ¿Estás obligado a obedecerla?
+    sign: C12
+    answer: true
+    explain: Los usuarios de la vía deben obedecer las señales que contienen una orden o una prohibición.
+    cites: ["rvv:62", "rvv:bijlage1.C12"]
+
+  - id: rangorde-marcas-temporales
+    type: mc
+    prompt: En unas obras hay marcas viales temporales en la calzada que contradicen las marcas antiguas. ¿Cuáles sigues?
+    options: ["Las antiguas, porque llevan más tiempo", "Las temporales, porque mandan sobre las otras marcas en lo incompatible", "La que te parezca más segura"]
+    answer: 1
+    explain: Las marcas temporales en la calzada van por encima de las marcas ya existentes, en lo que sean incompatibles.
+    cites: ["rvv:63a"]
+
+  - id: rangorde-regla-vs-senal
+    type: yesno
+    prompt: ¿Puede una señal dejar sin efecto una regla general de tráfico, como la regla de la derecha?
+    answer: true
+    explain: Los verkeerstekens van por encima de las reglas, en lo que sean incompatibles con ellas.
+    cites: ["rvv:63"]
+
+  - id: rangorde-agente-b7
+    type: mc
+    prompt: Tienes una señal de stop en tu vía, pero un controlador de tráfico autorizado te hace gestos de que avances. ¿Qué haces?
+    sign: B7
+    options: ["Paras de todas formas, porque la señal de stop siempre se cumple", "Sigues la indicación del controlador", "Esperas a que el controlador salga del cruce"]
+    answer: 1
+    explain: Las indicaciones de un agente o controlador autorizado van por encima de las señales y las reglas.
+    cites: ["rvv:84", "rvv:bijlage1.B7"]
+
+  - id: rangorde-semaforo-vs-regla
+    type: mc
+    prompt: En un cruce con semáforos, tu luz está en verde y por tu derecha viene otro auto cuyo semáforo está en rojo. ¿Qué haces?
+    options: ["Le cedo el paso, porque siempre se cede a la derecha", "Sigo, porque el semáforo manda sobre la regla de la derecha", "Paro, porque el otro auto es más grande"]
+    answer: 1
+    explain: Los semáforos son verkeerstekens y mandan sobre las reglas generales como la regla de la derecha. Tu luz verde te deja pasar.
+    cites: ["rvv:63", "rvv:68.1"]

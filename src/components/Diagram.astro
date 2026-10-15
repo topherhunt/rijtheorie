@@ -1,0 +1,14 @@
+---
+// MDX wrapper: validates props against diagramSchema at build time, then renders the SVG statically.
+import Junction from './diagram/Junction.tsx';
+import { diagramSchema } from '../lib/schema.ts';
+
+interface Props { caption?: string; [k: string]: unknown }
+const { caption, ...rest } = Astro.props;
+const d = diagramSchema.parse(rest);
+---
+
+<figure class="qa-junction my-6 flex flex-col items-center">
+  <Junction d={d} />
+  {caption && <figcaption class="mt-2 max-w-md text-sm text-slate-600">{caption}</figcaption>}
+</figure>

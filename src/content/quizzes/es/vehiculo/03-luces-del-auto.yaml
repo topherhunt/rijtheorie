@@ -1,0 +1,77 @@
+questions:
+  - id: luces-del-auto-colores
+    type: mc
+    prompt: ¿De qué color pueden ser las luces de freno de un auto?
+    options: [Solo blancas, Rojas o ámbar, Solo azules, Verdes]
+    answer: 1
+    explain: Las luces de freno son rojas o ámbar; la tercera luz de freno debe ser roja.
+    cites: ["rv:5.2.53"]
+
+  - id: luces-del-auto-25
+    type: number
+    prompt: ¿Qué porcentaje máximo de su superficie puede perder una luz hecha de varias fuentes de luz?
+    answer: 25
+    unit: "%"
+    explain: No puede perder más del 25% de su superficie.
+    cites: ["rv:5.2.55"]
+
+  - id: luces-del-auto-trasera
+    type: mc
+    prompt: ¿De qué color es la luz antiniebla trasera?
+    options: [Blanca, Roja, Ámbar, Azul]
+    answer: 1
+    explain: Las luces traseras y la antiniebla trasera son rojas.
+    cites: ["rv:5.2.53"]
+
+  - id: luces-del-auto-matricula
+    type: mc
+    prompt: ¿De qué color es la luz de la matrícula?
+    options: [Roja, Blanca, Ámbar, Verde]
+    answer: 1
+    explain: La luz de la matrícula es blanca.
+    cites: ["rv:5.2.53"]
+
+  - id: luces-del-auto-intermitentes
+    type: multi
+    prompt: ¿De qué colores pueden ser los intermitentes traseros?
+    options: [Ámbar, Rojo, Blanco, Azul]
+    answer: [0, 1]
+    explain: Los intermitentes traseros son ámbar o rojos. Los delanteros, ámbar o blancos.
+    cites: ["rv:5.2.53"]
+
+  - id: luces-del-auto-azul
+    type: yesno
+    prompt: ¿Puedes poner una luz azul intermitente en tu auto particular?
+    answer: false
+    explain: Las luces azules intermitentes solo están permitidas para los servicios autorizados.
+    cites: ["rv:5.2.65"]
+
+  - id: luces-del-auto-deslumbrar
+    type: yesno
+    prompt: Quieres instalar en tu auto unas luces adicionales muy potentes que deslumbran. Aparte de las luces largas, ¿está permitido?
+    answer: false
+    explain: La ley prohíbe luces que deslumbren, con la excepción de las luces largas.
+    cites: ["rv:5.2.64"]
+
+  - id: luces-del-auto-freno
+    type: number
+    prompt: ¿Cuántas luces de freno, además de la tercera luz, debe tener un auto?
+    answer: 2
+    unit: luces
+    explain: Dos luces de freno, más una tercera luz de freno en autos después de 2001.
+    cites: ["rv:5.2.51"]
+
+  - id: luces-del-auto-testigo
+    type: yesno
+    prompt: ¿Debe el auto avisar con una señal en el tablero cuando las luces largas están encendidas (autos de 1997 en adelante)?
+    answer: true
+    explain: Las luces largas encendidas deben señalizarse al conductor con una señal óptica.
+    cites: ["rv:5.2.62"]
+
+  - id: luces-del-auto-marcha
+    type: mc
+    prompt: ¿De qué colores puede ser la luz de marcha atrás?
+    options: [Blanca o amarilla, Roja o ámbar, Solo azul, Solo verde]
+    answer: 0
+    explain: Larga, cruce, posición y marcha atrás son blancas o amarillas.
+    cites: ["rv:5.2.53"]

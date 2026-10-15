@@ -1,0 +1,61 @@
+questions:
+  - id: atascos-carril
+    type: yesno
+    prompt: "Hay una fila y varios carriles en tu sentido. ¿Estás obligado a seguir el carril más a la derecha?"
+    answer: false
+    explain: "En fileverkeer no es obligatorio seguir el carril más a la derecha."
+    cites: ["rvv:13.1"]
+
+  - id: atascos-derecha
+    type: mc
+    prompt: "Una fila está parada en el carril izquierdo y el derecho circula. ¿Puedes pasar la fila por la derecha?"
+    options: [Sí (las filas pueden adelantarse por la derecha), No (solo por la izquierda), Solo si eres ciclista, Solo con permiso]
+    answer: 0
+    explain: "El art. 13 lid 2 permite adelantar filas por la derecha."
+    cites: ["rvv:13.2"]
+
+  - id: atascos-distancia
+    type: mc
+    prompt: "Estás en una fila. ¿Qué distancia con el auto de delante recomienda la Rijprocedure B?"
+    options: [Lo más constante posible, Lo más pegado posible, Variable según la prisa, Ninguna en particular]
+    answer: 0
+    explain: "Durante la marcha en fila se mantiene la distancia lo más constante posible."
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: atascos-luces
+    type: multi
+    prompt: "¿En cuáles de estas situaciones usas las luces de emergencia según la Rijprocedure B?"
+    options: [Cuando se forma una fila y debes frenar de golpe, Cuando paras en un lugar de poca visibilidad, Cuando paras y por oscuridad o clima no te verían a tiempo, Cuando estás estacionado en un lugar permitido sin problemas]
+    answer: [0, 1, 2]
+    explain: "Las luces de emergencia avisan a los que vienen detrás en los tres primeros casos."
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: atascos-cruce
+    type: yesno
+    prompt: "La fila avanza lento y tu salida del cruce está ocupada. ¿Puedes entrar al cruce y quedarte parado en él?"
+    answer: false
+    explain: "Los conductores no pueden bloquear un cruce. Espera antes de entrar."
+    cites: ["rvv:14"]
+
+  - id: atascos-cremallera
+    type: mc
+    prompt: "Un carril se estrecha y los autos del otro carril quieren entrar. ¿Qué pide la Rijprocedure B?"
+    options: [Dejarles espacio (ritsen), Cerrarles el paso, Acelerar para no dejarlos, Pararte en medio]
+    answer: 0
+    explain: "En un estrechamiento se deja espacio a quienes adelantan, intercalándose uno a uno."
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: atascos-quien-cede
+    type: mc
+    prompt: "Según la ley, ¿quién cede el paso al incorporarse de un carril de incorporación a la calzada principal?"
+    options: [Quien se incorpora, Quien está en la calzada principal, El más rápido, El más grande]
+    answer: 0
+    explain: "Quien se incorpora a la calzada principal hace una maniobra especial y deja pasar al resto del tráfico."
+    cites: ["rvv:54"]
+
+  - id: atascos-no-cerrar
+    type: yesno
+    prompt: "Se forma una fila. ¿Es correcto acelerar de forma llamativa para cerrar un hueco que otro conductor quería usar?"
+    answer: false
+    explain: "La Rijprocedure B pide evitar esa conducta, que irrita a otros."
+    cites: ["cbr-rijprocedure:3.2"]

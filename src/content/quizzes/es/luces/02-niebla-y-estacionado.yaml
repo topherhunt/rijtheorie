@@ -1,0 +1,80 @@
+questions:
+  - id: mistachter-distancia
+    type: number
+    prompt: La luz antiniebla trasera solo se permite si la niebla o la nieve reducen la visibilidad a menos de cuántos metros?
+    answer: 50
+    unit: m
+    explain: El límite legal es una visibilidad de menos de 50 metros.
+    cites: ["rvv:34.2"]
+
+  - id: mistachter-lluvia
+    type: yesno
+    prompt: Llueve muy fuerte y casi no ves. ¿Puedes llevar la luz antiniebla trasera?
+    answer: false
+    explain: El artículo 34 lid 2 solo menciona niebla o nieve con menos de 50 m de visibilidad. La lluvia no cuenta.
+    cites: ["rvv:34.2"]
+
+  - id: mistachter-60m
+    type: yesno
+    prompt: Hay niebla y ves a 80 metros. ¿Puedes llevar la antiniebla trasera?
+    answer: false
+    explain: Con 80 m la visibilidad no es de menos de 50 m, así que no está permitida.
+    cites: ["rvv:34.2"]
+
+  - id: mistvoor-lluvia
+    type: yesno
+    prompt: ¿Pueden usarse las antiniebla delanteras cuando la lluvia reduce seriamente la visibilidad?
+    answer: true
+    explain: El artículo 34 lid 1 permite el mistlicht delantero con niebla, nieve o lluvia que reduce seriamente la visibilidad.
+    cites: ["rvv:34.1"]
+
+  - id: mistvoor-dimlicht
+    type: yesno
+    prompt: Con las antiniebla delanteras encendidas por niebla densa, ¿es obligatorio llevar además las luces de cruce?
+    answer: false
+    explain: La ley dice que en ese caso no hace falta llevar dimlicht.
+    cites: ["rvv:34.1"]
+
+  - id: mistvoor-sol
+    type: yesno
+    prompt: Es un día soleado y despejado. ¿Puedes llevar las antiniebla delanteras?
+    answer: false
+    explain: Solo se permiten con niebla, nieve o lluvia que reduzca seriamente la visibilidad.
+    cites: ["rvv:34.1"]
+
+  - id: detenido-luces
+    type: mc
+    prompt: De noche, tu auto está parado en la vluchtstrook de una autosnelweg. ¿Qué luces debe llevar?
+    options: [Ninguna, mejor apagarlo todo, Luces de posición (stadslicht) y luz trasera, Solo luces de carretera, Solo antiniebla traseras]
+    answer: 1
+    explain: Un vehículo de más de dos ruedas parado en la vluchtstrook lleva stadslicht y luz trasera de noche.
+    cites: ["rvv:38"]
+
+  - id: detenido-dia-niebla
+    type: yesno
+    prompt: De día, con niebla densa, tu auto está parado en la calzada fuera de poblado. ¿Debe llevar luces de posición y trasera?
+    answer: true
+    explain: El artículo 38 las exige de noche y de día cuando la visibilidad está seriamente reducida.
+    cites: ["rvv:38"]
+
+  - id: detenido-poblado
+    type: yesno
+    prompt: El artículo 38 trata de vehículos parados fuera de la zona urbana. ¿Es correcto que esta regla se refiere a vehículos de más de dos ruedas?
+    answer: true
+    explain: El texto habla de vehículos de motor de más de dos ruedas parados fuera de la bebouwde kom.
+    cites: ["rvv:38"]
+
+  - id: bici-luces
+    type: multi
+    prompt: Una bicicleta circula de noche. ¿Qué luces debe llevar?
+    options: [Luz blanca o amarilla delante, Luz roja detrás, Luz verde en el manillar, Luz azul detrás]
+    answer: [0, 1]
+    explain: La ley pide luz delantera blanca o amarilla y luz trasera roja.
+    cites: ["rvv:35"]
+
+  - id: remolque-luces
+    type: yesno
+    prompt: De noche, un remolque enganchado debe llevar luz trasera y luz de la matrícula.
+    answer: true
+    explain: El artículo 33 exige luz trasera, luz de la matrícula y las luces de posición prescritas.
+    cites: ["rvv:33"]

@@ -1,0 +1,125 @@
+questions:
+  - id: adelantar-izquierda
+    type: mc
+    prompt: "¿Por qué lado se adelanta en general?"
+    options: [Por la izquierda, Por la derecha, Por el que tenga más espacio, Por el lado del conductor más lento]
+    answer: 0
+    explain: "El art. 11 lid 1 dice que se adelanta por la izquierda. Solo hay excepciones concretas, que se ven en la siguiente lección."
+    cites: ["rvv:11.1"]
+
+  - id: adelantar-obstaculo
+    type: yesno
+    prompt: "Según la Rijprocedure B, ¿se dice que se adelanta un auto estacionado en la calzada?"
+    answer: false
+    explain: "Entre usuarios de la vía se adelanta (inhalen). Un obstáculo, como un auto estacionado, se pasa (voorbijgaan)."
+    cites: ["cbr-rijprocedure:3.5"]
+
+  - id: adelantar-criterios
+    type: multi
+    prompt: "¿Qué debes valorar antes de adelantar según la Rijprocedure B?"
+    options: [La visibilidad de la vía, El espacio disponible por el otro tráfico, Si puedes coger velocidad para que la maniobra sea corta, El color del vehículo que adelantas]
+    answer: [0, 1, 2]
+    explain: "Los criterios incluyen la calzada, la posibilidad de coger velocidad, la visibilidad, el espacio disponible y la velocidad de quien adelantas. El color no importa."
+    cites: ["cbr-rijprocedure:3.5"]
+
+  - id: adelantar-paso-peatones
+    type: yesno
+    prompt: "¿Está permitido adelantar un vehículo justo antes de un paso de peatones?"
+    answer: false
+    explain: "Está prohibido adelantar un vehículo justo antes de un paso de peatones o encima de él."
+    cites: ["rvv:12"]
+
+  - id: adelantar-f1-bici
+    type: yesno
+    prompt: "Ves la señal F1 y delante de ti va un ciclomotor (bromfiets). ¿La señal te prohíbe adelantarlo?"
+    answer: false
+    explain: "La F1 prohíbe adelantarse entre vehículos de motor. En el RVV, los vehículos de motor no incluyen los bromfietsen."
+    cites: ["rvv:bijlage1.F1", "rvv:1"]
+    sign: F1
+
+  - id: adelantar-f1-fin
+    type: mc
+    prompt: "¿Qué señal pone fin a la prohibición de adelantar de la F1?"
+    options: [F2, F3, F4, F5]
+    answer: 0
+    explain: "F2 pone fin a la F1. F4 pone fin a la F3."
+    cites: ["rvv:bijlage1.F2"]
+    sign: F2
+
+  - id: adelantar-f3
+    type: mc
+    prompt: "¿Qué prohíbe esta señal?"
+    options: [A los camiones adelantar vehículos de motor, A los autos adelantar camiones, A todos los vehículos adelantar, Adelantar a una bicicleta]
+    answer: 0
+    explain: "F3 prohíbe a los vrachtauto's adelantar vehículos de motor."
+    cites: ["rvv:bijlage1.F3"]
+    sign: F3
+
+  - id: adelantar-lugares
+    type: multi
+    prompt: "¿Dónde no se adelanta, sobre todo, con un vehículo de más de dos ruedas según la Rijprocedure B?"
+    options: [Cruces con poca visibilidad entre vías de igual categoría sin semáforos, Curvas sin visibilidad (si invades el carril contrario), Pasos a nivel con solo luces intermitentes, Una vía recta con buena visibilidad]
+    answer: [0, 1, 2]
+    explain: "La Rijprocedure B cita cruces sin visibilidad sin semáforos, curvas y pendientes sin visibilidad, y pasos a nivel solo con luces intermitentes. En una vía recta y despejada el adelantamiento puede ser posible."
+    cites: ["cbr-rijprocedure:3.5"]
+
+  - id: adelantar-volver
+    type: mc
+    prompt: "¿Cuándo vuelves a tu carril tras adelantar?"
+    options: [Cuando veas toda la parte delantera del vehículo adelantado en el retrovisor interior, En cuanto lo pases, En cuanto el vehículo adelantado se haga a un lado, Cuando el vehículo adelantado te dé las luces]
+    answer: 0
+    explain: "Solo cuando la parte delantera entera del vehículo adelantado se ve en el retrovisor interior, para no estorbar su paso normal."
+    cites: ["cbr-rijprocedure:3.5"]
+
+  - id: adelantar-avisar
+    type: yesno
+    prompt: "Al adelantar un vehículo de motor, ¿debes avisar con el intermitente?"
+    answer: true
+    explain: "El art. 55 lo exige al adelantar a otros vehículos de motor, y la Rijprocedure B lo repite. Avisa también antes de volver a tu carril."
+    cites: ["rvv:55", "cbr-rijprocedure:3.5"]
+
+  - id: adelantar-velocidad
+    type: mc
+    prompt: "Según la Rijprocedure B, ¿cuándo subes la velocidad para adelantar?"
+    options: [En cuanto exista la posibilidad de adelantar, Cuando ya estás en el otro carril, Después de pasar al otro vehículo, Nunca porque se adelanta a la misma velocidad]
+    answer: 0
+    explain: "Para que la maniobra sea corta, se sube la velocidad en cuanto aparece la posibilidad, sin esperar a haber cambiado de carril."
+    cites: ["cbr-rijprocedure:3.5"]
+
+  - id: adelantar-ceder
+    type: yesno
+    prompt: "Al adelantar entras en la parte de la vía de otro tráfico. ¿Debes dejar pasar a ese tráfico?"
+    answer: true
+    explain: "Sí, y también al tráfico que tú mismo adelantas."
+    cites: ["cbr-rijprocedure:3.5"]
+
+  - id: adelantar-poca-vision
+    type: mc
+    prompt: "Vas a adelantar un vehículo cuyo conductor casi no ve hacia atrás. ¿Qué haces?"
+    options: [Salgo antes de mi carril en una autopista y busco contacto visual en los espejos, Acelero por sorpresa, Me quedo pegado a su parte trasera, Toco la bocina sin parar]
+    answer: 0
+    explain: "Hay que asegurarse de que el conductor te vea: salir antes del carril, dejar más distancia en vías de doble sentido y buscar contacto visual por los espejos."
+    cites: ["cbr-rijprocedure:3.5"]
+
+  - id: adelantar-ciclista
+    type: mc
+    prompt: "Vas a adelantar a un ciclista con poco espacio lateral. ¿Qué diferencia de velocidad conviene?"
+    options: [Una diferencia menor, Una diferencia mayor, Da igual, Debes frenar de golpe]
+    answer: 0
+    explain: "Cuanto menor es el espacio lateral, menor debe ser la diferencia de velocidad. Los vehículos de dos ruedas son menos estables."
+    cites: ["cbr-rijprocedure:3.5"]
+
+  - id: adelantar-puerta
+    type: number
+    prompt: "Al pasar junto a un obstáculo, ¿cuántos anchos de puerta de separación mínima conviene dejar?"
+    answer: 1
+    unit: anchos de puerta
+    explain: "Se deja, siempre que se pueda, una separación mínima de un ancho de puerta (portierbreedte)."
+    cites: ["cbr-rijprocedure:3.5"]
+
+  - id: adelantar-varios-obstaculos
+    type: yesno
+    prompt: "Hay varios autos estacionados con poca distancia entre ellos. ¿Conviene volver a la derecha cada vez en los huecos, aunque no haga falta?"
+    answer: false
+    explain: "No se debe volver sin necesidad a la derecha, salvo que haga falta por el tráfico que viene de frente."
+    cites: ["cbr-rijprocedure:3.5"]

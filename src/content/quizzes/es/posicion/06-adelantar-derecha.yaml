@@ -1,0 +1,90 @@
+questions:
+  - id: derecha-giro-izquierda
+    type: mc
+    prompt: "Delante de ti un auto está preseleccionado a la izquierda con el intermitente izquierdo, para girar. ¿Cómo lo pasas?"
+    options: [Por la derecha, Por la izquierda, Esperando detrás hasta que gire, Tocando la bocina]
+    answer: 0
+    explain: "Quien preselecciona a la izquierda e indica que girará a la izquierda se adelanta por la derecha."
+    cites: ["rvv:11.2"]
+
+  - id: derecha-ciclistas
+    type: yesno
+    prompt: "¿Pueden los ciclistas adelantar a otros conductores por la derecha?"
+    answer: true
+    explain: "Entre sí se adelantan por la izquierda, pero pueden adelantar a otros conductores por la derecha."
+    cites: ["rvv:11.3"]
+
+  - id: derecha-ciclistas-entre-si
+    type: mc
+    prompt: "Un ciclista quiere adelantar a otro ciclista. ¿Por dónde?"
+    options: [Por la izquierda, Por la derecha, Por cualquiera de los dos, No puede]
+    answer: 0
+    explain: "Los ciclistas deben adelantarse entre sí por la izquierda."
+    cites: ["rvv:11.3"]
+
+  - id: derecha-bloques
+    type: mc
+    prompt: "Estás a la derecha de una línea de bloques y otro auto está a la izquierda. ¿Puedes adelantarlo por la derecha?"
+    options: [Sí, Solo si hay atasco, No, Solo con permiso del otro]
+    answer: 0
+    explain: "Quien está a la derecha de una blokmarkering puede adelantar por la derecha a quien está a su izquierda."
+    cites: ["rvv:11.4"]
+
+  - id: derecha-tranvia
+    type: yesno
+    prompt: "¿Se puede adelantar un tranvía por la derecha?"
+    answer: true
+    explain: "El art. 11 lid 5 lo permite."
+    cites: ["rvv:11.5"]
+
+  - id: derecha-fila
+    type: yesno
+    prompt: "Hay una fila de autos en el carril izquierdo y tu carril avanza. ¿Puedes adelantar la fila por la derecha?"
+    answer: true
+    explain: "Las filas pueden adelantarse por la derecha."
+    cites: ["rvv:13.2"]
+
+  - id: derecha-rotonda
+    type: yesno
+    prompt: "Justo antes de una rotonda, ¿puedes adelantar por la derecha?"
+    answer: true
+    explain: "En o justo antes de una rotonda está permitido adelantar por la derecha."
+    cites: ["rvv:48"]
+
+  - id: derecha-rotonda-lado
+    type: yesno
+    prompt: "En una rotonda, ¿puede un auto circular por un lugar distinto del lado derecho de la calzada?"
+    answer: true
+    explain: "El art. 47 lo permite a los conductores de vehículos de motor y a los ciclomotores, en o justo antes de la rotonda."
+    cites: ["rvv:47"]
+
+  - id: derecha-lentos
+    type: yesno
+    prompt: "En una vía con carriles, ¿pueden adelantarse por la derecha los vehículos parados o lentos de otro carril?"
+    answer: true
+    explain: "La Rijprocedure B lo indica así para los carriles de preselección: los vehículos parados o lentos en otro carril se pueden adelantar por la derecha."
+    cites: ["cbr-rijprocedure:3.3"]
+
+  - id: derecha-atencion
+    type: multi
+    prompt: "Al adelantar por la derecha, ¿a quién debes prestar atención extra según la Rijprocedure B?"
+    options: [A conductores que cambian de carril hacia la derecha, A conductores que quieren entrar al carril de salida, A conductores que ya adelantaste por la izquierda y todavía quieren salir, A los peatones en la acera de enfrente]
+    answer: [0, 1, 2]
+    explain: "Los tres casos están en la Rijprocedure B. Los peatones de la acera de enfrente no se citan."
+    cites: ["cbr-rijprocedure:3.5"]
+
+  - id: derecha-incorporacion
+    type: mc
+    prompt: "Acabas de adelantar. A la altura de un carril de incorporación con vehículos entrando, ¿qué haces?"
+    options: [No paso al carril de más a la derecha, Paso al carril más a la derecha, Freno de golpe, Cambio de carril sin avisar]
+    answer: 0
+    explain: "Después de adelantar no hay que ir al carril más a la derecha a la altura de un carril de incorporación con tráfico entrando."
+    cites: ["cbr-rijprocedure:3.5"]
+
+  - id: derecha-hombro
+    type: mc
+    prompt: "Al adelantar por la derecha, ¿qué miras antes de moverte?"
+    options: ['Delante, retrovisor interior, retrovisor exterior derecho y hombro derecho', Solo el retrovisor interior, Solo por encima del hombro izquierdo, Solo hacia delante]
+    answer: 0
+    explain: "Para ir a la derecha: delante, retrovisor interior, retrovisor exterior derecho y hombro derecho."
+    cites: ["cbr-rijprocedure:3.5"]

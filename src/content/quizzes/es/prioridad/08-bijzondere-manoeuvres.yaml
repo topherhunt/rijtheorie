@@ -1,0 +1,104 @@
+questions:
+  - id: bijzondere-manoeuvres-lista
+    type: multi
+    prompt: ¿Cuáles de estas son maniobras especiales según el art. 54?
+    options:
+      - Arrancar desde una parada
+      - Dar marcha atrás
+      - Salir de una uitrit a la vía
+      - Cambiar de carril
+      - Seguir recto por una vía con prioridad
+    answer: [0, 1, 2, 3]
+    explain: El art. 54 cita wegrijden, achteruitrijden, uit een uitrit de weg oprijden y van rijstrook wisselen, entre otros. Seguir recto no es maniobra especial.
+    cites: ["rvv:54"]
+
+  - id: bijzondere-manoeuvres-lista-abierta
+    type: yesno
+    prompt: El art. 54 usa la palabra "zoals" (como): la lista de maniobras especiales son ejemplos, no una lista cerrada.
+    answer: true
+    explain: El texto dice "zoals", así que los casos nombrados son ejemplos.
+    cites: ["rvv:54"]
+
+  - id: bijzondere-manoeuvres-todos
+    type: mc
+    prompt: Haces una maniobra especial. ¿A quién dejas pasar?
+    options: [Al resto del tráfico, Solo al que viene por tu derecha, Solo a los peatones, A nadie si tienes la intermitente puesta]
+    answer: 0
+    explain: Quien realiza una maniobra especial deja pasar al resto del tráfico.
+    cites: ["rvv:54"]
+
+  - id: bijzondere-manoeuvres-arrancar
+    type: yesno
+    prompt: Al arrancar desde el borde de la calzada, ¿debes dejar pasar también al tráfico que viene de frente?
+    answer: true
+    explain: El CBR indica que al arrancar dejas pasar a todo el tráfico, también al que viene de frente.
+    cites: ["rvv:54", "cbr-rijprocedure:3.1"]
+
+  - id: bijzondere-manoeuvres-senal
+    type: mc
+    prompt: Quieres arrancar desde el borde de la calzada con tu auto. ¿Qué debes hacer antes?
+    options: [Avisar con el intermitente, Tocar la bocina, Encender las luces de emergencia, Nada, si no viene nadie]
+    answer: 0
+    explain: Los conductores de motorvehículos deben avisar con el intermitente al arrancar.
+    cites: ["rvv:55"]
+
+  - id: bijzondere-manoeuvres-bromfiets
+    type: yesno
+    prompt: Un ciclomotor (bromfiets) puede avisar al arrancar con el intermitente o con el brazo.
+    answer: true
+    explain: Los bromfietsers pueden usar el intermitente o el brazo; los motorvehículos, el intermitente.
+    cites: ["rvv:55"]
+
+  - id: bijzondere-manoeuvres-uitrit-peaton
+    type: yesno
+    prompt: Sales de una uitrit y un peatón pasa por la acera. ¿Debes dejarlo pasar?
+    answer: true
+    explain: El CBR indica que en uitrit e inrit dejas pasar a todos, también a los peatones.
+    cites: ["rvv:54", "cbr-rijprocedure:3.6"]
+
+  - id: bijzondere-manoeuvres-uitrit-encuentro
+    type: mc
+    prompt: Un auto sale de una uitrit y otro entra a ella al mismo tiempo. ¿Qué dice la ley y qué prefiere el CBR?
+    options:
+      - La ley obliga a ambos a dejarse pasar; el CBR prefiere dejar pasar al que sale
+      - Solo el que sale debe ceder
+      - Solo el que entra debe ceder
+      - Pasa el que está más a la derecha
+    answer: 0
+    explain: Ambos hacen una maniobra especial, así que ambos deben dejar pasar. El CBR prefiere dejar pasar al que sale.
+    cites: ["rvv:54", "cbr-rijprocedure:3.6"]
+
+  - id: bijzondere-manoeuvres-inrit
+    type: yesno
+    prompt: Entrar desde la vía a una inrit es una maniobra especial en la que dejas pasar al resto del tráfico.
+    answer: true
+    explain: El art. 54 cita expresamente entrar de la vía a una inrit.
+    cites: ["rvv:54"]
+
+  - id: bijzondere-manoeuvres-aparcar-uitrit
+    type: yesno
+    prompt: Puedes aparcar justo delante de la entrada o salida de un garaje.
+    answer: false
+    explain: Está prohibido aparcar frente a una inrit o uitrit.
+    cites: ["rvv:24.1.b"]
+
+  - id: bijzondere-manoeuvres-marcha-atras
+    type: yesno
+    prompt: Cuando das marcha atrás, dejas pasar al resto del tráfico.
+    answer: true
+    explain: Achteruitrijden está en la lista del art. 54.
+    cites: ["rvv:54", "cbr-rijprocedure:3.7"]
+
+  - id: bijzondere-manoeuvres-invoegen
+    type: yesno
+    prompt: Al pasar del carril de incorporación a la vía principal, ¿debes dejar pasar al tráfico de la vía principal?
+    answer: true
+    explain: Es una maniobra especial; dejas pasar al resto del tráfico.
+    cites: ["rvv:54"]
+
+  - id: bijzondere-manoeuvres-keren
+    type: yesno
+    prompt: Al dar la vuelta (keren) en una vía, ¿tienes prioridad sobre el tráfico que pasa?
+    answer: false
+    explain: Dar la vuelta es una maniobra especial: dejas pasar a todos.
+    cites: ["rvv:54"]

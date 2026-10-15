@@ -1,0 +1,100 @@
+questions:
+  - id: voorrangsvoertuigen-quien
+    type: multi
+    prompt: ¿Cuáles de estos servicios llevan luz azul y bocina de dos tonos según el art. 29?
+    options:
+      - Policía
+      - Bomberos
+      - Servicios de atención médica urgente
+      - Taxis
+    answer: [0, 1, 2]
+    explain: El art. 29 nombra a la policía, los bomberos, los servicios de atención médica urgente y otros servicios de ayuda designados.
+    cites: ["rvv:29"]
+
+  - id: voorrangsvoertuigen-senales
+    type: mc
+    prompt: ¿Qué señales lleva un vehículo prioritario?
+    options:
+      - Luz azul y bocina de dos tonos
+      - Luz amarilla y bocina simple
+      - Luz roja fija
+      - Luces antiniebla
+    answer: 0
+    explain: El art. 29 habla de luz azul (giratoria, de destellos o intermitente) y bocina de dos tonos.
+    cites: ["rvv:29"]
+
+  - id: voorrangsvoertuigen-dejar
+    type: yesno
+    prompt: Se acerca una ambulancia con luz azul y sirena. ¿Debes dejarla pasar?
+    answer: true
+    explain: Todos los usuarios de la vía deben dejar pasar a un vehículo prioritario.
+    cites: ["rvv:50"]
+
+  - id: voorrangsvoertuigen-ambulancia-izquierda
+    type: mc
+    prompt: Una ambulancia con luz azul y sirena viene por tu izquierda. ¿Quién pasa primero?
+    diagram:
+      arms: { n: {}, e: {}, s: {}, w: {} }
+      vehicles:
+        - { label: A, kind: car, from: s, to: straight, you: true }
+        - { label: B, kind: ambulance, from: w, to: straight, siren: true }
+      alt: Cruce sin señales. Tú (A) vienes del sur y sigues recto. Una ambulancia (B) con luz azul y sirena viene del oeste, por tu izquierda, y sigue recto.
+    options: [Tú (A), La ambulancia B]
+    answer: 1
+    explain: Debes dejar pasar a un vehículo prioritario aunque no venga por tu derecha.
+    cites: ["rvv:50"]
+
+  - id: voorrangsvoertuigen-policia-frente
+    type: mc
+    prompt: Giras a la izquierda y un auto de policía con luz azul y sirena viene de frente. ¿Quién pasa primero?
+    diagram:
+      arms: { n: {}, e: {}, s: {}, w: {} }
+      vehicles:
+        - { label: A, kind: car, from: s, to: left, you: true }
+        - { label: B, kind: police, from: n, to: straight, siren: true }
+      alt: Cruce sin señales. Tú (A) vienes del sur y giras a la izquierda. Un auto de policía (B) con luz azul y sirena viene de frente, del norte, y sigue recto.
+    options: [Tú (A), El auto de policía B]
+    answer: 1
+    explain: Dejas pasar tanto por el art. 18 (giras a la izquierda) como por el art. 50 (vehículo prioritario).
+    cites: ["rvv:50", "rvv:18.1"]
+
+  - id: voorrangsvoertuigen-prioridad-tuya
+    type: yesno
+    prompt: Estás en una vía con prioridad y se acerca una ambulancia con sirena desde una vía lateral. ¿Debes dejarla pasar?
+    answer: true
+    explain: El art. 50 no depende de quién tenga la prioridad en el cruce.
+    cites: ["rvv:50"]
+
+  - id: voorrangsvoertuigen-weggebruikers
+    type: yesno
+    prompt: La obligación de dejar pasar a un vehículo prioritario solo vale para quienes conducen autos.
+    answer: false
+    explain: La ley dice weggebruikers, es decir, todos los usuarios de la vía, incluidos ciclistas y peatones.
+    cites: ["rvv:50"]
+
+  - id: voorrangsvoertuigen-desviarse
+    type: yesno
+    prompt: El conductor de un vehículo prioritario puede desviarse de las reglas de tráfico en la medida en que su tarea lo exija.
+    answer: true
+    explain: Es lo que dice el art. 91.
+    cites: ["rvv:91"]
+
+  - id: voorrangsvoertuigen-tu-regla
+    type: yesno
+    prompt: Como un vehículo prioritario puede desviarse de las reglas, tú también puedes saltarte un semáforo en rojo para hacerle sitio.
+    answer: false
+    explain: El art. 91 vale para el conductor del vehículo prioritario, no para ti. Debes buscar una forma segura y legal de dejarlo pasar.
+    cites: ["rvv:91", "rvv:50"]
+    exam: false
+
+  - id: voorrangsvoertuigen-definicion
+    type: mc
+    prompt: ¿Cuándo un vehículo es un voorrangsvoertuig según la ley?
+    options:
+      - Cuando lleva las señales luminosas y sonoras del art. 29
+      - Cuando es de color blanco o rojo
+      - Cuando es más grande que un auto
+      - Cuando va a más de 100 km/h
+    answer: 0
+    explain: La definición del art. 1 se basa en las señales del art. 29.
+    cites: ["rvv:1", "rvv:29"]

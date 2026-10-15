@@ -1,0 +1,133 @@
+questions:
+  - id: uitvoegen-maniobra
+    type: yesno
+    prompt: Pasar de la calzada principal al uitrijstrook, ¿es una maniobra especial en la que cedes el paso al otro tráfico?
+    answer: true
+    explain: La ley incluye entre las maniobras especiales pasar de la doorgaande rijbaan al uitrijstrook.
+    cites: ["rvv:54"]
+
+  - id: uitvoegen-intermitente-ley
+    type: yesno
+    prompt: ¿La ley obliga a usar el intermitente al dejar la calzada principal?
+    answer: true
+    explain: Los conductores de vehículos de motor deben señalizar al subir a la doorgaande rijbaan y al dejarla.
+    cites: ["rvv:55"]
+
+  - id: uitvoegen-flechas
+    type: mc
+    prompt: Sales por un uitrijstrook y ves flechas en el pavimento. ¿Qué debes hacer?
+    options:
+      - Ignorarlas, son solo orientativas
+      - Seguir la dirección que indican las flechas
+      - Ir siempre recto
+      - Cambiar de carril cuando quieras
+    answer: 1
+    explain: Quien deja la calzada principal por un uitrijstrook debe seguir la dirección de las flechas al llegar a ellas.
+    cites: ["rvv:78.2"]
+
+  - id: uitvoegen-distancias
+    type: mc
+    prompt: Según el procedimiento recomendado, ¿cuándo te colocas en el carril junto al uitrijstrook y cuándo pones el intermitente?
+    options:
+      - "Carril: unos 300 m antes. Intermitente: unos 600 m antes."
+      - "Carril: unos 600 m antes. Intermitente: unos 300 m antes."
+      - Ambos, justo al ver la salida.
+      - Ambos, unos 100 m antes.
+    answer: 1
+    explain: Colócate con tiempo, unos 600 m antes, y pon el intermitente unos 300 m antes de la salida.
+    cites: ["cbr-rijprocedure:3.4"]
+
+  - id: uitvoegen-hombro
+    type: mc
+    prompt: Antes de entrar al uitrijstrook, ¿por encima de qué hombro miras?
+    options: [El izquierdo, El derecho, Ninguno, Los dos a la vez]
+    answer: 1
+    explain: La salida está a la derecha, así que miras por el espejo interior, el exterior derecho y por encima del hombro derecho.
+    cites: ["cbr-rijprocedure:3.4"]
+
+  - id: uitvoegen-inicio
+    type: mc
+    prompt: ¿En qué parte del uitrijstrook debes salir de la calzada principal?
+    options: [Al final del carril, En el medio, Al inicio, Da igual]
+    answer: 2
+    explain: Debes salir al inicio del uitrijstrook, en una línea suave.
+    cites: ["cbr-rijprocedure:3.4"]
+
+  - id: uitvoegen-frenar
+    type: mc
+    prompt: ¿Dónde reduces normalmente la velocidad al salir de la autopista?
+    options:
+      - En la calzada principal, antes de poner el intermitente
+      - En el uitrijstrook
+      - En la vluchtstrook
+      - Solo en el semáforo al final
+    answer: 1
+    explain: Normalmente solo se reduce en el uitrijstrook, para no molestar al tráfico que sigue. Frenar en la calzada principal es excepcional y de forma gradual.
+    cites: ["cbr-rijprocedure:3.4"]
+
+  - id: uitvoegen-vluchtstrook
+    type: yesno
+    prompt: Ves tu salida y tienes la vluchtstrook libre a la derecha. ¿Puedes usarla para llegar al uitrijstrook?
+    answer: false
+    explain: La vluchtstrook solo se usa en emergencias, y el procedimiento dice expresamente que no se usa para llegar al uitrijstrook.
+    cites: ["rvv:43.3", "cbr-rijprocedure:3.4"]
+
+  - id: uitvoegen-apagar
+    type: mc
+    prompt: ¿Cuándo apagas el intermitente al salir?
+    options:
+      - Cuando ya estás en la calle a donde llegas
+      - Donde el carril se separa de la calzada principal (en carriles largos, antes)
+      - Antes de empezar la salida
+      - Cuando termina el uitrijstrook
+    answer: 1
+    explain: El procedimiento dice apagarlo donde el carril de salida se separa de la calzada principal, o antes en carriles largos.
+    cites: ["cbr-rijprocedure:3.4"]
+
+  - id: uitvoegen-weefvak-ley
+    type: mc
+    prompt: En un weefvak, ¿quién tiene la obligación legal de dejar pasar al otro tráfico?
+    options:
+      - Solo el que se incorpora
+      - Solo el que sale
+      - Los dos, el que se incorpora y el que sale
+      - Ninguno; se entra en orden
+    answer: 2
+    explain: Entrar y salir son maniobras especiales, así que la ley obliga a los dos a dejar pasar al otro tráfico.
+    cites: ["rvv:54"]
+
+  - id: uitvoegen-weefvak-practica
+    type: mc
+    prompt: En un weefvak, según el punto de partida del procedimiento práctico, ¿quién deja pasar primero?
+    options:
+      - El que sale deja pasar al que se incorpora
+      - El que se incorpora deja salir primero al que sale
+      - El de más velocidad
+      - El de la derecha
+    answer: 1
+    explain: "Es el punto de partida del procedimiento: quien se incorpora deja salir primero. La ley en sí obliga a los dos."
+    cites: ["cbr-rijprocedure:3.4"]
+
+  - id: uitvoegen-weefvak-corto
+    type: mc
+    prompt: El weefvak es corto y vas a incorporarte. ¿Qué recomienda el procedimiento?
+    options:
+      - Esperar al final del tramo
+      - Incorporarte lo antes posible para dejar espacio a quienes salen
+      - Adelantar a los autos que salen
+      - Frenar hasta parar
+    answer: 1
+    explain: En un tramo corto, incorpórate pronto para dejar espacio a quienes salen. Tampoco adelantes sin necesidad.
+    cites: ["cbr-rijprocedure:3.4"]
+
+  - id: uitvoegen-weefvak-no-incorporas
+    type: mc
+    prompt: Vas por el carril combinado de un weefvak y no te vas a incorporar a la calzada principal. ¿Qué recomienda el procedimiento?
+    options:
+      - Nada especial
+      - Poner el intermitente derecho poco antes de que el carril se junte con la calzada principal y mirar como si te fueras a incorporar
+      - Acelerar siempre
+      - Cambiar de carril a la izquierda sin avisar
+    answer: 1
+    explain: Si no te incorporas, señaliza a la derecha poco antes de que el carril se junte con la calzada principal y mira como si te incorporaras.
+    cites: ["cbr-rijprocedure:3.4"]

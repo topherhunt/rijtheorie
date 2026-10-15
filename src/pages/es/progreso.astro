@@ -1,0 +1,15 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProgressIsland from '../../components/ProgressIsland.tsx';
+import { lessons } from '../../lib/lessons.ts';
+import { allQuestions } from '../../lib/questions.ts';
+import { href } from '../../config.ts';
+
+const lessonCount = (await lessons('es')).length;
+const questionIds = (await allQuestions()).map((q) => q.id);
+---
+
+<Layout title="Mi progreso">
+  <h1 class="mb-6 text-3xl font-bold">Mi progreso</h1>
+  <ProgressIsland client:load lessonCount={lessonCount} questionIds={questionIds} examHref={href('es/examen/')} />
+</Layout>

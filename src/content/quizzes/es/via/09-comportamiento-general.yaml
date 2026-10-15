@@ -1,0 +1,59 @@
+questions:
+  - id: general-peligro
+    type: mc
+    prompt: ¿A quién se aplica la prohibición de comportarse de manera que cause peligro en la vía?
+    options: [Solo a los conductores de auto, A todos, Solo a quienes tienen permiso, Solo a los peatones]
+    answer: 1
+    explain: El art. 5 WVW prohíbe a todos comportarse de manera que se cause o pueda causarse peligro, o que el tráfico sea obstaculizado.
+    cites: ["wvw:5"]
+
+  - id: general-posible
+    type: yesno
+    prompt: Un comportamiento que PUEDE causar peligro, aunque no pase nada, ¿está prohibido por el art. 5 WVW?
+    answer: true
+    explain: La regla dice "se cause o pueda causarse". El peligro posible también cuenta.
+    cites: ["wvw:5"]
+
+  - id: general-obstaculizar
+    type: yesno
+    prompt: ¿Prohíbe el art. 5 WVW solo el peligro, y no el obstaculizar el tráfico?
+    answer: false
+    explain: Prohíbe tanto causar peligro como obstaculizar el tráfico (o poder obstaculizarlo).
+    cites: ["wvw:5"]
+
+  - id: general-culpa
+    type: multi
+    prompt: ¿Qué consecuencias de un accidente culpable cubre el art. 6 WVW?
+    options: [Muerte de otro, Lesiones graves, Lesiones que causan enfermedad temporal o impiden las actividades normales, Rayones en la pintura]
+    answer: [0, 1, 2]
+    explain: El art. 6 se refiere a muerte, lesiones graves y lesiones con enfermedad temporal o impedimento de las actividades normales.
+    cites: ["wvw:6"]
+
+  - id: general-huir
+    type: yesno
+    prompt: Chocas con otro auto y le haces daños. ¿Puedes irte sin más porque no hay heridos?
+    answer: false
+    explain: No puedes abandonar el lugar si causaste daños a otro, salvo que hayas dado oportunidad adecuada de establecer tu identidad y la del vehículo.
+    cites: ["wvw:7.1", "wvw:7.2"]
+
+  - id: general-identidad
+    type: mc
+    prompt: Causaste daños a otro vehículo. ¿Qué te permite irte legalmente del lugar?
+    options: ["Nada: nunca puedes irte", Haber dado oportunidad adecuada de establecer tu identidad y la de tu vehículo, Haberte disculpado, Que el otro conductor no haya llegado]
+    answer: 1
+    explain: Según el art. 7.2, no se aplica la prohibición a quien dio oportunidad adecuada de establecer su identidad y la del vehículo de motor.
+    cites: ["wvw:7.2"]
+
+  - id: general-herido
+    type: yesno
+    prompt: Un herido queda desamparado si te vas. ¿Te libra la excepción de haber dado tus datos?
+    answer: false
+    explain: La excepción del 7.2 no cubre la prohibición de dejar a un herido en estado de desamparo.
+    cites: ["wvw:7.1", "wvw:7.2"]
+
+  - id: general-sabiendo
+    type: yesno
+    prompt: ¿Aplica la prohibición de abandonar el lugar solo si estás seguro de que hubo daños o heridos?
+    answer: false
+    explain: Se aplica si lo sabes o debieras sospecharlo razonablemente.
+    cites: ["wvw:7.1"]

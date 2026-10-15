@@ -1,0 +1,71 @@
+---
+title: Paso de peatones
+summary: Cuándo debes dejar pasar a los peatones en un paso de cebra y a las personas que se mueven con dificultad.
+cbrTopics: [voorrang]
+---
+
+## Peatones en el paso de cebra
+
+<Sign code="L2" />
+
+El paso de peatones (<T id="voetgangersoversteekplaats" />, en el habla diaria <T id="zebrapad" />) es el lugar donde los peatones sí tienen que ser dejados pasar.
+
+<Rule cite="rvv:49.2" title="Peatones en el paso">
+Debes dejar pasar (<T id="voor-laten-gaan" />) a los peatones y a los conductores de un vehículo para personas con discapacidad (<T id="gehandicaptenvoertuig" />) que cruzan por un paso de peatones o están **a punto de cruzar** (*kennelijk op het punt staan*).
+</Rule>
+
+<Junction
+  arms={{ n: {}, e: {}, s: { sign: 'L2' }, w: {} }}
+  vehicles={[
+    { label: 'P', kind: 'pedestrian', from: 's', pos: 0 },
+    { label: 'A', kind: 'car', from: 's', to: 'straight', pos: 1, you: true },
+  ]}
+  alt="Cruce. Un peatón (P) está en el paso de peatones de la entrada sur, a punto de cruzar. Tú (A) vienes del sur, detrás del peatón, y sigues recto."
+  caption="Un peatón espera para cruzar por el paso: lo dejas pasar."
+/>
+
+<Check id="zebrapad-peaton-espera" />
+
+<Rule cite="cbr-rijprocedure:3.6" title="Acercarse al paso">
+Acércate con cuidado y a velocidad moderada. Los peatones que esperan junto al paso cuentan como "a punto de cruzar".
+</Rule>
+
+<Check id="zebrapad-acercarse" />
+
+## Personas que necesitan más tiempo
+
+<Rule cite="rvv:49.1" title="Ciegos y personas con dificultad">
+Debes dejar pasar a las personas ciegas (con un bastón blanco con uno o más anillos rojos) y a todas las personas que se mueven con dificultad. Esto vale en cualquier lugar, no solo en el paso de peatones.
+</Rule>
+
+<Check id="zebrapad-ciego" />
+
+## Cuándo no tienes que dejar pasar
+
+<Rule cite="rvv:49.4, rvv:74.2" title="Semáforo peatonal">
+Si para los peatones hay una luz roja de peatones o una luz amarilla intermitente, no tienes la obligación del art. 49.2. Con luz amarilla intermitente, los peatones pueden cruzar si dejan pasar al resto del tráfico.
+</Rule>
+
+<Warn>
+Aunque con la luz amarilla intermitente el peatón deba dejarte pasar, el CBR indica que debes seguir teniéndolo en cuenta.
+</Warn>
+
+<Rule cite="rvv:49.3" title="Columna militar y cortejo fúnebre">
+Los conductores de un motorvehículo que forma parte de una columna militar o de un cortejo fúnebre de vehículos no están obligados a dejar pasar a los peatones del paso de peatones.
+</Rule>
+
+<Check id="zebrapad-semaforo" />
+
+## Adelantar y estacionar
+
+<Rule cite="rvv:12, rvv:23.1.c" title="Adelantar y parar">
+Está prohibido adelantar un vehículo justo antes de un paso de peatones o sobre él. Tampoco puedes dejar tu vehículo parado en un paso de peatones ni a menos de cinco metros de él.
+</Rule>
+
+<Check id="zebrapad-adelantar" />
+
+<Check id="zebrapad-cinco-metros" />
+
+Si hay un vehículo detenido delante del paso por otro motivo, el CBR pide pasar con muchísimo cuidado, porque puede tapar a un peatón que cruza.
+
+<Check id="zebrapad-vehiculo-detenido" />

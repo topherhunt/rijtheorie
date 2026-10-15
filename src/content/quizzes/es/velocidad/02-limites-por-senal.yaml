@@ -1,0 +1,88 @@
+questions:
+  - id: senal-a1
+    type: mc
+    prompt: "¿Qué significa esta señal?"
+    options: [Velocidad máxima, Velocidad mínima, Velocidad recomendada, Fin de la velocidad máxima]
+    answer: 0
+    explain: "A1 es la maximumsnelheid."
+    cites: ["rvv:bijlage1.A1"]
+    sign: A1
+
+  - id: senal-a2
+    type: mc
+    prompt: "¿Qué significa esta señal?"
+    options: [Fin de la velocidad máxima, Velocidad máxima, Fin de la velocidad recomendada, Fin de la zona urbana]
+    answer: 0
+    explain: "A2 es el final de la maximumsnelheid."
+    cites: ["rvv:bijlage1.A2"]
+    sign: A2
+
+  - id: senal-a4
+    type: mc
+    prompt: "¿Qué significa esta señal?"
+    options: [Velocidad recomendada, Velocidad máxima, Velocidad mínima, Fin de la velocidad máxima]
+    answer: 0
+    explain: "A4 es la adviessnelheid, una recomendación."
+    cites: ["rvv:bijlage1.A4"]
+    sign: A4
+
+  - id: senal-a5
+    type: mc
+    prompt: "¿Qué significa esta señal?"
+    options: [Fin de la velocidad recomendada, Fin de la velocidad máxima, Comienzo de zona, Velocidad máxima electrónica]
+    answer: 0
+    explain: "A5 es el fin de la adviessnelheid."
+    cites: ["rvv:bijlage1.A5"]
+    sign: A5
+
+  - id: senal-recomendada-obligatoria
+    type: yesno
+    prompt: "La señal A4 indica una velocidad recomendada. ¿Es un máximo que debes cumplir como una A1?"
+    answer: false
+    explain: "A4 es una recomendación (adviessnelheid). El máximo lo da la A1."
+    cites: ["rvv:bijlage1.A4"]
+
+  - id: senal-zona
+    type: yesno
+    prompt: "Una señal A1 con la palabra zone encima y sin otra indicación del área, ¿vale hasta la señal de fin de zona?"
+    answer: true
+    explain: "Sin indicación del área, la señal vale en el área limitada por ella y las señales de fin de zona colocadas con ella."
+    cites: ["rvv:66.2"]
+
+  - id: senal-zona-area
+    type: yesno
+    prompt: "Sobre una señal está la palabra zone con una indicación del área. ¿Vale la señal en ese área?"
+    answer: true
+    explain: "Con indicación del área, la señal vale en el área indicada."
+    cites: ["rvv:66.1"]
+
+  - id: senal-carril
+    type: yesno
+    prompt: "En una vía dividida en carriles, ¿puede una señal de velocidad valer solo para un carril?"
+    answer: true
+    explain: "La aplicación de una señal puede limitarse a uno o varios carriles."
+    cites: ["rvv:65.1"]
+
+  - id: senal-onderbord
+    type: mc
+    prompt: "Bajo una señal hay un onderbord con la palabra uitgezonderd y el símbolo de bicicleta. ¿Qué significa?"
+    options: [La señal no vale para ciclistas, La señal vale solo para ciclistas, La señal vale para todos, La señal está rota]
+    answer: 0
+    explain: "Uitgezonderd con símbolos: la señal no vale para los usuarios o conductas indicados."
+    cites: ["rvv:67.1"]
+
+  - id: senal-a3
+    type: mc
+    prompt: "Sobre tu carril hay un panel con un número en un círculo rojo. ¿Qué significa?"
+    options: [Velocidad máxima y el carril puede usarse, Velocidad mínima, Carril cerrado, Fin del atasco]
+    answer: 0
+    explain: "A3 es una velocidad máxima en un panel electrónico. El carril puede usarse."
+    cites: ["rvv:bijlage1.A3", "rvv:73"]
+    sign: A3
+
+  - id: senal-zona-fin
+    type: yesno
+    prompt: "Entras en una zona de velocidad máxima (señal A1 con la palabra zone, sin indicación del área). ¿Termina la zona al llegar a la señal de fin de zona?"
+    answer: true
+    explain: "La señal vale en el área limitada por ella y por las señales de fin de zona colocadas con ella."
+    cites: ["rvv:66.2"]

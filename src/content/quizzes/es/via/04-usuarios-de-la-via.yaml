@@ -1,0 +1,60 @@
+questions:
+  - id: usuarios-bestuurder-fietser
+    type: yesno
+    prompt: Para el RVV, ¿un ciclista es un bestuurder?
+    answer: true
+    explain: Bestuurders son todos los usuarios de la vía excepto los peatones. El ciclista es un usuario de la vía que no es peatón.
+    cites: ["rvv:1"]
+
+  - id: usuarios-bestuurder-peaton
+    type: yesno
+    prompt: Un peatón, ¿es un bestuurder?
+    answer: false
+    explain: La definición de bestuurder excluye a los peatones.
+    cites: ["rvv:1"]
+
+  - id: usuarios-quien-es-bestuurder
+    type: multi
+    prompt: ¿Cuáles de estos usuarios son bestuurders?
+    options: [Un ciclista, Un jinete, Un conductor de auto, Un peatón]
+    answer: [0, 1, 2]
+    explain: Todos los usuarios excepto los peatones son bestuurders.
+    cites: ["rvv:1"]
+
+  - id: usuarios-weggebruikers
+    type: mc
+    prompt: ¿Quiénes son weggebruikers?
+    options: [Solo los conductores de autos, Solo los peatones, Todos los que participan en el tráfico (también peatones y ciclistas), Solo quienes tienen permiso de conducir]
+    answer: 2
+    explain: El verkeer son todos los weggebruikers, y entre ellos están los peatones, ciclistas, jinetes y conductores de vehículos.
+    cites: ["rvv:1"]
+
+  - id: usuarios-a-mano
+    type: yesno
+    prompt: Llevas tu bicicleta a mano por la acera. ¿Se te aplican las reglas de peatón?
+    answer: true
+    explain: Las reglas de peatones también valen para quien lleva a mano una motocicleta, bromfiets o bicicleta.
+    cites: ["rvv:2.2"]
+
+  - id: usuarios-patines
+    type: mc
+    prompt: Te mueves con patines en línea. ¿Qué reglas te aplican como regla general?
+    options: [Las de los conductores de autos, Las de los peatones, Ninguna, Las de los ciclomotores]
+    answer: 1
+    explain: Las personas que se mueven con objetos que no son vehículos (como patines) siguen las reglas de peatones.
+    cites: ["rvv:2.2"]
+
+  - id: usuarios-gehandicapten
+    type: yesno
+    prompt: Un conductor de gehandicaptenvoertuig que va por el voetpad, ¿sigue las reglas de peatones?
+    answer: true
+    explain: Las reglas de peatones también valen para el conductor de un gehandicaptenvoertuig cuando usa un voetpad o trottoir.
+    cites: ["rvv:2.1"]
+
+  - id: usuarios-columna
+    type: mc
+    prompt: Un cortejo fúnebre de peatones que sigue la calzada, ¿qué reglas sigue?
+    options: [Las de un peatón suelto, Las de las wagens, Ninguna, Las de los ciclistas]
+    answer: 1
+    explain: Las columnas, desfiles y cortejos fúnebres de peatones que siguen la rijbaan se tratan como wagens.
+    cites: ["rvv:2.3"]

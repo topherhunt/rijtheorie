@@ -1,0 +1,69 @@
+questions:
+  - id: carriles-rijstrook
+    type: mc
+    prompt: ¿Qué es una "rijstrook" para el RVV?
+    options: [Cualquier franja de la vía, Parte de la calzada marcada con líneas y suficientemente ancha para vehículos de motor de más de dos ruedas, Una franja solo para bicicletas, El borde de la berma]
+    answer: 1
+    explain: Rijstrook es la parte de la calzada marcada con líneas continuas o discontinuas, suficientemente ancha para vehículos de motor de más de dos ruedas.
+    cites: ["rvv:1"]
+
+  - id: carriles-invoeg
+    type: mc
+    prompt: ¿Qué separa una invoegstrook de la doorgaande rijbaan?
+    options: [Una valla, Una blokmarkering, Un semáforo, Nada, no están separadas]
+    answer: 1
+    explain: Los carriles de incorporación y de salida están separados de la doorgaande rijbaan por una blokmarkering.
+    cites: ["rvv:1"]
+
+  - id: carriles-doorgaande
+    type: yesno
+    prompt: ¿La doorgaande rijbaan incluye los carriles de incorporación y de salida?
+    answer: false
+    explain: La doorgaande rijbaan es la calzada sin las invoegstroken y uitrijstroken.
+    cites: ["rvv:1"]
+
+  - id: carriles-bus
+    type: multi
+    prompt: ¿Cuáles de estas afirmaciones sobre busbaan y busstrook son correctas?
+    options: [Ambas llevan la palabra BUS o LIJNBUS, La busbaan es una calzada y la busstrook es una parte de una calzada, La busstrook es una calzada separada, Ninguna lleva texto]
+    answer: [0, 1]
+    explain: Las dos se identifican con BUS o LIJNBUS. La busbaan es una calzada; la busstrook es una parte marcada de una calzada.
+    cites: ["rvv:1"]
+
+  - id: carriles-vlucht
+    type: mc
+    prompt: ¿Para qué sirve una vluchtstrook?
+    options: [Para adelantar, Para emergencias, Para estacionar siempre, Para ciclistas]
+    answer: 1
+    explain: Es una franja separada por línea continua y destinada a emergencias, salvo cuando está abierta como spitsstrook.
+    cites: ["rvv:1"]
+
+  - id: carriles-spits
+    type: mc
+    prompt: ¿Qué señal designa una vluchtstrook como spitsstrook?
+    sign: C23-01
+    options: [C23-01, G7, H1, C16]
+    answer: 0
+    explain: La spitsstrook es una vluchtstrook que la señal C23-01 designa como carril de circulación.
+    cites: ["rvv:1"]
+
+  - id: carriles-estrechos
+    type: yesno
+    prompt: Una franja de 1 metro de ancho, marcada con líneas, ¿es siempre una rijstrook?
+    answer: false
+    explain: La rijstrook debe ser suficientemente ancha para vehículos de motor de más de dos ruedas.
+    cites: ["rvv:1"]
+
+  - id: carriles-bus-bus
+    type: yesno
+    prompt: Una calzada con la palabra BUS pintada, reservada para autobuses, ¿es una busbaan?
+    answer: true
+    explain: Busbaan es la calzada con la palabra BUS o LIJNBUS.
+    cites: ["rvv:1"]
+
+  - id: carriles-emergencia-abierta
+    type: yesno
+    prompt: Una spitsstrook abierta con la señal C23-01, ¿sigue siendo solo para emergencias?
+    answer: false
+    explain: La definición de vluchtstrook dice "excepto mientras está abierta como spitsstrook".
+    cites: ["rvv:1"]

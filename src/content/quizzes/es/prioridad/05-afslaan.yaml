@@ -1,0 +1,123 @@
+questions:
+  - id: afslaan-senalizar
+    type: yesno
+    prompt: Debes avisar con el intermitente (o el brazo) antes de girar.
+    answer: true
+    explain: El art. 17.2 obliga a señalizar antes de girar.
+    cites: ["rvv:17.2"]
+
+  - id: afslaan-preseleccionar-derecha
+    type: mc
+    prompt: Vas a girar a la derecha. ¿Dónde puedes colocarte antes de girar?
+    options: [Lo más a la derecha posible, En el centro de la vía, Lo más a la izquierda, Da igual]
+    answer: 0
+    explain: Para girar a la derecha puedes preseleccionar lo más a la derecha posible.
+    cites: ["rvv:17.1"]
+
+  - id: afslaan-preseleccionar-izquierda
+    type: mc
+    prompt: Vas a girar a la izquierda en una vía de doble sentido. ¿Dónde puedes colocarte antes de girar?
+    options: [Junto al eje de la vía, Lo más a la derecha, Fuera de la calzada, Sobre el eje contrario]
+    answer: 0
+    explain: Para girar a la izquierda puedes colocarte junto al eje (tegen de wegas). En una vía de un solo sentido, a la izquierda.
+    cites: ["rvv:17.1"]
+
+  - id: afslaan-izquierda-frente
+    type: mc
+    prompt: Giras a la izquierda. B viene de frente y sigue recto. ¿Quién pasa primero?
+    diagram:
+      arms: { n: {}, e: {}, s: {}, w: {} }
+      vehicles:
+        - { label: A, kind: car, from: s, to: left, you: true }
+        - { label: B, kind: car, from: n, to: straight }
+      alt: Cruce sin señales. Tú (A) vienes del sur y giras a la izquierda hacia el oeste. B viene del norte, de frente, y sigue recto.
+    options: [Tú (A), El auto B]
+    answer: 1
+    explain: Quien gira debe dejar pasar al tráfico que viene de frente por la misma vía.
+    cites: ["rvv:18.1"]
+
+  - id: afslaan-b1-izquierda
+    type: mc
+    prompt: Estás en una vía con prioridad (B1) y giras a la izquierda. B viene de frente y sigue recto. ¿Quién pasa primero?
+    sign: B1
+    diagram:
+      arms: { n: { sign: B1 }, e: {}, s: { sign: B1 }, w: {} }
+      vehicles:
+        - { label: A, kind: car, from: s, to: left, you: true }
+        - { label: B, kind: car, from: n, to: straight }
+      alt: Cruce en una vía con prioridad B1. Tú (A) vienes del sur y giras a la izquierda. B viene del norte, de frente, y sigue recto.
+    options: [Tú (A), El auto B]
+    answer: 1
+    explain: La prioridad de la vía no te libera del deber de quien gira. Dejas pasar al tráfico de frente.
+    cites: ["rvv:18.1"]
+
+  - id: afslaan-izq-der
+    type: mc
+    prompt: Tú giras a la izquierda y B, que viene de frente, gira a su derecha en el mismo cruce. ¿Quién pasa primero?
+    diagram:
+      arms: { n: {}, e: {}, s: {}, w: {} }
+      vehicles:
+        - { label: A, kind: car, from: s, to: left, you: true }
+        - { label: B, kind: car, from: n, to: right }
+      alt: Cruce sin señales. Tú (A) vienes del sur y giras a la izquierda. B viene del norte, de frente, y gira a su derecha, hacia el oeste.
+    options: [Tú (A), El auto B]
+    answer: 1
+    explain: El que gira a la izquierda deja pasar al que gira a la derecha en el mismo cruce.
+    cites: ["rvv:18.2"]
+
+  - id: afslaan-quien-dejas
+    type: multi
+    prompt: Giras. ¿A quién debes dejar pasar según el art. 18?
+    options:
+      - Al tráfico que viene de frente por la misma vía
+      - Al tráfico que va a tu lado en la misma vía
+      - Al tráfico que va pegado detrás de ti en la misma vía
+      - A nadie, porque el que gira tiene prioridad
+    answer: [0, 1, 2]
+    explain: El art. 18.1 cita al tráfico de frente y al que va al lado o muy cerca detrás de ti, en la misma vía.
+    cites: ["rvv:18.1"]
+
+  - id: afslaan-orden
+    type: order
+    prompt: ¿En qué orden pasan? No hay señales.
+    diagram:
+      arms: { n: {}, e: {}, s: {}, w: {} }
+      vehicles:
+        - { label: A, kind: car, from: s, to: left, you: true }
+        - { label: B, kind: car, from: n, to: straight }
+        - { label: C, kind: car, from: e, to: straight }
+      alt: Cruce sin señales. Tú (A) vienes del sur y giras a la izquierda. B viene del norte y sigue recto. C viene del este y sigue recto.
+    answer: [B, C, A]
+    explain: B no tiene a nadie por su derecha y pasa primero. C tiene a B a su derecha, así que pasa después. A tiene a C a su derecha y además gira a la izquierda: va último.
+    cites: ["rvv:15.1", "rvv:18.1"]
+
+  - id: afslaan-bloquear
+    type: yesno
+    prompt: Puedes quedarte parado en medio del cruce aunque bloquees a otros, si luego saldrás pronto.
+    answer: false
+    explain: No se permite bloquear un cruce.
+    cites: ["rvv:14"]
+
+  - id: afslaan-ruedas
+    type: mc
+    prompt: Esperas dentro del cruce para girar a la izquierda mientras pasan los de frente. ¿Cómo recomienda el CBR tener las ruedas delanteras?
+    options: [Rectas, Giradas a la izquierda, Giradas a la derecha, Da igual]
+    answer: 0
+    explain: El CBR pide mantener las ruedas delanteras rectas mientras esperas. No hace falta con semáforos ni si tu vía tiene prioridad.
+    cites: ["cbr-rijprocedure:3.3"]
+
+  - id: afslaan-mirar
+    type: mc
+    prompt: Vas a girar a la derecha. Según el CBR, ¿cuál es el último control del orden recomendado?
+    options: [Retrovisor interior, Mirar adelante, Retrovisor exterior derecho, Mirada por encima del hombro derecho]
+    answer: 3
+    explain: El orden recomendado es retrovisor interior, adelante, retrovisor exterior derecho y mirada por encima del hombro derecho.
+    cites: ["cbr-rijprocedure:3.3"]
+    exam: false
+
+  - id: afslaan-preseleccionar-cbr
+    type: yesno
+    prompt: Según el CBR, debes preseleccionar carril cuando no hacerlo resulte inseguro o entorpezca al resto del tráfico.
+    answer: true
+    explain: El CBR lo considera necesario en esos casos.
+    cites: ["cbr-rijprocedure:3.3"]

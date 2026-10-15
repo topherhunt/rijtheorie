@@ -1,0 +1,49 @@
+questions:
+  - id: regla-derecha-basica
+    type: mc
+    prompt: Llegas a este cruce sin señales. ¿Quién pasa primero?
+    diagram:
+      arms: { n: {}, e: {}, s: {}, w: {} }
+      vehicles:
+        - { label: A, kind: car, from: s, to: straight, you: true }
+        - { label: B, kind: car, from: e, to: straight }
+      alt: Cruce sin señales. Tú (A) vienes del sur y sigues recto. B viene del este, por tu derecha, y sigue recto.
+    options: [Tú (A), El auto B]
+    answer: 1
+    explain: En un cruce sin señales cedes el paso a quien viene por tu derecha. B viene por tu derecha.
+    cites: ["rvv:15.1"]
+
+  - id: regla-derecha-bici
+    type: yesno
+    prompt: En un cruce sin señales, un ciclista viene por tu derecha. ¿Debes cederle el paso?
+    answer: true
+    explain: Para la ley, los ciclistas son conductores (bestuurders). La regla de la derecha vale también para ellos.
+    cites: ["rvv:15.1", "rvv:1"]
+
+  - id: regla-derecha-tierra
+    type: mc
+    prompt: Vienes por un camino de tierra (A). ¿Quién pasa primero?
+    diagram:
+      arms: { n: {}, e: {}, s: { surface: unpaved }, w: {} }
+      vehicles:
+        - { label: A, kind: car, from: s, to: straight, you: true }
+        - { label: B, kind: car, from: w, to: straight }
+      alt: Tú (A) vienes del sur por un camino de tierra. B viene del oeste, por tu izquierda, por una vía asfaltada.
+    options: [Tú (A), El auto B]
+    answer: 1
+    explain: Quien viene de un camino sin pavimentar cede el paso a quien va por una vía pavimentada, aunque venga por la izquierda.
+    cites: ["rvv:15.2.a"]
+
+  - id: regla-derecha-orden
+    type: order
+    prompt: ¿En qué orden pasan? Nadie tiene señales.
+    diagram:
+      arms: { n: {}, e: {}, s: {}, w: {} }
+      vehicles:
+        - { label: A, kind: car, from: s, to: straight, you: true }
+        - { label: B, kind: bike, from: e, to: straight }
+        - { label: C, kind: car, from: n, to: straight }
+      alt: Cruce sin señales. Tú (A) vienes del sur, una bicicleta (B) viene del este y un auto (C) viene del norte. Todos siguen recto.
+    answer: [C, B, A]
+    explain: Mira a la derecha de cada uno. C no tiene a nadie a su derecha, así que pasa primero. B tiene a C a su derecha, así que pasa cuando C ya pasó. Tú (A) tienes a B a tu derecha, así que pasas al final.
+    cites: ["rvv:15.1"]

@@ -1,0 +1,104 @@
+questions:
+  - id: stilstaanverbod-kruispunt
+    type: yesno
+    prompt: ¿Puedes detenerte (stilstaan) dentro de un cruce?
+    answer: false
+    explain: Detenerse en un kruispunt o en un overweg está prohibido.
+    cites: ["rvv:23.1"]
+
+  - id: stilstaanverbod-fietsstrook
+    type: mc
+    prompt: ¿Dónde está prohibido detenerse en relación con una fietsstrook?
+    options:
+      - Solo sobre la fietsstrook
+      - Sobre la fietsstrook y en la calzada junto a ella
+      - Solo a menos de 5 m
+      - En ninguna parte, solo está prohibido estacionar
+    answer: 1
+    explain: La ley prohíbe detenerse en la fietsstrook y también en la calzada junto a una fietsstrook.
+    cites: ["rvv:23.1"]
+
+  - id: stilstaanverbod-oversteekplaats
+    type: number
+    prompt: ¿A qué distancia mínima, en metros, de un paso para cruzar (oversteekplaats) puedes detenerte? Responde con el número de metros dentro de los cuales no puedes.
+    answer: 5
+    unit: m
+    explain: No puedes detenerte en un paso para cruzar ni a menos de 5 m de él.
+    cites: ["rvv:23.1"]
+
+  - id: stilstaanverbod-tunel
+    type: yesno
+    prompt: ¿Está prohibido detenerte en un túnel?
+    answer: true
+    explain: Detenerse en un túnel está prohibido (stilstaan).
+    cites: ["rvv:23.1"]
+
+  - id: stilstaanverbod-bushalte
+    type: number
+    prompt: En una parada de bus sin marca de bloques (geblokte markering), ¿a menos de cuántos metros de la señal no puedes detenerte?
+    answer: 12
+    unit: m
+    explain: Si no hay marca de bloques, no puedes detenerte a menos de 12 m de la señal de la parada. Si hay marca, el límite es la altura de la marca.
+    cites: ["rvv:23.1"]
+
+  - id: stilstaanverbod-busstrook
+    type: yesno
+    prompt: ¿Puedes detenerte en la calzada junto a un busstrook?
+    answer: false
+    explain: La ley prohíbe detenerse en la calzada que está junto a un busstrook.
+    cites: ["rvv:23.1"]
+
+  - id: stilstaanverbod-amarilla
+    type: mc
+    prompt: ¿Qué prohíbe una línea amarilla continua junto a la calzada?
+    options:
+      - Estacionar solamente
+      - Detenerse (stilstaan) junto a ella
+      - Adelantar
+      - Nada, es solo un color
+    answer: 1
+    explain: No puedes detenerte junto a una línea amarilla continua. Junto a una amarilla discontinua está prohibido parkeren (ver la lección siguiente).
+    cites: ["rvv:23.1"]
+
+  - id: stilstaanverbod-subir-bushalte
+    type: yesno
+    prompt: Estás junto a una parada de bus, dentro de la zona prohibida, y solo dejas bajar a un pasajero de inmediato. ¿Está permitido?
+    answer: true
+    explain: La prohibición de stilstaan en la parada de bus no se aplica al ascenso y descenso inmediato de pasajeros.
+    cites: ["rvv:23.2"]
+
+  - id: stilstaanverbod-subir-oversteek
+    type: yesno
+    prompt: Dejas bajar a un pasajero de inmediato, pero lo haces sobre un paso para cruzar. ¿Está permitido por la excepción del artículo 23?
+    answer: false
+    explain: La excepción del ascenso y descenso inmediato solo existe para la parada de bus, no para los demás lugares de la lista.
+    cites: ["rvv:23.1", "rvv:23.2"]
+
+  - id: stilstaanverbod-e2
+    type: mc
+    prompt: ¿Qué prohíbe esta señal?
+    sign: E2
+    options: [Estacionar, Detenerse, Colocar bicicletas, Adelantar]
+    answer: 1
+    explain: E2 es "verbod stil te staan".
+    cites: ["rvv:bijlage1.E2"]
+
+  - id: stilstaanverbod-e2-lado
+    type: yesno
+    prompt: Una señal E2 está en el lado izquierdo de la calle. ¿Te afecta si te detienes en el lado derecho?
+    answer: false
+    explain: Las señales E1, E2 y E3 solo valen para el lado de la vía donde están puestas.
+    cites: ["rvv:65.2"]
+
+  - id: stilstaanverbod-orden-prohibido
+    type: multi
+    prompt: ¿En cuáles de estos lugares está prohibido detenerte (stilstaan)?
+    options:
+      - En un overweg
+      - Junto a una línea amarilla continua
+      - En un túnel
+      - En una parada de taxi señalada con E5
+    answer: [0, 1, 2]
+    explain: Están en la lista del artículo 23 el overweg, la línea amarilla continua y el túnel. El artículo 23 no menciona las paradas de taxi.
+    cites: ["rvv:23.1"]
+    exam: false

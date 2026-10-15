@@ -1,0 +1,113 @@
+questions:
+  - id: supuestos-conductor
+    type: mc
+    exam: false
+    prompt: Una pregunta del examen no dice qué vehículo conduces. ¿Qué debes suponer?
+    options: [Que conduces tu propio auto, Que eres el conductor del auto del CBR, Que eres un pasajero, Que eres un peatón]
+    answer: 1
+    explain: Según el plan del CBR, debes suponer que tú eres el conductor del auto del CBR.
+    cites: ["cbr-examenplan:1"]
+
+  - id: supuestos-otros-cumplen
+    type: yesno
+    exam: false
+    prompt: En una pregunta sin más datos, ¿debes suponer que los demás usuarios cumplen las reglas, por ejemplo la velocidad máxima permitida?
+    answer: true
+    explain: Es uno de los tres supuestos del CBR. Solo cambia si la imagen o la pregunta indican claramente otra cosa.
+    cites: ["cbr-examenplan:1"]
+
+  - id: supuestos-lluvia
+    type: mc
+    exam: false
+    prompt: La imagen de una pregunta muestra una calle con fuerte lluvia. ¿Qué supuesto del CBR sigue valiendo?
+    options: [Que el clima es normal, Que el clima no es normal porque la imagen lo indica claramente, Que debes ignorar la imagen, Que la lluvia no afecta nunca la respuesta]
+    answer: 1
+    explain: El supuesto de condiciones normales no vale si la imagen o la pregunta indican claramente algo distinto. Una lluvia fuerte visible en la imagen lo cambia.
+    cites: ["cbr-examenplan:1"]
+
+  - id: supuestos-normal
+    type: multi
+    exam: false
+    prompt: Según el CBR, ¿qué debes suponer al contestar una pregunta si no se indica nada distinto?
+    options: [Que eres el conductor del auto del CBR, Que los demás cumplen las reglas, Que las condiciones de la vía y del clima son normales, Que algún conductor se saltará una regla, Que es de noche]
+    answer: [0, 1, 2]
+    explain: Los tres supuestos son que eres el conductor del auto del CBR, que los demás cumplen las reglas y que la vía y el clima son normales.
+    cites: ["cbr-examenplan:1"]
+
+  - id: supuestos-semaforo
+    type: yesno
+    exam: false
+    prompt: Cruzas con semáforo verde y no hay datos de que alguien vaya a saltarse el rojo. Para el examen, ¿debes suponer que los demás respetan su semáforo?
+    answer: true
+    explain: Sí. El examen supone que los otros usuarios cumplen las reglas, salvo que la pregunta o la imagen digan otra cosa.
+    cites: ["cbr-examenplan:1"]
+
+  - id: supuestos-exceso
+    type: mc
+    exam: false
+    prompt: La pregunta dice claramente que un auto que viene hacia ti va a mucha más velocidad de la permitida. ¿Qué pasa con el supuesto de que los demás cumplen las reglas?
+    options: [Sigue valiendo igual, No vale en este caso porque la pregunta indica algo distinto, Vale solo de noche, Nunca vale]
+    answer: 1
+    explain: El supuesto se aplica salvo que la pregunta o la imagen indiquen claramente otra cosa. Aquí la pregunta lo dice.
+    cites: ["cbr-examenplan:1"]
+
+  - id: idioma-opciones
+    type: multi
+    exam: false
+    prompt: ¿En qué idiomas puedes hacer el examen teórico de auto del CBR?
+    options: [Neerlandés, Inglés, Cualquier otro idioma con un intérprete oficial reservado, Español sin ningún trámite adicional, Cualquier otro idioma con un amigo que traduzca]
+    answer: [0, 1, 2]
+    explain: El examen es en neerlandés o inglés. En otro idioma solo con un intérprete oficial reservado. No puedes llevar tu propio intérprete.
+    cites: ["cbr-taal", "cbr-tolk"]
+
+  - id: idioma-propio-interprete
+    type: yesno
+    exam: false
+    prompt: ¿Puedes llevar a un amigo bilingüe como intérprete al examen teórico?
+    answer: false
+    explain: No. No se permite un intérprete propio; hay que reservar uno oficial en una agencia aprobada.
+    cites: ["cbr-taal"]
+
+  - id: idioma-pago-interprete
+    type: mc
+    exam: false
+    prompt: Reservaste un examen con intérprete. ¿A quién pagas el costo del intérprete?
+    options: [Al CBR junto con el examen, A la agencia de interpretación aprobada, Al instructor de manejo, Al municipio]
+    answer: 1
+    explain: Pagas el examen con intérprete al CBR, pero el costo del intérprete se paga a la agencia.
+    cites: ["cbr-tolk"]
+
+  - id: idioma-plazo
+    type: number
+    exam: false
+    prompt: ¿Con cuántos días de anticipación, como mínimo, debes reservar el intérprete antes del examen?
+    answer: 14
+    unit: días
+    explain: El intérprete se reserva al menos 14 días (2 semanas) antes del examen. Si no, el examen no puede realizarse.
+    cites: ["cbr-tolk", "cbr-taal"]
+
+  - id: idioma-orden
+    type: mc
+    exam: false
+    prompt: Quieres hacer el examen con intérprete. ¿Qué debes hacer primero?
+    options: [Reservar el intérprete en la agencia, Reservar y pagar en el CBR un examen con intérprete, Presentarte al examen y pedirlo allí, Llevar tu propio intérprete]
+    answer: 1
+    explain: Primero reservas y pagas el examen con intérprete en el CBR. Después organizas el intérprete oficial en una agencia aprobada.
+    cites: ["cbr-tolk"]
+
+  - id: idioma-producto
+    type: mc
+    exam: false
+    prompt: En la agencia de interpretación, ¿qué producto debes elegir?
+    options: ["El mismo que reservaste en el CBR (por ejemplo, el examen teórico de auto)", "Cualquiera: el que sea más barato", Uno de examen práctico, Uno de moto]
+    answer: 0
+    explain: Debes elegir el mismo producto que reservaste en el CBR, por ejemplo "theorie-examen auto".
+    cites: ["cbr-tolk"]
+
+  - id: idioma-ingles
+    type: yesno
+    exam: false
+    prompt: ¿Puedes hacer el examen teórico de auto en inglés sin intérprete?
+    answer: true
+    explain: El CBR dice que el examen teórico de auto se puede hacer en inglés.
+    cites: ["cbr-taal"]

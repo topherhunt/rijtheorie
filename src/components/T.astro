@@ -1,0 +1,15 @@
+---
+// Glossary term: Spanish word with the Dutch exam term beside it. Slot text, if given, replaces the Spanish word.
+import { term } from '../lib/data.ts';
+import { href } from '../config.ts';
+
+interface Props { id: string }
+const { id } = Astro.props;
+const t = term(id);
+const custom = Astro.slots.has('default') ? await Astro.slots.render('default') : null;
+---
+
+<a href={href(`es/glosario/#${id}`)} class="qa-term no-underline" title={t.def}>
+  <span class="text-slate-900">{custom ? <Fragment set:html={custom} /> : t.es}</span>
+  <span class="text-slate-500">(<i lang="nl" class="font-medium text-brand-700">{t.nl}</i>)</span>
+</a>

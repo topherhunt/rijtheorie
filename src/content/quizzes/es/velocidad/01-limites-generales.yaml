@@ -1,0 +1,87 @@
+questions:
+  - id: limites-urbana
+    type: number
+    prompt: "¿Cuál es la velocidad máxima de un auto dentro de la zona urbana (bebouwde kom) si no hay otra señal?"
+    answer: 50
+    unit: km/h
+    explain: "El art. 20 fija 50 km/h para vehículos de motor dentro de la zona urbana."
+    cites: ["rvv:20"]
+
+  - id: limites-urbana-senal
+    type: mc
+    prompt: "¿Qué indica esta señal?"
+    options: [Comienzo de la zona urbana, Fin de la zona urbana, Comienzo de una zona de 30, Fin de la autoweg]
+    answer: 0
+    explain: "H1 marca la bebouwde kom y H2 su fin."
+    cites: ["rvv:bijlage1.H1"]
+    sign: H1
+
+  - id: limites-autosnelweg
+    type: number
+    prompt: "¿Cuál es la velocidad máxima general de un auto en una autosnelweg según el RVV, sin otras señales?"
+    answer: 130
+    unit: km/h
+    explain: "El art. 21 fija 130 km/h para vehículos de motor en autosnelwegen."
+    cites: ["rvv:21"]
+
+  - id: limites-autoweg
+    type: number
+    prompt: "¿Cuál es la velocidad máxima de un auto en una autoweg fuera de la zona urbana?"
+    answer: 100
+    unit: km/h
+    explain: "Autowegen: 100 km/h según el art. 21."
+    cites: ["rvv:21"]
+
+  - id: limites-otras
+    type: number
+    prompt: "¿Cuál es la velocidad máxima de un auto en una vía que no es autosnelweg ni autoweg, fuera de la zona urbana?"
+    answer: 80
+    unit: km/h
+    explain: "En las demás vías fuera de la zona urbana el máximo es 80 km/h."
+    cites: ["rvv:21"]
+
+  - id: limites-minimo-autosnelweg
+    type: number
+    prompt: "¿Cuál es la velocidad mínima que debe poder y poder permitirse un vehículo de motor para usar una autosnelweg?"
+    answer: 60
+    unit: km/h
+    explain: "El art. 42 lid 1 habla de ir a 60 km/h o más."
+    cites: ["rvv:42.1"]
+
+  - id: limites-minimo-autoweg
+    type: number
+    prompt: "¿Cuál es la velocidad mínima que debe poder y permitirse un vehículo de motor para usar una autoweg?"
+    answer: 50
+    unit: km/h
+    explain: "El art. 42 lid 2 habla de 50 km/h o más."
+    cites: ["rvv:42.2"]
+
+  - id: limites-bromfiets
+    type: number
+    prompt: "¿Cuál es la velocidad máxima de un ciclomotor (bromfiets) en la calzada, dentro y fuera de la zona urbana?"
+    answer: 45
+    unit: km/h
+    explain: "En la calzada, 45 km/h tanto dentro como fuera de la zona urbana."
+    cites: ["rvv:20", "rvv:21"]
+
+  - id: limites-bromfiets-fietspad
+    type: mc
+    prompt: "Un bromfiets circula por un fiets/bromfietspad fuera de la zona urbana. ¿Cuál es su máximo?"
+    options: [30 km/h, 40 km/h, 45 km/h, 50 km/h]
+    answer: 1
+    explain: "En el fiets/bromfietspad: 30 km/h dentro de la zona urbana y 40 km/h fuera."
+    cites: ["rvv:21"]
+
+  - id: limites-senal-prevalece
+    type: yesno
+    prompt: "Una señal de velocidad máxima de 70 km/h está puesta en una vía donde el máximo general es 80. ¿Debes obedecer los 70?"
+    answer: true
+    explain: "Las señales de prohibición y mandato se obedecen y prevalecen sobre las reglas generales."
+    cites: ["rvv:62", "rvv:63"]
+
+  - id: limites-exceso-grave
+    type: yesno
+    prompt: "¿Aparece el exceso de la velocidad máxima entre las conductas graves de la Wegenverkeerswet (art. 5a)?"
+    answer: true
+    explain: "Sí: art. 5a lid 1 onderdeel g."
+    cites: ["wvw:5a"]

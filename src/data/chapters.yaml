@@ -1,0 +1,53 @@
+# Chapter order and titles. Lesson files live in src/content/lessons/es/<id>/.
+- id: empezar
+  n: 0
+  title: Empezar aquí
+  summary: Cómo es el examen del CBR, cómo usar este curso y por qué también necesitas el material oficial.
+- id: via
+  n: 1
+  title: La vía y quienes la usan
+  summary: Partes de la vía, tipos de usuarios y vehículos, y las reglas básicas de comportamiento.
+- id: posicion
+  n: 2
+  title: Posición en la vía y adelantar
+  summary: Por dónde circular, cambiar de carril, adelantar y pasar junto a otros.
+- id: velocidad
+  n: 3
+  title: Velocidad
+  summary: Límites de velocidad, adaptar la velocidad y la distancia de detención.
+- id: prioridad
+  n: 4
+  title: Prioridad
+  summary: Quién pasa primero en cruces, al girar, en maniobras especiales y ante vehículos prioritarios.
+- id: senales
+  n: 5
+  title: Señales, semáforos y marcas viales
+  summary: Las familias de señales, los semáforos, las marcas en la calzada y qué manda sobre qué.
+- id: especiales
+  n: 6
+  title: Vías y situaciones especiales
+  summary: Autopistas, rotondas, pasos a nivel, túneles, erven y otros lugares con reglas propias.
+- id: parar
+  n: 7
+  title: Detenerse y estacionar
+  summary: Dónde puedes detenerte, dónde puedes estacionar y cómo funcionan las zonas azules.
+- id: luces
+  n: 8
+  title: Luces, señales del vehículo y emergencias
+  summary: Qué luces usar, cuándo usar intermitentes y bocina, y qué hacer en averías y accidentes.
+- id: conductor
+  n: 9
+  title: El conductor
+  summary: Alcohol, drogas, teléfono, cansancio, usuarios vulnerables, ángulo muerto y conducción ecológica.
+- id: leyes
+  n: 10
+  title: Documentos y leyes
+  summary: Permiso de conducir, conductor novel, matrícula, APK, seguro y sanciones.
+- id: vehiculo
+  n: 11
+  title: Conocer el vehículo
+  summary: Neumáticos, frenos, luces, tablero, cinturones, sillas infantiles y carga.
+- id: vocabulario
+  n: 12
+  title: Vocabulario neerlandés
+  summary: Las palabras del examen y de tus clases de manejo, por tema.

@@ -1,0 +1,80 @@
+questions:
+  - id: cinturon-quien
+    type: yesno
+    prompt: Conduces un auto de pasajeros. ¿Tú y tus pasajeros deben usar el cinturón de seguridad disponible?
+    answer: true
+    explain: El conductor y los pasajeros deben usar el cinturón disponible para ellos.
+    cites: ["rvv:59.1"]
+
+  - id: cinturon-altura
+    type: number
+    prompt: Los pasajeros menores de 18 años que miden menos de esta altura deben usar un sistema de retención infantil. ¿Cuál es la altura?
+    answer: 135
+    unit: cm
+    explain: El límite es 1,35 m.
+    cites: ["rvv:59.1"]
+
+  - id: cinturon-edad
+    type: number
+    prompt: Un pasajero que mide menos de 1,35 m debe usar un sistema de retención infantil si es menor de qué edad?
+    answer: 18
+    unit: años
+    explain: La regla se aplica a pasajeros menores de 18 años y de menos de 1,35 m.
+    cites: ["rvv:59.1"]
+
+  - id: cinturon-mas-pasajeros
+    type: yesno
+    prompt: En el asiento trasero hay dos cinturones. ¿Puedes llevar tres pasajeros en esos asientos?
+    answer: false
+    explain: En los asientos con cinturones no se llevan más pasajeros que cinturones.
+    cites: ["rvv:59.1"]
+
+  - id: cinturon-sin-cinturones
+    type: mc
+    prompt: Un auto sin cinturones ni sistemas de retención. ¿Qué pasa con un niño de 5 años que mide menos de 1,35 m?
+    options: ["Va en cualquier asiento", "Va en un asiento que no sea uno de los delanteros", "No se puede llevar ningún niño", "Va sentado en las piernas del conductor"]
+    answer: 1
+    explain: Los de 3 a 18 años y menos de 1,35 m van en un asiento que no sea uno de los delanteros.
+    cites: ["rvv:59.2"]
+
+  - id: cinturon-menor-3
+    type: yesno
+    prompt: En un auto sin cinturones ni sistemas de retención, ¿se puede llevar a un niño de 2 años?
+    answer: false
+    explain: En ese caso no se llevan pasajeros menores de 3 años.
+    cites: ["rvv:59.2"]
+
+  - id: cinturon-airbag
+    type: yesno
+    prompt: ¿Puedes poner una silla infantil orientada hacia atrás en el asiento delantero con el airbag activo?
+    answer: false
+    explain: Está prohibido, salvo que el airbag esté desactivado o se desactive automáticamente de forma suficiente.
+    cites: ["rvv:59.3"]
+
+  - id: cinturon-correcto
+    type: yesno
+    prompt: ¿Debe usarse el cinturón de modo que no se afecte su efecto protector?
+    answer: true
+    explain: El artículo 59 lid 7 exige un uso que no reduzca la protección.
+    cites: ["rvv:59.7"]
+
+  - id: cinturon-menor-12
+    type: yesno
+    prompt: ¿Tiene el conductor la prohibición de llevar niños menores de 12 años de forma distinta a la prescrita?
+    answer: true
+    explain: El artículo 59 lid 8 lo prohíbe expresamente a los conductores.
+    cites: ["rvv:59.8"]
+
+  - id: cinturon-asiento
+    type: yesno
+    prompt: ¿Deben conductor y pasajeros ir sentados en los asientos destinados a ellos?
+    answer: true
+    explain: El artículo 58a lo exige durante la participación en el tráfico, con excepciones, por ejemplo para pasajeros de autobús.
+    cites: ["rvv:58a"]
+
+  - id: cinturon-casco
+    type: yesno
+    prompt: ¿El conductor de una motocicleta debe llevar casco abrochado y homologado?
+    answer: true
+    explain: El artículo 60 lo exige al conductor y a los pasajeros de motocicletas y bromfietsen, con las excepciones que prevé.
+    cites: ["rvv:60"]

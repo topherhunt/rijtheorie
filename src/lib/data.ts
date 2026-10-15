@@ -15,8 +15,12 @@ export interface GlossaryTerm {
   es: string;
   /** Short Spanish explanation shown on hover / in the glossary page. */
   def?: string;
+  /** On the CBR exam plan word list. */
+  cbr?: boolean;
   /** CBR keeps these Dutch even in the English/interpreted exam. */
   untranslated?: boolean;
+  /** Comma-separated cites backing a legal claim in `def`. */
+  cite?: string;
 }
 export type Glossary = Record<string, GlossaryTerm>;
 

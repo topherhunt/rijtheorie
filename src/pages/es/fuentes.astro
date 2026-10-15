@@ -1,0 +1,32 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { sources } from '../../lib/data.ts';
+import { isLaw } from '../../lib/cite.ts';
+import { REPO_URL } from '../../config.ts';
+
+const all = Object.entries(sources());
+const laws = all.filter(([, s]) => isLaw(s));
+const web = all.filter(([, s]) => !isLaw(s));
+---
+
+<Layout title="Fuentes y licencias">
+  <div class="prose-lesson">
+    <h1 class="text-3xl font-bold">Fuentes y licencias</h1>
+    <p>Cada regla del curso enlaza a su fuente. Las leyes se enlazan en <a href="https://wetten.overheid.nl">wetten.overheid.nl</a>, la publicación oficial del gobierno neerlandés. Si un enlace no coincide con lo que dice la lección, <a href={`${REPO_URL}/issues/new?template=problema.yml`}>avísanos</a>.</p>
+    <h2>Leyes y reglamentos</h2>
+    <ul class="qa-sources-law">
+      {laws.map(([, s]) => <li><a href={`https://wetten.overheid.nl/${'bwb' in s ? s.bwb : ''}`}>{s.short}</a>: <i lang="nl">{s.title}</i></li>)}
+    </ul>
+    <h2>Otras fuentes</h2>
+    <ul class="qa-sources-web">
+      {web.map(([, s]) => <li><a href={'url' in s ? s.url : ''}>{s.title}</a></li>)}
+    </ul>
+    <h2>Licencias</h2>
+    <ul>
+      <li>Código: MIT.</li>
+      <li>Textos, preguntas y diagramas: <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">CC BY-SA 4.0</a>.</li>
+      <li>Señales de tráfico: imágenes oficiales del anexo 1 del RVV 1990 (<i lang="nl">bijlage 1</i>), obra del gobierno neerlandés sin derechos de autor (art. 11 Auteurswet), obtenidas de wetten.overheid.nl.</li>
+      <li>Fotos de escenas: generadas con IA y revisadas a mano. Son ilustrativas; los detalles pueden no ser exactos.</li>
+    </ul>
+  </div>
+</Layout>

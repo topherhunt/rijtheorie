@@ -1,0 +1,70 @@
+questions:
+  - id: parte-derecha
+    type: mc
+    prompt: ¿Por dónde circulan los conductores en general?
+    options: [Por el centro, Por la derecha tanto como sea posible, Por la izquierda, Por donde haya menos tráfico]
+    answer: 1
+    explain: Los conductores circulan por la derecha tanto como sea posible.
+    cites: ["rvv:3.1"]
+
+  - id: parte-peaton-orden
+    type: mc
+    prompt: ¿Cuál es el orden en que los peatones deben elegir dónde ir?
+    options: ["Trottoir o voetpad, luego fietspad, luego berma o borde de la calzada", "Calzada, luego trottoir, luego berma", "Fietspad, luego calzada, luego trottoir", "Berma, luego fietspad, luego trottoir"]
+    answer: 0
+    explain: Los peatones usan primero el trottoir o voetpad, si no hay el fietspad o fiets/bromfietspad, y si tampoco hay, la berma o el borde exterior de la calzada.
+    cites: ["rvv:4"]
+
+  - id: parte-peaton-borde
+    type: yesno
+    prompt: No hay trottoir, voetpad ni fietspad. ¿Puede el peatón ir por la berma?
+    answer: true
+    explain: Si no hay trottoir, voetpad, fietspad ni fiets/bromfietspad, el peatón usa la berma o el borde exterior de la rijbaan.
+    cites: ["rvv:4"]
+
+  - id: parte-patines
+    type: mc
+    prompt: Vas en patines en línea y no hay trottoir, voetpad, fietspad ni fiets/bromfietspad. ¿Dónde puedes ir?
+    options: [Por la berma, Por la rijbaan, Por ningún lado, Solo por el ruiterpad]
+    answer: 1
+    explain: Quien se mueve con objetos que no son vehículos usa el fietspad, el fiets/bromfietspad, el trottoir o el voetpad, y si no existen, la rijbaan.
+    cites: ["rvv:4"]
+
+  - id: parte-jinete
+    type: mc
+    prompt: ¿Por dónde van los jinetes?
+    options: ["Por el ruiterpad; si no hay, por la berma o la rijbaan", Solo por la rijbaan, Por el trottoir, Por el fietspad]
+    answer: 0
+    explain: Los jinetes usan el ruiterpad, y si no hay, la berm o la rijbaan.
+    cites: ["rvv:8"]
+
+  - id: parte-gehandicapten
+    type: multi
+    prompt: ¿Qué partes puede usar el conductor de un gehandicaptenvoertuig?
+    options: [Trottoir, Voetpad, Fietspad, Rijbaan]
+    answer: [0, 1, 2, 3]
+    explain: Puede usar el trottoir, el voetpad, el fietspad, el fiets/bromfietspad y la rijbaan.
+    cites: ["rvv:7"]
+
+  - id: parte-columna
+    type: yesno
+    prompt: Una columna de peatones que forma un desfile, ¿puede usar la rijbaan?
+    answer: true
+    explain: Los peatones pueden usar la rijbaan si forman una columna, un desfile o un cortejo fúnebre.
+    cites: ["rvv:9"]
+
+  - id: parte-auto
+    type: mc
+    prompt: ¿Qué parte de la vía usan en general los conductores de auto?
+    options: [La rijbaan, El trottoir, El fietspad, La berma]
+    answer: 0
+    explain: Los demás conductores usan la rijbaan.
+    cites: ["rvv:10.1"]
+
+  - id: parte-estacionar
+    type: multi
+    prompt: Para estacionar, ¿en cuáles de estas partes NO puedes dejar el auto?
+    options: [Trottoir, Fietspad, Ruiterpad, Parkeerhaven]
+    answer: [0, 1, 2]
+    explain: Los conductores pueden usar otras partes para estacionar, excepto el trottoir, el voetpad, el fietspad, el fiets/bromfietspad y el ruiterpad.
+    cites: ["rvv:10.1"]

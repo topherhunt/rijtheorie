@@ -1,0 +1,60 @@
+questions:
+  - id: documentos-control-107
+    type: yesno
+    prompt: ¿Debes tener un permiso válido y legible de la categoría correspondiente para conducir un auto?
+    answer: true
+    explain: El permiso debe ser de la categoría, no haber perdido su validez y ser legible.
+    cites: ["wvw:107"]
+
+  - id: documentos-control-parar
+    type: mc
+    prompt: Un policía te hace señal de parar y te pide los documentos. ¿Qué debes hacer?
+    options: [Seguir hasta un lugar más cómodo y mostrarlos allí, Parar y mostrar los documentos a la primera orden, Mostrarlos al día siguiente en la comisaría, Solo mostrarlos si cometiste una infracción]
+    answer: 1
+    explain: A la primera orden de un funcionario autorizado debes parar y mostrar correctamente los documentos pedidos.
+    cites: ["wvw:160.1"]
+
+  - id: documentos-control-multi
+    type: multi
+    prompt: ¿Cuáles de estos documentos debes mostrar a la primera orden de un funcionario autorizado?
+    options: [Tu permiso de conducir, El kentekenbewijs del auto, Tu pasaporte de viaje de la infancia, La begeleiderspas si conduces acompañado]
+    answer: [0, 1, 3]
+    explain: La ley nombra el kentekenbewijs, el permiso de conducir y la begeleiderspas si conduces acompañado.
+    cites: ["wvw:160.1"]
+
+  - id: documentos-control-soplar
+    type: yesno
+    prompt: La policía te pide hacer la prueba de aliento previa. ¿Estás obligado a colaborar?
+    answer: true
+    explain: Debes colaborar con la prueba de aliento previa y seguir las instrucciones.
+    cites: ["wvw:160.5"]
+
+  - id: documentos-control-ordenes
+    type: yesno
+    prompt: Un agente te da una orden para proteger los intereses del tráfico. ¿Debes obedecerla?
+    answer: true
+    explain: Es una obligación legal.
+    cites: ["wvw:160.6", "wvw:12"]
+
+  - id: documentos-control-185
+    type: number
+    prompt: Vives en los Países Bajos con un permiso de un país fuera de la UE, el EEE y Suiza. ¿Hasta cuántos días después de instalarte puedes conducir con él?
+    answer: 185
+    unit: días
+    explain: Puedes conducir hasta 185 días después de instalarte en los Países Bajos.
+    cites: ["wvw:108.1.g"]
+
+  - id: documentos-control-ue
+    type: number
+    prompt: Vives aquí con un permiso de la UE. Puedes usarlo, como máximo, hasta que pasen X años desde que fue emitido. ¿Cuántos años?
+    answer: 15
+    unit: años
+    explain: Para los permisos de las categorías AM, A1, A2, A, B, B1 y BE el límite es de 15 años desde su emisión.
+    cites: ["wvw:108.1.h"]
+
+  - id: documentos-control-extranjero
+    type: yesno
+    prompt: ¿Puedes conducir en los Países Bajos con tu permiso extranjero más de 185 días después de instalarte, si es de fuera de la UE y el EEE?
+    answer: false
+    explain: Pasado ese plazo ya no basta ese permiso.
+    cites: ["wvw:108.1.g"]

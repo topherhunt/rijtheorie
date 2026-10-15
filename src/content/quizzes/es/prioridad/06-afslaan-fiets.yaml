@@ -1,0 +1,71 @@
+questions:
+  - id: afslaan-fiets-ciclista-lado
+    type: mc
+    prompt: Giras a la derecha. Un ciclista sigue recto por el carril bici a tu lado. ¿Quién pasa primero?
+    diagram:
+      arms: { n: {}, e: {}, s: { bike: true }, w: {} }
+      vehicles:
+        - { label: A, kind: car, from: s, to: right, you: true }
+        - { label: B, kind: bike, from: s, to: straight, lane: path }
+      alt: Cruce. Tú (A) vienes del sur y giras a la derecha. A tu derecha, por el carril bici, B es un ciclista que sigue recto.
+    options: [Tú (A), El ciclista B]
+    answer: 1
+    explain: Quien gira debe dejar pasar al tráfico que va a su lado en la misma vía, también al ciclista del carril bici.
+    cites: ["rvv:18.1"]
+
+  - id: afslaan-fiets-angulo-muerto
+    type: mc
+    prompt: Vas recto y vas a girar a la derecha cruzando un carril bici. Según el CBR, ¿qué compruebas antes de cruzarlo?
+    options: [El retrovisor exterior y el ángulo muerto, Solo el retrovisor interior, Nada porque el ciclista debe ceder, Solo el espejo izquierdo]
+    answer: 0
+    explain: El CBR pide comprobar el retrovisor exterior y el ángulo muerto antes de cruzar un carril bici.
+    cites: ["cbr-rijprocedure:3.3"]
+
+  - id: afslaan-fiets-frente
+    type: mc
+    prompt: Giras a la izquierda. Un ciclista viene de frente y sigue recto. ¿Quién pasa primero?
+    diagram:
+      arms: { n: { bike: true }, e: {}, s: {}, w: {} }
+      vehicles:
+        - { label: A, kind: car, from: s, to: left, you: true }
+        - { label: B, kind: bike, from: n, to: straight }
+      alt: Cruce. Tú (A) vienes del sur y giras a la izquierda. B es un ciclista que viene del norte, de frente, y sigue recto.
+    options: [Tú (A), El ciclista B]
+    answer: 1
+    explain: Quien gira deja pasar al tráfico que viene de frente por la misma vía, ciclistas incluidos.
+    cites: ["rvv:18.1"]
+
+  - id: afslaan-fiets-cruce-propio
+    type: yesno
+    prompt: Un carril bici se aleja de la calzada y llega al cruce con sus propios dientes de tiburón. Según el CBR, ¿forma un cruce aparte, de modo que el art. 18 ya no te obliga a dejar pasar a esos ciclistas?
+    answer: true
+    explain: El CBR lo trata como un cruce propio, y los dientes de tiburón del carril bici dicen quién cede.
+    cites: ["cbr-rijprocedure:3.3"]
+
+  - id: afslaan-fiets-pegado
+    type: yesno
+    prompt: Si el carril bici corre pegado a la calzada, el ciclista que sigue recto cuenta como tráfico a tu lado y debes dejarlo pasar al girar.
+    answer: true
+    explain: Es la misma vía y el art. 18.1 aplica al tráfico que va a tu lado o pegado detrás.
+    cites: ["rvv:18.1"]
+
+  - id: afslaan-fiets-bromfiets
+    type: yesno
+    prompt: Giras a la derecha y un ciclomotor (bromfiets) sigue recto a tu lado. ¿Debes dejarlo pasar?
+    answer: true
+    explain: El art. 18.1 habla de tráfico que va a tu lado o muy cerca detrás, no solo de ciclistas.
+    cites: ["rvv:18.1"]
+
+  - id: afslaan-fiets-doble-sentido
+    type: yesno
+    prompt: En un carril bici de doble sentido hay que prestar atención adicional porque pueden venir ciclistas de ambos lados.
+    answer: true
+    explain: Lo recomienda el CBR antes de cruzar un fietspad.
+    cites: ["cbr-rijprocedure:3.3"]
+
+  - id: afslaan-fiets-bici-bestuurder
+    type: yesno
+    prompt: Para la ley, el ciclista es un conductor (bestuurder).
+    answer: true
+    explain: Los conductores son todos los usuarios de la vía excepto los peatones.
+    cites: ["rvv:1"]

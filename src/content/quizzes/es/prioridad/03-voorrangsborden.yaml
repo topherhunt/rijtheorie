@@ -1,0 +1,102 @@
+questions:
+  - id: voorrangsborden-b1-derecha
+    type: mc
+    prompt: Vas por una vía con la señal B1. ¿Quién pasa primero?
+    sign: B1
+    diagram:
+      arms: { n: { sign: B1 }, e: {}, s: { sign: B1 }, w: {} }
+      vehicles:
+        - { label: A, kind: car, from: s, to: straight, you: true }
+        - { label: B, kind: car, from: e, to: straight }
+      alt: Cruce. Tú (A) vienes del sur por una vía con la señal B1 y sigues recto. B viene del este, por tu derecha, por una vía sin señal de prioridad.
+    options: [Tú (A), El auto B]
+    answer: 0
+    explain: B1 es voorrangsweg. Tienes prioridad en los cruces, aunque el otro venga por tu derecha. La señal manda sobre la regla de la derecha.
+    cites: ["rvv:bijlage1.B1", "rvv:63"]
+
+  - id: voorrangsborden-b2-fin
+    type: mc
+    prompt: Pasas por la señal B2 y llegas a un cruce. B viene por tu derecha. ¿Quién pasa primero?
+    sign: B2
+    diagram:
+      arms: { n: {}, e: {}, s: { sign: B2 }, w: {} }
+      vehicles:
+        - { label: A, kind: car, from: s, to: straight, you: true }
+        - { label: B, kind: car, from: e, to: straight }
+      alt: Cruce. Tú (A) vienes del sur y pasas junto a la señal B2, que marca el final de la vía con prioridad. B viene del este, por tu derecha.
+    options: [Tú (A), El auto B]
+    answer: 1
+    explain: B2 es einde voorrangsweg, la prioridad terminó. En un cruce sin otras señales vale la regla de la derecha.
+    cites: ["rvv:bijlage1.B2", "rvv:15.1"]
+
+  - id: voorrangsborden-nombre-b1
+    type: mc
+    prompt: ¿Cómo se llama la señal B1?
+    sign: B1
+    options: [Voorrangsweg, Einde voorrangsweg, Voorrangskruispunt, Rotonde]
+    answer: 0
+    explain: B1 es Voorrangsweg, la vía con prioridad.
+    cites: ["rvv:bijlage1.B1"]
+
+  - id: voorrangsborden-nombre-b2
+    type: mc
+    prompt: ¿Qué indica la señal B2?
+    sign: B2
+    options: [Que la vía con prioridad termina, Que empieza una vía con prioridad, Que debes parar, Que hay una rotonda]
+    answer: 0
+    explain: B2 es Einde voorrangsweg: termina la vía con prioridad.
+    cites: ["rvv:bijlage1.B2"]
+
+  - id: voorrangsborden-b3
+    type: mc
+    prompt: ¿Cómo se llama la señal B3?
+    sign: B3
+    options: [Voorrangskruispunt, Voorrangsweg, Einde voorrangsweg, Erf]
+    answer: 0
+    explain: B3 es Voorrangskruispunt, el cruce con prioridad señalizada.
+    cites: ["rvv:bijlage1.B3"]
+
+  - id: voorrangsborden-b4
+    type: mc
+    prompt: ¿Cómo se llama la señal B4?
+    sign: B4
+    options: ["Voorrangskruispunt, zijweg links", "Voorrangskruispunt, zijweg rechts", Einde voorrangsweg, Voorrangsweg]
+    answer: 0
+    explain: B4 es Voorrangskruispunt, zijweg links. B5 es lo mismo pero con la vía lateral a la derecha.
+    cites: ["rvv:bijlage1.B4", "rvv:bijlage1.B5"]
+
+  - id: voorrangsborden-b5
+    type: mc
+    prompt: ¿Cómo se llama la señal B5?
+    sign: B5
+    options: ["Voorrangskruispunt, zijweg links", "Voorrangskruispunt, zijweg rechts", Voorrangsweg, Stop]
+    answer: 1
+    explain: B5 es Voorrangskruispunt, zijweg rechts.
+    cites: ["rvv:bijlage1.B5"]
+
+  - id: voorrangsborden-b3-ventaja
+    type: yesno
+    prompt: Ves la señal B3 en tu vía. Es un cruce con prioridad señalizada. ¿Tienes prioridad en ese cruce?
+    sign: B3
+    answer: true
+    explain: En un voorrangskruispunt tu vía es la que tiene prioridad. Los que vienen por las vías laterales deben cederte el paso.
+    cites: ["rvv:bijlage1.B3"]
+
+  - id: voorrangsborden-regla-vs-senal
+    type: yesno
+    prompt: Una señal de prioridad (como B1) manda sobre la regla de la derecha.
+    answer: true
+    explain: Las señales van por encima de las reglas generales de tráfico.
+    cites: ["rvv:62", "rvv:63"]
+
+  - id: voorrangsborden-afbuigend
+    type: mc
+    prompt: Un panel debajo de la señal muestra que la vía con prioridad dobla a la izquierda. Sigues esa vía. Según el CBR, ¿qué cuenta como esa maniobra?
+    options:
+      - Cuenta como ir recto
+      - Cuenta como girar a la izquierda
+      - Cuenta como dar la vuelta
+      - Cuenta como maniobra especial
+    answer: 0
+    explain: Con el onderbord afbuigende voorrang, seguir la vía que indica el panel cuenta como ir recto; salir de ella cuenta como girar.
+    cites: ["cbr-rijprocedure:3.3"]
