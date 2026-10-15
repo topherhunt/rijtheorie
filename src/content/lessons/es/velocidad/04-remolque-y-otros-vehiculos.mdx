@@ -18,7 +18,6 @@ Para algunos vehículos el RVV fija una velocidad máxima especial más baja que
 <Check id="especial-remolque" />
 <Check id="especial-remolque-otros" />
 <Check id="especial-camion" />
-<Check id="especial-bus" />
 <Check id="especial-autocaravana" />
 <Check id="especial-brommobiel" />
 <Check id="especial-snorfiets" />
@@ -30,13 +29,17 @@ Para algunos vehículos el RVV fija una velocidad máxima especial más baja que
 Con remolque, el máximo de 90 o 80 km/h vale solo "en cuanto no valga ya un máximo más bajo". En la zona urbana, un auto con remolque sigue limitado a 50 km/h.
 </Rule>
 
+Dos ejemplos: auto con remolque de 750 kg en una autosnelweg con una señal de 100 km/h: rige el **90**, porque es más bajo. El mismo auto con remolque en una carretera normal fuera de la zona urbana: rige el **80** general, porque ya es más bajo que 90. Y el límite de peso del remolque decide: con un remolque de más de 3500 kg ya no eres del grupo de 90, sino de los 80 km/h.
+
 <Check id="especial-urbana" />
+<Check id="especial-remolque-senal-menor" />
+<Check id="especial-remolque-otra-via" />
+<Check id="especial-remolque-pesado" />
 
 <Rule cite="rvv:20, rvv:21" title="Ciclomotores">
 Un <T id="bromfiets" /> y un vehículo para personas con discapacidad con motor van en la calzada a 45 km/h máximo, dentro y fuera de la zona urbana. Una snorfiets, aunque también es un bromfiets, tiene su propio máximo de 25 km/h (arriba).
 </Rule>
 
-<Check id="especial-bromfiets" />
 
 <Tip>
 Para recordar: con remolque pequeño sigues en 90 si eres auto, furgoneta o moto; todo lo pesado (camión, autobús, autocaravana grande) o con otro tipo de remolque va a 80.

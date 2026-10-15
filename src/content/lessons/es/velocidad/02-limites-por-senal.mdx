@@ -8,17 +8,20 @@ cbrTopics: [verkeerstekens, wetgeving]
 
 <Signs codes="A1,A2,A4,A5" />
 
-<Rule cite="rvv:bijlage1.A1" title="A1 y A2">
-A1 indica la <T id="maximumsnelheid" /> en km/h y A2 su final.
-</Rule>
-
-<Rule cite="rvv:bijlage1.A4, rvv:62" title="A4 y A5">
-A4 es una <T id="adviessnelheid" /> (recomendada) y A5 su final. Es una recomendación, no un máximo: solo las señales que mandan o prohíben son obligatorias.
+<Rule cite="rvv:bijlage1.A1, rvv:62" title="A1 y A2">
+A1 indica la <T id="maximumsnelheid" /> en km/h: es un máximo, no puedes pasarlo mientras la señal valga para ti. A2 es su final: desde ahí vuelve el máximo general del lugar (50 dentro de la zona urbana; fuera, 80, 100 o 130 según la vía).
 </Rule>
 
 <Check id="senal-a1" />
-<Check id="senal-a2" />
-<Check id="senal-a4" />
+<Check id="senal-a2-general" />
+
+<Rule cite="rvv:bijlage1.A4, rvv:62, rvv:19" title="A4 y A5">
+A4 es una <T id="adviessnelheid" /> (recomendada) y A5 su final. Es una recomendación, no un máximo: solo las señales que mandan o prohíben son obligatorias. Pero no te libera de la regla de siempre: debes poder detenerte dentro de la distancia que ves libre. Si a la velocidad recomendada o a una menor que tú eliges ves que no te alcanza, ve más despacio. A5 solo termina la recomendación; el máximo y la regla de poder detenerte siguen.
+</Rule>
+
+<Check id="senal-recomendada-obligatoria" />
+<Check id="senal-a4-curva" />
+<Check id="senal-a5-fin" />
 
 ## Zonas
 
@@ -34,8 +37,7 @@ La palabra "zone" puede ponerse sobre la señal A1 y otras.
 Para colocar una A1 de 30 o 60 km/h, el decreto de tráfico (verkeersbesluit) debe indicar cómo se cumplen las condiciones legales para esa vía o zona.
 </Rule>
 
-<Check id="senal-zona" />
-<Check id="senal-zona-fin" />
+<Check id="senal-zona-calles" />
 
 ## Solo para un carril o un tipo de usuario
 
@@ -44,18 +46,22 @@ En una vía con carriles, una señal puede aplicarse a uno o varios carriles.
 </Rule>
 
 <Rule cite="rvv:67" title="Onderborden">
-Un onderbord puede explicar la señal o limitarla a ciertos usuarios (solo con símbolos) o excluirlos (con la palabra "uitgezonderd" y símbolos).
+Un onderbord puede explicar la señal, limitarla a ciertos usuarios o excluirlos. Léelo siempre desde tu asiento: ¿soy yo uno de los usuarios que muestra?
+- Solo **símbolos**: la señal vale solo para esos usuarios. Si tu auto no está entre ellos, la señal no es para ti.
+- La palabra **«uitgezonderd»** con símbolos: la señal vale para todos **menos** esos usuarios. Si tu auto no está entre ellos, la señal sí es para ti.
 </Rule>
 
-<Check id="senal-carril" />
 <Check id="senal-onderbord" />
+<Check id="senal-onderbord-solo-simbolo" />
+<Check id="senal-onderbord-uitgezonderd-auto" />
 
 ## Paneles electrónicos sobre la autopista
 
 <Sign code="A3" />
 
-<Rule cite="rvv:bijlage1.A3, rvv:73" title="A3">
-La A3 es una velocidad máxima en un panel electrónico. En las rijstrooklichten, una velocidad máxima de la señal A3 significa que el carril puede usarse (con esa velocidad como máximo).
+<Rule cite="rvv:bijlage1.A3, rvv:73" title="A3 y la cruz roja">
+La A3 es una velocidad máxima en un panel electrónico. En las rijstrooklichten, una velocidad máxima de la señal A3 (o una flecha verde) significa que el carril puede usarse, con esa velocidad como máximo. Una **cruz roja** significa que el carril no puede usarse; una flecha blanca avisa de que más adelante habrá una cruz roja.
 </Rule>
 
 <Check id="senal-a3" />
+<Check id="senal-a3-cruz-roja" />

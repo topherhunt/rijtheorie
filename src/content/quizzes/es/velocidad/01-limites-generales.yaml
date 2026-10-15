@@ -7,15 +7,6 @@ questions:
     explain: "El art. 20 fija 50 km/h para vehículos de motor dentro de la zona urbana."
     cites: ["rvv:20"]
 
-  - id: limites-urbana-senal
-    type: mc
-    prompt: "¿Qué indica esta señal?"
-    options: [Comienzo de la zona urbana, Fin de la zona urbana, Comienzo de una zona de 30, Fin de la autoweg]
-    answer: 0
-    explain: "H1 marca la bebouwde kom y H2 su fin."
-    cites: ["rvv:bijlage1.H1"]
-    sign: H1
-
   - id: limites-autosnelweg
     type: number
     prompt: "¿Cuál es la velocidad máxima general de un auto en una autosnelweg según el RVV, sin otras señales?"
@@ -39,22 +30,6 @@ questions:
     unit: km/h
     explain: "En las demás vías fuera de la zona urbana el máximo es 80 km/h."
     cites: ["rvv:21"]
-
-  - id: limites-minimo-autosnelweg
-    type: number
-    prompt: "Para usar una autosnelweg, ¿a qué velocidad mínima debe poder ir un vehículo de motor (y tener permitido ir)?"
-    answer: 60
-    unit: km/h
-    explain: "El art. 42 lid 1 habla de ir a 60 km/h o más."
-    cites: ["rvv:42.1"]
-
-  - id: limites-minimo-autoweg
-    type: number
-    prompt: "Para usar una autoweg, ¿a qué velocidad mínima debe poder ir un vehículo de motor (y tener permitido ir)?"
-    answer: 50
-    unit: km/h
-    explain: "El art. 42 lid 2 habla de 50 km/h o más."
-    cites: ["rvv:42.2"]
 
   - id: limites-bromfiets
     type: number
@@ -85,3 +60,27 @@ questions:
     answer: true
     explain: "Sí: art. 5a lid 1 onderdeel g."
     cites: ["wvw:5a"]
+
+  - id: limites-bromfiets-autoweg
+    type: yesno
+    prompt: "Un amigo conduce una bromfiets (máximo 45 km/h) y quiere tomar una autoweg (señal G3). ¿Puede usarla?"
+    sign: G3
+    answer: false
+    explain: "El art. 42 permite usar la autoweg solo a conductores de un motorvoertuig, y una bromfiets no es motorvoertuig según el art. 1. Tampoco alcanza el mínimo de 50 km/h."
+    cites: ["rvv:42.2", "rvv:1"]
+
+  - id: limites-h2-otra-via
+    type: mc
+    prompt: "Sales de un pueblo por una carretera normal (ni autoweg ni autosnelweg, sin señales de velocidad) y pasas la señal H2. ¿Qué máximo rige para tu auto desde ahora?"
+    options: [50 km/h, 80 km/h, 100 km/h, 130 km/h]
+    answer: 1
+    explain: "H2 es el fin de la zona urbana. Fuera de ella, en las demás vías, el máximo del art. 21 es 80 km/h."
+    cites: ["rvv:21", "rvv:bijlage1.H2"]
+    sign: H2
+
+  - id: limites-minimo-aplicado
+    type: yesno
+    prompt: "Tu vehículo de motor, por su construcción, no puede superar los 40 km/h. ¿Puedes entrar en una autoweg?"
+    answer: false
+    explain: "La autoweg solo la puede usar un vehículo de motor con el que se puede y se permite ir a 50 km/h o más (art. 42 lid 2)."
+    cites: ["rvv:42.2"]

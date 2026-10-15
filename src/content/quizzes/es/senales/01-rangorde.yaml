@@ -23,13 +23,14 @@ questions:
     explain: Los semáforos van por encima de las señales que regulan la prioridad. Con luz roja, paras aunque la vía tenga prioridad.
     cites: ["rvv:64", "rvv:68.1"]
 
-  - id: rangorde-b1-derecha
-    type: yesno
-    prompt: Circulas por una vía con esta señal. En un cruce sin semáforo, un auto viene por tu derecha por una calle lateral. ¿Pasas tú primero?
-    sign: B1
-    answer: true
-    explain: La señal de prioridad manda sobre la regla general de la derecha. En la vía con prioridad, pasas tú.
-    cites: ["rvv:63", "rvv:bijlage1.B1"]
+  - id: rangorde-b6-izquierda
+    type: mc
+    prompt: Llegas a un cruce sin semáforo con esta señal delante. Por la vía que cruza, un auto se acerca desde tu izquierda. ¿Quién pasa primero?
+    sign: B6
+    options: ["Tú, porque la regla general da prioridad a quien viene por la derecha", "El otro auto, porque la señal manda sobre la regla general", "El más rápido de los dos"]
+    answer: 1
+    explain: La señal B6 te obliga a dar voorrang a la vía que cruza. Una señal pasa por encima de la regla general de la derecha, y aquí la señal te hace ceder aunque el otro venga por tu izquierda.
+    cites: ["rvv:63", "rvv:bijlage1.B6", "rvv:80"]
 
   - id: rangorde-orden-fuerza
     type: mc

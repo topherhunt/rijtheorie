@@ -7,13 +7,6 @@ questions:
     explain: "El art. 11 lid 1 dice que se adelanta por la izquierda. Solo hay excepciones concretas, que se ven en la siguiente lección."
     cites: ["rvv:11.1"]
 
-  - id: adelantar-obstaculo
-    type: yesno
-    prompt: "Según la Rijprocedure B, ¿se dice que se adelanta un auto estacionado en la calzada?"
-    answer: false
-    explain: "Entre usuarios de la vía se adelanta (inhalen). Un obstáculo, como un auto estacionado, se pasa (voorbijgaan)."
-    cites: ["cbr-rijprocedure:3.5"]
-
   - id: adelantar-criterios
     type: multi
     prompt: "¿Qué debes valorar antes de adelantar según la Rijprocedure B?"
@@ -22,13 +15,6 @@ questions:
     explain: "Los criterios incluyen la calzada, la posibilidad de coger velocidad, la visibilidad, el espacio disponible y la velocidad de quien adelantas. El color no importa."
     cites: ["cbr-rijprocedure:3.5"]
 
-  - id: adelantar-paso-peatones
-    type: yesno
-    prompt: "¿Está permitido adelantar un vehículo justo antes de un paso de peatones?"
-    answer: false
-    explain: "Está prohibido adelantar un vehículo justo antes de un paso de peatones o encima de él."
-    cites: ["rvv:12"]
-
   - id: adelantar-f1-bici
     type: yesno
     prompt: "Ves la señal F1 y delante de ti va un ciclomotor (bromfiets). ¿La señal te prohíbe adelantarlo?"
@@ -36,24 +22,6 @@ questions:
     explain: "La F1 prohíbe adelantarse entre vehículos de motor. En el RVV, los vehículos de motor no incluyen los bromfietsen."
     cites: ["rvv:bijlage1.F1", "rvv:1"]
     sign: F1
-
-  - id: adelantar-f1-fin
-    type: mc
-    prompt: "¿Qué señal pone fin a la prohibición de adelantar de la F1?"
-    options: [F2, F3, F4, F5]
-    answer: 0
-    explain: "F2 pone fin a la F1. F4 pone fin a la F3."
-    cites: ["rvv:bijlage1.F2"]
-    sign: F2
-
-  - id: adelantar-f3
-    type: mc
-    prompt: "¿Qué prohíbe esta señal?"
-    options: [A los camiones adelantar vehículos de motor, A los autos adelantar camiones, A todos los vehículos adelantar, Adelantar a una bicicleta]
-    answer: 0
-    explain: "F3 prohíbe a los vrachtauto's adelantar vehículos de motor."
-    cites: ["rvv:bijlage1.F3"]
-    sign: F3
 
   - id: adelantar-lugares
     type: multi
@@ -78,14 +46,6 @@ questions:
     explain: "El art. 55 lo exige al adelantar a otros vehículos de motor, y la Rijprocedure B lo repite. Avisa también antes de volver a tu carril."
     cites: ["rvv:55", "cbr-rijprocedure:3.5"]
 
-  - id: adelantar-velocidad
-    type: mc
-    prompt: "Según la Rijprocedure B, ¿cuándo subes la velocidad para adelantar?"
-    options: [En cuanto exista la posibilidad de adelantar, Cuando ya estás en el otro carril, Después de pasar al otro vehículo, Nunca porque se adelanta a la misma velocidad]
-    answer: 0
-    explain: "Para que la maniobra sea corta, se sube la velocidad en cuanto aparece la posibilidad, sin esperar a haber cambiado de carril."
-    cites: ["cbr-rijprocedure:3.5"]
-
   - id: adelantar-ceder
     type: yesno
     prompt: "Al adelantar entras en la parte de la vía de otro tráfico. ¿Debes dejar pasar a ese tráfico?"
@@ -109,17 +69,57 @@ questions:
     explain: "Cuanto menor es el espacio lateral, menor debe ser la diferencia de velocidad. Los vehículos de dos ruedas son menos estables."
     cites: ["cbr-rijprocedure:3.5"]
 
-  - id: adelantar-puerta
-    type: number
-    prompt: "Al pasar junto a un obstáculo, ¿cuántos anchos de puerta de separación mínima conviene dejar?"
-    answer: 1
-    unit: anchos de puerta
-    explain: "Se deja, siempre que se pueda, una separación mínima de un ancho de puerta (portierbreedte)."
-    cites: ["cbr-rijprocedure:3.5"]
-
   - id: adelantar-varios-obstaculos
     type: yesno
     prompt: "Hay varios autos estacionados con poca distancia entre ellos. ¿Conviene volver a la derecha cada vez en los huecos, aunque no haga falta?"
     answer: false
     explain: "No se debe volver sin necesidad a la derecha, salvo que haga falta por el tráfico que viene de frente."
+    cites: ["cbr-rijprocedure:3.5"]
+
+  - id: adelantar-parado-paso
+    type: yesno
+    prompt: "Un auto está parado justo antes de un paso de peatones y la calzada de al lado está libre. ¿Puedes adelantarlo por la izquierda?"
+    answer: false
+    explain: "Está prohibido adelantar un vehículo justo antes de un paso de peatones o encima de él, aunque esté parado y el carril contrario esté libre. Puede haber un peatón cruzando que no ves."
+    cites: ["rvv:12"]
+
+  - id: adelantar-f1-camion
+    type: yesno
+    prompt: "Ves la señal F1. Conduces un auto y delante va un camión. ¿Puedes adelantarlo?"
+    sign: F1
+    answer: false
+    explain: "La F1 prohíbe a los vehículos de motor adelantarse entre sí. Un camión es un vehículo de motor, así que no puedes adelantarlo; lo que la F1 no cubre son las bicicletas y los ciclomotores."
+    cites: ["rvv:bijlage1.F1", "rvv:1"]
+
+  - id: adelantar-f3-quien
+    type: mc
+    prompt: "Ves la señal F3. ¿Quién tiene prohibido adelantar y a quién?"
+    sign: F3
+    options: [Los camiones a vehículos de motor, Los autos a los camiones, Todos los vehículos a cualquier otro, Los ciclistas a los autos]
+    answer: 0
+    explain: "F3 prohíbe a los vrachtauto's adelantar vehículos de motor. Tú, con un auto, puedes adelantar a un camión, algo que sí te prohibiría la F1."
+    cites: ["rvv:bijlage1.F3"]
+
+  - id: adelantar-curva-ciega
+    type: mc
+    prompt: "Conduces un auto por una calzada de doble sentido sin carriles marcados. Delante de una curva sin visibilidad va un auto lento. ¿Qué haces?"
+    options: [Espero y no adelanto en la curva, Adelanto si no veo nada venir, Adelanto tocando la bocina, Adelanto rápido para que sea corto]
+    answer: 0
+    explain: "Los vehículos de más de dos ruedas no se adelantan en curvas sin visibilidad, salvo que la calzada tenga carriles y no entres en el carril de los que vienen de frente. Aquí no hay carriles, así que no adelantas."
+    cites: ["cbr-rijprocedure:3.5"]
+
+  - id: adelantar-coche-estacionado
+    type: mc
+    prompt: "Hay un auto estacionado en tu lado de la calzada y no viene nadie de frente. ¿Cómo lo pasas?"
+    options: [Lo paso (voorbijgaan) en línea suave y vuelvo a la derecha después, Lo adelanto con el intermitente puesto hasta el final, Lo paso lo más pegado posible, Me detengo y espero a que se vaya]
+    answer: 0
+    explain: "Un obstáculo no se adelanta, se pasa (voorbijgaan): esquivas en línea suave y vuelves a la derecha cuando lo has pasado. Pegarte no es buena idea, porque conviene dejar al menos el ancho de una puerta."
+    cites: ["cbr-rijprocedure:3.5"]
+
+  - id: adelantar-puerta-sin-espacio
+    type: mc
+    prompt: "Al pasar junto a un obstáculo no puedes dejar el ancho de una puerta de separación. ¿Qué haces?"
+    options: [Reduzco aún más la velocidad, Mantengo la velocidad para pasar rápido, Toco la bocina, Acelero para acabar antes]
+    answer: 0
+    explain: "Si no puedes dejar la separación de una portierbreedte, reduces todavía más la velocidad. Pasar rápido con poco espacio es lo contrario."
     cites: ["cbr-rijprocedure:3.5"]

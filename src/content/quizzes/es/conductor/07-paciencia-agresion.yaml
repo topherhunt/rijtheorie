@@ -7,11 +7,11 @@ questions:
     explain: "Un buen conductor es paciente y no muestra agresividad: frena o se detiene."
     cites: ["cbr-rijprocedure:2"]
 
-  - id: paciencia-peligro
+  - id: paciencia-leccion
     type: yesno
-    prompt: ¿Está prohibido comportarte de modo que se cause peligro en la vía, aunque el otro conductor haya cometido un error?
+    prompt: Otro conductor te cierra el paso. Para "darle una lección" frenas bruscamente delante de él. ¿Infringes algo?
     answer: true
-    explain: El artículo 5 WVW se aplica a todos, sin importar quién empezó.
+    explain: El artículo 5 de la WVW prohíbe comportarse de modo que se cause o pueda causarse peligro. Que el otro empezara no lo justifica.
     cites: ["wvw:5"]
 
   - id: paciencia-claxon
@@ -21,38 +21,40 @@ questions:
     explain: Solo se puede usar la bocina o las luces para evitar un peligro inminente.
     cites: ["rvv:28"]
 
-  - id: paciencia-social
-    type: multi
-    prompt: ¿Cuáles de estas son conductas sociales que menciona el CBR?
-    options: ["Hacer el ritsen", "Dejar pasar un cortejo fúnebre", "Dejar salir a quien sale de un acceso", "Pegarte al auto de delante"]
-    answer: [0, 1, 2]
-    explain: Pegarte al auto de delante es una conducta agresiva, no social.
+  - id: paciencia-ritsen-situacion
+    type: mc
+    prompt: Dos carriles se reducen a uno por obras y el tráfico avanza despacio. Un auto del otro carril quiere incorporarse delante de ti. Según el CBR, ¿qué es conducta social?
+    options: ["Dejarle espacio para que se incorpore", "Cerrar el hueco para que no entre", "Tocar la bocina para que espere", "Acelerar para pasar antes"]
+    answer: 0
+    explain: El CBR cita como conducta social dejar espacio a quien adelanta en un estrechamiento de la calzada (ritsen).
+    cites: ["cbr-rijprocedure:2"]
+
+  - id: paciencia-cortejo
+    type: mc
+    prompt: Esperas para cruzar y pasa un cortejo fúnebre. Todavía faltan coches del cortejo por pasar. Según el CBR, ¿qué es conducta social?
+    options: ["Dejar pasar a los coches del cortejo con el mínimo estorbo", "Meterte en un hueco entre dos coches del cortejo", "Tocar la bocina para que se den prisa", "Adelantar al cortejo para llegar antes"]
+    answer: 0
+    explain: El CBR cita como conducta social dejar pasar a los vehículos que forman parte de un cortejo fúnebre y darles el paso más libre posible.
     cites: ["cbr-rijprocedure:2"]
 
   - id: paciencia-charco
+    type: mc
+    prompt: Hay un charco grande en tu carril y varios peatones esperan en la acera pegada. Según el CBR, ¿qué es conducta social?
+    options: ["Evitar pasar por el charco de forma que los salpiques", "Pasar rápido para que el charco se vacíe", "Pasar rozando la acera para no mojar tus ruedas", "Tocar la bocina para que se aparten"]
+    answer: 0
+    explain: El CBR cita como conducta social evitar rodar por charcos cuando otros sufren las consecuencias.
+    cites: ["cbr-rijprocedure:2"]
+
+  - id: paciencia-uitrit
     type: yesno
-    prompt: Hay un charco junto a una acera con peatones. ¿Es conducta social evitar salpicarlos?
+    prompt: Estás en una cola detenida y un auto espera para salir de un acceso (uitrit) justo delante de ti. Según el CBR, ¿es conducta social dejarlo salir?
     answer: true
-    explain: El CBR menciona no salpicar a los peatones con los charcos.
+    explain: El CBR cita entre las conductas sociales permitir a un conductor salir de un acceso.
     cites: ["cbr-rijprocedure:2"]
 
   - id: paciencia-ruido
     type: yesno
-    prompt: ¿Está prohibido hacer ruido innecesario con un vehículo de motor?
+    prompt: Estás parado frente a tu casa a las 10 de la noche y aceleras varias veces el motor en vacío sin ningún motivo. ¿Infringes el artículo 57 del RVV?
     answer: true
-    explain: El artículo 57 prohíbe el ruido innecesario a conductores de vehículos de motor, bromfietsen y snorfietsen.
+    explain: El artículo 57 prohíbe a los conductores de vehículos de motor hacer ruido innecesario con su vehículo. Acelerar en vacío sin motivo lo es.
     cites: ["rvv:57"]
-
-  - id: paciencia-colarse
-    type: yesno
-    prompt: ¿Recomienda el CBR adelantar rápido a otro auto justo antes de un semáforo en rojo?
-    answer: false
-    explain: La guía recomienda no adelantar a toda prisa justo antes de un semáforo en rojo, un paso a nivel o un puente cerrado, o una cola detenida.
-    cites: ["cbr-rijprocedure:2"]
-
-  - id: paciencia-irritado
-    type: yesno
-    prompt: ¿Recomienda el CBR salir de viaje estando irritado?
-    answer: false
-    explain: La guía recomienda no empezar un viaje cansado o irritado.
-    cites: ["cbr-rijprocedure:2"]

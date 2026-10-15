@@ -12,7 +12,7 @@ questions:
     options: [Tú (A), El auto B]
     answer: 0
     explain: B1 es voorrangsweg. Tienes prioridad en los cruces, aunque el otro venga por tu derecha. La señal manda sobre la regla de la derecha.
-    cites: ["rvv:bijlage1.B1", "rvv:63"]
+    cites: ["rvv:bijlage1.B1", "rvv:63", "general"]
 
   - id: voorrangsborden-b2-fin
     type: mc
@@ -29,50 +29,19 @@ questions:
     explain: B2 es einde voorrangsweg, la prioridad terminó. En un cruce sin otras señales vale la regla de la derecha.
     cites: ["rvv:bijlage1.B2", "rvv:15.1"]
 
-  - id: voorrangsborden-nombre-b1
+  - id: voorrangsborden-b1-izquierda
     type: mc
-    prompt: ¿Cómo se llama la señal B1?
-    sign: B1
-    options: [Voorrangsweg, Einde voorrangsweg, Voorrangskruispunt, Rotonde]
-    answer: 0
-    explain: B1 es Voorrangsweg, la vía con prioridad.
-    cites: ["rvv:bijlage1.B1"]
-
-  - id: voorrangsborden-nombre-b2
-    type: mc
-    prompt: ¿Qué indica la señal B2?
-    sign: B2
-    options: [Que la vía con prioridad termina, Que empieza una vía con prioridad, Que debes parar, Que hay una rotonda]
-    answer: 0
-    explain: "B2 es Einde voorrangsweg: termina la vía con prioridad."
-    cites: ["rvv:bijlage1.B2"]
-
-  - id: voorrangsborden-b3
-    type: mc
-    prompt: ¿Cómo se llama la señal B3?
-    sign: B3
-    options: [Voorrangskruispunt, Voorrangsweg, Einde voorrangsweg, Erf]
-    answer: 0
-    explain: B3 es Voorrangskruispunt, el cruce con prioridad señalizada.
-    cites: ["rvv:bijlage1.B3"]
-
-  - id: voorrangsborden-b4
-    type: mc
-    prompt: ¿Cómo se llama la señal B4?
-    sign: B4
-    options: ["Voorrangskruispunt, zijweg links", "Voorrangskruispunt, zijweg rechts", Einde voorrangsweg, Voorrangsweg]
-    answer: 0
-    explain: B4 es Voorrangskruispunt, zijweg links. B5 es lo mismo pero con la vía lateral a la derecha.
-    cites: ["rvv:bijlage1.B4", "rvv:bijlage1.B5"]
-
-  - id: voorrangsborden-b5
-    type: mc
-    prompt: ¿Cómo se llama la señal B5?
-    sign: B5
-    options: ["Voorrangskruispunt, zijweg links", "Voorrangskruispunt, zijweg rechts", Voorrangsweg, Stop]
+    prompt: Llegas a un cruce sin señales en tu vía. B viene por tu izquierda, por una vía con la señal B1. ¿Quién pasa primero?
+    diagram:
+      arms: { n: {}, e: {}, s: {}, w: { sign: B1 } }
+      vehicles:
+        - { label: A, kind: car, from: s, to: straight, you: true }
+        - { label: B, kind: car, from: w, to: straight }
+      alt: Cruce. Tú (A) vienes del sur por una vía sin señales y sigues recto. B viene del oeste, por tu izquierda, por una vía con la señal B1.
+    options: [Tú (A), El auto B]
     answer: 1
-    explain: B5 es Voorrangskruispunt, zijweg rechts.
-    cites: ["rvv:bijlage1.B5"]
+    explain: B circula por la vía con prioridad y la señal manda sobre la regla de la derecha, así que pasa antes que tú aunque venga por tu izquierda. La derecha no te salva aquí.
+    cites: ["rvv:bijlage1.B1", "rvv:63", "general"]
 
   - id: voorrangsborden-b3-ventaja
     type: yesno
@@ -80,14 +49,44 @@ questions:
     sign: B3
     answer: true
     explain: En un voorrangskruispunt tu vía es la que tiene prioridad. Los que vienen por las vías laterales deben cederte el paso.
-    cites: ["rvv:bijlage1.B3"]
+    cites: ["rvv:bijlage1.B3", "general"]
 
-  - id: voorrangsborden-regla-vs-senal
-    type: yesno
-    prompt: Una señal de prioridad (como B1) manda sobre la regla de la derecha.
-    answer: true
-    explain: Las señales van por encima de las reglas generales de tráfico cuando son incompatibles con ellas.
-    cites: ["rvv:62", "rvv:63"]
+  - id: voorrangsborden-b5-lado
+    type: mc
+    prompt: Ves la señal B5 en tu vía. ¿Qué te dice sobre el cruce que viene?
+    sign: B5
+    options:
+      - Que una vía lateral se une por la derecha
+      - Que una vía lateral se une por la izquierda
+      - Que la vía con prioridad termina en ese cruce
+      - Que debes detenerte antes del cruce
+    answer: 0
+    explain: B5 es Voorrangskruispunt, zijweg rechts, así que sabes de antemano que puede aparecer tráfico desde una vía lateral por tu derecha (con B4 sería por la izquierda). Lo que termina la prioridad es B2, y ninguna de estas señales obliga a parar.
+    cites: ["rvv:bijlage1.B5", "rvv:bijlage1.B4", "rvv:bijlage1.B2"]
+
+  - id: voorrangsborden-b4-lado
+    type: mc
+    prompt: Con la señal B4 en tu vía, ¿hacia qué lado miras primero para ver el tráfico que viene de la vía lateral?
+    sign: B4
+    options: [Hacia la izquierda, Hacia la derecha, Hacia atrás, "Hacia ningún lado, porque tienes prioridad"]
+    answer: 0
+    explain: "B4 es Voorrangskruispunt, zijweg links: la vía lateral se une por la izquierda. Tener prioridad no te dispensa de mirar ese lado."
+    cites: ["rvv:bijlage1.B4", "rvv:bijlage1.B5"]
+
+  - id: voorrangsborden-b5-ceder
+    type: mc
+    prompt: Estás en una vía con B5. B viene por tu derecha por la vía lateral, que tiene B6 en su entrada. ¿Quién pasa primero?
+    sign: B5
+    diagram:
+      arms: { n: {}, e: { sign: B6 }, s: { sign: B5 }, w: {} }
+      vehicles:
+        - { label: A, kind: car, from: s, to: straight, you: true }
+        - { label: B, kind: car, from: e, to: straight }
+      alt: Cruce. Tú (A) vienes del sur, con la señal B5 en tu vía, y sigues recto. B viene del este, por tu derecha, por una vía lateral con la señal B6.
+    options: [Tú (A), El auto B]
+    answer: 0
+    explain: Quien tiene delante B6 debe ceder el paso a los conductores de la vía que cruza (art. 80). Esa señal manda sobre la regla de la derecha, así que B cede aunque venga por tu derecha.
+    cites: ["rvv:bijlage1.B6", "rvv:80", "rvv:63"]
 
   - id: voorrangsborden-afbuigend
     type: mc
@@ -100,3 +99,15 @@ questions:
     answer: 0
     explain: Con el onderbord afbuigende voorrang, seguir la vía que indica el panel cuenta como ir recto; salir de ella cuenta como girar.
     cites: ["cbr-rijprocedure:3.3"]
+
+  - id: voorrangsborden-afbuigend-salir
+    type: mc
+    prompt: Un panel de afbuigende voorrang indica que la vía con prioridad gira a la derecha. En el cruce no sigues esa vía sino que continúas recto. Según el CBR, ¿cómo cuenta tu maniobra?
+    options:
+      - Como girar (afslaan), con las obligaciones del art. 18
+      - Como ir recto, con prioridad
+      - Como dar la vuelta (keren)
+      - Como cambio de carril
+    answer: 0
+    explain: Si sigues el trazado que indica el panel cuenta como recto; si te apartas de él, el CBR lo trata como afslaan, y entonces dejas pasar al tráfico de frente y al de tu lado (art. 18).
+    cites: ["cbr-rijprocedure:3.3", "rvv:18.1"]

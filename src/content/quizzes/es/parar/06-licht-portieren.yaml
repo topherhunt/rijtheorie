@@ -46,18 +46,6 @@ questions:
     cites: ["cbr-rijprocedure:3.7"]
     exam: false
 
-  - id: licht-dentro-zona
-    type: mc
-    prompt: ¿Qué dicen los artículos 38 a 40 sobre las luces de un vehículo parado?
-    options:
-      - Regulan los vehículos parados fuera de la zona urbana
-      - Regulan solo los vehículos dentro de la zona urbana
-      - Obligan a llevar luz larga
-      - Prohíben cualquier luz
-    answer: 0
-    explain: Los artículos 38, 39 y 40 se refieren a vehículos parados fuera de la zona urbana.
-    cites: ["rvv:38", "rvv:39", "rvv:40"]
-
   - id: licht-wagen
     type: mc
     prompt: ¿Qué luces lleva un wagen parado de noche en la calzada fuera de la zona urbana?
@@ -66,9 +54,30 @@ questions:
     explain: Los wagens parados llevan luz delantera y trasera.
     cites: ["rvv:40"]
 
-  - id: licht-algemeen
+  - id: licht-dag-buena-vista
     type: yesno
-    prompt: ¿Está permitido comportarte en la vía de modo que cause peligro para otros?
+    prompt: De día y con buena visibilidad, tu auto está parado en la calzada fuera de la zona urbana. ¿Es obligatorio llevar la luz de posición y la trasera?
     answer: false
-    explain: La ley prohíbe causar o poder causar peligro o estorbar el tráfico.
-    cites: ["wvw:5"]
+    explain: El art. 38 las exige de noche y, de día, solo si la visibilidad está seriamente reducida.
+    cites: ["rvv:38"]
+
+  - id: licht-puerta-aparcamiento
+    type: mc
+    prompt: Estacionaste en un aparcamiento justo al lado de otro auto y vas a bajar. ¿Qué indica el procedimiento CBR?
+    options:
+      - Abrir la puerta con extra cuidado
+      - Abrir la puerta del todo para bajar rápido
+      - Bajar sin mirar porque el otro auto está parado
+      - Esperar a que el otro auto se vaya
+    answer: 0
+    explain: Si el vehículo está estacionado junto a otro, la puerta se abre con extra cuidado, y se deja abierta solo el tiempo necesario.
+    cites: ["cbr-rijprocedure:3.7"]
+    exam: false
+
+  - id: licht-puerta-sin-mirar
+    type: yesno
+    prompt: Tu auto está bien estacionado junto a la calzada. Abres de golpe la puerta del lado de la calle sin mirar, y un ciclista que pasa tiene que esquivarla. ¿Es un comportamiento aceptable?
+    answer: false
+    explain: Nadie debe comportarse en la vía de modo que cause o pueda causar peligro o estorbo (art. 5 WVW); estar bien estacionado no te dispensa. El procedimiento CBR pide mirar el espejo interior, el exterior y por encima del hombro antes de abrir.
+    cites: ["wvw:5", "cbr-rijprocedure:3.7"]
+    exam: false

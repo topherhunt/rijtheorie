@@ -1,17 +1,9 @@
 questions:
-  - id: kenteken-apk-seguro-wam
+  - id: kenteken-apk-seguro-garaje
     type: yesno
-    prompt: ¿Debes tener un seguro de responsabilidad civil para un auto que circula por la vía pública?
+    prompt: Tu auto está registrado a tu nombre, pero lleva meses guardado en el garaje sin circular. ¿Sigues obligado a mantener el seguro de responsabilidad civil?
     answer: true
-    explain: La WAM obliga al poseedor y a la persona a cuyo nombre está registrado el auto a contratar y mantener ese seguro.
-    cites: ["wam:2.1"]
-
-  - id: kenteken-apk-seguro-quien
-    type: multi
-    prompt: ¿Quiénes están obligados por la WAM a contratar el seguro?
-    options: [El poseedor del auto, La persona a cuyo nombre está registrado, El vecino, El mecánico]
-    answer: [0, 1]
-    explain: La obligación recae en el poseedor (bezitter) y en quien figura en el registro de matrículas.
+    explain: La WAM exige el seguro también cuando el vehículo está inscrito y a nombre de alguien en el kentekenregister, aunque no circule.
     cites: ["wam:2.1"]
 
   - id: kenteken-apk-seguro-tapar
@@ -21,55 +13,47 @@ questions:
     explain: El kenteken debe verse. Si el portabultos tapa la placa, debe llevar una placa con el mismo kenteken.
     cites: ["wvw:40", "rv:5.18.7/1.f"]
 
-  - id: kenteken-apk-seguro-falsa
+  - id: kenteken-apk-seguro-camaras
     type: yesno
-    prompt: ¿Está permitido poner una placa que se haga pasar por matrícula?
-    answer: false
-    explain: Está prohibido tapar el kenteken o poner una placa que pase por matrícula.
+    prompt: Para que las cámaras de control no te lean la matrícula, pones una cubierta sobre ella al circular. ¿Es una infracción?
+    answer: true
+    explain: El artículo 41 prohíbe poner algo en el vehículo con el fin de dificultar el reconocimiento del kenteken, y también circular con el vehículo así.
     cites: ["wvw:41"]
 
   - id: kenteken-apk-seguro-remolque
     type: mc
     prompt: Tu remolque pesa como máximo 600 kg y no tiene matrícula propia. ¿Qué placa lleva?
-    options: [Ninguna, La del auto que lo arrastra, Una placa temporal de papel, La de tu casa]
+    options: ["Ninguna", "La del auto que lo arrastra", "Una placa temporal de papel", "La de tu casa"]
     answer: 1
     explain: Un remolque de hasta 750 kg sin kenteken propio lleva el kenteken del vehículo que lo arrastra.
     cites: ["rv:5.18.10/1"]
 
-  - id: kenteken-apk-seguro-card
-    type: number
-    prompt: Compraste un auto y se puso a tu nombre. ¿A los cuántos días como máximo debes poder mostrar la kentekencard?
-    answer: 14
-    unit: días
-    explain: La obligación de mostrarla rige desde 14 días después de la tenaamstelling.
+  - id: kenteken-apk-seguro-card-reciente
+    type: yesno
+    prompt: Compraste el auto hace 5 días y se puso a tu nombre, pero la kentekencard aún no te la han entregado. La policía te para. ¿Estás obligado a mostrarla?
+    answer: false
+    explain: La obligación rige desde que la kentekencard se entrega, y en todo caso desde 14 días después de la tenaamstelling. Aún no se cumple ninguna de las dos.
     cites: ["kr:22"]
 
-  - id: kenteken-apk-seguro-apk
+  - id: kenteken-apk-seguro-apk-prestado
     type: yesno
-    prompt: Según la ley, ¿debe ser válido y legible el keuringsbewijs (APK) de un vehículo con matrícula?
+    prompt: Conduces el auto prestado de un amigo y su keuringsbewijs (APK) ya no es válido. ¿Puedes ser responsable tú también, y no solo tu amigo?
     answer: true
-    explain: Debe existir un keuringsbewijs válido y legible; el propietario y el conductor son responsables.
+    explain: El artículo 72 hace responsables al propietario o poseedor y, cuando se circula con el vehículo, también al conductor.
     cites: ["wvw:72"]
 
-  - id: kenteken-apk-seguro-kr
+  - id: kenteken-apk-diesel
     type: mc
-    prompt: ¿Qué es un kenteken?
-    options: [Una combinación de letras y cifras, Un número de teléfono del taller, El número del chasis solamente, El nombre del propietario]
+    prompt: Tu auto diésel tiene 5 años y pasó su último APK hace 11 meses. ¿Cuándo toca el siguiente?
+    options: ["En aproximadamente 1 mes (cada año)", "Dentro de 13 meses", "Dentro de 2 años", "Ya no hace falta"]
     answer: 0
-    explain: El Kentekenreglement define el kenteken como una combinación de letras y cifras.
-    cites: ["kr:2"]
+    explain: Los diésel y GLP tienen el primer APK a los 3 años y después cada año.
+    cites: ["anwb-apk"]
 
-  - id: kenteken-apk-seguro-papeles
-    type: yesno
-    prompt: ¿Debe el auto corresponder a los datos que figuran en el kentekenbewijs?
-    answer: true
-    explain: La WVW exige un kentekenbewijs válido y que el vehículo coincida con sus datos.
-    cites: ["wvw:36"]
-
-  - id: kenteken-apk-plazo
-    type: number
-    prompt: Compraste un auto de gasolina nuevo. ¿A los cuántos años le toca el primer APK?
-    answer: 4
-    unit: años
-    explain: Gasolina o eléctrico, nuevo desde 2005, primer APK a los 4 años, luego cada 2 años y desde los 8 años cada año. Diésel y GLP, a los 3 años y luego cada año.
+  - id: kenteken-apk-gasolina-vieja
+    type: mc
+    prompt: Tu auto de gasolina tiene 9 años. ¿Cada cuánto debe pasar el APK?
+    options: ["Cada año", "Cada 2 años", "Cada 4 años", "Solo cuando se vende"]
+    answer: 0
+    explain: Los de gasolina pasan el primer APK a los 4 años, después cada 2 años y desde que cumplen 8 años, cada año.
     cites: ["anwb-apk"]

@@ -13,30 +13,6 @@ questions:
     explain: El art. 16 nombra a las militaire colonnes y a las uitvaartstoeten de motorvehículos.
     cites: ["rvv:16"]
 
-  - id: colonne-def-colonne
-    type: mc
-    prompt: ¿Qué es una militaire colonne según la ley?
-    options:
-      - Varios vehículos motorizados militares, uno tras otro, bajo un solo comandante y con distintivos oficiales
-      - Cualquier grupo de tres vehículos
-      - Un solo camión militar
-      - Un grupo de ciclistas militares
-    answer: 0
-    explain: Es una fila de vehículos motorizados bajo un solo comandante y con los distintivos oficiales.
-    cites: ["rvv:1"]
-
-  - id: colonne-def-stoet
-    type: mc
-    prompt: ¿Cuáles son las características de una uitvaartstoet de motorvehículos?
-    options:
-      - Motorvehículos que acompañan a un difunto o sus cenizas y llevan distintivos oficiales
-      - Cualquier grupo de autos con luces encendidas
-      - Cualquier vehículo con flores
-      - Un solo coche fúnebre
-    answer: 0
-    explain: Según el art. 1, son motorvehículos que acompañan a un difunto o sus cenizas y llevan los distintivos del art. 30c.
-    cites: ["rvv:1", "rvv:30c"]
-
   - id: colonne-excepciones
     type: multi
     prompt: ¿Qué excepciones tienen los motorvehículos que van dentro de una columna militar?
@@ -69,3 +45,10 @@ questions:
     answer: true
     explain: El art. 49.3 los exceptúa.
     cites: ["rvv:49.3"]
+
+  - id: colonne-hueco
+    type: yesno
+    prompt: Esperas ante B6 en una vía lateral. Por la vía que cruzas pasa una columna militar con distintivos oficiales; entre dos camiones queda un hueco grande. ¿Puedes cruzar por ese hueco?
+    answer: false
+    explain: Los usuarios de la vía no pueden cortar (doorsnijden) una columna militar. Esperas a que termine de pasar, aunque se vea un hueco.
+    cites: ["rvv:16"]

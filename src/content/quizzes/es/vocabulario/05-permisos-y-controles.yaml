@@ -1,64 +1,10 @@
 questions:
-  - id: permisos-y-controles-rijverbod
-    type: mc
-    prompt: ¿Qué es un "rijverbod"?
-    options: [Una prohibición inmediata de conducir, Un permiso nuevo, Una multa de estacionamiento, Un curso]
-    answer: 0
-    explain: Rijverbod es la prohibición inmediata de conducir (hasta 24 horas, impuesta por la policía).
-    cites: ["cbr-examenplan:4", "wvw:162"]
-    exam: false
-
-  - id: permisos-y-controles-rijontzegging
-    type: mc
-    prompt: ¿Qué es una "rijontzegging"?
-    options: [La retirada del derecho a conducir por un juez, Un curso del CBR, Un examen práctico, Una multa de velocidad]
-    answer: 0
-    explain: Rijontzegging es la prohibición de conducir impuesta por un juez.
-    cites: ["cbr-examenplan:4", "wvw:179"]
-    exam: false
-
-  - id: permisos-y-controles-ademanalyse
-    type: mc
-    prompt: ¿Qué es una "ademanalyse"?
-    options: [Un análisis de aliento, Un análisis de sangre, Una prueba de saliva, Un examen de la vista]
-    answer: 0
-    explain: Ademanalyse es el análisis de aliento.
-    cites: ["cbr-examenplan:4"]
-    exam: false
-
-  - id: permisos-y-controles-speeksel
-    type: mc
-    prompt: ¿Qué detecta la "speekseltest"?
-    options: [Drogas, Alcohol, Fatiga, Velocidad]
-    answer: 0
-    explain: La prueba de saliva se usa para drogas.
-    cites: ["cbr-examenplan:4", "wvw:160.5"]
-    exam: false
-
-  - id: permisos-y-controles-kentekenplaat
-    type: mc
-    prompt: ¿Qué es la "kentekenplaat"?
-    options: [La placa de matrícula, El permiso de conducir, El seguro, La inspección técnica]
-    answer: 0
-    explain: Kentekenplaat es la placa con el kenteken.
-    cites: ["cbr-examenplan:4"]
-    exam: false
-
   - id: permisos-y-controles-apk
     type: mc
     prompt: ¿Qué significa "APK-gekeurd"?
     options: [Con la inspección técnica aprobada, Con el seguro pagado, Con permiso nuevo, Recién matriculado]
     answer: 0
     explain: APK-gekeurd significa que pasó la inspección APK.
-    cites: ["cbr-examenplan:4"]
-    exam: false
-
-  - id: permisos-y-controles-emg
-    type: mc
-    prompt: ¿Qué es la EMG?
-    options: [Un curso obligatorio sobre comportamiento en el tráfico, Un curso sobre alcohol y tráfico, Un examen práctico, Una multa]
-    answer: 0
-    explain: EMG es la Educatieve maatregel gedrag en verkeer.
     cites: ["cbr-examenplan:4"]
     exam: false
 
@@ -71,19 +17,53 @@ questions:
     cites: ["cbr-examenplan:4"]
     exam: false
 
-  - id: permisos-y-controles-blaastest
+  - id: permisos-y-controles-kentekenbewijs-control
     type: yesno
-    prompt: ¿"Blaastest" es la prueba de soplar en el control de alcohol?
+    prompt: Un agente te hace señal de parar y te pide la documentación. ¿Debes detener el auto y mostrar el kentekenbewijs y el rijbewijs?
     answer: true
-    explain: Blaastest es el alcoholímetro rápido.
-    cites: ["cbr-examenplan:4"]
-    exam: false
+    explain: Ante la primera orden de un agente competente, el conductor de un motorrijtuig debe detener el vehículo y mostrar el kentekenbewijs y el rijbewijs.
+    cites: ["wvw:160.1"]
 
-  - id: permisos-y-controles-politiebureau
+  - id: permisos-y-controles-soplar-negarse
+    type: yesno
+    prompt: En un control un agente te pide soplar en el alcoholímetro (blaastest). ¿Puedes negarte?
+    answer: false
+    explain: Debes colaborar con el examen de aliento ante la primera orden del agente y seguir sus indicaciones.
+    cites: ["wvw:160.5"]
+
+  - id: permisos-y-controles-saliva-colaborar
+    type: yesno
+    prompt: En un control un agente quiere hacerte una prueba de saliva (speekseltest). ¿Estás obligado a colaborar?
+    answer: true
+    explain: Ante la primera orden de un agente competente debes colaborar con el examen de saliva, igual que con el de aliento.
+    cites: ["wvw:160.5"]
+
+  - id: permisos-y-controles-rijverbod-sientes-bien
     type: mc
-    prompt: ¿Qué es un "politiebureau"?
-    options: [Una comisaría, Un auto de policía, Un control, Un tribunal]
+    prompt: La policía te impone un rijverbod por drogas. Una hora después te sientes bien. ¿Puedes conducir?
+    options: ["Sí, porque ya te sientes bien", "No, mientras dure el rijverbod", "Sí, si conduces despacio", "Sí, si te acompaña otro conductor"]
+    answer: 1
+    explain: Durante el tiempo que dura el rijverbod (como máximo 24 horas) está prohibido conducir, aunque te sientas bien.
+    cites: ["wvw:162"]
+
+  - id: permisos-y-controles-rijverbod-24h
+    type: yesno
+    prompt: Un agente te impone un rijverbod porque has consumido una sustancia y no puedes conducir bien. ¿Puede durar una semana?
+    answer: false
+    explain: El rijverbod dura el tiempo en que se espera que dure ese estado, como máximo 24 horas.
+    cites: ["wvw:162"]
+
+  - id: permisos-y-controles-rijontzegging-agente
+    type: yesno
+    prompt: Un agente te para por conducir bajo los efectos del alcohol. ¿Puede imponerte en ese momento una rijontzegging?
+    answer: false
+    explain: La rijontzegging es una pena que se impone al condenar por una infracción. Lo que sí puede imponer un agente en el momento es un rijverbod de hasta 24 horas.
+    cites: ["wvw:179", "wvw:162"]
+
+  - id: permisos-y-controles-rijverbod-vs-ontzegging
+    type: mc
+    prompt: ¿Cuál es la diferencia entre un rijverbod y una rijontzegging?
+    options: ["El rijverbod lo impone un agente y dura como máximo 24 horas, la rijontzegging es una pena al condenar", El rijverbod lo impone un juez y la rijontzegging un agente, Son lo mismo, Los dos los impone el CBR]
     answer: 0
-    explain: Politiebureau es la comisaría.
-    cites: ["cbr-examenplan:4"]
-    exam: false
+    explain: El rijverbod es inmediato y lo impone un agente competente por un máximo de 24 horas. La rijontzegging es una pena al condenar por ciertas infracciones.
+    cites: ["wvw:162", "wvw:179"]

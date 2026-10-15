@@ -7,6 +7,14 @@ questions:
     explain: Un onderbord con solo símbolos limita la señal a los usuarios representados.
     cites: ["rvv:67.1"]
 
+  - id: ob-c12-solo-camion
+    type: yesno
+    prompt: Conduces un auto. Una señal C12 (cerrado para todos los vehículos de motor) lleva debajo un panel que muestra solo el símbolo de un camión. ¿Puedes entrar?
+    sign: C12
+    answer: true
+    explain: Un panel con solo símbolos limita la señal a los usuarios representados. La prohibición vale solo para camiones, y tu auto no lo es.
+    cites: ["rvv:67.1", "rvv:bijlage1.C12"]
+
   - id: ob-uitgezonderd
     type: mc
     prompt: Bajo una señal de prohibición hay un panel con la palabra "uitgezonderd" y el símbolo de una bicicleta. ¿Qué significa?
@@ -14,6 +22,22 @@ questions:
     answer: 0
     explain: '"Uitgezonderd" más símbolos excluye a los usuarios representados.'
     cites: ["rvv:67.1"]
+
+  - id: ob-c12-uitgezonderd-moto
+    type: yesno
+    prompt: Conduces un auto. Una señal C12 lleva debajo un panel con "uitgezonderd" y el símbolo de una moto. ¿Puedes entrar?
+    sign: C12
+    answer: false
+    explain: '"Uitgezonderd" más un símbolo exceptúa solo a lo representado: las motos. Para el auto, C12 sigue cerrando la vía.'
+    cites: ["rvv:67.1", "rvv:bijlage1.C12"]
+
+  - id: ob-uitgezonderd-camion
+    type: yesno
+    prompt: Conduces un camión. Una señal C12 lleva debajo un panel con "uitgezonderd" y el símbolo de un camión. ¿Puedes entrar?
+    sign: C12
+    answer: true
+    explain: El panel con "uitgezonderd" y el símbolo de un camión exceptúa a los camiones de la prohibición.
+    cites: ["rvv:67.1", "rvv:bijlage1.C12"]
 
   - id: ob-texto
     type: mc
@@ -23,6 +47,14 @@ questions:
     explain: Si el comportamiento se indica con textos o signos, resulta del onderbord.
     cites: ["rvv:67.2"]
 
+  - id: ob-carril-f1-l12
+    type: yesno
+    prompt: Sobre el carril derecho hay una señal F1 con un panel L12 que indica que vale solo para ese carril. Circulas en el carril izquierdo con tu auto. ¿Puedes adelantar a otro auto?
+    sign: F1
+    answer: true
+    explain: Una señal puede limitarse a un carril. La prohibición de F1 no te alcanza si tu carril no es el indicado.
+    cites: ["rvv:65.1", "rvv:bijlage1.L12", "rvv:bijlage1.F1"]
+
   - id: ob-lado-e1
     type: yesno
     prompt: La señal E1 (prohibido estacionar) está en el lado derecho de la calle. ¿Vale también para el lado izquierdo?
@@ -31,13 +63,6 @@ questions:
     explain: E1, E2 y E3 valen solo para el lado de la vía donde están colocadas.
     cites: ["rvv:65.2"]
 
-  - id: ob-carril
-    type: yesno
-    prompt: En una vía con varios carriles, ¿puede una señal aplicarse solo a uno de ellos?
-    answer: true
-    explain: La aplicación de una señal puede limitarse a uno o varios carriles.
-    cites: ["rvv:65.1"]
-
   - id: ob-zone-fin
     type: mc
     prompt: Una señal lleva la palabra "zone" y no indica área. ¿Hasta dónde vale?
@@ -45,28 +70,3 @@ questions:
     answer: 0
     explain: Sin área indicada, vale hasta la señal de fin de zona.
     cites: ["rvv:66.2"]
-
-  - id: ob-zone-e10
-    type: yesno
-    prompt: ¿La regla de "zone" sin área indicada se aplica también a la señal E10?
-    sign: E10
-    answer: true
-    explain: El art. 66 menciona expresamente E10.
-    cites: ["rvv:66"]
-
-  - id: ob-c22e-panel
-    type: mc
-    prompt: ¿Para qué sirven los paneles C22e4 a C22e10 bajo la señal C22e?
-    sign: C22e
-    options: ["Indican qué vehículos y clases de emisión afecta la zona", "Indican el horario de la zona", "Indican la velocidad máxima", "Indican el fin de la zona"]
-    answer: 0
-    explain: Los paneles precisan los vehículos y las clases de emisión de la zona ambiental.
-    cites: ["rvv:86d"]
-
-  - id: ob-simbolos-anexo
-    type: yesno
-    prompt: ¿Los símbolos de un onderbord tienen el mismo significado que en el anexo 1 del RVV?
-    answer: true
-    explain: Los símbolos de los paneles tienen el mismo significado que en el anexo 1.
-    cites: ["rvv:67.3"]
-    exam: false

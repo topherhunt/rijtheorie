@@ -8,15 +8,6 @@ questions:
     cites: ["cbr-examenplan:4"]
     exam: false
 
-  - id: conduccion-y-accidentes-stopafstand
-    type: mc
-    prompt: ¿Qué es la "stopafstand"?
-    options: [La distancia de detención total, Solo la distancia de frenado, La distancia entre dos autos, La distancia de adelantamiento]
-    answer: 0
-    explain: Stopafstand es la distancia de detención (reacción más frenado).
-    cites: ["cbr-examenplan:4"]
-    exam: false
-
   - id: conduccion-y-accidentes-blikschade
     type: mc
     prompt: ¿Qué es la "blikschade"?
@@ -26,92 +17,54 @@ questions:
     cites: ["cbr-examenplan:4"]
     exam: false
 
-  - id: conduccion-y-accidentes-handheld
-    type: mc
-    prompt: ¿Qué significa "handheld bellen"?
-    options: [Hablar por el móvil sosteniéndolo en la mano, Hablar con manos libres, Enviar mensajes de voz, Usar el navegador]
-    answer: 0
-    explain: Handheld bellen es llamar con el móvil en la mano.
-    cites: ["cbr-examenplan:4"]
-    exam: false
+  - id: conduccion-y-accidentes-movil-mano
+    type: yesno
+    prompt: Conduces y sostienes el móvil en la mano para cambiar de canción. ¿Está permitido?
+    answer: false
+    explain: Está prohibido sostener un teléfono, una tableta o un reproductor de música mientras conduces.
+    cites: ["rvv:61a"]
 
-  - id: conduccion-y-accidentes-zijwind
+  - id: conduccion-y-accidentes-matrix-cruz
     type: mc
-    prompt: '"Zijwind" significa...'
-    options: [Viento lateral, Viento de frente, Lluvia, Niebla]
-    answer: 0
-    explain: Zijwind es el viento lateral.
-    cites: ["cbr-examenplan:4"]
-    exam: false
+    prompt: Sobre el carril por el que circulas se enciende una cruz roja en el panel. ¿Qué debes hacer?
+    options: [Seguir porque el panel solo recomienda, Dejar de usar ese carril y pasar a otro, Aumentar la velocidad para salir rápido, Detenerte en el carril]
+    answer: 1
+    explain: La cruz roja significa que el carril no puede usarse.
+    cites: ["rvv:73"]
 
-  - id: conduccion-y-accidentes-slip
+  - id: conduccion-y-accidentes-matrix-flecha-blanca
     type: mc
-    prompt: '"Slipgevaar" significa...'
-    options: [Peligro de derrape, Peligro de incendio, Peligro de choque, Peligro de niebla]
+    prompt: Sobre tu carril ves una flecha blanca en el panel. ¿Qué indica?
+    options: [Un preaviso de que más adelante habrá una cruz roja, Que el carril ya está cerrado, Que el carril es solo para bus, Que puedes aumentar la velocidad]
     answer: 0
-    explain: Slipgevaar es el peligro de derrape.
-    cites: ["cbr-examenplan:4"]
-    exam: false
+    explain: La flecha blanca es una voorwaarschuwing (preaviso) de la cruz roja. La flecha verde es la que permite usar el carril.
+    cites: ["rvv:73"]
 
-  - id: conduccion-y-accidentes-schade
-    type: mc
-    prompt: ¿Qué es un "schadeformulier"?
-    options: [Un parte amistoso de accidente, Una multa, Un contrato de seguro, Un permiso]
-    answer: 0
-    explain: Schadeformulier es el formulario para registrar los datos de un accidente.
-    cites: ["cbr-examenplan:4"]
-    exam: false
+  - id: conduccion-y-accidentes-bus-lane-panel
+    type: yesno
+    prompt: Sobre un carril se ve la palabra BUS en el panel. ¿Puedes usarlo con tu auto?
+    answer: false
+    explain: Con BUS el carril solo puede ser usado por un lijnbus y un autobus.
+    cites: ["rvv:73"]
 
-  - id: conduccion-y-accidentes-wegenwacht
-    type: mc
-    prompt: ¿Qué es la "Wegenwacht"?
-    options: [La asistencia en carretera de la ANWB, La policía de tránsito, Una autopista, Una multa]
-    answer: 0
-    explain: Wegenwacht es la asistencia en carretera de la ANWB.
-    cites: ["cbr-examenplan:4"]
-    exam: false
+  - id: conduccion-y-accidentes-lijnbus-autobus
+    type: yesno
+    prompt: Sobre un carril se ve la palabra LIJNBUS en el panel. Eres conductor de un autobús turístico (autobus) que no hace servicio de línea. ¿Puedes usarlo?
+    answer: false
+    explain: Con LIJNBUS el carril solo puede usarlo un lijnbus. Con la palabra BUS sí podría usarlo un autobus, pero aquí no.
+    cites: ["rvv:73"]
 
-  - id: conduccion-y-accidentes-matrix
-    type: mc
-    prompt: ¿Qué es un "matrixbord"?
-    options: [Un panel electrónico sobre el carril, Un semáforo, Una placa de matrícula, Un mapa]
-    answer: 0
-    explain: Matrixbord es el panel luminoso sobre el carril.
-    cites: ["cbr-examenplan:4"]
-    exam: false
+  - id: conduccion-y-accidentes-gesloten-entrar
+    type: yesno
+    prompt: Una calle tiene una geslotenverklaring para tu categoría de vehículo, sin ninguna excepción indicada. Quieres cortar camino solo por 200 metros. ¿Puedes entrar?
+    answer: false
+    explain: La geslotenverklaring prohíbe entrar en la vía y también usarla. Que el tramo sea corto no cambia nada.
+    cites: ["rvv:1"]
 
-  - id: conduccion-y-accidentes-doorstroming
+  - id: conduccion-y-accidentes-irse-del-lugar
     type: mc
-    prompt: ¿Qué es la "doorstroming"?
-    options: [La fluidez del tráfico, Un atasco, Un desvío, Una obra]
+    prompt: Chocas con otro auto y hay solo daños materiales (blikschade). ¿Cuándo puedes irte?
+    options: [Cuando hayas dado la oportunidad de establecer tu identidad y la de tu vehículo, Cuando creas que el daño es pequeño, Cuando el otro conductor se haya ido, "Nunca, aunque hayas dado tus datos"]
     answer: 0
-    explain: Doorstroming es la fluidez del tráfico; filevorming es la formación de atascos.
-    cites: ["cbr-examenplan:4"]
-    exam: false
-
-  - id: conduccion-y-accidentes-aquaplaning
-    type: mc
-    prompt: ¿Cuál de estas palabras describe el peligro de derrape?
-    options: [slipgevaar, oplettendheid, doorstroming, wegligging]
-    answer: 0
-    explain: Slipgevaar es el peligro de derrape.
-    cites: ["cbr-examenplan:4"]
-    exam: false
-
-  - id: conduccion-y-accidentes-reactie
-    type: mc
-    prompt: ¿Cómo se dice "tiempo de reacción" en neerlandés?
-    options: [reactietijd, stopafstand, remweg, vertraging]
-    answer: 0
-    explain: Reactietijd es el tiempo de reacción.
-    cites: ["cbr-examenplan:4"]
-    exam: false
-
-  - id: conduccion-y-accidentes-gesloten
-    type: mc
-    prompt: ¿Qué es una "geslotenverklaring"?
-    options: [Una prohibición de acceso, Una autorización, Un desvío, Un preaviso]
-    answer: 0
-    explain: Geslotenverklaring es una prohibición de acceso a un tipo de tráfico.
-    cites: ["cbr-examenplan:4"]
-    exam: false
+    explain: Con daño material puedes irte solo si diste la oportunidad de establecer tu identidad y la del vehículo. Que el daño te parezca pequeño no cuenta.
+    cites: ["wvw:7"]

@@ -23,6 +23,12 @@ Debes obedecer las señales que contienen una orden o una prohibición.
 
 <Check id="c-c2-significado" />
 
+<Rule cite="rvv:bijlage1.C1, rvv:1" title="C1 no cierra a los peatones">
+C1 cierra para *voertuigen*, jinetes y conductores de animales. Los peatones no son voertuigen, así que **pueden pasar**; una bicicleta o un ciclomotor sí son voertuigen y quedan fuera.
+</Rule>
+
+<Check id="c-c1-peaton" />
+
 ## Cerrado para ciertos vehículos
 
 <Signs codes="C6,C7,C7a,C7b,C8,C9,C10,C11,C12,C13,C14,C15,C16" />
@@ -33,7 +39,7 @@ Debes obedecer las señales que contienen una orden o una prohibición.
 - **C9**: jinetes, ganado, carros, tractores, bicicletas, <T id="snorfiets">snorfietsen</T>, <T id="bromfiets">ciclomotores</T> y más.
 - **C10**: vehículos de motor **con remolque**.
 - **C11**: motocicletas.
-- **C12**: **todos** los vehículos de motor (autos, motos, camiones).
+- **C12**: **todos** los vehículos de motor (autos, motos, camiones), pero **no** los ciclomotores.
 - **C13**: ciclomotores, snorfietsen y vehículos para personas con discapacidad con el motor en marcha.
 - **C14**: bicicletas y vehículos para personas con discapacidad sin motor.
 - **C15**: bicicletas, ciclomotores y vehículos para personas con discapacidad.
@@ -43,7 +49,23 @@ Debes obedecer las señales que contienen una orden o una prohibición.
 C6 y C12 se parecen. C6 cierra los vehículos de motor de más de dos ruedas (tu auto no pasa, la moto sí). C12 los cierra todos, motos incluidas.
 </Warn>
 
+<Rule cite="rvv:bijlage1.C12, rvv:bijlage1.C13, rvv:bijlage1.C14, rvv:bijlage1.C15, rvv:1" title="Ciclomotores: C12 no, C13 y C15 sí">
+Para el RVV, un ciclomotor (*bromfiets*) no es un *motorvoertuig* y tampoco una *fiets*. Por eso **C12 no lo cierra** y **C14 tampoco**. A él lo cierran C13 (con el motor en marcha), C15 y C9.
+</Rule>
+
 <Check id="c-c6-c12" />
+
+<Check id="c-c12-motos" />
+
+<Check id="c-c7-auto" />
+
+<Check id="c-c10-remolque" />
+
+<Check id="c-c12-bromfiets" />
+
+<Check id="c-c14-bromfiets" />
+
+<Check id="c-ciclomotor-no-bici" />
 
 ## Medidas, peso y mercancías
 
@@ -60,7 +82,11 @@ C6 y C12 se parecen. C6 cierra los vehículos de motor de más de dos ruedas (tu
 C21: cerrado para vehículos y combinaciones cuya masa total (o suma de cargas por eje) es mayor que la indicada en la señal. La medida incluye la carga.
 </Rule>
 
-<Check id="c-c19-altura" />
+<Rule cite="rvv:bijlage1.C19" title="La altura incluye la carga">
+C19 cierra los vehículos que, **con la carga incluida**, sean más altos de lo indicado. Un vehículo bajo con una carga alta no pasa.
+</Rule>
+
+<Check id="c-c19-carga" />
 
 ## Zonas ambientales
 
@@ -69,6 +95,8 @@ C21: cerrado para vehículos y combinaciones cuya masa total (o suma de cargas p
 <Rule cite="rvv:bijlage1.C22e, rvv:86d.1, rvv:86d.3" title="Milieuzone">
 C22e cierra una zona (<T id="zone" />) por requisitos de emisiones. La prohibición de una milieuzone se aplica a autos, vehículos de empresa (como furgonetas), camiones o autobuses con **motor diésel**, según el panel que lleve debajo (clase de emisión). Hay excepciones, entre ellas los vehículos de 40 años o más y los accesibles para sillas de ruedas. C22f marca el fin de la zona.
 </Rule>
+
+<Check id="c-c22e-milieuzone" />
 
 ## Excepciones por permiso
 

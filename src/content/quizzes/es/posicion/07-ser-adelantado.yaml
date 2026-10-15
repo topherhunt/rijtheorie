@@ -46,31 +46,41 @@ questions:
     explain: "Solo si el espacio disponible no alcanza para pasar uno junto al otro sin estorbarse."
     cites: ["cbr-rijprocedure:3.2"]
 
-  - id: tegemoetkomen-velocidad
-    type: mc
-    prompt: "¿De qué depende sobre todo cuánto bajas la velocidad al cruzarte con un vehículo?"
-    options: [Del ancho de la calzada, Del color del vehículo, Del tipo de neumáticos, De la hora]
-    answer: 0
-    explain: "Depende sobre todo del ancho de la calzada."
-    cites: ["cbr-rijprocedure:3.2"]
-
-  - id: tegemoetkomen-contacto
-    type: yesno
-    prompt: "La calzada es demasiado estrecha para pasar a la vez que otro auto. ¿Puedes parar y resolverlo con contacto visual o gestos?"
-    answer: true
-    explain: "Es lo que indica la Rijprocedure B si el ancho no permite continuar."
-    cites: ["cbr-rijprocedure:3.2"]
-
-  - id: tegemoetkomen-obligacion
-    type: yesno
-    prompt: "Al cruzarte con otro vehículo en poco espacio, ¿tiene solo uno de los dos la obligación de evitar el peligro?"
-    answer: false
-    explain: "Ambos conductores tienen la misma obligación (art. 5 WVW) uno hacia el otro."
-    cites: ["cbr-rijprocedure:3.2", "wvw:5"]
-
   - id: tegemoetkomen-derecha
     type: yesno
     prompt: "Al apartarte a la derecha para cruzarte con otro vehículo, ¿debes tener en cuenta a quienes están en el lado derecho de la vía?"
     answer: true
     explain: "Sí, hay que tener en cuenta a los usuarios que están a ese lado de la vía."
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: adelantado-derecha-izquierda
+    type: mc
+    prompt: "Un vehículo te adelanta por la derecha y, si hace falta, hay sitio a tu izquierda. ¿Qué haces?"
+    options: [Me aparto a la izquierda, Me aparto a la derecha, Acelero para que no pase, Me quedo donde estoy aunque no quepa]
+    answer: 0
+    explain: "Si te adelantan por la derecha te apartas a la izquierda, al revés que cuando te adelantan por la izquierda. Apartarte hacia el lado por donde te adelantan cerraría el espacio."
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: tegemoetkomen-ciclistas-estrecho
+    type: mc
+    prompt: "Conduces por una calzada muy estrecha y vienen muchos ciclistas de frente. ¿Qué haces?"
+    options: [Reduzco más la velocidad o incluso paro, Mantengo la velocidad y toco la bocina, Acelero para pasar antes, Me aparto lo menos posible]
+    answer: 0
+    explain: "Con una calzada muy estrecha, sobre todo con muchos ciclistas, hay que reducir más o incluso parar. Mantener la velocidad no deja margen si falta espacio."
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: tegemoetkomen-sin-espacio
+    type: mc
+    prompt: "Te encuentras de frente con otro auto en una calle donde no caben los dos. ¿Quién debe resolverlo?"
+    options: ["Los dos, con contacto visual o gestos, y parando si hace falta", Solo yo porque llegué primero, Solo el otro porque viene de frente, Gana quien toque la bocina primero]
+    answer: 0
+    explain: "Los dos conductores tienen la misma obligación (art. 5 WVW) uno hacia el otro. Si no cabéis, paras y lo resolvéis con contacto visual o gestos."
+    cites: ["cbr-rijprocedure:3.2", "wvw:5"]
+
+  - id: tegemoetkomen-obstaculos-ambos
+    type: mc
+    prompt: "Hay obstáculos a ambos lados de la calzada y no hay ancho para cruzarte con el tráfico de frente. ¿Qué haces?"
+    options: [Me coloco de modo que me vean a tiempo, Me meto en el hueco rápido antes de que lleguen, Me pego a los obstáculos de la derecha, Cierro los ojos a los demás y sigo]
+    answer: 0
+    explain: "Con obstáculos a ambos lados y poco ancho, te colocas de forma que te vean a tiempo, para que el otro pueda ajustar su marcha."
     cites: ["cbr-rijprocedure:3.2"]

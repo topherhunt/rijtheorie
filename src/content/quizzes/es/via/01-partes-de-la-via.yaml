@@ -6,20 +6,13 @@ questions:
     explain: Weg es todo camino abierto al tráfico público. No importa el dueño ni el pavimento.
     cites: ["wvw:1.1.b"]
 
-  - id: partes-via-rijbaan
-    type: mc
-    prompt: ¿Qué es la "rijbaan"?
-    options: [Toda la vía incluida la berma, La parte de la vía destinada a vehículos en movimiento sin contar fietspaden, Solo los carriles con rayas, Solo la autopista]
-    answer: 1
-    explain: Rijbaan es la parte de la vía para vehículos en movimiento, excepto los fietspaden y fiets/bromfietspaden.
-    cites: ["rvv:1"]
-
-  - id: partes-via-berm
-    type: yesno
-    prompt: Según la definición legal de weg, ¿las bermas pertenecen a la vía?
-    answer: true
-    explain: La definición de weg incluye los caminos y bermas que pertenecen a ella. Pero la berma no es parte de la rijbaan.
-    cites: ["wvw:1.1.b"]
+  - id: partes-via-rijbaan-no
+    type: multi
+    prompt: ¿Cuáles de estas partes de la vía NO son parte de la rijbaan?
+    options: [Un fietspad junto a la calzada, Un fiets/bromfietspad, La parte de la vía por donde circulan los coches, La parte de la vía por donde circulan los camiones]
+    answer: [0, 1]
+    explain: La rijbaan es la parte de la vía para vehículos en movimiento con la excepción de los fietspaden y los fiets/bromfietspaden. Los coches y los camiones circulan por la rijbaan.
+    cites: ["rvv:1", "rvv:10.1"]
 
   - id: partes-via-kruispunt
     type: multi
@@ -29,42 +22,41 @@ questions:
     explain: Un kruispunt es una kruising (cruce) o una splitsing (bifurcación) de vías.
     cites: ["rvv:1"]
 
-  - id: partes-via-parkeerhaven
+  - id: partes-via-estacionar-donde
     type: mc
-    prompt: ¿Para qué es una parkeerhaven?
-    options: [Para circular rápido, Para vehículos detenidos o estacionados junto a la calzada, Para ciclistas, Para peatones]
-    answer: 1
-    explain: Es una superficie pavimentada junto a la calzada pensada para vehículos detenidos o estacionados.
-    cites: ["rvv:1"]
+    prompt: Necesitas estacionar tu coche. ¿En cuál de estas partes de la vía puedes hacerlo?
+    options: ["En una parkeerhaven junto a la calzada", "En el fietspad, si no pasa ningún ciclista", "En el trottoir, si dejas espacio para los peatones", "En un ruiterpad, si estás solo cinco minutos"]
+    answer: 0
+    explain: La parkeerhaven está pensada para vehículos estacionados. El trottoir, el voetpad, el fietspad, el fiets/bromfietspad y el ruiterpad están prohibidos para estacionar, y el poco tiempo o el poco tráfico no cambian nada.
+    cites: ["rvv:1", "rvv:10.1"]
 
-  - id: partes-via-verdrijvingsvlak
+  - id: partes-via-g7-estacionar
     type: mc
-    prompt: ¿Cómo reconoces un "verdrijvingsvlak"?
-    options: [Por un semáforo, Por rayas diagonales sobre la calzada, Por una valla, Por una señal azul]
-    answer: 1
-    explain: El verdrijvingsvlak es la parte de la calzada con rayas diagonales.
-    cites: ["rvv:1"]
-
-  - id: partes-via-voetpad
-    type: mc
-    prompt: Ves la señal G7. ¿Qué indica?
+    prompt: Ves la señal G7 a la entrada de un camino a tu derecha, con un hueco libre. ¿Puedes entrar con tu coche para estacionar ahí?
     sign: G7
-    options: [Voetpad, Fietspad obligatorio, Ruiterpad, Fin de zona urbana]
-    answer: 0
-    explain: G7 es la señal de voetpad.
-    cites: ["rvv:bijlage1.G7"]
+    options: ["Sí, es una parte de la vía como cualquier otra", "Sí, si no hay peatones a la vista", "No, el voetpad no se puede usar para estacionar", "Solo si pones las luces de emergencia"]
+    answer: 2
+    explain: Para estacionar puedes usar otras partes de la vía, pero nunca el trottoir, el voetpad, el fietspad, el fiets/bromfietspad ni el ruiterpad. La señal G7 marca un voetpad.
+    cites: ["rvv:10.1", "rvv:bijlage1.G7"]
 
-  - id: partes-via-fietspad-rijbaan
+  - id: partes-via-verdrijvingsvlak-atajo
     type: yesno
-    prompt: Un fietspad junto a la calzada, ¿forma parte de la rijbaan?
+    prompt: Entre dos carriles hay una zona de la calzada cubierta de rayas diagonales (verdrijvingsvlak). El tráfico va lento y la zona está libre. ¿Puedes conducir por ella para adelantar la fila?
     answer: false
-    explain: La definición de rijbaan excluye los fietspaden y los fiets/bromfietspaden.
-    cites: ["rvv:1"]
+    explain: Los conductores no pueden usar los verdrijvingsvlakken ni los puntstukken. Las excepciones del art. 77 (spitsstrook, busbaan, busstrook) no se aplican a un coche normal en una calzada normal.
+    cites: ["rvv:77", "rvv:1"]
 
-  - id: partes-via-puntstuk
-    type: mc
-    prompt: ¿Qué es un "puntstuk"?
-    options: [Una superficie con varios ángulos donde las vías se dividen o se unen, Un tipo de semáforo, Un carril para autobuses, Una señal de velocidad]
-    answer: 0
-    explain: El puntstuk es una superficie con varios ángulos en divisiones o uniones de vías.
-    cites: ["rvv:1"]
+  - id: partes-via-puntstuk-atajo
+    type: yesno
+    prompt: Llegas a una bifurcación donde la vía se divide y entre las dos ramas hay un puntstuk libre. Quieres pasar por encima para cortar camino. ¿Puedes?
+    answer: false
+    explain: El puntstuk es la superficie con varios ángulos entre las ramas, y los conductores no pueden usarla. Que esté libre no cambia la prohibición.
+    cites: ["rvv:77", "rvv:1"]
+
+  - id: partes-via-spitsstrook-bifurcacion
+    type: yesno
+    prompt: Sigues un spitsstrook abierto (C23-01) y el carril pasa por una bifurcación, sobre una zona con rayas diagonales. ¿Puedes seguir por él?
+    sign: C23-01
+    answer: true
+    explain: La prohibición de usar verdrijvingsvlakken y puntstukken no se aplica a quien sigue un spitsstrook que pasa por una bifurcación o unión de vías.
+    cites: ["rvv:77", "rvv:bijlage1.C23-01"]

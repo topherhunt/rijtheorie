@@ -1,32 +1,10 @@
 questions:
-  - id: vulnerables-ninos
-    type: yesno
-    prompt: Según el CBR, ¿los niños son impredecibles cerca de la vía?
-    answer: true
-    explain: La guía los describe como impredecibles, por eso hay que anticipar.
-    cites: ["cbr-rijprocedure:2"]
-
-  - id: vulnerables-oido
-    type: mc
-    prompt: ¿En qué se apoyan sobre todo las personas ciegas para orientarse en el tráfico?
-    options: ["En la vista", "En el oído", "En el olfato", "En las señales luminosas"]
-    answer: 1
-    explain: Las personas ciegas se orientan por el oído, según la guía del CBR.
-    cites: ["cbr-rijprocedure:2"]
-
   - id: vulnerables-baston
     type: yesno
     prompt: Una persona con bastón blanco con anillos rojos quiere cruzar. ¿Debes dejarla pasar?
     answer: true
     explain: Debes dejar pasar a ciegos con bastón blanco con anillos rojos y a quienes se mueven con dificultad.
     cites: ["rvv:49.1"]
-
-  - id: vulnerables-cebra
-    type: yesno
-    prompt: Un peatón cruza por un paso de peatones. ¿Debes dejarlo pasar?
-    answer: true
-    explain: Debes dejar pasar a quienes cruzan por un paso de peatones.
-    cites: ["rvv:49.2"]
 
   - id: vulnerables-cebra-listo
     type: yesno
@@ -35,11 +13,26 @@ questions:
     explain: El artículo 49 lid 2 incluye a quien evidentemente está a punto de cruzar.
     cites: ["rvv:49.2"]
 
+  - id: vulnerables-cebra-semaforo-rojo
+    type: mc
+    prompt: Llegas a un paso de peatones. El semáforo de peatones está en rojo, pero un peatón ya ha empezado a cruzar. ¿Qué haces?
+    options: ["Sigo, porque la obligación de dejar pasar no rige con el semáforo de peatones en rojo", "Espero a que pase, porque no puedo ponerlo en peligro aunque el semáforo esté en rojo", "Acelero para pasar antes de que llegue a mi carril", "Toco la bocina para que se apure"]
+    answer: 1
+    explain: Con el semáforo de peatones en rojo no rige la obligación especial del artículo 49, pero el artículo 5 sigue vigente y te prohíbe causar peligro. Por eso no sigues contra alguien que ya está cruzando.
+    cites: ["rvv:49.4", "wvw:5"]
+
   - id: vulnerables-bus-parado
     type: yesno
     prompt: Un autobús está detenido y pasajeros bajan por el lado por donde quieres pasar. ¿Debes darles la oportunidad de bajar?
     answer: true
     explain: Debes darles la oportunidad de subir o bajar.
+    cites: ["rvv:52"]
+
+  - id: vulnerables-bus-parado-lado
+    type: yesno
+    prompt: Un autobús está detenido y los pasajeros bajan por el lado contrario al que quieres pasar. ¿Tienes que esperar por esos pasajeros según el artículo 52?
+    answer: false
+    explain: El artículo 52 vale para pasar por el lado donde los pasajeros suben o bajan. Por el otro lado no los estorbas.
     cites: ["rvv:52"]
 
   - id: vulnerables-bus-sale
@@ -61,4 +54,12 @@ questions:
     prompt: ¿Está bien mirar por encima del hombro durante mucho tiempo para estar seguro?
     answer: false
     explain: Puede provocar una desviación no deseada del rumbo y no ves lo que ocurre delante del auto.
+    cites: ["cbr-rijprocedure:3"]
+
+  - id: vulnerables-dode-hoek-fietspad
+    type: mc
+    prompt: Vas a cruzar un fietspad que corre paralelo a tu calle. ¿Cómo revisas si puedes cruzar?
+    options: ["Miro el espejo exterior y el ángulo muerto mientras el auto sigue en línea recta", "Solo miro hacia delante, porque los ciclistas deben cederme el paso", "Giro el volante hacia el fietspad y miro después", "Miro hacia atrás un buen rato con el auto ya cruzando"]
+    answer: 0
+    explain: El CBR pide revisar el espejo exterior y el ángulo muerto antes de cruzar fietspaden, y hacerlo mientras el auto va en línea recta. Mirar atrás mucho tiempo desvía el auto y no ves lo que hay delante.
     cites: ["cbr-rijprocedure:3"]

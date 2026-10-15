@@ -1,42 +1,4 @@
 questions:
-  - id: carga-remolque-atras
-    type: number
-    prompt: ¿Cuánto puede sobresalir, como máximo (en metros), la carga por detrás de un auto?
-    answer: 1
-    unit: m
-    explain: No más de 1,00 m por detrás del vehículo.
-    cites: ["rv:5.18.12/1"]
-
-  - id: carga-remolque-adelante
-    type: yesno
-    prompt: ¿Puede la carga de un auto sobresalir por delante del vehículo?
-    answer: false
-    explain: En el caso normal, la carga no puede sobresalir por delante.
-    cites: ["rv:5.18.12/1"]
-
-  - id: carga-remolque-lados
-    type: number
-    prompt: ¿Cuánto puede sobresalir, como máximo (en metros), la carga de un auto a cada lado?
-    answer: 0.2
-    unit: m
-    explain: No más de 0,20 m a cada lado.
-    cites: ["rv:5.18.14"]
-
-  - id: carga-remolque-altura
-    type: number
-    prompt: ¿Cuál es la altura total máxima, con carga, de un auto en metros?
-    answer: 4
-    unit: m
-    explain: No puede pasar de 4,00 m.
-    cites: ["rv:5.18.15"]
-
-  - id: carga-remolque-luces
-    type: yesno
-    prompt: Tu carga tapa las luces traseras. ¿Es suficiente con no hacer nada?
-    answer: false
-    explain: Si el portabultos o la carga tapan luces, el portabultos debe llevar sus propias luces; la carga no puede tapar luces ni matrícula, salvo que lleve las suyas propias.
-    cites: ["rv:5.18.12/1", "rv:5.18.7/1"]
-
   - id: carga-remolque-asegurada
     type: mc
     prompt: ¿Para qué situaciones debe estar asegurada la carga?
@@ -52,41 +14,96 @@ questions:
     explain: La carga suelta que puede caerse o volar debe taparse bien.
     cites: ["rv:5.18.6/2"]
 
-  - id: carga-remolque-techo
+  - id: carga-remolque-escalera-1-5
+    type: yesno
+    prompt: Llevas una escalera atada en el techo que sobresale 1,5 m por detrás de tu auto. Pones una barra de protección firme (stootbalk). ¿Está permitido?
+    answer: false
+    explain: La carga no puede sobresalir más de 1,00 m por detrás del vehículo. La stootbalk solo protege a quien viene detrás cuando la carga sobresale; no amplía el límite.
+    cites: ["rv:5.18.12/1"]
+
+  - id: carga-remolque-stootbalk
     type: mc
-    prompt: ¿Quién fija el peso máximo que puedes llevar en el techo?
-    options: [El fabricante del auto, La policía, El vendedor de la baca, Nadie]
+    prompt: Con tu auto reciente llevas un tubo que sobresale 0,80 m por detrás, y su parte de abajo está a 0,70 m del suelo. ¿Qué más hace falta?
+    options: ["Nada, porque está dentro de 1,00 m", "Una barra de protección firme a no más de 0,60 m del final del tubo", Una bandera roja en el extremo, "Reducir lo que sobresale a 0,50 m"]
+    answer: 1
+    explain: Si la parte de abajo de la carga que sobresale está a más de 0,55 m del suelo, hace falta una stootbalk firme a no más de 0,60 m del final. Estar dentro de 1,00 m no basta.
+    cites: ["rv:5.18.12/1"]
+
+  - id: carga-remolque-luces
+    type: yesno
+    prompt: Tu carga tapa las luces traseras. ¿Es suficiente con no hacer nada?
+    answer: false
+    explain: Si el portabultos o la carga tapan luces, el portabultos debe llevar sus propias luces; la carga no puede tapar luces ni matrícula, salvo que lleve las suyas propias.
+    cites: ["rv:5.18.12/1", "rv:5.18.7/1"]
+
+  - id: carga-remolque-tablas-lados
+    type: yesno
+    prompt: Llevas tablas largas dentro del auto con la ventanilla bajada, y sobresalen 0,30 m por el lado derecho y nada por el izquierdo. ¿Está permitido?
+    answer: false
+    explain: La carga de un auto no puede sobresalir más de 0,20 m por cada lado. Que por el otro lado no sobresalga nada no compensa.
+    cites: ["rv:5.18.14"]
+
+  - id: carga-remolque-altura-baca
+    type: yesno
+    prompt: Con la baca cargada, tu auto mide 4,3 m desde el suelo hasta lo más alto de la carga. ¿Puedes circular así?
+    answer: false
+    explain: El auto con carga no puede pasar de 4,00 m de altura. La altura se mide incluida la carga.
+    cites: ["rv:5.18.15"]
+
+  - id: carga-remolque-bicis-90kg
+    type: yesno
+    prompt: Llevas dos bicicletas eléctricas de 45 kg cada una en un portabicicletas sobre la barra de remolque, y la barra no indica ningún máximo. ¿Está permitido?
+    answer: false
+    explain: Si la barra no da datos, la carga vertical no puede pasar de 75 kg. Las dos bicicletas suman 90 kg.
+    cites: ["rv:5.18.7/1"]
+
+  - id: carga-remolque-matricula-tapada
+    type: mc
+    prompt: Tu portabicicletas tapa la matrícula del auto. ¿Qué debe llevar el portabicicletas?
+    options: ["Nada, la carga es temporal", Una matrícula con el número de tu auto, Una nota con el número en la ventana trasera, Un reflector ámbar]
+    answer: 1
+    explain: Si el portabultos tapa la matrícula, debe llevar una matrícula con el número del auto (y su luz, si el auto la necesita). Una nota o un reflector no sustituyen a la matrícula.
+    cites: ["rv:5.18.7/1"]
+
+  - id: carga-remolque-techo-limite
+    type: mc
+    prompt: La baca de tu auto aguanta 100 kg, pero el fabricante del auto fija una carga máxima de 75 kg en el techo. ¿Cuánto puedes llevar?
+    options: [Hasta 75 kg, Hasta 100 kg, Hasta 175 kg, Lo que quieras si la atas bien]
     answer: 0
-    explain: No puedes superar la carga máxima del techo fijada por el fabricante.
+    explain: No puedes pasar la carga máxima del techo que fija el fabricante del auto. Que la baca aguante más no cambia ese límite.
     cites: ["rv:5.18.7/2"]
 
-  - id: carga-remolque-un-remolque
-    type: number
-    prompt: ¿Cuántos remolques puedes arrastrar con un auto normal?
-    answer: 1
-    unit: remolque
+  - id: carga-remolque-dos-remolques
+    type: yesno
+    prompt: Con tu auto enganchas un remolque y detrás de él un segundo remolque. ¿Está permitido?
+    answer: false
     explain: Con un vehículo de motor no puedes arrastrar más de un remolque.
     cites: ["rv:5.18.1/1"]
 
-  - id: carga-remolque-75
-    type: number
-    prompt: Un portabicicletas va en la barra de remolque y la barra no indica un máximo. ¿Cuántos kg de carga vertical se permiten como máximo?
-    answer: 75
-    unit: kg
-    explain: Si la barra no da datos, la carga vertical no puede pasar de 75 kg.
-    cites: ["rv:5.18.7/1"]
-
-  - id: carga-remolque-18
-    type: number
-    prompt: ¿Cuál es el largo máximo, en metros, del conjunto de auto y remolque?
-    answer: 18
-    unit: m
-    explain: El conjunto de un auto y un remolque no puede medir más de 18,00 m.
-    cites: ["rv:5.18.11/7"]
-
-  - id: carga-remolque-lateral
+  - id: carga-remolque-holgura
     type: yesno
-    prompt: ¿Debe un auto que arrastra un remolque tener un intermitente lateral a cada lado?
+    prompt: El enganche de tu remolque tiene 5 mm de holgura total entre el auto y el remolque, pero está bien asegurado. ¿Está en regla?
+    answer: false
+    explain: La holgura total en la unión entre el vehículo que arrastra y el arrastrado no puede pasar de 3 mm, aunque el enganche esté asegurado.
+    cites: ["rv:5.18.54"]
+
+  - id: carga-remolque-luces-remolque
+    type: yesno
+    prompt: Pisas el freno mientras arrastras un remolque. ¿Debe mostrar el remolque la luz de freno también?
     answer: true
-    explain: Es un requisito cuando se arrastra un remolque.
-    cites: ["rv:5.18.37"]
+    explain: Las luces del remolque deben funcionar de modo que sus funciones coincidan con las del vehículo que lo arrastra.
+    cites: ["rv:5.18.38/1"]
+
+  - id: carga-remolque-sin-datos-900
+    type: yesno
+    prompt: Quieres arrastrar un remolque de 900 kg con un auto de 1.400 kg de masa vacía. El acople no indica ningún dato. ¿Está permitido?
+    answer: false
+    explain: Si el acople no da datos, el remolque no puede pasar de 750 kg y tampoco de la masa vacía del auto. 900 kg supera los 750 kg, aunque el auto sea más pesado.
+    cites: ["rv:5.18.18/1"]
+
+  - id: carga-remolque-conjunto-19
+    type: yesno
+    prompt: Un auto con su remolque mide 19 m en total. ¿Puede circular así?
+    answer: false
+    explain: El conjunto de auto y remolque no puede medir más de 18,00 m.
+    cites: ["rv:5.18.11/7"]

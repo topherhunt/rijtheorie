@@ -12,37 +12,52 @@ El sistema de frenado (<T id="reminrichting" />) debe estar en buen estado.
 Las piezas del freno deben estar bien fijas, sin corrosión grave, sin daños y **sin fugas**. El servofreno debe funcionar.
 </Rule>
 
+<Check id="frenos-fugas" />
+
 ## ABS
 
 El <T id="abs" /> es el sistema antibloqueo de frenos. Evita que las ruedas se bloqueen al frenar fuerte.
 
 <Rule cite="rv:5.2.31" title="Avisos del ABS">
-Las piezas del ABS deben estar fijas, sin daños y sin fugas. En autos puestos en uso después del 31 de diciembre de 2017, los avisos del ABS y del frenado electrónico **no deben indicar un defecto**.
+Las piezas del ABS deben estar fijas, sin daños y sin fugas. En autos puestos en uso después del 31 de diciembre de 2017, los avisos del ABS y del frenado electrónico **no deben indicar un defecto**. Un aviso de defecto del ABS encendido en un auto reciente significa que el auto no cumple.
 </Rule>
+
+<Check id="frenos-abs-aviso" />
 
 ## Freno de estacionamiento
 
 El freno de mano se llama <T id="parkeerrem" />.
 
 <Rule cite="rv:5.2.39" title="Freno de estacionamiento">
-Debe actuar sobre **al menos dos ruedas**, y debe funcionar también en sentido hacia atrás. Desaceleración mínima: **1,6 m/s²** para autos puestos en uso después del 31 de diciembre de 2017.
+Debe actuar sobre **al menos dos ruedas**, y debe funcionar también en sentido hacia atrás. Desaceleración mínima: **1,6 m/s²** para autos puestos en uso después del 31 de diciembre de 2017. Un auto reciente cuyo freno de mano solo consigue 1,4 m/s² no cumple (el 1,2 m/s² vale solo para autos puestos en uso entre 1967 y 2017).
 </Rule>
+
+<Check id="frenos-parkeerrem-1-4" />
 
 ## Freno de un remolque
 
 <Rule cite="rv:5.18.34/1" title="Frenos de remolque">
-Si el remolque tiene frenos, deben actuar cuando accionas el freno de servicio del auto.
+Si el remolque tiene frenos, deben actuar cuando accionas el freno de servicio del auto (el pedal). Unos frenos de remolque que solo actúan con otra palanca no cumplen.
 </Rule>
+
+<Check id="frenos-remolque-solo-palanca" />
 
 El <T id="losbreekreminrichting" /> frena el remolque si se suelta del enganche.
 
 <Rule cite="rv:5.18.34/2" title="Freno de seguridad del remolque">
-Debe estar conectado de modo que actúe solo cuando se suelta el acople del remolque.
+Debe estar conectado de modo que actúe solo cuando se suelta el acople del remolque. Si el remolque se suelta mientras circulas, es ese freno el que lo detiene.
 </Rule>
+
+<Check id="frenos-losbreek-suelto" />
 
 <Rule cite="rv:5.18.33" title="Remolque ligero sin frenos">
-Un remolque de hasta 750 kg detrás de un auto no necesita frenos si su masa total no pasa de la **mitad** de la masa en orden de marcha del auto.
+Un remolque de hasta 750 kg detrás de un auto no necesita frenos si su masa total no pasa de la **mitad** de la masa en orden de marcha del auto. Las dos condiciones se necesitan: un remolque de más de 750 kg necesita frenos aunque el auto sea muy pesado, y uno de 750 kg o menos que pasa de la mitad también.
 </Rule>
 
-<Check id="frenos-fugas" />
-<Check id="frenos-parkeerrem" />
+<Check id="frenos-sin-frenos" />
+
+<Check id="frenos-sin-frenos-no" />
+
+<Check id="frenos-remolque-900-pesado" />
+
+<Check id="frenos-remolque-justo-mitad" />

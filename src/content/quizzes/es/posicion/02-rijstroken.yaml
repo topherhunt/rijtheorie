@@ -76,33 +76,43 @@ questions:
     explain: "Una flecha blanca es el preaviso de una cruz roja: cambia de carril a tiempo."
     cites: ["rvv:73"]
 
-  - id: rijstroken-flecha-verde
-    type: yesno
-    prompt: Sobre tu carril hay una flecha verde. ¿Puedes usar el carril?
-    answer: true
-    explain: Una flecha verde (o una velocidad máxima de la señal A3) significa que el carril puede usarse.
-    cites: ["rvv:73"]
-
-  - id: rijstroken-solo-un-carril
-    type: yesno
-    prompt: Una señal de prohibición en una calzada con varios carriles, ¿puede valer solo para uno de ellos?
-    answer: true
-    explain: Si la vía está dividida en carriles, la aplicación de una señal puede limitarse a uno o varios carriles.
-    cites: ["rvv:65.1"]
-
-  - id: rijstroken-spitsstrook-abierto
-    type: mc
-    sign: C23-01
-    prompt: Ves esta señal sobre el carril de emergencia. ¿Qué significa?
-    options: [El carril de hora punta está abierto y se puede usar, Prohibido el paso, Fin de la autopista, Zona de estacionamiento]
-    answer: 0
-    explain: La señal C23-01 indica que el spitsstrook está abierto.
-    cites: ["rvv:bijlage1.C23-01"]
-
   - id: rijstroken-bus
     type: mc
-    prompt: Sobre un carril aparece la palabra LIJNBUS. ¿Quién puede usar ese carril?
+    prompt: Sobre un carril se ilumina la palabra LIJNBUS. ¿Quién puede usar ese carril?
     options: [Todos los autobuses, Solo los autobuses de línea, Solo autos, Cualquier vehículo pesado]
     answer: 1
     explain: LIJNBUS reserva el carril a conductores de autobús de línea. La palabra BUS lo abre además a otros autobuses.
     cites: ["rvv:73"]
+
+  - id: rijstroken-cruz-roja-vlucht
+    type: mc
+    prompt: En una autosnelweg se enciende una cruz roja sobre tu carril. A tu derecha hay una vluchtstrook libre y ninguna señal C23-01. ¿Qué haces?
+    options: [Paso a la vluchtstrook para no frenar, Cambio a un carril libre sin cruz roja, Sigo en mi carril si no veo ningún obstáculo, Me detengo en mi carril]
+    answer: 1
+    explain: Con la cruz roja el carril no puede usarse, y la vluchtstrook solo en caso de emergencia; no es una vía de escape para no frenar. Lo que hay que hacer es pasar a un carril libre.
+    cites: ["rvv:73", "rvv:43.3"]
+
+  - id: rijstroken-luces-usar
+    type: multi
+    prompt: Conduces un coche. ¿En cuáles de estos carriles puedes circular?
+    options: [Un carril con flecha verde encima, Un carril con cruz roja encima, Un carril con una velocidad máxima de la señal A3 encima, Un carril con la palabra BUS iluminada]
+    answer: [0, 2]
+    explain: La flecha verde o la velocidad máxima de la señal A3 significan que el carril puede usarse. La cruz roja lo prohíbe, y con BUS iluminado solo lo usan el lijnbus y el autobus, no un coche.
+    cites: ["rvv:73"]
+
+  - id: rijstroken-prohibicion-otro-carril
+    type: yesno
+    prompt: En una calzada de tres carriles ves la señal L11, que muestra los tres carriles y una limitación de ancho de 2 m dibujada solo sobre el carril izquierdo. Tu coche mide 2,3 m de ancho y circulas por el carril del medio. ¿Te afecta esa limitación?
+    sign: L11
+    answer: false
+    explain: En una calzada dividida en carriles, la señal puede limitarse a uno o varios carriles, y L11 indica a cuáles. La limitación solo vale para el carril izquierdo, no para el del medio.
+    cites: ["rvv:65.1", "rvv:bijlage1.L11"]
+
+  - id: rijstroken-spitsstrook-seguir
+    type: mc
+    prompt: Una autosnelweg de dos carriles tiene un spitsstrook abierto (C23-01) a la derecha. No hay atasco ni vas a adelantar. ¿Qué carril sigues en principio según la Rijprocedure B?
+    sign: C23-01
+    options: [El carril izquierdo, "El carril derecho, incluido el spitsstrook abierto", Solo los dos carriles de la izquierda, Cualquiera según tu velocidad]
+    answer: 1
+    explain: Si la calzada está dividida en carriles se sigue en principio el carril derecho, y eso vale también para un spitsstrook abierto.
+    cites: ["cbr-rijprocedure:3.2", "rvv:bijlage1.C23-01"]

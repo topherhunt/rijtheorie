@@ -1,10 +1,9 @@
 questions:
-  - id: visibilidad-espejos-55
-    type: number
-    prompt: ¿Cuánta luz, como mínimo (en %), debe dejar pasar el parabrisas y las ventanillas delanteras?
-    answer: 55
-    unit: "%"
-    explain: La transmisión de luz debe ser de al menos 55%.
+  - id: visibilidad-espejos-parabrisas-luz
+    type: yesno
+    prompt: Pones una lámina oscura en el parabrisas y en las ventanillas delanteras de tu auto, y ahora dejan pasar solo el 50% de la luz. ¿Cumple?
+    answer: false
+    explain: El parabrisas y las ventanillas delanteras deben dejar pasar al menos el 55% de la luz. Con 50% no cumple.
     cites: ["rv:5.2.42"]
 
   - id: visibilidad-espejos-espejos
@@ -15,11 +14,11 @@ questions:
     explain: Un auto puesto en uso después de enero de 2010 necesita espejo exterior izquierdo, derecho e interior.
     cites: ["rv:5.2.45"]
 
-  - id: visibilidad-espejos-camara
+  - id: visibilidad-espejos-camara-averiada
     type: yesno
-    prompt: ¿Puede un sistema de cámara y monitor sustituir a los espejos?
-    answer: true
-    explain: Los sistemas cámara-monitor pueden reemplazar los espejos.
+    prompt: Un auto de 2022 lleva un sistema de cámara y monitor en lugar del espejo exterior derecho, pero la pantalla no funciona. ¿Cumple con la obligación del espejo?
+    answer: false
+    explain: Un sistema cámara-monitor puede sustituir al espejo, pero tiene que funcionar bien y estar bien fijado. Una pantalla que no funciona no da la vista que exige la ley.
     cites: ["rv:5.2.45", "rv:5.18.4"]
 
   - id: visibilidad-espejos-objetos
@@ -29,34 +28,41 @@ questions:
     explain: No puede haber objetos innecesarios que bloqueen la vista.
     cites: ["rv:5.2.42"]
 
-  - id: visibilidad-espejos-lavaparabrisas
+  - id: visibilidad-espejos-sin-lavaparabrisas
     type: yesno
-    prompt: ¿Debe el auto tener un lavaparabrisas que funcione además del limpiaparabrisas?
-    answer: true
-    explain: El auto debe tener limpiaparabrisas que funcione y sistema lavaparabrisas.
+    prompt: En tu auto de 2015 el limpiaparabrisas funciona bien, pero el lavaparabrisas ya no echa líquido. ¿Cumple?
+    answer: false
+    explain: El auto debe tener limpiaparabrisas y también un lavaparabrisas que funcionen. Que uno funcione no compensa el otro.
     cites: ["rv:5.2.43"]
 
-  - id: visibilidad-espejos-desempanador
+  - id: visibilidad-espejos-claxon-melodia
     type: yesno
-    prompt: ¿Debe el auto tener un dispositivo para desempañar el parabrisas?
-    answer: true
-    explain: Es un requisito del equipo del auto.
-    cites: ["rv:5.2.44"]
-
-  - id: visibilidad-espejos-claxon
-    type: mc
-    prompt: ¿Cómo debe ser el sonido del claxon?
-    options: [Un tono fijo, Una melodía, Una sirena, Cualquiera]
-    answer: 0
-    explain: El claxon debe tener un tono fijo.
+    prompt: Cambias el claxon de tu auto por uno que toca una melodía. ¿Está permitido?
+    answer: false
+    explain: El auto debe tener un claxon de tono fijo y no puede llevar otros avisadores sonoros fuera de los permitidos por la ley.
     cites: ["rv:5.2.71"]
 
-  - id: visibilidad-espejos-velocimetro
+  - id: visibilidad-espejos-velocimetro-noche
     type: yesno
-    prompt: ¿Debe poder leerse el velocímetro también de noche?
-    answer: true
-    explain: El velocímetro debe funcionar y ser legible de noche.
+    prompt: El velocímetro de tu auto funciona de día, pero de noche no se ilumina y no puedes leerlo. ¿Cumple?
+    answer: false
+    explain: El velocímetro debe funcionar y ser legible para el conductor también de noche.
     cites: ["rv:5.2.15"]
+
+  - id: visibilidad-espejos-ajuste-exterior
+    type: mc
+    prompt: Ajustas el espejo exterior izquierdo antes de salir. ¿Cómo debe quedar?
+    options: [Sin ver nada de tu propio auto para ver más carretera, Viendo todavía justo el costado izquierdo del auto y la mayor parte posible de la carretera al lado y detrás, Apuntando sobre todo al cielo, Viendo solo el costado de tu auto]
+    answer: 1
+    explain: En el espejo exterior debe verse justo el costado del auto y el mayor trozo posible de carretera al lado y detrás, con el horizonte a una cuarta parte desde arriba. Ver más cielo o solo tu auto te quita la vista de lo que viene.
+    cites: ["cbr-rijprocedure:1"]
+
+  - id: visibilidad-espejos-hombro-demasiado
+    type: yesno
+    prompt: Antes de cambiar de carril, giras la cabeza hacia atrás y miras por encima del hombro durante varios segundos para estar seguro. ¿Es lo que se espera?
+    answer: false
+    explain: Mirar por encima del hombro es solo para comprobar el dode hoek. Si lo alargas o lo conviertes en mirar hacia atrás, puedes desviar el auto sin querer y no ves lo que pasa delante.
+    cites: ["cbr-rijprocedure:3.5"]
 
   - id: visibilidad-espejos-estorbo
     type: yesno

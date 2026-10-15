@@ -8,14 +8,29 @@ questions:
     explain: J10 es "overweg met slagbomen". Sin barreras sería J11.
     cites: ["rvv:bijlage1.J10"]
 
-  - id: overweg-j13
+  - id: overweg-roja-barreras-arriba
     type: mc
-    prompt: ¿Qué indica esta señal?
-    sign: J13
-    options: [Paso a nivel con una vía, Paso a nivel con dos o más vías, Cruce con tranvía, Paso a nivel con barreras]
+    prompt: Te acercas a un paso a nivel. Las barreras están arriba, pero la luz roja intermitente está encendida. ¿Qué haces?
+    options:
+      - Cruzas, porque sin barreras bajadas no hay peligro
+      - Te detienes, porque la luz roja intermitente significa alto
+      - Cruzas más rápido para librarte del tren
+      - Cruzas si no ves ningún tren
     answer: 1
-    explain: J13 es "overweg met twee of meer sporen". J12 es de una sola vía.
-    cites: ["rvv:bijlage1.J13"]
+    explain: La luz roja intermitente significa alto, aunque las barreras todavía no hayan bajado. Mandan las luces, no las barreras.
+    cites: ["rvv:71"]
+
+  - id: overweg-blanca-fila
+    type: mc
+    prompt: En un paso a nivel la luz blanca intermitente está encendida, pero hay una fila de autos parados justo después de la vía y no cabe tu auto. ¿Qué haces?
+    options:
+      - Entras y esperas encima de la vía, porque no viene ningún tren
+      - Esperas antes del paso hasta que haya sitio para cruzar y salir
+      - Entras con las luces de emergencia
+      - Entras y haces sonar la bocina
+    answer: 1
+    explain: La luz blanca solo dice que no se acerca ningún tren. Aun así solo puedes entrar si puedes seguir sin detenerte y dejar el paso completamente libre, y detenerte en el overweg está prohibido.
+    cites: ["rvv:71", "rvv:15a", "rvv:23.1"]
 
   - id: overweg-fila
     type: yesno
@@ -118,9 +133,10 @@ questions:
     explain: El sol bajo puede cegar y hacer invisible la luz roja. Además los equipos pueden fallar.
     cites: ["cbr-rijprocedure:3.6"]
 
-  - id: overweg-baliza
-    type: yesno
-    prompt: Cada raya diagonal de una baliza cerca de un paso a nivel indica una distancia de unos 80 m.
-    answer: true
-    explain: El procedimiento del CBR explica que cada raya indica unos 80 m hasta el paso.
+  - id: overweg-baliza-distancia
+    type: number
+    prompt: Cerca de un paso a nivel ves una baliza con 3 rayas diagonales. ¿A qué distancia aproximada está el paso?
+    answer: 240
+    unit: m
+    explain: Cada raya diagonal indica unos 80 m hasta el paso a nivel, así que 3 rayas son unos 240 m.
     cites: ["cbr-rijprocedure:3.6"]

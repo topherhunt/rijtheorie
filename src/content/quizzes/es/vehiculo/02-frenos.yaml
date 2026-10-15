@@ -6,50 +6,12 @@ questions:
     explain: Las piezas del freno no pueden tener fugas, estar dañadas ni tener corrosión grave.
     cites: ["rv:5.2.31"]
 
-  - id: frenos-servofreno
-    type: yesno
-    prompt: ¿Debe funcionar el servofreno?
-    answer: true
-    explain: El requisito exige que el servofreno (brake booster) funcione.
-    cites: ["rv:5.2.31"]
-
-  - id: frenos-parkeerrem
-    type: number
-    prompt: ¿Sobre cuántas ruedas, como mínimo, debe actuar el freno de estacionamiento?
-    answer: 2
-    unit: ruedas
-    explain: El freno de estacionamiento debe actuar sobre al menos dos ruedas.
-    cites: ["rv:5.2.39"]
-
-  - id: frenos-atras
-    type: yesno
-    prompt: ¿Debe el freno de estacionamiento funcionar también en sentido hacia atrás?
-    answer: true
-    explain: Debe funcionar también hacia atrás.
-    cites: ["rv:5.2.39"]
-
   - id: frenos-abs-aviso
     type: yesno
     prompt: En un auto de 2020 se enciende el aviso de defecto del ABS. ¿Cumple?
     answer: false
     explain: Para autos puestos en uso después de 2017 el aviso del ABS no debe indicar un defecto.
     cites: ["rv:5.2.31"]
-
-  - id: frenos-remolque
-    type: mc
-    prompt: Cuando frenas con el pedal, ¿qué deben hacer los frenos de un remolque que los tiene?
-    options: [Nada, Entrar en acción al accionar el freno de servicio del auto, Solo actuar con el freno de mano, Solo actuar a más de 50 km/h]
-    answer: 1
-    explain: Los frenos del remolque deben actuar al accionar el freno de servicio del auto.
-    cites: ["rv:5.18.34/1"]
-
-  - id: frenos-losbreek
-    type: mc
-    prompt: ¿Cuándo debe actuar el freno de seguridad (losbreekreminrichting) del remolque?
-    options: [Siempre que frenas, Solo después de que se suelta el acople del remolque, Al arrancar, Al estacionar]
-    answer: 1
-    explain: Solo debe actuar tras el desprendimiento del acople.
-    cites: ["rv:5.18.34/2"]
 
   - id: frenos-sin-frenos
     type: yesno
@@ -63,4 +25,40 @@ questions:
     prompt: Un remolque de 750 kg de masa total detrás de un auto de 1.200 kg en orden de marcha. ¿Puede no tener frenos?
     answer: false
     explain: La mitad del auto es 600 kg; el remolque de 750 kg la supera, así que necesita frenos.
+    cites: ["rv:5.18.33"]
+
+  - id: frenos-parkeerrem-1-4
+    type: yesno
+    prompt: Un auto puesto en uso en 2020 consigue con el freno de mano una desaceleración de 1,4 m/s². ¿Cumple?
+    answer: false
+    explain: En autos puestos en uso después del 31 de diciembre de 2017 el freno de estacionamiento debe llegar al menos a 1,6 m/s². El 1,2 m/s² vale para autos de 1967 a 2017.
+    cites: ["rv:5.2.39"]
+
+  - id: frenos-remolque-solo-palanca
+    type: yesno
+    prompt: Los frenos de tu remolque solo actúan cuando tiras de una palanca especial, no cuando pisas el pedal de freno del auto. ¿Cumple?
+    answer: false
+    explain: Los frenos del remolque deben actuar al accionar el freno de servicio del auto, que es el pedal.
+    cites: ["rv:5.18.34/1"]
+
+  - id: frenos-losbreek-suelto
+    type: mc
+    prompt: Circulas con un remolque y el acople se suelta. ¿Qué debe hacer el freno de seguridad (losbreekreminrichting)?
+    options: ["Nada, solo se usa al estacionar", Frenar el remolque porque el acople se soltó, Frenar el remolque siempre que pisas el pedal, Soltar también las luces del remolque]
+    answer: 1
+    explain: Debe estar conectado para actuar solo tras soltarse el acople, y entonces frena el remolque. Cuando pisas el pedal con el remolque enganchado frenan los frenos normales del remolque, no este.
+    cites: ["rv:5.18.34/2"]
+
+  - id: frenos-remolque-900-pesado
+    type: yesno
+    prompt: Arrastras un remolque de 900 kg de masa total con un auto de 2.400 kg en orden de marcha. ¿Puede el remolque no tener frenos?
+    answer: false
+    explain: 'Solo un remolque de hasta 750 kg puede ir sin frenos. Que 900 kg sea menos de la mitad del auto no basta: con más de 750 kg necesita frenos.'
+    cites: ["rv:5.18.33"]
+
+  - id: frenos-remolque-justo-mitad
+    type: yesno
+    prompt: Arrastras un remolque de 700 kg de masa total con un auto de 1.400 kg en orden de marcha. ¿Puede el remolque no tener frenos?
+    answer: true
+    explain: El remolque no pasa de 750 kg y su masa no es mayor que la mitad de la del auto (700 kg), así que puede ir sin frenos.
     cites: ["rv:5.18.33"]

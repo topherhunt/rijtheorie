@@ -1,12 +1,4 @@
 questions:
-  - id: remolque-distancia
-    type: number
-    prompt: Al remolcar otro vehículo de motor, ¿cuál es la distancia máxima permitida entre la parte trasera de quien remolca y la delantera del remolcado?
-    answer: 5
-    unit: m
-    explain: Más de 5 metros está prohibido.
-    cites: ["rvv:53"]
-
   - id: remolque-seis
     type: yesno
     prompt: Remolcas un auto con una cuerda de 6 metros entre los dos vehículos. ¿Está permitido?
@@ -14,20 +6,19 @@ questions:
     explain: La distancia entre la parte trasera del que remolca y la delantera del remolcado no puede ser mayor de 5 m.
     cites: ["rvv:53"]
 
-  - id: remolque-tipo
+  - id: remolque-cinco-exacto
     type: yesno
-    prompt: ¿El artículo 53 se refiere a remolcar un vehículo de motor con otro vehículo de motor?
+    prompt: Remolcas un auto averiado y la distancia entre la parte trasera de tu auto y la delantera del remolcado es exactamente 5 metros. ¿Está permitido?
     answer: true
-    explain: El texto habla de que un conductor de vehículo de motor remolque a otro vehículo de motor.
+    explain: El artículo 53 prohíbe una distancia de MÁS de 5 metros; con 5 metros exactos está permitido.
     cites: ["rvv:53"]
 
-  - id: emergencia-luz
-    type: mc
-    prompt: ¿Qué color de luz y qué sonido llevan los vehículos prioritarios en una urgencia?
-    options: [Luz azul y bocina de dos tonos, Luz amarilla y bocina de un tono, Luz verde y sirena de un tono, Luz roja y sin sonido]
-    answer: 0
-    explain: Policía, bomberos y servicios médicos de urgencia llevan luz azul y bocina de dos tonos.
-    cites: ["rvv:29.1"]
+  - id: emergencia-ciclista
+    type: yesno
+    prompt: Vas en bicicleta y se acerca por detrás una ambulancia con luz azul y bocina de dos tonos. ¿Estás obligado a dejarla pasar?
+    answer: true
+    explain: El artículo 50 se dirige a todos los weggebruikers, no solo a los conductores de auto. También un ciclista debe dejar pasar al vehículo prioritario.
+    cites: ["rvv:50", "rvv:29.1"]
 
   - id: emergencia-amarilla
     type: yesno
@@ -49,13 +40,6 @@ questions:
     answer: false
     explain: "Hay que dejar pasar, pero sin causar peligro a otros: el artículo 5 de la WVW sigue vigente."
     cites: ["wvw:5", "rvv:50"]
-
-  - id: emergencia-faros
-    type: yesno
-    prompt: ¿Pueden los vehículos de emergencia llevar de día, además, faros intermitentes?
-    answer: true
-    explain: El artículo 29 lid 2 lo permite.
-    cites: ["rvv:29.2"]
 
   - id: agente-indicaciones
     type: yesno

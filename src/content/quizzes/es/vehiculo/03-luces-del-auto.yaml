@@ -7,37 +7,49 @@ questions:
     explain: Las luces de freno son rojas o ámbar; la tercera luz de freno debe ser roja.
     cites: ["rv:5.2.53"]
 
-  - id: luces-del-auto-25
-    type: number
-    prompt: ¿Qué porcentaje máximo de su superficie puede perder una luz hecha de varias fuentes de luz?
-    answer: 25
-    unit: "%"
-    explain: No puede perder más del 25% de su superficie.
+  - id: luces-del-auto-trasero-blanco
+    type: yesno
+    prompt: Cambias los intermitentes traseros de tu auto por unos que dan luz blanca. Delante el blanco está permitido. ¿Está permitido también detrás?
+    answer: false
+    explain: Los intermitentes delanteros pueden ser ámbar o blancos, pero los traseros solo ámbar o rojos. Que el blanco valga delante no lo hace válido detrás.
+    cites: ["rv:5.2.53"]
+
+  - id: luces-del-auto-led-fundidos
+    type: mc
+    prompt: Una luz de freno tiene 8 LED del mismo tamaño. ¿Con cuántos LED fundidos como máximo sigue estando permitida?
+    options: [Con 1, Con 2, Con 3, Con 4]
+    answer: 1
+    explain: Una luz hecha de varias fuentes no puede perder más del 25% de su superficie. 2 de 8 son justo el 25%, así que sigue permitida; con 3 de 8 (37,5%) ya no.
     cites: ["rv:5.2.55"]
 
-  - id: luces-del-auto-trasera
-    type: mc
-    prompt: ¿De qué color es la luz antiniebla trasera?
-    options: [Blanca, Roja, Ámbar, Azul]
-    answer: 1
-    explain: Las luces traseras y la antiniebla trasera son rojas.
-    cites: ["rv:5.2.53"]
+  - id: luces-del-auto-lamina
+    type: yesno
+    prompt: Pegas una lámina oscura que tapa un tercio de la luz trasera de tu auto, y la luz funciona perfectamente. ¿Está permitido?
+    answer: false
+    explain: La parte de la luz por donde sale la luz no puede estar tapada en más del 25%, y un tercio es más. Que la luz funcione no cambia el límite de lo tapado.
+    cites: ["rv:5.2.55"]
 
-  - id: luces-del-auto-matricula
-    type: mc
-    prompt: ¿De qué color es la luz de la matrícula?
-    options: [Roja, Blanca, Ámbar, Verde]
-    answer: 1
-    explain: La luz de la matrícula es blanca.
-    cites: ["rv:5.2.53"]
+  - id: luces-del-auto-freno-colores-mezclados
+    type: yesno
+    prompt: Las luces de freno pueden ser rojas o ámbar. Tu auto tiene la luz de freno izquierda roja y la derecha ámbar. ¿Está en regla?
+    answer: false
+    explain: Cada color es válido por separado, pero las luces con la misma función deben tener casi el mismo color, tamaño y fuerza. Dos colores distintos en las dos luces de freno no cumplen.
+    cites: ["rv:5.2.53", "rv:5.2.55"]
 
-  - id: luces-del-auto-intermitentes
+  - id: luces-del-auto-parpadean
     type: multi
-    prompt: ¿De qué colores pueden ser los intermitentes traseros?
-    options: [Ámbar, Rojo, Blanco, Azul]
-    answer: [0, 1]
-    explain: Los intermitentes traseros son ámbar o rojos. Los delanteros, ámbar o blancos.
-    cites: ["rv:5.2.53"]
+    prompt: ¿Cuáles de estas luces de un auto particular pueden parpadear?
+    options: [Los intermitentes, Las luces de emergencia, Las luces de freno al hacer un frenado de emergencia, Las luces de cruce]
+    answer: [0, 1, 2]
+    explain: Solo los intermitentes, las luces de emergencia y las luces de freno del aviso de frenado de emergencia pueden parpadear. Las luces de cruce que parpadean están prohibidas.
+    cites: ["rv:5.2.64"]
+
+  - id: luces-del-auto-testigo-antiniebla
+    type: yesno
+    prompt: Enciendes la antiniebla trasera de tu auto. ¿Debe haber una señal óptica en el tablero que te lo diga?
+    answer: true
+    explain: La antiniebla trasera encendida debe avisar al conductor con una señal óptica, para que no la dejes encendida sin necesidad.
+    cites: ["rv:5.2.62"]
 
   - id: luces-del-auto-azul
     type: yesno
@@ -52,26 +64,3 @@ questions:
     answer: false
     explain: La ley prohíbe luces que deslumbren, con la excepción de las luces largas.
     cites: ["rv:5.2.64"]
-
-  - id: luces-del-auto-freno
-    type: number
-    prompt: ¿Cuántas luces de freno, además de la tercera luz, debe tener un auto?
-    answer: 2
-    unit: luces
-    explain: Dos luces de freno, más una tercera luz de freno en autos puestos en uso después del 30 de septiembre de 2001.
-    cites: ["rv:5.2.51"]
-
-  - id: luces-del-auto-testigo
-    type: yesno
-    prompt: ¿Debe el auto avisar con una señal en el tablero cuando las luces largas están encendidas (autos puestos en uso desde 1998)?
-    answer: true
-    explain: Las luces largas encendidas deben señalizarse al conductor con una señal óptica.
-    cites: ["rv:5.2.62"]
-
-  - id: luces-del-auto-marcha
-    type: mc
-    prompt: ¿De qué colores puede ser la luz de marcha atrás?
-    options: [Blanca o amarilla, Roja o ámbar, Solo azul, Solo verde]
-    answer: 0
-    explain: Larga, cruce, posición y marcha atrás son blancas o amarillas.
-    cites: ["rv:5.2.53"]

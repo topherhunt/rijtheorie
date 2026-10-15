@@ -18,7 +18,19 @@ cbrTopics: [verkeerstekens]
 A1 es la velocidad máxima (maximumsnelheid). A4 es la velocidad recomendada (adviessnelheid): un consejo, no un límite.
 </Rule>
 
+<Check id="velocidad-a1-significado" />
+
 <Check id="velocidad-a4-recomendada" />
+
+### Qué pasa cuando termina el límite (A2)
+
+<Rule cite="rvv:bijlage1.A2, rvv:20, rvv:21" title="Después de A2 vuelve el límite general">
+A2 (*Einde maximumsnelheid*) cierra el límite de la señal anterior. No te deja ir libre: vuelve el límite general de la vía. Dentro de la <T id="bebouwde-kom" /> son 50 km/h para vehículos de motor; fuera, 80 km/h en las demás vías (100 en una <T id="autoweg" />, 130 en una <T id="autosnelweg" />).
+</Rule>
+
+<Check id="velocidad-a2-efecto" />
+
+<Check id="velocidad-a2-kom" />
 
 ### Cuando el cartel y tu vehículo no coinciden
 
@@ -29,6 +41,8 @@ Cuando una señal indica una velocidad más alta que el máximo del tipo de veh�
 </Rule>
 
 <Check id="velocidad-camion-100" />
+
+<Check id="velocidad-snorfiets-60" />
 
 ## Familia B: prioridad
 
@@ -41,9 +55,19 @@ Cuando una señal indica una velocidad más alta que el máximo del tipo de veh�
 - **B6**: debes ceder el paso a los conductores de la vía que cruzas.
 - **B7**: **stop**. Debes detenerte y ceder el paso a los conductores de la vía que cruzas.
 
-<Rule cite="rvv:bijlage1.B6, rvv:bijlage1.B7">
-B6: *verleen voorrang aan bestuurders op de kruisende weg.* B7: *Stop; verleen voorrang aan bestuurders op de kruisende weg.* B7 te obliga a detenerte siempre, aunque no venga nadie.
+<Rule cite="rvv:bijlage1.B6, rvv:bijlage1.B7, rvv:1" title="B6 contra B7">
+B6: *verleen voorrang aan bestuurders op de kruisende weg.* Dar voorrang significa dejar que los demás sigan su camino sin estorbo: si viene alguien por la vía que cruzas, esperas; si no viene nadie, pasas sin parar. B7: *Stop; verleen voorrang aan bestuurders op de kruisende weg.* B7 te obliga a detenerte siempre, aunque no venga nadie.
 </Rule>
+
+<Check id="velocidad-b6-cede" />
+
+<Check id="velocidad-b6-b7-via-libre" />
+
+<Rule cite="rvv:63, rvv:15.1" title="Una señal manda sobre la regla de la derecha">
+Con B6 o B7 delante, cedes aunque el otro venga por tu izquierda: la señal pasa por encima de la regla general. Después de un B2 (*Einde voorrangsweg*) ya no hay señal que lo cambie, y en un cruce sin señales ni semáforo vuelve la regla general: das voorrang a quien viene por tu derecha.
+</Rule>
+
+<Check id="velocidad-b2-efecto" />
 
 <Rule cite="rvv:79" title="Dónde parar ante un stop">
 Si hay una <T id="stopstreep" /> para ti y la ley te obliga a parar, paras detrás de ella.
@@ -55,4 +79,6 @@ Práctica del CBR: ante B7, para delante de la línea de detención. Si no hay l
 
 <Check id="velocidad-b7-siempre" />
 
-Las reglas completas de prioridad (quién pasa primero en cada situación) están en el capítulo 4. Aquí solo necesitas reconocer cada señal.
+<Check id="velocidad-b7-donde" />
+
+Las reglas completas de prioridad (quién pasa primero en cada situación) están en el capítulo 4. Aquí aprendes qué te obliga a hacer cada señal; cómo se combinan en cada cruce lo practicas allí.

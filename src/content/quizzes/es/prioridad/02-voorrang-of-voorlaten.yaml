@@ -1,42 +1,10 @@
 questions:
-  - id: voorrang-of-voorlaten-def
-    type: mc
-    prompt: Según la ley, ¿qué significa "voorrang verlenen"?
-    options:
-      - Permitir a los conductores implicados que continúen su camino sin estorbo
-      - Detenerse siempre por completo
-      - Tocar la bocina para avisar al otro
-      - Pasar solo si el otro no te ve
-    answer: 0
-    explain: La ley define voorrang verlenen como permitir a los conductores implicados continuar su camino sin estorbo. No siempre implica detenerse del todo.
-    cites: ["rvv:1"]
-
-  - id: voorrang-of-voorlaten-bestuurder
-    type: yesno
-    prompt: Para la ley, un peatón cuenta como "bestuurder" (conductor).
-    answer: false
-    explain: Bestuurders son todos los usuarios de la vía excepto los peatones. Por eso la regla de la derecha (art. 15) no se aplica hacia peatones.
-    cites: ["rvv:1", "rvv:15.1"]
-
   - id: voorrang-of-voorlaten-bici-bestuurder
     type: yesno
     prompt: Un ciclista que viene por tu derecha en un cruce sin señales es un "bestuurder" y tiene prioridad sobre ti.
     answer: true
     explain: Los ciclistas son conductores para la ley, así que la regla de la derecha les da prioridad igual que a un auto.
     cites: ["rvv:1", "rvv:15.1"]
-
-  - id: voorrang-of-voorlaten-casos
-    type: multi
-    prompt: ¿En cuáles de estas situaciones la ley usa la expresión "voor laten gaan" (dejar pasar)?
-    options:
-      - Al girar, hacia el tráfico de frente y el que va a tu lado
-      - En un paso de cebra, hacia los peatones
-      - Ante un vehículo prioritario con luces y sirena
-      - Al arrancar desde el borde de la calzada (maniobra especial)
-      - Solo en cruces sin señales
-    answer: [0, 1, 2, 3]
-    explain: Los artículos 18, 49, 50 y 54 usan voor laten gaan. La regla de la derecha de un cruce sin señales (art. 15) usa voorrang verlenen.
-    cites: ["rvv:18.1", "rvv:49.2", "rvv:50", "rvv:54"]
 
   - id: voorrang-of-voorlaten-peaton-garaje
     type: yesno
@@ -64,18 +32,6 @@ questions:
     explain: Puedes ceder el paso reduciendo la velocidad si el otro no tiene que frenar ni esquivarte. Entre las señales de prioridad, solo B7 (Stop) obliga siempre a parar.
     cites: ["rvv:1", "rvv:bijlage1.B7"]
 
-  - id: voorrang-of-voorlaten-acercarse
-    type: mc
-    prompt: Según el CBR, ¿cómo debes acercarte a un cruce donde debes ceder el paso?
-    options:
-      - De manera que quien tiene prioridad confíe en que le cederás el paso
-      - Acelerando para pasar antes que el otro
-      - Sin mirar si ves que el otro frena
-      - Siempre en primera marcha
-    answer: 0
-    explain: El CBR pide una aproximación que muestre claramente que vas a ceder, y detenerte (si hace falta) de modo que el otro siga sin estorbo.
-    cites: ["cbr-rijprocedure:3.3"]
-
   - id: voorrang-of-voorlaten-ambulancia
     type: yesno
     prompt: Una ambulancia con luces azules y sirena se acerca. ¿Todos los usuarios de la vía deben dejarla pasar?
@@ -83,15 +39,38 @@ questions:
     explain: El art. 50 obliga a todos los usuarios a dejar pasar a los vehículos prioritarios.
     cites: ["rvv:50", "rvv:29"]
 
-  - id: voorrang-of-voorlaten-maniobra
-    type: multi
-    prompt: ¿Cuáles de estas son maniobras especiales en las que debes dejar pasar al resto del tráfico?
+  - id: voorrang-of-voorlaten-uitrit-izquierda
+    type: mc
+    prompt: Sales de una uitrit (salida de un garaje) a la calle. Por tu derecha no viene nadie, pero por tu izquierda se acerca una bicicleta y por la acera pasa un peatón. ¿A quién dejas pasar?
     options:
-      - Arrancar desde el borde de la calzada
-      - Dar marcha atrás
-      - Salir de una uitrit hacia la calle
-      - Dar la vuelta (keren)
-      - Seguir recto por una vía con prioridad
-    answer: [0, 1, 2, 3]
-    explain: El art. 54 cubre wegrijden, achteruitrijden, uit een uitrit de weg oprijden, keren y cambiar de carril, entre otros. Seguir recto por una vía con prioridad no es maniobra especial.
-    cites: ["rvv:54"]
+      - "A todos: a la bicicleta y al peatón"
+      - Solo a quien viene por tu derecha, o sea a nadie
+      - Solo a la bicicleta, porque el peatón no es conductor
+      - A nadie, porque estás saliendo de una propiedad privada y ellos van por la vía
+    answer: 0
+    explain: Salir de una uitrit es una maniobra especial (art. 54) y dejas pasar a todo el tráfico, también al que viene por la izquierda y a los peatones. La regla de la derecha no se aplica aquí. El CBR dice que no importa desde dónde ni qué tipo de usuario se acerque.
+    cites: ["rvv:54", "cbr-rijprocedure:3.6"]
+
+  - id: voorrang-of-voorlaten-que-regla
+    type: mc
+    prompt: Estás estacionado junto al borde de la calzada y vas a arrancar. A tu derecha se acerca un auto y de frente se acerca otro. ¿Qué regla se aplica?
+    options:
+      - Dejas pasar a todo el tráfico, incluido el que viene de frente (art. 54)
+      - "Regla de la derecha: solo cedes al que viene por tu derecha"
+      - Pasa primero el que llegue antes al punto de cruce
+      - Dejas pasar solo al que viene de frente
+    answer: 0
+    explain: "Arrancar desde un estacionamiento es una maniobra especial: es voor laten gaan, no voorrang verlenen, y el círculo incluye a todos, también a los de frente."
+    cites: ["rvv:54", "rvv:15.1", "cbr-rijprocedure:3.1"]
+
+  - id: voorrang-of-voorlaten-ciclista-peaton
+    type: mc
+    prompt: Vas recto por un cruce sin señales ni paso de cebra. Un ciclista llega por tu derecha por la calle que cruzas y un peatón se dispone a cruzar tu calle. ¿A quién debes dar voorrang según la regla de la derecha?
+    options:
+      - Al ciclista; al peatón la regla no le da voorrang, pero debes tener en cuenta su interés
+      - A los dos, porque ambos vienen por tu derecha
+      - Solo al peatón, porque es el más vulnerable
+      - A ninguno, porque van por la calle que cruzas
+    answer: 0
+    explain: El art. 15.1 da voorrang a los bestuurders que vienen de la derecha, y el ciclista lo es; el peatón no (art. 1). El CBR añade que en los cruces debes tener muy en cuenta el interés de los peatones.
+    cites: ["rvv:1", "rvv:15.1", "cbr-rijprocedure:3.3"]

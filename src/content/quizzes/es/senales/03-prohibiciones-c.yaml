@@ -1,12 +1,4 @@
 questions:
-  - id: c-c1-significado
-    type: mc
-    prompt: ¿Qué significa esta señal?
-    sign: C1
-    options: ["Cerrado en ambos sentidos para vehículos", "Sentido único", "Cerrado para vehículos de motor", "Prohibido estacionar"]
-    answer: 0
-    explain: C1 cierra la vía en los dos sentidos a vehículos, jinetes y conductores de animales.
-    cites: ["rvv:bijlage1.C1"]
 
   - id: c-c2-significado
     type: mc
@@ -16,15 +8,6 @@ questions:
     answer: 0
     explain: "C2 es un eenrichtingsweg visto desde el lado prohibido: en esta dirección está cerrado para vehículos."
     cites: ["rvv:bijlage1.C2"]
-
-  - id: c-c5-entrada
-    type: mc
-    prompt: ¿Qué significa esta señal?
-    sign: C5
-    options: ["Se permite entrar", "Prohibido entrar", "Cerrado para ciclistas", "Fin de zona"]
-    answer: 0
-    explain: "C5 es \"inrijden toegestaan\": se permite entrar."
-    cites: ["rvv:bijlage1.C5"]
 
   - id: c-c6-c12
     type: mc
@@ -51,15 +34,6 @@ questions:
     explain: C7 cierra solo los camiones. Un auto puede entrar.
     cites: ["rvv:bijlage1.C7"]
 
-  - id: c-c11-significado
-    type: mc
-    prompt: ¿Para qué vehículos está cerrada esta vía?
-    sign: C11
-    options: ["Motocicletas", "Camiones", "Ciclomotores", "Todos los vehículos de motor"]
-    answer: 0
-    explain: C11 es "Gesloten voor motorfietsen".
-    cites: ["rvv:bijlage1.C11"]
-
   - id: c-c10-remolque
     type: yesno
     prompt: Conduces un auto con remolque. ¿Puedes entrar donde hay esta señal?
@@ -67,42 +41,6 @@ questions:
     answer: false
     explain: C10 cierra los vehículos de motor con remolque.
     cites: ["rvv:bijlage1.C10"]
-
-  - id: c-c14-significado
-    type: mc
-    prompt: ¿Quién no puede pasar con esta señal?
-    sign: C14
-    options: ["Ciclistas", "Peatones", "Ciclomotores", "Autobuses"]
-    answer: 0
-    explain: C14 cierra bicicletas y vehículos para personas con discapacidad sin motor.
-    cites: ["rvv:bijlage1.C14"]
-
-  - id: c-c16-significado
-    type: mc
-    prompt: ¿Quién no puede pasar con esta señal?
-    sign: C16
-    options: ["Peatones", "Ciclistas", "Autos", "Jinetes"]
-    answer: 0
-    explain: C16 es "Gesloten voor voetgangers".
-    cites: ["rvv:bijlage1.C16"]
-
-  - id: c-c19-altura
-    type: mc
-    prompt: ¿Qué cierra esta señal?
-    sign: C19
-    options: ["Vehículos más altos de lo indicado, con carga incluida", "Vehículos más anchos", "Vehículos más pesados", "Vehículos más largos"]
-    answer: 0
-    explain: C19 cierra los vehículos más altos de lo indicado, contando la carga.
-    cites: ["rvv:bijlage1.C19"]
-
-  - id: c-c21-masa
-    type: mc
-    prompt: ¿Qué significa C21 con un número?
-    sign: C21
-    options: ["Cerrado para vehículos con masa total mayor a la indicada", "Velocidad máxima", "Cerrado para vehículos más altos", "Peso mínimo"]
-    answer: 0
-    explain: C21 limita la masa total (o suma de cargas por eje) del vehículo o la combinación.
-    cites: ["rvv:bijlage1.C21"]
 
   - id: c-c22e-milieuzone
     type: mc
@@ -113,10 +51,43 @@ questions:
     explain: La prohibición de una milieuzone se aplica a vehículos con motor diésel, según la clase de emisión que indique el panel.
     cites: ["rvv:86d.1", "rvv:bijlage1.C22e"]
 
-  - id: c-ontheffing
+  - id: c-c1-peaton
+    type: multi
+    prompt: Una calle tiene en su entrada esta señal. ¿Quién de estos todavía puede pasar por ella?
+    sign: C1
+    options: ["Un peatón", "Un ciclista", "Un auto", "Un ciclomotor (bromfiets)"]
+    answer: [0]
+    explain: C1 cierra para voertuigen, jinetes y conductores de animales. El peatón no es un voertuig, así que pasa. La bicicleta, el auto y el ciclomotor sí lo son.
+    cites: ["rvv:bijlage1.C1", "rvv:1"]
+
+  - id: c-c12-bromfiets
     type: yesno
-    prompt: ¿Puede alguien tener un permiso especial (ontheffing) para pasar por una señal C12?
+    prompt: Con esta señal, ¿puede entrar un ciclomotor (bromfiets)?
     sign: C12
     answer: true
-    explain: El art. 87 permite que la autoridad dé una ontheffing para C6 a C21 (entre ellas C12).
-    cites: ["rvv:87"]
+    explain: C12 cierra los motorvoertuigen, y para el RVV una bromfiets no es un motorvoertuig. El que le cierra el paso es C13 (o C15 o C9).
+    cites: ["rvv:bijlage1.C12", "rvv:1"]
+
+  - id: c-c14-bromfiets
+    type: yesno
+    prompt: Con esta señal, ¿puede entrar una bromfiets (de las de 45 km/h, no un snorfiets)?
+    sign: C14
+    answer: true
+    explain: C14 cierra las bicicletas y los vehículos para personas con discapacidad sin motor. Una bromfiets no es una fiets, así que no está incluida.
+    cites: ["rvv:bijlage1.C14", "rvv:1"]
+
+  - id: c-ciclomotor-no-bici
+    type: mc
+    prompt: Conduces un ciclomotor (bromfiets) con el motor en marcha. ¿Cuál de estas señales te cierra el paso?
+    options: ["C6", "C11", "C12", "C13"]
+    answer: 3
+    explain: C13 cierra bromfietsen, snorfietsen y vehículos para personas con discapacidad con el motor en marcha. C6, C11 y C12 cierran motorvoertuigen, y la bromfiets no lo es.
+    cites: ["rvv:bijlage1.C13", "rvv:bijlage1.C12", "rvv:1"]
+
+  - id: c-c19-carga
+    type: yesno
+    prompt: Tu furgoneta mide 2,6 m de altura, pero con la carga llega a 3,3 m. Ves C19 con 3,0 m. ¿Puedes pasar?
+    sign: C19
+    answer: false
+    explain: C19 cierra los vehículos que, con la carga incluida, sean más altos de lo indicado. La furgoneta sola cabe, pero con la carga no.
+    cites: ["rvv:bijlage1.C19"]

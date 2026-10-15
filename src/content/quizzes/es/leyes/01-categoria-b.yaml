@@ -1,41 +1,45 @@
 questions:
-  - id: categoria-b-masa
-    type: number
-    prompt: ¿Cuál es la masa máxima, en kg, de un auto que se puede conducir con la categoría B?
-    answer: 3500
-    unit: kg
-    explain: La categoría B cubre vehículos de motor de cuatro o más ruedas con masa máxima de hasta 3.500 kg.
-    cites: ["rr:15.1.e"]
+  - id: categoria-b-asientos
+    type: yesno
+    prompt: Un monovolumen está hecho para 9 personas contando al conductor y tiene una masa máxima de 3.000 kg. ¿Se puede conducir con la categoría B?
+    answer: true
+    explain: La categoría B admite hasta 8 personas además del conductor, es decir 9 en total, y hasta 3.500 kg. Cumple las dos condiciones.
+    cites: ["rr:15.1"]
 
-  - id: categoria-b-pasajeros
-    type: number
-    prompt: ¿Para cuántas personas, además del conductor, puede estar hecho como máximo un vehículo de la categoría B?
-    answer: 8
-    unit: personas
-    explain: La categoría B cubre vehículos hechos para como máximo 8 personas además del conductor.
-    cites: ["rr:15.1.e"]
+  - id: categoria-b-diez-asientos
+    type: yesno
+    prompt: Una furgoneta con una masa máxima de 3.000 kg está hecha para 10 personas además del conductor. ¿Se puede conducir con la categoría B?
+    answer: false
+    explain: Aunque el peso cabe, la categoría B admite como máximo 8 personas además del conductor. Con más plazas necesitas la categoría D1 o D.
+    cites: ["rr:15.1"]
 
-  - id: categoria-b-remolque
-    type: number
-    prompt: ¿Hasta qué masa máxima (en kg) puede ser un remolque que arrastras con la categoría B sin ninguna otra condición?
-    answer: 750
-    unit: kg
-    explain: Un remolque de hasta 750 kg siempre entra en la categoría B. Uno más pesado solo si el conjunto completo no pasa de 3.500 kg.
-    cites: ["rr:15.1.e"]
+  - id: categoria-b-furgoneta-pesada
+    type: yesno
+    prompt: Una furgoneta de reparto con cuatro ruedas tiene una masa máxima de 3.800 kg. ¿Se puede conducir con la categoría B?
+    answer: false
+    explain: La categoría B llega hasta 3.500 kg de masa máxima. Por encima necesitas la categoría C1, aunque el vehículo parezca una furgoneta normal.
+    cites: ["rr:15.1"]
+
+  - id: categoria-b-remolque-ligero-independiente
+    type: yesno
+    prompt: Tu auto tiene una masa máxima de 3.000 kg y arrastras un remolque con una masa máxima de 700 kg. El conjunto pasa de 3.500 kg. ¿Basta la categoría B?
+    answer: true
+    explain: Un remolque de hasta 750 kg entra en la categoría B sin mirar el conjunto. El tope de 3.500 kg para el conjunto solo cuenta si el remolque pasa de 750 kg.
+    cites: ["rr:15.1"]
 
   - id: categoria-b-conjunto
     type: yesno
     prompt: Tu auto tiene una masa máxima de 1.800 kg y el remolque, 1.500 kg. El conjunto es de 3.300 kg. ¿Puedes conducirlo solo con la categoría B?
     answer: true
     explain: Un remolque de más de 750 kg se permite con la categoría B si la masa máxima del conjunto no pasa de 3.500 kg.
-    cites: ["rr:15.1.e"]
+    cites: ["rr:15.1"]
 
   - id: categoria-b-conjunto-pesado
     type: yesno
     prompt: Tu auto tiene una masa máxima de 2.000 kg y el remolque, 2.000 kg (conjunto de 4.000 kg). ¿Basta la categoría B normal, sin ningún código?
     answer: false
     explain: El conjunto pasa de 3.500 kg. Con la categoría B hasta 4.250 kg solo se permite si tu permiso tiene el código que se obtiene aprobando el examen correspondiente. Si no, necesitas BE.
-    cites: ["rr:15.1.e", "rr:15.5"]
+    cites: ["rr:15.1", "rr:15.5"]
 
   - id: categoria-be
     type: mc
@@ -43,14 +47,7 @@ questions:
     options: [AM, BE, C1, T]
     answer: 1
     explain: La categoría BE cubre un vehículo de la categoría B con otro remolque de hasta 3.500 kg de masa máxima.
-    cites: ["rr:15.1.k"]
-
-  - id: categoria-b-ruedas
-    type: yesno
-    prompt: ¿La categoría B se refiere a vehículos de motor con cuatro o más ruedas?
-    answer: true
-    explain: Así lo define el reglamento de permisos de conducir para la categoría B.
-    cites: ["rr:15.1.e"]
+    cites: ["rr:15.1"]
 
   - id: categoria-b-lectura
     type: mc
@@ -58,4 +55,4 @@ questions:
     options: [El peso que lleva el remolque hoy, La masa máxima permitida del remolque y del conjunto, El peso del conductor, El largo del remolque]
     answer: 1
     explain: Se usa la masa máxima permitida según los papeles del vehículo, no la carga de hoy.
-    cites: ["rr:15.1.e"]
+    cites: ["rr:15.1"]

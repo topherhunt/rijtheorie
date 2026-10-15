@@ -8,32 +8,14 @@ questions:
     cites: ["rvv:bijlage1.A1"]
     sign: A1
 
-  - id: senal-a2
+  - id: senal-a2-general
     type: mc
-    prompt: "¿Qué significa esta señal?"
-    options: [Fin de la velocidad máxima, Velocidad máxima, Fin de la velocidad recomendada, Fin de la zona urbana]
-    answer: 0
-    explain: "A2 es el final de la maximumsnelheid."
-    cites: ["rvv:bijlage1.A2"]
+    prompt: "Conduces un auto por una carretera normal fuera de la zona urbana (ni autoweg ni autosnelweg). Pasas una señal A2, el final de una velocidad máxima de 60 km/h. ¿Qué máximo rige para ti desde ahora?"
+    options: [60 km/h, 80 km/h, 100 km/h, 130 km/h]
+    answer: 1
+    explain: "A2 termina el máximo de la señal y vuelve el máximo general de la vía: en las demás vías fuera de la zona urbana, 80 km/h. No sigue valiendo el 60, y 100 o 130 son para autowegen y autosnelwegen."
+    cites: ["rvv:bijlage1.A2", "rvv:21"]
     sign: A2
-
-  - id: senal-a4
-    type: mc
-    prompt: "¿Qué significa esta señal?"
-    options: [Velocidad recomendada, Velocidad máxima, Velocidad mínima, Fin de la velocidad máxima]
-    answer: 0
-    explain: "A4 es la adviessnelheid, una recomendación."
-    cites: ["rvv:bijlage1.A4"]
-    sign: A4
-
-  - id: senal-a5
-    type: mc
-    prompt: "¿Qué significa esta señal?"
-    options: [Fin de la velocidad recomendada, Fin de la velocidad máxima, Comienzo de zona, Velocidad máxima electrónica]
-    answer: 0
-    explain: "A5 es el fin de la adviessnelheid."
-    cites: ["rvv:bijlage1.A5"]
-    sign: A5
 
   - id: senal-recomendada-obligatoria
     type: yesno
@@ -42,34 +24,64 @@ questions:
     explain: "A4 es una recomendación (adviessnelheid). El máximo lo da la A1."
     cites: ["rvv:bijlage1.A4", "rvv:62"]
 
-  - id: senal-zona
+  - id: senal-a4-curva
+    type: mc
+    prompt: "Antes de una curva cerrada y sin visibilidad ves una señal A4 de 40 km/h. El máximo legal de la vía es 80 y tú vas a 70. ¿Qué es correcto?"
+    options:
+      - "Hago bien, porque 70 está por debajo del máximo legal y la A4 es solo una recomendación"
+      - "La A4 no es un máximo legal, pero igual debo poder detenerme dentro de lo que veo libre; si a 70 no puedo, voy demasiado rápido"
+      - "Debo ir exactamente a 40 porque toda señal de velocidad es obligatoria"
+      - "La A4 solo importa si llueve"
+    answer: 1
+    explain: "La A4 (adviessnelheid) no obliga, pero el art. 19 sí: debes poder detenerte dentro de la distancia que ves libre. Estar bajo el máximo no sustituye esa regla."
+    cites: ["rvv:bijlage1.A4", "rvv:62", "rvv:19"]
+    sign: A4
+
+  - id: senal-a5-fin
+    type: mc
+    prompt: "Pasas una señal A5 justo después de una curva donde había una A4 de 40 km/h. ¿Qué cambia para ti?"
+    options:
+      - "Termina solo la recomendación; el máximo legal y la obligación de poder detenerme siguen"
+      - "Termina también el máximo legal y puedo ir a la velocidad que quiera"
+      - "Debo acelerar hasta el máximo legal"
+      - "Debo seguir a 40 km/h hasta el próximo cruce"
+    answer: 0
+    explain: "A5 es el final de la adviessnelheid. No termina ningún máximo ni la regla del art. 19, y tampoco te obliga a acelerar."
+    cites: ["rvv:bijlage1.A5", "rvv:19"]
+    sign: A5
+
+  - id: senal-zona-calles
     type: yesno
-    prompt: "Una señal A1 con la palabra zone encima y sin otra indicación del área, ¿vale hasta la señal de fin de zona?"
+    prompt: "Pasas una señal A1 de 30 km/h con la palabra «zone» encima y sin indicación del área. Giras por dos calles del barrio y todavía no has visto ninguna señal de fin de zona. ¿Sigue valiendo el máximo de 30?"
     answer: true
-    explain: "Sin indicación del área, la señal vale en el área limitada por ella y las señales de fin de zona colocadas con ella."
+    explain: "Sin indicación del área, la señal vale en el área limitada por ella y por las señales de fin de zona colocadas con ella. Mientras no llegues a ese final, sigues dentro."
     cites: ["rvv:66.2"]
-
-  - id: senal-zona-area
-    type: yesno
-    prompt: "Sobre una señal está la palabra zone con una indicación del área. ¿Vale la señal en ese área?"
-    answer: true
-    explain: "Con indicación del área, la señal vale en el área indicada."
-    cites: ["rvv:66.1"]
-
-  - id: senal-carril
-    type: yesno
-    prompt: "En una vía dividida en carriles, ¿puede una señal de velocidad valer solo para un carril?"
-    answer: true
-    explain: "La aplicación de una señal puede limitarse a uno o varios carriles."
-    cites: ["rvv:65.1"]
+    sign: A1
 
   - id: senal-onderbord
     type: mc
-    prompt: "Bajo una señal hay un onderbord con la palabra uitgezonderd y el símbolo de bicicleta. ¿Qué significa?"
-    options: [La señal no vale para ciclistas, La señal vale solo para ciclistas, La señal vale para todos, La señal está rota]
+    prompt: "Conduces un auto. Una señal tiene debajo un onderbord con la palabra uitgezonderd y el símbolo de bicicleta. ¿Qué significa para ti?"
+    options: [La señal no vale para los ciclistas pero sí para ti, La señal vale solo para ciclistas, La señal no vale para nadie, La señal no vale para ti por ser un vehículo de motor]
     answer: 0
-    explain: "Uitgezonderd con símbolos: la señal no vale para los usuarios o conductas indicados."
+    explain: "Uitgezonderd con símbolos: la señal vale para todos menos para los usuarios indicados. Los excluidos son los ciclistas; un auto sigue sujeto a la señal."
     cites: ["rvv:67.1"]
+
+  - id: senal-onderbord-solo-simbolo
+    type: mc
+    prompt: "Conduces un auto fuera de la zona urbana, por una vía normal. Ves una señal A1 de 50 km/h y debajo un onderbord que solo muestra el símbolo de un camión. ¿Qué máximo rige para ti?"
+    options: [50 km/h, 80 km/h, 30 km/h, 100 km/h]
+    answer: 1
+    explain: "Un onderbord con solo símbolos limita la señal a los usuarios indicados (art. 67 lid 1 b). La A1 vale para los camiones, no para ti, así que rige el máximo general de 80 km/h fuera de la zona urbana."
+    cites: ["rvv:67.1", "rvv:21"]
+    sign: A1
+
+  - id: senal-onderbord-uitgezonderd-auto
+    type: yesno
+    prompt: "Una señal A1 de 60 km/h tiene debajo un onderbord con la palabra «uitgezonderd» y el símbolo de una bicicleta. Conduces un auto. ¿Debes respetar los 60?"
+    answer: true
+    explain: "«Uitgezonderd» con símbolos significa que la señal no vale para los usuarios indicados (art. 67 lid 1 c). La excepción es para las bicicletas; tú sigues sujeto a la señal."
+    cites: ["rvv:67.1"]
+    sign: A1
 
   - id: senal-a3
     type: mc
@@ -80,9 +92,9 @@ questions:
     cites: ["rvv:bijlage1.A3", "rvv:73"]
     sign: A3
 
-  - id: senal-zona-fin
+  - id: senal-a3-cruz-roja
     type: yesno
-    prompt: "Entras en una zona de velocidad máxima (señal A1 con la palabra zone, sin indicación del área). ¿Termina la zona al llegar a la señal de fin de zona?"
-    answer: true
-    explain: "La señal vale en el área limitada por ella y por las señales de fin de zona colocadas con ella."
-    cites: ["rvv:66.2"]
+    prompt: "En una autosnelweg, el panel sobre tu carril muestra una cruz roja y el del carril de al lado un 100. ¿Puedes seguir por tu carril?"
+    answer: false
+    explain: "Una cruz roja significa que el carril no puede usarse (art. 73 b). El 100 del carril vecino es la velocidad máxima de ese carril, que sí puede usarse."
+    cites: ["rvv:73"]

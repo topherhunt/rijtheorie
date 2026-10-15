@@ -49,11 +49,13 @@ Las señales K te guían. No dan órdenes, pero necesitas entenderlas para elegi
 - **L10**: preaviso de una medida de tráfico en la dirección indicada.
 - **L11**: la señal de arriba vale solo para los carriles indicados. **L12**: solo para el carril indicado.
 
-<Rule cite="rvv:65.1, rvv:bijlage1.L11">
-Si la vía está dividida en carriles, una señal puede aplicarse a uno o varios de ellos. L11 y L12 lo indican.
+<Check id="kl-l5-fin-carril" />
+
+<Rule cite="rvv:65.1, rvv:bijlage1.L11, rvv:bijlage1.L12">
+Si la vía está dividida en carriles, una señal puede aplicarse a uno o varios de ellos. L11 y L12 lo indican. Si circulas por un carril que el panel no nombra, esa señal no te alcanza.
 </Rule>
 
-<Check id="kl-l11-carriles" />
+<Check id="kl-l12-otro-carril" />
 
 ### Lugares y servicios
 
@@ -64,6 +66,15 @@ Si la vía está dividida en carriles, una señal puede aplicarse a uno o varios
 - **L8**: calle sin salida (<T id="doodlopende-weg" />). **L9**: preaviso de calle sin salida.
 - **L20**: <T id="uitwijkplaats">apartadero</T> a la derecha. **L21**: a la izquierda.
 
+<Check id="kl-l8-sinsalida" />
+
+<Rule cite="rvv:23.1.e, rvv:23.2" title="L3: no te detengas en la parada">
+Junto a la parada de bus no puedes <T id="stilstaan" /> a la altura de la marca de bloques (o a menos de 12 m de la señal si no hay marca). La única excepción es el tiempo inmediato para que suban o bajen pasajeros.
+</Rule>
+
+<Check id="kl-l3-pasajero" />
+<Check id="kl-l3-espera" />
+
 ### Túneles y emergencias
 
 <Signs codes="L13,L14,L15,L16,L17,L18,L19" />
@@ -73,4 +84,17 @@ Si la vía está dividida en carriles, una señal puede aplicarse a uno o varios
 - **L16**: teléfono de emergencia. **L17**: extintor. **L18**: teléfono y extintor.
 - **L19**: salidas de emergencia más cercanas, con dirección y distancia.
 
-<Check id="kl-l14-refugio" />
+<Rule cite="rvv:23.1.d" title="L13: en el túnel no te detienes">
+No puedes detenerte (stilstaan) en un túnel.
+</Rule>
+
+<Check id="kl-l13-parar" />
+
+<Check id="kl-l16-l17" />
+
+<Rule cite="rvv:43.3, rvv:1" title="L14 y L15: solo para emergencias">
+En una autosnelweg o autoweg solo puedes usar la vluchtstrook, la <T id="vluchthaven" /> y la berma en caso de emergencia, como una avería. No son un lugar para descansar ni para mirar el mapa.
+</Rule>
+
+<Check id="kl-l14-descansar" />
+<Check id="kl-l14-averia" />

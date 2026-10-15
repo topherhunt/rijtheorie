@@ -23,14 +23,6 @@ questions:
     explain: "Los camiones tienen 80 km/h según el art. 22 onderdeel a."
     cites: ["rvv:22"]
 
-  - id: especial-bus
-    type: number
-    prompt: "¿Cuál es la velocidad máxima de un autobús normal (no T100) en una autosnelweg?"
-    answer: 80
-    unit: km/h
-    explain: "Autobuses (menos T100-bussen): 80 km/h."
-    cites: ["rvv:22"]
-
   - id: especial-t100
     type: number
     prompt: "¿Cuál es la velocidad máxima de una T100-bus sin remolque?"
@@ -71,10 +63,26 @@ questions:
     explain: "Los 90 del remolque valen solo si no rige un máximo más bajo; dentro de la zona urbana rigen 50."
     cites: ["rvv:22", "rvv:20"]
 
-  - id: especial-bromfiets
-    type: number
-    prompt: "¿Cuál es la velocidad máxima de un bromfiets (que no es snorfiets) en la calzada?"
-    answer: 45
-    unit: km/h
-    explain: "Art. 20 y 21: 45 km/h en la calzada."
-    cites: ["rvv:20", "rvv:21"]
+  - id: especial-remolque-senal-menor
+    type: mc
+    prompt: "Conduces un auto con un remolque de 750 kg por una autosnelweg. Una señal A1 indica 100 km/h (sin horario). ¿Cuál es tu máximo?"
+    options: [80 km/h, 90 km/h, 100 km/h, 130 km/h]
+    answer: 1
+    explain: "El 90 del art. 22 es más bajo que el 100 de la señal, así que rige el más bajo."
+    cites: ["rvv:22"]
+
+  - id: especial-remolque-otra-via
+    type: mc
+    prompt: "Conduces un auto con un remolque de 750 kg por una carretera normal fuera de la zona urbana (ni autoweg ni autosnelweg, sin señales). ¿Cuál es tu máximo?"
+    options: [70 km/h, 80 km/h, 90 km/h, 100 km/h]
+    answer: 1
+    explain: "El 90 del remolque solo vale mientras no rija un máximo más bajo; en las demás vías fuera de la zona urbana el máximo general (80) ya es más bajo."
+    cites: ["rvv:22", "rvv:21"]
+
+  - id: especial-remolque-pesado
+    type: mc
+    prompt: "Conduces un personenauto con un remolque de masa máxima autorizada de 4000 kg por una autosnelweg sin señales. ¿Cuál es tu máximo?"
+    options: [80 km/h, 90 km/h, 100 km/h, 130 km/h]
+    answer: 0
+    explain: "El 90 km/h solo vale con un remolque de hasta 3500 kg (onderdeel e). Con uno más pesado se aplica el 80 de onderdeel f."
+    cites: ["rvv:22"]

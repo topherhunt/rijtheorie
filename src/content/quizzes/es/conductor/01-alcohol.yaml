@@ -1,35 +1,17 @@
 questions:
-  - id: alcohol-limite-aire
-    type: number
-    prompt: ¿Cuál es el límite general de alcohol en el aire espirado? Está prohibido conducir con más de este valor.
-    answer: 220
-    unit: µg/l
-    explain: El límite general es de 220 µg por litro de aire espirado.
+  - id: alcohol-lectura-230
+    type: yesno
+    prompt: Tienes el permiso desde hace 10 años. En un control soplas 230 µg/l. ¿Cometes una infracción de alcohol?
+    answer: true
+    explain: El límite general es de 220 µg por litro de aire espirado, y 230 lo supera.
     cites: ["wvw:8.2"]
 
-  - id: alcohol-limite-sangre
-    type: number
-    prompt: ¿Cuál es el límite general de alcohol en sangre? Está prohibido conducir con más de este valor.
-    answer: 0.5
-    unit: mg/ml
-    explain: El límite general es de 0,5 mg por mililitro de sangre.
+  - id: alcohol-lectura-220-exacto
+    type: yesno
+    prompt: Tienes el permiso desde hace 10 años. En un control soplas exactamente 220 µg/l. ¿Cometes una infracción de alcohol por la cifra?
+    answer: false
+    explain: La ley prohíbe conducir con MÁS de 220 µg/l. Con exactamente 220 no lo superas, así que la cifra no es infracción (el artículo 8 lid 1 sigue exigiendo que estés en condiciones de conducir).
     cites: ["wvw:8.2"]
-
-  - id: alcohol-principiante-aire
-    type: number
-    prompt: ¿Cuál es el límite de alcohol en el aire espirado para un conductor principiante?
-    answer: 88
-    unit: µg/l
-    explain: Para principiantes es de 88 µg por litro de aire espirado.
-    cites: ["wvw:8.3"]
-
-  - id: alcohol-principiante-sangre
-    type: number
-    prompt: ¿Cuál es el límite de alcohol en sangre para un conductor principiante?
-    answer: 0.2
-    unit: mg/ml
-    explain: Para principiantes es de 0,2 mg por mililitro de sangre.
-    cites: ["wvw:8.3"]
 
   - id: alcohol-principiante-quien
     type: mc
@@ -37,6 +19,27 @@ questions:
     options: ["El límite general (220 µg/l)", "El límite de principiante (88 µg/l)", "Ninguno, porque ya eres adulto", "Cero alcohol siempre"]
     answer: 1
     explain: Si el primer permiso se expidió a los 18 años o más, eres principiante durante los primeros 5 años.
+    cites: ["wvw:8.3"]
+
+  - id: alcohol-novel-100
+    type: yesno
+    prompt: Obtuviste tu primer permiso B a los 30 años, hace 2 años. En un control soplas 100 µg/l. ¿Cometes una infracción de alcohol?
+    answer: true
+    explain: Siguen los 5 años de principiante (primer permiso a los 18 o más), y el límite para ti es de 88 µg/l. Con 100 lo superas.
+    cites: ["wvw:8.3"]
+
+  - id: alcohol-fin-periodo-novel
+    type: yesno
+    prompt: Tu primer permiso, de la categoría B, lo obtuviste a los 19 años, hace 6 años. En un control soplas 150 µg/l. ¿Cometes una infracción de alcohol por la cifra?
+    answer: false
+    explain: Ya pasaron los 5 años de principiante, así que rige el límite general de 220 µg/l, y 150 no lo supera.
+    cites: ["wvw:8.3", "wvw:8.2"]
+
+  - id: alcohol-sangre-novel
+    type: yesno
+    prompt: Obtuviste tu primer permiso hace 1 año, a los 22 años. Un análisis de sangre da 0,3 mg/ml. ¿Superas el límite que te corresponde?
+    answer: true
+    explain: Para el principiante el límite en sangre es de 0,2 mg/ml, y 0,3 lo supera. El límite general de 0,5 no es el tuyo.
     cites: ["wvw:8.3"]
 
   - id: alcohol-sin-permiso
@@ -67,13 +70,12 @@ questions:
     explain: Debes colaborar con la prueba de aliento y otras pruebas.
     cites: ["wvw:160.5"]
 
-  - id: alcohol-rijverbod
-    type: number
-    prompt: ¿Hasta cuántas horas puede durar un rijverbod impuesto por la policía?
-    answer: 24
-    unit: horas
-    explain: La policía puede imponer una prohibición de conducir de hasta 24 horas.
-    cites: ["wvw:162.1"]
+  - id: alcohol-rijverbod-sin-cifra
+    type: yesno
+    prompt: Tienes el permiso desde hace 10 años y tu prueba da 200 µg/l, por debajo del límite general. Pero te tambaleas y hablas con dificultad. ¿Puede la policía prohibirte conducir durante unas horas?
+    answer: true
+    explain: El rijverbod (art. 162) no depende de una cifra, sino de que por el efecto de la sustancia no estés en condiciones de conducir bien, y puede durar hasta 24 horas. Además, el artículo 8 lid 1 prohíbe conducir sin estar capaz aunque no superes el límite.
+    cites: ["wvw:162.1", "wvw:8.1"]
 
   - id: alcohol-sangre-orden
     type: yesno

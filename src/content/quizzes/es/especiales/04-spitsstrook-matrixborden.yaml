@@ -44,17 +44,13 @@ questions:
     explain: La ley lo permite expresamente.
     cites: ["rvv:64a"]
 
-  - id: spitsstrook-definicion
-    type: mc
-    prompt: ¿Qué es una spitsstrook?
-    options:
-      - Un carril de incorporación a la autopista
-      - La vluchtstrook designada como carril de circulación con la señal C23-01
-      - Un carril exclusivo para autobuses
-      - Un carril para vehículos de emergencia
-    answer: 1
-    explain: La spitsstrook es la vluchtstrook que se designa como carril con la señal C23-01.
-    cites: ["rvv:1"]
+  - id: spitsstrook-abierta-es-legal
+    type: yesno
+    prompt: Sobre la vluchtstrook hay un panel C23-01 (spitsstrook open) y no hay ninguna emergencia. ¿Puedes circular por ella como por un carril más?
+    sign: C23-01
+    answer: true
+    explain: Con C23-01 la vluchtstrook está designada como rijstrook, y eso es la spitsstrook. Entonces es un carril de circulación. La prohibición de usar la vluchtstrook sin emergencia (art. 43 lid 3) vale cuando es una vluchtstrook corriente, sin esa señal.
+    cites: ["rvv:1", "rvv:43.3"]
 
   - id: spitsstrook-codigos
     type: mc
@@ -65,14 +61,19 @@ questions:
     explain: 'C23-03 es "einde spitsstrook", el fin de la spitsstrook. C23-01 es "open" y C23-02 "vrijmaken".'
     cites: ["rvv:bijlage1.C23-03"]
 
-  - id: spitsstrook-codigo-abierta
-    type: mc
-    prompt: ¿Qué señal indica que la spitsstrook está abierta?
-    sign: C23-01
-    options: [Esta (C23-01), C23-02, C23-03, G1]
-    answer: 0
-    explain: C23-01 es "spitsstrook open".
-    cites: ["rvv:bijlage1.C23-01"]
+  - id: spitsstrook-cruz-sin-emergencia
+    type: yesno
+    prompt: Hay retención en tu carril y la vluchtstrook, vacía, tiene una cruz roja. No hay ninguna emergencia. ¿Puedes usarla para avanzar?
+    answer: false
+    explain: La cruz roja prohíbe usar el carril, y en la vluchtstrook solo deja una excepción, las emergencias. Que haya retención no es una emergencia.
+    cites: ["rvv:73", "rvv:43.3"]
+
+  - id: spitsstrook-bus-no-tram
+    type: yesno
+    prompt: Sobre un carril hay luces con la palabra BUS. ¿Puede usarlo un tranvía?
+    answer: false
+    explain: Con la palabra BUS en las luces sobre el carril solo pueden usarlo lijnbus y autobus. El tranvía solo se incluye en la palabra BUS pintada en la calzada (art. 81).
+    cites: ["rvv:73", "rvv:81"]
 
   - id: spitsstrook-linea
     type: yesno

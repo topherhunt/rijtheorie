@@ -1,10 +1,9 @@
 questions:
-  - id: neumaticos-minimo
-    type: number
-    prompt: ¿Cuál es la profundidad mínima legal del dibujo de un neumático de auto, en milímetros?
-    answer: 1.6
-    unit: mm
-    explain: Las ranuras principales deben tener al menos 1,6 mm en toda la circunferencia.
+  - id: neumaticos-minimo-medido
+    type: yesno
+    prompt: Mides el dibujo de un neumático con un medidor y en una de las ranuras principales marca 1,4 mm. ¿Puedes seguir circulando con él?
+    answer: false
+    explain: La profundidad de las ranuras principales debe ser de al menos 1,6 mm en toda la circunferencia. Con 1,4 mm el neumático ya no cumple.
     cites: ["rv:5.2.27"]
 
   - id: neumaticos-dano
@@ -29,6 +28,13 @@ questions:
     explain: El mínimo de 1,6 mm rige sobre toda la circunferencia del dibujo.
     cites: ["rv:5.2.27"]
 
+  - id: neumaticos-carcasa-dibujo-bueno
+    type: yesno
+    prompt: Un neumático tiene 5 mm de dibujo pero un corte en el costado deja ver la carcasa. ¿Puedes circular con él porque el dibujo es profundo?
+    answer: false
+    explain: Los requisitos son independientes. Aunque el dibujo supere 1,6 mm, el neumático no puede tener daños que dejen ver la carcasa.
+    cites: ["rv:5.2.27"]
+
   - id: neumaticos-recortado
     type: yesno
     prompt: ¿Puedes recortar a mano un neumático gastado para recuperar dibujo?
@@ -36,26 +42,32 @@ questions:
     explain: Los neumáticos no pueden estar recortados, salvo los marcados "regroovable" y mientras no se vea la carcasa.
     cites: ["rv:5.2.27"]
 
-  - id: neumaticos-misma-medida
+  - id: neumaticos-regroovable-carcasa
     type: yesno
-    prompt: ¿Deben ser de la misma medida los dos neumáticos del mismo eje (sin contar la rueda de repuesto de emergencia)?
-    answer: true
-    explain: Los neumáticos de un mismo eje deben tener la misma medida.
-    cites: ["rv:5.2.27"]
-
-  - id: neumaticos-presion
-    type: mc
-    prompt: ¿Quién fija la presión correcta de los neumáticos?
-    options: [El fabricante del auto, El vecino, La policía, El gasolinero]
-    answer: 0
-    explain: La presión debe ser la prescrita por el fabricante.
+    prompt: Un neumático marcado "regroovable" fue recortado y ahora se ve la carcasa en el fondo de las ranuras. ¿Cumple?
+    answer: false
+    explain: El recorte solo se permite en neumáticos marcados regroovable y siempre que la carcasa no sea visible. Que esté marcado no basta.
     cites: ["rv:5.2.27"]
 
   - id: neumaticos-sentido
     type: yesno
-    prompt: Tu neumático tiene una flecha de sentido de giro. ¿Debe montarse de modo que coincida con el giro de la rueda hacia adelante?
-    answer: true
-    explain: El sentido indicado en el neumático debe coincidir con el giro de la rueda al avanzar.
+    prompt: Montas un neumático con una flecha de sentido de giro de modo que la flecha apunta contra el giro de la rueda al avanzar. ¿Cumple?
+    answer: false
+    explain: El sentido indicado en el neumático debe coincidir con el giro de la rueda en marcha hacia adelante.
+    cites: ["rv:5.2.27"]
+
+  - id: neumaticos-misma-medida
+    type: yesno
+    prompt: Cambias un neumático del eje delantero y montas uno de otra medida que el de su lado. No es la rueda de repuesto de emergencia. ¿Cumple?
+    answer: false
+    explain: Los neumáticos de un mismo eje deben tener la misma medida, salvo que sea una rueda de emergencia o de repuesto.
+    cites: ["rv:5.2.27"]
+
+  - id: neumaticos-presion-baja
+    type: yesno
+    prompt: El fabricante prescribe 2,3 bar para tu auto y tus neumáticos tienen 1,5 bar. ¿Cumple los requisitos?
+    answer: false
+    explain: La presión de los neumáticos debe ser la prescrita por el fabricante del vehículo.
     cites: ["rv:5.2.27"]
 
   - id: neumaticos-aviso
@@ -64,3 +76,19 @@ questions:
     answer: false
     explain: Para autos puestos en uso después de 2017, el sistema de control de presión no debe indicar un defecto.
     cites: ["rv:5.2.27"]
+
+  - id: neumaticos-prestar-auto
+    type: mc
+    prompt: Tu auto tiene un neumático con 1,2 mm de dibujo. Se lo prestas a un amigo y él conduce. ¿Quién infringe?
+    options: ["Solo el amigo, que conduce", "Solo tú, que eres el dueño", "Los dos, el amigo por conducirlo y tú por dejarlo conducir", "Nadie, porque el amigo no sabía"]
+    answer: 2
+    explain: Está prohibido conducir un vehículo que no cumple los requisitos y también está prohibido que el dueño o poseedor lo deje conducir.
+    cites: ["rv:5.1.1", "rv:5.2.27"]
+
+  - id: neumaticos-examen-control
+    type: multi
+    prompt: En la revisión previa del examen práctico, ¿qué compruebas en los neumáticos, fuera del auto?
+    options: [La profundidad del dibujo y la presión, Que el tapón de la válvula esté puesto, Que no tengan daños, De qué material de caucho están hechos]
+    answer: [0, 1, 2]
+    explain: El CBR lista profundidad y presión, tapón de la válvula, ausencia de daños y marca de verano o invierno. La composición del neumático no se pregunta ni se comprueba.
+    cites: ["cbr-rijprocedure:3.7"]

@@ -1,18 +1,11 @@
 questions:
-  - id: especial-rotonde-d1
-    type: mc
-    prompt: ¿Qué señal marca una rotonda en el sentido de la ley?
-    options: [B6, D1, J9, G1]
-    answer: 1
-    explain: La rotonda se marca con D1. J9 solo avisa de una rotonda, y B6 pide ceder el paso.
-    cites: ["cbr-rijprocedure:3.6", "rvv:bijlage1.D1"]
 
-  - id: especial-rotonde-sin-d1
+  - id: rotonde-sin-d1-adelantar-derecha
     type: yesno
-    prompt: Llegas a una plaza circular sin la señal D1. ¿Valen las excepciones legales de las rotondas?
+    prompt: Estás en una plaza circular que no tiene señal D1. Un auto delante de ti va lento por el carril izquierdo. ¿Puedes adelantarlo por la derecha usando la excepción de las rotondas?
     answer: false
-    explain: Las excepciones legales de las rotondas solo valen en plazas marcadas con D1.
-    cites: ["cbr-rijprocedure:3.6"]
+    explain: Las excepciones legales de las rotondas (ir por un lugar distinto del lado derecho, adelantar por la derecha) valen solo en plazas marcadas con D1. Sin D1 no se aplican.
+    cites: ["rvv:48", "cbr-rijprocedure:3.6"]
 
   - id: especial-rotonde-adelantar
     type: yesno
@@ -21,11 +14,15 @@ questions:
     explain: La ley permite adelantar por la derecha cerca de una rotonda o en ella.
     cites: ["rvv:48"]
 
-  - id: rotonde-no-derecha
-    type: yesno
-    prompt: Un conductor de auto que sigue la calzada, cerca de una rotonda, ¿puede ir por un lugar distinto del lado derecho?
-    answer: true
-    explain: La ley lo permite a conductores de vehículos de motor y a ciclomotores que siguen la calzada, cerca de rotondas o en ellas.
+  - id: rotonde-quien-no-derecha
+    type: multi
+    prompt: Estás en una rotonda marcada con D1. ¿Cuáles de estos conductores que siguen la calzada tienen el permiso especial de ir por un lugar distinto del lado derecho de la calzada?
+    options:
+      - El conductor de un auto
+      - El conductor de una bromfiets
+      - Un ciclista
+    answer: [0, 1]
+    explain: El art. 47 da ese permiso a los conductores de vehículos de motor y a los bromfietsers que siguen la calzada, cerca de las rotondas o en ellas. No nombra a los ciclistas.
     cites: ["rvv:47"]
 
   - id: rotonde-mirar-entrar
@@ -36,13 +33,17 @@ questions:
     explain: Mira hacia delante y a la izquierda, y también los espejos para ver lo que pasa detrás. Con B6, todavía con más atención.
     cites: ["cbr-rijprocedure:3.6"]
 
-  - id: rotonde-b6
+  - id: rotonde-b6-cruce
     type: mc
-    prompt: En la entrada a una rotonda hay una señal B6. ¿Qué significa?
+    prompt: Llegas a un cruce de vías con una señal B6 y por la vía que cruza se acerca un auto. ¿Qué haces?
     sign: B6
-    options: [Tienes prioridad, Cede el paso a los conductores de la vía que cruza, Prohibido entrar, Rotonda con carriles]
+    options:
+      - Pasas primero, porque llegaste antes
+      - Le cedes el paso
+      - Pasas si ese auto va despacio
+      - Tocas la bocina y pasas
     answer: 1
-    explain: B6 dice "verleen voorrang aan bestuurders op de kruisende weg".
+    explain: B6 significa "cede el paso a los conductores de la vía que cruza". Quien viene por esa vía pasa antes que tú, sin importar quién llegó primero.
     cites: ["rvv:bijlage1.B6"]
 
   - id: rotonde-salir-ceder

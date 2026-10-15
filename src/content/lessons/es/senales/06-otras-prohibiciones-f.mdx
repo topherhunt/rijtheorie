@@ -19,7 +19,15 @@ F1: *Verbod voor motorvoertuigen om elkaar onderling in te halen.* F3: *Verbod v
 F3 prohíbe adelantar solo a los camiones. Tú, en auto, puedes adelantar donde hay F3 (y puedes adelantar camiones). Con F1, en cambio, la prohibición te afecta a ti.
 </Warn>
 
+<Rule cite="rvv:bijlage1.F2, rvv:62" title="Cuándo vuelves a poder adelantar">
+Mientras vale F1 no puedes adelantar a otro vehículo de motor. Después de F2 vuelve a ser posible, si ninguna otra señal ni regla lo impide.
+</Rule>
+
+<Check id="f-f1-auto" />
+
 <Check id="f-f1-f3" />
+
+<Check id="f-f2-adelantar" />
 
 ## Vías estrechas: F5 y F6
 
@@ -34,6 +42,8 @@ F5: *Verbod voor bestuurders door te gaan bij nadering van verkeer uit tegengest
 
 <Check id="f-f5-f6" />
 
+<Check id="f-f6-significado" />
+
 ## Cambio de sentido y fin de prohibiciones
 
 <Signs codes="F7,F8,F9" />
@@ -42,6 +52,14 @@ F5: *Verbod voor bestuurders door te gaan bij nadering van verkeer uit tegengest
 - **F8**: fin de **todas** las prohibiciones indicadas por señales.
 - **F9**: fin de todas las prohibiciones indicadas en un panel electrónico.
 
+<Rule cite="rvv:bijlage1.F7, rvv:bijlage1.F8, rvv:62" title="Qué te obliga F7 y qué cierra F8">
+Con F7 no puedes dar la vuelta en ese tramo. F8 cierra las prohibiciones de los carteles (F1, F3, F7 y las demás), pero no las de un panel electrónico: esas las cierra F9.
+</Rule>
+
+<Check id="f-f7-vuelta" />
+
+<Check id="f-f8-fin" />
+
 ## Stop: F10
 
 <Signs codes="F10" />
@@ -49,6 +67,10 @@ F5: *Verbod voor bestuurders door te gaan bij nadering van verkeer uit tegengest
 <Rule cite="rvv:bijlage1.F10, rvv:82.4">
 F10: *Stop.* En la señal puede indicarse quién la usa o por qué. Si un acompañante de un vehículo sobre rieles (por ejemplo, en un paso a nivel) te muestra una señal F10, una bandera roja o una luz roja, debes parar.
 </Rule>
+
+<Check id="f-f10-significado" />
+
+<Check id="f-f10-paso-nivel" />
 
 ## Carriles reservados
 
@@ -60,11 +82,15 @@ F10: *Stop.* En la señal puede indicarse quién la usa o por qué. Si un acompa
 - **F19**: solo para camiones y autobuses de línea. **F20**: fin.
 - **F21**: solo para camiones. **F22**: fin.
 
-<Rule cite="rvv:bijlage1.F13, rvv:bijlage1.F21">
-F13: *Rijbaan of -strook uitsluitend ten behoeve van lijnbussen.* F21: *Rijbaan of -strook uitsluitend ten behoeve van vrachtauto's.* Un auto no puede usarlos.
+<Rule cite="rvv:bijlage1.F13, rvv:bijlage1.F17, rvv:bijlage1.F19, rvv:bijlage1.F21">
+F13: *Rijbaan of -strook uitsluitend ten behoeve van lijnbussen.* F21: *Rijbaan of -strook uitsluitend ten behoeve van vrachtauto's.* Un auto no puede usarlos. F19 admite a camiones y a autobuses de línea, pero no a autos ni a motos; F17, a autobuses de línea y tranvías.
 </Rule>
 
 <Check id="f-f13-auto" />
+
+<Check id="f-f19-quien" />
+
+<Check id="f-f21-significado" />
 
 ## Otras
 

@@ -1,25 +1,23 @@
 questions:
-  - id: d-d1-significado
-    type: mc
-    prompt: ¿Qué indica esta señal?
-    sign: D1
-    options: ["Rotonda con sentido de circulación obligatorio", "Giro a la derecha obligatorio", "Calle de sentido único", "Peligro de rotonda"]
-    answer: 0
-    explain: D1 es "Rotonde; verplichte rijrichting". La J9 es la señal de peligro que la anuncia.
-    cites: ["rvv:bijlage1.D1"]
-
-  - id: d-d2-lado
-    type: mc
-    prompt: ¿Qué te ordena esta señal?
-    sign: D2
-    options: ["Pasarla por el lado que indica la flecha", "Pasarla por cualquier lado", "Detenerte antes de la señal", "Girar en la dirección de la flecha"]
-    answer: 0
-    explain: "D2 es un gebod: debes pasar la señal por el lado que marca la flecha."
-    cites: ["rvv:bijlage1.D2"]
-
-  - id: d-d3-ambos
+  - id: d-d1-contramano
     type: yesno
-    prompt: Con esta señal, ¿puedes pasarla tanto por su izquierda como por su derecha?
+    prompt: Quieres girar a la izquierda en una rotonda con esta señal, cuyas flechas van hacia la derecha. Por la izquierda el camino es más corto. ¿Puedes entrar en sentido contrario?
+    sign: D1
+    answer: false
+    explain: D1 es un gebod, una orden de circular en el sentido que muestra la señal. Un camino más corto no cambia nada.
+    cites: ["rvv:bijlage1.D1", "rvv:62"]
+
+  - id: d-d2-isleta
+    type: yesno
+    prompt: Hay un obstáculo en la calzada con esta señal, y la flecha apunta a la derecha. ¿Puedes pasar por su izquierda?
+    sign: D2
+    answer: false
+    explain: D2 te ordena pasar la señal por el lado que indica la flecha. Si la flecha apunta a la derecha, solo puedes pasar por la derecha.
+    cites: ["rvv:bijlage1.D2", "rvv:62"]
+
+  - id: d-d3-isleta
+    type: yesno
+    prompt: Hay un obstáculo en la calzada con esta señal. ¿Puedes pasarlo por la izquierda?
     sign: D3
     answer: true
     explain: D3 significa que la señal puede pasarse por ambos lados.
@@ -33,6 +31,14 @@ questions:
     answer: 0
     explain: D4 te obliga a seguir la dirección de la flecha.
     cites: ["rvv:bijlage1.D4"]
+
+  - id: d-d4-recto
+    type: yesno
+    prompt: Quieres girar a la derecha en este cruce, pero la señal tiene una flecha recta. ¿Puedes girar?
+    sign: D4
+    answer: false
+    explain: 'D4 es un gebod: debes seguir la dirección que muestra la flecha. Solo puedes ir recto.'
+    cites: ["rvv:bijlage1.D4", "rvv:62"]
 
   - id: d-d6-varias
     type: yesno
@@ -49,15 +55,6 @@ questions:
     answer: true
     explain: Una de las direcciones indicadas es seguir recto.
     cites: ["rvv:bijlage1.D6"]
-
-  - id: d-d5-significado
-    type: mc
-    prompt: ¿Qué significa esta señal?
-    sign: D5
-    options: ["Dirección obligatoria indicada por la flecha", "Prohibido girar", "Una de las direcciones es obligatoria", "Calle de sentido único"]
-    answer: 0
-    explain: D4 y D5 obligan a seguir la dirección de la flecha. D6 y D7 son las que dan varias.
-    cites: ["rvv:bijlage1.D5"]
 
   - id: d-familia
     type: mc

@@ -1,26 +1,24 @@
 questions:
-  - id: cinturon-quien
+  - id: cinturon-nino-bajo
     type: yesno
-    prompt: Conduces un auto de pasajeros. ¿Tú y tus pasajeros deben usar el cinturón de seguridad disponible?
-    answer: true
-    explain: El conductor y los pasajeros deben usar el cinturón disponible para ellos.
+    prompt: Llevas a tu sobrino de 10 años, que mide 1,30 m, en el asiento trasero de un auto con cinturones. ¿Basta con que use el cinturón normal?
+    answer: false
+    explain: Es menor de 18 años y mide menos de 1,35 m, así que debe usar un kinderbeveiligingssysteem adecuado y homologado.
     cites: ["rvv:59.1"]
 
-  - id: cinturon-altura
-    type: number
-    prompt: Los pasajeros menores de 18 años que miden menos de esta altura deben usar un sistema de retención infantil. ¿Cuál es la altura?
-    answer: 135
-    unit: cm
-    explain: El límite es 1,35 m.
+  - id: cinturon-adolescente-alto
+    type: yesno
+    prompt: Llevas a tu hija de 14 años, que mide 1,50 m. ¿Necesita un sistema de retención infantil?
+    answer: false
+    explain: El sistema infantil se exige a menores de 18 años que miden MENOS de 1,35 m. Ella mide más, así que le corresponde el cinturón normal. Sigue siendo obligatorio que lo use.
     cites: ["rvv:59.1"]
 
-  - id: cinturon-edad
-    type: number
-    prompt: Un pasajero que mide menos de 1,35 m debe usar un sistema de retención infantil. ¿Hasta qué edad (menor de cuántos años)?
-    answer: 18
-    unit: años
-    explain: La regla se aplica a pasajeros menores de 18 años y de menos de 1,35 m.
-    cites: ["rvv:59.1"]
+  - id: cinturon-nino-alto-sin-cinturon
+    type: yesno
+    prompt: Tu sobrino de 9 años mide 1,40 m y dice que ya es grande y no necesita cinturón. ¿Puede viajar sin cinturón?
+    answer: false
+    explain: Aunque mida más de 1,35 m y no necesite sistema infantil, debe usar el cinturón disponible. Además, al conductor se le prohíbe llevar a menores de 12 años de otra forma que la prescrita.
+    cites: ["rvv:59.1", "rvv:59.8"]
 
   - id: cinturon-mas-pasajeros
     type: yesno
@@ -51,30 +49,30 @@ questions:
     explain: Está prohibido, salvo que el airbag esté desactivado o se desactive automáticamente de forma suficiente.
     cites: ["rvv:59.3"]
 
-  - id: cinturon-correcto
+  - id: cinturon-silla-adelante
     type: yesno
-    prompt: ¿Debe usarse el cinturón de modo que no se afecte su efecto protector?
+    prompt: Una silla infantil orientada hacia ADELANTE va en el asiento delantero con el airbag activo. ¿Lo prohíbe el artículo 59 lid 3?
+    answer: false
+    explain: El lid 3 prohíbe el sistema orientado hacia ATRÁS en un asiento con airbag delantero activo. Orientada hacia adelante no entra en esa prohibición.
+    cites: ["rvv:59.3"]
+
+  - id: cinturon-arnes-flojo
+    type: yesno
+    prompt: Llevas a un niño de 4 años en su silla homologada, pero dejas el arnés flojo para que esté más cómodo. ¿Infringes el artículo 59?
     answer: true
-    explain: El artículo 59 lid 7 exige un uso que no reduzca la protección.
+    explain: El lid 7 exige usar el cinturón o el sistema infantil de modo que su efecto protector no se vea afectado ni pueda verse afectado. Que la silla sea homologada no basta si la usas mal.
     cites: ["rvv:59.7"]
 
-  - id: cinturon-menor-12
+  - id: cinturon-maletero
     type: yesno
-    prompt: ¿Está prohibido que el conductor lleve a niños menores de 12 años de una forma distinta a la prescrita?
-    answer: true
-    explain: El artículo 59 lid 8 lo prohíbe expresamente a los conductores.
-    cites: ["rvv:59.8"]
-
-  - id: cinturon-asiento
-    type: yesno
-    prompt: ¿Deben conductor y pasajeros ir sentados en los asientos destinados a ellos?
-    answer: true
-    explain: El artículo 58a lo exige durante la participación en el tráfico, con excepciones, por ejemplo para pasajeros de autobús.
+    prompt: En tu station wagon hay asientos traseros libres, pero un amigo adulto prefiere ir sentado en el maletero. ¿Puedes llevarlo así?
+    answer: false
+    explain: El artículo 58a exige que conductor y pasajeros vayan sentados en los asientos que son para ellos. El maletero no lo es, y hay asientos libres.
     cites: ["rvv:58a"]
 
-  - id: cinturon-casco
+  - id: cinturon-casco-pasajero
     type: yesno
-    prompt: ¿El conductor de una motocicleta debe llevar casco abrochado y homologado?
+    prompt: Llevas a un amigo de pasajero en tu motocicleta, solo hasta la esquina. ¿Debe llevar casco abrochado?
     answer: true
-    explain: El artículo 60 lo exige al conductor y a los pasajeros de motocicletas y bromfietsen, con las excepciones que prevé.
+    explain: El artículo 60 exige casco al conductor y a los pasajeros de motocicletas, sin importar lo corto del trayecto. Las excepciones del artículo son casos concretos (por ejemplo, vehículos con celda de seguridad), no los trayectos cortos.
     cites: ["rvv:60"]

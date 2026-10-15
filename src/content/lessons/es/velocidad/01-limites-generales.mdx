@@ -12,7 +12,7 @@ Dentro de la <T id="bebouwde-kom" /> la velocidad máxima de los vehículos de m
 
 <Signs codes="H1,H2" />
 
-H1 marca el comienzo de la zona urbana y H2 el final.
+H1 marca el comienzo de la zona urbana y H2 el final. Al pasar H2 dejas de estar en la zona urbana y rigen los máximos de fuera (lo siguiente).
 
 <Check id="limites-urbana" />
 
@@ -32,6 +32,7 @@ G1 es la autosnelweg y G3 la autoweg. Todo lo demás, fuera de la zona urbana, e
 <Check id="limites-autosnelweg" />
 <Check id="limites-autoweg" />
 <Check id="limites-otras" />
+<Check id="limites-h2-otra-via" />
 
 <Warn>
 Los 130 km/h de la autosnelweg son un máximo general. En la práctica, muchas autopistas tienen señales que lo bajan: se ve en las lecciones siguientes.
@@ -44,8 +45,12 @@ Los 130 km/h de la autosnelweg son un máximo general. En la práctica, muchas a
 - La autoweg, vehículos de motor con los que se puede y se permite ir a **50 km/h o más**.
 </Rule>
 
-<Check id="limites-minimo-autosnelweg" />
-<Check id="limites-minimo-autoweg" />
+<Rule cite="rvv:1, rvv:42" title="Quién cuenta como vehículo de motor">
+En el RVV, «motorvoertuigen» no incluye los bromfietsen ni los gehandicaptenvoertuigen. Como el art. 42 habla solo de motorvoertuigen, una bromfiets (también una brommobiel) no puede usar la autosnelweg ni la autoweg. Tampoco puede un vehículo de motor que por su construcción no llega al mínimo.
+</Rule>
+
+<Check id="limites-bromfiets-autoweg" />
+<Check id="limites-minimo-aplicado" />
 
 ## Ciclomotores
 

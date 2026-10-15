@@ -8,6 +8,7 @@ questions:
     explain: J2 es curva a la derecha. J3 es a la izquierda.
     cites: ["rvv:bijlage1.J2"]
 
+
   - id: j-j4-s
     type: mc
     prompt: ¿Qué avisa esta señal?
@@ -17,32 +18,6 @@ questions:
     explain: J4 son curvas en S que empiezan hacia la derecha. J5 empieza hacia la izquierda.
     cites: ["rvv:bijlage1.J4"]
 
-  - id: j-j6-j7
-    type: mc
-    prompt: ¿Qué avisa esta señal?
-    sign: J7
-    options: ["Bajada peligrosa", "Subida pronunciada", "Badén", "Pavimento en mal estado"]
-    answer: 0
-    explain: J7 es "Gevaarlijke daling". J6 es una subida pronunciada.
-    cites: ["rvv:bijlage1.J7"]
-
-  - id: j-j8-significado
-    type: mc
-    prompt: ¿Qué avisa esta señal?
-    sign: J8
-    options: ["Cruce peligroso", "Rotonda", "Fin de la vía con prioridad", "Semáforos"]
-    answer: 0
-    explain: J8 es "Gevaarlijk kruispunt".
-    cites: ["rvv:bijlage1.J8"]
-
-  - id: j-j9-significado
-    type: mc
-    prompt: ¿Qué avisa esta señal?
-    sign: J9
-    options: ["Rotonda", "Cruce peligroso", "Calle sin salida", "Curva cerrada"]
-    answer: 0
-    explain: "J9 es \"Rotonde\". Es un aviso: la orden de circulación la da D1."
-    cites: ["rvv:bijlage1.J9"]
 
   - id: j-j10-j11
     type: mc
@@ -53,41 +28,6 @@ questions:
     explain: J11 es "Overweg zonder slagbomen". J10 es con barreras.
     cites: ["rvv:bijlage1.J11"]
 
-  - id: j-j10-significado
-    type: mc
-    prompt: ¿Qué avisa esta señal?
-    sign: J10
-    options: ["Paso a nivel con barreras", "Paso a nivel sin barreras", "Cruce de tranvía", "Puente móvil"]
-    answer: 0
-    explain: J10 es "Overweg met slagbomen".
-    cites: ["rvv:bijlage1.J10"]
-
-  - id: j-j14-tram
-    type: mc
-    prompt: ¿Qué avisa esta señal?
-    sign: J14
-    options: ["Cruce de tranvía", "Paso a nivel de tren", "Carril exclusivo de tranvías", "Parada de tranvía"]
-    answer: 0
-    explain: J14 es "Tram(kruising)", un aviso. La parada es L3.
-    cites: ["rvv:bijlage1.J14"]
-
-  - id: j-j15-puente
-    type: mc
-    prompt: ¿Qué avisa esta señal?
-    sign: J15
-    options: ["Puente móvil", "Muelle", "Estrechamiento", "Paso a nivel"]
-    answer: 0
-    explain: J15 es "Beweegbare brug".
-    cites: ["rvv:bijlage1.J15"]
-
-  - id: j-j16-obras
-    type: mc
-    prompt: ¿Qué avisa esta señal?
-    sign: J16
-    options: ["Obras", "Pavimento en mal estado", "Accidente", "Atasco"]
-    answer: 0
-    explain: J16 es "Werk in uitvoering".
-    cites: ["rvv:bijlage1.J16"]
 
   - id: j-j17-estrechamiento
     type: mc
@@ -98,14 +38,6 @@ questions:
     explain: J17 es "Rijbaanversmalling".
     cites: ["rvv:bijlage1.J17"]
 
-  - id: j-j20-derrape
-    type: mc
-    prompt: ¿Qué avisa esta señal?
-    sign: J20
-    options: ["Peligro de derrape", "Gravilla suelta", "Hielo o nieve", "Badén"]
-    answer: 0
-    explain: J20 es "Slipgevaar".
-    cites: ["rvv:bijlage1.J20"]
 
   - id: j-j21-ninos
     type: mc
@@ -116,59 +48,6 @@ questions:
     explain: J21 es "Kinderen". J22 es la voetgangersoversteekplaats y J23 son peatones.
     cites: ["rvv:bijlage1.J21"]
 
-  - id: j-j22-significado
-    type: mc
-    prompt: ¿Qué avisa esta señal?
-    sign: J22
-    options: ["Paso de peatones", "Niños", "Peatones en la calzada", "Parada de autobús"]
-    answer: 0
-    explain: J22 es "Voetgangersoversteekplaats".
-    cites: ["rvv:bijlage1.J22"]
-
-  - id: j-j24-ciclistas
-    type: mc
-    prompt: ¿Qué avisa esta señal?
-    sign: J24
-    options: ["Ciclistas y ciclomotoristas", "Carril bici obligatorio", "Prohibido para bicicletas", "Niños"]
-    answer: 0
-    explain: J24 es "Fietsers en bromfietsers", un aviso.
-    cites: ["rvv:bijlage1.J24"]
-
-  - id: j-j29-contrario
-    type: mc
-    prompt: ¿Qué avisa esta señal?
-    sign: J29
-    options: ["Tráfico en sentido contrario", "Sentido único", "Estrechamiento", "Prohibido adelantar"]
-    answer: 0
-    explain: "J29 es \"Tegenliggers\": hay tráfico en ambos sentidos."
-    cites: ["rvv:bijlage1.J29"]
-
-  - id: j-j32-semaforos
-    type: mc
-    prompt: ¿Qué avisa esta señal?
-    sign: J32
-    options: ["Semáforos más adelante", "Cruce peligroso", "Atasco", "Obras"]
-    answer: 0
-    explain: J32 es "Verkeerslichten".
-    cites: ["rvv:bijlage1.J32"]
-
-  - id: j-j33-atasco
-    type: mc
-    prompt: ¿Qué avisa esta señal?
-    sign: J33
-    options: ["Atasco", "Accidente", "Obras", "Mala visibilidad"]
-    answer: 0
-    explain: J33 es "File".
-    cites: ["rvv:bijlage1.J33"]
-
-  - id: j-j38-baden
-    type: mc
-    prompt: ¿Qué avisa esta señal?
-    sign: J38
-    options: ["Badén o reductor de velocidad", "Pavimento en mal estado", "Gravilla suelta", "Estrechamiento"]
-    answer: 0
-    explain: J38 es "Verkeersdrempel".
-    cites: ["rvv:bijlage1.J38"]
 
   - id: j-j37-onderbord
     type: yesno
@@ -178,6 +57,7 @@ questions:
     explain: En J37 el tipo de peligro se indica en el onderbord.
     cites: ["rvv:bijlage1.J37"]
 
+
   - id: j-triangulo
     type: mc
     prompt: ¿Qué clase de señal es un triángulo con borde rojo?
@@ -186,3 +66,55 @@ questions:
     explain: "Los triángulos son señales J: avisan de un peligro."
     cites: ["rvv:bijlage1.J8"]
     exam: false
+
+  - id: j-j22-ceder
+    type: mc
+    prompt: Una señal J22 te anunció un paso de peatones. Al llegar, un peatón está a punto de cruzar. ¿Qué haces?
+    sign: J22
+    options: ["Le dejo pasar", "Paso rápido antes de que empiece a cruzar", "Toco la bocina para que espere"]
+    answer: 0
+    explain: Debes dejar pasar a los peatones que cruzan o están a punto de cruzar en el paso de peatones (art. 49.2). La bocina solo se usa para evitar un peligro inminente (art. 28), no para apurar a nadie.
+    cites: ["rvv:49.2", "rvv:28", "rvv:bijlage1.J22"]
+
+  - id: j-j22-adelantar
+    type: yesno
+    prompt: Vas detrás de un auto lento que se acerca a un paso de peatones anunciado por J22. La calzada está libre a tu izquierda. ¿Puedes adelantarlo justo antes del paso?
+    sign: J22
+    answer: false
+    explain: Está prohibido adelantar un vehículo justo antes de un paso de peatones o sobre él (art. 12), aunque la calzada esté libre.
+    cites: ["rvv:12", "rvv:bijlage1.J22"]
+
+  - id: j-j10-cola
+    type: yesno
+    prompt: Te anuncia J10 un paso a nivel. Las barreras están arriba, pero justo después de las vías hay una cola y tu auto no cabría. ¿Puedes entrar y esperar sobre las vías a que la cola avance?
+    sign: J10
+    answer: false
+    explain: Solo puedes entrar si puedes seguir sin parar y despejar las vías por completo (art. 15a.1), y no puedes detenerte sobre un paso a nivel (art. 23.1.a). Esperas antes de las vías.
+    cites: ["rvv:15a.1", "rvv:23.1.a", "rvv:bijlage1.J10"]
+
+  - id: j-j11-tren
+    type: mc
+    prompt: J11 te anuncia un paso a nivel sin barreras. Al acercarte ves un tren que llega por la derecha. ¿Qué haces?
+    sign: J11
+    options: ["Dejo pasar al tren y espero antes de las vías", "Cruzo rápido, porque no hay barreras que me detengan", "Cruzo si el tren aún está lejos de las vías, sin importar cuánto"]
+    answer: 0
+    explain: Ante un paso a nivel dejas pasar al tren (art. 15a.2), tenga o no barreras. Que no haya barreras no te da prioridad.
+    cites: ["rvv:15a.2", "rvv:bijlage1.J11"]
+
+  - id: j-j14-tranvia
+    type: mc
+    prompt: Llegas a un cruce sin semáforo ni señales de prioridad. Por tu izquierda se acerca un tranvía. No viene nadie por tu derecha. ¿Quién pasa primero?
+    sign: J14
+    options: ["El tranvía", "Yo, porque el tranvía no viene por mi derecha", "El primero que llegue al cruce"]
+    answer: 0
+    explain: 'La regla de la derecha tiene una excepción: debes ceder el paso a un tranvía (art. 15.2.b). Que venga por la izquierda no importa.'
+    cites: ["rvv:15.2.b", "rvv:bijlage1.J14"]
+
+  - id: j-j33-distancia
+    type: mc
+    prompt: J33 te avisa de un atasco más adelante. La carretera hace una curva y no ves dónde termina la cola. ¿Cómo debes ir?
+    sign: J33
+    options: ["A una velocidad con la que puedas detenerte dentro de la distancia que ves libre", "A la velocidad máxima de la vía, porque el triángulo solo avisa", "A 30 km/h exactos hasta ver la cola"]
+    answer: 0
+    explain: Debes poder detenerte dentro de la distancia que ves libre (art. 19). El triángulo no impone una velocidad, pero esa regla te obliga a frenar hasta poder parar antes de la cola que aún no ves.
+    cites: ["rvv:19", "rvv:bijlage1.J33"]

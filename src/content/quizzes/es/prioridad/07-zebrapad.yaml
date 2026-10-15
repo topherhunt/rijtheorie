@@ -13,23 +13,6 @@ questions:
     explain: Debes dejar pasar a los peatones que cruzan o que están evidentemente a punto de cruzar un paso de peatones.
     cites: ["rvv:49.2", "cbr-rijprocedure:3.6"]
 
-  - id: zebrapad-significado
-    type: mc
-    prompt: ¿Qué tipo de lugar indica esta señal?
-    sign: L2
-    options: [Paso de peatones, Parada de bus o tranvía, Zona residencial (erf), Rotonda]
-    answer: 0
-    explain: L2 es la Voetgangersoversteekplaats, el paso de peatones.
-    cites: ["rvv:bijlage1.L2"]
-
-  - id: zebrapad-acercarse
-    type: mc
-    prompt: Según el CBR, ¿cómo te acercas a un paso de peatones?
-    options: [Con cuidado y a velocidad moderada, A toda velocidad si no hay peatones, Tocando la bocina, Cambiando de carril]
-    answer: 0
-    explain: El CBR pide acercarse con cuidado y a velocidad moderada.
-    cites: ["cbr-rijprocedure:3.6"]
-
   - id: zebrapad-ciego
     type: mc
     prompt: Ves a una persona con bastón blanco con anillos rojos cruzando. ¿Qué debes hacer?
@@ -85,14 +68,6 @@ questions:
     explain: Está prohibido adelantar justo antes de un paso de peatones o sobre él.
     cites: ["rvv:12"]
 
-  - id: zebrapad-cinco-metros
-    type: number
-    prompt: ¿A qué distancia mínima de un paso de peatones puedes dejar tu auto parado?
-    answer: 5
-    unit: metros
-    explain: No puedes dejar el vehículo parado sobre el paso ni a menos de cinco metros.
-    cites: ["rvv:23.1.c"]
-
   - id: zebrapad-vehiculo-detenido
     type: mc
     prompt: Hay un auto detenido delante del paso de peatones por otro motivo. ¿Qué dice el CBR?
@@ -100,3 +75,25 @@ questions:
     answer: 0
     explain: El auto detenido puede tapar a un peatón que cruza, así que pasa con gran cuidado.
     cites: ["cbr-rijprocedure:3.6"]
+
+  - id: zebrapad-estacionar-tres-metros
+    type: yesno
+    prompt: Buscas dónde dejar el auto y ves un hueco libre a 3 metros de un paso de peatones, en tu lado de la calle. ¿Puedes dejar tu auto detenido ahí?
+    answer: false
+    explain: No puedes dejar tu vehículo parado sobre el paso de peatones ni a menos de cinco metros de él.
+    cites: ["rvv:23.1"]
+
+  - id: zebrapad-girar-derecha
+    type: mc
+    prompt: Giras a la derecha hacia una calle lateral. Justo al entrar hay un paso de peatones y un peatón empieza a cruzar. ¿Quién pasa primero?
+    options: [El peatón, "Tú, porque estabas en la vía principal", Quien llegó primero al cruce, El que vaya más rápido]
+    answer: 0
+    explain: La obligación del art. 49.2 vale para cualquier conductor que se encuentre con peatones que cruzan o están a punto de cruzar por un paso de peatones, también si acabas de girar.
+    cites: ["rvv:49.2"]
+
+  - id: zebrapad-ciego-sin-paso
+    type: yesno
+    prompt: En una calle sin paso de peatones, una persona ciega con bastón blanco con anillos rojos empieza a cruzar delante de ti. ¿Debes dejarla pasar?
+    answer: true
+    explain: El art. 49.1 obliga a dejar pasar a los ciegos con bastón blanco con anillos rojos y a quienes se mueven con dificultad, sin limitarlo al paso de peatones.
+    cites: ["rvv:49.1"]

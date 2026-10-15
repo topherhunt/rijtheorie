@@ -1,22 +1,4 @@
 questions:
-  - id: zona-h1
-    type: mc
-    prompt: ¿Qué indica esta señal?
-    sign: H1
-    options: [Comienzo de la bebouwde kom, Fin de la bebouwde kom, Autopista, Zona de residencia]
-    answer: 0
-    explain: H1 es la señal de bebouwde kom, el comienzo de la zona urbana.
-    cites: ["rvv:bijlage1.H1"]
-
-  - id: zona-h2
-    type: mc
-    prompt: ¿Qué indica esta señal?
-    sign: H2
-    options: [Comienzo de la bebouwde kom, Fin de la bebouwde kom, Fin de autopista, Fin de zona 30]
-    answer: 1
-    explain: H2 es la señal de einde bebouwde kom, el fin de la zona urbana.
-    cites: ["rvv:bijlage1.H2"]
-
   - id: zona-limites
     type: mc
     prompt: ¿Quién decide dónde están los límites de una bebouwde kom?
@@ -25,39 +7,65 @@ questions:
     explain: Los límites los fija una decisión del consejo municipal.
     cites: ["wvw:20a.1"]
 
-  - id: zona-dia
+  - id: zona-h1-velocidad-auto
+    type: number
+    prompt: Conduces un coche y acabas de pasar la señal H1. No hay ninguna otra señal de velocidad. ¿Cuál es tu velocidad máxima?
+    sign: H1
+    answer: 50
+    unit: km/h
+    explain: Dentro de la bebouwde kom (desde H1) los vehículos de motor tienen un máximo de 50 km/h.
+    cites: ["rvv:20", "rvv:bijlage1.H1"]
+
+  - id: zona-h2-velocidad-fuera
+    type: number
+    prompt: Sales de un pueblo al pasar la señal H2 y entras en una carretera normal (ni autoweg ni autosnelweg), sin otras señales de velocidad. ¿Cuál es la velocidad máxima de tu coche?
+    sign: H2
+    answer: 80
+    unit: km/h
+    explain: Fuera de la bebouwde kom, en las vías que no son autosnelweg ni autoweg, el máximo para vehículos de motor es 80 km/h.
+    cites: ["rvv:21", "rvv:bijlage1.H2"]
+
+  - id: zona-bromfiets-kom
     type: mc
-    prompt: ¿Cuándo es "dag" para el RVV?
-    options: [De 6:00 a 18:00, Desde la salida del sol hasta su puesta, Mientras haya luz de farolas, De 8:00 a 20:00]
-    answer: 1
-    explain: Dag es el período entre la salida y la puesta del sol, no una hora fija.
-    cites: ["rvv:1"]
+    prompt: Vas en bromfiets por la rijbaan y pasas de dentro a fuera de la bebouwde kom (sin otras señales de velocidad). ¿Cambia tu velocidad máxima?
+    options: ["No, es 45 km/h dentro y fuera", "Sí, sube a 80 km/h", "Sí, sube a 60 km/h", "Sí, baja a 30 km/h"]
+    answer: 0
+    explain: Para las bromfietsen en la rijbaan el máximo es 45 km/h tanto dentro como fuera de la bebouwde kom. Lo que cambia con H1 y H2 es el límite de los vehículos de motor como el coche.
+    cites: ["rvv:20", "rvv:21"]
 
-  - id: zona-noche
+  - id: zona-bromfiets-fietspad
+    type: number
+    prompt: Vas en bromfiets por un fiets/bromfietspad dentro de la bebouwde kom, sin otras señales de velocidad. ¿Cuál es tu velocidad máxima?
+    answer: 30
+    unit: km/h
+    explain: En un fiets/bromfietspad dentro de la bebouwde kom la bromfiets tiene un máximo de 30 km/h; los 45 km/h son para la rijbaan.
+    cites: ["rvv:20"]
+
+  - id: zona-bromfiets-fietspad-fuera
+    type: number
+    prompt: Vas en bromfiets por un fiets/bromfietspad fuera de la bebouwde kom, sin otras señales de velocidad. ¿Cuál es tu velocidad máxima?
+    answer: 40
+    unit: km/h
+    explain: En un fiets/bromfietspad fuera de la bebouwde kom el máximo de la bromfiets es 40 km/h; los 45 km/h son para la rijbaan.
+    cites: ["rvv:21"]
+
+  - id: zona-noche-ciclista
     type: yesno
-    prompt: Para el RVV, ¿"nacht" es el período entre la puesta y la salida del sol?
+    prompt: El sol se puso hace diez minutos y todavía queda algo de claridad. Vas en bicicleta. ¿Necesitas ya las luces de la bicicleta?
     answer: true
-    explain: Nacht es desde la puesta del sol hasta su salida.
-    cites: ["rvv:1"]
+    explain: Para el RVV la noche empieza con la puesta del sol, no cuando oscurece del todo, y el ciclista debe llevar luces de noche.
+    cites: ["rvv:1", "rvv:35.1"]
 
-  - id: zona-reloj
+  - id: zona-dia-niebla-ciclista
     type: yesno
-    prompt: ¿La definición legal de "nacht" es la misma hora del reloj todo el año?
-    answer: false
-    explain: Depende del sol, porque la salida y la puesta cambian durante el año.
-    cites: ["rvv:1"]
+    prompt: Es mediodía, pero hay una niebla tan densa que ves muy poco. Vas en bicicleta. ¿Necesitas las luces de la bicicleta?
+    answer: true
+    explain: De día el ciclista solo necesita luces si la visibilidad está seriamente reducida, y la niebla densa es ese caso. Que sea de día según la definición legal no basta para librarte.
+    cites: ["rvv:35.1", "rvv:1"]
 
-  - id: zona-senal
-    type: multi
-    prompt: ¿Cuáles de estas señales marcan el comienzo o el fin de la bebouwde kom?
-    options: [H1, H2, G7, G13]
-    answer: [0, 1]
-    explain: H1 marca el comienzo y H2 el fin. G7 es voetpad y G13 es onverplicht fietspad.
-    cites: ["rvv:bijlage1.H1", "rvv:bijlage1.H2"]
-
-  - id: zona-solo-tu
+  - id: zona-junio-ciclista
     type: yesno
-    prompt: ¿Puede cada conductor decidir por su cuenta dónde empieza la zona urbana?
+    prompt: Es una tarde de junio, las 21:30. El sol todavía no se ha puesto y se ve perfectamente. Vas en bicicleta. ¿Estás obligado a llevar las luces de la bicicleta?
     answer: false
-    explain: Los límites los decide el consejo municipal y se marcan con las señales H1 y H2.
-    cites: ["wvw:20a.1", "rvv:bijlage1.H1"]
+    explain: Para el RVV todavía es de día (el sol no se ha puesto) y la visibilidad no está reducida, así que no es obligatorio. La hora del reloj no decide; decide el sol.
+    cites: ["rvv:1", "rvv:35.1"]

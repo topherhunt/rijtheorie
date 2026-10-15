@@ -1,13 +1,4 @@
 questions:
-  - id: rotonde-d1
-    type: mc
-    prompt: ¿Qué indica la señal D1?
-    sign: D1
-    options: [Rotonda, Cruce con prioridad, Zona residencial, Fin de la vía con prioridad]
-    answer: 0
-    explain: D1 es Rotonde; verplichte rijrichting.
-    cites: ["rvv:bijlage1.D1"]
-
   - id: rotonde-sin-d1
     type: yesno
     prompt: Una plaza redonda sin la señal D1 se trata como una rotonda con sus excepciones legales.
@@ -34,13 +25,6 @@ questions:
     explain: El CBR pide mirar hacia delante y hacia la izquierda, y con aún más atención si hay B6.
     cites: ["cbr-rijprocedure:3.6"]
 
-  - id: rotonde-b6-velocidad
-    type: yesno
-    prompt: Ante B6 en la entrada de una rotonda, el CBR pide adaptar con más cuidado la velocidad a la que te acercas y entras.
-    answer: true
-    explain: Lo dice el CBR en el apartado de velocidad.
-    cites: ["cbr-rijprocedure:3.6"]
-
   - id: rotonde-salir
     type: mc
     prompt: Vas a salir de la rotonda. ¿A quién dejas pasar según el CBR?
@@ -63,13 +47,6 @@ questions:
       - Solo la bocina
     answer: 0
     explain: El CBR pide mirar así y prestar atención extra a franjas ciclistas, carriles bici y aceras.
-    cites: ["cbr-rijprocedure:3.6"]
-
-  - id: rotonde-no-bloquear
-    type: yesno
-    prompt: Según el CBR, al acercarte, circular y salir de una rotonda no debes bloquear los carriles bici independientes.
-    answer: true
-    explain: Es parte del procedimiento práctico del CBR.
     cites: ["cbr-rijprocedure:3.6"]
 
   - id: rotonde-47
@@ -112,3 +89,23 @@ questions:
     explain: En rotondas de dos carriles, cuarto y media vuelta se hacen por el carril derecho.
     cites: ["cbr-rijprocedure:3.6"]
     exam: false
+
+  - id: rotonde-entrar-ceder
+    type: mc
+    prompt: Entras a una rotonda con B6 y dientes de tiburón en tu entrada. Un auto ya circula por la rotonda y se acerca desde tu izquierda. No hay nadie por tu derecha. ¿Quién pasa primero?
+    options: [El auto que ya circula, "Tú, porque no viene nadie por tu derecha", Quien llegue primero a la entrada]
+    answer: 0
+    explain: Con B6 o dientes de tiburón en la entrada cedes el paso a los conductores de la vía que cruzas, o sea a quien ya circula por la rotonda, aunque no venga por la derecha.
+    cites: ["rvv:bijlage1.B6", "rvv:80"]
+
+  - id: rotonde-salir-ciclista
+    type: mc
+    prompt: Vas a salir de una rotonda. Junto a la salida hay un carril bici independiente que rodea la rotonda, y un ciclista que sigue por él se acerca a tu salida. ¿Qué haces?
+    options:
+      - Lo dejas pasar antes de salir
+      - Sales, porque el ciclista no está en la calzada
+      - Sales, porque tú ya estás en la rotonda
+      - Le haces señales con las luces para que pase
+    answer: 0
+    explain: Al salir de la rotonda dejas pasar al tráfico que sigue por la rotonda, incluido el de un carril bici independiente.
+    cites: ["cbr-rijprocedure:3.6"]

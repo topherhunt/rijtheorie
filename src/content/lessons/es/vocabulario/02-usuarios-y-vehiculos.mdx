@@ -18,7 +18,7 @@ cbrTopics: [gebruik-weg, voertuigkennis]
 ## Vehículos
 
 - <T id="personenauto" />: turismo (auto).
-- <T id="motorvoertuig" /> y <T id="motorrijtuig" />: vehículo de motor (no son exactamente lo mismo; mira la definición de cada uno).
+- <T id="motorvoertuig" /> y <T id="motorrijtuig" />: vehículo de motor (no son lo mismo: mira la diferencia más abajo).
 - <T id="motorfiets" /> y <T id="motorrijder" />: motocicleta y motociclista.
 - <T id="snorfiets" />, <T id="speed-pedelec" /> y <T id="brommobiel" />: vehículos pequeños (el CBR no los traduce).
 - <T id="gehandicaptenvoertuig" />: vehículo para personas con discapacidad.
@@ -35,5 +35,42 @@ cbrTopics: [gebruik-weg, voertuigkennis]
 - <T id="voorrangsvoertuig" />: vehículo prioritario.
 - <T id="vergunninghouders" />: titulares de permiso.
 
+## Qué cambia según quién eres y a quién ves
+
+<Rule cite="rvv:1, rvv:42, wvw:1.1" title="Motorvoertuig no es lo mismo que motorrijtuig">
+En el RVV, "motorvoertuigen" son todos los vehículos motorizados salvo las bromfietsen, las bicicletas con pedaleo asistido y los gehandicaptenvoertuigen. En la WVW, "motorrijtuigen" incluye las bromfietsen (solo deja fuera las bicicletas con pedaleo asistido). Una <T id="brommobiel" /> es una bromfiets de más de dos ruedas con carrocería: es un motorrijtuig, pero no un motorvoertuig, así que no puede usar la autosnelweg ni la autoweg.
+</Rule>
+
+<Check id="usuarios-y-vehiculos-brommobiel-autoweg" />
+
+<Check id="usuarios-y-vehiculos-motorrijtuig-bromfiets" />
+
+<Rule cite="rvv:50, rvv:29, rvv:1" title="Voorrangsvoertuig">
+Un <T id="voorrangsvoertuig" /> es un vehículo de motor de la policía, los bomberos o la ayuda médica urgente con luz azul y bocina de dos tonos. Los usuarios de la vía deben dejarlo pasar.
+</Rule>
+
+<Check id="usuarios-y-vehiculos-voorrangsvoertuig" />
+
+<Rule cite="rvv:8" title="Ruiter">
+Los jinetes usan el ruiterpad. Si no hay ruiterpad, usan la berm o la calzada.
+</Rule>
+
 <Check id="usuarios-y-vehiculos-ruiter" />
+
+<Check id="usuarios-y-vehiculos-ruiter-calzada" />
+
+<Rule cite="rvv:82" title="Verkeersregelaar">
+Debes seguir las indicaciones, habladas o con gestos, de los agentes competentes y de los verkeersregelaars que tengan competencia para ello y se reconozcan como tales.
+</Rule>
+
+<Check id="usuarios-y-vehiculos-regelaar-obedecer" />
+
+<Rule cite="wvw:7" title="Tegenpartij y slachtoffer: no te vayas">
+Si estás implicado en un accidente, está prohibido irte del lugar cuando alguien ha muerto o ha sufrido lesiones, cuando se ha causado daño a otra persona, o cuando dejarías a un herido en situación de desamparo. Si solo hay daño, o hay lesiones pero no desamparo, puedes irte solo si diste la oportunidad de establecer tu identidad y, si conducías un motorrijtuig, la de tu vehículo. Abandonar a un herido desamparado no tiene esa salida.
+</Rule>
+
 <Check id="usuarios-y-vehiculos-tegenpartij" />
+
+<Check id="usuarios-y-vehiculos-tegenpartij-irse" />
+
+<Check id="usuarios-y-vehiculos-slachtoffer-desamparo" />

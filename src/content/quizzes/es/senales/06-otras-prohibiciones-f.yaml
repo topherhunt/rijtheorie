@@ -1,11 +1,10 @@
 questions:
-  - id: f-f1-significado
-    type: mc
-    prompt: ¿Qué significa esta señal?
+  - id: f-f1-auto
+    type: yesno
+    prompt: Conduces un auto. Hay una señal F1. ¿Puedes adelantar a otro auto?
     sign: F1
-    options: ["Prohibido que los vehículos de motor se adelanten entre sí", "Prohibido adelantar a camiones", "Fin de la prohibición de adelantar", "Prohibido adelantar a bicicletas"]
-    answer: 0
-    explain: F1 es "Verbod voor motorvoertuigen om elkaar onderling in te halen".
+    answer: false
+    explain: F1 prohíbe que los vehículos de motor se adelanten entre sí.
     cites: ["rvv:bijlage1.F1"]
 
   - id: f-f1-f3
@@ -16,22 +15,13 @@ questions:
     explain: F3 prohíbe adelantar a los camiones. Tú, en auto, no estás afectado.
     cites: ["rvv:bijlage1.F3"]
 
-  - id: f-f1-auto
+  - id: f-f2-adelantar
     type: yesno
-    prompt: Conduces un auto. Hay una señal F1. ¿Puedes adelantar a otro auto?
-    sign: F1
-    answer: false
-    explain: F1 prohíbe que los vehículos de motor se adelanten entre sí.
-    cites: ["rvv:bijlage1.F1"]
-
-  - id: f-f2-significado
-    type: mc
-    prompt: ¿Qué significa esta señal?
+    prompt: Después de una señal F1 llegas a esta señal. No hay otras señales y la vía está libre. ¿Puedes ahora adelantar a otro auto?
     sign: F2
-    options: ["Fin de la prohibición de adelantar para vehículos de motor", "Prohibido adelantar", "Fin de todas las prohibiciones", "Fin de zona urbana"]
-    answer: 0
-    explain: F2 pone fin a lo que F1 prohíbe.
-    cites: ["rvv:bijlage1.F2"]
+    answer: true
+    explain: F2 es el fin de la prohibición de que los vehículos de motor se adelanten entre sí. Desde ahí vuelve a ser posible.
+    cites: ["rvv:bijlage1.F2", "rvv:bijlage1.F1"]
 
   - id: f-f5-f6
     type: mc
@@ -51,23 +41,21 @@ questions:
     explain: "F6: los conductores del sentido contrario deben dejarte pasar."
     cites: ["rvv:bijlage1.F6"]
 
-  - id: f-f7-significado
-    type: mc
-    prompt: ¿Qué prohíbe esta señal?
+  - id: f-f7-vuelta
+    type: yesno
+    prompt: Te pasaste de tu calle y quieres dar la vuelta en el sitio donde hay esta señal. La vía está vacía. ¿Puedes?
     sign: F7
-    options: ["Dar la vuelta (cambio de sentido)", "Girar a la derecha", "Adelantar", "Estacionar"]
-    answer: 0
-    explain: F7 es el keerverbod.
-    cites: ["rvv:bijlage1.F7"]
+    answer: false
+    explain: F7 es el keerverbod, una prohibición. Que la vía esté vacía no cambia nada.
+    cites: ["rvv:bijlage1.F7", "rvv:62"]
 
-  - id: f-f8-significado
-    type: mc
-    prompt: ¿Qué indica esta señal?
+  - id: f-f8-fin
+    type: yesno
+    prompt: Después de una señal F1 ves esta señal. ¿Terminó la prohibición de adelantar?
     sign: F8
-    options: ["Fin de todas las prohibiciones indicadas por señales", "Fin de la zona urbana", "Fin de la prohibición de adelantar solamente", "Fin de las prohibiciones indicadas en un panel electrónico"]
-    answer: 0
-    explain: F8 pone fin a todas las prohibiciones indicadas por señales. Las de un panel electrónico las cierra F9.
-    cites: ["rvv:bijlage1.F8"]
+    answer: true
+    explain: F8 pone fin a todas las prohibiciones indicadas por señales, y la de F1 es una de ellas. Las de un panel electrónico las cierra F9.
+    cites: ["rvv:bijlage1.F8", "rvv:bijlage1.F1"]
 
   - id: f-f10-significado
     type: mc
@@ -93,22 +81,13 @@ questions:
     explain: F13 es un carril solo para autobuses de línea.
     cites: ["rvv:bijlage1.F13"]
 
-  - id: f-f17-significado
+  - id: f-f19-quien
     type: mc
-    prompt: ¿Quién puede usar el carril con esta señal?
-    sign: F17
-    options: ["Autobuses de línea y tranvías", "Camiones y autobuses de línea", "Solo tranvías", "Solo camiones"]
-    answer: 0
-    explain: "F17: carril solo para autobuses de línea y tranvías."
-    cites: ["rvv:bijlage1.F17"]
-
-  - id: f-f19-significado
-    type: mc
-    prompt: ¿Quién puede usar el carril con esta señal?
+    prompt: Hay un carril con esta señal. ¿Quién de estos puede usarlo?
     sign: F19
-    options: ["Camiones y autobuses de línea", "Autobuses de línea y tranvías", "Autos", "Solo tranvías"]
-    answer: 0
-    explain: "F19: carril o calzada solo para camiones y autobuses de línea."
+    options: ["Un auto", "Un camión", "Una motocicleta", "Un tranvía"]
+    answer: 1
+    explain: F19 reserva el carril para camiones y autobuses de línea. Los autos y las motos no pueden usarlo; los tranvías tienen su propio carril (F15 o F17).
     cites: ["rvv:bijlage1.F19"]
 
   - id: f-f21-significado

@@ -11,7 +11,7 @@ Sobre muchos carriles de las autopistas hay paneles electrónicos (matrix) que c
 <Signs codes="A3,F9" />
 
 - **A3**: velocidad máxima en un panel electrónico.
-- **F9**: fin de todas las prohibiciones indicadas en el panel electrónico.
+- **F9**: fin de todas las prohibiciones indicadas en el panel electrónico: lo que el panel prohibía deja de valer.
 
 <Rule cite="rvv:63b.2">
 Si una señal y un panel electrónico muestran ambos una velocidad, rige la **más baja**.
@@ -22,7 +22,10 @@ Si una señal de velocidad muestra más que los máximos generales (art. 20, 21,
 </Rule>
 
 <Check id="mx-velocidad-baja" />
+
 <Check id="mx-limite-general" />
+
+<Check id="mx-f9-fin" />
 
 ## Luces sobre el carril: flecha y cruz
 
@@ -33,6 +36,7 @@ Flecha verde, o una velocidad máxima indicada: el carril puede usarse. Cruz roj
 Estas son las <T id="rijstrooklicht">luces de carril</T>. Una cruz roja encima de tu carril te obliga a cambiarte a tiempo.
 
 <Check id="mx-cruz-roja" />
+
 <Check id="mx-flecha-blanca" />
 
 ## Carril de hora punta (spitsstrook)
@@ -49,6 +53,14 @@ La <T id="spitsstrook" /> es la vluchtstrook designada como carril por la señal
 
 <Check id="mx-spitsstrook" />
 
+<Rule cite="rvv:bijlage1.C23-02, rvv:76.2, rvv:43.3, rvv:1" title="Desalojar y fin del spitsstrook">
+Con C23-02 (*Spitsstrook vrijmaken*) debes dejar el carril pasando a un carril normal de al lado. Para entrar o salir de un spitsstrook puedes cruzar la línea continua. Con C23-03 el carril vuelve a ser vluchtstrook: solo para emergencias.
+</Rule>
+
+<Check id="mx-c23-02-desalojar" />
+
+<Check id="mx-c23-03-fin" />
+
 ## Vluchtstrook y emergencias
 
 <Rule cite="rvv:43.3">
@@ -60,6 +72,8 @@ No puedes dejar tu vehículo detenido en la calzada de una autosnelweg o autoweg
 </Rule>
 
 <Check id="mx-vluchtstrook" />
+
+<Check id="mx-parar-calzada" />
 
 ## Camiones en autopista de tres o más carriles
 

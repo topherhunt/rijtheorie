@@ -70,3 +70,15 @@ questions:
     explain: La ley permite estacionar un vehículo y colocar una bicicleta o un ciclomotor en los tramos destinados a ello.
     cites: ["rvv:65.3", "rvv:65.2"]
     exam: false
+
+  - id: stilstaan-cual-es-parkeren
+    type: multi
+    prompt: ¿Cuáles de estas situaciones cuentan como parkeren según la definición legal?
+    options:
+      - Esperar 10 minutos a un amigo que todavía no baja
+      - Parar 20 segundos para que tu hijo baje del auto
+      - Descargar de inmediato unas cajas y volver a arrancar
+      - Dejar el auto para ir al cine
+    answer: [0, 3]
+    explain: Parkeren es dejar parado el vehículo salvo el tiempo necesario para el ascenso o descenso inmediato de pasajeros o la carga o descarga inmediata de mercancías. Bajar al niño y descargar de inmediato no cuentan; esperar y dejar el auto para ir al cine sí.
+    cites: ["rvv:1"]

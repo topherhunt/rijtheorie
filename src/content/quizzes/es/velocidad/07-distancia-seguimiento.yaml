@@ -15,14 +15,6 @@ questions:
     explain: "La distancia en metros es aproximadamente la mitad de la velocidad en km/h: 90 / 2 = 45."
     cites: ["cbr-rijprocedure:3.2"]
 
-  - id: seguimiento-calculo-100
-    type: number
-    prompt: "Vas a 100 km/h. Con la regla de la mitad, ¿cuántos metros dejas?"
-    answer: 50
-    unit: metros
-    explain: "100 / 2 = 50 metros."
-    cites: ["cbr-rijprocedure:3.2"]
-
   - id: seguimiento-mas
     type: multi
     prompt: "¿En cuáles de estas situaciones hace falta más distancia?"
@@ -65,4 +57,27 @@ questions:
     prompt: "Un auto te sigue demasiado pegado. ¿Conviene dejar tú algo más de distancia delante?"
     answer: true
     explain: "Con un vehículo muy pegado detrás hace falta más distancia, y esa situación debe evitarse en lo posible."
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: seguimiento-punto-fijo
+    type: mc
+    prompt: "En una autosnelweg el auto de delante pasa un poste y tú lo pasas 1 segundo después. ¿Qué pasa con tu volgafstand?"
+    options: [Es suficiente, "Es demasiado corta: debería ser de al menos 2 segundos", Es demasiado larga, Depende solo del color del auto]
+    answer: 1
+    explain: "La regla de los dos segundos pide una distancia que se recorre en 2 segundos. Con 1 segundo dejas la mitad."
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: seguimiento-120
+    type: yesno
+    prompt: "Vas a 120 km/h detrás de otro auto y dejas unos 40 m. ¿Cumples el punto de partida de la regla de los dos segundos?"
+    answer: false
+    explain: "A 120 km/h el punto de partida son unos 60 m (la mitad de la velocidad en km/h); 40 m son menos de 2 segundos."
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: seguimiento-lluvia-opaco
+    type: mc
+    prompt: "Vas a 90 km/h, llueve y vas detrás de un camión que te tapa la vista. La regla básica da unos 45 m. ¿Qué haces?"
+    options: [Dejo 45 m justos, Dejo más de 45 m, Dejo menos de 45 m para ver mejor, Dejo 45 m solo si el camión frena]
+    answer: 1
+    explain: "Con tiempo mojado y detrás de un vehículo opaco hace falta una distancia mayor que el punto de partida."
     cites: ["cbr-rijprocedure:3.2"]

@@ -1,62 +1,70 @@
 questions:
-  - id: eco-neumaticos
+  - id: eco-hora-punta
     type: mc
-    prompt: ¿Con qué frecuencia recomienda el CBR revisar la presión de los neumáticos?
-    options: ["Una vez al año", "Una vez al mes", "Solo antes de las vacaciones", "Cada semana"]
-    answer: 1
-    explain: La guía recomienda revisarla una vez al mes.
+    prompt: Puedes salir a las 7:00 o a las 8:30, cuando suele haber atasco en tu ruta. Según el CBR, ¿qué conviene para gastar menos y contaminar menos?
+    options: ["Elegir el momento y la ruta para evitar las horas y tramos con atasco", "Salir a cualquier hora y compensar acelerando más", "Salir en hora punta, porque con atasco el motor consume menos", "No importa la hora, solo la marcha que uses"]
+    answer: 0
+    explain: La guía del CBR dice que el momento y la ruta se eligen para evitar horas y tramos propensos a atascos.
     cites: ["cbr-rijprocedure:1"]
 
   - id: eco-peso
     type: yesno
-    prompt: ¿Conviene dejar un cofre de techo puesto aunque no lo uses, según el CBR?
+    prompt: Volviste de vacaciones y tu cofre de techo está vacío, pero lo dejas puesto en tu trayecto diario. Según el CBR, ¿es lo más adecuado?
     answer: false
-    explain: Evita el peso innecesario y los portaequipajes o cofres de techo sin uso.
+    explain: El CBR desaconseja llevar peso innecesario y accesorios que aumentan la resistencia al aire, como los cofres de techo, cuando no se usan.
     cites: ["cbr-rijprocedure:1"]
 
-  - id: eco-electricidad
-    type: yesno
-    prompt: ¿Recomienda el CBR evitar el uso innecesario de electricidad, como el aire acondicionado?
-    answer: true
-    explain: Aire acondicionado y lunetas calefactadas consumen combustible.
-    cites: ["cbr-rijprocedure:1"]
-
-  - id: eco-revoluciones
+  - id: eco-neumaticos
     type: mc
-    prompt: ¿Entre qué revoluciones por minuto recomienda el CBR cambiar de marcha, cuando es seguro?
-    options: ["1000 y 1500", "2000 y 2500", "3000 y 3500", "4000 y 4500"]
-    answer: 1
-    explain: Entre 2000 y 2500 rpm.
+    prompt: No has revisado la presión de los neumáticos desde hace dos meses. Según el CBR, ¿qué corresponde?
+    options: ["Ya toca revisarla, porque se hace una vez al mes", "Todavía no, se revisa una vez al año", "Solo hace falta antes de las vacaciones", "Solo si el auto vibra"]
+    answer: 0
+    explain: La guía del CBR indica revisar la presión de los neumáticos cada mes como parte de la preparación del viaje.
     cites: ["cbr-rijprocedure:1"]
 
-  - id: eco-acelerar
+  - id: eco-luneta
     type: yesno
-    prompt: Si la distancia con el auto de delante lo permite, ¿recomienda el CBR acelerar con decisión?
+    prompt: Ya se desempañó la luneta trasera, pero sigues con la luneta calefactada y el aire acondicionado encendidos "por costumbre". Según el CBR, ¿conviene apagarlos?
     answer: true
-    explain: Se recomienda acelerar con decisión, al menos hasta la mitad del recorrido del pedal.
+    explain: El CBR pide no tener encendidos sin necesidad los consumidores de energía como el aire acondicionado y la calefacción de lunas, porque consumen combustible.
     cites: ["cbr-rijprocedure:1"]
 
-  - id: eco-levantar
+  - id: eco-rpm-alta
     type: mc
-    prompt: ¿Qué recomienda el CBR al reducir la velocidad?
-    options: ["Poner el punto muerto enseguida", "Levantar el pie del acelerador con anticipación y dejar el auto engranado", "Frenar solo al final con fuerza", "Pisar el embrague desde lejos"]
-    answer: 1
-    explain: Se levanta el pie con anticipación y se mantiene engranado; el embrague se pisa justo antes de detenerse.
+    prompt: En un tramo sin tráfico delante, el motor de tu auto manual gira a 3.500 rpm en tercera. Según el CBR, ¿qué haces para consumir menos?
+    options: ["Subir de marcha y cambiar entre 2.000 y 2.500 rpm", "Mantener la marcha para tener potencia", "Bajar a segunda", "Poner el punto muerto"]
+    answer: 0
+    explain: Conducir en una marcha relativamente alta reduce el consumo. El CBR indica cambiar entre 2.000 y 2.500 rpm cuando es seguro y no frena el tráfico.
     cites: ["cbr-rijprocedure:1"]
 
-  - id: eco-apagar
-    type: number
-    prompt: ¿A partir de cuántos minutos de parada prevista recomienda el CBR apagar el motor?
-    answer: 1
-    unit: minuto
-    explain: Si vas a estar parado más de un minuto, apaga el motor.
+  - id: eco-salida-semaforo
+    type: mc
+    prompt: El semáforo se pone en verde y no hay nadie cerca delante de ti. Según el CBR, ¿cómo aceleras?
+    options: ["Con decisión, pisando el pedal al menos hasta la mitad de su recorrido", "Con el pedal apenas rozado, para gastar lo mínimo", "A fondo hasta alcanzar las 4.000 rpm", "Con el pie en el embrague mientras aceleras suave"]
+    answer: 0
+    explain: Si la distancia con el auto de delante lo permite, el CBR recomienda acelerar con decisión, al menos hasta la mitad del recorrido del pedal. Acelerar muy flojo alarga la aceleración sin ahorrar de verdad.
+    cites: ["cbr-rijprocedure:1"]
+
+  - id: eco-semaforo-adelante
+    type: mc
+    prompt: Ves que el semáforo, 200 m adelante, estará en rojo cuando llegues y tendrás que parar. Según el CBR, ¿qué haces?
+    options: ["Levantar el pie del acelerador ya, dejar el auto engranado y pisar el embrague justo antes del ralentí", "Seguir acelerando y frenar fuerte al final", "Poner el punto muerto enseguida", "Pisar el embrague desde lejos y rodar"]
+    answer: 0
+    explain: Soltar el acelerador con anticipación corta el consumo de combustible. Se mantiene el auto engranado y se pisa el embrague justo antes de que el motor llegue al ralentí.
     cites: ["cbr-rijprocedure:1"]
 
   - id: eco-crucero
     type: yesno
-    prompt: ¿Puede ayudar el control de crucero a mantener una velocidad constante?
+    prompt: Circulas por una carretera larga con poco tráfico y tu auto tiene control de crucero. Según el CBR, ¿es buena idea usarlo para mantener una velocidad constante?
     answer: true
-    explain: La guía lo menciona como ayuda para una velocidad constante.
+    explain: El CBR dice que el uso correcto del control de crucero favorece una velocidad constante y reduce el consumo, cuando está disponible y es aplicable.
+    cites: ["cbr-rijprocedure:1"]
+
+  - id: eco-paso-a-nivel
+    type: yesno
+    prompt: Esperas en un paso a nivel con barrera cerrada y calculas que el tren tardará unos tres minutos. Es seguro y podrías volver a arrancar enseguida. Según el CBR, ¿conviene apagar el motor?
+    answer: true
+    explain: El CBR recomienda apagar el motor en paradas de más de un minuto, siempre que la seguridad lo permita, y mantener encendidas las luces obligatorias.
     cites: ["cbr-rijprocedure:1"]
 
   - id: eco-luces

@@ -76,7 +76,7 @@ questions:
   - id: luz-trasera-junta
     type: mc
     prompt: ¿Cuándo debe estar encendida la luz trasera?
-    options: [Solo con luces de cruce, Siempre a la vez con largas, cruce, posición o antiniebla, Solo de noche y con lluvia, Solo si hay un vehículo detrás]
+    options: [Solo con luces de cruce, "Siempre a la vez con largas, cruce, posición o antiniebla", Solo de noche y con lluvia, Solo si hay un vehículo detrás]
     answer: 1
     explain: Luz trasera y luz de la matrícula trasera acompañan siempre a las demás luces delanteras que se lleven.
     cites: ["rvv:32.3"]

@@ -8,42 +8,6 @@ questions:
     explain: E4 indica un parkeergelegenheid.
     cites: ["rvv:bijlage1.E4"]
 
-  - id: gelegenheid-e5
-    type: mc
-    prompt: ¿Qué indica esta señal?
-    sign: E5
-    options: [Parada de taxis, Plaza para discapacitados, P+R, Zona de carga]
-    answer: 0
-    explain: E5 es la taxistandplaats.
-    cites: ["rvv:bijlage1.E5"]
-
-  - id: gelegenheid-e7
-    type: mc
-    prompt: ¿Qué indica esta señal?
-    sign: E7
-    options: [Lugar para cargar y descargar, Taxis, Carpool, Zona de disco]
-    answer: 0
-    explain: E7 es un lugar para cargar y descargar.
-    cites: ["rvv:bijlage1.E7"]
-
-  - id: gelegenheid-e12
-    type: mc
-    prompt: ¿Qué indica esta señal?
-    sign: E12
-    options: [P+R, Carpool, Plaza con permiso, Zona de disco]
-    answer: 0
-    explain: E12 es un aparcamiento P+R.
-    cites: ["rvv:bijlage1.E12"]
-
-  - id: gelegenheid-e13
-    type: mc
-    prompt: ¿Qué indica esta señal?
-    sign: E13
-    options: [Carpool, P+R, Taxis, Solo motos]
-    answer: 0
-    explain: E13 es un aparcamiento para carpool.
-    cites: ["rvv:bijlage1.E13"]
-
   - id: gelegenheid-categoria
     type: yesno
     prompt: Un lugar de estacionamiento tiene un cartel que lo limita a una categoría de vehículo a la que tu auto no pertenece. ¿Puedes estacionar?
@@ -85,3 +49,48 @@ questions:
     answer: 0
     explain: E11 marca el fin de una zona E10.
     cites: ["rvv:bijlage1.E11", "rvv:66.3"]
+
+  - id: gelegenheid-e7-estacionar
+    type: yesno
+    prompt: Ves una señal E7 (lugar para cargar y descargar). Quieres dejar tu auto allí dos horas mientras haces compras. ¿Puedes?
+    sign: E7
+    answer: false
+    explain: Está prohibido estacionar en un lugar destinado a cargar y descargar mercancías de inmediato. Dos horas de compras es estacionar, no cargar o descargar de inmediato.
+    cites: ["rvv:bijlage1.E7", "rvv:24.1"]
+
+  - id: gelegenheid-e8-camion
+    type: yesno
+    prompt: Un aparcamiento con señal E8 muestra el símbolo de un camión. Conduces un auto. ¿Puedes estacionar allí?
+    sign: E8
+    answer: false
+    explain: E8 es un parkeergelegenheid solo para la categoría que indica el cartel. Un auto no pertenece a la categoría camión, así que no puedes estacionar allí.
+    cites: ["rvv:bijlage1.E8", "rvv:24.1"]
+
+  - id: gelegenheid-e12-otro-fin
+    type: yesno
+    prompt: Un aparcamiento con señal E12 (P+R) está pensado para quien deja el auto y sigue en transporte público. ¿Puedes estacionar allí para ir de compras al centro en tu propio auto, sin usar transporte público?
+    sign: E12
+    answer: false
+    explain: En un lugar de estacionamiento no puedes estacionar con otro fin que el indicado en el cartel. E12 es para quien se cambia al transporte público.
+    cites: ["rvv:bijlage1.E12", "rvv:24.1"]
+
+  - id: gelegenheid-e10-tiempo
+    type: mc
+    prompt: Entras en una zona E10 con un tiempo máximo de 2 horas y encuentras una plaza permitida. Dejas el auto 3 horas con el disco bien puesto. ¿Qué pasa?
+    sign: E10
+    options:
+      - Está bien, porque el disco está bien puesto
+      - Está prohibido, porque pasaste del tiempo máximo de la señal
+      - Está bien, porque la zona no es una prohibición
+      - Solo está prohibido si hay una multa visible
+    answer: 1
+    explain: E10 es también un parkeerverbod si estacionas más tiempo que el máximo indicado. Tener el disco puesto no te da más tiempo.
+    cites: ["rvv:bijlage1.E10"]
+
+  - id: gelegenheid-e10-zona-calles
+    type: yesno
+    prompt: Pasas una señal E10 con la palabra «zone» y sin área indicada. Giras por dos calles de la zona y todavía no has visto la señal E11. ¿Sigue valiendo la regla del E10?
+    sign: E10
+    answer: true
+    explain: Sin área indicada, la señal vale en el área que va desde ella hasta las señales que marcan el fin de la zona. Mientras no llegues al E11, sigues dentro.
+    cites: ["rvv:66.2", "rvv:66.3"]

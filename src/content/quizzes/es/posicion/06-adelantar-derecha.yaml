@@ -7,13 +7,6 @@ questions:
     explain: "Quien preselecciona a la izquierda e indica que girará a la izquierda se adelanta por la derecha."
     cites: ["rvv:11.2"]
 
-  - id: derecha-ciclistas
-    type: yesno
-    prompt: "¿Pueden los ciclistas adelantar a otros conductores por la derecha?"
-    answer: true
-    explain: "Entre sí se adelantan por la izquierda, pero pueden adelantar a otros conductores por la derecha."
-    cites: ["rvv:11.3"]
-
   - id: derecha-ciclistas-entre-si
     type: mc
     prompt: "Un ciclista quiere adelantar a otro ciclista. ¿Por dónde?"
@@ -30,13 +23,6 @@ questions:
     explain: "Quien está a la derecha de una blokmarkering puede adelantar por la derecha a quien está a su izquierda."
     cites: ["rvv:11.4"]
 
-  - id: derecha-tranvia
-    type: yesno
-    prompt: "¿Se puede adelantar un tranvía por la derecha?"
-    answer: true
-    explain: "El art. 11 lid 5 lo permite."
-    cites: ["rvv:11.5"]
-
   - id: derecha-fila
     type: yesno
     prompt: "Hay una fila de autos en el carril izquierdo y tu carril avanza. ¿Puedes adelantar la fila por la derecha?"
@@ -50,13 +36,6 @@ questions:
     answer: true
     explain: "En o justo antes de una rotonda está permitido adelantar por la derecha."
     cites: ["rvv:48"]
-
-  - id: derecha-rotonda-lado
-    type: yesno
-    prompt: "En o justo antes de una rotonda, ¿puede un auto que sigue la calzada ir por un lugar distinto del lado derecho de la calzada?"
-    answer: true
-    explain: "El art. 47 lo permite a los conductores de vehículos de motor y a los ciclomotores, en o justo antes de la rotonda."
-    cites: ["rvv:47"]
 
   - id: derecha-lentos
     type: yesno
@@ -81,10 +60,31 @@ questions:
     explain: "Después de adelantar no hay que ir al carril más a la derecha a la altura de un carril de incorporación con tráfico entrando."
     cites: ["cbr-rijprocedure:3.5"]
 
-  - id: derecha-hombro
-    type: mc
-    prompt: "Al adelantar por la derecha, ¿qué miras antes de moverte?"
-    options: ['Delante, retrovisor interior, retrovisor exterior derecho y hombro derecho', Solo el retrovisor interior, Solo por encima del hombro izquierdo, Solo hacia delante]
-    answer: 0
-    explain: "Para ir a la derecha: delante, retrovisor interior, retrovisor exterior derecho y hombro derecho."
-    cites: ["cbr-rijprocedure:3.5"]
+  - id: derecha-giro-sin-senal
+    type: yesno
+    prompt: "El auto de delante va pegado a la izquierda de su carril, pero no ha puesto ningún intermitente. No sabes si va a girar. ¿Puedes pasarlo por la derecha?"
+    answer: false
+    explain: "La excepción del art. 11 lid 2 exige las dos cosas: haber preseleccionado a la izquierda e indicado que se girará a la izquierda. Sin la señal vale la regla general: se adelanta por la izquierda."
+    cites: ["rvv:11.1", "rvv:11.2"]
+
+  - id: derecha-recto-lento
+    type: yesno
+    prompt: "Un auto lento va delante de ti por la calzada, sin indicar ningún giro, y a su derecha hay espacio de sobra. No hay fila, línea de bloques ni rotonda. ¿Puedes adelantarlo por la derecha?"
+    answer: false
+    explain: "Se adelanta por la izquierda. Que haya espacio a la derecha o que el otro vaya lento no es ninguna de las excepciones del art. 11 (preselección con señal, ciclistas, línea de bloques, tranvías) ni del 13 y 48 (filas, rotondas)."
+    cites: ["rvv:11.1", "rvv:11.2"]
+
+  - id: derecha-cuales
+    type: multi
+    prompt: "Conduces un auto. ¿A cuáles de estos puedes adelantar por la derecha, sin que se aplique otra excepción?"
+    options: [Un tranvía, Un autobús de línea que circula por la calzada, Un auto que ha preseleccionado a la izquierda e indicado giro a la izquierda, Un ciclista que circula despacio por la calzada]
+    answer: [0, 2]
+    explain: "Los tranvías (art. 11 lid 5) y quien ha preseleccionado a la izquierda e indicado que girará a la izquierda (lid 2) se adelantan por la derecha. El permiso del lid 3 es de los ciclistas: un auto adelanta a ciclistas y a autobuses por la izquierda (lid 1)."
+    cites: ["rvv:11.1", "rvv:11.2", "rvv:11.3", "rvv:11.5"]
+
+  - id: derecha-auto-sobre-ciclista
+    type: yesno
+    prompt: "Conduces un auto y delante va un ciclista despacio por la calzada, con mucho espacio libre a tu derecha. ¿Puedes adelantarlo por la derecha?"
+    answer: false
+    explain: "Los ciclistas pueden adelantar a otros conductores por la derecha, pero no al revés: un auto adelanta por la izquierda."
+    cites: ["rvv:11.1", "rvv:11.3"]

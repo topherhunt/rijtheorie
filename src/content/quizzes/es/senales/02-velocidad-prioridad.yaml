@@ -8,15 +8,6 @@ questions:
     explain: A1 es la maximumsnelheid, el límite indicado en km/h.
     cites: ["rvv:bijlage1.A1"]
 
-  - id: velocidad-a2-significado
-    type: mc
-    prompt: ¿Qué significa esta señal?
-    sign: A2
-    options: ["Velocidad recomendada", "Fin de velocidad máxima", "Velocidad máxima de 50", "Fin de la zona urbana"]
-    answer: 1
-    explain: A2 es "Einde maximumsnelheid".
-    cites: ["rvv:bijlage1.A2"]
-
   - id: velocidad-a4-recomendada
     type: yesno
     prompt: Esta señal azul indica 60 en una curva. ¿Es un límite legal de 60 km/h?
@@ -24,15 +15,6 @@ questions:
     answer: false
     explain: A4 es una velocidad recomendada (adviessnelheid), no un límite. El límite legal lo marca A1.
     cites: ["rvv:bijlage1.A4"]
-
-  - id: velocidad-a5-significado
-    type: mc
-    prompt: ¿Qué significa esta señal?
-    sign: A5
-    options: ["Fin de velocidad máxima", "Fin de velocidad recomendada", "Fin de la prohibición de adelantar", "Fin de zona urbana"]
-    answer: 1
-    explain: A5 cierra la velocidad recomendada (Einde adviessnelheid).
-    cites: ["rvv:bijlage1.A5"]
 
   - id: velocidad-camion-100
     type: number
@@ -50,41 +32,49 @@ questions:
     explain: La snorfiets tiene un máximo de 25 km/h. Si la señal permite más, vale el límite más bajo.
     cites: ["rvv:63b.1", "rvv:22"]
 
-  - id: velocidad-b1-significado
-    type: mc
-    prompt: ¿Qué significa esta señal?
-    sign: B1
-    options: ["Vía con prioridad", "Cruce con prioridad", "Ceda el paso", "Fin de vía con prioridad"]
-    answer: 0
-    explain: B1 es la voorrangsweg. Con B3 se anuncia un cruce con prioridad.
-    cites: ["rvv:bijlage1.B1"]
+  - id: velocidad-a2-efecto
+    type: number
+    prompt: Conduces un auto por una carretera normal fuera de la zona urbana (no es autoweg ni autosnelweg). Una señal A1 de 30 km/h por obras es seguida por esta señal y no hay otras señales de velocidad. ¿Qué velocidad máxima rige después?
+    sign: A2
+    answer: 80
+    unit: km/h
+    explain: 'A2 solo cierra el límite de 30. No te deja ir libre: vuelve el límite general, que fuera de la zona urbana en las demás vías es 80 km/h.'
+    cites: ["rvv:bijlage1.A2", "rvv:21"]
 
-  - id: velocidad-b2-significado
+  - id: velocidad-a2-kom
+    type: number
+    prompt: Dentro de la zona urbana, una señal A1 de 30 km/h es seguida por esta señal y no hay otras señales de velocidad. ¿Qué velocidad máxima tiene tu auto después?
+    sign: A2
+    answer: 50
+    unit: km/h
+    explain: Después de A2 vuelve el límite general. Dentro de la bebouwde kom es 50 km/h para vehículos de motor.
+    cites: ["rvv:bijlage1.A2", "rvv:20"]
+
+  - id: velocidad-b2-efecto
     type: mc
-    prompt: ¿Qué significa esta señal?
+    prompt: Pasas esta señal. Más adelante llegas a un cruce sin semáforo y sin ninguna señal de prioridad, y un auto se acerca por tu derecha. ¿Quién pasa primero?
     sign: B2
-    options: ["Fin de vía con prioridad", "Fin de la zona urbana", "Cruce sin prioridad", "Stop"]
-    answer: 0
-    explain: B2 es "Einde voorrangsweg".
-    cites: ["rvv:bijlage1.B2"]
+    options: ["Tú, porque vienes de la vía que tenía prioridad", "El auto de la derecha, porque vuelve la regla general", "El que llegue primero"]
+    answer: 1
+    explain: 'B2 cierra la voorrangsweg. Sin señales ni semáforo en el cruce, rige la regla de la derecha: cedes al que viene por tu derecha.'
+    cites: ["rvv:bijlage1.B2", "rvv:15.1"]
 
-  - id: velocidad-b3-significado
+  - id: velocidad-b6-cede
     type: mc
-    prompt: ¿Qué significa esta señal?
-    sign: B3
-    options: ["Cruce con prioridad señalizada", "Ceda el paso", "Cruce peligroso", "Fin de vía con prioridad"]
-    answer: 0
-    explain: B3 es el voorrangskruispunt, un cruce con prioridad.
-    cites: ["rvv:bijlage1.B3"]
-
-  - id: velocidad-b6-significado
-    type: mc
-    prompt: ¿Qué debes hacer ante esta señal?
+    prompt: Llegas a un cruce con esta señal y un auto circula por la vía que cruzas. ¿Qué haces?
     sign: B6
-    options: ["Ceder el paso a los conductores de la vía que cruzas", "Detenerte siempre", "Pasar primero", "Reducir a 30 km/h"]
+    options: ["Dejas pasar al auto y sigues cuando no lo estorbes", "Pasas primero porque eres más rápido", "Pasas primero si él viene por tu derecha", "Te detienes siempre, aunque la vía esté libre"]
     answer: 0
-    explain: B6 dice "verleen voorrang aan bestuurders op de kruisende weg". No obliga a parar si no hace falta.
-    cites: ["rvv:bijlage1.B6"]
+    explain: B6 te obliga a dar voorrang a la vía que cruzas, que es dejar que los demás sigan sin estorbo. Eso vale venga por la izquierda o por la derecha. Si la vía estuviera libre, no tendrías que detenerte.
+    cites: ["rvv:bijlage1.B6", "rvv:1", "rvv:63"]
+
+  - id: velocidad-b6-b7-via-libre
+    type: mc
+    prompt: Llegas a un cruce y no viene nadie por la vía que cruzas. ¿Cuál de estas señales te obliga a detenerte de todos modos?
+    options: ["B6 (triángulo)", "B7 (stop)", "Las dos", "Ninguna"]
+    answer: 1
+    explain: B7 dice "Stop" y te obliga a parar aunque no venga nadie. Con B6 solo cedes si hay alguien a quien estorbarías.
+    cites: ["rvv:bijlage1.B6", "rvv:bijlage1.B7", "rvv:1"]
 
   - id: velocidad-b7-siempre
     type: yesno
@@ -102,11 +92,3 @@ questions:
     answer: 0
     explain: Si hay una stopstreep para ti, paras detrás de ella. Solo sin línea paras donde veas bien el cruce.
     cites: ["rvv:79", "cbr-rijprocedure:3.3"]
-
-  - id: velocidad-b4-b5
-    type: mc
-    prompt: ¿Cuál de estas señales avisa de un cruce con prioridad donde una vía lateral entra por la derecha?
-    options: ["B4", "B5", "B3", "B6"]
-    answer: 1
-    explain: B5 muestra la vía lateral a la derecha. B4 la muestra a la izquierda y B3 muestra vías laterales a ambos lados.
-    cites: ["rvv:bijlage1.B3", "rvv:bijlage1.B4", "rvv:bijlage1.B5"]

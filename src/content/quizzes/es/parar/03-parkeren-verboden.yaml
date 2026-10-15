@@ -1,12 +1,4 @@
 questions:
-  - id: parkeerverbod-kruispunt
-    type: number
-    prompt: ¿A menos de cuántos metros de un cruce está prohibido estacionar?
-    answer: 5
-    unit: m
-    explain: No puedes estacionar a menos de 5 m de un kruispunt.
-    cites: ["rvv:24.1"]
-
   - id: parkeerverbod-inrit
     type: yesno
     prompt: ¿Puedes estacionar delante de la entrada o salida de un terreno (inrit o uitrit)?
@@ -25,18 +17,6 @@ questions:
     answer: 0
     explain: Fuera de la zona urbana no puedes estacionar en la calzada de una voorrangsweg.
     cites: ["rvv:24.1"]
-
-  - id: parkeerverbod-gele-streep
-    type: mc
-    prompt: ¿Qué prohíbe una línea amarilla discontinua junto a la calzada?
-    options:
-      - Detenerse
-      - Estacionar
-      - Adelantar
-      - Nada
-    answer: 1
-    explain: Junto a una línea amarilla discontinua está prohibido parkeren. La continua prohíbe incluso stilstaan.
-    cites: ["rvv:24.1", "rvv:23.1"]
 
   - id: parkeerverbod-laden
     type: yesno
@@ -95,3 +75,34 @@ questions:
     answer: false
     explain: E1 vale solo para el lado de la vía donde está puesta.
     cites: ["rvv:65.2"]
+
+  - id: parkeerverbod-e1-bajar
+    type: yesno
+    prompt: Hay una señal E1 (parkeerverbod) en tu lado de la calle. Te detienes 20 segundos para que tu hijo baje y arrancas. ¿Está permitido?
+    sign: E1
+    answer: true
+    explain: E1 prohíbe parkeren, y parar el tiempo justo para que alguien baje no es parkeren según el art. 1.
+    cites: ["rvv:bijlage1.E1", "rvv:1"]
+
+  - id: parkeerverbod-e1-esperar
+    type: yesno
+    prompt: Bajo una señal E1 en tu lado de la calle esperas 5 minutos con el motor encendido a que tu amigo salga de una tienda. ¿Está permitido?
+    sign: E1
+    answer: false
+    explain: Esperar a alguien no es el tiempo necesario para un ascenso o descenso inmediato, así que es parkeren, que E1 prohíbe.
+    cites: ["rvv:bijlage1.E1", "rvv:1"]
+
+  - id: parkeerverbod-cruce-bajar
+    type: yesno
+    prompt: A 3 m de un cruce (fuera del cruce mismo) te detienes lo justo para que un pasajero baje de inmediato. ¿Lo prohíbe el artículo 24 (parkeren)?
+    answer: false
+    explain: Dejar bajar a un pasajero de inmediato no es parkeren, así que el art. 24 no se aplica. El art. 23 solo prohíbe detenerse dentro del cruce.
+    cites: ["rvv:24.1", "rvv:1", "rvv:23.1"]
+
+  - id: parkeerverbod-e3-auto
+    type: yesno
+    prompt: Hay una señal E3 (prohibido colocar bicicletas y ciclomotores) en tu lado de la calle. Conduces un auto. ¿Te prohíbe estacionar el auto?
+    sign: E3
+    answer: false
+    explain: E3 es el Verbod fietsen en bromfietsen te plaatsen; se refiere a bicicletas y ciclomotores, no a autos.
+    cites: ["rvv:bijlage1.E3"]

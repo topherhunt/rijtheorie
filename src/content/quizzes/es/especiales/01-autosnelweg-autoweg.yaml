@@ -11,38 +11,45 @@ questions:
     explain: La autosnelweg exige 60 km/h como mínimo (la autoweg, 50 km/h). Los dos requisitos, poder y tener permiso, deben cumplirse.
     cites: ["rvv:42.1"]
 
-  - id: autosnelweg-vel-minima-autoweg
-    type: number
-    prompt: ¿Desde qué velocidad mínima (que el vehículo pueda y tenga permiso de alcanzar) se puede usar una autoweg?
-    answer: 50
-    unit: km/h
-    explain: La autoweg exige al menos 50 km/h. Para la autosnelweg son 60 km/h.
-    cites: ["rvv:42.2"]
-
-  - id: autosnelweg-senal-g1
-    type: mc
-    prompt: ¿Qué vía marca esta señal?
+  - id: autosnelweg-quien-puede-entrar
+    type: multi
+    prompt: Ves la señal G1 al inicio de una carretera. ¿Cuáles de estos vehículos pueden usar esa vía?
     sign: G1
-    options: [Autoweg, Autosnelweg, Erf, Vía con prioridad]
-    answer: 1
-    explain: G1 marca la autosnelweg. La autoweg se marca con G3.
-    cites: ["rvv:bijlage1.G1", "rvv:1"]
+    options:
+      - Un auto que puede y tiene permiso para ir a 130 km/h
+      - Una bicicleta eléctrica con pedaleo asistido
+      - Una bromfiets
+      - Una moto
+    answer: [0, 3]
+    explain: La autosnelweg es solo para vehículos de motor que puedan y tengan permiso para ir al menos a 60 km/h. La ley no cuenta como vehículos de motor a las bromfietsen ni a las bicicletas con pedaleo asistido, así que no pueden entrar aunque tengan motor.
+    cites: ["rvv:42.1", "rvv:1"]
 
-  - id: autosnelweg-senal-g3
+  - id: autosnelweg-g3-vehiculo-lento
     type: mc
-    prompt: ¿Qué vía marca esta señal?
-    sign: G3
-    options: [Autoweg, Autosnelweg, Erf, Zona de 30 km/h]
-    answer: 0
-    explain: G3 marca la autoweg. La autosnelweg se marca con G1.
-    cites: ["rvv:bijlage1.G3", "rvv:1"]
+    prompt: Conduces un vehículo de motor (no una bromfiets) que puede y tiene permiso para ir como máximo a 55 km/h. ¿Dónde puedes entrar?
+    options:
+      - En una vía con G1 y en una con G3
+      - Solo en una vía con G3 (autoweg)
+      - Solo en una vía con G1 (autosnelweg)
+      - En ninguna de las dos
+    answer: 1
+    explain: La autoweg (G3) pide al menos 50 km/h y tu vehículo los alcanza. La autosnelweg (G1) pide al menos 60 km/h y no.
+    cites: ["rvv:42.1", "rvv:42.2"]
 
-  - id: autosnelweg-gasolinera-parte
+  - id: autosnelweg-brommobiel-autoweg
     type: yesno
-    prompt: ¿Es una gasolinera junto a la autosnelweg parte de la autosnelweg?
+    prompt: Un brommobiel (coche ligero de 45 km/h) llega a una vía con la señal G3. ¿Puede entrar?
+    sign: G3
     answer: false
-    explain: Los lugares de estacionamiento, gasolineras y paradas de bus junto a la autosnelweg o autoweg no son parte de esa vía.
-    cites: ["rvv:1"]
+    explain: El brommobiel es una bromfiets, y la ley no cuenta las bromfietsen como vehículos de motor. Como la autoweg es solo para vehículos de motor que alcancen 50 km/h, no puede entrar.
+    cites: ["rvv:42.2", "rvv:1"]
+
+  - id: autosnelweg-gasolinera-parar
+    type: yesno
+    prompt: Sales de la autosnelweg a una gasolinera (tankstation) que está junto a ella y paras el auto para repostar. ¿Infringes la prohibición de dejar el vehículo parado en la calzada de la autosnelweg?
+    answer: false
+    explain: Los tankstations, parkeerplaatsen y paradas de bus junto a la autosnelweg no forman parte de ella, y la prohibición de stilstaan vale en la rijbaan de la autosnelweg. Por eso parar allí no es dejar el vehículo parado en la calzada de la autosnelweg.
+    cites: ["rvv:1", "rvv:43.2"]
 
   - id: autosnelweg-marcha-atras
     type: multi

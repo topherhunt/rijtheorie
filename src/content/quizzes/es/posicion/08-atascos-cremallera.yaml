@@ -14,14 +14,6 @@ questions:
     explain: "El art. 13 lid 2 permite adelantar filas por la derecha."
     cites: ["rvv:13.2"]
 
-  - id: atascos-distancia
-    type: mc
-    prompt: "Estás en una fila. ¿Qué distancia con el auto de delante recomienda la Rijprocedure B?"
-    options: [Lo más constante posible, Lo más pegado posible, Variable según la prisa, Ninguna en particular]
-    answer: 0
-    explain: "Durante la marcha en fila se mantiene la distancia lo más constante posible."
-    cites: ["cbr-rijprocedure:3.2"]
-
   - id: atascos-luces
     type: multi
     prompt: "¿En cuáles de estas situaciones usas las luces de emergencia según la Rijprocedure B?"
@@ -45,17 +37,40 @@ questions:
     explain: "En un estrechamiento se deja espacio a quienes adelantan, intercalándose uno a uno."
     cites: ["cbr-rijprocedure:2"]
 
-  - id: atascos-quien-cede
-    type: mc
-    prompt: "Según la ley, ¿quién cede el paso al incorporarse de un carril de incorporación a la calzada principal?"
-    options: [Quien se incorpora, Quien está en la calzada principal, El más rápido, El más grande]
-    answer: 0
-    explain: "Quien se incorpora a la calzada principal hace una maniobra especial y deja pasar al resto del tráfico."
-    cites: ["rvv:54"]
-
   - id: atascos-no-cerrar
     type: yesno
     prompt: "Se forma una fila. ¿Es correcto acelerar de forma llamativa para cerrar un hueco que otro conductor quería usar?"
     answer: false
     explain: "La Rijprocedure B pide evitar esa conducta, que irrita a otros."
     cites: ["cbr-rijprocedure:2"]
+
+  - id: atascos-distancia-aplicada
+    type: mc
+    prompt: "Vas en una fila que avanza y para a tirones. ¿Cómo llevas la distancia con el auto de delante?"
+    options: [Lo más constante posible, Muy pegado para que nadie se cuele, Acercándome y alejándome según lo que haga el de delante, Solo me preocupo si frena fuerte]
+    answer: 0
+    explain: "En fila mantienes la distancia lo más constante posible. Acercarte y alejarte según el de delante crea frenazos que se propagan hacia atrás."
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: atascos-cruce-semaforo-verde
+    type: yesno
+    prompt: "Tienes semáforo en verde, pero la fila de delante está parada y al otro lado del cruce no hay sitio para tu auto. ¿Entras al cruce?"
+    answer: false
+    explain: "Los conductores no pueden bloquear un cruce. El verde te da paso, pero no te autoriza a quedarte parado en medio del cruce, y menos si bloqueas el tráfico transversal."
+    cites: ["rvv:14", "cbr-rijprocedure:2"]
+
+  - id: atascos-incorporo-ceder
+    type: mc
+    prompt: "Vas por un carril de incorporación y llegas a la calzada principal con tráfico. ¿Quién debe dejar pasar a quién?"
+    options: [Yo dejo pasar al tráfico de la calzada principal, El tráfico de la calzada principal me deja pasar a mí, Pasa primero el más rápido, Pasa primero el más grande]
+    answer: 0
+    explain: "Quien se incorpora a la calzada principal desde un carril de incorporación debe dejar pasar al resto del tráfico. Que otros te dejen paso es cortesía, no un derecho."
+    cites: ["rvv:54"]
+
+  - id: atascos-ritsen-ayuda
+    type: mc
+    prompt: "Circulas por la calzada principal de una autosnelweg y ves en el carril de incorporación un camión que no logra coger velocidad. ¿Qué haces si puedes?"
+    options: [Ajusto mi velocidad o me muevo a la izquierda para dejarle sitio, Acelero para que no entre, Freno de golpe en mi carril, Toco la bocina para que se detenga]
+    answer: 0
+    explain: "La Rijprocedure B pide ayudar a incorporarse al tráfico pesado que no coge velocidad, ajustando tu velocidad o moviéndote a la izquierda. La obligación legal de ceder sigue siendo de quien se incorpora."
+    cites: ["cbr-rijprocedure:2", "cbr-rijprocedure:3.2"]

@@ -1,25 +1,10 @@
 questions:
-  - id: adaptar-parar
-    type: mc
-    prompt: "¿Qué exige el art. 19 RVV sobre tu velocidad?"
-    options: [Poder detenerte en la distancia que ves libre, Ir siempre al máximo permitido, Ir 10 km/h por debajo del máximo, Seguir al auto de delante]
-    answer: 0
-    explain: "Debes poder parar dentro de la distancia en que puedes ver la vía y está libre."
-    cites: ["rvv:19"]
-
   - id: adaptar-curva-ciega
     type: yesno
     prompt: "En una curva sin visibilidad, la vía está dentro del límite de velocidad. ¿Basta con respetar el máximo?"
     answer: false
     explain: "Además debes poder detenerte en la distancia que ves libre; el máximo no sustituye esta regla."
     cites: ["rvv:19"]
-
-  - id: adaptar-lluvia
-    type: yesno
-    prompt: "Según la Rijprocedure B, ¿debes ajustar la velocidad al clima y a la densidad del tráfico?"
-    answer: true
-    explain: "Debes ajustarla al tipo y estado de la vía, el clima, el tráfico y las obras."
-    cites: ["cbr-rijprocedure:3.2"]
 
   - id: adaptar-lento
     type: yesno
@@ -59,17 +44,31 @@ questions:
     explain: "Al ser adelantado no se aumenta la velocidad."
     cites: ["cbr-rijprocedure:3.2"]
 
-  - id: adaptar-espacio
+  - id: adaptar-niebla-bajo-maximo
     type: mc
-    prompt: "Hay menos espacio entre tu auto y los demás usuarios. ¿Qué haces?"
-    options: [Voy más despacio, Voy igual, Voy más rápido, Cambio de carril]
-    answer: 0
-    explain: "Cuanto menos espacio, más despacio."
-    cites: ["cbr-rijprocedure:3.2"]
+    prompt: "Hay niebla densa y ves la vía libre solo hasta 40 m. A tu velocidad actual (80 km/h) necesitarías unos 60 m para detenerte. El máximo es 100 km/h. ¿Qué exige el art. 19?"
+    options:
+      - "Nada: voy por debajo del máximo"
+      - "Reducir la velocidad hasta poder detenerme dentro de lo que veo libre"
+      - "Mantener 80 y encender las luces"
+      - "Seguir al auto de delante"
+    answer: 1
+    explain: "El art. 19 obliga a poder detenerse dentro de la distancia que ves libre. Estar bajo el máximo no basta."
+    cites: ["rvv:19"]
 
-  - id: adaptar-peligro
-    type: yesno
-    prompt: "¿Prohíbe la ley comportarte de modo que cause peligro o estorbe al tráfico?"
-    answer: true
-    explain: "Art. 5 WVW."
-    cites: ["wvw:5"]
+  - id: adaptar-mojado-art19
+    type: mc
+    prompt: "Ves 100 m de vía libre y, con calzada seca, te detienes en 90 m a tu velocidad. Empieza a llover y la calzada se moja. ¿Qué haces para seguir cumpliendo el art. 19?"
+    options: [Mantengo la velocidad, "Reduzco la velocidad, porque la calzada mojada alarga la distancia de frenado", Aumento la velocidad para salir antes de la lluvia, Solo enciendo los limpiaparabrisas]
+    answer: 1
+    explain: "La calzada mojada alarga la distancia de frenado; para poder parar dentro de lo que ves libre hay que ir más despacio."
+    cites: ["rvv:19", "cbr-examenplan"]
+
+  - id: adaptar-estrecho
+    type: mc
+    prompt: "Entras en un tramo estrecho de una vía donde el máximo es 80 km/h y ves venir otro auto de frente. ¿Qué haces con la velocidad?"
+    options: ["Voy más despacio, tanto más cuanto más estrecha es la calzada", "Mantengo 80, porque es el máximo permitido", "Acelero para cruzarme antes en la parte ancha", "Freno hasta parar siempre"]
+    answer: 0
+    explain: "En un tramo estrecho se circula más despacio, y cuánto depende sobre todo del ancho; al cruzarte con otro vehículo adaptas la velocidad. El máximo es un tope, no una meta, y detenerse siempre no es lo que pide el procedimiento."
+    cites: ["cbr-rijprocedure:3.2"]
+    exam: false

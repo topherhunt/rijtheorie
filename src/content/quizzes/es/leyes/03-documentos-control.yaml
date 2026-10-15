@@ -1,60 +1,66 @@
 questions:
-  - id: documentos-control-107
+  - id: documentos-control-ilegible
     type: yesno
-    prompt: ¿Debes tener un permiso válido y legible de la categoría correspondiente para conducir un auto?
-    answer: true
-    explain: El permiso debe ser de la categoría, no haber perdido su validez y ser legible.
+    prompt: Tu permiso de conducir sigue vigente, pero está tan desgastado que los datos ya no se pueden leer. ¿Cumples con el artículo 107 de la WVW?
+    answer: false
+    explain: El artículo 107 exige que el permiso no haya perdido su validez y sea legible. Vigente pero ilegible no cumple.
     cites: ["wvw:107"]
 
   - id: documentos-control-parar
     type: mc
     prompt: Un policía te hace señal de parar y te pide los documentos. ¿Qué debes hacer?
-    options: [Seguir hasta un lugar más cómodo y mostrarlos allí, Parar y mostrar los documentos a la primera orden, Mostrarlos al día siguiente en la comisaría, Solo mostrarlos si cometiste una infracción]
+    options: ["Seguir hasta un lugar más cómodo y mostrarlos allí", "Parar y mostrar los documentos a la primera orden", "Mostrarlos al día siguiente en la comisaría", "Solo mostrarlos si cometiste una infracción"]
     answer: 1
     explain: A la primera orden de un funcionario autorizado debes parar y mostrar correctamente los documentos pedidos.
     cites: ["wvw:160.1"]
 
-  - id: documentos-control-multi
-    type: multi
-    prompt: ¿Cuáles de estos documentos debes mostrar a la primera orden de un funcionario autorizado?
-    options: [Tu permiso de conducir, El kentekenbewijs del auto, Tu pasaporte de viaje de la infancia, La begeleiderspas si conduces acompañado]
-    answer: [0, 1, 3]
-    explain: La ley nombra el kentekenbewijs, el permiso de conducir y la begeleiderspas si conduces acompañado.
+  - id: documentos-control-auto-amigo
+    type: mc
+    prompt: Conduces el auto de un amigo y la policía te manda parar y pide los documentos. ¿Qué debes mostrar?
+    options: ["Tu permiso de conducir y el kentekenbewijs (kentekencard) de ese auto", "Solo tu permiso, porque el auto no es tuyo", "Solo el kentekenbewijs, que lo lleva el dueño", "Tu DNI y el seguro"]
+    answer: 0
+    explain: A la primera orden el conductor debe mostrar su permiso y el kentekenbewijs del vehículo que conduce (y el del remolque si lo arrastra), sea o no suyo. Para la kentekencard, la obligación rige desde que se entrega y en todo caso desde 14 días después de la tenaamstelling.
+    cites: ["wvw:160.1", "kr:22"]
+
+  - id: documentos-control-remolque
+    type: yesno
+    prompt: Conduces tu auto con un remolque que tiene su propio kentekenbewijs y la policía te manda parar. ¿Debes mostrar también el kentekenbewijs del remolque?
+    answer: true
+    explain: El artículo 160 lid 1 pide también las partes del kentekenbewijs del remolque cuando el vehículo lo arrastra.
     cites: ["wvw:160.1"]
 
-  - id: documentos-control-soplar
+  - id: documentos-control-begeleider-soplar
     type: yesno
-    prompt: La policía te pide hacer la prueba de aliento previa. ¿Estás obligado a colaborar?
+    prompt: Eres el begeleider de tu hijo de 17 años, que conduce, y la policía os para y te pide hacer la prueba de aliento previa a ti. ¿Estás obligado a colaborar, aunque no conduces?
     answer: true
-    explain: Debes colaborar con la prueba de aliento previa y seguir las instrucciones.
+    explain: El artículo 160 lid 5 obliga a colaborar con esas pruebas al conductor, a quien se dispone a conducir y al begeleider.
     cites: ["wvw:160.5"]
 
-  - id: documentos-control-ordenes
+  - id: documentos-control-ordenes-multiples
     type: yesno
-    prompt: Un agente de policía te da una indicación sobre el tráfico en la vía. ¿Debes seguirla?
+    prompt: Un agente te sorprende cometiendo una infracción y te ordena apartar el auto de la calzada para no estorbar. ¿Debes obedecer la orden?
     answer: true
-    explain: Los usuarios de la vía deben seguir las indicaciones sobre el tráfico de la policía y otros funcionarios autorizados.
-    cites: ["wvw:12.1"]
+    explain: El artículo 160 lid 6 obliga al conductor a seguir las órdenes que el funcionario da, al encontrarlo en infracción, para proteger los intereses del tráfico.
+    cites: ["wvw:160.6"]
 
-  - id: documentos-control-185
-    type: number
-    prompt: Vives en los Países Bajos con un permiso de un país fuera de la UE, el EEE y Suiza. ¿Hasta cuántos días después de instalarte puedes conducir con él?
-    answer: 185
-    unit: días
-    explain: Puedes conducir hasta 185 días después de instalarte en los Países Bajos.
-    cites: ["wvw:108.1.g"]
-
-  - id: documentos-control-ue
-    type: number
-    prompt: Te acabas de instalar aquí con un permiso de categoría B de la UE emitido hace 5 años. Puedes usarlo, como máximo, hasta que pasen X años desde que fue emitido. ¿Cuántos años?
-    answer: 15
-    unit: años
-    explain: Para los permisos de las categorías AM, A1, A2, A, B, B1 y BE el límite es de 15 años desde su emisión.
-    cites: ["wvw:108.1.h"]
-
-  - id: documentos-control-extranjero
+  - id: documentos-control-185-aplicado
     type: yesno
-    prompt: ¿Puedes conducir en los Países Bajos con tu permiso extranjero más de 185 días después de instalarte, si es de fuera de la UE, el EEE y Suiza?
-    answer: false
-    explain: Pasado ese plazo ya no basta ese permiso.
+    prompt: Te instalaste en los Países Bajos hace 120 días con un permiso válido de Colombia para la categoría B. ¿Puedes conducir aquí con ese permiso?
+    answer: true
+    explain: Con un permiso de fuera de la UE, el EEE y Suiza puedes conducir hasta 185 días después de instalarte; con 120 días todavía estás dentro del plazo.
     cites: ["wvw:108.1.g"]
+
+  - id: documentos-control-185-pasado
+    type: yesno
+    prompt: Vives en los Países Bajos desde hace 200 días con un permiso válido de Colombia para la categoría B. ¿Puedes seguir conduciendo aquí solo con ese permiso?
+    answer: false
+    explain: La excepción del artículo 108 dura mientras no hayan pasado 185 días desde que te instalaste. Pasado ese plazo ese permiso ya no basta.
+    cites: ["wvw:108.1.g", "wvw:107"]
+
+  - id: documentos-control-ue-restante
+    type: number
+    prompt: Te instalas hoy en los Países Bajos con un permiso B válido de otro país de la UE, emitido hace 10 años. ¿Cuántos años más puedes seguir usándolo (como máximo 15 desde su emisión)?
+    answer: 5
+    unit: años
+    explain: Un permiso B de la UE puede usarse hasta que hayan pasado 15 años desde su emisión; si ya pasaron 10, quedan 5.
+    cites: ["wvw:108.1.h"]

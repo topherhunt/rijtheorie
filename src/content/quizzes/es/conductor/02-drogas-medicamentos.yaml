@@ -13,11 +13,11 @@ questions:
     explain: El artículo 8 lid 1 habla de conducir un vehículo, sin limitarlo a vehículos de motor.
     cites: ["wvw:8.1"]
 
-  - id: drogas-limites
+  - id: drogas-limite-sin-sentirse-mal
     type: yesno
-    prompt: ¿Fija la ley límites de concentración en sangre para ciertas drogas?
+    prompt: Consumiste una droga listada en la ley. Te sientes perfectamente y conduces bien, pero un análisis de sangre supera el límite fijado para esa sustancia. ¿Es una infracción?
     answer: true
-    explain: El artículo 8 lid 5 enumera sustancias con sus límites en sangre.
+    explain: El artículo 8 lid 5 prohíbe conducir con una concentración en sangre superior al límite de la sustancia listada. No depende de cómo te sientas.
     cites: ["wvw:8.5"]
 
   - id: drogas-acompanar
@@ -26,6 +26,13 @@ questions:
     answer: true
     explain: El artículo 8 lid 1 prohíbe conducir y también acompañar en ese estado.
     cites: ["wvw:8.1"]
+
+  - id: drogas-acompanante-limite
+    type: yesno
+    prompt: Eres el acompañante (begeleider) de un conductor en práctica. Un análisis de sangre muestra una droga listada por encima de su límite, aunque tú no conduces. ¿Es una infracción?
+    answer: true
+    explain: El artículo 8 lid 5 prohíbe expresamente actuar como begeleider por encima del límite.
+    cites: ["wvw:8.5"]
 
   - id: drogas-prestar
     type: yesno
@@ -41,17 +48,9 @@ questions:
     explain: Debes colaborar con las pruebas que ordene la policía.
     cites: ["wvw:160.5"]
 
-  - id: drogas-rijverbod
+  - id: drogas-rijverbod-aanstalten
     type: yesno
-    prompt: ¿Puede la policía prohibirte conducir durante unas horas si no estás en condiciones?
+    prompt: Un agente ve que estás claramente bajo el efecto de una droga y estás a punto de subir a tu auto para arrancar, todavía sin haber conducido. ¿Puede imponerte ya un rijverbod?
     answer: true
-    explain: Puede imponer un rijverbod de hasta 24 horas.
+    explain: El artículo 162 aplica el rijverbod también a quien "aanstalten maakt" (se dispone) a conducir. No hace falta esperar a que arranques.
     cites: ["wvw:162.1"]
-
-  - id: drogas-alcohol-tambien
-    type: mc
-    prompt: ¿Qué sustancias cubre el artículo 8 lid 1?
-    options: ["Solo el alcohol", "Solo las drogas ilegales", "Cualquier sustancia que pueda reducir tu capacidad para conducir", "Solo los medicamentos sin receta"]
-    answer: 2
-    explain: La regla habla de una sustancia que puede reducir la capacidad, sin limitarse a una clase.
-    cites: ["wvw:8.1"]

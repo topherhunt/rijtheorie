@@ -45,7 +45,7 @@ questions:
   - id: detenido-luces
     type: mc
     prompt: De noche, tu auto está parado en la vluchtstrook de una autosnelweg. ¿Qué luces debe llevar?
-    options: [Ninguna, mejor apagarlo todo, Luces de posición (stadslicht) y luz trasera, Solo luces de carretera, Solo antiniebla traseras]
+    options: ["Ninguna, mejor apagarlo todo", Luces de posición (stadslicht) y luz trasera, Solo luces de carretera, Solo antiniebla traseras]
     answer: 1
     explain: Un vehículo de más de dos ruedas parado en la vluchtstrook lleva stadslicht y luz trasera de noche.
     cites: ["rvv:38"]
@@ -57,24 +57,31 @@ questions:
     explain: El artículo 38 las exige de noche y de día cuando la visibilidad está seriamente reducida.
     cites: ["rvv:38"]
 
-  - id: detenido-poblado
+  - id: detenido-dos-ruedas
     type: yesno
-    prompt: El artículo 38 regula las luces de un vehículo parado fuera de la zona urbana. ¿Se aplica a un vehículo de motor de dos ruedas?
+    prompt: De noche una motocicleta (dos ruedas) está parada sobre la calzada fuera de la zona urbana. ¿Le exige el artículo 38 llevar stadslicht y luz trasera?
     answer: false
-    explain: Se aplica a vehículos de motor de más de dos ruedas parados fuera de la bebouwde kom.
+    explain: El artículo 38 habla de vehículos de motor de más de dos ruedas, y la motocicleta tiene dos.
     cites: ["rvv:38"]
 
-  - id: bici-luces
-    type: multi
-    prompt: Una bicicleta circula de noche. ¿Qué luces debe llevar?
-    options: [Luz blanca o amarilla delante, Luz roja detrás, Luz verde en el manillar, Luz azul detrás]
-    answer: [0, 1]
-    explain: La ley pide luz delantera blanca o amarilla y luz trasera roja.
+  - id: detenido-dia-despejado
+    type: yesno
+    prompt: Es de día, hace sol y se ve perfectamente. Paras tu auto en una parkeerhaven junto a una autosnelweg. ¿El artículo 38 te exige llevar stadslicht y luz trasera?
+    answer: false
+    explain: El artículo 38 las exige de noche, y de día solo si la visibilidad está seriamente reducida.
+    cites: ["rvv:38"]
+
+  - id: bici-luz-pecho-espalda
+    type: yesno
+    prompt: De noche vas en bicicleta sin luces en la bici, pero llevas una luz blanca en el pecho y una luz roja en la espalda. ¿Cumples con la ley?
+    answer: true
+    explain: El artículo 35 permite sustituir la luz delantera por una luz blanca o amarilla en el pecho, y la trasera por una luz roja en la espalda.
     cites: ["rvv:35"]
 
-  - id: remolque-luces
+  - id: remolque-luces-niebla-dia
     type: yesno
-    prompt: De noche, un remolque enganchado debe llevar luz trasera y luz de la matrícula.
+    prompt: Es de día pero hay niebla densa. Circulas con tu auto y un remolque enganchado. ¿Debe llevar el remolque luz trasera y luz de la matrícula encendidas?
     answer: true
-    explain: El artículo 33 exige luz trasera, luz de la matrícula y las luces de posición prescritas.
+    explain: El artículo 33 pide esas luces a los remolques enganchados de noche y de día cuando la visibilidad está seriamente reducida.
     cites: ["rvv:33"]
+

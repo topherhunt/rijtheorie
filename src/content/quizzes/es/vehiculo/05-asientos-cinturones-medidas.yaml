@@ -1,35 +1,4 @@
 questions:
-  - id: asientos-cinturones-medidas-largo
-    type: number
-    prompt: ¿Cuál es el largo máximo, en metros, de un auto?
-    answer: 12
-    unit: m
-    explain: Un auto puede medir como máximo 12,00 m de largo.
-    cites: ["rv:5.2.6"]
-
-  - id: asientos-cinturones-medidas-ancho
-    type: number
-    prompt: ¿Cuál es el ancho máximo, en metros, de un auto?
-    answer: 2.55
-    unit: m
-    explain: El ancho máximo es 2,55 m.
-    cites: ["rv:5.2.6"]
-
-  - id: asientos-cinturones-medidas-alto
-    type: number
-    prompt: ¿Cuál es la altura máxima, en metros, de un auto?
-    answer: 4
-    unit: m
-    explain: La altura máxima es 4,00 m.
-    cites: ["rv:5.2.6"]
-
-  - id: asientos-cinturones-medidas-estado
-    type: yesno
-    prompt: ¿Está prohibido conducir un vehículo que no esté en buen estado de construcción y mantenimiento?
-    answer: true
-    explain: Es una prohibición general, que incluye también dejar que otro lo conduzca.
-    cites: ["rv:5.1.1"]
-
   - id: asientos-cinturones-medidas-todos
     type: yesno
     prompt: Un auto puesto en uso en 2015 tiene cinturón solo en los asientos delanteros. ¿Cumple?
@@ -58,17 +27,45 @@ questions:
     explain: La barra debe estar firmemente fijada y sin grietas.
     cites: ["rv:5.2.66"]
 
-  - id: asientos-cinturones-medidas-masa
+  - id: asientos-cinturones-medidas-pasajeros-cinturones
+    type: yesno
+    prompt: Los asientos traseros de tu auto tienen tres cinturones. Quieres llevar cuatro pasajeros atrás, apretados. ¿Está permitido?
+    answer: false
+    explain: Cuando los asientos de pasajeros tienen cinturón, no puedes llevar en ellos más pasajeros que cinturones.
+    cites: ["rvv:59"]
+
+  - id: asientos-cinturones-medidas-dimensiones-cual
     type: mc
-    prompt: ¿Dónde se ven las masas máximas permitidas del auto?
-    options: [En el kentekenbewijs o el registro, En el manual de la radio, En la factura del taller, En la placa de la calle]
+    prompt: ¿Cuál de estas combinaciones de largo, ancho y alto cumple las dimensiones máximas de un auto?
+    options: ["11,5 m, 2,50 m y 3,90 m", "12,5 m, 2,50 m y 3,90 m", "11,5 m, 2,60 m y 3,90 m", "11,5 m, 2,50 m y 4,20 m"]
     answer: 0
-    explain: La masa total y las cargas por eje no pueden superar lo que figura en el kentekenbewijs o registro.
+    explain: Un auto puede medir como máximo 12,00 m de largo, 2,55 m de ancho y 4,00 m de alto. Las otras tres pasan en una medida (largo, ancho o alto), y basta una para no cumplir.
+    cites: ["rv:5.2.6"]
+
+  - id: asientos-cinturones-medidas-conjunto-ancho
+    type: yesno
+    prompt: Tu auto mide 1,85 m de ancho. Llevas unas tablas en el techo que sobresalen 0,20 m por cada lado. ¿Está permitido?
+    answer: true
+    explain: La carga de un auto puede sobresalir hasta 0,20 m por cada lado, y el ancho total (2,25 m) está lejos del máximo de 2,55 m.
+    cites: ["rv:5.18.14", "rv:5.2.6"]
+
+  - id: asientos-cinturones-medidas-masa-superada
+    type: yesno
+    prompt: Cargas el auto con cuatro personas y mucho equipaje, y la masa total supera la máxima que figura en la kentekencard. ¿Puedes circular así?
+    answer: false
+    explain: La masa total y la suma de las cargas por eje no pueden superar los máximos que figuran en el registro, la kentekencard o el kentekenbewijs.
     cites: ["rv:5.2.7"]
 
-  - id: asientos-cinturones-medidas-escape
+  - id: asientos-cinturones-medidas-escape-agujero
     type: yesno
-    prompt: ¿Debe ser hermético el sistema de escape?
-    answer: true
-    explain: El escape debe ser hermético a los gases, estar fijado y cumplir los límites de ruido.
+    prompt: El escape de tu auto tiene un agujero por el que salen gases, pero el ruido está dentro del límite. ¿Cumple?
+    answer: false
+    explain: El escape debe ser hermético a los gases en toda su longitud (salvo los agujeros de drenaje). Cumplir con el ruido no compensa una fuga.
     cites: ["rv:5.2.11"]
+
+  - id: asientos-cinturones-medidas-conducir-defecto
+    type: yesno
+    prompt: En tu auto de 2015 el cierre del cinturón de uno de los asientos traseros no engancha. Hoy solo llevas gente delante. ¿Puedes conducir ese auto?
+    answer: false
+    explain: Está prohibido conducir un vehículo que no cumple los requisitos, y un cinturón con el cierre defectuoso no los cumple. Que hoy no lo uses no cambia que el auto no cumple.
+    cites: ["rv:5.1.1", "rv:5.2.47"]

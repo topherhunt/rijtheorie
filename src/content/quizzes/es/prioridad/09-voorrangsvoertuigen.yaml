@@ -11,18 +11,6 @@ questions:
     explain: El art. 29 nombra a la policía, los bomberos, los servicios de atención médica urgente y otros servicios de ayuda designados.
     cites: ["rvv:29"]
 
-  - id: voorrangsvoertuigen-senales
-    type: mc
-    prompt: ¿Qué señales lleva un vehículo prioritario?
-    options:
-      - Luz azul y bocina de dos tonos
-      - Luz amarilla y bocina simple
-      - Luz roja fija
-      - Luces antiniebla
-    answer: 0
-    explain: El art. 29 habla de luz azul (giratoria, de destellos o intermitente) y bocina de dos tonos.
-    cites: ["rvv:29"]
-
   - id: voorrangsvoertuigen-dejar
     type: yesno
     prompt: Se acerca una ambulancia con luz azul y sirena. ¿Debes dejarla pasar?
@@ -72,29 +60,14 @@ questions:
     explain: La ley dice weggebruikers, es decir, todos los usuarios de la vía, incluidos ciclistas y peatones.
     cites: ["rvv:50"]
 
-  - id: voorrangsvoertuigen-desviarse
-    type: yesno
-    prompt: El conductor de un vehículo prioritario puede desviarse de las reglas de tráfico en la medida en que su tarea lo exija.
-    answer: true
-    explain: Es lo que dice el art. 91.
-    cites: ["rvv:91"]
-
-  - id: voorrangsvoertuigen-tu-regla
-    type: yesno
-    prompt: Como un vehículo prioritario puede desviarse de las reglas, tú también puedes saltarte un semáforo en rojo para hacerle sitio.
-    answer: false
-    explain: El art. 91 vale para el conductor del vehículo prioritario, no para ti. Debes buscar una forma segura y legal de dejarlo pasar.
-    cites: ["rvv:91", "rvv:50"]
-    exam: false
-
-  - id: voorrangsvoertuigen-definicion
+  - id: voorrangsvoertuigen-semaforo-rojo
     type: mc
-    prompt: ¿Cuándo un vehículo es un voorrangsvoertuig según la ley?
+    prompt: Estás parado ante un semáforo en rojo. Una ambulancia con luz azul y sirena se acerca por detrás y el cruce está libre. ¿Qué haces?
     options:
-      - Cuando lleva las señales luminosas y sonoras del art. 29
-      - Cuando es de color blanco o rojo
-      - Cuando es más grande que un auto
-      - Cuando va a más de 100 km/h
+      - Sigues parado ante el rojo y le facilitas el paso solo si puedes hacerlo de forma legal y segura
+      - Cruzas en rojo con cuidado para abrirle camino
+      - Aceleras para salir de su camino cruzando el cruce
+      - Das marcha atrás para hacerle espacio
     answer: 0
-    explain: La definición del art. 1 se basa en las señales del art. 29.
-    cites: ["rvv:1", "rvv:29"]
+    explain: El art. 50 te obliga a dejarla pasar, pero no describe cómo hacerlo; el art. 91 da libertad al conductor de la ambulancia, no a ti. El semáforo en rojo sigue significando stop para ti (art. 68.1).
+    cites: ["rvv:50", "rvv:91", "rvv:68.1"]

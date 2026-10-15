@@ -8,23 +8,6 @@ questions:
     explain: K2 es el preaviso de salida en una autosnelweg.
     cites: ["rvv:bijlage1.K2"]
 
-  - id: kl-k3-servicio
-    type: mc
-    prompt: ¿Qué indica esta señal en una autosnelweg?
-    sign: K3
-    options: ["Salida hacia un área de servicio", "Salida hacia una ciudad", "Parada de emergencia", "Peaje"]
-    answer: 0
-    explain: K3 es el indicador de salida hacia un área de servicio.
-    cites: ["rvv:bijlage1.K3"]
-
-  - id: kl-k4-portico
-    type: mc
-    prompt: Sobre los carriles de una autosnelweg ves esta señal. ¿Qué muestra?
-    sign: K4
-    options: ["Destinos por carril y la salida", "Velocidad máxima de cada carril", "Que el carril está cerrado", "Un peaje"]
-    answer: 0
-    explain: K4 es un cartel alto con un panel por carril para la dirección que continúa.
-    cites: ["rvv:bijlage1.K4"]
 
   - id: kl-k9-omleiding
     type: mc
@@ -35,32 +18,6 @@ questions:
     explain: K9 es "Omleiding".
     cites: ["rvv:bijlage1.K9"]
 
-  - id: kl-k14-peligrosas
-    type: mc
-    prompt: ¿Qué indica esta señal?
-    sign: K14
-    options: ["Ruta para transporte de ciertas mercancías peligrosas", "Cerrado para mercancías peligrosas", "Desvío", "Zona ambiental"]
-    answer: 0
-    explain: K14 es una ruta para ciertos transportes de mercancías peligrosas. La prohibición para esas mercancías es C22.
-    cites: ["rvv:bijlage1.K14"]
-
-  - id: kl-l1-altura
-    type: mc
-    prompt: ¿Qué indica esta señal?
-    sign: L1
-    options: ["La altura libre de un paso inferior", "Prohibido para vehículos altos", "El ancho de la vía", "Peso máximo"]
-    answer: 0
-    explain: L1 es "Hoogte onderdoorgang". Es informativa. La prohibición para vehículos altos es C19.
-    cites: ["rvv:bijlage1.L1"]
-
-  - id: kl-l3-parada
-    type: mc
-    prompt: ¿Qué indica esta señal?
-    sign: L3
-    options: ["Parada de autobús o tranvía", "Carril bus", "Parada de taxis", "Cruce de tranvía"]
-    answer: 0
-    explain: L3 es "Bushalte / tramhalte".
-    cites: ["rvv:bijlage1.L3"]
 
   - id: kl-l5-fin-carril
     type: mc
@@ -71,6 +28,7 @@ questions:
     explain: L5 es "Einde rijstrook".
     cites: ["rvv:bijlage1.L5"]
 
+
   - id: kl-l8-sinsalida
     type: mc
     prompt: ¿Qué indica esta señal?
@@ -80,31 +38,6 @@ questions:
     explain: L8 es "Doodlopende weg".
     cites: ["rvv:bijlage1.L8"]
 
-  - id: kl-l11-carriles
-    type: yesno
-    prompt: Un panel L11 está bajo una señal sobre un carril. ¿La señal vale solo para los carriles indicados?
-    sign: L11
-    answer: true
-    explain: L11 indica que el verkeersbord solo vale para los carriles señalados.
-    cites: ["rvv:bijlage1.L11", "rvv:65.1"]
-
-  - id: kl-l13-tunel
-    type: mc
-    prompt: ¿Qué indica esta señal?
-    sign: L13
-    options: ["Túnel", "Paso inferior", "Puente", "Refugio de emergencia"]
-    answer: 0
-    explain: L13 es "Tunnel".
-    cites: ["rvv:bijlage1.L13"]
-
-  - id: kl-l14-refugio
-    type: mc
-    prompt: ¿Qué indica esta señal?
-    sign: L14
-    options: ["Refugio de emergencia (vluchthaven)", "Teléfono de emergencia", "Salida de emergencia", "Apartadero"]
-    answer: 0
-    explain: "L14 es \"Vluchthaven\": ensanche para detenerte en caso de avería."
-    cites: ["rvv:bijlage1.L14"]
 
   - id: kl-l16-l17
     type: mc
@@ -115,11 +48,53 @@ questions:
     explain: L17 es el extintor. L16 es el teléfono de emergencia y L18 son ambos.
     cites: ["rvv:bijlage1.L17"]
 
-  - id: kl-l20-apartadero
+
+  - id: kl-l13-parar
+    type: yesno
+    prompt: Estás dentro de un túnel (L13) y quieres detenerte un momento a mirar el mapa, sin que el tráfico te obligue. ¿Puedes?
+    sign: L13
+    answer: false
+    explain: No puedes detenerte (stilstaan) en un túnel (art. 23.1.d), ni siquiera un momento.
+    cites: ["rvv:23.1.d", "rvv:bijlage1.L13"]
+
+  - id: kl-l3-pasajero
     type: mc
-    prompt: ¿Qué indica esta señal?
-    sign: L20
-    options: ["Apartadero a la derecha de la vía", "Apartadero a la izquierda", "Estacionamiento", "Refugio de emergencia"]
+    prompt: Junto a una parada de bus (L3, con marca de bloques) necesitas detener tu auto. ¿Qué es lícito?
+    sign: L3
+    options: ["Detenerme el tiempo inmediato para que baje un pasajero", "Detenerme 5 minutos a esperar a alguien", "Estacionar si pongo las luces de emergencia"]
     answer: 0
-    explain: L20 es un uitwijkplaats a la derecha; L21 a la izquierda.
-    cites: ["rvv:bijlage1.L20", "rvv:bijlage1.L21"]
+    explain: A la altura de la marca de bloques no puedes detenerte, salvo para el in- o uitstappen inmediato de pasajeros (art. 23.1.e y 23.2). Esperar a alguien o estacionar no entra en esa excepción, y las luces de emergencia no cambian nada.
+    cites: ["rvv:23.1.e", "rvv:23.2", "rvv:bijlage1.L3"]
+
+  - id: kl-l3-espera
+    type: yesno
+    prompt: Llegas a una parada de bus (L3) con marca de bloques en la calzada. Un amigo sale de una tienda en un minuto y quieres esperarlo junto a la marca, con el motor en marcha. ¿Puedes?
+    sign: L3
+    answer: false
+    explain: Esperar a alguien es detenerse (stilstaan) y no es el in- o uitstappen inmediato de pasajeros, así que no está dentro de la excepción (art. 23.1.e y 23.2).
+    cites: ["rvv:23.1.e", "rvv:23.2", "rvv:bijlage1.L3"]
+
+  - id: kl-l14-descansar
+    type: yesno
+    prompt: Ves L14 (vluchthaven) en una autosnelweg. Estás cansado pero tu auto funciona bien. ¿Puedes parar allí a descansar?
+    sign: L14
+    answer: false
+    explain: Salvo en emergencias no puedes usar la vluchtstrook, la vluchthaven ni la berma (art. 43.3). Estar cansado no es una emergencia del vehículo.
+    cites: ["rvv:43.3", "rvv:bijlage1.L14"]
+
+  - id: kl-l14-averia
+    type: yesno
+    prompt: En una autosnelweg tu auto se avería y se para. A tu derecha hay una vluchthaven (L14). ¿Puedes usarla?
+    sign: L14
+    answer: true
+    explain: La prohibición de usar la vluchtstrook, la vluchthaven y la berma tiene una excepción para los casos de emergencia (art. 43.3), y una avería lo es.
+    cites: ["rvv:43.3", "rvv:bijlage1.L14"]
+
+  - id: kl-l12-otro-carril
+    type: mc
+    prompt: Una vía tiene dos carriles. Sobre el carril derecho hay una señal de velocidad máxima de 70 km/h y, bajo ella, un panel L12 que indica solo ese carril. Tú circulas por el carril izquierdo. ¿Qué límite te afecta por esa señal?
+    sign: L12
+    options: ["Ninguno de esa señal: vale solo para el carril derecho", "70 km/h, porque la señal está en tu vía", "70 km/h, pero solo si cambias al carril derecho"]
+    answer: 0
+    explain: Una señal puede limitarse a uno o varios carriles (art. 65.1) y L12 indica que solo vale para el carril señalado. Por el carril izquierdo no te alcanza. Sigue valiendo, claro, el máximo general de la vía.
+    cites: ["rvv:65.1", "rvv:bijlage1.L12"]

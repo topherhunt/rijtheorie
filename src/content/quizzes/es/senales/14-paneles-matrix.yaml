@@ -15,6 +15,14 @@ questions:
     explain: Rige la velocidad más baja entre la señal y los máximos generales.
     cites: ["rvv:63b"]
 
+  - id: mx-f9-fin
+    type: yesno
+    prompt: Un panel electrónico mostraba una prohibición, y después ves esta señal. ¿Terminó esa prohibición?
+    sign: F9
+    answer: true
+    explain: F9 pone fin a todas las prohibiciones indicadas en un panel electrónico.
+    cites: ["rvv:bijlage1.F9"]
+
   - id: mx-cruz-roja
     type: mc
     prompt: Sobre tu carril aparece una cruz roja. ¿Qué haces?
@@ -31,31 +39,6 @@ questions:
     explain: La flecha blanca es el aviso previo de una cruz roja.
     cites: ["rvv:73"]
 
-  - id: mx-flecha-verde
-    type: yesno
-    prompt: Sobre el carril hay una flecha verde. ¿Puedes usarlo?
-    answer: true
-    explain: "Flecha verde: el carril puede usarse."
-    cites: ["rvv:73"]
-
-  - id: mx-f9
-    type: mc
-    prompt: ¿Qué indica esta señal?
-    sign: F9
-    options: ["Fin de todas las prohibiciones indicadas en un panel electrónico", "Fin de la autopista", "Fin de zona urbana", "Fin del carril de hora punta"]
-    answer: 0
-    explain: F9 pone fin a las prohibiciones del panel electrónico.
-    cites: ["rvv:bijlage1.F9"]
-
-  - id: mx-a3
-    type: mc
-    prompt: ¿Qué indica esta señal?
-    sign: A3
-    options: ["Velocidad máxima en un panel electrónico", "Velocidad mínima", "Velocidad recomendada", "Fin del límite"]
-    answer: 0
-    explain: A3 es la velocidad máxima en un elektronisch signaleringsbord.
-    cites: ["rvv:bijlage1.A3"]
-
   - id: mx-spitsstrook
     type: mc
     prompt: ¿Qué es un spitsstrook?
@@ -65,14 +48,22 @@ questions:
     explain: Es la vluchtstrook designada como carril por C23-01.
     cites: ["rvv:1", "rvv:bijlage1.C23-01"]
 
-  - id: mx-spits-cerrado
+  - id: mx-c23-02-desalojar
     type: mc
-    prompt: ¿Qué indica esta señal sobre el carril de hora punta?
-    sign: C23-03
-    options: ["Fin del carril de hora punta", "Carril de hora punta abierto", "Desalojar el carril", "Carril solo para camiones"]
+    prompt: Circulas por un spitsstrook abierto y el panel muestra esta señal. ¿Qué haces?
+    sign: C23-02
+    options: ["Paso a un carril normal de al lado, cruzando la línea continua si hace falta", "Sigo hasta el final del carril", "Me detengo en el carril", "Sigo si voy rápido"]
     answer: 0
-    explain: C23-03 es "Einde spitsstrook".
-    cites: ["rvv:bijlage1.C23-03"]
+    explain: C23-02 ordena desalojar el spitsstrook. Para salir de él puedes cruzar la línea continua. Detenerte en el carril sería peor, y seguir es ignorar la orden.
+    cites: ["rvv:bijlage1.C23-02", "rvv:76.2"]
+
+  - id: mx-c23-03-fin
+    type: yesno
+    prompt: Pasas la señal C23-03 y a tu derecha sigue la franja de asfalto. ¿Puedes seguir usándola para avanzar?
+    sign: C23-03
+    answer: false
+    explain: C23-03 es el fin del spitsstrook. La franja vuelve a ser vluchtstrook, que salvo en emergencias no puedes usar.
+    cites: ["rvv:bijlage1.C23-03", "rvv:43.3"]
 
   - id: mx-vluchtstrook
     type: yesno

@@ -1,12 +1,4 @@
 questions:
-  - id: sanciones-accidente-24h
-    type: number
-    prompt: ¿Por cuántas horas como máximo puede la policía imponerte un rijverbod si estás bajo la influencia de una sustancia?
-    answer: 24
-    unit: horas
-    explain: El rijverbod dura el tiempo que se espera que dure tu estado, como máximo 24 horas.
-    cites: ["wvw:162"]
-
   - id: sanciones-accidente-rijverbod
     type: yesno
     prompt: Tienes un rijverbod vigente. ¿Puedes conducir si ya te sientes mejor?
@@ -29,38 +21,6 @@ questions:
     explain: Con muertos, heridos o daños no puedes irte sin dar antes la oportunidad de verificar tu identidad. Y nunca puedes irte si dejas a un herido desamparado.
     cites: ["wvw:7"]
 
-  - id: sanciones-accidente-12h
-    type: number
-    prompt: Te fuiste de un accidente con daños sin dar tu identidad. ¿Dentro de cuántas horas desde el accidente debes avisar voluntariamente a la policía para no ser procesado por irte?
-    answer: 12
-    unit: horas
-    explain: Debes avisar voluntariamente a la policía dentro de 12 horas, con tu identidad y la del vehículo, antes de ser detenido o interrogado como sospechoso. No cubre dejar a un herido desamparado.
-    cites: ["wvw:184"]
-
-  - id: sanciones-accidente-50
-    type: number
-    prompt: Te detienen por pasar el límite de velocidad en un auto. ¿Con cuántos km/h de exceso (o más) pueden retirarte el permiso en el acto?
-    answer: 50
-    unit: km/h
-    explain: Con 50 km/h o más sobre el máximo (en un vehículo que no sea bromfiets) se retira el permiso. Para la bromfiets son 30 km/h.
-    cites: ["wvw:164.2.d"]
-
-  - id: sanciones-accidente-bromfiets
-    type: number
-    prompt: Un conductor de bromfiets pasa el límite de velocidad y lo detienen. ¿Con cuántos km/h de exceso (o más) le retiran el permiso?
-    answer: 30
-    unit: km/h
-    explain: Para la bromfiets el umbral es de 30 km/h o más.
-    cites: ["wvw:164.2.e"]
-
-  - id: sanciones-accidente-cbr
-    type: number
-    prompt: ¿En cuántas semanas como máximo decide el CBR si impone una medida educativa o un examen de aptitud?
-    answer: 4
-    unit: semanas
-    explain: El CBR decide lo antes posible y como máximo 4 semanas después de recibir el aviso.
-    cites: ["wvw:131"]
-
   - id: sanciones-accidente-ongeldig
     type: mc
     prompt: Si no cooperas con el CBR, ¿qué pasa con tu permiso?
@@ -69,35 +29,12 @@ questions:
     explain: El CBR declara el permiso inválido; entra en vigor el séptimo día tras la notificación.
     cites: ["wvw:132"]
 
-  - id: sanciones-accidente-rijontzegging
-    type: number
-    prompt: ¿Hasta cuántos años como máximo puede un juez imponerte una rijontzegging por, por ejemplo, conducir bajo influencia (caso normal, sin reincidencia)?
-    answer: 5
-    unit: años
-    explain: Para las infracciones graves del primer apartado la rijontzegging puede ser de hasta 5 años.
-    cites: ["wvw:179.1"]
-
-  - id: sanciones-accidente-2
-    type: number
-    prompt: ¿Hasta cuántos años puede ser la rijontzegging por una infracción como crear peligro en la vía (art. 5 WVW)?
-    answer: 2
-    unit: años
-    explain: Para el artículo 5 y otros, la rijontzegging puede ser de hasta 2 años.
-    cites: ["wvw:179.2"]
-
   - id: sanciones-accidente-123b
     type: yesno
     prompt: Te condenan otra vez por conducir bajo influencia dentro de 5 años de una condena anterior similar. ¿Puede tu permiso perder validez para todas las categorías?
     answer: true
     explain: En ese caso el permiso pierde validez y, para obtener uno nuevo, debes demostrar tu aptitud.
     cites: ["wvw:123b"]
-
-  - id: sanciones-accidente-peligro
-    type: yesno
-    prompt: ¿Está prohibido comportarte en el tráfico de manera que causes peligro u obstaculices el tráfico?
-    answer: true
-    explain: Así lo dice el artículo 5 de la WVW.
-    cites: ["wvw:5"]
 
   - id: sanciones-accidente-carreras
     type: yesno
@@ -120,3 +57,54 @@ questions:
     answer: 0
     explain: Con el 2.º strafpunt del beginnersrijbewijs, el OM te comunica al CBR.
     cites: ["rijksoverheid-beginners"]
+
+  - id: sanciones-velocidad-100-en-50
+    type: yesno
+    prompt: Conduces un auto a 100 km/h en un tramo limitado a 50 km/h y la policía te detiene en el momento. ¿Pueden retirarte el permiso en el acto?
+    answer: true
+    explain: Pasar el máximo por 50 km/h o más, siendo conductor de un vehículo de motor que no es bromfiets y con detención en el momento, permite el retiro inmediato del permiso.
+    cites: ["wvw:164.2"]
+
+  - id: sanciones-velocidad-80-en-50
+    type: yesno
+    prompt: Conduces un auto a 80 km/h en un tramo limitado a 50 km/h y la policía te detiene. ¿Pueden retirarte el permiso en el acto por esa velocidad?
+    answer: false
+    explain: Son 30 km/h de exceso. El umbral de 30 km/h es solo para la bromfiets; para un auto el retiro inmediato exige 50 km/h o más. Seguirá habiendo multa.
+    cites: ["wvw:164.2"]
+
+  - id: sanciones-velocidad-bromfiets-35
+    type: yesno
+    prompt: Conduces una bromfiets y la policía te detiene por pasar el máximo de velocidad en 35 km/h. ¿Pueden retirarte el permiso en el acto?
+    answer: true
+    explain: Para la bromfiets el umbral es de 30 km/h o más sobre el máximo, con detención en el momento. Con 35 lo superas.
+    cites: ["wvw:164.2"]
+
+  - id: sanciones-rijontzegging-reincidencia
+    type: mc
+    prompt: Hace 3 años terminó una rijontzegging que te impusieron por conducir bajo influencia. Ahora te condenan otra vez por conducir bajo influencia. ¿Cuánto puede durar como máximo la nueva rijontzegging?
+    options: ["2 años", "5 años", "10 años", "No puede haber otra"]
+    answer: 2
+    explain: Si cometes una de esas infracciones graves antes de que pasen 5 años desde el fin de la rijontzegging anterior, el máximo sube de 5 a 10 años.
+    cites: ["wvw:179.1", "wvw:179.4"]
+
+  - id: sanciones-rijontzegging-peligro-menos
+    type: yesno
+    prompt: Sin antecedentes, un juez te condena por conducir bajo influencia (art. 8) y a otra persona por poner en peligro el tráfico (art. 5). ¿Puede la rijontzegging del primero llegar a 5 años y la del segundo solo a 2?
+    answer: true
+    explain: El artículo 8 está entre las infracciones del primer apartado (hasta 5 años). El artículo 5 está en el segundo (hasta 2 años).
+    cites: ["wvw:179.1", "wvw:179.2"]
+
+  - id: sanciones-accidente-5h-danos
+    type: yesno
+    prompt: Te fuiste de un accidente con solo daños materiales sin dar tu identidad. A las 5 horas, y antes de que te detengan o interroguen, avisas voluntariamente a la policía y das tu identidad y la de tu auto. ¿Queda excluida la persecución penal por haberte ido?
+    answer: true
+    explain: El artículo 184 excluye la persecución si avisas voluntariamente dentro de las 12 horas siguientes y antes de ser detenido o interrogado como sospechoso.
+    cites: ["wvw:184"]
+
+  - id: sanciones-accidente-20h
+    type: yesno
+    prompt: Te fuiste de un accidente con daños sin dar tu identidad. A las 20 horas te presentas voluntariamente en la policía. ¿Te protege el artículo 184 contra la persecución por haberte ido?
+    answer: false
+    explain: El artículo 184 solo cubre el aviso voluntario dentro de las 12 horas siguientes al accidente. A las 20 horas ya no.
+    cites: ["wvw:184"]
+

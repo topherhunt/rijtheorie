@@ -8,39 +8,52 @@ questions:
     explain: L13 es "verkeerstunnel".
     cites: ["rvv:bijlage1.L13"]
 
-  - id: tunel-senal-l14
-    type: mc
-    prompt: ¿Qué indica esta señal?
+  - id: tunel-vluchthaven-sin-emergencia
+    type: yesno
+    prompt: Circulas por un túnel que forma parte de una autosnelweg y ves la señal L14. No hay ninguna emergencia, pero quieres parar a mirar el mapa. ¿Puedes usar esa vluchthaven?
     sign: L14
-    options: [Una vluchthaven, Un teléfono de emergencia, Un extintor, Un lugar de estacionamiento]
+    answer: false
+    explain: L14 marca una vluchthaven, y en una autosnelweg (o autoweg) la vluchthaven solo se puede usar en una emergencia. Mirar el mapa no lo es.
+    cites: ["rvv:43.3", "rvv:bijlage1.L14"]
+
+  - id: tunel-l15-vs-l14
+    type: mc
+    prompt: Dentro de un túnel ves la señal L15 en lugar de L14. ¿Qué tiene de más esa vluchthaven?
+    sign: L15
+    options:
+      - Un teléfono de emergencia y un extintor
+      - Solo un teléfono de emergencia
+      - Una salida de emergencia hacia el exterior
+      - Un puesto con personal de socorro
     answer: 0
-    explain: L14 es "vluchthaven", un lugar para detenerse en emergencias.
-    cites: ["rvv:bijlage1.L14"]
+    explain: L14 es una vluchthaven a secas. L15 es una vluchthaven provista de teléfono de emergencia y extintor.
+    cites: ["rvv:bijlage1.L14", "rvv:bijlage1.L15"]
 
-  - id: tunel-senal-l18
+  - id: tunel-l19-uso
     type: mc
-    prompt: ¿Qué indica esta señal?
-    sign: L18
-    options: [Solo un teléfono de emergencia, Solo un extintor, Teléfono de emergencia y extintor, La salida más cercana]
-    answer: 2
-    explain: L18 es "noodtelefoon en brandblusapparaat".
-    cites: ["rvv:bijlage1.L18"]
-
-  - id: tunel-senal-l19
-    type: mc
-    prompt: ¿Qué indica esta señal?
+    prompt: Tu auto se ha averiado en un túnel y vas a pie por la pared. Ves esta señal. ¿Qué te indica?
     sign: L19
-    options: [La salida más cercana y su distancia, Una vluchthaven, El fin del túnel, Un teléfono de emergencia]
+    options:
+      - La salida más cercana, o las dos más cercanas, en la dirección y a la distancia marcadas
+      - El límite de velocidad hasta el final del túnel
+      - La distancia hasta el siguiente teléfono de emergencia
+      - La distancia hasta el fin del túnel
     answer: 0
-    explain: L19 indica la salida (o las dos salidas) más cercana(s) en la dirección y a la distancia que muestra el cartel.
+    explain: L19 indica la salida o las dos salidas más cercanas, en la dirección y a la distancia del cartel. Te dice hacia dónde caminar.
     cites: ["rvv:bijlage1.L19"]
 
-  - id: tunel-parar
-    type: yesno
-    prompt: ¿Está prohibido por la ley detenerte (stilstaan) en un túnel?
-    answer: true
-    explain: Detenerse en un túnel está prohibido en general.
-    cites: ["rvv:23.1"]
+  - id: tunel-l16-llamar
+    type: mc
+    prompt: Después de una avería en un túnel caminas por la pared y ves esta señal. ¿Qué haces?
+    sign: L16
+    options:
+      - Llamas al wegverkeersleider desde el teléfono de emergencia
+      - Llamas a la Wegenwacht desde el teléfono de emergencia
+      - Usas el extintor
+      - Sales por la salida de emergencia sin llamar
+    answer: 0
+    explain: L16 marca un teléfono de emergencia. Rijkswaterstaat recomienda llamar desde él al wegverkeersleider.
+    cites: ["rvv:bijlage1.L16", "rws-tunnel"]
 
   - id: tunel-parar-pasajero
     type: yesno

@@ -1,52 +1,4 @@
 questions:
-  - id: carriles-rijstrook
-    type: mc
-    prompt: ¿Qué es una "rijstrook" para el RVV?
-    options: [Cualquier franja de la vía, Parte de la calzada marcada con líneas y suficientemente ancha para vehículos de motor de más de dos ruedas, Una franja solo para bicicletas, El borde de la berma]
-    answer: 1
-    explain: Rijstrook es la parte de la calzada marcada con líneas continuas o discontinuas, suficientemente ancha para vehículos de motor de más de dos ruedas.
-    cites: ["rvv:1"]
-
-  - id: carriles-invoeg
-    type: mc
-    prompt: ¿Qué separa una invoegstrook de la doorgaande rijbaan?
-    options: [Una valla, Una blokmarkering, Un semáforo, Nada, no están separadas]
-    answer: 1
-    explain: Los carriles de incorporación y de salida están separados de la doorgaande rijbaan por una blokmarkering.
-    cites: ["rvv:1"]
-
-  - id: carriles-doorgaande
-    type: yesno
-    prompt: ¿La doorgaande rijbaan incluye los carriles de incorporación y de salida?
-    answer: false
-    explain: La doorgaande rijbaan es la calzada sin las invoegstroken y uitrijstroken.
-    cites: ["rvv:1"]
-
-  - id: carriles-bus
-    type: multi
-    prompt: ¿Cuáles de estas afirmaciones sobre busbaan y busstrook son correctas?
-    options: [Ambas llevan la palabra BUS o LIJNBUS, La busbaan es una calzada y la busstrook es una parte de una calzada, La busstrook es una calzada separada, Ninguna lleva texto]
-    answer: [0, 1]
-    explain: Las dos se identifican con BUS o LIJNBUS. La busbaan es una calzada; la busstrook es una parte marcada de una calzada.
-    cites: ["rvv:1"]
-
-  - id: carriles-vlucht
-    type: mc
-    prompt: ¿Para qué sirve una vluchtstrook?
-    options: [Para adelantar, Para emergencias, Para estacionar siempre, Para ciclistas]
-    answer: 1
-    explain: Es una franja separada por línea continua y destinada a emergencias, salvo cuando está abierta como spitsstrook.
-    cites: ["rvv:1"]
-
-  - id: carriles-spits
-    type: mc
-    prompt: ¿Qué señal designa una vluchtstrook como spitsstrook?
-    sign: C23-01
-    options: [C23-01, G7, H1, C16]
-    answer: 0
-    explain: La spitsstrook es una vluchtstrook que la señal C23-01 designa como carril de circulación.
-    cites: ["rvv:1"]
-
   - id: carriles-estrechos
     type: yesno
     prompt: Una franja de 1 metro de ancho, marcada con líneas, ¿es siempre una rijstrook?
@@ -54,16 +6,63 @@ questions:
     explain: La rijstrook debe ser suficientemente ancha para vehículos de motor de más de dos ruedas.
     cites: ["rvv:1"]
 
-  - id: carriles-bus-bus
+  - id: carriles-invoeg-obligaciones
+    type: multi
+    prompt: Estás en un invoegstrook y vas a incorporarte a la doorgaande rijbaan con tu coche. ¿Qué debes hacer?
+    options: [Dejar pasar al tráfico de la doorgaande rijbaan, Dar la señal con el intermitente, Seguir adelante porque ya estás en la autopista y tienes preferencia, Detenerte siempre al final del carril]
+    answer: [0, 1]
+    explain: Pasar del invoegstrook a la doorgaande rijbaan es una maniobra especial; quien la hace deja pasar al resto del tráfico, y el art. 55 exige la señal con el intermitente. No tienes preferencia, y tampoco hace falta parar si hay hueco.
+    cites: ["rvv:54", "rvv:55"]
+
+  - id: carriles-uitrijstrook-intermitente
     type: yesno
-    prompt: Una calzada con la palabra BUS pintada, reservada para autobuses, ¿es una busbaan?
+    prompt: Circulas por la doorgaande rijbaan de una autosnelweg y vas a tomar la salida (uitrijstrook). ¿Debes dar la señal con el intermitente?
     answer: true
-    explain: Busbaan es la calzada con la palabra BUS o LIJNBUS.
+    explain: El art. 55 obliga a los conductores de vehículos de motor a dar la señal al subir a la doorgaande rijbaan y también al dejarla. Y pasar al uitrijstrook es una maniobra especial en la que cedes el paso (art. 54).
+    cites: ["rvv:55", "rvv:54"]
+
+  - id: carriles-busstrook
+    type: mc
+    prompt: En una calzada de dos carriles, el carril derecho está marcado con líneas y lleva pintada la palabra BUS; el izquierdo es normal. ¿Qué es ese carril derecho?
+    options: [Una busstrook, Una busbaan, Una spitsstrook, Una vluchtstrook]
+    answer: 0
+    explain: Una parte marcada de la calzada con la palabra BUS o LIJNBUS es una busstrook. La busbaan es una calzada entera con esas palabras; spitsstrook y vluchtstrook son franjas de autosnelwegen y autowegen.
     cites: ["rvv:1"]
 
-  - id: carriles-emergencia-abierta
+  - id: carriles-bus-luz-coche
     type: yesno
-    prompt: Una spitsstrook abierta con la señal C23-01, ¿sigue siendo solo para emergencias?
+    prompt: Sobre el carril de tu coche se ilumina la palabra BUS. ¿Puedes seguir en ese carril?
     answer: false
-    explain: La definición de vluchtstrook dice "excepto mientras está abierta como spitsstrook".
-    cites: ["rvv:1"]
+    explain: Con BUS iluminado el carril solo lo usan los conductores de un lijnbus y de un autobus. Un coche no está entre ellos.
+    cites: ["rvv:73"]
+
+  - id: carriles-lijnbus-luz
+    type: mc
+    prompt: Sobre un carril se ilumina la palabra LIJNBUS. Conduces un autobús turístico (autobus, no de línea). ¿Puedes usar ese carril?
+    options: ["Sí, un autobus siempre puede", "No, solo los conductores de un lijnbus", "Sí, si no hay ningún lijnbus a la vista", "Sí, a menos de 30 km/h"]
+    answer: 1
+    explain: Con LIJNBUS el carril solo lo usan los conductores de un lijnbus. Con BUS iluminado sí podría usarlo un autobus; la palabra LIJNBUS es más restrictiva.
+    cites: ["rvv:73"]
+
+  - id: carriles-vlucht-atajo
+    type: yesno
+    prompt: Estás en una autosnelweg con tráfico lento en tu carril. A tu derecha hay una vluchtstrook libre y no hay ninguna señal C23-01. ¿Puedes usarla para avanzar más rápido?
+    answer: false
+    explain: Fuera de una emergencia está prohibido usar la vluchtstrook en una autosnelweg o autoweg. El tráfico lento no es una emergencia.
+    cites: ["rvv:43.3"]
+
+  - id: carriles-vlucht-averia
+    type: mc
+    prompt: En una autosnelweg, ¿en cuál de estas situaciones puedes usar la vluchtstrook (sin ninguna señal C23-01)?
+    options: [Hay tráfico lento en tu carril, Tu coche se avería y no puedes seguir, Necesitas mirar el mapa del móvil, Quieres dejar pasar a un coche más rápido]
+    answer: 1
+    explain: La vluchtstrook solo puede usarse en caso de emergencia, como una avería que te impide continuar. Los otros tres casos no son emergencias.
+    cites: ["rvv:43.3"]
+
+  - id: carriles-spits-abierto
+    type: yesno
+    prompt: Ves la señal C23-01 sobre la vluchtstrook de tu derecha. Vas en un coche normal, sin ninguna emergencia. ¿Puedes circular por esa franja?
+    sign: C23-01
+    answer: true
+    explain: Con C23-01 la franja es un spitsstrook abierto, es decir, un carril de circulación. La prohibición de usar la vluchtstrook fuera de emergencias no se aplica mientras está abierto como spitsstrook.
+    cites: ["rvv:1", "rvv:bijlage1.C23-01"]

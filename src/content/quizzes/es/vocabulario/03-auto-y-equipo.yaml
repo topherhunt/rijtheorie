@@ -1,73 +1,10 @@
 questions:
-  - id: auto-y-equipo-oliepeil
-    type: mc
-    prompt: ¿Qué es el "oliepeil"?
-    options: [El nivel de aceite, El filtro de aire, La presión de los neumáticos, El consumo]
-    answer: 0
-    explain: Oliepeil es el nivel de aceite.
-    cites: ["cbr-examenplan:4"]
-    exam: false
-
   - id: auto-y-equipo-reserveband
     type: mc
     prompt: ¿Qué es una "reserveband"?
     options: [Una rueda de repuesto, Un neumático de invierno, Un freno, Una llanta deportiva]
     answer: 0
     explain: Reserveband es la rueda de repuesto.
-    cites: ["cbr-examenplan:4"]
-    exam: false
-
-  - id: auto-y-equipo-bandenspanning
-    type: mc
-    prompt: ¿Cómo se dice "presión de los neumáticos" en neerlandés?
-    options: [bandenspanning, slijtage, toerental, brandstofverbruik]
-    answer: 0
-    explain: Bandenspanning es la presión de los neumáticos.
-    cites: ["cbr-examenplan:4"]
-    exam: false
-
-  - id: auto-y-equipo-slijtage
-    type: mc
-    prompt: '"Slijtage" significa...'
-    options: [Desgaste, Frenada, Derrape, Consumo]
-    answer: 0
-    explain: Slijtage es desgaste.
-    cites: ["cbr-examenplan:4"]
-    exam: false
-
-  - id: auto-y-equipo-toerental
-    type: mc
-    prompt: '"Toerental" significa...'
-    options: [Revoluciones del motor, Velocidad máxima, Consumo, Nivel de aceite]
-    answer: 0
-    explain: Toerental es el número de revoluciones del motor.
-    cites: ["cbr-examenplan:4"]
-    exam: false
-
-  - id: auto-y-equipo-gevarendriehoek
-    type: mc
-    prompt: ¿Qué es la "gevarendriehoek"?
-    options: [El triángulo de emergencia, El triángulo de ceda el paso, Un reflector, Un cinturón]
-    answer: 0
-    explain: Gevarendriehoek es el triángulo de emergencia.
-    cites: ["cbr-examenplan:4"]
-    exam: false
-
-  - id: auto-y-equipo-hamer
-    type: mc
-    prompt: ¿Para qué sirve la "veiligheidshamer"?
-    options: [Para romper vidrios en una emergencia, Para ajustar el motor, Para inflar neumáticos, Para clavar el triángulo]
-    answer: 0
-    explain: Veiligheidshamer es un martillo de emergencia para romper vidrios.
-    cites: ["cbr-examenplan:4"]
-    exam: false
-
-  - id: auto-y-equipo-gordel
-    type: mc
-    prompt: ¿Qué es una "driepuntsgordel"?
-    options: [Un cinturón de tres puntos, Un cinturón de dos puntos, Un airbag, Una silla infantil]
-    answer: 0
-    explain: Driepuntsgordel es el cinturón de tres puntos; heupgordel es el abdominal.
     cites: ["cbr-examenplan:4"]
     exam: false
 
@@ -80,47 +17,70 @@ questions:
     cites: ["cbr-examenplan:4"]
     exam: false
 
-  - id: auto-y-equipo-richting
-    type: mc
-    prompt: ¿Cómo se dice "intermitente" en neerlandés?
-    options: [richtingaanwijzer, waarschuwingslichten, mistachterlicht, dagrijlicht]
-    answer: 0
-    explain: Richtingaanwijzer es el intermitente (direccional).
-    cites: ["cbr-examenplan:4"]
-    exam: false
+  - id: auto-y-equipo-claxon-semaforo
+    type: yesno
+    prompt: El auto de delante tarda en arrancar con el semáforo ya en verde. ¿Puedes tocar la bocina para que avance?
+    answer: false
+    explain: La bocina y la ráfaga solo se usan para evitar un peligro inminente. Apurar a otro conductor no lo es.
+    cites: ["rvv:28"]
 
-  - id: auto-y-equipo-waarschuwing
-    type: mc
-    prompt: ¿Qué son los "waarschuwingslichten"?
-    options: [Las luces de emergencia, Las luces largas, Las luces de freno, Las luces diurnas]
-    answer: 0
-    explain: Waarschuwingslichten son las luces de emergencia.
-    cites: ["cbr-examenplan:4"]
-    exam: false
+  - id: auto-y-equipo-claxon-peligro
+    type: yesno
+    prompt: Un ciclista se cruza delante de ti sin mirar y vas a chocar con él si no avisas. ¿Puedes tocar la bocina?
+    answer: true
+    explain: La bocina se puede usar para evitar un peligro inminente, y un choque que se acerca lo es.
+    cites: ["rvv:28"]
 
-  - id: auto-y-equipo-fietsdrager
-    type: mc
-    prompt: ¿Qué es una "fietsdrager"?
-    options: [Un portabicicletas, Un casco, Un candado, Un soporte para el móvil]
-    answer: 0
-    explain: Fietsdrager es un portabicicletas.
-    cites: ["cbr-examenplan:4"]
-    exam: false
+  - id: auto-y-equipo-rafaga-gracias
+    type: yesno
+    prompt: Un conductor se detiene para dejarte pasar. ¿Puedes darle una ráfaga (knippersignaal) para agradecérselo?
+    answer: false
+    explain: Las ráfagas, igual que la bocina, solo se dan para evitar un peligro inminente. Agradecer no lo es.
+    cites: ["rvv:28"]
 
-  - id: auto-y-equipo-parkeerrem
+  - id: auto-y-equipo-nino-1-30
     type: mc
-    prompt: ¿Cómo se dice "freno de mano" (de estacionamiento)?
-    options: [parkeerrem, reminrichting, remweg, abs]
-    answer: 0
-    explain: Parkeerrem es el freno de estacionamiento.
-    cites: ["cbr-examenplan:4"]
-    exam: false
+    prompt: Llevas en el asiento trasero a una niña de 10 años que mide 1,30 m. ¿Cómo debe ir?
+    options: [Con el cinturón normal de adulto, En un sistema de retención infantil con homologación, Sin cinturón si va en el asiento trasero, Con el cinturón y un cojín cualquiera]
+    answer: 1
+    explain: Un pasajero menor de 18 años y de menos de 1,35 m debe usar un sistema de retención infantil con homologación.
+    cites: ["rvv:59"]
 
-  - id: auto-y-equipo-ruitensproei
+  - id: auto-y-equipo-nino-1-40
     type: mc
-    prompt: ¿Qué es "ruitensproeiervloeistof"?
-    options: [Líquido limpiaparabrisas, Aceite, Refrigerante, Combustible]
+    prompt: Llevas en el asiento trasero a un niño de 11 años que mide 1,40 m. ¿Qué debe usar?
+    options: [El cinturón del auto como cualquier pasajero, Un sistema de retención infantil con homologación, "Nada, porque es menor", Dos cinturones a la vez]
     answer: 0
-    explain: Es el líquido del limpiaparabrisas.
-    cites: ["cbr-examenplan:4"]
-    exam: false
+    explain: La obligación del sistema de retención infantil vale para menores de 18 años y de menos de 1,35 m. Con 1,40 m no se cumple la segunda condición, así que usa el cinturón disponible.
+    cites: ["rvv:59"]
+
+  - id: auto-y-equipo-silla-airbag
+    type: yesno
+    prompt: Quieres llevar a un bebé en una silla orientada hacia atrás en el asiento del copiloto, que tiene airbag frontal activo. ¿Está permitido?
+    answer: false
+    explain: Solo está permitido si el airbag se ha desactivado o se desactiva automáticamente de forma suficiente.
+    cites: ["rvv:59"]
+
+  - id: auto-y-equipo-examen-aceite
+    type: mc
+    prompt: En el examen práctico el examinador te pregunta por el nivel de aceite. ¿Qué se espera de ti?
+    options: [Que señales con qué se comprueba y expliques cómo, Que cambies el aceite, Que midas el nivel tú mismo con el motor caliente, Que digas la marca de aceite]
+    answer: 0
+    explain: El examinador no pide comprobar el nivel ni pregunta por tipos de aceite, pero sí que sepas indicar con qué se controla y cómo.
+    cites: ["cbr-rijprocedure:3.7"]
+
+  - id: auto-y-equipo-examen-frenos
+    type: mc
+    prompt: En el examen práctico, ¿qué debes poder hacer con el líquido de frenos (remvloeistof)?
+    options: [Señalar el depósito y explicar cómo se lee su nivel, Explicar su composición química, Medir su temperatura, Cambiarlo tú mismo]
+    answer: 0
+    explain: No se preguntan composición ni funcionamiento del líquido, pero sí que sepas señalar el depósito y explicar cómo se lee el nivel.
+    cites: ["cbr-rijprocedure:3.7"]
+
+  - id: auto-y-equipo-examen-neumaticos
+    type: multi
+    prompt: Sobre los neumáticos, ¿cuáles de estos temas puede preguntarte el examinador del práctico?
+    options: [La profundidad del dibujo, La diferencia entre neumáticos de verano y de invierno, De qué materiales están hechos, Para qué sirve el tapón de la válvula]
+    answer: [0, 1, 3]
+    explain: Puede preguntar por la profundidad del dibujo, la diferencia verano/invierno, el riesgo de daños y para qué sirve el tapón de la válvula. No pregunta por la composición ni por los materiales.
+    cites: ["cbr-rijprocedure:3.7"]

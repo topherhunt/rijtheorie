@@ -34,13 +34,6 @@ questions:
     explain: El art. 15.2.b es una excepción a la regla de la derecha.
     cites: ["rvv:15.2.b"]
 
-  - id: bus-tram-art18
-    type: yesno
-    prompt: El conductor de un tranvía que gira debe dejar pasar al tráfico de frente según el art. 18.
-    answer: false
-    explain: El art. 18.3 dice que los apartados 1 y 2 no valen para los conductores de tranvía.
-    cites: ["rvv:18.3"]
-
   - id: bus-tram-adelantar
     type: mc
     prompt: ¿Por qué lado puedes adelantar un tranvía?
@@ -75,14 +68,6 @@ questions:
     explain: El art. 56.1 lo exige dentro de la zona urbana.
     cites: ["rvv:56.1"]
 
-  - id: bus-tram-lugar
-    type: mc
-    prompt: ¿Dónde se aplica la obligación de dejar salir a un autobús de la parada?
-    options: [Dentro de la zona urbana (bebouwde kom), Solo en autopistas, Solo fuera de la zona urbana, Solo de noche]
-    answer: 0
-    explain: El art. 56.1 empieza con "Binnen de bebouwde kom".
-    cites: ["rvv:56.1"]
-
   - id: bus-tram-colonne
     type: yesno
     prompt: Un motorvehículo que forma parte de una columna militar debe dejar salir a un autobús de la parada igual que los demás.
@@ -90,11 +75,10 @@ questions:
     explain: El art. 56.2 los exceptúa.
     cites: ["rvv:56.2"]
 
-  - id: bus-tram-senal-l3
-    type: mc
-    prompt: ¿Qué indica esta señal?
+  - id: bus-tram-parada-estacionar
+    type: yesno
     sign: L3
-    options: [Parada de autobús o tranvía, Paso de peatones, Zona residencial, Rotonda]
-    answer: 0
-    explain: L3 es Bushalte / tramhalte.
-    cites: ["rvv:bijlage1.L3"]
+    prompt: Junto a la señal de parada de autobús (L3) quieres esperar a un amigo a 8 metros de la señal. No hay marca de bloques en el pavimento. ¿Puedes dejar el auto parado ahí?
+    answer: false
+    explain: Cuando no hay marcación de bloques, no puedes dejar el vehículo parado a menos de 12 metros de la señal de parada de autobús.
+    cites: ["rvv:23.1"]

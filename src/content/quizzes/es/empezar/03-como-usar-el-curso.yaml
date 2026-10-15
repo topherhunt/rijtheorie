@@ -46,7 +46,7 @@ questions:
     type: mc
     exam: false
     prompt: Contestas mal una pregunta en el Repaso. ¿Qué pasa con ella?
-    options: [Nada, sigue igual, Vuelve a empezar su ciclo de repaso, Se elimina del curso, Cuenta como aprendida igual]
+    options: ["Nada, sigue igual", Vuelve a empezar su ciclo de repaso, Se elimina del curso, Cuenta como aprendida igual]
     answer: 1
     explain: Si fallas, la pregunta vuelve al principio de su ciclo y tendrás que acertarla de nuevo en días distintos.
     cites: ["curso"]

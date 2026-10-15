@@ -30,34 +30,12 @@ questions:
     explain: Primero se mira si se puede hacer sin peligro ni estorbo, y luego se avisa con tiempo antes de empezar.
     cites: ["cbr-rijprocedure:3.5", "rvv:55"]
 
-  - id: cambiar-carril-obligatorio-intermitente
-    type: yesno
-    prompt: Conduces un auto y quieres cambiar de carril. ¿Estás obligado a dar la señal con el intermitente?
-    answer: true
-    explain: El art. 55 obliga a los conductores de vehículos de motor a señalar con el intermitente al cambiar de carril, y en cualquier otro movimiento lateral importante.
-    cites: ["rvv:55"]
-
-  - id: cambiar-carril-terminar-senal
-    type: mc
-    prompt: ¿Cuándo terminas la señal después de un cambio de carril?
-    options: [Cuando el cambio de carril esté completo, Antes de empezar a moverte, Un minuto después, Nunca porque se apaga sola]
-    answer: 0
-    explain: La señal termina en cuanto el cambio de carril o el movimiento lateral está completo.
-    cites: ["cbr-rijprocedure:3.5"]
-
   - id: cambiar-carril-orden-mirar
     type: mc
     prompt: Vas a cambiar al carril izquierdo. ¿En qué orden miras según la Rijprocedure B?
     options: ['Delante, retrovisor interior, retrovisor exterior izquierdo, hombro izquierdo', 'Hombro izquierdo, delante, retrovisor interior, retrovisor derecho', 'Retrovisor exterior izquierdo, delante, hombro derecho, retrovisor interior', Solo el retrovisor interior]
     answer: 0
     explain: "Para ir a la izquierda: delante, retrovisor interior, retrovisor exterior izquierdo y por encima del hombro izquierdo."
-    cites: ["cbr-rijprocedure:3.5"]
-
-  - id: cambiar-carril-hombro
-    type: yesno
-    prompt: ¿Sirve mirar por encima del hombro para controlar el ángulo muerto junto al auto?
-    answer: true
-    explain: Es su único fin. No debe convertirse en mirar hacia atrás ni hacerse muy seguido o durante demasiado tiempo.
     cites: ["cbr-rijprocedure:3.5"]
 
   - id: cambiar-carril-hombro-largo
@@ -74,14 +52,6 @@ questions:
     explain: "Cruzar varios carriles en una sola maniobra no está permitido: hay que hacerlo carril por carril."
     cites: ["cbr-rijprocedure:3.5"]
 
-  - id: cambiar-carril-recto
-    type: mc
-    prompt: Acabas de cambiar de carril y quieres cambiar otra vez. ¿Qué haces antes?
-    options: [Voy un rato en línea recta en el carril, Cambio de inmediato, Freno, Aviso con la bocina]
-    answer: 0
-    explain: En un carril debe conducirse recto algún tiempo antes de cambiar (de nuevo) de carril.
-    cites: ["cbr-rijprocedure:3.5"]
-
   - id: cambiar-carril-curva
     type: mc
     prompt: Vas por una curva con varios carriles en tu sentido. ¿Qué recomienda la Rijprocedure B?
@@ -90,9 +60,25 @@ questions:
     explain: En una curva se sigue el carril elegido. Después de la curva y un rato recto, se puede cambiar.
     cites: ["cbr-rijprocedure:3.5"]
 
-  - id: cambiar-carril-velocidad
-    type: yesno
-    prompt: ¿Debes adaptar tu velocidad al resto del tráfico antes de cambiar de carril?
-    answer: true
-    explain: Si la velocidad está bien adaptada al resto del tráfico, se puede cambiar de carril.
+  - id: cambiar-carril-ciclomotor-senal
+    type: mc
+    prompt: Vas en una bromfiets y quieres cambiar de carril. ¿Cómo puedes dar la señal?
+    options: [Solo con el intermitente, Con el intermitente o con el brazo, Solo con el brazo, No hace falta si miras bien]
+    answer: 1
+    explain: El art. 55 obliga a los conductores de vehículos de motor a usar el intermitente y deja a los bromfietsers elegir entre el intermitente y el brazo.
+    cites: ["rvv:55"]
+
+  - id: cambiar-carril-velocidad-antes
+    type: mc
+    prompt: Quieres pasar al carril izquierdo, donde el tráfico va mucho más rápido que tú. ¿Qué haces antes de cambiar?
+    options: [Adapto primero mi velocidad a la del tráfico de ese carril, Cambio y acelero después, Cambio y toco la bocina, Freno para que me dejen pasar]
+    answer: 0
+    explain: Según la Rijprocedure B se cambia de carril cuando la velocidad ya está bien adaptada al resto del tráfico. Cambiar primero y acelerar después te mete delante de quien viene más rápido.
     cites: ["cbr-rijprocedure:3.5"]
+
+  - id: cambiar-carril-sin-lineas
+    type: yesno
+    prompt: En una calzada sin carriles marcados vas a moverte lateralmente de forma importante para esquivar un obstáculo. Conduces un auto. ¿Debes dar la señal con el intermitente?
+    answer: true
+    explain: El art. 55 exige la señal al cambiar de carril y en cualquier otro movimiento lateral importante. Sin carriles marcados no hay cambio de carril, pero sí movimiento lateral.
+    cites: ["rvv:55", "cbr-rijprocedure:3.5"]

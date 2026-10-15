@@ -1,11 +1,4 @@
 questions:
-  - id: afslaan-senalizar
-    type: yesno
-    prompt: Debes avisar con el intermitente (o el brazo) antes de girar.
-    answer: true
-    explain: El art. 17.2 obliga a señalizar antes de girar.
-    cites: ["rvv:17.2"]
-
   - id: afslaan-preseleccionar-derecha
     type: mc
     prompt: Vas a girar a la derecha. ¿Dónde puedes colocarte antes de girar?
@@ -106,18 +99,28 @@ questions:
     explain: El CBR pide mantener las ruedas delanteras rectas mientras esperas. No hace falta con semáforos ni si tu vía tiene prioridad.
     cites: ["cbr-rijprocedure:3.3"]
 
-  - id: afslaan-mirar
+  - id: afslaan-der-izq
     type: mc
-    prompt: Vas a girar a la derecha. Según el CBR, ¿cuál es el último control del orden recomendado?
-    options: [Retrovisor interior, Mirar adelante, Retrovisor exterior derecho, Mirada por encima del hombro derecho]
-    answer: 3
-    explain: El orden recomendado es retrovisor interior, adelante, retrovisor exterior derecho y mirada por encima del hombro derecho.
-    cites: ["cbr-rijprocedure:3.3"]
-    exam: false
+    prompt: Giras a la derecha. B, que viene de frente, gira a la izquierda en el mismo cruce. No hay señales. ¿Quién pasa primero?
+    diagram:
+      arms: { n: {}, e: {}, s: {}, w: {} }
+      vehicles:
+        - { label: A, kind: car, from: s, to: right, you: true }
+        - { label: B, kind: car, from: n, to: left }
+      alt: Cruce sin señales. Tú (A) vienes del sur y giras a la derecha, hacia el este. B viene del norte, de frente, y gira a su izquierda, también hacia el este.
+    options: [Tú (A), El auto B]
+    answer: 0
+    explain: Quien gira a la izquierda deja pasar al que viene de frente y gira a la derecha (art. 18.2). Aquí el que gira a la izquierda es B, así que cede B y pasas tú.
+    cites: ["rvv:18.2"]
 
-  - id: afslaan-preseleccionar-cbr
-    type: yesno
-    prompt: Según el CBR, debes preseleccionar carril cuando no hacerlo resulte inseguro o entorpezca al resto del tráfico.
-    answer: true
-    explain: El CBR lo considera necesario en esos casos.
+  - id: afslaan-hombro
+    type: mc
+    prompt: Vas a girar a la derecha y miras por encima del hombro derecho. ¿Qué compruebas con esa mirada?
+    options:
+      - El tráfico que va a tu lado derecho, junto a tu vehículo
+      - El tráfico que viene de frente
+      - Si el semáforo cambia
+      - La distancia al auto de delante
+    answer: 0
+    explain: Mirar por encima del hombro permite ver el tráfico que va junto a tu vehículo. No debe convertirse en mirar hacia atrás durante mucho tiempo, porque entonces no ves lo que pasa delante.
     cites: ["cbr-rijprocedure:3.3"]

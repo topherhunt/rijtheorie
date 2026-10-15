@@ -1,6 +1,6 @@
 ---
 title: Señales de tipo de vía y zona urbana (G y H)
-summary: Autopista, autoweg, erf, caminos para peatones, jinetes y ciclistas, y el inicio y fin de la zona urbana.
+summary: Autopista, autoweg, erf, caminos para peatones, jinetes y ciclistas, y el inicio y fin de la zona urbana, con lo que cada una significa para tu auto.
 cbrTopics: [verkeerstekens]
 ---
 
@@ -11,21 +11,24 @@ cbrTopics: [verkeerstekens]
 - **G1**: <T id="autosnelweg" />. **G2**: fin.
 - **G3**: <T id="autoweg" />. **G4**: fin.
 
-<Rule cite="rvv:42" title="Quién puede entrar">
-La autosnelweg es solo para vehículos de motor con los que se puede y se debe ir al menos a **60 km/h**. La autoweg, al menos a **50 km/h**.
+<Rule cite="rvv:42, rvv:1" title="Quién puede entrar">
+La autosnelweg es solo para vehículos de motor (*motorvoertuigen*) con los que se puede y se debe ir al menos a **60 km/h**. La autoweg, al menos a **50 km/h**. Una bromfiets y una bicicleta no son *motorvoertuigen* para el RVV, así que no pueden entrar en ninguna de las dos.
 </Rule>
 
-<Check id="gh-minimo" />
+<Check id="gh-g1-bromfiets" />
+<Check id="gh-g3-lento" />
 
 ## Erf: zona residencial
 
 <Signs codes="G5,G6" />
 
 <Rule cite="rvv:44, rvv:45, rvv:46.1" title="Dentro de un erf">
-Los peatones pueden usar los caminos del <T id="erf" /> en todo su ancho. Máximo **15 km/h**. Como conductor de vehículo de motor, solo puedes estacionar en plazas marcadas o indicadas como tales.
+Los peatones pueden usar los caminos del <T id="erf" /> en todo su ancho, así que cuenta con ellos en medio del camino. Máximo **15 km/h**. Como conductor de vehículo de motor, solo puedes estacionar en plazas marcadas o indicadas como tales.
 </Rule>
 
+<Check id="gh-erf-velocidad" />
 <Check id="gh-erf" />
+<Check id="gh-erf-parking" />
 
 ## Caminos para peatones, jinetes y ciclistas
 
@@ -37,24 +40,36 @@ Los peatones pueden usar los caminos del <T id="erf" /> en todo su ancho. Máxim
 - **G12a**: carril para bicicletas y ciclomotores (<T id="fiets-bromfietspad" />). **G12b**: fin.
 - **G13**: carril bici **no obligatorio**. **G14**: fin.
 
-<Rule cite="rvv:5.1, rvv:5.3" title="Obligatorio o no">
-Los ciclistas deben usar el carril bici obligatorio (G11) o el fiets/bromfietspad (G12a). El carril bici no obligatorio (G13) pueden usarlo, pero no están obligados.
+Qué hace cada usuario con cada camino (snorfiets, bromfiets, peatones) se explica en la lección de sendas y fietspaden del capítulo de la vía. Aquí quédate con lo que importa a tu auto.
+
+<Rule cite="rvv:10.1, rvv:1" title="Tú, en auto">
+Los conductores de vehículos que no son ciclistas, ciclomotoristas, jinetes ni peatones usan la calzada (rijbaan), y la rijbaan no incluye los fietspaden ni los fiets/bromfietspaden. Por eso, con cualquiera de estas señales, tu auto no entra: ni para evitar una cola, ni para estacionar. Para estacionar puedes usar otras zonas, pero **no** el trottoir, el voetpad, el fietspad, el fiets/bromfietspad ni el ruiterpad.
 </Rule>
 
-<Rule cite="rvv:10.1" title="Tú, en auto">
-Los conductores de vehículos que no son ciclistas, jinetes ni peatones usan la calzada (rijbaan). Para estacionar pueden usar otras zonas, pero **no** el trottoir, el voetpad, el fietspad, el fiets/bromfietspad ni el ruiterpad.
+<Rule cite="rvv:5.1, rvv:5.3, rvv:6.1, rvv:6.2" title="Obligatorio, no obligatorio y ciclomotores">
+Los ciclistas deben usar el carril bici obligatorio (G11) o el fiets/bromfietspad (G12a), y pueden usar el no obligatorio (G13) sin estar obligados. El ciclomotor (bromfiets) solo usa el fiets/bromfietspad (G12a); si no hay uno, va por la calzada, aunque al lado haya un G11 o un G13.
 </Rule>
 
+<Check id="gh-fietspad-circular" />
 <Check id="gh-fietspad-auto" />
+<Check id="gh-bromfiets-g11" />
+<Check id="gh-g13-opcional" />
 
 ## Zona urbana: H1 y H2
 
 <Signs codes="H1,H2" />
 
 <Rule cite="rvv:20, rvv:21" title="Velocidad base">
-Dentro de la <T id="bebouwde-kom" />, los vehículos de motor van como máximo a **50 km/h**. Fuera, 130 km/h en autosnelweg, 100 km/h en autoweg y 80 km/h en las demás vías. Las señales A1 pueden bajar estos límites.
+Dentro de la <T id="bebouwde-kom" />, los vehículos de motor van como máximo a **50 km/h**. Fuera, 130 km/h en autosnelweg, 100 km/h en autoweg y 80 km/h en las demás vías. Las señales A1 pueden bajar estos límites. H1 marca dónde cambias del primer límite al segundo, y H2 dónde vuelves.
 </Rule>
 
+<Rule cite="rvv:22, rvv:63b.1" title="Auto con remolque">
+Un auto con un remolque de hasta 3500 kg de masa máxima autorizada va como máximo a **90 km/h**, aunque la vía permita 130. Si una señal o la regla general permite más, vale el límite más bajo.
+</Rule>
+
+<Check id="gh-velocidad-kom" />
+<Check id="gh-velocidad-fuera" />
+<Check id="gh-remolque-autosnelweg" />
 <Check id="gh-h1-h2" />
 
 ## Señales con la palabra ZONE

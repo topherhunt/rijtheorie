@@ -67,3 +67,31 @@ questions:
     answer: [0, 1, 2]
     explain: Pierde validez durante una rijontzegging, si cambia el nombre o la fecha de nacimiento, y si se reporta perdido. Cumplir 40 años no lo afecta.
     cites: ["wvw:123"]
+
+  - id: edad-vigencia-begeleider-joven
+    type: yesno
+    prompt: Tu hermana tiene un permiso B desde hace 8 años y 26 años de edad. ¿Puede figurar como tu begeleider en la begeleiderspas?
+    answer: false
+    explain: El begeleider debe tener al menos 27 años, además de un permiso B desde hace al menos 5 años. Los años de permiso no compensan la edad.
+    cites: ["rr:49b"]
+
+  - id: edad-vigencia-begeleider-reciente
+    type: yesno
+    prompt: Tu tío tiene 35 años y un permiso B desde hace 3 años. ¿Puede figurar como begeleider en tu begeleiderspas?
+    answer: false
+    explain: Deben haber pasado al menos 5 años desde la primera emisión de su permiso B. La edad por sí sola no basta (salvo un instructor con certificado).
+    cites: ["rr:49b"]
+
+  - id: edad-vigencia-begeleider-seis
+    type: yesno
+    prompt: Cumples los requisitos y quieres que seis personas, todas aptas, figuren como begeleiders en tu begeleiderspas. ¿Es posible?
+    answer: false
+    explain: En la begeleiderspas se pueden mencionar como máximo cinco begeleiders.
+    cites: ["rr:49a.5"]
+
+  - id: edad-vigencia-begeleider-rijverbod
+    type: yesno
+    prompt: Tu begeleider registrado recibe de la policía un rijverbod de 12 horas porque está bajo la influencia de una sustancia. ¿Puede acompañarte durante esas 12 horas?
+    answer: false
+    explain: El rijverbod impuesto a quien figura como begeleider cuenta también como begeleidingsverbod. No puede conducir ni acompañar mientras dure.
+    cites: ["wvw:162.1", "wvw:162.4"]

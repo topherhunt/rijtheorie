@@ -9,7 +9,7 @@ questions:
   - id: accidente-danos
     type: mc
     prompt: Rozaste un auto estacionado y causaste daños, sin heridos. ¿Qué debes hacer para no cometer una infracción al irte?
-    options: [Nada, no hay nadie, Dar la oportunidad de establecer tu identidad y la del vehículo en el lugar, Irte y llamar mañana, Irte sin dejar ningún dato]
+    options: ["Nada, no hay nadie", Dar la oportunidad de establecer tu identidad y la del vehículo en el lugar, Irte y llamar mañana, Irte sin dejar ningún dato]
     answer: 1
     explain: Si das en el lugar la oportunidad de establecer tu identidad (y la del vehículo), la prohibición de abandonar el lugar por daños no se aplica.
     cites: ["wvw:7.2"]
@@ -21,39 +21,32 @@ questions:
     explain: La excepción del apartado 2 solo cubre los casos a) y b); el c) no tiene excepción.
     cites: ["wvw:7.1", "wvw:7.2"]
 
-  - id: accidente-sospecha
+  - id: accidente-golpe-no-vi
     type: yesno
-    prompt: ¿Aplica la prohibición de abandonar el lugar si "debías suponer razonablemente" que hubo daños aunque no estés seguro?
+    prompt: Al dar marcha atrás sientes un golpe y por el espejo ves que el auto de atrás quedó con la defensa abollada. Piensas "no era mi culpa" y te vas sin dejar tus datos. ¿Cometes una infracción?
     answer: true
-    explain: "El artículo dice \"naar hij weet of redelijkerwijs moet vermoeden\": también cuenta lo que razonablemente debías suponer."
-    cites: ["wvw:7.1"]
+    explain: El artículo 7 prohíbe irse cuando sabes o debes suponer razonablemente que hubo daños a otro. Con el golpe y la abolladura a la vista lo sabes, y la excepción solo vale si das la oportunidad de identificarte.
+    cites: ["wvw:7.1", "wvw:7.2"]
 
-  - id: accidente-conductor-vehiculo
+  - id: accidente-bici-identidad
     type: yesno
-    prompt: ¿El deber de dar la oportunidad de identificar también el vehículo vale para quien conducía un vehículo de motor?
-    answer: true
-    explain: El apartado 2 pide la identidad de la persona y, si conducía un motorrijtuig, también la del vehículo.
+    prompt: Con tu bicicleta rozas un auto estacionado y le rayas la puerta. Antes de irte, ¿la ley te exige también dar la oportunidad de identificar tu vehículo (la bicicleta)?
+    answer: false
+    explain: Debes dar la oportunidad de establecer tu identidad. La identidad del vehículo solo se exige a quien conducía un motorrijtuig, y una bicicleta no lo es.
     cites: ["wvw:7.2"]
 
-  - id: accidente-peligro
+  - id: accidente-curiosear
     type: yesno
-    prompt: ¿Está prohibido comportarse de modo que se cause o pueda causarse peligro en la vía?
+    prompt: Pasas junto a un accidente en el otro sentido y frenas casi hasta parar, en pleno carril, para mirar. Nadie choca contigo. ¿Has infringido el artículo 5 de la WVW?
     answer: true
-    explain: El artículo 5 de la WVW lo prohíbe a todos.
+    explain: El artículo 5 prohíbe comportarse de modo que se cause o pueda causarse peligro, o que el tráfico sea o pueda ser estorbado. Frenar en pleno carril para mirar puede causar ambas cosas, aunque al final no pase nada.
     cites: ["wvw:5"]
 
-  - id: accidente-hinder
+  - id: accidente-carril-herido
     type: yesno
-    prompt: Según el artículo 5 WVW, ¿también está prohibido estorbar al tráfico, aunque no haya peligro?
+    prompt: Cambias de carril sin mirar, por tu culpa chocas con una motocicleta y su conductor sufre lesiones graves. Aparte de lo civil, ¿infringes el artículo 6 de la WVW?
     answer: true
-    explain: El texto prohíbe causar peligro o estorbar al tráfico (gehinderd).
-    cites: ["wvw:5"]
-
-  - id: accidente-culpa
-    type: yesno
-    prompt: ¿Es una infracción específica causar por tu culpa un accidente en el que otra persona sufre lesiones graves?
-    answer: true
-    explain: El artículo 6 de la WVW lo prohíbe expresamente.
+    explain: El artículo 6 prohíbe comportarse de modo que, por tu culpa, ocurra un accidente en el que otra persona sufra lesiones graves.
     cites: ["wvw:6"]
 
   - id: accidente-policia-parar

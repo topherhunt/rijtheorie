@@ -1,26 +1,18 @@
 questions:
-  - id: erf-senal-g5
+  - id: erf-velocidad-situacion
     type: mc
-    prompt: ¿Qué indica esta señal?
+    prompt: Entras a un erf con tu auto. La calle está vacía y recta. ¿A qué velocidad máxima puedes circular?
     sign: G5
-    options: [Autoweg, Entrada a un erf, Zona de estacionamiento, Zona de 30 km/h]
-    answer: 1
-    explain: G5 marca el inicio de un erf. G6 marca el final.
-    cites: ["rvv:bijlage1.G5"]
+    options: [15 km/h, 20 km/h, 30 km/h, 50 km/h]
+    answer: 0
+    explain: Dentro de un erf no puedes ir a más de 15 km/h, aunque la calle esté vacía y recta.
+    cites: ["rvv:45", "rvv:bijlage1.G5"]
 
-  - id: erf-vel
-    type: number
-    prompt: ¿Cuál es la velocidad máxima dentro de un erf?
-    answer: 15
-    unit: km/h
-    explain: Dentro de un erf no se puede ir a más de 15 km/h.
-    cites: ["rvv:45"]
-
-  - id: erf-halte-peatones
+  - id: erf-peaton-medio
     type: yesno
-    prompt: Dentro de un erf, ¿pueden los peatones usar todo el ancho de la calzada?
-    answer: true
-    explain: La ley permite a los peatones usar las vías dentro de un erf en todo su ancho.
+    prompt: Dentro de un erf, un peatón camina por el medio de la calzada aunque hay un borde libre. ¿Está haciendo algo que la ley no permite?
+    answer: false
+    explain: Los peatones pueden usar todo el ancho de las vías dentro de un erf. Por eso hay que conducir a la defensiva y contar con encontrarlos en cualquier parte.
     cites: ["rvv:44"]
 
   - id: erf-estacionar
@@ -112,14 +104,18 @@ questions:
     explain: Los tram/buslichten también valen para otros vehículos que usan una busbaan o busstrook.
     cites: ["rvv:70.4"]
 
-  - id: erf-senal-f13
-    type: mc
-    prompt: ¿Qué indica esta señal?
-    sign: F13
-    options: [Carril solo para lijnbus, Carril solo para tranvía, Fin del carril de bus, Parada de bus]
-    answer: 0
-    explain: F13 es "rijbaan of -strook uitsluitend ten behoeve van lijnbussen".
-    cites: ["rvv:bijlage1.F13"]
+  - id: erf-carril-f17-quien
+    type: multi
+    prompt: Un carril tiene la señal F17. ¿Quién puede usarlo?
+    sign: F17
+    options:
+      - Una lijnbus
+      - Un tranvía
+      - Un autobús turístico (autobus, no lijnbus)
+      - Un auto
+    answer: [0, 1]
+    explain: F17 marca una rijbaan o rijstrook exclusiva para lijnbussen y trams. Un autobus que no es de línea no puede usarla, y menos un auto.
+    cites: ["rvv:bijlage1.F17"]
 
   - id: erf-puente
     type: mc
@@ -128,12 +124,3 @@ questions:
     answer: 1
     explain: En las luces del puente, rojo o rojo intermitente significa alto.
     cites: ["rvv:72"]
-
-  - id: erf-senal-j15
-    type: mc
-    prompt: ¿Qué indica esta señal?
-    sign: J15
-    options: [Beweegbare brug (puente móvil), Paso a nivel, Cruce con tranvía, Túnel]
-    answer: 0
-    explain: J15 es "beweegbare brug".
-    cites: ["rvv:bijlage1.J15"]

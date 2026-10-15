@@ -16,6 +16,16 @@ Las ruedas deben tener neumáticos de aire. Sin daños que dejen ver la carcasa.
 La ley dice 1,6 mm como mínimo absoluto. Con menos, el neumático ya no cumple.
 </Warn>
 
+<Check id="neumaticos-minimo-medido" />
+
+<Check id="neumaticos-circunferencia" />
+
+<Check id="neumaticos-dano" />
+
+<Check id="neumaticos-bulto" />
+
+<Check id="neumaticos-carcasa-dibujo-bueno" />
+
 <Img src="vehiculo-banden-profiel.webp" alt="Medidor de profundidad colocado en una ranura del dibujo de un neumático." caption="Con un medidor de profundidad compruebas que el dibujo tenga al menos 1,6 mm." />
 
 ## Otros requisitos
@@ -24,13 +34,31 @@ La ley dice 1,6 mm como mínimo absoluto. Con menos, el neumático ya no cumple.
 Un neumático **no puede estar recortado** (naprofileren: por ejemplo, quitar los indicadores de desgaste o cambiar la forma de las ranuras), salvo que diga "regroovable" y la carcasa no se vea. Si el neumático indica un sentido de giro, debe montarse de modo que coincida con el giro de la rueda hacia adelante.
 </Rule>
 
+<Check id="neumaticos-recortado" />
+
+<Check id="neumaticos-regroovable-carcasa" />
+
+<Check id="neumaticos-sentido" />
+
 <Rule cite="rv:5.2.27" title="Medida y presión">
 Los dos neumáticos de un mismo eje deben tener la misma medida (salvo la rueda de repuesto de emergencia). La presión (<T id="bandenspanning" />) debe ser la prescrita por el fabricante.
 </Rule>
 
+<Check id="neumaticos-misma-medida" />
+
+<Check id="neumaticos-presion-baja" />
+
 <Rule cite="rv:5.2.27" title="Aviso de presión">
 En autos puestos en uso después del 31 de diciembre de 2017, el sistema que controla la presión no debe indicar un defecto.
 </Rule>
+
+<Check id="neumaticos-aviso" />
+
+<Rule cite="rv:5.1.1" title="Quién infringe">
+Está prohibido conducir un vehículo que no cumple los requisitos de la Regeling voertuigen, y también está prohibido que el dueño o poseedor lo deje conducir.
+</Rule>
+
+<Check id="neumaticos-prestar-auto" />
 
 <Tip>
 La presión correcta aparece en el manual del auto o en una etiqueta del auto. Revísala con los neumáticos fríos y antes de un viaje largo con carga.
@@ -40,5 +68,8 @@ La presión correcta aparece en el manual del auto o en una etiqueta del auto. R
 
 Existen <T id="winterbanden" /> y <T id="zomerbanden" />. La Regeling voertuigen que revisamos no fija una regla distinta por estación: todos los neumáticos deben cumplir los requisitos de arriba.
 
-<Check id="neumaticos-minimo" />
-<Check id="neumaticos-dano" />
+<Rule cite="cbr-rijprocedure:3.7" title="Qué mira el examinador en los neumáticos (práctico)">
+Antes de salir, el CBR espera que revises fuera del auto: el dibujo (profundidad) y la presión, que el tapón de la válvula esté puesto, que no haya daños y si son neumáticos de verano o de invierno. El examinador puede preguntarte por la profundidad del dibujo, la diferencia entre neumáticos de verano e invierno, el riesgo de un neumático dañado o para qué sirve el tapón de la válvula. No pregunta por la composición ni por los materiales del neumático.
+</Rule>
+
+<Check id="neumaticos-examen-control" />

@@ -1,6 +1,6 @@
 ---
 title: Tipos de vehículos
-summary: "Motorvoertuig, autobús, camión, bromfiets, snorfiets, speed-pedelec, brommobiel y bicicleta eléctrica: qué es cada uno según la ley."
+summary: "Motorvoertuig, autobús, camión, bromfiets, snorfiets, speed-pedelec, brommobiel y bicicleta eléctrica: qué es cada uno según la ley y qué cambia en la práctica (carriles, caminos)."
 cbrTopics: [gebruik-weg, voertuigkennis]
 ---
 
@@ -29,11 +29,19 @@ Un <T id="motorvoertuig" /> es un vehículo propulsado por motor **excepto** las
 
 Un <T id="lijnbus" /> es un autobús de línea; en una <T id="busbaan" /> aparece pintada la palabra BUS o LIJNBUS.
 
-<Check id="vehiculos-autobus" />
+<Rule cite="rvv:43.4" title="Vrachtauto en la autosnelweg">
+En una <T id="autosnelweg" /> con tres o más carriles, un vrachtauto o un conjunto de vehículos de más de 7 m no puede usar otro carril que los dos de la derecha (salvo para preseleccionar). Un bestelauto (hasta 3500 kg) sin remolque largo sí puede. Por eso importa la frontera de los 3500 kg.
+</Rule>
 
-<Check id="vehiculos-vrachtauto" />
+<Rule cite="rvv:73" title="Autobus y carriles con BUS iluminado">
+Cuando la palabra **BUS** se ilumina sobre un carril, solo lo usan los conductores de un lijnbus y de un autobus. Un vehículo de 8 plazas más el conductor no es un autobus (hacen falta más de ocho personas).
+</Rule>
 
-<Check id="vehiculos-motorfiets" />
+<Check id="vehiculos-carril-izq-camion-furgoneta" />
+
+<Check id="vehiculos-minibus-bus-lane" />
+
+<Check id="vehiculos-furgoneta-8-bus" />
 
 ## La familia bromfiets
 
@@ -49,11 +57,6 @@ Una <T id="bromfiets" /> de dos ruedas tiene una velocidad máxima de construcci
 - <T id="brommobiel" />: bromfiets de **más de dos ruedas** con carrocería.
 </Rule>
 
-<Check id="vehiculos-snorfiets" />
-
-<Check id="vehiculos-speed-pedelec" />
-
-<Check id="vehiculos-brommobiel" />
 
 ## Qué reglas siguen
 
@@ -71,6 +74,16 @@ Una snorfiets sigue las reglas de la **bicicleta** y no las de la bromfiets, sal
 
 <Check id="vehiculos-reglas-snorfiets" />
 
+## Qué camino usa cada uno
+
+<Rule cite="rvv:5.1, rvv:6.1, rvv:6.2" title="Fietspad, fiets/bromfietspad y rijbaan">
+Quien sigue las reglas de la bicicleta (ciclistas y snorfietsen) usa el fietspad obligatorio (G11) o el fiets/bromfietspad. La **bromfiets** usa el fiets/bromfietspad (G12a) y, si no hay, la rijbaan: **nunca** el fietspad G11. Por eso una speed-pedelec, que es bromfiets, no va por un G11. Una brommobiel sigue las reglas de los vehículos de motor y va por la rijbaan.
+</Rule>
+
+<Check id="vehiculos-speed-pedelec-g12a" />
+
+<Check id="vehiculos-brommobiel-g12a" />
+
 ## Bicicleta eléctrica y gehandicaptenvoertuig
 
 <Rule cite="wvw:1.1" title="Fiets met trapondersteuning">
@@ -81,10 +94,10 @@ Una <T id="fiets-met-trapondersteuning" /> tiene un motor de **máximo 0,25 kW**
 Un <T id="gehandicaptenvoertuig" /> es un vehículo para una persona con discapacidad, de **no más de 1,10 m de ancho**, sin motor o con un motor cuya velocidad máxima de construcción es de **no más de 45 km/h**, y que no es una bromfiets.
 </Rule>
 
-<Check id="vehiculos-ebike" />
-
 <Check id="vehiculos-gehandicapten" />
 
 <Warn>
 La bicicleta eléctrica normal (hasta 25 km/h) es una bicicleta. La speed-pedelec, que sigue ayudando por encima de 25 km/h, es una bromfiets.
 </Warn>
+
+<Check id="vehiculos-ebike-g11" />

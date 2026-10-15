@@ -1,16 +1,9 @@
 questions:
   - id: atencion-celular
     type: yesno
-    prompt: ¿Está prohibido sostener un celular en la mano mientras conduces?
+    prompt: Conduces por la ciudad y sostienes el celular en la mano para leer un mensaje. ¿Está prohibido?
     answer: true
-    explain: El artículo 61a prohíbe sostener un aparato electrónico móvil durante la marcha.
-    cites: ["rvv:61a"]
-
-  - id: atencion-tableta
-    type: yesno
-    prompt: ¿La prohibición de sostener aparatos incluye una tableta?
-    answer: true
-    explain: El texto nombra en todo caso al celular, la tableta y el reproductor multimedia.
+    explain: El artículo 61a prohíbe a quien conduce sostener un aparato electrónico móvil durante la marcha, aunque sea un momento.
     cites: ["rvv:61a"]
 
   - id: atencion-reproductor
@@ -20,18 +13,33 @@ questions:
     explain: Un reproductor multimedia es un aparato cubierto por el artículo 61a.
     cites: ["rvv:61a"]
 
-  - id: atencion-peligro
+  - id: atencion-soporte-fijo
     type: yesno
-    prompt: ¿Está prohibido comportarte de modo que puedas causar peligro, aunque no ocurra nada?
+    prompt: Llevas el celular en un soporte fijo del tablero con el navegador encendido y no lo tocas con la mano mientras conduces. ¿Lo prohíbe el artículo 61a?
+    answer: false
+    explain: El artículo 61a prohíbe SOSTENER (vast te houden) el aparato durante la marcha. Un soporte fijo sin tocarlo no es sostenerlo.
+    cites: ["rvv:61a"]
+
+  - id: atencion-pasajero
+    type: yesno
+    prompt: Tu acompañante sostiene el celular con el mapa y te lo muestra mientras conduces. ¿Infringes tú el artículo 61a?
+    answer: false
+    explain: El artículo 61a prohíbe sostener el aparato a quien conduce, y tú no lo sostienes. El acompañante no conduce, así que la prohibición no es suya.
+    cites: ["rvv:61a"]
+
+  - id: atencion-soporte-escribir
+    type: yesno
+    prompt: Con el celular en un soporte fijo, escribes un mensaje mirando la pantalla varios segundos mientras circulas por una autosnelweg. Aunque no lo sostienes, ¿puede ser una infracción?
     answer: true
-    explain: El artículo 5 WVW habla de causar o poder causar peligro.
+    explain: El artículo 5 de la WVW prohíbe comportarse de modo que se cause o pueda causarse peligro. Quitar los ojos de la vía varios segundos a esa velocidad puede causar peligro, aunque no sostengas el aparato.
     cites: ["wvw:5"]
 
-  - id: atencion-cansado
-    type: yesno
-    prompt: Según el CBR, ¿conviene empezar un viaje largo estando muy cansado?
-    answer: false
-    explain: La guía recomienda no emprender un viaje cansado o irritado.
+  - id: atencion-cansado-salir
+    type: mc
+    prompt: Vas a empezar un viaje largo y estás muy cansado porque dormiste poco. Según el CBR, ¿qué haces?
+    options: ["Descansar o posponer el viaje antes de salir", "Salir igual y poner la radio fuerte para mantenerte despierto", "Salir igual y parar solo si te da mucho sueño", "Salir igual, pero conducir más rápido para llegar antes"]
+    answer: 0
+    explain: La guía del CBR dice que no se empieza un viaje cansado o irritado. Poner la radio fuerte o apurarte no quita el cansancio y añade distracción o prisa.
     cites: ["cbr-rijprocedure:2"]
 
   - id: atencion-distracciones
@@ -42,11 +50,11 @@ questions:
     explain: La guía menciona pasajeros, radio y teléfono. Los espejos son parte de conducir bien.
     cites: ["cbr-rijprocedure:2"]
 
-  - id: atencion-claxon
+  - id: atencion-bocina-verde
     type: yesno
-    prompt: ¿Puedes tocar la bocina para saludar a un conocido?
+    prompt: El semáforo se pone en verde y el auto de delante no arranca. Te impacientas. ¿Puedes tocar la bocina para que avance?
     answer: false
-    explain: Las señales sonoras y con luces solo se pueden dar para evitar un peligro inminente.
+    explain: El artículo 28 permite señales sonoras y con las luces solo para evitar un peligro inminente. La impaciencia no lo es.
     cites: ["rvv:28"]
 
   - id: atencion-colarse

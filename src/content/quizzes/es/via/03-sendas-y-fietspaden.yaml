@@ -96,7 +96,7 @@ questions:
   - id: sendas-fietsstrook
     type: mc
     prompt: ¿Qué hace que una franja sea un fietsstrook?
-    options: [Que sea roja, Que esté en la calzada, con líneas y dibujos de bicicleta, Que esté en la acera, Que tenga una señal G13]
+    options: [Que sea roja, "Que esté en la calzada, con líneas y dibujos de bicicleta", Que esté en la acera, Que tenga una señal G13]
     answer: 1
     explain: Fietsstrook es una parte de la rijbaan marcada con líneas continuas o discontinuas y con dibujos de bicicleta.
     cites: ["rvv:1"]

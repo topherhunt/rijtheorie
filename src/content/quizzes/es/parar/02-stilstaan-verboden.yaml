@@ -18,27 +18,11 @@ questions:
     explain: La ley prohíbe detenerse en la fietsstrook y también en la calzada junto a una fietsstrook.
     cites: ["rvv:23.1"]
 
-  - id: stilstaanverbod-oversteekplaats
-    type: number
-    prompt: ¿A menos de cuántos metros de un paso para cruzar (oversteekplaats) está prohibido detenerse?
-    answer: 5
-    unit: m
-    explain: No puedes detenerte en un paso para cruzar ni a menos de 5 m de él.
-    cites: ["rvv:23.1"]
-
   - id: stilstaanverbod-tunel
     type: yesno
     prompt: ¿Está prohibido detenerte en un túnel?
     answer: true
     explain: Detenerse en un túnel está prohibido (stilstaan).
-    cites: ["rvv:23.1"]
-
-  - id: stilstaanverbod-bushalte
-    type: number
-    prompt: En una parada de bus sin marca de bloques (geblokte markering), ¿a menos de cuántos metros de la señal no puedes detenerte?
-    answer: 12
-    unit: m
-    explain: Si no hay marca de bloques, no puedes detenerte a menos de 12 m de la señal de la parada. Si hay marca, el límite es la altura de la marca.
     cites: ["rvv:23.1"]
 
   - id: stilstaanverbod-busstrook
@@ -102,3 +86,24 @@ questions:
     explain: Están en la lista del artículo 23 el overweg, la línea amarilla continua y el túnel. Junto a una parada de bus sin marca de bloques solo está prohibido a menos de 12 m del cartel.
     cites: ["rvv:23.1"]
     exam: false
+
+  - id: stilstaanverbod-oversteek-4m
+    type: yesno
+    prompt: Te detienes unos segundos a 4 m de un paso de peatones, en la calzada, para mirar el mapa. ¿Lo prohíbe el artículo 23?
+    answer: true
+    explain: No puedes detenerte en un paso para cruzar ni a menos de 5 m de él, aunque sea por poco tiempo.
+    cites: ["rvv:23.1"]
+
+  - id: stilstaanverbod-bushalte-esperar
+    type: yesno
+    prompt: Una parada de bus no tiene marca de bloques. Te detienes a 10 m del cartel de la parada para esperar a una amiga que viene corriendo. ¿Está permitido?
+    answer: false
+    explain: A menos de 12 m del cartel, sin marca, está prohibido detenerse. La excepción es solo para dejar subir o bajar pasajeros de inmediato, no para esperar.
+    cites: ["rvv:23.1", "rvv:23.2"]
+
+  - id: stilstaanverbod-amarilla-pasajero
+    type: yesno
+    prompt: Junto a una línea amarilla continua dejas bajar a un pasajero de inmediato y arrancas. ¿Está permitido por la excepción del artículo 23?
+    answer: false
+    explain: La excepción del ascenso o descenso inmediato aplica solo a la parada de bus (art. 23 lid 2 se refiere solo al onderdeel e). La línea amarilla continua no la tiene.
+    cites: ["rvv:23.1", "rvv:23.2"]

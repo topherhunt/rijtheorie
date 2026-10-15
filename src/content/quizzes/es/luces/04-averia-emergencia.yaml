@@ -18,7 +18,7 @@ questions:
   - id: triangulo-direccion
     type: mc
     prompt: ¿Dónde se coloca el triángulo respecto al tráfico?
-    options: [En la dirección del tráfico para el que el vehículo es un peligro y bien visible, Detrás del vehículo, pegado al parachoques, Delante del vehículo, En la berma sin importar la dirección]
+    options: [En la dirección del tráfico para el que el vehículo es un peligro y bien visible, "Detrás del vehículo, pegado al parachoques", Delante del vehículo, En la berma sin importar la dirección]
     answer: 0
     explain: Debe colocarse en la vía, bien visible, hacia el tráfico que se acerca y para el que eres un peligro.
     cites: ["rvv:58.2"]

@@ -10,8 +10,6 @@ cbrTopics: [gebruik-weg]
 Los <T id="bestuurder">conductores</T> circulan por la derecha **tanto como sea posible**.
 </Rule>
 
-<Check id="parte-derecha" />
-
 ## Peatones
 
 <Rule cite="rvv:4" title="Dónde van los peatones">
@@ -23,11 +21,13 @@ Los <T id="voetganger">peatones</T> usan, por orden:
 
 Una persona que se mueve con objetos que no son vehículos (por ejemplo, patines) usa el fietspad, el fiets/bromfietspad, el trottoir o el voetpad. Si no existe ninguno de ellos, usa la rijbaan.
 
-<Check id="parte-peaton-orden" />
-
 <Check id="parte-peaton-borde" />
 
+<Check id="parte-peaton-con-acera-y-fietspad" />
+
 <Check id="parte-patines" />
+
+<Check id="parte-patines-trottoir" />
 
 ## Gehandicaptenvoertuigen y jinetes
 
@@ -39,9 +39,9 @@ El conductor de un <T id="gehandicaptenvoertuig" /> puede usar el trottoir, el v
 Los <T id="ruiter">jinetes</T> usan el <T id="ruiterpad" />. Si no hay, usan la berm o la rijbaan.
 </Rule>
 
-<Check id="parte-jinete" />
+<Check id="parte-jinete-fietspad" />
 
-<Check id="parte-gehandicapten" />
+<Check id="parte-gehandicapten-no-todo" />
 
 ## Peatones en la calzada
 
@@ -57,10 +57,8 @@ Los peatones pueden usar la rijbaan si forman una columna, un desfile o un corte
 Los demás conductores usan la rijbaan. Pueden usar otras partes de la vía para **estacionar**, excepto el trottoir, el voetpad, el fietspad, el fiets/bromfietspad y el ruiterpad.
 </Rule>
 
-<Check id="parte-auto" />
-
 <Check id="parte-estacionar" />
 
 <Tip>
-La lógica de las reglas 4 a 10: cada usuario tiene "su" parte. Si esa parte no existe, se pasa a la siguiente. Memoriza el orden de los peatones: acera, fietspad, berma o borde de la calzada.
+La lógica de las reglas 4 a 10: cada usuario tiene "su" parte, y solo pasa a la siguiente si la primera no existe. No vale elegir la parte más cómoda: un peatón con trottoir no usa el fietspad, y un jinete nunca usa el fietspad.
 </Tip>
