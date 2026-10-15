@@ -32,4 +32,4 @@ YAML `questions:` list. Fields: `id` (lowercase-hyphen, globally unique, start w
 - Numbers (speeds, distances, promille, points, ages, fines) are the most common errors: verify each against the cited text.
 
 ## Proposing AI images
-Images cost money and are generated and reviewed centrally. Propose one only where a photo-like scene genuinely helps (vehicle parts, weather, a type of road, a situation). In your hand-off, list: file name (`<chapter>-<slug>.webp`), what it must show, and the alt text. The scene must work without any signs, road markings or text, because the model invents wrong ones.
+Images cost money and are generated and reviewed centrally. Propose one only where a photo-like scene genuinely helps (vehicle parts, weather, a type of road, a situation). In your hand-off, list: file name (`<chapter>-<slug>.webp`), what it must show, and the alt text. The scene must work without any signs, road markings or text, because the model invents wrong ones; if the point is a marking or lane layout, propose a `<Junction>`-style diagram instead.

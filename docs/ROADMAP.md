@@ -13,11 +13,12 @@ v1 under construction: Spanish course with Dutch terms, browser-only progress. S
 - [x] Progress store (localStorage) + export/import
 - [x] Notes per lesson + "Mis notas" page with Markdown export
 - [x] Review queue (Leitner), mock exam (50 q / 44 to pass) behind the mastery gate / placement test
-- [ ] Chapters 0-12 content and questions, including practical procedures (Rijprocedure B)
-- [ ] AI scene images (within $20 budget)
+- [x] Chapters 0-12 content and questions, including practical procedures (Rijprocedure B): 101 lessons, 1125 questions
+- [x] AI scene images: 11 in lessons, $2.26 of the $20 budget spent (`scripts/images/spend.jsonl`)
+- [ ] SVG diagram of an acceleration lane with block markings for `especiales/02-invoegen` (the AI image was dropped)
 - [x] Audit harness (`scripts/audit/`, `docs/AUDIT.md`)
-- [ ] Report-a-problem issue form (`.github/ISSUE_TEMPLATE/problema.yml`)
-- [ ] Tests (vitest + playwright), GitHub Pages workflow
+- [x] Report-a-problem issue form (`.github/ISSUE_TEMPLATE/problema.yml`)
+- [x] Tests (vitest + playwright), GitHub Pages workflow
 - [ ] Owner creates the GitHub repo; set `REPO_URL` in `src/config.ts`, `SITE_URL`/`BASE_PATH` in the workflow
 
 ## Wish list (not for now)

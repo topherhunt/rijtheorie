@@ -23,7 +23,8 @@ How the material was produced and why it looks the way it does. Update the relev
 ## Images
 - Signs: official only, never AI-generated.
 - Junctions and priority situations: hand-coded parametric SVG (`src/components/diagram/`), so geometry and right-of-way are exact and reviewable as code.
-- Scenes (atmosphere, vehicle parts, weather, situations where exact geometry doesn't matter): AI-generated with `black-forest-labs/flux-3-image` via OpenRouter, 1K tier, $0.048/image (measured 2026-10-15). Prompts forbid traffic signs, road markings and text, because the model invents plausible but wrong signs. Every image is reviewed before use; manifest and status in `scripts/images/manifest.yaml`.
+- Scenes (atmosphere, vehicle parts, weather, situations where exact geometry doesn't matter): AI-generated with `black-forest-labs/flux-3-image` via OpenRouter, 1K tier, $0.048/image (measured 2026-10-15). Prompts forbid traffic signs, road markings and text, because the model invents plausible but wrong signs. `scripts/images/generate.ts` writes several candidates per image; each is reviewed at full size against the checklist in `scripts/images/manifest.yaml` and the chosen one copied to `public/img/` by hand. 11 images approved and 2 dropped from 47 generations ($2.26).
+- What the model gets wrong: equipment use (gauge held at an impossible angle, a trailer's jockey wheel down while driving even when told it's raised -- describe the object without the part instead), fused objects (two bikes as one frame), distances (triangle 5-10 m behind the car instead of 30 m), which way a car faces, and lane markings. Where the teaching point is a marking or lane layout (acceleration lane), use an SVG diagram instead.
 
 ## Content writing rules
 - Plain Spanish, short sentences, tú form, neutral Latin American vocabulary (carro/auto: use "auto"; manejar/conducir: use "conducir").

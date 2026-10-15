@@ -27,3 +27,4 @@ dev.env
 
 # jetbrains setting folder
 .idea/
+scripts/images/candidates/
