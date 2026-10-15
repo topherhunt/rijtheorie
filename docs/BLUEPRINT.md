@@ -3,7 +3,7 @@
 ## Stack
 - Astro (static output) with MDX for lessons, Preact islands for interactivity, Tailwind v4 utilities.
 - No server in v1. Future dynamic features (speech, translation, accounts) add an Astro server adapter and API routes; nothing in v1 assumes static-only beyond storage.
-- Deploy: Cloudflare Pages project `rijtheorie` (`wrangler.jsonc`), connected to the GitHub repo: Cloudflare builds on push to `main` (build `npm run build`, output `dist`) and makes preview deploys for other branches. rijtheorie.topherhunt.com is a Pages custom domain (CNAME to `rijtheorie.pages.dev` at the DNS host). Site URL https://rijtheorie.topherhunt.com is set in `astro.config.mjs`. CI gates in `.github/workflows/ci.yml`. Always build internal links with `href()` from `src/config.ts`.
+- Deploy: Cloudflare Pages project `rijtheorie` (`wrangler.jsonc`), connected to the GitHub repo: Cloudflare builds on push to `main` (build `npm run build`, output `dist`, Node from `.node-version`: pin an exact version, since Cloudflare resolves a bare major like `22` to an older preinstalled release) and makes preview deploys for other branches. rijtheorie.topherhunt.com is a Pages custom domain (CNAME to `rijtheorie.pages.dev` at the DNS host). Site URL https://rijtheorie.topherhunt.com is set in `astro.config.mjs`. CI gates in `.github/workflows/ci.yml`. Always build internal links with `href()` from `src/config.ts`.
 
 ## Layout
 ```
