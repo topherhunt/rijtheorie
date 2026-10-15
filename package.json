@@ -12,7 +12,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "typecheck": "tsc --noEmit -p .",
+    "typecheck": "astro sync && tsc --noEmit -p .",
     "test": "vitest run",
     "test:e2e": "astro build && playwright test",
     "audit": "node scripts/audit/check-content.ts",

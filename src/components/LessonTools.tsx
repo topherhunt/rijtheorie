@@ -9,6 +9,7 @@ export default function LessonTools({ lessonId }: { lessonId: string }) {
   const [draft, setDraft] = useState('');
   const saved = state?.notes[lessonId]?.text ?? '';
   useEffect(() => setDraft(saved), [saved]);
+  useEffect(() => store?.visitLesson(lessonId), [store, lessonId]);
   if (!state || !store) return null;
   const done = Boolean(state.done[lessonId]);
   return (

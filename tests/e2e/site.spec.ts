@@ -81,6 +81,30 @@ test('on a phone each lesson row puts a labelled score and read status under the
   await expect(page.locator('.qa-lesson-row').nth(1).locator('.qa-unread')).toBeVisible();
 });
 
+// The visit is written in an effect that runs after paint, so wait for the store rather than for hydration.
+const lastLessonId = (page: Page) => page.evaluate(() => JSON.parse(localStorage.getItem('rijtheorie:v1') ?? '{}').lastLesson?.id);
+const visitRecorded = (page: Page, id: string) => expect.poll(() => lastLessonId(page)).toBe(id);
+
+test('the home page offers the first unfinished lesson, and "continue" only when the last lesson opened is a different one', async ({ page }) => {
+  await page.goto('/es/');
+  const next = page.locator('.qa-next-lesson');
+  const firstHref = await page.locator('.qa-lesson-link').first().getAttribute('href');
+  await expect(next).toHaveAttribute('href', firstHref!);
+  await expect(page.locator('.qa-continue-lesson')).toHaveCount(0);
+
+  await page.goto(LESSON);
+  await visitRecorded(page, 'es/prioridad/01-regla-derecha');
+  await page.goto('/es/');
+  await expect(page.locator('.qa-continue-lesson')).toHaveAttribute('href', LESSON);
+  await expect(next).toHaveAttribute('href', firstHref!);
+
+  await page.goto(firstHref!);
+  await expect.poll(() => lastLessonId(page)).not.toBe('es/prioridad/01-regla-derecha');
+  await page.goto('/es/');
+  await expect(next).toHaveAttribute('href', firstHref!);
+  await expect(page.locator('.qa-continue-lesson')).toHaveCount(0);
+});
+
 test('the theme toggle switches to dark mode and the choice survives a reload', async ({ page }) => {
   await page.emulateMedia({ colorScheme: 'light' });
   await page.goto('/es/');

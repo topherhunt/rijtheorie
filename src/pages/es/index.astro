@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import ChapterTable from '../../components/ChapterTable.tsx';
+import NextLessons from '../../components/NextLessons.tsx';
 import { chapters } from '../../lib/data.ts';
 import { lessons } from '../../lib/lessons.ts';
 import { questionsByLesson } from '../../lib/questions.ts';
@@ -8,6 +9,13 @@ import { REPO_URL, SITE_NAME, href } from '../../config.ts';
 
 const all = await lessons('es');
 const byLesson = await questionsByLesson();
+const rowsOf = (chapterId: string) => all.filter((l) => l.chapter.id === chapterId).map((l) => ({
+  id: l.id,
+  title: l.entry.data.title,
+  href: href(l.path),
+  qids: (byLesson.get(l.id) ?? []).map((q) => q.id), // a lesson without a quiz file shows 0 / 0
+}));
+const courseRows = chapters().flatMap((c) => rowsOf(c.id));
 ---
 
 <Layout title={SITE_NAME} description="Curso gratuito y no oficial para el examen teórico de coche (rijbewijs B) en los Países Bajos, en español.">
@@ -19,14 +27,11 @@ const byLesson = await questionsByLesson();
     <p><i class="bi bi-exclamation-triangle-fill mr-1" aria-hidden="true"></i> Este curso <strong>no es oficial</strong> ni del CBR, y puede tener errores. Estúdialo junto con material oficial; el examen es en neerlandés o inglés. Cada regla enlaza a su fuente. <a class="qa-home-report font-semibold whitespace-nowrap underline" href={`${REPO_URL}/issues/new?template=problema.yml`} target="_blank" rel="noopener">Reporta un error</a> · <a class="qa-home-about font-semibold whitespace-nowrap underline" href={href('es/acerca/')}>Acerca del curso</a></p>
   </div>
 
+  <NextLessons client:idle rows={courseRows} />
+
   <ol class="qa-chapters mt-8 flex flex-col gap-6">
     {chapters().map((c) => {
-      const rows = all.filter((l) => l.chapter.id === c.id).map((l) => ({
-        id: l.id,
-        title: l.entry.data.title,
-        href: href(l.path),
-        qids: (byLesson.get(l.id) ?? []).map((q) => q.id), // a lesson without a quiz file shows 0 / 0
-      }));
+      const rows = rowsOf(c.id);
       return (
         <li id={c.id} class="qa-chapter rounded-xl border border-slate-200 bg-white p-4">
           <h2 class="text-xl font-bold"><span class="text-slate-400">{c.n}.</span> {c.title}</h2>

@@ -29,6 +29,8 @@ export interface State {
   /** lessonId -> markdown note. */
   notes: Record<string, { text: string; at: string }>;
   exams: ExamRecord[];
+  /** Lesson page opened most recently, for "continue where you left off". Absent in older progress files. */
+  lastLesson?: { id: string; at: string };
 }
 
 export const emptyState = (): State => ({ version: SCHEMA_VERSION, answers: {}, log: [], placements: [], done: {}, notes: {}, exams: [] });
@@ -61,6 +63,7 @@ export function parseState(raw: string): State {
   if (s.version !== SCHEMA_VERSION) throw new Error(`Unsupported progress version ${String(s.version)} (expected ${SCHEMA_VERSION})`);
   for (const k of ['answers', 'done', 'notes'] as const) if (typeof s[k] !== 'object' || s[k] === null) throw new Error(`Progress file is missing "${k}"`);
   for (const k of ['exams', 'log', 'placements'] as const) if (!Array.isArray(s[k])) throw new Error(`Progress file is missing "${k}"`);
+  if (s.lastLesson !== undefined && typeof s.lastLesson?.id !== 'string') throw new Error('Progress file has an invalid "lastLesson"');
   return s as State;
 }
 
@@ -104,6 +107,9 @@ export class Store {
     if (done) next[lessonId] = now.toISOString();
     else delete next[lessonId];
     this.commit({ ...this.state, done: next });
+  }
+  visitLesson(lessonId: string, now = new Date()) {
+    this.commit({ ...this.state, lastLesson: { id: lessonId, at: now.toISOString() } });
   }
   setNote(lessonId: string, text: string, now = new Date()) {
     const notes = { ...this.state.notes };

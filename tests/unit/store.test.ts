@@ -34,6 +34,18 @@ describe('Store', () => {
     expect(s.get().answers.q1).toMatchObject({ tries: 2, correct: 2, box: 2 });
   });
 
+  it('remembers the last lesson opened and persists it', () => {
+    const b = memory();
+    new Store(b).visitLesson('es/via/01-partes', NOW);
+    expect(new Store(b).get().lastLesson).toEqual({ id: 'es/via/01-partes', at: NOW.toISOString() });
+  });
+
+  it('rejects a progress file with a malformed lastLesson but accepts one without it', () => {
+    const base = { version: 1, answers: {}, log: [], placements: [], done: {}, notes: {}, exams: [] };
+    expect(() => parseState(JSON.stringify(base))).not.toThrow();
+    expect(() => parseState(JSON.stringify({ ...base, lastLesson: 'x' }))).toThrow(/lastLesson/);
+  });
+
   it('logs every graded answer in order', () => {
     const s = new Store(memory());
     s.recordAnswer('a', true, NOW);

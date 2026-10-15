@@ -51,10 +51,10 @@ docs/                    this folder
 - Icons: Bootstrap Icons font (`<i class="bi bi-...">`), imported in `Layout.astro`.
 - `class="tooltip" data-tip="..."` (utility in `global.css`) shows a hover/focus bubble; not shown on touch, so never put essential info only there.
 - Unofficial-course notices: the amber `.qa-disclaimer` box on the home page, the About page, and the per-lesson "not reviewed" notice. The footer holds only the report link.
-- Home page: one `ChapterTable` island per chapter (lessons, questions whose latest answer is correct / total, read check). A CSS grid list: three columns from `sm` up, two lines per lesson on phones.
+- Home page: one `ChapterTable` island per chapter (lessons, questions whose latest answer is correct / total, read check). A CSS grid list: three columns from `sm` up, two lines per lesson on phones. Above the chapters, `NextLessons` links the first lesson in course order that is not finished (marked read and the latest answer to each of its questions correct) and, when it is a different lesson, the last lesson opened ("Continuar donde lo dejaste").
 
 ## Client state
-- `src/lib/store.ts`: one versioned JSON blob in localStorage (`rijtheorie:v1`), accessed only through the `Store` interface so a synced backend can replace it. Holds per-question answer records with Leitner boxes, a log of the last 500 graded answers, lessons done, notes, mock exams and placement tests. Export/import as a JSON file on the "Mi progreso" page.
+- `src/lib/store.ts`: one versioned JSON blob in localStorage (`rijtheorie:v1`), accessed only through the `Store` interface so a synced backend can replace it. Holds per-question answer records with Leitner boxes, a log of the last 500 graded answers, lessons done, the last lesson opened (`lastLesson`, written by `LessonTools`), notes, mock exams and placement tests. Export/import as a JSON file on the "Mi progreso" page.
 - A correct answer only promotes a Leitner box when the question is due, so box 3 means correct on two occasions at least a day apart.
 - Writes fail loudly in the UI (banner) if storage is unavailable; the site still works without it.
 

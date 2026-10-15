@@ -1,47 +1,97 @@
 questions:
-  - id: sendas-g11
-    type: mc
-    prompt: ¿Qué indica esta señal?
+  - id: sendas-coche-aparcar
+    type: yesno
+    prompt: Buscas aparcamiento con tu coche. El único hueco libre está en un camino con esta señal, y solo vas a estar cinco minutos. ¿Puedes aparcar ahí?
     sign: G11
-    options: [Verplicht fietspad, Onverplicht fietspad, Voetpad, Fin de zona urbana]
-    answer: 0
-    explain: G11 es el carril bici obligatorio.
-    cites: ["rvv:bijlage1.G11"]
+    answer: false
+    explain: Un coche puede aparcar en otras partes de la vía, pero nunca en el trottoir, el voetpad, el fietspad, el fiets/bromfietspad ni el ruiterpad. Que sea poco tiempo no cambia nada.
+    cites: ["rvv:10.1"]
 
-  - id: sendas-g13
-    type: mc
-    prompt: ¿Qué indica esta señal?
-    sign: G13
-    options: [Verplicht fietspad, Onverplicht fietspad, Ruiterpad, Autoweg]
-    answer: 1
-    explain: G13 es el carril bici no obligatorio.
-    cites: ["rvv:bijlage1.G13"]
-
-  - id: sendas-g12a
-    type: mc
-    prompt: ¿Qué indica esta señal?
-    sign: G12a
-    options: [Camino para jinetes, Camino para bicicletas y bromfietsen, Camino para peatones, Calzada para autobuses]
-    answer: 1
-    explain: G12a es el fiets/bromfietspad.
-    cites: ["rvv:bijlage1.G12a"]
-
-  - id: sendas-g9
-    type: mc
-    prompt: ¿Qué indica esta señal?
-    sign: G9
-    options: [Ruiterpad, Voetpad, Fietspad obligatorio, Erf]
-    answer: 0
-    explain: G9 es el ruiterpad, un camino para jinetes.
-    cites: ["rvv:bijlage1.G9"]
-
-  - id: sendas-fin
+  - id: sendas-g11-quien
     type: multi
-    prompt: ¿Cuáles de estas parejas señal-significado son correctas?
-    options: [G8 es el fin del voetpad, G12 es el fin del verplicht fietspad, G14 es el fin del onverplicht fietspad, G8 es el fin de zona urbana]
-    answer: [0, 1, 2]
-    explain: G8, G12 y G14 son las señales de fin de voetpad, verplicht fietspad y onverplicht fietspad. El fin de zona urbana es H2.
-    cites: ["rvv:bijlage1.G8", "rvv:bijlage1.G12", "rvv:bijlage1.G14"]
+    prompt: Al lado de la calzada hay un camino con esta señal. ¿Quiénes deben ir por ese camino y no por la calzada?
+    sign: G11
+    options: [Un ciclista, Un snorfiets sin placa adicional bajo la señal, Una bromfiets, Un coche]
+    answer: [0, 1]
+    explain: El G11 es un fietspad obligatorio. Lo usan las bicicletas y, porque siguen las reglas de la bicicleta, los snorfietsen. La bromfiets solo usa el fiets/bromfietspad (G12a), así que aquí va por la calzada. El coche nunca usa un fietspad.
+    cites: ["rvv:5.1", "rvv:2b", "rvv:6.2", "rvv:10.1"]
+
+  - id: sendas-g11-bromfiets
+    type: mc
+    prompt: Vas detrás de una bromfiets. Al lado de la calzada empieza un camino con esta señal. ¿Qué debe hacer la bromfiets?
+    sign: G11
+    options: [Seguir por la calzada, Pasarse al camino, Elegir entre el camino y la calzada, Pasarse al camino solo si va despacio]
+    answer: 0
+    explain: El G11 obliga a bicicletas y snorfietsen, no a bromfietsen. Una bromfiets solo usa el fiets/bromfietspad (G12a); si no hay uno, va por la calzada. Verla en la calzada aquí es correcto.
+    cites: ["rvv:6.1", "rvv:6.2"]
+
+  - id: sendas-speed-pedelec
+    type: mc
+    prompt: Una speed-pedelec (bicicleta eléctrica que sigue empujando por encima de 25 km/h) llega a un tramo con un camino con esta señal, sin ninguna placa debajo, y ningún otro camino. ¿Por dónde va?
+    sign: G11
+    options: [Por la calzada, Por el camino porque tiene pedales, Por el camino si no pasa de 25 km/h, Por la acera]
+    answer: 0
+    explain: La ley define la speed-pedelec como una bromfiets, y no como un snorfiets. La bromfiets no usa el G11; sin fiets/bromfietspad va por la calzada. Tener pedales no la convierte en bicicleta.
+    cites: ["rvv:1", "rvv:6.2"]
+
+  - id: sendas-g12a-bromfiets
+    type: mc
+    prompt: Al lado de la calzada hay un camino con esta señal. ¿Qué hace una bromfiets?
+    sign: G12a
+    options: [Debe ir por el camino, Puede elegir entre el camino y la calzada, Debe ir por la calzada, Va por el camino solo de noche]
+    answer: 0
+    explain: El G12a es un fiets/bromfietspad. Bicicletas, snorfietsen y bromfietsen deben usarlo; la bromfiets solo va por la calzada si no hay uno.
+    cites: ["rvv:6.1", "rvv:6.2"]
+
+  - id: sendas-g13-ciclista
+    type: yesno
+    prompt: Al lado de la calzada hay un camino con esta señal. Un ciclista sigue por la calzada en vez de por el camino. ¿Lo hace bien?
+    sign: G13
+    answer: true
+    explain: El G13 es un fietspad no obligatorio. El ciclista puede usarlo, pero no tiene que hacerlo; como no hay fietspad obligatorio ni fiets/bromfietspad, puede ir por la calzada.
+    cites: ["rvv:5.2", "rvv:5.3"]
+
+  - id: sendas-g13-bromfiets
+    type: mc
+    prompt: Al lado de la calzada hay un camino con esta señal. ¿Qué hace una bromfiets?
+    sign: G13
+    options: [Va por la calzada, Puede usar el camino porque no es obligatorio, Debe usar el camino, Puede usar el camino con el motor apagado]
+    answer: 0
+    explain: '"No obligatorio" se refiere a los ciclistas: pueden elegir. La bromfiets no puede usar ningún fietspad, ni obligatorio ni no obligatorio; sin fiets/bromfietspad va por la calzada. Lo del motor apagado vale para el snorfiets de gasolina, no para la bromfiets.'
+    cites: ["rvv:5.3", "rvv:6.2"]
+
+  - id: sendas-g7-ciclista
+    type: yesno
+    prompt: Al lado de la calzada, con mucho tráfico, hay un camino con esta señal. ¿Puede un ciclista ir por ese camino para estar más seguro?
+    sign: G7
+    answer: false
+    explain: El G7 es un voetpad, para peatones. Las reglas de los ciclistas les dan el fietspad, el fiets/bromfietspad o la calzada, nunca el voetpad.
+    cites: ["rvv:4.1", "rvv:5"]
+
+  - id: sendas-g9-quien
+    type: mc
+    prompt: Ves esta señal al principio de un camino al lado de la calzada. ¿Qué significa para quién?
+    sign: G9
+    options: [Los jinetes deben usar ese camino, Los peatones deben usar ese camino, Los ciclistas pueden elegir ese camino, Los coches pueden aparcar en ese camino]
+    answer: 0
+    explain: El G9 es un ruiterpad. Los jinetes deben usarlo. Un coche no puede aparcar en un ruiterpad.
+    cites: ["rvv:bijlage1.G9", "rvv:8.1", "rvv:10.1"]
+
+  - id: sendas-peaton-fietspad
+    type: yesno
+    prompt: En una carretera sin acera ni voetpad hay un fietspad. Un peatón camina por el fietspad. ¿Está en el sitio correcto?
+    answer: true
+    explain: Sin trottoir ni voetpad, el peatón debe usar el fietspad o el fiets/bromfietspad. Solo si tampoco hay uno va por el arcén o el borde de la calzada.
+    cites: ["rvv:4.2", "rvv:4.3"]
+
+  - id: sendas-fin-g12
+    type: mc
+    prompt: Un ciclista pasa esta señal y después no hay ningún otro fietspad ni fiets/bromfietspad. ¿Por dónde sigue?
+    sign: G12
+    options: [Por la calzada, Por la acera, Por donde quiera, Debe bajarse y caminar]
+    answer: 0
+    explain: El G12 marca el fin del fietspad obligatorio. Sin fietspad obligatorio ni fiets/bromfietspad, los ciclistas usan la calzada.
+    cites: ["rvv:bijlage1.G12", "rvv:5.2"]
 
   - id: sendas-fietsstrook
     type: mc
@@ -51,12 +101,12 @@ questions:
     explain: Fietsstrook es una parte de la rijbaan marcada con líneas continuas o discontinuas y con dibujos de bicicleta.
     cites: ["rvv:1"]
 
-  - id: sendas-fietspad-vs-strook
+  - id: sendas-fietsstrook-discontinua
     type: yesno
-    prompt: Un fietsstrook es una parte de la rijbaan.
+    prompt: Una calle estrecha tiene un fietsstrook marcado con líneas discontinuas, sin ciclistas. ¿Puede tu coche circular sobre él?
     answer: true
-    explain: El fietsstrook está dentro de la rijbaan. El fietspad, en cambio, está fuera de ella.
-    cites: ["rvv:1"]
+    explain: El fietsstrook es parte de la rijbaan, y el coche usa la rijbaan. La prohibición para el coche solo vale para el fietsstrook con líneas continuas. Un fietspad, en cambio, no es parte de la rijbaan.
+    cites: ["rvv:1", "rvv:10.1", "rvv:10.2"]
 
   - id: sendas-suggestie
     type: yesno
@@ -64,12 +114,3 @@ questions:
     answer: false
     explain: El RVV define el fietsstrook por sus líneas y sus dibujos de bicicleta. Una franja sin esos dibujos no cumple la definición; la palabra suggestiestrook no aparece en el RVV.
     cites: ["rvv:1"]
-
-  - id: sendas-g7
-    type: mc
-    prompt: ¿Qué indica esta señal?
-    sign: G7
-    options: [Voetpad, Verplicht fietspad, Ruiterpad, Calzada para autobuses]
-    answer: 0
-    explain: G7 es el voetpad.
-    cites: ["rvv:bijlage1.G7"]
