@@ -1,0 +1,243 @@
+# Glossary: id -> { nl, es, def?, cbr?, untranslated? }
+# cbr: true = on the CBR exam plan's word list (examenplan ch. 4). untranslated: true = CBR never translates it (ch. 6).
+# ids are lowercase Dutch slugs; lessons use <T id="..."/>.
+
+# --- Vía y usuarios ---
+weg: { nl: weg, es: vía / carretera }
+rijbaan: { nl: rijbaan, es: calzada, def: "La parte de la vía destinada a vehículos (no incluye carril bici separado, acera ni arcén)." }
+rijstrook: { nl: rijstrook, es: carril, def: "Franja de la calzada, normalmente marcada con líneas, para una fila de vehículos." }
+doorgaande-rijbaan: { nl: doorgaande rijbaan, es: calzada principal / de paso, cbr: true }
+linker-rijstrook: { nl: linker rijstrook, es: carril izquierdo, cbr: true }
+fietspad: { nl: fietspad, es: carril bici (separado), def: "Camino para bicicletas separado de la calzada, señalizado con G11, G12a o G13." }
+fietsstrook: { nl: fietsstrook, es: carril bici pintado en la calzada, def: "Carril para bicicletas marcado en la calzada con línea continua o discontinua y símbolos de bicicleta.", cbr: true }
+suggestiestrook: { nl: suggestiestrook, es: franja ciclista sugerida, def: "Franja de color (a menudo roja) al borde de la calzada que parece un carril bici pero NO lo es legalmente. Puedes circular y detenerte sobre ella.", cbr: true }
+trottoir: { nl: trottoir, es: acera, cbr: true }
+voetpad: { nl: voetpad, es: senda peatonal }
+berm: { nl: berm, es: arcén de tierra / cuneta, def: "Franja sin pavimentar al lado de la vía.", cbr: true }
+vluchtstrook: { nl: vluchtstrook, es: arcén de emergencia, def: "Franja a la derecha en la autosnelweg/autoweg, solo para emergencias.", cbr: true }
+spitsstrook: { nl: spitsstrook, es: carril de hora punta, def: "Carril extra (a menudo el arcén) que se abre solo cuando lo indican las señales sobre la vía.", cbr: true }
+invoegstrook: { nl: invoegstrook, es: carril de aceleración / incorporación, cbr: true }
+uitvoegstrook: { nl: uitvoegstrook, es: carril de desaceleración / salida, cbr: true }
+uitrijstrook: { nl: uitrijstrook, es: carril de salida (para salir de una vía), cbr: true }
+voorsorteerstrook: { nl: voorsorteerstrook, es: carril de preselección, def: "Carril marcado con flechas antes de un cruce; debes seguir la dirección de la flecha.", cbr: true }
+busstrook: { nl: busstrook, es: carril bus, cbr: true }
+rijbaanscheiding: { nl: (verhoogde) rijbaanscheiding, es: separación (elevada) entre calzadas, def: "Mediana o isleta que separa calzadas.", cbr: true }
+bebouwde-kom: { nl: bebouwde kom, es: zona urbana (poblado), def: "El área entre las señales H1 y H2 (el letrero con el nombre del lugar). La velocidad base es 50 km/h.", cbr: true }
+autosnelweg: { nl: autosnelweg, es: autopista, def: "Vía señalizada con G1. Solo para vehículos de motor que puedan y deban ir a más de 60 km/h. Máximo legal 130 km/h, pero las señales a menudo indican menos (ver capítulo 3).", cbr: true }
+autoweg: { nl: autoweg, es: "autoweg (vía para automóviles)", def: "Vía señalizada con G3. Máximo 100 km/h; solo para vehículos que puedan y deban ir a más de 50 km/h. El CBR no traduce esta palabra.", cbr: true, untranslated: true }
+erf: { nl: erf, es: "erf (zona residencial)", def: "Zona señalizada con G5 donde peatones y niños pueden usar toda la vía. Máximo 15 km/h (velocidad al paso). El CBR no traduce esta palabra.", cbr: true, untranslated: true }
+eenrichtingsweg: { nl: eenrichtingsweg, es: calle de sentido único, cbr: true }
+doodlopende-weg: { nl: doodlopende weg, es: calle sin salida, cbr: true }
+kruispunt: { nl: kruispunt, es: cruce / intersección }
+splitsing: { nl: splitsing, es: bifurcación (cruce en T o Y), cbr: true }
+rotonde: { nl: rotonde, es: rotonda }
+turborotonde: { nl: turborotonde, es: turborrotonda, def: "Rotonda con carriles separados por bordillos: eliges el carril ANTES de entrar y no puedes cambiar dentro.", cbr: true }
+uitrit: { nl: uitrit, es: salida de un terreno / garaje, def: "Salida de un garaje, parking, gasolinera o camino privado hacia la vía. Quien sale de una uitrit cede el paso a todos.", cbr: true }
+inrit: { nl: inrit, es: entrada a un terreno / garaje }
+overweg: { nl: overweg, es: paso a nivel (cruce con tren), cbr: true }
+overwegbomen: { nl: overwegbomen, es: barreras del paso a nivel, cbr: true }
+slagbomen: { nl: slagbomen, es: barreras, cbr: true }
+tramkruising: { nl: tramkruising, es: cruce con tranvía, cbr: true }
+voetgangersoversteekplaats: { nl: voetgangersoversteekplaats, es: paso de peatones (paso de cebra), def: "En el habla diaria: zebrapad.", cbr: true }
+zebrapad: { nl: zebrapad, es: paso de cebra }
+viaduct: { nl: viaduct, es: viaducto / paso elevado, cbr: true }
+vluchthaven: { nl: vluchthaven, es: refugio de emergencia, def: "Ensanche junto a la vía (p. ej. en autopistas sin arcén o túneles) para detenerse en caso de avería.", cbr: true }
+uitwijkplaats: { nl: uitwijkplaats, es: apartadero, def: "Ensanche en una vía estrecha para dejar pasar al tráfico que viene de frente.", cbr: true }
+veerpont: { nl: veerpont, es: transbordador (ferry), cbr: true }
+rijbaanversmalling: { nl: rijbaanversmalling, es: estrechamiento de calzada, cbr: true }
+wegversmalling: { nl: wegversmalling, es: estrechamiento de la vía, cbr: true }
+verkeersdrempel: { nl: verkeersdrempel, es: badén / lomo de burro (reductor de velocidad), cbr: true }
+afritnummer: { nl: afritnummer, es: número de salida, cbr: true }
+routenummer: { nl: routenummer, es: número de ruta, cbr: true }
+hectometerbordje: { nl: hectometerbordje, es: poste/placa hectométrica, def: "Placa pequeña cada 100 m en autopistas; indica tu posición exacta (útil al llamar por una avería o accidente).", cbr: true }
+wegwerkzaamheden: { nl: wegwerkzaamheden, es: obras en la vía, cbr: true }
+omleidingsroute: { nl: omleidingsroute, es: ruta de desvío, cbr: true }
+wegomleiding: { nl: wegomleiding, es: desvío, cbr: true }
+uitwijkroute: { nl: uitwijkroute, es: ruta alternativa, cbr: true }
+parkeergelegenheid: { nl: parkeergelegenheid, es: lugar de estacionamiento, cbr: true }
+taxistandplaats: { nl: taxistandplaats, es: parada de taxis, cbr: true }
+zone: { nl: zone, es: zona, def: "Una señal con la palabra ZONE vale para toda el área hasta la señal de fin de zona.", cbr: true }
+wegligging: { nl: wegligging, es: trazado de la vía, cbr: true }
+spoorvorming: { nl: spoorvorming, es: roderas (surcos en el asfalto), def: "Surcos formados por el paso de vehículos pesados; se acumula agua en ellos (riesgo de aquaplaning).", cbr: true }
+losliggende-stenen: { nl: losliggende stenen, es: gravilla suelta, cbr: true }
+
+# --- Usuarios y vehículos ---
+weggebruiker: { nl: weggebruiker, es: usuario de la vía, cbr: true }
+medeweggebruiker: { nl: medeweggebruiker(s), es: otros usuarios de la vía, cbr: true }
+bestuurder: { nl: bestuurder, es: conductor/a, def: "Cualquiera que conduce un vehículo (también un ciclista) o un animal." }
+beginnend-bestuurder: { nl: beginnend bestuurder, es: conductor/a novel, def: "Conductor/a con permiso desde hace poco (en general, menos de 5 años). Tiene un límite de alcohol más bajo; ver capítulo 9.", cbr: true }
+voetganger: { nl: voetganger, es: peatón }
+fietser: { nl: fietser, es: ciclista }
+ruiter: { nl: ruiter, es: jinete, cbr: true }
+skeelers: { nl: skeelers, es: patines en línea, cbr: true }
+voertuig: { nl: voertuig, es: vehículo }
+motorvoertuig: { nl: motorvoertuig, es: vehículo de motor, def: "Vehículo propulsado por motor, excepto los que van sobre rieles (tren, tranvía) y algunos vehículos eléctricos ligeros.", cbr: true }
+motorrijtuig: { nl: motorrijtuig, es: vehículo de motor (en la ley de seguros y matrícula), cbr: true }
+personenauto: { nl: personenauto, es: turismo / auto, cbr: true }
+bedrijfsauto: { nl: bedrijfsauto, es: furgoneta / vehículo comercial ligero }
+vrachtauto: { nl: vrachtauto, es: camión }
+autobus: { nl: autobus, es: autobús }
+touringcar: { nl: touringcar, es: autobús de turismo, cbr: true }
+lijnbus: { nl: lijnbus, es: autobús de línea }
+tram: { nl: tram, es: tranvía }
+motorfiets: { nl: motorfiets, es: motocicleta, cbr: true }
+motorrijder: { nl: motorrijder, es: motociclista, cbr: true }
+bromfiets: { nl: bromfiets, es: ciclomotor (hasta 45 km/h), def: "Ciclomotor con matrícula amarilla. Velocidad máxima 45 km/h." }
+snorfiets: { nl: snorfiets, es: "snorfiets (ciclomotor lento)", def: "Ciclomotor limitado a 25 km/h, con matrícula azul. El CBR no traduce esta palabra.", cbr: true, untranslated: true }
+speed-pedelec: { nl: speed pedelec, es: "speed pedelec (bici eléctrica rápida)", def: "Bicicleta eléctrica con asistencia hasta 45 km/h; legalmente es un tipo de bromfiets (matrícula amarilla, casco). El CBR no traduce esta palabra.", cbr: true, untranslated: true }
+brommobiel: { nl: brommobiel, es: "brommobiel (microcoche)", def: "Microcoche de máximo 45 km/h que se puede conducir con carnet AM. El CBR no traduce esta palabra.", cbr: true, untranslated: true }
+gehandicaptenvoertuig: { nl: gehandicaptenvoertuig, es: vehículo para personas con discapacidad, cbr: true }
+landbouwvoertuig: { nl: landbouwvoertuig, es: vehículo agrícola, cbr: true }
+veegwagen: { nl: veegwagen, es: barredora, cbr: true }
+voorrangsvoertuig: { nl: voorrangsvoertuig, es: vehículo prioritario, def: "Ambulancia, policía o bomberos con luces azules intermitentes y sirena encendidas. Debes dejarles paso siempre.", cbr: true }
+politieauto: { nl: politieauto, es: auto de policía, cbr: true }
+militaire-colonne: { nl: militaire colonne, es: columna militar, cbr: true }
+uitvaartstoet: { nl: uitvaartstoet, es: cortejo fúnebre, cbr: true }
+verkeersregelaar: { nl: verkeersregelaar, es: controlador/a de tráfico, def: "Persona autorizada (con chaleco y la palabra 'verkeersregelaar') que da indicaciones de tráfico. Sus indicaciones se deben seguir.", cbr: true }
+carpooler: { nl: carpooler, es: persona que comparte auto, cbr: true }
+passagier: { nl: passagier, es: pasajero/a, cbr: true }
+tegenpartij: { nl: tegenpartij, es: la otra parte (en un accidente), cbr: true }
+slachtoffer: { nl: slachtoffer, es: víctima, cbr: true }
+tegenligger: { nl: tegenligger, es: vehículo que viene de frente }
+
+# --- Prioridad y maniobras ---
+voorrang: { nl: voorrang, es: prioridad (derecho de paso), def: "Tener voorrang = el otro debe dejarte pasar. Dar voorrang (voorrang verlenen) = dejar pasar al otro." }
+voorrang-verlenen: { nl: voorrang verlenen, es: ceder el paso }
+voor-laten-gaan: { nl: voor laten gaan, es: dejar pasar (sin que sea cuestión de prioridad), def: "Se usa en situaciones que no son 'voorrang' en sentido estricto, p. ej. al girar o en una maniobra especial: debes dejar pasar a otros." }
+voorrangsweg: { nl: voorrangsweg, es: vía con prioridad, def: "Vía señalizada con B1; en todos los cruces tienes prioridad hasta la señal B2." }
+voorrangskruispunt: { nl: voorrangskruispunt, es: cruce con prioridad señalizada, cbr: true }
+gelijkwaardig-kruispunt: { nl: gelijkwaardig kruispunt, es: cruce sin prioridad señalizada, def: "Cruce donde ninguna vía tiene prioridad por señales: vale la regla de la derecha." }
+haaientanden: { nl: haaientanden, es: "dientes de tiburón (marca de ceda el paso)", def: "Triángulos blancos pintados en la calzada con la punta hacia ti: debes ceder el paso." }
+bijzondere-manoeuvre: { nl: bijzondere manoeuvre, es: maniobra especial, def: "Arrancar desde el borde, salir de una uitrit, dar marcha atrás, girar en U, etc. Quien la hace debe dejar pasar a todos los demás." }
+inhalen: { nl: inhalen, es: adelantar }
+invoegen: { nl: invoegen, es: incorporarse (a una vía rápida) }
+uitvoegen: { nl: uitvoegen, es: salir (de una vía rápida) }
+ritsen: { nl: ritsen, es: incorporarse en cremallera, def: "Cuando un carril termina, los vehículos se alternan uno a uno al final del carril." }
+voorsorteren: { nl: voorsorteren, es: preseleccionar carril }
+achteruitrijden: { nl: achteruitrijden, es: dar marcha atrás, cbr: true }
+keren: { nl: keren, es: dar la vuelta (cambio de sentido) }
+afslaan: { nl: afslaan, es: girar (a la izquierda o derecha) }
+rijrichting: { nl: rijrichting, es: sentido de circulación, cbr: true }
+stilstaan: { nl: stilstaan, es: detenerse (parar brevemente), def: "Detenerse para subir/bajar personas o cargar/descargar mercancías de inmediato. Más corto que parkeren." }
+parkeren: { nl: parkeren, es: estacionar, def: "Dejar el vehículo más tiempo del necesario para subir/bajar personas o cargar/descargar mercancías de inmediato." }
+parkeerschijf: { nl: parkeerschijf(-zone), es: disco de estacionamiento (zona azul), cbr: true }
+vergunninghouders: { nl: vergunninghouders, es: titulares de permiso, cbr: true }
+doorstroming: { nl: doorstroming, es: fluidez del tráfico, cbr: true }
+filevorming: { nl: filevorming, es: formación de atascos, cbr: true }
+file: { nl: file, es: atasco }
+verkeerssituatie: { nl: verkeerssituatie, es: situación de tráfico, cbr: true }
+
+# --- Señales y marcas ---
+verkeersbord: { nl: verkeersbord, es: señal de tráfico }
+verkeersteken: { nl: verkeersteken, es: señal de tráfico (señal o marca vial) }
+verkeerslicht: { nl: verkeerslicht, es: semáforo, cbr: true }
+aanwijzing: { nl: aanwijzing, es: indicación (de un agente o controlador), def: "Orden dada por un agente de policía o un verkeersregelaar. Tiene la máxima prioridad: por encima de semáforos, señales y reglas." }
+geslotenverklaring: { nl: geslotenverklaring, es: prohibición de acceso, cbr: true }
+matrixbord: { nl: matrixbord, es: panel electrónico sobre el carril, def: "Panel electrónico encima de los carriles de la autopista con velocidades, flechas o una cruz roja (carril cerrado).", cbr: true }
+vooraanduiding: { nl: vooraanduiding, es: preaviso (señal que anuncia algo más adelante), cbr: true }
+symbool: { nl: symbool, es: símbolo, cbr: true }
+wegmarkering: { nl: (weg)markering, es: marcas viales, cbr: true }
+doorgetrokken-streep: { nl: doorgetrokken streep, es: línea continua }
+onderbroken-streep: { nl: onderbroken streep, es: línea discontinua }
+blokmarkering: { nl: blokmarkering, es: línea de bloques, def: "Línea discontinua de bloques cortos y anchos que separa un carril de incorporación/salida o un carril de giro de la calzada principal.", cbr: true }
+verdrijvingsvlak: { nl: verdrijvingsvlak, es: zona cebreada (isleta pintada), def: "Zona con rayas diagonales rodeada de líneas: no puedes circular ni detenerte sobre ella si está rodeada por línea continua.", cbr: true }
+stopstreep: { nl: stopstreep, es: línea de detención }
+maximumsnelheid: { nl: maximumsnelheid, es: velocidad máxima, cbr: true }
+toegestane-maximumsnelheid: { nl: toegestane maximumsnelheid, es: velocidad máxima permitida, cbr: true }
+adviessnelheid: { nl: adviessnelheid, es: velocidad recomendada, cbr: true }
+optische-en-geluidssignalen: { nl: optische en geluidssignalen, es: señales luminosas y acústicas, cbr: true }
+geluidssignaal: { nl: geluidssignaal, es: señal acústica (claxon), cbr: true }
+claxonneren: { nl: claxonneren, es: tocar la bocina, cbr: true }
+knippersignaal: { nl: knippersignaal, es: señal intermitente / ráfaga, cbr: true }
+
+# --- Luces y equipo del vehículo ---
+dimlicht: { nl: dimlicht, es: luces de cruce (cortas) }
+linker-dimlicht: { nl: linker dimlicht, es: luz de cruce izquierda, cbr: true }
+rechter-dimlicht: { nl: rechter dimlicht, es: luz de cruce derecha, cbr: true }
+grootlicht: { nl: grootlicht, es: luces de carretera (largas) }
+dagrijlicht: { nl: dagrijlicht, es: luces de circulación diurna, cbr: true }
+mistlicht-voor: { nl: mistlicht (voor), es: faros antiniebla delanteros }
+mistachterlicht: { nl: mistachterlicht, es: luz antiniebla trasera, def: "Solo cuando la visibilidad es menor de 50 m por niebla o nieve.", cbr: true }
+achteruitrijlicht: { nl: achteruitrijlicht, es: luz de marcha atrás, cbr: true }
+waarschuwingslichten: { nl: waarschuwingslichten, es: luces de emergencia (warning), def: "Las cuatro intermitentes a la vez (alarmlichten).", cbr: true }
+richtingaanwijzer: { nl: richtingaanwijzer, es: intermitente (direccional), cbr: true }
+reflector: { nl: reflector(en), es: catadióptrico(s) / reflector(es), cbr: true }
+buitenspiegel: { nl: (goed afgestelde) buitenspiegel, es: espejo retrovisor exterior (bien ajustado), cbr: true }
+linker-buitenspiegel: { nl: linker buitenspiegel, es: retrovisor exterior izquierdo, cbr: true }
+rechter-buitenspiegel: { nl: rechter buitenspiegel, es: retrovisor exterior derecho, cbr: true }
+zijspiegel: { nl: zijspiegel, es: retrovisor lateral, cbr: true }
+binnenspiegel: { nl: binnenspiegel, es: retrovisor interior }
+dode-hoek: { nl: dode hoek, es: ángulo muerto, cbr: true }
+autogordel: { nl: autogordel, es: cinturón de seguridad, cbr: true }
+driepuntsgordel: { nl: driepuntsgordel, es: cinturón de tres puntos, cbr: true }
+heupgordel: { nl: heupgordel, es: cinturón abdominal (de dos puntos), cbr: true }
+kinderzitje: { nl: kinderzitje, es: silla infantil para auto }
+gevarendriehoek: { nl: gevarendriehoek, es: triángulo de emergencia, cbr: true }
+veiligheidshamer: { nl: veiligheidshamer, es: martillo de emergencia, cbr: true }
+fietsdrager: { nl: fietsdrager, es: portabicicletas, cbr: true }
+dashboard: { nl: dashboard, es: tablero / cuadro de instrumentos, cbr: true }
+cruise-control: { nl: cruise control, es: control de crucero, cbr: true }
+navigatiesysteem: { nl: navigatiesysteem, es: navegador (GPS), cbr: true }
+abs: { nl: antiblokkeersysteem (ABS), es: sistema antibloqueo de frenos (ABS), cbr: true }
+reminrichting: { nl: reminrichting, es: sistema de frenos, cbr: true }
+parkeerrem: { nl: parkeerrem, es: freno de estacionamiento (de mano), cbr: true }
+losbreekreminrichting: { nl: losbreekreminrichting, es: freno de emergencia por ruptura (del remolque), def: "Sistema que frena el remolque si se suelta del vehículo tractor.", cbr: true }
+achterruitverwarming: { nl: achterruitverwarming, es: desempañador de la luneta trasera, cbr: true }
+ruitensproeiervloeistof: { nl: ruitensproeiervloeistof, es: líquido limpiaparabrisas, cbr: true }
+bandenspanning: { nl: bandenspanning, es: presión de los neumáticos, cbr: true }
+reserveband: { nl: reserveband, es: rueda de repuesto, cbr: true }
+winterbanden: { nl: winterbanden, es: neumáticos de invierno, cbr: true }
+zomerbanden: { nl: zomerbanden, es: neumáticos de verano, cbr: true }
+slijtage: { nl: slijtage, es: desgaste, cbr: true }
+motorolie: { nl: motorolie, es: aceite del motor, cbr: true }
+oliepeil: { nl: oliepeil, es: nivel de aceite, cbr: true }
+toerental: { nl: toerental, es: revoluciones del motor (rpm), cbr: true }
+brandstofverbruik: { nl: brandstofverbruik, es: consumo de combustible, cbr: true }
+co2-uitstoot: { nl: CO2-uitstoot, es: emisiones de CO2, cbr: true }
+milieu: { nl: milieu, es: medio ambiente, cbr: true }
+maximum-massa: { nl: (toegestane) maximummassa, es: masa máxima (autorizada), cbr: true }
+aanhangwagen: { nl: aanhangwagen, es: remolque }
+
+# --- Conducción segura ---
+remweg: { nl: remweg, es: distancia de frenado, cbr: true }
+stopafstand: { nl: stopafstand, es: distancia de detención, def: "Distancia de reacción + distancia de frenado.", cbr: true }
+reactietijd: { nl: reactietijd, es: tiempo de reacción, cbr: true }
+reactievermogen: { nl: reactievermogen, es: capacidad de reacción, cbr: true }
+vertraging: { nl: vertraging, es: desaceleración / retraso, cbr: true }
+oplettendheid: { nl: oplettendheid, es: atención, cbr: true }
+rijgedrag: { nl: rijgedrag, es: forma de conducir, cbr: true }
+rijvaardigheid: { nl: rijvaardigheid, es: habilidad al volante, cbr: true }
+aquaplaning: { nl: aquaplaning, es: aquaplaning (hidroplaneo), cbr: true }
+slipgevaar: { nl: slipgevaar, es: peligro de derrape, cbr: true }
+zijwind: { nl: zijwind, es: viento lateral, cbr: true }
+weersomstandigheden: { nl: weersomstandigheden, es: condiciones meteorológicas, cbr: true }
+overstekende-kinderen: { nl: overstekende kinderen, es: niños cruzando, cbr: true }
+handheld-bellen: { nl: handheld bellen, es: hablar por teléfono con el móvil en la mano, cbr: true }
+handsfree-bellen: { nl: handsfree bellen, es: hablar por teléfono con manos libres, cbr: true }
+autopech: { nl: autopech, es: avería del auto, cbr: true }
+pechhulpdienst: { nl: pechhulpdienst, es: servicio de asistencia en carretera, cbr: true }
+wegenwacht: { nl: Wegenwacht, es: asistencia en carretera de la ANWB, cbr: true }
+verkeersongeval: { nl: (verkeers)ongeval, es: accidente (de tráfico), cbr: true }
+blikschade: { nl: blikschade, es: daños solo materiales (chapa), cbr: true }
+schadeformulier: { nl: schadeformulier, es: parte amistoso de accidente, def: "Formulario europeo de declaración de accidente (Europees schadeformulier).", cbr: true }
+identiteit: { nl: identiteit, es: identidad, cbr: true }
+
+# --- Alcohol, controles y leyes ---
+ademanalyse: { nl: ademanalyse, es: análisis de aliento (prueba de alcoholemia oficial), cbr: true }
+blaastest: { nl: blaastest, es: prueba de soplar (alcoholímetro rápido), cbr: true }
+speekseltest: { nl: speekseltest, es: prueba de saliva (drogas), cbr: true }
+politiecontrole: { nl: politiecontrole, es: control policial, cbr: true }
+politiebureau: { nl: politiebureau, es: comisaría, cbr: true }
+snelheidscontrole: { nl: snelheidscontrole, es: control de velocidad, cbr: true }
+rijbewijs: { nl: rijbewijs, es: permiso / licencia de conducir }
+rijbevoegdheid: { nl: (ontzegging van de) rijbevoegdheid, es: (retirada del) derecho a conducir, cbr: true }
+rijontzegging: { nl: rijontzegging, es: retirada del permiso por un juez, def: "Un juez te prohíbe conducir por un tiempo. El CBR lo traduce al inglés como 'driving licence suspended'.", cbr: true }
+rijverbod: { nl: rijverbod, es: prohibición de conducir (inmediata), def: "La policía te prohíbe seguir conduciendo, p. ej. por alcohol o cansancio, por un máximo de 24 horas. En inglés del CBR: 'forbidden to drive'.", cbr: true }
+lema-ema: { nl: (lichte) Educatieve maatregel alcohol en verkeer (LEMA/EMA), es: curso obligatorio sobre alcohol y tráfico, cbr: true }
+emg: { nl: Educatieve maatregel gedrag en verkeer (EMG), es: curso obligatorio sobre comportamiento en el tráfico, cbr: true }
+kentekenbewijs: { nl: kentekenbewijs, es: permiso de circulación del vehículo, cbr: true }
+kentekenplaat: { nl: kentekenplaat, es: placa de matrícula, cbr: true }
+apk: { nl: APK, es: "APK (inspección técnica obligatoria)", def: "Algemene Periodieke Keuring: inspección técnica periódica del vehículo. El CBR no traduce esta palabra.", cbr: true, untranslated: true }
+apk-gekeurd: { nl: APK-gekeurd, es: con la APK aprobada, cbr: true }
+apk-keuringsrapport: { nl: APK-keuringsrapport, es: informe de la inspección APK, cbr: true }
+wam: { nl: WAM-verzekering, es: seguro obligatorio de responsabilidad civil }

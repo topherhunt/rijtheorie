@@ -1,0 +1,17 @@
+# rijtheorie -- notes for Claude sessions
+
+Unofficial, open-source Spanish-language course for the Dutch car theory exam (CBR, rijbewijs B). Astro static site + Preact islands; content in MDX/YAML.
+
+Read before working:
+- `docs/BLUEPRINT.md` -- architecture, content model, conventions, how to add a lesson/question/image.
+- `docs/ROADMAP.md` -- current status, next steps, wish list.
+- `docs/AUDIT.md` -- correctness audit and red-team procedure (run it after any content change).
+- `docs/PROCESS.md` -- how the content was produced: sources used, decisions made and why.
+
+Hard rules for this project:
+- Every rule stated to learners cites a source (`<Rule cite>` in lessons, `cites:` on questions). No uncited legal claims.
+- The site is UNOFFICIAL; never remove or soften the disclaimers.
+- The owner creates the GitHub repo -- never run `gh repo create` or push.
+- `dev.env` holds `OPENROUTER_API_KEY` (gitignored). Image generation spends real money: total cap $20, stay within the approved image plan (`scripts/images/`).
+
+Commands: `npm run dev`, `npm run build`, `npm test` (vitest), `npm run test:e2e` (playwright), `npm run audit` (content checks), `npm run check` (astro check).

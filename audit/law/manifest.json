@@ -1,0 +1,70 @@
+{
+  "fetchedAt": "2026-10-15T17:48:20.236Z",
+  "validOn": "2026-10-15",
+  "laws": {
+    "rvv": {
+      "bwb": "BWBR0004825",
+      "title": "Reglement verkeersregels en verkeerstekens 1990",
+      "version": "2026-07-01_0",
+      "inForceFrom": "2026-07-01",
+      "inForceUntil": "9999-12-31",
+      "bytes": 791601
+    },
+    "wvw": {
+      "bwb": "BWBR0006622",
+      "title": "Wegenverkeerswet 1994",
+      "version": "2026-09-01_0",
+      "inForceFrom": "2026-09-01",
+      "inForceUntil": "9999-12-31",
+      "bytes": 1858623
+    },
+    "babw": {
+      "bwb": "BWBR0004826",
+      "title": "Besluit administratieve bepalingen inzake het wegverkeer",
+      "version": "2026-01-01_0",
+      "inForceFrom": "2026-01-01",
+      "inForceUntil": "9999-12-31",
+      "bytes": 254914
+    },
+    "rr": {
+      "bwb": "BWBR0008074",
+      "title": "Reglement rijbewijzen",
+      "version": "2026-10-01_0",
+      "inForceFrom": "2026-10-01",
+      "inForceUntil": "9999-12-31",
+      "bytes": 1699900
+    },
+    "rv": {
+      "bwb": "BWBR0025798",
+      "title": "Regeling voertuigen",
+      "version": "2026-07-01_0",
+      "inForceFrom": "2026-07-01",
+      "inForceUntil": "9999-12-31",
+      "bytes": 8989499
+    },
+    "kr": {
+      "bwb": "BWBR0006951",
+      "title": "Kentekenreglement",
+      "version": "2026-07-04_0",
+      "inForceFrom": "2026-07-04",
+      "inForceUntil": "9999-12-31",
+      "bytes": 562237
+    },
+    "wam": {
+      "bwb": "BWBR0002415",
+      "title": "Wet aansprakelijkheidsverzekering motorrijtuigen",
+      "version": "2025-07-24_0",
+      "inForceFrom": "2025-07-24",
+      "inForceUntil": "9999-12-31",
+      "bytes": 337687
+    },
+    "ret": {
+      "bwb": "BWBR0015601",
+      "title": "Regeling eisen theorie-examen rijbewijscategorie B",
+      "version": "2026-04-01_0",
+      "inForceFrom": "2026-04-01",
+      "inForceUntil": "9999-12-31",
+      "bytes": 41847
+    }
+  }
+}

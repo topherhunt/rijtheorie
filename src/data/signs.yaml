@@ -1,0 +1,746 @@
+# Official signs from RVV 1990 bijlage 1 (BWBR0004825, version 2026-07-01). nl = official description; es = our translation.
+# Images: public/signs/<code>.webp (converted from the official PNGs).
+- code: "A1"
+  nl: "Maximumsnelheid"
+  es: "Velocidad máxima"
+  img: signs/A1.webp
+- code: "A2"
+  nl: "Einde maximumsnelheid"
+  es: "Fin de velocidad máxima"
+  img: signs/A2.webp
+- code: "A3"
+  nl: "Maximumsnelheid op een electronisch signaleringsbord"
+  es: "Velocidad máxima en panel electrónico"
+  img: signs/A3.webp
+- code: "A4"
+  nl: "Adviessnelheid"
+  es: "Velocidad recomendada"
+  img: signs/A4.webp
+- code: "A5"
+  nl: "Einde adviessnelheid"
+  es: "Fin de velocidad recomendada"
+  img: signs/A5.webp
+- code: "B1"
+  nl: "Voorrangsweg"
+  es: "Vía con prioridad (voorrangsweg)"
+  img: signs/B1.webp
+- code: "B2"
+  nl: "Einde voorrangsweg"
+  es: "Fin de vía con prioridad"
+  img: signs/B2.webp
+- code: "B3"
+  nl: "Voorrangskruispunt"
+  es: "Cruce con prioridad"
+  img: signs/B3.webp
+- code: "B4"
+  nl: "Voorrangskruispunt Zijweg links"
+  es: "Cruce con prioridad, vía lateral a la izquierda"
+  img: signs/B4.webp
+- code: "B5"
+  nl: "Voorrangskruispunt Zijweg rechts"
+  es: "Cruce con prioridad, vía lateral a la derecha"
+  img: signs/B5.webp
+- code: "B6"
+  nl: "Verleen voorrang aan bestuurders op de kruisende weg"
+  es: "Ceda el paso a los conductores de la vía que cruza"
+  img: signs/B6.webp
+- code: "B7"
+  nl: "Stop; verleen voorrang aan bestuurders op de kruisende weg"
+  es: "Stop: deténgase y ceda el paso a los conductores de la vía que cruza"
+  img: signs/B7.webp
+- code: "C1"
+  nl: "Gesloten in beide richtingen voor voertuigen, ruiters en geleiders van rij- of trekdieren of vee"
+  es: "Cerrado en ambos sentidos para vehículos, jinetes y conductores de animales"
+  img: signs/C1.webp
+- code: "C2"
+  nl: "Eenrichtingsweg, in deze richting gesloten voor voertuigen, ruiters en geleiders van rij- of trekdieren of vee"
+  es: "Sentido único: prohibido entrar en esta dirección para vehículos, jinetes y conductores de animales"
+  img: signs/C2.webp
+- code: "C3"
+  nl: "Eenrichtingsweg"
+  es: "Sentido único (señal informativa)"
+  img: signs/C3.webp
+- code: "C4"
+  nl: "Eenrichtingsweg"
+  es: "Sentido único (señal informativa)"
+  img: signs/C4.webp
+- code: "C5"
+  nl: "Inrijden toegestaan"
+  es: "Se permite entrar (sentido único en esta dirección)"
+  img: signs/C5.webp
+- code: "C6"
+  nl: "Gesloten voor motorvoertuigen op meer dan twee wielen"
+  es: "Cerrado para vehículos de motor de más de dos ruedas"
+  img: signs/C6.webp
+- code: "C7"
+  nl: "Gesloten voor vrachtauto's"
+  es: "Cerrado para camiones"
+  img: signs/C7.webp
+- code: "C7a"
+  nl: "Gesloten voor autobussen"
+  es: "Cerrado para autobuses"
+  img: signs/C7a.webp
+- code: "C7b"
+  nl: "Gesloten voor autobussen en vrachtauto’s"
+  es: "Cerrado para autobuses y camiones"
+  img: signs/C7b.webp
+- code: "C8"
+  nl: "Gesloten voor landbouw- en bosbouwtrekkers, motorrijtuigen met beperkte snelheid en mobiele machines"
+  es: "Cerrado para tractores agrícolas y forestales, vehículos de motor de velocidad limitada y máquinas móviles"
+  img: signs/C8.webp
+- code: "C9"
+  nl: "Gesloten voor ruiters, vee, wagens, landbouw- en bosbouwtrekkers, motorrijtuigen met beperkte snelheid, mobiele machines, brommobielen, fietsen, snorfietsen, bromfietsen en gehandicaptenvoertuigen"
+  es: "Cerrado para jinetes, ganado, carros, tractores, vehículos de velocidad limitada, máquinas móviles, brommobielen, bicicletas, snorfietsen, ciclomotores y vehículos para personas con discapacidad"
+  img: signs/C9.webp
+- code: "C10"
+  nl: "Gesloten voor motorvoertuigen met aanhangwagen"
+  es: "Cerrado para vehículos de motor con remolque"
+  img: signs/C10.webp
+- code: "C11"
+  nl: "Gesloten voor motorfietsen"
+  es: "Cerrado para motocicletas"
+  img: signs/C11.webp
+- code: "C12"
+  nl: "Gesloten voor alle motorvoertuigen"
+  es: "Cerrado para todos los vehículos de motor"
+  img: signs/C12.webp
+- code: "C13"
+  nl: "Gesloten voor bromfietsen, snorfietsen en gehandicaptenvoertuigen, met in werking zijnde motor"
+  es: "Cerrado para ciclomotores, snorfietsen y vehículos para personas con discapacidad con el motor en marcha"
+  img: signs/C13.webp
+- code: "C14"
+  nl: "Gesloten voor fietsen en voor gehandicaptenvoertuigen zonder motor"
+  es: "Cerrado para bicicletas y vehículos para personas con discapacidad sin motor"
+  img: signs/C14.webp
+- code: "C15"
+  nl: "Gesloten voor fietsen, bromfietsen en gehandicaptenvoertuigen"
+  es: "Cerrado para bicicletas, ciclomotores y vehículos para personas con discapacidad"
+  img: signs/C15.webp
+- code: "C16"
+  nl: "Gesloten voor voetgangers"
+  es: "Cerrado para peatones"
+  img: signs/C16.webp
+- code: "C17"
+  nl: "Gesloten voor voertuigen en samenstellen van voertuigen die, met inbegrip van de lading, langer zijn dan op het bord is aangegeven"
+  es: "Cerrado para vehículos o combinaciones más largos (con carga) de lo indicado"
+  img: signs/C17.webp
+- code: "C18"
+  nl: "Gesloten voor voertuigen die, met inbegrip van de lading, breder zijn dan op het bord is aangegeven"
+  es: "Cerrado para vehículos más anchos (con carga) de lo indicado"
+  img: signs/C18.webp
+- code: "C19"
+  nl: "Gesloten voor voertuigen die, met inbegrip van de lading, hoger zijn dan op het bord is aangegeven"
+  es: "Cerrado para vehículos más altos (con carga) de lo indicado"
+  img: signs/C19.webp
+- code: "C20"
+  nl: "Gesloten voor voertuigen waarvan de aslast hoger is dan op het bord is aangegeven"
+  es: "Cerrado para vehículos con carga por eje mayor a la indicada"
+  img: signs/C20.webp
+- code: "C21"
+  nl: "Gesloten voor voertuigen en samenstellen van voertuigen, waarvan de totaalmassa of de som van de aslasten hoger is dan op het bord is aangegeven"
+  es: "Cerrado para vehículos o combinaciones con masa total mayor a la indicada"
+  img: signs/C21.webp
+- code: "C22"
+  nl: "Gesloten voor voertuigen met bepaalde gevaarlijke stoffen"
+  es: "Cerrado para vehículos con ciertas mercancías peligrosas"
+  img: signs/C22.webp
+- code: "C22e"
+  nl: "Gesloten voor personenauto’s, bedrijfsauto’s, vrachtauto’s of autobussen vanwege emissie-eisen (milieuzone of nul-emissiezone)"
+  es: "Cerrado por requisitos de emisiones para autos, furgonetas, camiones o autobuses (zona ambiental o de cero emisiones)"
+  img: signs/C22e.webp
+- code: "C22e1"
+  nl: "Onderbord bij C22e: nul-emissiezone voor bedrijfsauto’s en vrachtauto’s, toegankelijk voor emissieloze voertuigen"
+  es: "Panel bajo C22e: zona de cero emisiones para furgonetas y camiones; acceso solo sin emisiones"
+  img: signs/C22e1.webp
+- code: "C22e4"
+  nl: "Onderbord bij C22e: milieuzone voor dieselpersonenauto’s, toegankelijk voor emissieklasse 4 tot en met 6"
+  es: "Panel bajo C22e: zona ambiental para autos diésel; acceso con clase de emisión 4 a 6"
+  img: signs/C22e4.webp
+- code: "C22e5"
+  nl: "Onderbord bij C22e: milieuzone voor dieselpersonenauto’s, toegankelijk voor emissieklasse 5 en 6"
+  es: "Panel bajo C22e: zona ambiental para autos diésel; acceso con clase de emisión 5 y 6"
+  img: signs/C22e5.webp
+- code: "C22e6"
+  nl: "Onderbord bij C22e: milieuzone voor dieselpersonenauto’s en bedrijfsauto’s, toegankelijk voor emissieklasse 4 tot en met 6"
+  es: "Panel bajo C22e: zona ambiental para autos y furgonetas diésel; acceso con clase de emisión 4 a 6"
+  img: signs/C22e6.webp
+- code: "C22e7"
+  nl: "Onderbord bij C22e: milieuzone voor dieselpersonenauto’s en bedrijfsauto’s, toegankelijk voor emissieklasse 5 en 6"
+  es: "Panel bajo C22e: zona ambiental para autos y furgonetas diésel; acceso con clase de emisión 5 y 6"
+  img: signs/C22e7.webp
+- code: "C22e8"
+  nl: "Onderbord bij C22e: milieuzone voor vrachtauto’s, toegankelijk voor vrachtauto’s emissieklasse 6"
+  es: "Panel bajo C22e: zona ambiental para camiones; acceso con clase de emisión 6"
+  img: signs/C22e8.webp
+- code: "C22e9"
+  nl: "Onderbord bij C22e: milieuzone voor autobussen, toegankelijk voor autobussen emissieklasse 6"
+  es: "Panel bajo C22e: zona ambiental para autobuses; acceso con clase de emisión 6"
+  img: signs/C22e9.webp
+- code: "C22e10"
+  nl: "Onderbord bij C22e: milieuzone voor vrachtauto’s en autobussen, toegankelijk voor vrachtauto’s en autobussen emissieklasse 6"
+  es: "Panel bajo C22e: zona ambiental para camiones y autobuses; acceso con clase de emisión 6"
+  img: signs/C22e10.webp
+- code: "C22f"
+  nl: "Einde geslotenverklaring vanwege emissie-eisen (milieuzone of nul-emissiezone)"
+  es: "Fin de la zona cerrada por emisiones (zona ambiental o de cero emisiones)"
+  img: signs/C22f.webp
+- code: "C23-01"
+  nl: "Spitsstrook open"
+  es: "Carril de hora punta (spitsstrook) abierto"
+  img: signs/C23-01.webp
+- code: "C23-02"
+  nl: "Spitsstrook vrijmaken"
+  es: "Carril de hora punta: desalojar"
+  img: signs/C23-02.webp
+- code: "C23-03"
+  nl: "Einde spitsstrook"
+  es: "Fin del carril de hora punta"
+  img: signs/C23-03.webp
+- code: "D1"
+  nl: "Rotonde; verplichte rijrichting"
+  es: "Rotonda: sentido de circulación obligatorio"
+  img: signs/D1.webp
+- code: "D2"
+  nl: "Gebod voor alle bestuurders het bord voorbij te gaan aan de zijde die de pijl aangeeft"
+  es: "Obligación de pasar la señal por el lado que indica la flecha"
+  img: signs/D2.webp
+- code: "D3"
+  nl: "Bord mag aan beide zijden worden voorbijgegaan"
+  es: "Se puede pasar la señal por ambos lados"
+  img: signs/D3.webp
+- code: "D4"
+  nl: "Gebod tot het volgen van de rijrichting die op het bord is aangegeven"
+  es: "Dirección obligatoria indicada en la señal"
+  img: signs/D4.webp
+- code: "D5"
+  nl: "Gebod tot het volgen van de rijrichting die op het bord is aangegeven"
+  es: "Dirección obligatoria indicada en la señal"
+  img: signs/D5.webp
+- code: "D6"
+  nl: "Gebod tot het volgen van één van de rijrichtingen die op het bord zijn aangegeven"
+  es: "Obligación de seguir una de las direcciones indicadas"
+  img: signs/D6.webp
+- code: "D7"
+  nl: "Gebod tot het volgen van één van de rijrichtingen die op het bord zijn aangegeven"
+  es: "Obligación de seguir una de las direcciones indicadas"
+  img: signs/D7.webp
+- code: "E1"
+  nl: "Parkeerverbod"
+  es: "Prohibido estacionar"
+  img: signs/E1.webp
+- code: "E2"
+  nl: "Verbod stil te staan"
+  es: "Prohibido detenerse"
+  img: signs/E2.webp
+- code: "E3"
+  nl: "Verbod fietsen en bromfietsen te plaatsen"
+  es: "Prohibido dejar bicicletas y ciclomotores"
+  img: signs/E3.webp
+- code: "E4"
+  nl: "Parkeergelegenheid"
+  es: "Estacionamiento (parking)"
+  img: signs/E4.webp
+- code: "E5"
+  nl: "Taxistandplaats"
+  es: "Parada de taxis"
+  img: signs/E5.webp
+- code: "E6"
+  nl: "Gehandicaptenparkeerplaats"
+  es: "Plaza para personas con discapacidad"
+  img: signs/E6.webp
+- code: "E7"
+  nl: "Gelegenheid bestemd voor het onmiddellijk laden en lossen van goederen"
+  es: "Zona de carga y descarga inmediata de mercancías"
+  img: signs/E7.webp
+- code: "E8"
+  nl: "Parkeergelegenheid alleen bestemd voor de voertuigcategorie of groep voertuigen die op het bord is aangegeven"
+  es: "Estacionamiento solo para la categoría de vehículo indicada"
+  img: signs/E8.webp
+- code: "E8a"
+  nl: "Parkeergelegenheid alleen bestemd voor kampeerwagens"
+  es: "Estacionamiento solo para autocaravanas"
+  img: signs/E8a.webp
+- code: "E8b"
+  nl: "Parkeergelegenheid voor het parkeren met twee wielen op het trottoir"
+  es: "Estacionamiento con dos ruedas sobre la acera"
+  img: signs/E8b.webp
+- code: "E8c"
+  nl: "Parkeergelegenheid alleen bestemd voor het opladen van elektrische voertuigen"
+  es: "Estacionamiento solo para cargar vehículos eléctricos"
+  img: signs/E8c.webp
+- code: "E9"
+  nl: "Parkeergelegenheid alleen bestemd voor vergunninghouders"
+  es: "Estacionamiento solo para titulares de permiso"
+  img: signs/E9.webp
+- code: "E10"
+  nl: "Parkeerschijf-zone met verplicht gebruik van parkeerschijf, tevens parkeerverbod indien er langer wordt geparkeerd dan de parkeerduur die op het bord is aangegeven"
+  es: "Zona de disco de estacionamiento (blauwe zone): disco obligatorio; prohibido estacionar más tiempo del indicado"
+  img: signs/E10.webp
+- code: "E11"
+  nl: "Einde parkeerschijf-zone met verplicht gebruik van parkeerschijf"
+  es: "Fin de la zona de disco de estacionamiento"
+  img: signs/E11.webp
+- code: "E12"
+  nl: "Parkeergelegenheid ten behoeve van overstappers op het openbaar vervoer"
+  es: "Estacionamiento para quienes cambian al transporte público (P+R)"
+  img: signs/E12.webp
+- code: "E13"
+  nl: "Parkeergelegenheid ten behoeve van carpoolers"
+  es: "Estacionamiento para quienes comparten auto (carpool)"
+  img: signs/E13.webp
+- code: "F1"
+  nl: "Verbod voor motorvoertuigen om elkaar onderling in te halen"
+  es: "Prohibido que los vehículos de motor se adelanten entre sí"
+  img: signs/F1.webp
+- code: "F2"
+  nl: "Einde verbod voor motorvoertuigen om elkaar onderling in te halen"
+  es: "Fin de la prohibición de adelantar para vehículos de motor"
+  img: signs/F2.webp
+- code: "F3"
+  nl: "Verbod voor vrachtauto's om motorvoertuigen in te halen"
+  es: "Prohibido a los camiones adelantar a vehículos de motor"
+  img: signs/F3.webp
+- code: "F4"
+  nl: "Einde verbod voor vrachtauto's om motorvoertuigen in te halen"
+  es: "Fin de la prohibición de adelantar para camiones"
+  img: signs/F4.webp
+- code: "F5"
+  nl: "Verbod voor bestuurders door te gaan bij nadering van verkeer uit tegengestelde richting"
+  es: "Prohibido seguir si se acerca tráfico en sentido contrario (ceda el paso al que viene)"
+  img: signs/F5.webp
+- code: "F6"
+  nl: "Bestuurders uit tegengestelde richting moeten verkeer dat van deze richting nadert voor laten gaan"
+  es: "Los conductores del sentido contrario deben cederle el paso a usted"
+  img: signs/F6.webp
+- code: "F7"
+  nl: "Keerverbod"
+  es: "Prohibido dar la vuelta (cambio de sentido)"
+  img: signs/F7.webp
+- code: "F8"
+  nl: "Einde van alle door verkeersborden aangegeven verboden"
+  es: "Fin de todas las prohibiciones indicadas por señales"
+  img: signs/F8.webp
+- code: "F9"
+  nl: "Einde van alle op een elektronisch signaleringsbord aangegeven verboden"
+  es: "Fin de todas las prohibiciones indicadas en panel electrónico"
+  img: signs/F9.webp
+- code: "F10"
+  nl: "Stop. In het bord kan worden aangegeven door wie of waarom het bord wordt toegepast"
+  es: "Stop (detención obligatoria); el panel puede indicar quién o por qué"
+  img: signs/F10.webp
+- code: "F11"
+  nl: "Verplicht gebruik passeerbaan of passeerstrook (rijbaan of -strook om ingehaald te kunnen worden), uitsluitend bestemd voor landbouw- en bosbouwtrekkers, motorrijtuigen met beperkte snelheid en mobiele machines"
+  es: "Uso obligatorio de carril para ser adelantado, solo para tractores, vehículos de velocidad limitada y máquinas móviles"
+  img: signs/F11.webp
+- code: "F12"
+  nl: "Einde verplicht gebruik passeerbaan of passeerstrook (rijbaan of -strook om ingehaald te kunnen worden), uitsluitend bestemd voor landbouw- en bosbouwtrekkers, motorrijtuigen met beperkte snelheid en mobiele machines"
+  es: "Fin del uso obligatorio de carril para ser adelantado"
+  img: signs/F12.webp
+- code: "F13"
+  nl: "Rijbaan of -strook uitsluitend ten behoeve van lijnbussen"
+  es: "Carril o calzada solo para autobuses de línea"
+  img: signs/F13.webp
+- code: "F14"
+  nl: "Einde busbaan of -strook"
+  es: "Fin de carril bus"
+  img: signs/F14.webp
+- code: "F15"
+  nl: "Rijbaan of -strook uitsluitend ten behoeve van trams"
+  es: "Carril o calzada solo para tranvías"
+  img: signs/F15.webp
+- code: "F16"
+  nl: "Einde trambaan of -strook"
+  es: "Fin de carril de tranvía"
+  img: signs/F16.webp
+- code: "F17"
+  nl: "Rijbaan of -strook uitsluitend ten behoeve van lijnbussen en trams"
+  es: "Carril o calzada solo para autobuses de línea y tranvías"
+  img: signs/F17.webp
+- code: "F18"
+  nl: "Einde bus- en trambaan of -strook"
+  es: "Fin de carril bus y tranvía"
+  img: signs/F18.webp
+- code: "F19"
+  nl: "Rijbaan of -strook uitsluitend ten behoeve van vrachtauto’s en lijnbussen"
+  es: "Carril o calzada solo para camiones y autobuses de línea"
+  img: signs/F19.webp
+- code: "F20"
+  nl: "Einde rijbaan of -strook voor vrachtauto’s en lijnbussen"
+  es: "Fin de carril para camiones y autobuses de línea"
+  img: signs/F20.webp
+- code: "F21"
+  nl: "Rijbaan of -strook uitsluitend ten behoeve van vrachtauto’s"
+  es: "Carril o calzada solo para camiones"
+  img: signs/F21.webp
+- code: "F22"
+  nl: "Einde rijbaan of -strook voor vrachtauto’s"
+  es: "Fin de carril para camiones"
+  img: signs/F22.webp
+- code: "G1"
+  nl: "Autosnelweg"
+  es: "Autosnelweg (autopista)"
+  img: signs/G1.webp
+- code: "G2"
+  nl: "Einde Autosnelweg"
+  es: "Fin de autosnelweg"
+  img: signs/G2.webp
+- code: "G3"
+  nl: "Autoweg"
+  es: "Autoweg (vía para automóviles)"
+  img: signs/G3.webp
+- code: "G4"
+  nl: "Einde autoweg"
+  es: "Fin de autoweg"
+  img: signs/G4.webp
+- code: "G5"
+  nl: "Erf"
+  es: "Erf (zona residencial)"
+  img: signs/G5.webp
+- code: "G6"
+  nl: "Einde erf"
+  es: "Fin de erf"
+  img: signs/G6.webp
+- code: "G7"
+  nl: "Voetpad"
+  es: "Senda peatonal"
+  img: signs/G7.webp
+- code: "G8"
+  nl: "Einde voetpad"
+  es: "Fin de senda peatonal"
+  img: signs/G8.webp
+- code: "G9"
+  nl: "Ruiterpad"
+  es: "Camino para jinetes"
+  img: signs/G9.webp
+- code: "G10"
+  nl: "Einde ruiterpad"
+  es: "Fin de camino para jinetes"
+  img: signs/G10.webp
+- code: "G11"
+  nl: "Verplicht fietspad"
+  es: "Carril bici obligatorio"
+  img: signs/G11.webp
+- code: "G12"
+  nl: "Einde verplicht fietspad"
+  es: "Fin de carril bici obligatorio"
+  img: signs/G12.webp
+- code: "G12a"
+  nl: "Fiets/bromfietspad"
+  es: "Carril para bicicletas y ciclomotores"
+  img: signs/G12a.webp
+- code: "G12b"
+  nl: "Einde fiets/bromfietspad"
+  es: "Fin de carril para bicicletas y ciclomotores"
+  img: signs/G12b.webp
+- code: "G13"
+  nl: "Onverplicht fietspad"
+  es: "Carril bici no obligatorio"
+  img: signs/G13.webp
+- code: "G14"
+  nl: "Einde onverplicht fietspad"
+  es: "Fin de carril bici no obligatorio"
+  img: signs/G14.webp
+- code: "H1"
+  nl: "Bebouwde kom"
+  es: "Inicio de zona urbana (bebouwde kom)"
+  img: signs/H1.webp
+- code: "H2"
+  nl: "Einde bebouwde kom"
+  es: "Fin de zona urbana (bebouwde kom)"
+  img: signs/H2.webp
+- code: "J1"
+  nl: "Slecht wegdek"
+  es: "Pavimento en mal estado"
+  img: signs/J1.webp
+- code: "J2"
+  nl: "Bocht naar rechts"
+  es: "Curva a la derecha"
+  img: signs/J2.webp
+- code: "J3"
+  nl: "Bocht naar links"
+  es: "Curva a la izquierda"
+  img: signs/J3.webp
+- code: "J4"
+  nl: "S-bocht(en), eerst naar rechts"
+  es: "Curvas en S, primero a la derecha"
+  img: signs/J4.webp
+- code: "J5"
+  nl: "S-bocht(en), eerst naar links"
+  es: "Curvas en S, primero a la izquierda"
+  img: signs/J5.webp
+- code: "J6"
+  nl: "Steile helling"
+  es: "Subida pronunciada"
+  img: signs/J6.webp
+- code: "J7"
+  nl: "Gevaarlijke daling"
+  es: "Bajada peligrosa"
+  img: signs/J7.webp
+- code: "J8"
+  nl: "Gevaarlijk kruispunt"
+  es: "Cruce peligroso"
+  img: signs/J8.webp
+- code: "J9"
+  nl: "Rotonde"
+  es: "Rotonda"
+  img: signs/J9.webp
+- code: "J10"
+  nl: "Overweg met slagbomen"
+  es: "Paso a nivel con barreras"
+  img: signs/J10.webp
+- code: "J11"
+  nl: "Overweg zonder slagbomen"
+  es: "Paso a nivel sin barreras"
+  img: signs/J11.webp
+- code: "J12"
+  nl: "Overweg met enkel spoor"
+  es: "Paso a nivel de una sola vía"
+  img: signs/J12.webp
+- code: "J13"
+  nl: "Overweg met twee of meer sporen"
+  es: "Paso a nivel de dos o más vías"
+  img: signs/J13.webp
+- code: "J14"
+  nl: "Tram(kruising)"
+  es: "Tranvía (cruce de tranvía)"
+  img: signs/J14.webp
+- code: "J15"
+  nl: "Beweegbare brug"
+  es: "Puente móvil"
+  img: signs/J15.webp
+- code: "J16"
+  nl: "Werk in uitvoering"
+  es: "Obras"
+  img: signs/J16.webp
+- code: "J17"
+  nl: "Rijbaanversmalling"
+  es: "Estrechamiento de calzada"
+  img: signs/J17.webp
+- code: "J18"
+  nl: "Rijbaanversmalling rechts"
+  es: "Estrechamiento de calzada por la derecha"
+  img: signs/J18.webp
+- code: "J19"
+  nl: "Rijbaanversmalling links"
+  es: "Estrechamiento de calzada por la izquierda"
+  img: signs/J19.webp
+- code: "J20"
+  nl: "Slipgevaar"
+  es: "Peligro de derrape"
+  img: signs/J20.webp
+- code: "J21"
+  nl: "Kinderen"
+  es: "Niños"
+  img: signs/J21.webp
+- code: "J22"
+  nl: "Voetgangersoversteekplaats"
+  es: "Paso de peatones"
+  img: signs/J22.webp
+- code: "J23"
+  nl: "Voetgangers"
+  es: "Peatones"
+  img: signs/J23.webp
+- code: "J24"
+  nl: "Fietsers en bromfietsers"
+  es: "Ciclistas y ciclomotoristas"
+  img: signs/J24.webp
+- code: "J25"
+  nl: "Losliggende stenen"
+  es: "Gravilla suelta"
+  img: signs/J25.webp
+- code: "J26"
+  nl: "Kade of rivieroever"
+  es: "Muelle u orilla de río"
+  img: signs/J26.webp
+- code: "J27"
+  nl: "Groot wild"
+  es: "Animales salvajes grandes"
+  img: signs/J27.webp
+- code: "J28"
+  nl: "Vee"
+  es: "Ganado"
+  img: signs/J28.webp
+- code: "J29"
+  nl: "Tegenliggers"
+  es: "Tráfico en sentido contrario"
+  img: signs/J29.webp
+- code: "J30"
+  nl: "Laagvliegende vliegtuigen"
+  es: "Aviones a baja altura"
+  img: signs/J30.webp
+- code: "J31"
+  nl: "Zijwind"
+  es: "Viento lateral"
+  img: signs/J31.webp
+- code: "J32"
+  nl: "Verkeerslichten"
+  es: "Semáforos"
+  img: signs/J32.webp
+- code: "J33"
+  nl: "File"
+  es: "Atasco (file)"
+  img: signs/J33.webp
+- code: "J34"
+  nl: "Ongeval"
+  es: "Accidente"
+  img: signs/J34.webp
+- code: "J35"
+  nl: "Slecht zicht door sneeuw, regen of mist"
+  es: "Mala visibilidad por nieve, lluvia o niebla"
+  img: signs/J35.webp
+- code: "J36"
+  nl: "IJzel of sneeuw"
+  es: "Hielo o nieve"
+  img: signs/J36.webp
+- code: "J37"
+  nl: "Gevaar (de aard van het gevaar is aangegeven op het onderbord"
+  es: "Peligro (el panel inferior indica cuál)"
+  img: signs/J37.webp
+- code: "J38"
+  nl: "Verkeersdrempel"
+  es: "Badén o reductor de velocidad (verkeersdrempel)"
+  img: signs/J38.webp
+- code: "J39"
+  nl: "Waarschuwing voor elektrische in- en uitschuifbare paal in de rijbaan (poller) waarmee toegankelijkheid van straten en gebieden kan worden geregeld."
+  es: "Bolardo eléctrico retráctil en la calzada"
+  img: signs/J39.webp
+- code: "K1"
+  nl: "Lage beslissingwegwijzer langs autosnelweg voor de doorgaande richting, met interlokale doelen en routenummer autosnelweg"
+  es: "Indicador de dirección en autosnelweg para seguir recto"
+  img: signs/K1.webp
+- code: "K2"
+  nl: "Voorwegwijzer langs autosnelweg voor de afgaande richting, met afstandaanduiding, afritnummer, interlokale doelen (bovenste doel = afritnaam), verwijzing naar vliegveld/luchthaven en routenummer niet-autosnelweg"
+  es: "Preaviso de salida en autosnelweg (distancia, número de salida, destinos)"
+  img: signs/K2.webp
+- code: "K3"
+  nl: "Beslissingswegwijzer langs autosnelweg voor de afgaande richting naar een verzorgingsplaats, met de naam van de parkeerplaats en symbolen die de aard van de voorzieningen aangeven"
+  es: "Indicador de salida en autosnelweg hacia un área de servicio"
+  img: signs/K3.webp
+- code: "K4"
+  nl: "Hoge beslissingswegwijzer langs autosnelweg met rijstrookpaneel voor de doorgaande richting en aftakkingspaneel voor de afgaande richting, met interlokale doelen, routenummers autosnelwegen en Europese hoofdroutes"
+  es: "Pórtico en autosnelweg con destinos por carril"
+  img: signs/K4.webp
+- code: "K5"
+  nl: "Voorwegwijzer langs niet-autosnelweg, met interlokale doelen, routenummers, viaductsymbool en aanduiding industrieterrein"
+  es: "Preaviso de dirección fuera de autosnelweg"
+  img: signs/K5.webp
+- code: "K6"
+  nl: "Beslissingswegwijzer langs niet-autosnelweg met interlokale doelen en routenummer niet-autosnelweg"
+  es: "Indicador de dirección fuera de autosnelweg"
+  img: signs/K6.webp
+- code: "K7"
+  nl: "Wegwijzer voor fietsers en bromfietsers (handwijzer), met lokaal doel, interlokaal doel, stedelijk fietsroutenummer (boven), en met interlokale doelen en interlokaal fietsroutenummer (onder)"
+  es: "Señal de dirección para ciclistas y ciclomotoristas (handwijzer)"
+  img: signs/K7.webp
+- code: "K8"
+  nl: "Wegwijzer voor fietsers en bromfietsers (stapelbord), met interlokale doelen en een via een alternatieve route te bereiken doel (cursief)"
+  es: "Señal de dirección para ciclistas y ciclomotoristas (stapelbord)"
+  img: signs/K8.webp
+- code: "K9"
+  nl: "Omleiding. Maatregel op voorwegwijzer langs niet-autosnelweg"
+  es: "Desvío (omleiding)"
+  img: signs/K9.webp
+- code: "K10"
+  nl: "Voorwegwijzer binnen de bebouwde kom met interlokaal doel, lokaal doel, een dagrecreatiecentrum, objecten en stadsroutenummers"
+  es: "Preaviso de dirección en zona urbana"
+  img: signs/K10.webp
+- code: "K11"
+  nl: "Voorsorteren op niet-autosnelweg. Bord met interlokale doelen, routenummers en verwijzing naar autosnelweg"
+  es: "Preselección de carril fuera de autosnelweg"
+  img: signs/K11.webp
+- code: "K12"
+  nl: "Wijkwegwijzer binnen de bebouwde kom, met wijknamen (in verkeersgebieden)"
+  es: "Indicador de barrios en zona urbana (nombres)"
+  img: signs/K12.webp
+- code: "K13"
+  nl: "Wijkwegwijzer binnen de bebouwde kom, met wijknummers (in verkeersgebieden)"
+  es: "Indicador de barrios en zona urbana (números)"
+  img: signs/K13.webp
+- code: "K14"
+  nl: "Route voor het vervoer van bepaalde gevaarlijke stoffen"
+  es: "Ruta para transporte de ciertas mercancías peligrosas"
+  img: signs/K14.webp
+- code: "L1"
+  nl: "Hoogte onderdoorgang"
+  es: "Altura libre de un paso inferior"
+  img: signs/L1.webp
+- code: "L2"
+  nl: "Voetgangersoversteekplaats"
+  es: "Paso de peatones (señal informativa)"
+  img: signs/L2.webp
+- code: "L3"
+  nl: "Bushalte / tramhalte"
+  es: "Parada de autobús / tranvía"
+  img: signs/L3.webp
+- code: "L4"
+  nl: "Voorsorteren"
+  es: "Preselección de carriles"
+  img: signs/L4.webp
+- code: "L5"
+  nl: "Einde rijstrook"
+  es: "Fin de carril"
+  img: signs/L5.webp
+- code: "L6"
+  nl: "Splitsing"
+  es: "Bifurcación"
+  img: signs/L6.webp
+- code: "L7"
+  nl: "Aantal doorgaande rijstroken"
+  es: "Número de carriles que continúan"
+  img: signs/L7.webp
+- code: "L8"
+  nl: "Doodlopende weg"
+  es: "Calle sin salida"
+  img: signs/L8.webp
+- code: "L9"
+  nl: "Vooraanduiding doodlopende weg"
+  es: "Preaviso de calle sin salida"
+  img: signs/L9.webp
+- code: "L10"
+  nl: "Vooraanduiding verkeersmaatregel voor de aangegeven richting"
+  es: "Preaviso de una medida de tráfico en la dirección indicada"
+  img: signs/L10.webp
+- code: "L11"
+  nl: "Verkeersbord geldt alleen voor de aangegeven rijstrook/rijstroken"
+  es: "La señal vale solo para los carriles indicados"
+  img: signs/L11.webp
+- code: "L12"
+  nl: "Verkeersbord geldt alleen voor de aangegeven rijstrook"
+  es: "La señal vale solo para el carril indicado"
+  img: signs/L12.webp
+- code: "L13"
+  nl: "verkeerstunnel"
+  es: "Túnel"
+  img: signs/L13.webp
+- code: "L14"
+  nl: "Vluchthaven"
+  es: "Refugio de emergencia (vluchthaven)"
+  img: signs/L14.webp
+- code: "L15"
+  nl: "Vluchthaven voorzien van een noodtelefoon en brandblusapparaat"
+  es: "Refugio de emergencia con teléfono de emergencia y extintor"
+  img: signs/L15.webp
+- code: "L16"
+  nl: "Noodtelefoon"
+  es: "Teléfono de emergencia"
+  img: signs/L16.webp
+- code: "L17"
+  nl: "Brandblusapparaat"
+  es: "Extintor"
+  img: signs/L17.webp
+- code: "L18"
+  nl: "Noodtelefoon en brandblusapparaat"
+  es: "Teléfono de emergencia y extintor"
+  img: signs/L18.webp
+- code: "L19"
+  nl: "Dichtstbijzijnde uitgang of twee dichtstbijzijnde uitgangen in de op het bord aangegeven richting en afstand"
+  es: "Salida(s) de emergencia más cercana(s): dirección y distancia"
+  img: signs/L19.webp
+- code: "L20"
+  nl: "Uitwijkplaats rechts van de weg"
+  es: "Apartadero a la derecha de la vía"
+  img: signs/L20.webp
+- code: "L21"
+  nl: "Uitwijkplaats links van de weg"
+  es: "Apartadero a la izquierda de la vía"
+  img: signs/L21.webp
