@@ -42,7 +42,7 @@ questions:
     type: yesno
     prompt: Sales de un garaje (uitrit) y viene un peatón por la acera. ¿Debes dejarlo pasar?
     answer: true
-    explain: Salir de una uitrit es una maniobra especial: dejas pasar a todo el tráfico, peatones incluidos (art. 54). El CBR lo subraya expresamente.
+    explain: "Salir de una uitrit es una maniobra especial: dejas pasar a todo el tráfico, peatones incluidos (art. 54). El CBR lo subraya expresamente."
     cites: ["rvv:54", "cbr-rijprocedure:3.6"]
 
   - id: voorrang-of-voorlaten-peaton-recto

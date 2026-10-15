@@ -91,7 +91,7 @@ questions:
     prompt: Llegas a esta señal y ves que no viene nadie por el cruce. ¿Puedes pasar sin detenerte?
     sign: B7
     answer: false
-    explain: B7 es un stop: debes detenerte (y ceder el paso), aunque no venga nadie.
+    explain: "B7 es un stop: debes detenerte (y ceder el paso), aunque no venga nadie."
     cites: ["rvv:bijlage1.B7"]
 
   - id: velocidad-b7-donde

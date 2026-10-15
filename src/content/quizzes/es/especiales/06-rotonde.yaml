@@ -1,5 +1,5 @@
 questions:
-  - id: rotonde-d1
+  - id: especial-rotonde-d1
     type: mc
     prompt: ¿Qué señal marca una rotonda en el sentido de la ley?
     options: [B6, D1, J9, G1]
@@ -7,14 +7,14 @@ questions:
     explain: La rotonda se marca con D1. J9 solo avisa de una rotonda, y B6 pide ceder el paso.
     cites: ["cbr-rijprocedure:3.6", "rvv:bijlage1.D1"]
 
-  - id: rotonde-sin-d1
+  - id: especial-rotonde-sin-d1
     type: yesno
     prompt: Llegas a una plaza circular sin la señal D1. ¿Valen las excepciones legales de las rotondas?
     answer: false
     explain: Las excepciones legales de las rotondas solo valen en plazas marcadas con D1.
     cites: ["cbr-rijprocedure:3.6"]
 
-  - id: rotonde-adelantar
+  - id: especial-rotonde-adelantar
     type: yesno
     prompt: En una rotonda (con D1), ¿está permitido adelantar por la derecha?
     answer: true
@@ -81,7 +81,7 @@ questions:
     explain: Para tres cuartos de vuelta, intermitente izquierdo al acercarte. Luego señalizas la salida.
     cites: ["cbr-rijprocedure:3.6"]
 
-  - id: rotonde-carril-cuarto
+  - id: especial-rotonde-carril-cuarto
     type: mc
     prompt: Rotonda de tres carriles sin flechas. Vas a tomar la primera salida. ¿Qué carril usas?
     options: [Izquierdo, Medio, Derecho, Cualquiera]
@@ -89,7 +89,7 @@ questions:
     explain: Para un cuarto de vuelta se usa el carril derecho.
     cites: ["cbr-rijprocedure:3.6"]
 
-  - id: rotonde-carril-media
+  - id: especial-rotonde-carril-media
     type: mc
     prompt: Rotonda de tres carriles sin flechas. Vas a tomar la segunda salida (media vuelta). ¿Qué carril prefieres al entrar?
     options: [Izquierdo, Medio, Derecho, Cualquiera]

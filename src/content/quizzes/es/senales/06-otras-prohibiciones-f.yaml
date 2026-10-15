@@ -39,7 +39,7 @@ questions:
     sign: F5
     options: ["Le dejo pasar y no sigo", "Paso yo primero", "Toco la bocina", "Elijo quién pasa según el tamaño"]
     answer: 0
-    explain: F5 prohíbe seguir si se acerca tráfico en sentido contrario: debes cederle el paso. El conductor de frente verá F6.
+    explain: "F5 prohíbe seguir si se acerca tráfico en sentido contrario: debes cederle el paso. El conductor de frente verá F6."
     cites: ["rvv:bijlage1.F5", "rvv:bijlage1.F6"]
 
   - id: f-f6-significado
@@ -48,7 +48,7 @@ questions:
     sign: F6
     options: ["Los que vienen de frente deben dejarte pasar", "Tú debes dejar pasar al que viene", "Prohibido adelantar", "Calle de sentido único"]
     answer: 0
-    explain: F6: los conductores del sentido contrario deben dejarte pasar.
+    explain: "F6: los conductores del sentido contrario deben dejarte pasar."
     cites: ["rvv:bijlage1.F6"]
 
   - id: f-f7-significado
@@ -99,7 +99,7 @@ questions:
     sign: F17
     options: ["Autobuses de línea y tranvías", "Camiones y autobuses de línea", "Solo tranvías", "Solo camiones"]
     answer: 0
-    explain: F17: carril solo para autobuses de línea y tranvías.
+    explain: "F17: carril solo para autobuses de línea y tranvías."
     cites: ["rvv:bijlage1.F17"]
 
   - id: f-f19-significado
@@ -108,7 +108,7 @@ questions:
     sign: F19
     options: ["Camiones y autobuses de línea", "Autobuses de línea y tranvías", "Autos", "Solo tranvías"]
     answer: 0
-    explain: F19: carril o calzada solo para camiones y autobuses de línea.
+    explain: "F19: carril o calzada solo para camiones y autobuses de línea."
     cites: ["rvv:bijlage1.F19"]
 
   - id: f-f21-significado

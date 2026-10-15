@@ -14,7 +14,7 @@ questions:
     sign: C2
     options: ["No puedes entrar en esta dirección", "Calle de sentido único en tu dirección: puedes entrar", "Cerrado en ambos sentidos", "Solo pueden entrar los residentes"]
     answer: 0
-    explain: C2 es un eenrichtingsweg visto desde el lado prohibido: en esta dirección está cerrado para vehículos.
+    explain: "C2 es un eenrichtingsweg visto desde el lado prohibido: en esta dirección está cerrado para vehículos."
     cites: ["rvv:bijlage1.C2"]
 
   - id: c-c5-entrada

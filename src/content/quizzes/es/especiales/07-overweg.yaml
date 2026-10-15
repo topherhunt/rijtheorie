@@ -58,7 +58,7 @@ questions:
   - id: overweg-amarilla
     type: mc
     prompt: ¿Qué significa una luz amarilla intermitente?
-    options: [Alto, Punto peligroso: precaución, Via libre, Un tren se acerca]
+    options: [Alto, "Punto peligroso: precaución", Vía libre, Un tren se acerca]
     answer: 1
     explain: La luz amarilla intermitente indica un punto peligroso, donde se requiere precaución.
     cites: ["rvv:75"]

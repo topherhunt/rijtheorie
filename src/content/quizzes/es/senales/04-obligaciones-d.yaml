@@ -14,7 +14,7 @@ questions:
     sign: D2
     options: ["Pasarla por el lado que indica la flecha", "Pasarla por cualquier lado", "Detenerte antes de la señal", "Girar en la dirección de la flecha"]
     answer: 0
-    explain: D2 es un gebod: debes pasar la señal por el lado que marca la flecha.
+    explain: "D2 es un gebod: debes pasar la señal por el lado que marca la flecha."
     cites: ["rvv:bijlage1.D2"]
 
   - id: d-d3-ambos

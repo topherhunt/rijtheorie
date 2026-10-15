@@ -103,7 +103,7 @@ questions:
     sign: L14
     options: ["Refugio de emergencia (vluchthaven)", "Teléfono de emergencia", "Salida de emergencia", "Apartadero"]
     answer: 0
-    explain: L14 es "Vluchthaven": ensanche para detenerte en caso de avería.
+    explain: "L14 es \"Vluchthaven\": ensanche para detenerte en caso de avería."
     cites: ["rvv:bijlage1.L14"]
 
   - id: kl-l16-l17

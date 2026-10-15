@@ -51,7 +51,7 @@ questions:
     options: [Que tenga más de 2 ruedas, Que su fuerza de impulso continúe por encima de 25 km/h, Que sea más cara, Que tenga luces]
     answer: 1
     explain: La speed-pedelec es una bromfiets eléctrica cuya fuerza de impulso continúa por encima de 25 km/h. La bicicleta con asistencia la corta a 25 km/h.
-    cites: ["rvv:1", "wvw:1.1.ea"]
+    cites: ["rvv:1", "wvw:1.1"]
 
   - id: vehiculos-brommobiel
     type: mc
@@ -83,7 +83,7 @@ questions:
     answer: 25
     unit: km/h
     explain: La asistencia disminuye y se corta a 25 km/h, o antes si dejas de pedalear.
-    cites: ["wvw:1.1.ea"]
+    cites: ["wvw:1.1"]
 
   - id: vehiculos-gehandicapten
     type: yesno

@@ -1,0 +1,79 @@
+---
+title: Qué manda sobre qué
+summary: Agentes, semáforos, señales y reglas generales tienen un orden de importancia, y los vehículos prioritarios se suman al orden de paso.
+cbrTopics: [voorrang]
+---
+
+## Cuatro niveles
+
+Cuando varias cosas te dicen algo distinto, la ley fija cuál gana.
+
+<Rule cite="rvv:63" title="Señales sobre reglas">
+Las señales (*verkeerstekens*) van por encima de las reglas de tráfico (*verkeersregels*) cuando esas reglas no se pueden cumplir a la vez que la señal.
+</Rule>
+
+<Rule cite="rvv:64" title="Semáforos sobre señales de prioridad">
+Los semáforos (*verkeerslichten*) van por encima de las señales que regulan la prioridad.
+</Rule>
+
+<Rule cite="rvv:84, rvv:82.1" title="Indicaciones sobre todo">
+Las indicaciones (<T id="aanwijzing" />) dadas con voz o gestos por agentes de policía, la Marechaussee o un <T id="verkeersregelaar" /> reconocible van por encima de las señales y de las reglas de tráfico. Debes seguirlas.
+</Rule>
+
+En resumen, de menor a mayor importancia: reglas generales (como la derecha), señales de prioridad, semáforos y, por encima de todo, las indicaciones de agentes y controladores.
+
+<Check id="que-manda-reglas-senales" />
+
+<Check id="que-manda-semaforo-b6" />
+
+<Check id="que-manda-agente" />
+
+## Quién puede dar indicaciones
+
+<Rule cite="rvv:82.1, rvv:82.3, rvv:83" title="Quién puede darte órdenes">
+Debes seguir las indicaciones de agentes autorizados reconocibles, de la Marechaussee y de verkeersregelaars autorizados reconocibles. Los verkeersbrigadiers (como los guardias escolares) solo pueden darte la orden de parar. También debes parar si te muestran una luz roja de parada o el cartel luminoso "stop" o "stop politie" de un vehículo de policía.
+</Rule>
+
+<Check id="que-manda-quien" />
+
+<Check id="que-manda-brigadier" />
+
+## Parar en la línea
+
+<Rule cite="rvv:79" title="Stopstreep">
+Si estás obligado a parar, debes hacerlo antes de la <T id="stopstreep" /> que sea para ti.
+</Rule>
+
+## Todo junto
+
+Los vehículos prioritarios se añaden al orden de paso: los dejas pasar primero (art. 50), y después aplicas el resto de reglas.
+
+<Junction
+  arms={{ n: {}, e: {}, s: {}, w: {} }}
+  vehicles={[
+    { label: 'A', kind: 'car', from: 's', to: 'straight', you: true },
+    { label: 'B', kind: 'bike', from: 'e', to: 'straight' },
+    { label: 'C', kind: 'ambulance', from: 'w', to: 'straight', siren: true },
+  ]}
+  alt="Cruce sin señales. Tú (A) vienes del sur y sigues recto. Un ciclista (B) viene del este, por tu derecha, y sigue recto. Una ambulancia (C) con luz azul y sirena viene del oeste y sigue recto."
+  caption="Ambulancia, ciclista y tú: ¿en qué orden pasan?"
+/>
+
+<Check id="que-manda-orden-ambulancia" />
+
+<Junction
+  arms={{ n: { sign: 'B1' }, e: { sign: 'B6', shark: true }, s: { sign: 'B1' }, w: {} }}
+  vehicles={[
+    { label: 'A', kind: 'car', from: 's', to: 'straight', you: true },
+    { label: 'B', kind: 'car', from: 'n', to: 'left' },
+    { label: 'C', kind: 'car', from: 'e', to: 'straight' },
+  ]}
+  alt="Cruce en una vía con prioridad B1 que va de norte a sur. Tú (A) vienes del sur y sigues recto. B viene del norte y gira a la izquierda. C viene de una vía lateral del este con B6 y dientes de tiburón, y sigue recto."
+  caption="Vía con prioridad, un giro a la izquierda y una vía lateral."
+/>
+
+<Check id="que-manda-orden-b1" />
+
+<Tip>
+Para ordenar varios vehículos: primero los vehículos prioritarios con sirena, luego las señales (B1, B6, B7, dientes de tiburón), luego los giros (art. 18) y al final la derecha.
+</Tip>

@@ -34,7 +34,7 @@ questions:
     prompt: Alguien te muestra una lámpara roja. ¿Qué debes hacer?
     options: ["Detenerme", "Reducir la velocidad", "Ceder el paso", "Continuar con cuidado"]
     answer: 0
-    explain: Art. 83: una lámpara roja es una señal de stop.
+    explain: "Art. 83: una lámpara roja es una señal de stop."
     cites: ["rvv:83"]
 
   - id: ag-stop-politie
@@ -50,7 +50,7 @@ questions:
     prompt: El acompañante de un vehículo sobre raíles te muestra una bandera roja. ¿Debes parar?
     sign: F10
     answer: true
-    explain: Art. 82.4: señal F10, bandera roja o lámpara roja.
+    explain: "Art. 82.4: señal F10, bandera roja o lámpara roja."
     cites: ["rvv:82.4"]
 
   - id: ag-gestos-anexo

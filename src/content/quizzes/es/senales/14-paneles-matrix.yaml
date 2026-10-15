@@ -20,7 +20,7 @@ questions:
     prompt: Sobre tu carril aparece una cruz roja. ¿Qué haces?
     options: ["Cambio de carril y no lo uso", "Reduzco y lo sigo usando", "Lo uso solo si no hay tráfico", "Paro en el carril"]
     answer: 0
-    explain: Cruz roja: el carril no puede usarse.
+    explain: "Cruz roja: el carril no puede usarse."
     cites: ["rvv:73"]
 
   - id: mx-flecha-blanca
@@ -35,7 +35,7 @@ questions:
     type: yesno
     prompt: Sobre el carril hay una flecha verde. ¿Puedes usarlo?
     answer: true
-    explain: Flecha verde: el carril puede usarse.
+    explain: "Flecha verde: el carril puede usarse."
     cites: ["rvv:73"]
 
   - id: mx-f9
@@ -63,7 +63,7 @@ questions:
     options: ["Una vluchtstrook designada como carril por la señal C23-01", "Un carril exclusivo de bus", "Un apartadero", "Un carril de incorporación"]
     answer: 0
     explain: Es la vluchtstrook designada como carril por C23-01.
-    cites: ["rvv:1"]
+    cites: ["rvv:1", "rvv:bijlage1.C23-01"]
 
   - id: mx-spits-cerrado
     type: mc
@@ -72,7 +72,7 @@ questions:
     options: ["Fin del carril de hora punta", "Carril de hora punta abierto", "Desalojar el carril", "Carril solo para camiones"]
     answer: 0
     explain: C23-03 es "Einde spitsstrook".
-    cites: ["rvv:1"]
+    cites: ["rvv:bijlage1.C23-03"]
 
   - id: mx-vluchtstrook
     type: yesno

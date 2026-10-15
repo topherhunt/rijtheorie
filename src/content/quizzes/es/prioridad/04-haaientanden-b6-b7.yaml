@@ -83,7 +83,7 @@ questions:
     prompt: Con B7, ¿debes detenerte aunque no venga nadie?
     sign: B7
     answer: true
-    explain: B7 es Stop: debes detenerte antes de la línea de detención y luego ceder el paso. B6, en cambio, no obliga a parar.
+    explain: "B7 es Stop: debes detenerte antes de la línea de detención y luego ceder el paso. B6, en cambio, no obliga a parar."
     cites: ["rvv:bijlage1.B7", "rvv:79"]
 
   - id: haaientanden-b7-donde

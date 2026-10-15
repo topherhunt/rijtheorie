@@ -1,0 +1,69 @@
+---
+title: Rotondas
+summary: Cuándo una plaza es una rotonda, cómo entrar, a quién dejar pasar al salir y qué carril usar.
+cbrTopics: [voorrang]
+---
+
+## Cuándo es una rotonda
+
+<Sign code="D1" />
+
+<Rule cite="cbr-rijprocedure:3.6, rvv:bijlage1.D1" title="Rotonde y señal D1">
+Una <T id="rotonde" /> es un nudo de vías, distinto de un cruce, donde el tráfico circula en movimiento giratorio. Se indica con la señal D1 (*Rotonde; verplichte rijrichting*). En las plazas sin D1 no valen las excepciones legales de las rotondas.
+</Rule>
+
+<Check id="rotonde-d1" />
+
+## Entrar a la rotonda
+
+<Rule cite="cbr-rijprocedure:3.6" title="Entrar y circular">
+Para entrar y para circular por la rotonda debes cumplir la obligación legal de ceder el paso. Antes de entrar, mira hacia delante y hacia la izquierda para ver si puedes entrar, y comprueba los espejos.
+</Rule>
+
+<Junction
+  kind="roundabout"
+  arms={{ n: {}, e: {}, s: { sign: 'B6', shark: true }, w: {} }}
+  vehicles={[
+    { label: 'A', kind: 'car', from: 's', to: 'straight', you: true },
+  ]}
+  alt="Rotonda de cuatro entradas. Tú (A) entras desde el sur con la señal B6 y dientes de tiburón, y sigues recto, por la salida norte."
+  caption="B6 y dientes de tiburón en la entrada: miras con más atención hacia delante y hacia la izquierda."
+/>
+
+<Rule cite="cbr-rijprocedure:3.6" title="B6 en la entrada">
+Si hay B6 en la entrada, el CBR pide una atención aún mayor al mirar y adaptar la velocidad con la que te acercas y entras.
+</Rule>
+
+<Check id="rotonde-b6-mirar" />
+
+## Salir de la rotonda
+
+<Rule cite="cbr-rijprocedure:3.6" title="Salir">
+Al salir, dejas pasar al tráfico que sigue circulando por la rotonda, incluido el que va por un carril bici independiente. Mira el espejo interior, el exterior derecho y por encima del hombro derecho. Presta atención extra a las franjas ciclistas, los carriles bici y las aceras. No bloquees los carriles bici al acercarte, circular y salir.
+</Rule>
+
+<Check id="rotonde-salir" />
+
+<Check id="rotonde-espejos-salir" />
+
+<Check id="rotonde-no-bloquear" />
+
+## Libertad en la rotonda
+
+<Rule cite="rvv:47, rvv:48" title="Circular fuera de la derecha y adelantar por la derecha">
+Cerca de las rotondas y sobre ellas, los motorvehículos y los ciclomotores que siguen la calzada pueden circular fuera del lado derecho. Además se permite adelantar por la derecha justo antes de una rotonda o sobre ella.
+</Rule>
+
+<Check id="rotonde-adelantar" />
+
+## Qué carril usar
+
+En rotondas sin flechas en el pavimento, el CBR enseña qué carril usar según cuánto de la vuelta des (un cuarto es la primera salida, media vuelta es seguir recto).
+
+<Rule cite="cbr-rijprocedure:3.6" title="Carriles">
+Con tres carriles: para el cuarto de vuelta, carril derecho; para la media vuelta, preferiblemente el carril central. Con dos carriles: cuarto y media vuelta por el carril derecho. Esta práctica no siempre vale, por ejemplo en plazas asimétricas, sin carriles o con tráfico intenso.
+</Rule>
+
+<Check id="rotonde-carril-cuarto" />
+
+<Check id="rotonde-carril-dos" />

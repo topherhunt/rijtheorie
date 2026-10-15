@@ -14,7 +14,7 @@ questions:
 
   - id: bijzondere-manoeuvres-lista-abierta
     type: yesno
-    prompt: El art. 54 usa la palabra "zoals" (como): la lista de maniobras especiales son ejemplos, no una lista cerrada.
+    prompt: 'El art. 54 usa la palabra "zoals" (como): la lista de maniobras especiales son ejemplos, no una lista cerrada.'
     answer: true
     explain: El texto dice "zoals", así que los casos nombrados son ejemplos.
     cites: ["rvv:54"]
@@ -100,5 +100,5 @@ questions:
     type: yesno
     prompt: Al dar la vuelta (keren) en una vía, ¿tienes prioridad sobre el tráfico que pasa?
     answer: false
-    explain: Dar la vuelta es una maniobra especial: dejas pasar a todos.
+    explain: "Dar la vuelta es una maniobra especial: dejas pasar a todos."
     cites: ["rvv:54"]

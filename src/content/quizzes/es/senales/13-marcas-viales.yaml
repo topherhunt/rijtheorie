@@ -8,7 +8,7 @@ questions:
 
   - id: mv-discontinua-lado
     type: yesno
-    prompt: Hay una línea doble: de tu lado es discontinua y del otro lado continua. ¿Puedes cruzarla?
+    prompt: "Hay una línea doble: de tu lado es discontinua y del otro lado continua. ¿Puedes cruzarla?"
     answer: true
     explain: Si hay una línea discontinua de tu lado, la excepción del art. 76.2 lo permite.
     cites: ["rvv:76.2"]

@@ -19,7 +19,7 @@ questions:
     prompt: ¿Qué significa la luz roja fija en un semáforo de tres colores?
     options: ["Detenerse", "Reducir la velocidad", "Pasar con cuidado", "Ceder el paso"]
     answer: 0
-    explain: Rojo: debes detenerte.
+    explain: "Rojo: debes detenerte."
     cites: ["rvv:68.1"]
 
   - id: sf-verde
@@ -27,7 +27,7 @@ questions:
     prompt: ¿Qué significa la luz verde fija?
     options: ["Puedes continuar", "Debes detenerte", "Ceda el paso siempre", "Solo puedes girar"]
     answer: 0
-    explain: Verde: puedes avanzar (respetando el resto de reglas, por ejemplo ceder a quien corresponda al girar).
+    explain: "Verde: puedes avanzar (respetando el resto de reglas, por ejemplo ceder a quien corresponda al girar)."
     cites: ["rvv:68.1"]
 
   - id: sf-flecha
@@ -80,7 +80,7 @@ questions:
     prompt: En un paso a nivel ves una luz roja intermitente. ¿Qué haces?
     options: ["Me detengo", "Paso rápido", "Reduzco y paso", "Toco la bocina y paso"]
     answer: 0
-    explain: Rojo intermitente: debes detenerte. Blanco intermitente: no se acerca ningún tren.
+    explain: "Rojo intermitente: debes detenerte. Blanco intermitente: no se acerca ningún tren."
     cites: ["rvv:71"]
 
   - id: sf-overweg-blanca
@@ -88,7 +88,7 @@ questions:
     prompt: En un paso a nivel la luz blanca parpadea. ¿Qué indica?
     options: ["No se acerca ningún tren", "Se acerca un tren", "El paso está cerrado", "Hay obras"]
     answer: 0
-    explain: Blanco intermitente: no se acerca ningún tren.
+    explain: "Blanco intermitente: no se acerca ningún tren."
     cites: ["rvv:71"]
 
   - id: sf-brug
@@ -96,7 +96,7 @@ questions:
     prompt: En un puente móvil la luz está roja. ¿Qué haces?
     options: ["Me detengo", "Paso con cuidado", "Paso si no se ve el barco", "Cedo y paso"]
     answer: 0
-    explain: Rojo o rojo intermitente en un bruglicht: detenerse.
+    explain: "Rojo o rojo intermitente en un bruglicht: detenerse."
     cites: ["rvv:72"]
 
   - id: sf-cruz-roja
@@ -104,7 +104,7 @@ questions:
     prompt: Sobre tu carril de la autosnelweg ves una cruz roja. ¿Qué significa?
     options: ["No puedes usar ese carril", "Puedes usarlo a baja velocidad", "El carril es solo para autobuses", "Hay un accidente más adelante"]
     answer: 0
-    explain: Cruz roja: el carril no puede usarse.
+    explain: "Cruz roja: el carril no puede usarse."
     cites: ["rvv:73"]
 
   - id: sf-flecha-verde
@@ -112,7 +112,7 @@ questions:
     prompt: Sobre el carril ves una flecha verde. ¿Qué significa?
     options: ["Puedes usar ese carril", "Debes cambiar de carril", "Carril cerrado", "Carril solo para camiones"]
     answer: 0
-    explain: Flecha verde: el carril puede usarse.
+    explain: "Flecha verde: el carril puede usarse."
     cites: ["rvv:73"]
 
   - id: sf-bus-carril
@@ -120,7 +120,7 @@ questions:
     prompt: Sobre un carril hay una luz con la palabra LIJNBUS. ¿Quién puede usarlo?
     options: ["Solo autobuses de línea", "Cualquier autobús", "Autobuses y taxis", "Todos"]
     answer: 0
-    explain: LIJNBUS: carril solo para lijnbus. BUS: lijnbus y autobús.
+    explain: "LIJNBUS: carril solo para lijnbus. BUS: lijnbus y autobús."
     cites: ["rvv:73"]
 
   - id: sf-peaton-rojo
@@ -136,7 +136,7 @@ questions:
     prompt: Para los peatones, la luz verde intermitente significa...
     options: ["Cruza, pronto será rojo", "No cruces", "Cruza sin límite", "Fin de la calle"]
     answer: 0
-    explain: Verde intermitente: cruza, pronto se pondrá en rojo.
+    explain: "Verde intermitente: cruza, pronto se pondrá en rojo."
     cites: ["rvv:74"]
 
   - id: sf-amarillo-intermitente

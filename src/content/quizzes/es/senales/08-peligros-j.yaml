@@ -41,7 +41,7 @@ questions:
     sign: J9
     options: ["Rotonda", "Cruce peligroso", "Calle sin salida", "Curva cerrada"]
     answer: 0
-    explain: J9 es "Rotonde". Es un aviso: la orden de circulación la da D1.
+    explain: "J9 es \"Rotonde\". Es un aviso: la orden de circulación la da D1."
     cites: ["rvv:bijlage1.J9"]
 
   - id: j-j10-j11
@@ -140,7 +140,7 @@ questions:
     sign: J29
     options: ["Tráfico en sentido contrario", "Sentido único", "Estrechamiento", "Prohibido adelantar"]
     answer: 0
-    explain: J29 es "Tegenliggers": hay tráfico en ambos sentidos.
+    explain: "J29 es \"Tegenliggers\": hay tráfico en ambos sentidos."
     cites: ["rvv:bijlage1.J29"]
 
   - id: j-j32-semaforos
@@ -183,6 +183,6 @@ questions:
     prompt: ¿Qué clase de señal es un triángulo con borde rojo?
     options: ["Un aviso de peligro", "Una prohibición", "Una orden", "Una información de dirección"]
     answer: 0
-    explain: Los triángulos son señales J: avisan de un peligro.
+    explain: "Los triángulos son señales J: avisan de un peligro."
     cites: ["rvv:bijlage1.J8"]
     exam: false

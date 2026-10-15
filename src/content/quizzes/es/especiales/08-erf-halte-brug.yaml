@@ -16,7 +16,7 @@ questions:
     explain: Dentro de un erf no se puede ir a más de 15 km/h.
     cites: ["rvv:45"]
 
-  - id: erf-peatones
+  - id: erf-halte-peatones
     type: yesno
     prompt: Dentro de un erf, ¿pueden los peatones usar todo el ancho de la calzada?
     answer: true

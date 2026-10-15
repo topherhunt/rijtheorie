@@ -1,0 +1,99 @@
+questions:
+  - id: que-manda-reglas-senales
+    type: yesno
+    prompt: Una señal de prioridad manda sobre la regla de la derecha cuando son incompatibles.
+    answer: true
+    explain: Los verkeerstekens van por encima de los verkeersregels.
+    cites: ["rvv:63"]
+
+  - id: que-manda-semaforo-b6
+    type: mc
+    prompt: Tienes B6 en tu vía pero el semáforo del cruce está en verde para ti. ¿Qué manda?
+    options: [El semáforo, La señal B6, La regla de la derecha, Lo que haga el otro]
+    answer: 0
+    explain: Los semáforos van por encima de las señales que regulan la prioridad.
+    cites: ["rvv:64"]
+
+  - id: que-manda-b1-semaforo-rojo
+    type: yesno
+    prompt: Estás en una vía con B1 pero el semáforo está en rojo para ti. ¿Tienes que parar?
+    answer: true
+    explain: El semáforo va por encima de la señal de prioridad.
+    cites: ["rvv:64"]
+
+  - id: que-manda-agente
+    type: mc
+    prompt: El semáforo está en rojo y un agente de policía te hace señas para que pases. ¿Qué haces?
+    options: [Seguir la indicación del agente, Esperar el verde, Esperar a que pase otro auto, Tocar la bocina]
+    answer: 0
+    explain: Las indicaciones de los agentes van por encima de las señales y las reglas, y debes seguirlas.
+    cites: ["rvv:84", "rvv:82.1"]
+
+  - id: que-manda-quien
+    type: multi
+    prompt: ¿De quién debes seguir las indicaciones con voz o gestos?
+    options:
+      - Agentes autorizados reconocibles
+      - Marechaussee
+      - Verkeersregelaars autorizados reconocibles
+      - Cualquier peatón
+    answer: [0, 1, 2]
+    explain: El art. 82.1 nombra a esos tres grupos. Un peatón cualquiera no tiene autoridad para dirigir el tráfico.
+    cites: ["rvv:82.1"]
+
+  - id: que-manda-brigadier
+    type: yesno
+    prompt: Un verkeersbrigadier (por ejemplo, un guardia escolar) te indica que pares. ¿Debes parar?
+    answer: true
+    explain: Los conductores deben seguir la orden de parar de los verkeersbrigadiers autorizados.
+    cites: ["rvv:82.3"]
+
+  - id: que-manda-stop-politie
+    type: yesno
+    prompt: Una luz roja o un cartel luminoso "STOP POLITIE" en un vehículo de policía te indica que pares. ¿Debes parar?
+    answer: true
+    explain: El art. 83 obliga a parar ante ese stopteken.
+    cites: ["rvv:83"]
+
+  - id: que-manda-gebod
+    type: yesno
+    prompt: Debes obedecer las señales que contienen una orden o una prohibición.
+    answer: true
+    explain: Es la obligación del art. 62.
+    cites: ["rvv:62"]
+
+  - id: que-manda-stopstreep
+    type: mc
+    prompt: Estás obligado a parar y hay una línea de detención para ti. ¿Dónde paras?
+    options: [Antes de la línea, Sobre la línea, Después de la línea, Donde quieras]
+    answer: 0
+    explain: Debes parar antes de la stopstreep que es para ti.
+    cites: ["rvv:79"]
+
+  - id: que-manda-orden-ambulancia
+    type: order
+    prompt: ¿En qué orden pasan? La ambulancia lleva luz azul y sirena.
+    diagram:
+      arms: { n: {}, e: {}, s: {}, w: {} }
+      vehicles:
+        - { label: A, kind: car, from: s, to: straight, you: true }
+        - { label: B, kind: bike, from: e, to: straight }
+        - { label: C, kind: ambulance, from: w, to: straight, siren: true }
+      alt: Cruce sin señales. Tú (A) vienes del sur y sigues recto. Un ciclista (B) viene del este, por tu derecha, y sigue recto. Una ambulancia (C) con luz azul y sirena viene del oeste y sigue recto.
+    answer: [C, B, A]
+    explain: La ambulancia pasa primero porque todos deben dejarla pasar. Después B, que viene por tu derecha, y al final tú.
+    cites: ["rvv:50", "rvv:15.1"]
+
+  - id: que-manda-orden-b1
+    type: order
+    prompt: ¿En qué orden pasan? Estás en una vía con prioridad (B1) y C viene de una vía lateral con B6.
+    diagram:
+      arms: { n: { sign: B1 }, e: { sign: B6, shark: true }, s: { sign: B1 }, w: {} }
+      vehicles:
+        - { label: A, kind: car, from: s, to: straight, you: true }
+        - { label: B, kind: car, from: n, to: left }
+        - { label: C, kind: car, from: e, to: straight }
+      alt: Cruce en una vía con prioridad B1 que va de norte a sur. Tú (A) vienes del sur y sigues recto. B viene del norte y gira a la izquierda. C viene de una vía lateral del este con B6 y dientes de tiburón, y sigue recto.
+    answer: [A, B, C]
+    explain: A sigue recto por la vía con prioridad y pasa primero. B gira a la izquierda y deja pasar a A (art. 18), pero tiene prioridad sobre C. C viene de la vía lateral con B6 y cede el paso a los dos.
+    cites: ["rvv:bijlage1.B1", "rvv:bijlage1.B6", "rvv:18.1"]

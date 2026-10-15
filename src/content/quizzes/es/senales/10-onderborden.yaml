@@ -12,7 +12,7 @@ questions:
     prompt: Bajo una señal de prohibición hay un panel con la palabra "uitgezonderd" y el símbolo de una bicicleta. ¿Qué significa?
     options: ["La prohibición no se aplica a las bicicletas", "La prohibición se aplica solo a las bicicletas", "La prohibición se aplica a todos por igual", "La bicicleta debe esperar"]
     answer: 0
-    explain: "Uitgezonderd" más símbolos excluye a los usuarios representados.
+    explain: '"Uitgezonderd" más símbolos excluye a los usuarios representados.'
     cites: ["rvv:67.1"]
 
   - id: ob-texto

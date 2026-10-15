@@ -88,7 +88,7 @@ questions:
         - { label: C, kind: car, from: e, to: straight }
       alt: Cruce sin señales. Tú (A) vienes del sur y giras a la izquierda. B viene del norte y sigue recto. C viene del este y sigue recto.
     answer: [B, C, A]
-    explain: B no tiene a nadie por su derecha y pasa primero. C tiene a B a su derecha, así que pasa después. A tiene a C a su derecha y además gira a la izquierda: va último.
+    explain: "B no tiene a nadie por su derecha y pasa primero. C tiene a B a su derecha, así que pasa después. A tiene a C a su derecha y además gira a la izquierda: va último."
     cites: ["rvv:15.1", "rvv:18.1"]
 
   - id: afslaan-bloquear

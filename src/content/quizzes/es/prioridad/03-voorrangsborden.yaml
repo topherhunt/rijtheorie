@@ -44,7 +44,7 @@ questions:
     sign: B2
     options: [Que la vía con prioridad termina, Que empieza una vía con prioridad, Que debes parar, Que hay una rotonda]
     answer: 0
-    explain: B2 es Einde voorrangsweg: termina la vía con prioridad.
+    explain: "B2 es Einde voorrangsweg: termina la vía con prioridad."
     cites: ["rvv:bijlage1.B2"]
 
   - id: voorrangsborden-b3

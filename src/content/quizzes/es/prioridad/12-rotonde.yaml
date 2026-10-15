@@ -1,0 +1,114 @@
+questions:
+  - id: rotonde-d1
+    type: mc
+    prompt: ¿Qué indica la señal D1?
+    sign: D1
+    options: [Rotonda, Cruce con prioridad, Zona residencial, Fin de la vía con prioridad]
+    answer: 0
+    explain: D1 es Rotonde; verplichte rijrichting.
+    cites: ["rvv:bijlage1.D1"]
+
+  - id: rotonde-sin-d1
+    type: yesno
+    prompt: Una plaza redonda sin la señal D1 se trata como una rotonda con sus excepciones legales.
+    answer: false
+    explain: En las plazas sin D1 no valen las excepciones legales de las rotondas.
+    cites: ["cbr-rijprocedure:3.6"]
+
+  - id: rotonde-b6-mirar
+    type: mc
+    prompt: Entras a una rotonda con B6 en la entrada. Según el CBR, ¿cómo ajustas tu mirada?
+    sign: B6
+    diagram:
+      arms: { n: {}, e: {}, s: { sign: B6, shark: true }, w: {} }
+      vehicles:
+        - { label: A, kind: car, from: s, to: straight, you: true }
+      kind: roundabout
+      alt: Rotonda de cuatro entradas. Tú (A) entras desde el sur con la señal B6 y dientes de tiburón, y sigues recto, por la salida norte.
+    options:
+      - Con atención aún mayor hacia delante y hacia la izquierda
+      - Solo hacia la derecha
+      - Con menos atención, porque B6 te protege
+      - Sin mirar, porque cedes el paso
+    answer: 0
+    explain: El CBR pide mirar hacia delante y hacia la izquierda, y con aún más atención si hay B6.
+    cites: ["cbr-rijprocedure:3.6"]
+
+  - id: rotonde-b6-velocidad
+    type: yesno
+    prompt: Ante B6 en la entrada de una rotonda, el CBR pide adaptar con más cuidado la velocidad a la que te acercas y entras.
+    answer: true
+    explain: Lo dice el CBR en el apartado de velocidad.
+    cites: ["cbr-rijprocedure:3.6"]
+
+  - id: rotonde-salir
+    type: mc
+    prompt: Vas a salir de la rotonda. ¿A quién dejas pasar según el CBR?
+    options:
+      - Al tráfico que sigue circulando por la rotonda, también el de un carril bici independiente
+      - Solo a los autos
+      - A nadie, porque sales
+      - Solo a los peatones
+    answer: 0
+    explain: Al salir se deja pasar al tráfico que continúa en la plaza, incluido el del carril bici independiente.
+    cites: ["cbr-rijprocedure:3.6"]
+
+  - id: rotonde-espejos-salir
+    type: mc
+    prompt: Al salir de la rotonda, ¿qué compruebas a tu lado derecho?
+    options:
+      - Espejo interior, espejo exterior derecho y mirada por encima del hombro derecho
+      - Solo el espejo izquierdo
+      - Nada
+      - Solo la bocina
+    answer: 0
+    explain: El CBR pide mirar así y prestar atención extra a franjas ciclistas, carriles bici y aceras.
+    cites: ["cbr-rijprocedure:3.6"]
+
+  - id: rotonde-no-bloquear
+    type: yesno
+    prompt: Según el CBR, al acercarte, circular y salir de una rotonda no debes bloquear los carriles bici independientes.
+    answer: true
+    explain: Es parte de la procedimiento práctico del CBR.
+    cites: ["cbr-rijprocedure:3.6"]
+
+  - id: rotonde-47
+    type: yesno
+    prompt: Cerca de una rotonda y sobre ella, un motorvehículo puede circular fuera del lado derecho de la calzada.
+    answer: true
+    explain: El art. 47 lo permite.
+    cites: ["rvv:47"]
+
+  - id: rotonde-adelantar
+    type: yesno
+    prompt: Se permite adelantar por la derecha justo antes de una rotonda o sobre ella.
+    answer: true
+    explain: El art. 48 lo permite.
+    cites: ["rvv:48"]
+
+  - id: rotonde-carril-cuarto
+    type: mc
+    prompt: Rotonda de tres carriles sin flechas, vas a tomar la primera salida (un cuarto de vuelta). ¿Qué carril tomas desde la vía de acceso?
+    options: [El derecho, El central, El izquierdo, Cualquiera]
+    answer: 0
+    explain: Para el cuarto de vuelta, el CBR enseña tomar el carril derecho de la vía de acceso.
+    cites: ["cbr-rijprocedure:3.6"]
+    exam: false
+
+  - id: rotonde-carril-media
+    type: mc
+    prompt: Rotonda de tres carriles sin flechas, vas a seguir recto (media vuelta). ¿Qué carril es preferible al acercarte?
+    options: [El central, El derecho, El izquierdo, Da igual]
+    answer: 0
+    explain: Para la media vuelta, el CBR prefiere el carril central en la vía de acceso.
+    cites: ["cbr-rijprocedure:3.6"]
+    exam: false
+
+  - id: rotonde-carril-dos
+    type: mc
+    prompt: Rotonda de dos carriles sin flechas, vas a seguir recto (media vuelta). ¿Qué carril usas?
+    options: [El derecho, El izquierdo, El que esté libre, Ninguno]
+    answer: 0
+    explain: En rotondas de dos carriles, cuarto y media vuelta se hacen por el carril derecho.
+    cites: ["cbr-rijprocedure:3.6"]
+    exam: false

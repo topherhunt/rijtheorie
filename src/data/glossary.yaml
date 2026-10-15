@@ -15,8 +15,8 @@ puntstuk: { nl: puntstuk, es: zona triangular pintada en una bifurcación, def: 
 dag: { nl: dag, es: día (legal), def: "La ley llama día al periodo entre la salida y la puesta del sol.", cite: "rvv:1" }
 nacht: { nl: nacht, es: noche (legal), def: "La ley llama noche al periodo entre la puesta y la salida del sol.", cite: "rvv:1" }
 wagen: { nl: wagen, es: carro (de tracción animal o manual) }
-fiets-met-trapondersteuning: { nl: fiets met trapondersteuning, es: bicicleta eléctrica (e-bike), def: "Bicicleta con motor eléctrico auxiliar cuya ayuda se corta al llegar a 25 km/h, o antes si dejas de pedalear. La Wegenverkeerswet no la cuenta como motorrijtuig.", cite: "wvw:1.1.ea, wvw:1.1.c" }
-kwetsbare-weggebruikers: { nl: kwetsbare weggebruikers, es: usuarios vulnerables, def: "Usuarios no motorizados como ciclistas y peatones, y quienes usan vehículos motorizados de dos o tres ruedas.", cite: "wvw:1.1.ta" }
+fiets-met-trapondersteuning: { nl: fiets met trapondersteuning, es: bicicleta eléctrica (e-bike), def: "Bicicleta con motor eléctrico auxiliar cuya ayuda se corta al llegar a 25 km/h, o antes si dejas de pedalear. La Wegenverkeerswet no la cuenta como motorrijtuig.", cite: "wvw:1.1, wvw:1.1.c" }
+kwetsbare-weggebruikers: { nl: kwetsbare weggebruikers, es: usuarios vulnerables, def: "Usuarios no motorizados como ciclistas y peatones, y quienes usan vehículos motorizados de dos o tres ruedas.", cite: "wvw:1.1" }
 verkeersbrigadier: { nl: verkeersbrigadier, es: brigadier de tráfico (p. ej. guardia escolar) }
 cbr: { nl: CBR, es: CBR (el organismo que toma el examen teórico) }
 stopteken: { nl: stopteken, es: señal de alto (de un agente o de la policía) }
@@ -28,7 +28,7 @@ doorgaande-rijbaan: { nl: doorgaande rijbaan, es: calzada principal / de paso, c
 linker-rijstrook: { nl: linker rijstrook, es: carril izquierdo, cbr: true }
 fietspad: { nl: fietspad, es: carril bici (separado), def: "Camino para bicicletas aparte de la calzada. Las señales son G11 (verplicht), G12a (fiets/bromfietspad) y G13 (onverplicht).", cite: "rvv:1, rvv:bijlage1.G11, rvv:bijlage1.G12a, rvv:bijlage1.G13" }
 fietsstrook: { nl: fietsstrook, es: carril bici pintado en la calzada, def: "Parte de la calzada marcada con líneas continuas o discontinuas y con dibujos de bicicleta.", cbr: true, cite: "rvv:1" }
-suggestiestrook: { nl: suggestiestrook, es: franja ciclista sugerida, def: "Franja de color (a menudo roja) pintada al borde de la calzada para sugerir dónde ir a los ciclistas. La palabra no aparece en el RVV 1990 y no es un fietsstrook.", cbr: true }
+suggestiestrook: { nl: suggestiestrook, es: franja ciclista sugerida, def: "Franja de color (a menudo roja) pintada al borde de la calzada para sugerir dónde ir a los ciclistas. La palabra no aparece en el RVV y no es un fietsstrook.", cbr: true }
 trottoir: { nl: trottoir, es: acera, cbr: true }
 voetpad: { nl: voetpad, es: senda peatonal, def: "Camino para peatones, señalizado con la señal G7.", cite: "rvv:bijlage1.G7" }
 berm: { nl: berm, es: arcén de tierra / cuneta, def: "Franja lateral que forma parte de la vía, junto a la calzada.", cbr: true, cite: "wvw:1.1.b" }
@@ -48,7 +48,7 @@ eenrichtingsweg: { nl: eenrichtingsweg, es: calle de sentido único, cbr: true }
 doodlopende-weg: { nl: doodlopende weg, es: calle sin salida, cbr: true }
 kruispunt: { nl: kruispunt, es: cruce / intersección }
 splitsing: { nl: splitsing, es: bifurcación (cruce en T o Y), cbr: true }
-rotonde: { nl: rotonde, es: rotonda }
+rotonde: { nl: rotonde, es: rotonda, def: "Nudo de vías con tráfico que circula en movimiento giratorio, señalizado con D1. Una plaza sin D1 no es una rotonda para la ley.", cite: "rvv:bijlage1.D1, cbr-rijprocedure:3.6" }
 turborotonde: { nl: turborotonde, es: turborrotonda, def: "Rotonda con carriles separados por bordillos elevados: eliges el carril ANTES de entrar y dentro no puedes cambiar de carril.", cbr: true, cite: "vvn-turborotonde" }
 uitrit: { nl: uitrit, es: salida de un terreno / garaje, def: "Salida de un garaje, parking, gasolinera o camino privado hacia la vía. Quien sale de una uitrit cede el paso a todos.", cbr: true }
 inrit: { nl: inrit, es: entrada a un terreno / garaje }

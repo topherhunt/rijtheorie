@@ -82,7 +82,7 @@ questions:
     sign: G11
     options: ["Debe usar el carril bici", "Puede usar el carril bici si quiere", "Debe usar la calzada", "Prohibido para bicicletas"]
     answer: 0
-    explain: G11 es el verplicht fietspad: los ciclistas deben usarlo.
+    explain: "G11 es el verplicht fietspad: los ciclistas deben usarlo."
     cites: ["rvv:5.1", "rvv:bijlage1.G11"]
 
   - id: gh-g13-opcional
