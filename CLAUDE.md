@@ -8,9 +8,10 @@ Read before working:
 - `docs/AUTHORING.md` -- how to write lessons and questions (components, question types, sourcing).
 - `docs/AUDIT.md` -- correctness audit and red-team procedure (run it after any content change).
 - `docs/PROCESS.md` -- how the content was produced: sources used, decisions made and why.
+- `docs/VERIFICATION.md` -- what has been checked, how, and what still needs a human; secondary-source content. Update it when you verify or add unverified content.
 
 Hard rules for this project:
-- Every rule stated to learners cites a source (`<Rule cite>` in lessons, `cites:` on questions). No uncited legal claims.
+- Every rule stated to learners cites a source (`<Rule cite>` in lessons, `cites:` on questions). No uncited legal claims. Content not from the law or CBR cites a `secondary: true` source and sets `secondary: true` on the lesson.
 - The site is UNOFFICIAL; never remove or soften the disclaimers.
 - The owner creates the GitHub repo -- never run `gh repo create` or push.
 - `dev.env` holds `OPENROUTER_API_KEY` (gitignored). Image generation spends real money: total cap $20, stay within the approved image plan (`scripts/images/`).

@@ -1,0 +1,7 @@
+// Cloudflare Workers static-assets site. Build: `npm run build`; deploy: `npx wrangler deploy` (or Workers Builds on push).
+// Custom domain rijtheorie.topherhunt.com is attached in the dashboard (Settings > Domains & Routes).
+{
+  "name": "rijtheorie",
+  "compatibility_date": "2026-10-01",
+  "assets": { "directory": "./dist" }
+}

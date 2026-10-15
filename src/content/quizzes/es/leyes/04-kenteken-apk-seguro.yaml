@@ -65,3 +65,11 @@ questions:
     answer: true
     explain: La WVW exige un kentekenbewijs válido y que el vehículo coincida con sus datos.
     cites: ["wvw:36"]
+
+  - id: kenteken-apk-plazo
+    type: number
+    prompt: Compraste un auto de gasolina nuevo. ¿A los cuántos años le toca el primer APK?
+    answer: 4
+    unit: años
+    explain: Gasolina o eléctrico, nuevo desde 2005, primer APK a los 4 años, luego cada 2 años y desde los 8 años cada año. Diésel y GLP, a los 3 años y luego cada año.
+    cites: ["anwb-apk"]

@@ -7,6 +7,7 @@ import Tip from '../../../components/Tip.astro';
 import Warn from '../../../components/Warn.astro';
 import Sign from '../../../components/Sign.astro';
 import Signs from '../../../components/Signs.astro';
+import Gestures from '../../../components/Gestures.astro';
 import Img from '../../../components/Img.astro';
 import Diagram from '../../../components/Diagram.astro';
 import Check from '../../../components/Check.astro';
@@ -39,9 +40,10 @@ const fm = l.entry.data;
   <h1 class="qa-lesson-title mt-1 text-3xl font-bold">{fm.title}</h1>
   <p class="mt-2 text-lg text-slate-600">{fm.summary}</p>
   {fm.reviewed.length === 0 && <p class="qa-unreviewed mt-3 text-sm text-amber-800">{es.lesson.unreviewed}</p>}
+  {fm.secondary && <p class="qa-secondary-notice mt-3 rounded bg-amber-50 px-3 py-2 text-sm text-amber-900">{es.lesson.secondary}</p>}
 
   <article class="prose-lesson mt-6">
-    <Content components={{ T, Rule, Tip, Warn, Sign, Signs, Img, Junction: Diagram, Check }} />
+    <Content components={{ T, Rule, Tip, Warn, Sign, Signs, Gestures, Img, Junction: Diagram, Check }} />
   </article>
 
   {questions.length > 0 && (

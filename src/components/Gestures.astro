@@ -1,0 +1,29 @@
+---
+// Hand signals of RVV 1990 bijlage 2, cropped from the official drawings (public/img/rvv-gesto-N.webp).
+// `nl` is the bijlage's own wording; `es` translates it and must not add meaning.
+import { href } from '../config.ts';
+
+const GESTURES = [
+  { nl: 'Algemeen stopteken', es: 'Señal general de parar' },
+  { nl: 'Stopteken voor het verkeer, dat de verkeersregelaar van voren nadert', es: 'Parar: el tráfico que se acerca al agente por delante' },
+  { nl: 'Stopteken voor het verkeer, dat de verkeersregelaar van achteren nadert', es: 'Parar: el tráfico que se acerca al agente por detrás' },
+  { nl: 'Stopteken zowel voor het verkeer dat de verkeersregelaar van voren, als voor het verkeer dat hem van achteren nadert', es: 'Parar: el tráfico que se acerca al agente por delante y por detrás' },
+  { nl: 'Stopteken voor het verkeer dat de verkeersregelaar van rechts nadert', es: 'Parar: el tráfico que se acerca al agente por su derecha' },
+  { nl: 'Stopteken voor het verkeer in de vrije richtingen. Opletten voor het verkeer in de stopgezette richtingen. Kruispunt vrijmaken', es: 'Parar el tráfico que tenía paso; atención el tráfico que estaba parado; dejar libre el cruce' },
+  { nl: 'Teken tot snelheid verminderen', es: 'Reducir la velocidad' },
+  { nl: 'Stopteken door verkeersbrigadier met toepassing van bord F10', es: 'Parar: verkeersbrigadier con la señal F10' },
+];
+---
+
+<div class="qa-gestures my-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
+  {GESTURES.map((g, i) => (
+    <figure class="text-center">
+      <img src={href(`img/rvv-gesto-${i + 1}.webp`)} alt={`Gesto ${i + 1} del anexo II del RVV 1990: ${g.es}.`} class="mx-auto h-40" loading="lazy" />
+      <figcaption class="mt-1 text-sm">
+        <span class="font-semibold">{i + 1}.</span> {g.es}
+        <span class="block text-xs italic text-slate-500" lang="nl">{g.nl}</span>
+      </figcaption>
+    </figure>
+  ))}
+</div>
+<p class="text-xs text-slate-500">Dibujos oficiales: RVV 1990, anexo II (bijlage 2).</p>

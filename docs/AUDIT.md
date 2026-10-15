@@ -1,13 +1,14 @@
 # Audit
 
-How to check that the course is correct. Run layers 1-2 after every content change; layer 3 per lesson before it ships; layer 4 when laws change; layer 5 is the only one that sets `reviewed` on a lesson.
+How to check that the course is correct. What has actually been checked so far, and what hasn't: VERIFICATION.md. Run layers 1-2 after every content change; layer 3 per lesson before it ships; layer 4 when laws change; layer 5 is the only one that sets `reviewed` on a lesson.
 
 ## 1. Mechanical checks: `npm run audit`
 `scripts/audit/check-content.ts` fails on:
 - lesson path/chapter, frontmatter schema, em dashes;
 - `<T>`, `<Sign>`, `<Signs>`, `<Check>` references that don't exist; `<Rule>` without cite; `<Img>` missing file or alt text;
 - question schema, duplicate ids, answers out of range, order labels not in the diagram, unknown signs, missing images;
-- any cite that doesn't resolve to an article/lid/onderdeel in the law snapshots (`audit/law/`).
+- any cite that doesn't resolve to an article/lid/onderdeel in the law snapshots (`audit/law/`);
+- a lesson whose `secondary` frontmatter flag doesn't match whether it (or its quiz) cites a `secondary: true` source. The summary line counts those lessons.
 
 It warns on glossary definitions that read like legal claims without a cite, and CBR topics no lesson covers. `npm run audit -- --strict` turns warnings into failures; use it before a release.
 

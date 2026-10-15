@@ -126,7 +126,7 @@ export function Feedback({ q, ok }: { q: ClientQuestion; ok: boolean }) {
       <p class="mt-2 text-xs text-slate-600">
         {es.quiz.sources}:{' '}
         {q.citeLinks.map((l, i) => (
-          <span key={l.url + i}>{i > 0 && '; '}<a class="qa-cite underline" href={l.url} target="_blank" rel="noopener">{l.label}</a></span>
+          <span key={l.url + i}>{i > 0 && '; '}<a class="qa-cite underline" href={l.url} target="_blank" rel="noopener">{l.label}</a>{l.secondary && <span class="qa-secondary text-amber-800"> ({es.quiz.secondary})</span>}</span>
         ))}
       </p>
     </div>

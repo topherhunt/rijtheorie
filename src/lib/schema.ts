@@ -81,4 +81,6 @@ export const lessonSchema = z.strictObject({
   cbrTopics: z.array(z.enum(Object.keys(CBR_TOPICS) as [CbrTopic, ...CbrTopic[]])).min(1),
   /** Human reviews; empty until someone qualified checks the lesson. */
   reviewed: z.array(z.strictObject({ by: z.string(), date: z.string(), scope: z.string() })).default([]),
+  /** Lesson or its quiz cites a `secondary` source; must match the cites (audit). */
+  secondary: z.boolean().default(false),
 });

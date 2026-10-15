@@ -127,3 +127,11 @@ questions:
     answer: [B, C, A]
     explain: A cede el paso a los dos, así que va último. C gira a la izquierda y debe dejar pasar al tráfico que viene de frente, B, así que B va primero.
     cites: ["rvv:80", "rvv:18.1"]
+
+  - id: haaientanden-direccion
+    type: mc
+    prompt: Hay dientes de tiburón pintados en un cruce. ¿Quién debe ceder el paso?
+    options: ["Quien ve las puntas de los triángulos apuntando hacia él", "Quien ve la base de los triángulos frente a él", "Quien viene por la derecha", "Nadie, son solo decorativos"]
+    answer: 0
+    explain: Las puntas apuntan hacia quien cede el paso; las bases forman una línea paralela a la vía con prioridad.
+    cites: ["general"]

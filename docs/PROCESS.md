@@ -18,7 +18,7 @@ How the material was produced and why it looks the way it does. Update the relev
 ## Sources
 - Law text: wetten.overheid.nl, versions valid on 2026-07-01 (RVV 1990) and current versions of the others at time of writing. Snapshots for auditing live in `audit/law/` (see AUDIT.md).
 - Glossary: based on the CBR plan's Dutch word list (ch. 4) and the "never translated" list (APK, autoweg, brommobiel, erf, snorfiets, speed pedelec).
-- Signs: official images from RVV 1990 bijlage 1, downloaded and converted to 240px WebP in `public/signs/`. Legislation is not subject to copyright (Auteurswet art. 11).
+- Signs and hand signals: official images from RVV 1990 bijlage 1 (`public/signs/`) and bijlage 2 (`public/img/rvv-gesto-N.webp`), converted to WebP. Legislation is not subject to copyright (Auteurswet art. 11).
 
 ## Images
 - Signs: official only, never AI-generated.
@@ -27,9 +27,9 @@ How the material was produced and why it looks the way it does. Update the relev
 - What the model gets wrong: equipment use (gauge held at an impossible angle, a trailer's jockey wheel down while driving even when told it's raised -- describe the object without the part instead), fused objects (two bikes as one frame), distances (triangle 5-10 m behind the car instead of 30 m), which way a car faces, and lane markings. Where the teaching point is a marking or lane layout (acceleration lane), use an SVG diagram instead.
 
 ## Verification
-- Layers 1-3 of AUDIT.md were run on every lesson: independent agents without the authoring context red-teamed the lessons in 9 groups against the law snapshots and the CBR *Rijprocedure B* text. Each finding was checked against its source before acting on it; some were rejected because the cite was correct.
-- Most findings were partial statements (a rule given without its exception or condition), invented emphasis ("solo", "única") and Dutch terms not wired to the glossary. Watch for these when writing new content.
-- Claims that no source in the repo supports were cut rather than re-cited; the resulting gaps are listed in ROADMAP.
+- What was checked, by whom and how, and what is still unverified: VERIFICATION.md. Short version: mechanical audit, author self-check, two red-team passes by independent model agents, no human expert yet.
+- Most red-team findings were partial statements (a rule given without its exception or condition), invented emphasis ("solo", "única") and Dutch terms not wired to the glossary. Watch for these when writing new content.
+- Topics the exam or a safe driver needs but the law snapshots don't cover (APK intervals, fines and points, helping at an accident, shark-teeth direction) are taught from secondary sources or general knowledge at the owner's request, flagged amber to learners and listed in VERIFICATION.md for follow-up. Otherwise, claims no source supports are cut rather than re-cited.
 
 ## Content writing rules
 - Plain Spanish, short sentences, tú form, neutral Latin American vocabulary (carro/auto: use "auto"; manejar/conducir: use "conducir").

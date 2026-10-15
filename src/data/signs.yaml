@@ -66,7 +66,7 @@
   img: signs/C4.webp
 - code: "C5"
   nl: "Inrijden toegestaan"
-  es: "Se permite entrar (sentido único en esta dirección)"
+  es: "Se permite entrar"
   img: signs/C5.webp
 - code: "C6"
   nl: "Gesloten voor motorvoertuigen op meer dan twee wielen"

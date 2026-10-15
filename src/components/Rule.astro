@@ -1,16 +1,18 @@
 ---
 import { citeLinks } from '../lib/questions.ts';
+import { es } from '../i18n/es.ts';
 
 interface Props { cite: string; title?: string }
 const { cite, title } = Astro.props;
 const links = citeLinks(cite.split(','));
+const secondary = links.some((l) => l.secondary);
 ---
 
-<aside class="qa-rule my-5 rounded-lg border-l-4 border-blue-600 bg-blue-50 px-4 py-3">
-  {title && <p class="mb-1 font-semibold text-blue-950">{title}</p>}
+<aside class:list={['qa-rule my-5 rounded-lg border-l-4 px-4 py-3', secondary ? 'qa-rule-secondary border-amber-500 bg-amber-50' : 'border-blue-600 bg-blue-50']}>
+  {title && <p class:list={['mb-1 font-semibold', secondary ? 'text-amber-950' : 'text-blue-950']}>{title}</p>}
   <div class="[&>p]:my-1"><slot /></div>
-  <p class="mt-2 text-xs text-blue-900">
+  <p class:list={['mt-2 text-xs', secondary ? 'text-amber-900' : 'text-blue-900']}>
     Fuente:
-    {links.map((l, i) => <>{i > 0 && '; '}<a class="qa-cite underline" href={l.url} target="_blank" rel="noopener">{l.label}</a></>)}
+    {links.map((l, i) => <>{i > 0 && '; '}<a class="qa-cite underline" href={l.url} target="_blank" rel="noopener">{l.label}</a>{l.secondary && <span class="qa-secondary"> ({es.quiz.secondary})</span>}</>)}
   </p>
 </aside>

@@ -127,3 +127,32 @@ test('the glossary filter hides terms that do not match', async ({ page }) => {
   await page.locator('.qa-glossary-filter').fill('');
   await expect(page.locator('.qa-glossary-term:visible')).toHaveCount(total);
 });
+
+test('a lesson with secondary-source content shows the notice and marks those rules; a law-only lesson does not', async ({ page }) => {
+  await page.goto('/es/leyes/kenteken-apk-seguro/');
+  await expect(page.locator('.qa-secondary-notice')).toBeVisible();
+  const rule = page.locator('.qa-rule-secondary').first();
+  await expect(rule.locator('.qa-secondary')).toBeVisible();
+  await expect(rule.locator('.qa-cite')).toHaveAttribute('href', /anwb\.nl/);
+
+  await page.goto(LESSON);
+  await expect(page.locator('.qa-secondary-notice')).toHaveCount(0);
+  await expect(page.locator('.qa-rule-secondary')).toHaveCount(0);
+});
+
+test('the traffic-agents lesson shows all 8 official hand signals', async ({ page }) => {
+  await page.goto('/es/senales/agentes-y-controladores/');
+  const imgs = page.locator('.qa-gestures img');
+  await expect(imgs).toHaveCount(8);
+  for (const img of await imgs.all()) {
+    const res = await page.request.get((await img.getAttribute('src'))!);
+    expect(res.headers()['content-type']).toBe('image/webp');
+  }
+});
+
+test('about page links the repo and the author', async ({ page }) => {
+  await page.goto('/es/acerca/');
+  await expect(page.locator('.qa-about-repo')).toHaveAttribute('href', 'https://github.com/topherhunt/rijtheorie');
+  await expect(page.locator('.qa-about-made-by a')).toHaveAttribute('href', 'https://topherhunt.com');
+  await expect(page.locator('.qa-made-by a').first()).toHaveAttribute('href', 'https://topherhunt.com');
+});

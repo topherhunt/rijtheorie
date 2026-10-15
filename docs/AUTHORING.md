@@ -5,7 +5,7 @@ How to write course content. Example to copy: `src/content/lessons/es/prioridad/
 ## Files
 - Lesson: `src/content/lessons/es/<chapter-id>/<nn>-<slug>.mdx`; chapter ids in `src/data/chapters.yaml`; `nn` (01, 02...) orders lessons within the chapter.
 - Quiz: `src/content/quizzes/es/<chapter-id>/<nn>-<slug>.yaml`, same path as its lesson.
-- Frontmatter: `title`, `summary` (one sentence), `cbrTopics` (keys of `CBR_TOPICS` in `src/lib/schema.ts`). Leave out `reviewed`.
+- Frontmatter: `title`, `summary` (one sentence), `cbrTopics` (keys of `CBR_TOPICS` in `src/lib/schema.ts`), `secondary: true` if anything in the lesson or quiz cites a secondary source (the audit enforces it). Leave out `reviewed`.
 - One lesson = one idea a learner can finish in 5-10 minutes. Split rather than grow.
 
 ## Lesson components
@@ -29,6 +29,7 @@ YAML `questions:` list. Fields: `id` (lowercase-hyphen, globally unique, start w
 - Law cites: `rvv:15.1`, `rvv:15.2.b`, `rvv:bijlage1.B6`, `wvw:8`. Regeling voertuigen has dotted article numbers, so its lid follows a slash: `rv:5.2.45`, `rv:5.2.45/2`. Print the text with `npm run law -- <cite>` and confirm it says what you claim before citing it.
 - Practical procedure (merging speed, where to look, mirrors and shoulder checks, lane changes, following distance): `cbr-rijprocedure:<section>`, text in `audit/sources/cbr-rijprocedure-b.txt`. Present it as recommended practice and what the practical exam expects, not as law.
 - Other web sources: add to `src/data/sources.yaml` only after reading the page; cite as `<key>:<section>`.
+- Secondary sources: content that is useful but not backed by the law snapshots or CBR material (consumer sites like ANWB, Rijksoverheid explainers, or `general` for general knowledge with no source read). Mark the source `secondary: true`, keep those claims in their own `<Rule>` (never mixed into a law-cited one), and list the topic in VERIFICATION.md "Secondary-source content". Prefer finding the legal text and replacing the cite.
 - Numbers (speeds, distances, promille, points, ages, fines) are the most common errors: verify each against the cited text.
 
 ## Proposing AI images

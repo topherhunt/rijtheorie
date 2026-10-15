@@ -3,12 +3,12 @@
 ## Stack
 - Astro (static output) with MDX for lessons, Preact islands for interactivity, Tailwind v4 utilities.
 - No server in v1. Future dynamic features (speech, translation, accounts) add an Astro server adapter and API routes; nothing in v1 assumes static-only beyond storage.
-- Deploy: GitHub Pages via `.github/workflows/deploy.yml`; `SITE_URL` and `BASE_PATH` env vars feed `astro.config.mjs`. Always build internal links with `href()` from `src/config.ts`.
+- Deploy: Cloudflare Workers static assets (`wrangler.jsonc`, serves `dist/`), via Cloudflare Workers Builds on push to `main` (build `npm run build`, deploy `npx wrangler deploy`). Site URL https://rijtheorie.topherhunt.com is set in `astro.config.mjs`. CI gates in `.github/workflows/ci.yml`. Always build internal links with `href()` from `src/config.ts`.
 
 ## Layout
 ```
 src/
-  config.ts              REPO_URL (placeholder), SITE_NAME, href()
+  config.ts              REPO_URL, AUTHOR_URL, SITE_NAME, href()
   content.config.ts      collections: lessons (MDX), quizzes (YAML)
   content/lessons/es/<chapter-id>/<nn-slug>.mdx    URL /es/<chapter-id>/<slug>/ (nn- dropped; nn orders lessons)
   content/quizzes/es/<chapter-id>/<nn-slug>.yaml   same path as its lesson
@@ -23,20 +23,20 @@ public/signs/<code>.webp official RVV bijlage 1 images
 public/img/              reviewed AI scene images
 scripts/audit/           content audit + law snapshot tooling (never deployed)
 scripts/images/          AI image manifest + generator
-audit/                   law snapshots, review records
+audit/                   law snapshots, source texts, red-team reports (reviews/), owner-review.html
 docs/                    this folder
 ```
 
 ## Content model
-- Lesson frontmatter: `title`, `summary`, `cbrTopics` (keys of `CBR_TOPICS` in `src/lib/schema.ts`), `reviewed` (list of `{by, date, scope}`; empty until a human reviews). Chapter and order come from the file path; chapters are listed in `src/data/chapters.yaml`.
+- Lesson frontmatter: `title`, `summary`, `cbrTopics` (keys of `CBR_TOPICS` in `src/lib/schema.ts`), `reviewed` (list of `{by, date, scope}`; empty until a human reviews), `secondary` (true when the lesson or its quiz cites a secondary source; the page then shows a notice). Chapter and order come from the file path; chapters are listed in `src/data/chapters.yaml`.
 - Quiz file: `{ questions: Question[] }`. Question fields: `id` (unique, stable; progress keys on it), `type` (`mc` | `multi` | `yesno` | `number` | `order`), `prompt`, `options`/`answer`, `explain`, `cites` (≥1), optional `sign`, `image`, `diagram`, `exam` (default true: eligible for mock exam).
 - Cites: `"<sourceKey>:<locator>"`, see header of `src/data/sources.yaml`.
 
 ## MDX components (auto-provided to every lesson)
 - `<T id="voorrang" />` -> "prioridad (*voorrang*)" from glossary.
-- `<Rule cite="rvv:15.1">...</Rule>` -> highlighted rule with citation link(s); `cite` may be a comma-separated list.
+- `<Rule cite="rvv:15.1">...</Rule>` -> highlighted rule with citation link(s); `cite` may be a comma-separated list. Blue for law/CBR; amber with "no es texto legal" when any cite is a `secondary: true` source (also marked in quiz cites).
 - `<Tip>` -> exam tip (not law). `<Warn>` -> common mistake.
-- `<Sign code="B6" />`, `<Signs codes="B6,B7" />`.
+- `<Sign code="B6" />`, `<Signs codes="B6,B7" />`. `<Gestures />` -> the 8 hand signals of RVV bijlage 2 (`public/img/rvv-gesto-N.webp`).
 - `<Junction ... />` -> SVG diagram (`Diagram.astro`; props are `diagramSchema` in `src/lib/schema.ts`). Questions take the same object as `diagram:`.
 - `<Img src alt caption />` -> reviewed AI image from `public/img/`, marked as illustrative.
 - `<Check id="..." />` -> one practice question inline in the prose, by its global id.

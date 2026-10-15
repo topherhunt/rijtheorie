@@ -19,12 +19,12 @@ npm run dev          # http://localhost:4321/es/
 npm run check        # typecheck, content audit, unit and e2e tests
 ```
 
-Contributor docs live in [`docs/`](docs/): [BLUEPRINT](docs/BLUEPRINT.md) (architecture), [AUTHORING](docs/AUTHORING.md) (writing lessons and questions), [AUDIT](docs/AUDIT.md) (checking correctness), [PROCESS](docs/PROCESS.md) (sources and decisions), [ROADMAP](docs/ROADMAP.md).
+Contributor docs live in [`docs/`](docs/): [BLUEPRINT](docs/BLUEPRINT.md) (architecture), [AUTHORING](docs/AUTHORING.md) (writing lessons and questions), [AUDIT](docs/AUDIT.md) (checking correctness), [VERIFICATION](docs/VERIFICATION.md) (what has and hasn't been checked), [PROCESS](docs/PROCESS.md) (sources and decisions), [ROADMAP](docs/ROADMAP.md).
 
-Deployment: GitHub Pages via `.github/workflows/deploy.yml` (enable Pages with "GitHub Actions" as the source).
+Live at https://rijtheorie.topherhunt.com. Deployment: Cloudflare Workers static assets (`wrangler.jsonc`), built and deployed by Cloudflare Workers Builds on push to `main`. GitHub Actions (`.github/workflows/ci.yml`) runs the quality gates only.
 
 ## Licences
 - Code: MIT.
 - Course content (lessons, questions, glossary, diagrams, generated images): CC BY-SA 4.0.
-- Road sign images: from the RVV 1990 bijlage 1; Dutch legislation is not subject to copyright (Auteurswet art. 11).
+- Road sign and hand-signal images: from the RVV 1990 bijlage 1 and 2; Dutch legislation is not subject to copyright (Auteurswet art. 11).
 - `audit/law/` holds snapshots of Dutch legislation from wetten.overheid.nl (public domain, same reason). `audit/sources/cbr-rijprocedure-b.txt` is the CBR *Rijprocedure B*, whose publisher permits reproduction.

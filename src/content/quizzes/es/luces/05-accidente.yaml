@@ -62,3 +62,17 @@ questions:
     answer: true
     explain: A la primera orden debes detener el vehículo y mostrar los documentos.
     cites: ["wvw:160.1"]
+
+  - id: accidente-ayuda-112
+    type: order
+    prompt: "Llegas a un accidente con un herido. Ordena los pasos:"
+    answer: ["Parar seguro y luces de emergencia", "Llamar al 112", "Atender al herido"]
+    explain: Primero tu seguridad, luego avisar al 112, luego ayudar al herido.
+    cites: ["general"]
+
+  - id: accidente-ayuda-mover
+    type: yesno
+    prompt: Un herido está dentro de su auto y no hay fuego ni tráfico que lo ponga en peligro. ¿Debes sacarlo enseguida?
+    answer: false
+    explain: No muevas a un herido salvo que corra peligro donde está. Llama al 112 y atiéndelo allí.
+    cites: ["general"]

@@ -105,3 +105,18 @@ questions:
     answer: false
     explain: Las carreras en la vía pública están prohibidas.
     cites: ["wvw:10"]
+
+  - id: sanciones-multa-titular
+    type: yesno
+    prompt: Una cámara capta tu auto a demasiada velocidad mientras lo conducía un amigo. ¿La multa llega a tu nombre, como titular de la matrícula?
+    answer: true
+    explain: Si no se para al conductor en el momento, la multa administrativa se envía al kentekenhouder.
+    cites: ["general"]
+
+  - id: sanciones-puntos-novel
+    type: mc
+    prompt: Tienes el beginnersrijbewijs y la policía te para por segunda vez por una infracción grave. ¿Qué pasa?
+    options: ["El Openbaar Ministerie te comunica al CBR, que investiga tu aptitud", "Nada, los puntos solo cuentan a partir de 5", "Pagas una multa más alta y nada más", "Te quitan el auto"]
+    answer: 0
+    explain: Con el 2.º strafpunt del beginnersrijbewijs, el OM te comunica al CBR.
+    cites: ["rijksoverheid-beginners"]

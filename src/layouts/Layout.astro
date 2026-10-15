@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import { REPO_URL, SITE_NAME, href } from '../config.ts';
+import { AUTHOR_URL, REPO_URL, SITE_NAME, href } from '../config.ts';
 import { es } from '../i18n/es.ts';
 
 interface Props { title: string; description?: string }
@@ -45,6 +45,7 @@ const nav = [
         <a class="qa-report-link font-semibold text-brand-700 underline" href={reportUrl} target="_blank" rel="noopener">{es.report}</a>
         <span>{es.reportHint}</span>
         <span>{es.footer.license} <a class="underline" href={href('es/fuentes/')}>{es.footer.sources}</a></span>
+        <span class="qa-made-by">{es.footer.madeBy} <a class="underline" href={AUTHOR_URL}>Topher Hunt</a> · <a class="underline" href={REPO_URL}>GitHub</a></span>
       </div>
     </footer>
     <script>

@@ -1,5 +1,5 @@
-// Placeholder until the public GitHub repo exists; the report-a-problem link and footer use it.
-export const REPO_URL = 'https://github.com/OWNER/rijtheorie';
+export const REPO_URL = 'https://github.com/topherhunt/rijtheorie';
+export const AUTHOR_URL = 'https://topherhunt.com';
 
 export const SITE_NAME = 'Rijtheorie en español';
 

@@ -1,17 +1,17 @@
 // Build-time: turn quiz entries into the serialisable shape the Preact islands receive.
 import { getCollection } from 'astro:content';
-import { citeLabel, citeUrl, parseCite } from './cite.ts';
+import { citeLabel, citeUrl, isSecondary, parseCite } from './cite.ts';
 import { sign, sources } from './data.ts';
 import type { Question } from './schema.ts';
 
-export interface CiteLink { label: string; url: string }
+export interface CiteLink { label: string; url: string; secondary: boolean }
 export interface ClientSign { code: string; es: string; nl: string; img: string }
 export type ClientQuestion = Question & { lessonId: string; citeLinks: CiteLink[]; signs: ClientSign[] };
 
 export function citeLinks(cites: string[]): CiteLink[] {
   return cites.map((raw) => {
     const c = parseCite(raw.trim(), sources());
-    return { label: citeLabel(c, sources()), url: citeUrl(c, sources()) };
+    return { label: citeLabel(c, sources()), url: citeUrl(c, sources()), secondary: isSecondary(sources()[c.key]) };
   });
 }
 

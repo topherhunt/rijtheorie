@@ -16,6 +16,7 @@ export const es = {
   footer: {
     license: 'Código MIT. Contenido CC BY-SA 4.0. Señales: dominio público (RVV 1990, bijlage 1).',
     sources: 'Fuentes y licencias',
+    madeBy: 'Hecho con 💙 por',
   },
   lesson: {
     markDone: 'Marcar como leída',
@@ -26,6 +27,7 @@ export const es = {
     notes: 'Mis notas',
     notesHint: 'Se guardan solo en este navegador.',
     unreviewed: 'Esta lección todavía no ha sido revisada por un instructor o experto.',
+    secondary: 'Parte de esta lección no viene del texto de la ley ni del material del CBR, sino de fuentes secundarias o conocimiento general. Esas partes van marcadas en amarillo: compruébalas en una fuente oficial.',
   },
   quiz: {
     check: 'Comprobar',
@@ -40,6 +42,7 @@ export const es = {
     orderHint: 'Toca en el orden correcto (primero a último).',
     reset: 'Borrar',
     illustrative: 'Imagen ilustrativa',
+    secondary: 'no es texto legal',
   },
   storage: 'Tu navegador no permite guardar el progreso (almacenamiento bloqueado). El curso funciona, pero no se guardará nada.',
   chapter: 'Capítulo',

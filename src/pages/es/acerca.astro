@@ -1,13 +1,13 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { REPO_URL, href } from '../../config.ts';
+import { REPO_URL, AUTHOR_URL, href } from '../../config.ts';
 ---
 
 <Layout title="Acerca de este curso">
   <div class="prose-lesson qa-about">
     <h1 class="text-3xl font-bold">Acerca de este curso</h1>
     <h2>Esto NO es un curso oficial</h2>
-    <p>Este curso lo hacen voluntarios. No es del CBR, ni de una autoescuela, ni del gobierno. Lo escribimos con cuidado y enlazamos cada regla a la ley, pero <strong>puede tener errores</strong> y las reglas cambian.</p>
+    <p>No es del CBR, ni de una autoescuela, ni del gobierno. Lo escribimos con cuidado y enlazamos cada regla a su fuente, pero <strong>puede tener errores</strong> y las reglas cambian.</p>
     <p>Por eso te recomendamos:</p>
     <ul>
       <li><strong>Estudia también con material oficial o reconocido</strong>: un libro de teoría actualizado, un curso de una autoescuela o una plataforma de práctica. El examen usa palabras en neerlandés y tienes que acostumbrarte a ellas.</li>
@@ -15,12 +15,26 @@ import { REPO_URL, href } from '../../config.ts';
       <li><strong>Si la ley o el CBR dicen otra cosa, vale lo que dicen ellos</strong>, no este curso.</li>
     </ul>
     <h2>¿Para quién es?</h2>
-    <p>Para hispanohablantes, sobre todo de América Latina, que viven en los Países Bajos y quieren sacar el permiso de conducir B (<i lang="nl">rijbewijs B</i>). Usamos las palabras neerlandesas del examen junto al español, para que llegues al examen conociéndolas.</p>
+    <p>Para hispanohablantes, sobre todo de América Latina, que viven en los Países Bajos y quieren sacar el permiso de conducir B (<i lang="nl">rijbewijs B</i>).</p>
+    <h2>Objetivo</h2>
+    <p>Que entiendas las reglas de tráfico neerlandesas en tu idioma, que llegues al examen teórico del CBR conociendo las palabras neerlandesas que vas a leer, y que conduzcas con seguridad: aprobar el examen no basta.</p>
+    <h2>Cómo enseña</h2>
+    <ul>
+      <li><strong>Español con las palabras del examen</strong>: cada término importante aparece también en neerlandés, y el glosario los reúne.</li>
+      <li><strong>Cada regla con su fuente</strong>: el recuadro azul enlaza al artículo de la ley o al material del CBR. Lo que viene de fuentes secundarias va en amarillo y marcado como "no es texto legal".</li>
+      <li><strong>Practicar mientras lees</strong>: preguntas dentro de la lección y un cuestionario al final, con los tipos de pregunta del examen del CBR.</li>
+      <li><strong>Repaso espaciado</strong>: las preguntas que fallas vuelven antes; las que dominas, más tarde.</li>
+      <li><strong>Examen de práctica solo cuando estés listo</strong>: se desbloquea cuando dominas todo el curso, para que aprobarlo signifique saber las reglas.</li>
+      <li><strong>No solo el examen</strong>: también los procedimientos prácticos del CBR (incorporarse a la autopista, mirar el ángulo muerto, cambiar de carril), cruces dibujados con exactitud y las señales oficiales.</li>
+    </ul>
+    <h2>Quién lo hizo y cómo se revisó</h2>
+    <p>Lo escribió Topher Hunt con ayuda de inteligencia artificial (Claude), a partir del texto de la ley neerlandesa y del material publicado por el CBR. Cada regla y cada pregunta se comprobaron contra su fuente, también con revisores automáticos independientes. <strong>Todavía no lo ha revisado un instructor de autoescuela ni un experto</strong>; cada lección lo indica hasta que eso ocurra.</p>
     <h2>¿Encontraste un error?</h2>
     <p>Nos ayuda muchísimo. <a class="qa-about-report" href={`${REPO_URL}/issues/new?template=problema.yml`}>Reporta el problema aquí</a>: errores en las reglas, partes que no se entienden, imágenes incorrectas, fallos de la página o erratas. Hace falta una cuenta gratuita de GitHub.</p>
     <h2>Tu privacidad</h2>
     <p>No hay cuentas, ni anuncios, ni rastreo. Tu progreso y tus notas se guardan solo en tu navegador. Puedes descargarlos o borrarlos en <a href={href('es/progreso/')}>Mi progreso</a>.</p>
     <h2>Código abierto</h2>
-    <p>Todo el curso es abierto: <a href={REPO_URL}>código y textos en GitHub</a>. Ver también <a href={href('es/fuentes/')}>Fuentes y licencias</a>.</p>
+    <p>Todo el curso es abierto: código y textos en <a class="qa-about-repo" href={REPO_URL}>{REPO_URL.replace('https://', '')}</a>. Ver también <a href={href('es/fuentes/')}>Fuentes y licencias</a>.</p>
+    <p class="qa-about-made-by">Hecho con 💙 por <a href={AUTHOR_URL}>Topher Hunt</a>.</p>
   </div>
 </Layout>

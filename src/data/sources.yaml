@@ -2,6 +2,7 @@
 # Law entries (bwb) link to wetten.overheid.nl; locator = article[.lid[.onderdeel]], or "bijlage<N>[.<code>]".
 # `dotted: true` laws have dotted article numbers, so the lid follows a slash: "rv:5.2.45/2.a".
 # Other entries (url) link to the page; locator is shown as text (section, page).
+# `secondary: true`: not law or CBR material; learners see the claim flagged (docs/VERIFICATION.md).
 rvv:
   bwb: BWBR0004825
   short: RVV 1990
@@ -56,7 +57,7 @@ cbr-taal:
   short: CBR otros idiomas
   title: CBR -- Kan ik het theorie-examen in een andere taal doen?
 curso:
-  url: https://github.com/OWNER/rijtheorie
+  url: https://github.com/topherhunt/rijtheorie
   short: Este curso
   title: Reglas de funcionamiento de este curso (no son ley; ver docs/BLUEPRINT.md del repositorio)
 rws-maximumsnelheid:
@@ -83,3 +84,18 @@ vvn-turborotonde:
   url: https://vvn.nl/blijf-veilig-onderweg/auto/verkeersregels/turborotonde
   short: VVN turborotonde
   title: Veilig Verkeer Nederland -- Turborotonde
+general:
+  url: https://github.com/topherhunt/rijtheorie/blob/main/docs/VERIFICATION.md#secondary-source-content
+  short: Conocimiento general, sin fuente legal
+  title: Escrito a partir de conocimiento general, sin verificar en el texto de la ley (docs/VERIFICATION.md)
+  secondary: true
+anwb-apk:
+  url: https://www.anwb.nl/auto/onderhoud-en-reparatie/apk/apk-vervaldatum
+  short: ANWB APK
+  title: ANWB -- APK vervaldatum
+  secondary: true
+rijksoverheid-beginners:
+  url: https://www.rijksoverheid.nl/onderwerpen/rijbewijs/puntenrijbewijs-beginnersrijbewijs
+  short: Rijksoverheid beginnersrijbewijs
+  title: Rijksoverheid -- Puntenrijbewijs en beginnersrijbewijs
+  secondary: true

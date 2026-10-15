@@ -69,3 +69,42 @@ questions:
     answer: 0
     explain: Las instrucciones van sobre los verkeerstekens y las reglas (art. 84). Los semáforos van sobre las señales de prioridad (art. 64).
     cites: ["rvv:84", "rvv:64"]
+
+  - id: ag-gesto-brazo-arriba
+    type: mc
+    prompt: Un agente en un cruce levanta un brazo en vertical, como en el dibujo. ¿Qué significa?
+    image: rvv-gesto-1.webp
+    imageAlt: Agente de tráfico con un brazo levantado en vertical.
+    options: ["Todos paran", "Solo para el tráfico que viene por su derecha", "Reduce la velocidad", "Puedes pasar"]
+    answer: 0
+    explain: "Gesto 1 del anexo II: algemeen stopteken, la señal general de parar."
+    cites: ["rvv:82.2", "rvv:bijlage2"]
+
+  - id: ag-gesto-dedo
+    type: mc
+    prompt: Un agente levanta el brazo con el dedo índice hacia arriba. Tú tenías paso y aún no has entrado en el cruce. ¿Qué haces?
+    image: rvv-gesto-6.webp
+    imageAlt: Agente de tráfico con el brazo levantado y el dedo índice hacia arriba.
+    options: ["Paro", "Sigo, porque tenía paso", "Acelero para pasar antes del cambio", "Toco la bocina"]
+    answer: 0
+    explain: "Gesto 6: parar para el tráfico que tenía paso (vrije richtingen), atención para el que estaba parado, y quien ya está en el cruce lo deja libre."
+    cites: ["rvv:82.2", "rvv:bijlage2"]
+
+  - id: ag-gesto-brazos
+    type: yesno
+    prompt: Un agente te mira de frente con los dos brazos extendidos a los lados. ¿Debes parar?
+    image: rvv-gesto-4.webp
+    imageAlt: Agente de tráfico de frente, con los dos brazos extendidos horizontalmente a los lados.
+    answer: true
+    explain: "Gesto 4: parar el tráfico que se acerca al agente por delante y por detrás. Tú llegas por delante."
+    cites: ["rvv:82.2", "rvv:bijlage2"]
+
+  - id: ag-gesto-lento
+    type: mc
+    prompt: Un agente extiende el brazo y lo mueve hacia arriba y hacia abajo. ¿Qué significa?
+    image: rvv-gesto-7.webp
+    imageAlt: Agente de tráfico de perfil, con el brazo extendido que sube y baja.
+    options: ["Reduce la velocidad", "Para", "Acelera", "Gira a la derecha"]
+    answer: 0
+    explain: "Gesto 7: teken tot snelheid verminderen, reducir la velocidad."
+    cites: ["rvv:82.2", "rvv:bijlage2"]

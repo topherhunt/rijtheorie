@@ -1,6 +1,7 @@
 /** `dotted`: article numbers contain dots (Regeling voertuigen "5.2.45"), so lid follows a slash: "rv:5.2.45/2.a". */
 export interface LawSource { bwb: string; short: string; title: string; dotted?: boolean }
-export interface WebSource { url: string; short: string; title: string }
+/** `secondary`: not law or CBR material; the claim it backs is flagged to learners as less authoritative (docs/VERIFICATION.md). */
+export interface WebSource { url: string; short: string; title: string; secondary?: boolean }
 export type Source = LawSource | WebSource;
 export type Sources = Record<string, Source>;
 
@@ -20,6 +21,10 @@ export interface Cite {
 
 export function isLaw(s: Source): s is LawSource {
   return 'bwb' in s;
+}
+
+export function isSecondary(s: Source): boolean {
+  return !isLaw(s) && s.secondary === true;
 }
 
 const DOTTED_LOCATOR = /^(\d+(?:\.\d+[a-z]*)+)(?:\/(\d+[a-z]*)(?:\.([a-z]+))?)?$/;

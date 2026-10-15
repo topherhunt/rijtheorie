@@ -3,7 +3,7 @@
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { join, relative } from 'node:path';
 import { parse as parseYaml } from 'yaml';
-import { isLaw, parseCite } from '../../src/lib/cite.ts';
+import { isLaw, isSecondary, parseCite } from '../../src/lib/cite.ts';
 import { chapters, glossary, signs, sources } from '../../src/lib/data.ts';
 import { CBR_TOPICS, lessonSchema, quizSchema, type Question } from '../../src/lib/schema.ts';
 import { resolveCite } from './lib/law.ts';
@@ -46,6 +46,10 @@ const chapterIds = new Set(chapters().map((c) => c.id));
 const topicsCovered = new Set<string>();
 const lessonIds = new Set<string>();
 const checkRefs: { where: string; id: string }[] = [];
+/** Lesson id -> its `secondary` frontmatter flag, and the lesson ids whose MDX or quiz cites a secondary source. */
+const secondaryFlag = new Map<string, boolean>();
+const usesSecondary = new Set<string>();
+const citesSecondary = (cites: string[]) => cites.some((c) => { const s = sources()[c.trim().split(':')[0]]; return s !== undefined && isSecondary(s); });
 
 function frontmatter(src: string): unknown {
   const m = /^---\n([\s\S]*?)\n---\n/.exec(src);
@@ -62,7 +66,10 @@ for (const file of walk(LESSONS, '.mdx')) {
   const src = readFileSync(file, 'utf8');
   const fm = lessonSchema.safeParse(frontmatter(src));
   if (!fm.success) err(rel, `frontmatter: ${fm.error.issues.map((i) => `${i.path.join('.')} ${i.message}`).join('; ')}`);
-  else fm.data.cbrTopics.forEach((t) => topicsCovered.add(t));
+  else {
+    fm.data.cbrTopics.forEach((t) => topicsCovered.add(t));
+    secondaryFlag.set(id, fm.data.secondary);
+  }
   if (EM_DASH.test(src)) err(rel, 'contains an em dash; use "--" or rephrase');
 
   for (const t of src.matchAll(/<T\s+id="([^"]+)"/g)) if (!glossary()[t[1]]) err(rel, `<T id="${t[1]}">: not in glossary.yaml`);
@@ -72,7 +79,10 @@ for (const file of walk(LESSONS, '.mdx')) {
   for (const r of src.matchAll(/<Rule\b([^>]*)>/g)) {
     const cite = /\bcite="([^"]+)"/.exec(r[1])?.[1];
     if (!cite) err(rel, '<Rule> without cite');
-    else for (const c of cite.split(',')) checkCite(rel, c);
+    else {
+      for (const c of cite.split(',')) checkCite(rel, c);
+      if (citesSecondary(cite.split(','))) usesSecondary.add(id);
+    }
   }
   for (const im of src.matchAll(/<Img\b([^>]*)\/>/g)) {
     const srcAttr = /\bsrc="([^"]+)"/.exec(im[1])?.[1];
@@ -123,8 +133,13 @@ for (const file of walk(QUIZZES, '.yaml')) {
     err(rel, parsed.error.issues.map((i) => `${i.path.join('.')}: ${i.message}`).join('; '));
     continue;
   }
-  for (const q of parsed.data.questions) checkQuestion(rel, q);
+  for (const q of parsed.data.questions) {
+    checkQuestion(rel, q);
+    if (citesSecondary(q.cites)) usesSecondary.add(id);
+  }
 }
+for (const [id, flag] of secondaryFlag)
+  if (flag !== usesSecondary.has(id)) err(`src/content/lessons/${id}.mdx`, flag ? 'secondary: true but nothing cites a secondary source' : 'cites a secondary source; set secondary: true in the frontmatter');
 for (const { where, id } of checkRefs) if (!questionIds.has(id)) err(where, `<Check id="${id}">: no such question`);
 
 // --- Glossary ---
@@ -145,5 +160,5 @@ for (const t of Object.keys(CBR_TOPICS)) if (!topicsCovered.has(t)) warn('covera
 // --- Report ---
 for (const w of warnings) console.log(`warn  ${w}`);
 for (const e of errors) console.log(`ERROR ${e}`);
-console.log(`\n${lessonIds.size} lessons, ${questionIds.size} questions; ${errors.length} errors, ${warnings.length} warnings`);
+console.log(`\n${lessonIds.size} lessons, ${questionIds.size} questions (${usesSecondary.size} lessons cite secondary sources); ${errors.length} errors, ${warnings.length} warnings`);
 if (errors.length > 0 || (process.argv.includes('--strict') && warnings.length > 0)) process.exit(1);
