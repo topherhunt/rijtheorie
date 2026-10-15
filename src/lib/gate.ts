@@ -10,9 +10,8 @@ export const GATE = {
   minAccuracy: 0.98,
   /** Leitner box reached only by correct answers at least a day apart (see Store.recordAnswer). */
   minBox: 3,
-  /** Placement: questions per lesson, and minimum total. */
-  placementPerLesson: 1,
-  placementMin: 40,
+  /** Placement test length, drawn round-robin across chapters; all must be correct. */
+  placementSize: 20,
   /** Wait after a failed placement test. */
   placementCooldownHours: 24,
 } as const;
@@ -74,8 +73,4 @@ export function groupBy<T>(xs: T[], key: (x: T) => string): Map<string, T[]> {
   const m = new Map<string, T[]>();
   for (const x of xs) m.set(key(x), [...(m.get(key(x)) ?? []), x]);
   return m;
-}
-
-export function placementSize(lessonCount: number, poolSize: number): number {
-  return Math.min(poolSize, Math.max(GATE.placementMin, lessonCount * GATE.placementPerLesson));
 }

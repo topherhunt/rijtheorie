@@ -38,7 +38,7 @@ const current = nav.map(([p]) => href(p)).filter((p) => Astro.url.pathname.start
   </head>
   <body class="min-h-screen bg-slate-50 text-slate-900">
     <header class="border-b border-slate-200 bg-white">
-      <div class="mx-auto flex max-w-4xl flex-wrap items-center gap-x-4 gap-y-2 px-4 py-3">
+      <div class="mx-auto flex max-w-4xl flex-wrap items-center gap-x-4 gap-y-2 px-2 py-3 sm:px-4">
         <a href={href('es/')} class="font-bold text-brand-700">{SITE_NAME}</a>
         <button type="button" id="theme-toggle" class="qa-theme-toggle ml-auto rounded-lg px-2 py-1 text-lg text-slate-600 hover:bg-slate-100" aria-label={es.theme}>
           <i class="bi bi-moon-fill dark:hidden" aria-hidden="true"></i><i class="bi bi-sun-fill hidden dark:inline" aria-hidden="true"></i>
@@ -52,11 +52,11 @@ const current = nav.map(([p]) => href(p)).filter((p) => Astro.url.pathname.start
       </div>
     </header>
     <div id="storage-banner" class="qa-storage-banner hidden bg-red-100 px-4 py-2 text-center text-sm text-red-900">{es.storage}</div>
-    <main class="mx-auto max-w-4xl px-4 py-8">
+    <main class="mx-auto max-w-4xl px-2 py-8 sm:px-4">
       <slot />
     </main>
     <footer class="border-t border-slate-200 bg-white">
-      <div class="mx-auto flex max-w-4xl flex-col gap-2 px-4 py-6 text-sm text-slate-600">
+      <div class="mx-auto flex max-w-4xl flex-col gap-2 px-2 py-6 text-sm sm:px-4 text-slate-600">
         <a class="qa-report-link tooltip self-start font-semibold text-brand-700 underline" data-tip={es.reportHint} href={reportUrl} target="_blank" rel="noopener"><i class="bi bi-flag mr-1" aria-hidden="true"></i>{es.report}</a>
       </div>
     </footer>

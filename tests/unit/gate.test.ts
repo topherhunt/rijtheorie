@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { GATE, gateStatus, groupBy, placementSize, spread } from '../../src/lib/gate.ts';
+import { GATE, gateStatus, groupBy, spread } from '../../src/lib/gate.ts';
 import { Store, type Backend } from '../../src/lib/store.ts';
 
 const memory = (): Backend => {
@@ -90,13 +90,5 @@ describe('spread', () => {
   it('returns n distinct items and stops when the groups run out', () => {
     expect(new Set(spread(groups, 5, () => 0.5)).size).toBe(5);
     expect(spread(groups, 99, () => 0.5)).toHaveLength(6);
-  });
-});
-
-describe('placementSize', () => {
-  it('is at least one per lesson and at least the minimum, capped by the pool', () => {
-    expect(placementSize(10, 500)).toBe(GATE.placementMin);
-    expect(placementSize(60, 500)).toBe(60);
-    expect(placementSize(10, 12)).toBe(12);
   });
 });

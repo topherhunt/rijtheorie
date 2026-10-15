@@ -4,7 +4,7 @@ import { Feedback, QuestionInput, QuestionMedia, isComplete } from './QuestionCa
 import { useStore } from '../useStore.ts';
 import { grade, type Response } from '../../lib/grade.ts';
 import { EXAM_SIZE, passMark } from '../../lib/exam.ts';
-import { GATE, gateStatus, groupBy, placementSize, spread, type Check } from '../../lib/gate.ts';
+import { GATE, gateStatus, groupBy, spread, type Check } from '../../lib/gate.ts';
 import type { ClientQuestion } from '../../lib/questions.ts';
 import type { Store } from '../../lib/store.ts';
 
@@ -62,7 +62,7 @@ function CheckRow({ c, label, qa }: { c: Check; label: string; qa: string }) {
   );
 }
 
-export default function ExamIsland({ pool, all, lessonCount }: { pool: ClientQuestion[]; all: ClientQuestion[]; lessonCount: number }) {
+export default function ExamIsland({ pool, all }: { pool: ClientQuestion[]; all: ClientQuestion[] }) {
   const { state, store } = useStore();
   const [phase, setPhase] = useState<Phase>({ kind: 'intro' });
   if (!state || !store) return null;
@@ -74,8 +74,9 @@ export default function ExamIsland({ pool, all, lessonCount }: { pool: ClientQue
 
   const g = gateStatus(state, all.map((q) => q.id), new Date());
   const n = Math.min(EXAM_SIZE, pool.length);
-  const pn = placementSize(lessonCount, all.length);
+  const pn = Math.min(GATE.placementSize, pool.length);
   const byLesson = (qs: ClientQuestion[]) => groupBy(qs, (q) => q.lessonId);
+  const byChapter = (qs: ClientQuestion[]) => groupBy(qs, (q) => q.lessonId.slice(0, q.lessonId.lastIndexOf('/')));
 
   if (g.unlocked) {
     return (
@@ -109,12 +110,12 @@ export default function ExamIsland({ pool, all, lessonCount }: { pool: ClientQue
       <div class="rounded-xl border border-slate-200 bg-white p-4">
         <h3 class="text-lg font-bold">Forma 2: ¿ya sabes todo? Aprueba la prueba de nivel</h3>
         <p class="mt-2 text-slate-700">
-          {pn} preguntas, al menos una de cada lección. Tienes que acertar <strong>todas</strong>. Si fallas una, podrás intentarlo de nuevo en {GATE.placementCooldownHours} horas; mientras tanto, repasa las lecciones.
+          {pn} preguntas de todos los capítulos. Tienes que acertar <strong>todas</strong>. Si fallas una, podrás intentarlo de nuevo en {GATE.placementCooldownHours} horas; mientras tanto, repasa las lecciones.
         </p>
         {g.placementLockedUntil ? (
           <p class="qa-placement-locked mt-3 text-sm text-red-700">Próximo intento: {new Date(g.placementLockedUntil).toLocaleString('es')}</p>
         ) : (
-          <button type="button" class={`qa-placement-start mt-4 ${btn}`} disabled={pn === 0} onClick={() => setPhase({ kind: 'running', mode: 'placement', qs: spread(byLesson(all), pn) })}>Empezar la prueba de nivel</button>
+          <button type="button" class={`qa-placement-start mt-4 ${btn}`} disabled={pn === 0} onClick={() => setPhase({ kind: 'running', mode: 'placement', qs: spread(byChapter(pool), pn) })}>Empezar la prueba de nivel</button>
         )}
       </div>
     </div>

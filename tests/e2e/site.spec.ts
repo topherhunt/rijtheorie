@@ -151,6 +151,12 @@ test('the mock exam is locked for a new learner, with all four mastery checks pe
   await expect(page.locator('.qa-placement-start')).toBeEnabled();
 });
 
+test('the placement test has 20 questions', async ({ page }) => {
+  await page.goto('/es/examen/');
+  await page.locator('.qa-placement-start').click();
+  await expect(page.locator('.qa-exam-counter')).toHaveText('Pregunta 1 / 20');
+});
+
 test('a failed placement test blocks a new attempt for 24 hours', async ({ page }) => {
   await seed(page, { ...emptyState, placements: [{ at: new Date().toISOString(), score: 3, total: 4, passed: false }] });
   await page.goto('/es/examen/');

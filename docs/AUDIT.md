@@ -7,6 +7,7 @@ How to check that the course is correct. What has actually been checked so far, 
 - lesson path/chapter, frontmatter schema, em dashes;
 - `<T>`, `<Sign>`, `<Signs>`, `<Check>` references that don't exist; `<Rule>` without cite; `<Img>` missing file or alt text;
 - question schema, duplicate ids, answers out of range, order labels not in the diagram, unknown signs, missing images;
+- an unquoted option in a flow list (`options: [...]`) that starts lowercase: almost always the tail of an option split by an unquoted comma. Quote it if the lowercase is meant;
 - any cite that doesn't resolve to an article/lid/onderdeel in the law snapshots (`audit/law/`);
 - a lesson whose `secondary` frontmatter flag doesn't match whether it (or its quiz) cites a `secondary: true` source. The summary line counts those lessons.
 

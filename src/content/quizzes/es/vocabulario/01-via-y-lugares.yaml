@@ -11,7 +11,7 @@ questions:
   - id: via-y-lugares-uitvoeg
     type: mc
     prompt: ¿Cuál es el carril para salir de una autopista?
-    options: [invoegstrook, uitvoegstrook, busstrook, spitsstrook]
+    options: ["invoegstrook", "uitvoegstrook", "busstrook", "spitsstrook"]
     answer: 1
     explain: Uitvoegstrook es el carril de salida/desaceleración.
     cites: ["cbr-examenplan:4"]

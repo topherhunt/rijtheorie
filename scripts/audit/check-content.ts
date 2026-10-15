@@ -2,7 +2,7 @@
 // Errors exit 1. --strict also fails on warnings (missing CBR topic coverage, uncited glossary claims).
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { join, relative } from 'node:path';
-import { parse as parseYaml } from 'yaml';
+import { isMap, isScalar, isSeq, parseDocument, parse as parseYaml } from 'yaml';
 import { isLaw, isSecondary, parseCite } from '../../src/lib/cite.ts';
 import { chapters, glossary, signs, sources } from '../../src/lib/data.ts';
 import { CBR_TOPICS, lessonSchema, quizSchema, type Question } from '../../src/lib/schema.ts';
@@ -124,11 +124,28 @@ function checkQuestion(rel: string, q: Question) {
   }
 }
 
+// An unquoted comma inside `options: [...]` silently splits one option into two and shifts `answer`.
+// Options are capitalized, so an unquoted item starting lowercase is the tail of a split; quote real lowercase terms.
+function checkFlowOptions(rel: string, src: string) {
+  const qs = parseDocument(src).get('questions');
+  if (!isSeq(qs)) return;
+  for (const q of qs.items) {
+    if (!isMap(q)) continue;
+    const opts = q.get('options', true);
+    if (!isSeq(opts) || !opts.flow) continue;
+    for (const o of opts.items) {
+      if (isScalar(o) && o.type === 'PLAIN' && /^\p{Ll}/u.test(String(o.value))) err(`${rel} [${q.get('id')}]`, `option "${o.value}" looks split off by an unquoted comma; quote the whole option (or quote this one if the lowercase is meant)`);
+    }
+  }
+}
+
 for (const file of walk(QUIZZES, '.yaml')) {
   const rel = relative(ROOT, file);
   const id = relative(QUIZZES, file).replace(/\.yaml$/, '');
   if (!lessonIds.has(id)) err(rel, `no lesson at src/content/lessons/${id}.mdx`);
-  const parsed = quizSchema.safeParse(parseYaml(readFileSync(file, 'utf8')));
+  const src = readFileSync(file, 'utf8');
+  checkFlowOptions(rel, src);
+  const parsed = quizSchema.safeParse(parseYaml(src));
   if (!parsed.success) {
     err(rel, parsed.error.issues.map((i) => `${i.path.join('.')}: ${i.message}`).join('; '));
     continue;
