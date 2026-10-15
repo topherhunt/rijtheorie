@@ -46,7 +46,7 @@ questions:
 
   - id: documentos-control-ue
     type: number
-    prompt: Vives aquí con un permiso de categoría B de la UE, emitido hace mucho. Puedes usarlo, como máximo, hasta que pasen X años desde que fue emitido. ¿Cuántos años?
+    prompt: Te acabas de instalar aquí con un permiso de categoría B de la UE emitido hace 5 años. Puedes usarlo, como máximo, hasta que pasen X años desde que fue emitido. ¿Cuántos años?
     answer: 15
     unit: años
     explain: Para los permisos de las categorías AM, A1, A2, A, B, B1 y BE el límite es de 15 años desde su emisión.

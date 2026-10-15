@@ -19,7 +19,7 @@ v1 under construction: Spanish course with Dutch terms, browser-only progress. S
 - [ ] SVG diagram of an acceleration lane with block markings for `especiales/02-invoegen` (the AI image was dropped)
 - [x] Audit harness (`scripts/audit/`, `docs/AUDIT.md`); `npm run audit -- --strict` clean
 - [x] Red-team pass (AUDIT layer 3) over all 101 lessons; every finding checked against its source, then fixed or rejected
-- [ ] Independent re-check of the fixed content by a fresh reader
+- [x] Independent re-check of the fixed content by fresh readers; their findings fixed
 - [ ] Topics with no source in the repo yet, so not taught: the operative meaning of B1/B3-B5 beyond the sign descriptions, which way haaientanden point, traffic agents' gestures (RVV bijlage 2), APK intervals, how to help at an accident, fines and points
 - [ ] Check the tram diagram data in `prioridad/10` and the C5 sign image against the sign text
 - [ ] Human review: a native Spanish reader and a driving instructor (`reviewed` frontmatter, AUDIT layer 5)
