@@ -1,0 +1,55 @@
+# Citation registry. A cite is "<key>:<locator>", e.g. "rvv:15.1" (RVV 1990 article 15, lid 1) or "cbr-examenplan:2".
+# Law entries (bwb) link to wetten.overheid.nl; locator = article[.lid[.onderdeel]], or "bijlage<N>[.<code>]".
+# Other entries (url) link to the page; locator is shown as text (section, page).
+rvv:
+  bwb: BWBR0004825
+  short: RVV 1990
+  title: Reglement verkeersregels en verkeerstekens 1990
+wvw:
+  bwb: BWBR0006622
+  short: WVW 1994
+  title: Wegenverkeerswet 1994
+babw:
+  bwb: BWBR0004826
+  short: BABW
+  title: Besluit administratieve bepalingen inzake het wegverkeer
+rr:
+  bwb: BWBR0008074
+  short: Reglement rijbewijzen
+  title: Reglement rijbewijzen
+rv:
+  bwb: BWBR0025798
+  short: Regeling voertuigen
+  title: Regeling voertuigen
+kr:
+  bwb: BWBR0006951
+  short: Kentekenreglement
+  title: Kentekenreglement
+wam:
+  bwb: BWBR0002415
+  short: WAM
+  title: Wet aansprakelijkheidsverzekering motorrijtuigen
+ret:
+  bwb: BWBR0015601
+  short: Regeling eisen theorie-examen B
+  title: Regeling eisen theorie-examen rijbewijscategorie B
+cbr-examenplan:
+  url: https://www.cbr.nl/nl/service/nl/nl/theorie-examenplan-auto
+  short: CBR examenplan
+  title: CBR -- Theorie-examenplan auto (B)
+cbr-vragen:
+  url: https://www.cbr.nl/nl/rijbewijs-halen/auto/theorie-examen-auto/soort-vragen-tijdens-theorie
+  short: CBR tipos de pregunta
+  title: CBR -- Wat voor soort vragen krijg je tijdens je theorie-examen?
+cbr-tolk:
+  url: https://www.cbr.nl/nl/service/nl/reservering-examens-en-rijtesten/tolken-voor-theorie-examens-en-praktijkexamens
+  short: CBR examen con intérprete
+  title: CBR -- Tolk inzetten bij theorie- en praktijkexamens
+cbr-taal:
+  url: https://www.cbr.nl/nl/veelgestelde-vragen/kan-ik-het-theorie-examen-in-een-andere-taal-doen
+  short: CBR otros idiomas
+  title: CBR -- Kan ik het theorie-examen in een andere taal doen?
+cbr-onderwerpen:
+  url: https://www.cbr.nl/nl/rijbewijs-halen/auto/theorie-examen-auto/onderwerpen-in-het-theorie-examen
+  short: CBR temas del examen
+  title: CBR -- Onderwerpen in het theorie-examen
