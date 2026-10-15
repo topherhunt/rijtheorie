@@ -8,6 +8,6 @@ const refs = (await lessons('es')).map((l) => ({ id: l.id, title: l.entry.data.t
 ---
 
 <Layout title="Mis notas">
-  <h1 class="mb-6 text-3xl font-bold">Mis notas</h1>
+  <h1 class="mb-6 text-3xl font-bold"><i class="bi bi-journal-text mr-2 text-brand-600" aria-hidden="true"></i>Mis notas</h1>
   <NotesIsland client:load lessons={refs} />
 </Layout>

@@ -10,6 +10,6 @@ const questionIds = (await allQuestions()).map((q) => q.id);
 ---
 
 <Layout title="Mi progreso">
-  <h1 class="mb-6 text-3xl font-bold">Mi progreso</h1>
+  <h1 class="mb-6 text-3xl font-bold"><i class="bi bi-graph-up mr-2 text-brand-600" aria-hidden="true"></i>Mi progreso</h1>
   <ProgressIsland client:load lessonCount={lessonCount} questionIds={questionIds} examHref={href('es/examen/')} />
 </Layout>

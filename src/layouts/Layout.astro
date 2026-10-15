@@ -1,19 +1,20 @@
 ---
+import 'bootstrap-icons/font/bootstrap-icons.min.css';
 import '../styles/global.css';
-import { AUTHOR_URL, REPO_URL, SITE_NAME, href } from '../config.ts';
+import { REPO_URL, SITE_NAME, href } from '../config.ts';
 import { es } from '../i18n/es.ts';
 
 interface Props { title: string; description?: string }
 const { title, description } = Astro.props;
 const reportUrl = `${REPO_URL}/issues/new?template=problema.yml&url=${encodeURIComponent(Astro.url.pathname)}`;
 const nav = [
-  ['es/', es.nav.home],
-  ['es/repaso/', es.nav.review],
-  ['es/examen/', es.nav.exam],
-  ['es/notas/', es.nav.notes],
-  ['es/glosario/', es.nav.glossary],
-  ['es/progreso/', es.nav.progress],
-  ['es/acerca/', es.nav.about],
+  ['es/', es.nav.home, 'bi-book'],
+  ['es/repaso/', es.nav.review, 'bi-arrow-repeat'],
+  ['es/examen/', es.nav.exam, 'bi-clipboard-check'],
+  ['es/notas/', es.nav.notes, 'bi-journal-text'],
+  ['es/glosario/', es.nav.glossary, 'bi-translate'],
+  ['es/progreso/', es.nav.progress, 'bi-graph-up'],
+  ['es/acerca/', es.nav.about, 'bi-info-circle'],
 ] as const;
 ---
 
@@ -23,17 +24,23 @@ const nav = [
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title === SITE_NAME ? title : `${title} | ${SITE_NAME}`}</title>
     {description && <meta name="description" content={description} />}
+    <script is:inline>
+      // Before first paint, so the page never flashes the wrong theme. No stored choice: follow the OS.
+      let theme = null;
+      try { theme = localStorage.getItem('rijtheorie:theme'); } catch {}
+      document.documentElement.dataset.theme = theme ?? (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    </script>
   </head>
   <body class="min-h-screen bg-slate-50 text-slate-900">
-    <div class="qa-disclaimer border-b border-amber-300 bg-amber-100 px-4 py-2 text-center text-sm text-amber-950">
-      <strong>⚠</strong> {es.disclaimer} <a class="underline" href={href('es/acerca/')}>{es.disclaimerLink}</a>
-    </div>
     <header class="border-b border-slate-200 bg-white">
       <div class="mx-auto flex max-w-4xl flex-wrap items-center gap-x-4 gap-y-2 px-4 py-3">
         <a href={href('es/')} class="font-bold text-brand-700">{SITE_NAME}</a>
         <nav class="flex flex-wrap gap-x-3 gap-y-1 text-sm">
-          {nav.map(([p, label]) => <a class="text-slate-600 hover:text-brand-700" href={href(p)}>{label}</a>)}
+          {nav.map(([p, label, icon]) => <a class="text-slate-600 hover:text-brand-700" href={href(p)}><i class={`bi ${icon} mr-1`} aria-hidden="true"></i>{label}</a>)}
         </nav>
+        <button type="button" id="theme-toggle" class="qa-theme-toggle ml-auto rounded-lg px-2 py-1 text-lg text-slate-600 hover:bg-slate-100" aria-label={es.theme}>
+          <i class="bi bi-moon-fill dark:hidden" aria-hidden="true"></i><i class="bi bi-sun-fill hidden dark:inline" aria-hidden="true"></i>
+        </button>
       </div>
     </header>
     <div id="storage-banner" class="qa-storage-banner hidden bg-red-100 px-4 py-2 text-center text-sm text-red-900">{es.storage}</div>
@@ -42,10 +49,7 @@ const nav = [
     </main>
     <footer class="border-t border-slate-200 bg-white">
       <div class="mx-auto flex max-w-4xl flex-col gap-2 px-4 py-6 text-sm text-slate-600">
-        <a class="qa-report-link font-semibold text-brand-700 underline" href={reportUrl} target="_blank" rel="noopener">{es.report}</a>
-        <span>{es.reportHint}</span>
-        <span>{es.footer.license} <a class="underline" href={href('es/fuentes/')}>{es.footer.sources}</a></span>
-        <span class="qa-made-by">{es.footer.madeBy} <a class="underline" href={AUTHOR_URL}>Topher Hunt</a> · <a class="underline" href={REPO_URL}>GitHub</a></span>
+        <a class="qa-report-link tooltip self-start font-semibold text-brand-700 underline" data-tip={es.reportHint} href={reportUrl} target="_blank" rel="noopener"><i class="bi bi-flag mr-1" aria-hidden="true"></i>{es.report}</a>
       </div>
     </footer>
     <script>
@@ -55,6 +59,11 @@ const nav = [
       } catch {
         document.getElementById('storage-banner')!.classList.remove('hidden');
       }
+      document.getElementById('theme-toggle')!.addEventListener('click', () => {
+        const root = document.documentElement;
+        root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+        try { localStorage.setItem('rijtheorie:theme', root.dataset.theme); } catch {}
+      });
     </script>
   </body>
 </html>

@@ -21,7 +21,7 @@ npm run check        # typecheck, content audit, unit and e2e tests
 
 Contributor docs live in [`docs/`](docs/): [BLUEPRINT](docs/BLUEPRINT.md) (architecture), [AUTHORING](docs/AUTHORING.md) (writing lessons and questions), [AUDIT](docs/AUDIT.md) (checking correctness), [VERIFICATION](docs/VERIFICATION.md) (what has and hasn't been checked), [PROCESS](docs/PROCESS.md) (sources and decisions), [ROADMAP](docs/ROADMAP.md).
 
-Live at https://rijtheorie.topherhunt.com. Deployment: Cloudflare Workers static assets (`wrangler.jsonc`), built and deployed by Cloudflare Workers Builds on push to `main`. GitHub Actions (`.github/workflows/ci.yml`) runs the quality gates only.
+Live at https://rijtheorie.topherhunt.com. Deployment: Cloudflare Pages (`wrangler.jsonc`), built and deployed by Cloudflare on push to `main`. GitHub Actions (`.github/workflows/ci.yml`) runs the quality gates only.
 
 ## Licences
 - Code: MIT.

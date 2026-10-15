@@ -1,7 +1,5 @@
 // Spanish UI strings. Lesson text lives in MDX; this file holds only interface chrome.
 export const es = {
-  disclaimer: 'Guía NO oficial. Puede contener errores. Estudia también con el libro oficial o un curso reconocido: el examen es en neerlandés.',
-  disclaimerLink: 'Más información',
   report: 'Reportar un problema',
   reportHint: 'Errores, partes confusas, imágenes incorrectas, fallos o erratas',
   nav: {
@@ -13,11 +11,7 @@ export const es = {
     progress: 'Mi progreso',
     about: 'Acerca de',
   },
-  footer: {
-    license: 'Código MIT. Contenido CC BY-SA 4.0. Señales: dominio público (RVV 1990, bijlage 1).',
-    sources: 'Fuentes y licencias',
-    madeBy: 'Hecho con 💙 por',
-  },
+  theme: 'Cambiar entre modo claro y oscuro',
   lesson: {
     markDone: 'Marcar como leída',
     done: 'Leída',

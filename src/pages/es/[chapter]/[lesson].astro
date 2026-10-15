@@ -48,7 +48,7 @@ const fm = l.entry.data;
 
   {questions.length > 0 && (
     <section class="mt-12">
-      <h2 class="mb-4 text-2xl font-bold">{es.lesson.quizTitle}</h2>
+      <h2 class="mb-4 text-2xl font-bold"><i class="bi bi-patch-question mr-2 text-brand-600" aria-hidden="true"></i>{es.lesson.quizTitle}</h2>
       <QuizIsland client:visible questions={questions} />
     </section>
   )}

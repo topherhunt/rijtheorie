@@ -1,7 +1,7 @@
-// Cloudflare Workers static-assets site. Build: `npm run build`; deploy: `npx wrangler deploy` (or Workers Builds on push).
-// Custom domain rijtheorie.topherhunt.com is attached in the dashboard (Settings > Domains & Routes).
+// Cloudflare Pages project. Cloudflare builds on push to main (build `npm run build`, output `dist`); see docs/BLUEPRINT.md "Deploy".
+// Manual deploy: `npm run build && npx wrangler pages deploy`.
 {
   "name": "rijtheorie",
   "compatibility_date": "2026-10-01",
-  "assets": { "directory": "./dist" }
+  "pages_build_output_dir": "./dist"
 }

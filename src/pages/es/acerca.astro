@@ -5,7 +5,7 @@ import { REPO_URL, AUTHOR_URL, href } from '../../config.ts';
 
 <Layout title="Acerca de este curso">
   <div class="prose-lesson qa-about">
-    <h1 class="text-3xl font-bold">Acerca de este curso</h1>
+    <h1 class="text-3xl font-bold"><i class="bi bi-info-circle mr-2 text-brand-600" aria-hidden="true"></i>Acerca de este curso</h1>
     <h2>Esto NO es un curso oficial</h2>
     <p>No es del CBR, ni de una autoescuela, ni del gobierno. Lo escribimos con cuidado y enlazamos cada regla a su fuente, pero <strong>puede tener errores</strong> y las reglas cambian.</p>
     <p>Por eso te recomendamos:</p>
@@ -33,8 +33,8 @@ import { REPO_URL, AUTHOR_URL, href } from '../../config.ts';
     <p>Nos ayuda muchísimo. <a class="qa-about-report" href={`${REPO_URL}/issues/new?template=problema.yml`}>Reporta el problema aquí</a>: errores en las reglas, partes que no se entienden, imágenes incorrectas, fallos de la página o erratas. Hace falta una cuenta gratuita de GitHub.</p>
     <h2>Tu privacidad</h2>
     <p>No hay cuentas, ni anuncios, ni rastreo. Tu progreso y tus notas se guardan solo en tu navegador. Puedes descargarlos o borrarlos en <a href={href('es/progreso/')}>Mi progreso</a>.</p>
-    <h2>Código abierto</h2>
-    <p>Todo el curso es abierto: código y textos en <a class="qa-about-repo" href={REPO_URL}>{REPO_URL.replace('https://', '')}</a>. Ver también <a href={href('es/fuentes/')}>Fuentes y licencias</a>.</p>
+    <h2>Código abierto y licencias</h2>
+    <p>Todo el curso es abierto: código y textos en <a class="qa-about-repo" href={REPO_URL}>{REPO_URL.replace('https://', '')}</a>. Código MIT. Contenido CC BY-SA 4.0. Señales y gestos de los agentes: dominio público (RVV 1990, anexos 1 y 2). Más detalles en <a href={href('es/fuentes/')}>Fuentes y licencias</a>.</p>
     <p class="qa-about-made-by">Hecho con 💙 por <a href={AUTHOR_URL}>Topher Hunt</a>.</p>
   </div>
 </Layout>

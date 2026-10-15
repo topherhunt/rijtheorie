@@ -27,7 +27,7 @@ v1 under construction: Spanish course with Dutch terms, browser-only progress. S
 - [x] Report-a-problem issue form (`.github/ISSUE_TEMPLATE/problema.yml`)
 - [x] Tests (vitest + playwright), CI workflow
 - [x] Public repo (github.com/topherhunt/rijtheorie), `REPO_URL` set
-- [ ] Owner connects the repo to Cloudflare Workers Builds and attaches rijtheorie.topherhunt.com (see BLUEPRINT "Deploy")
+- [ ] Owner creates the Cloudflare Pages project from the repo and attaches rijtheorie.topherhunt.com (see BLUEPRINT "Deploy")
 
 ## Wish list (not for now)
 - Setting to choose the target terminology language: English instead of Dutch (CBR English exam), mapping Spanish -> English using the CBR English word list (examenplan ch. 5).

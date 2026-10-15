@@ -24,6 +24,7 @@
     "@astrojs/mdx": "^8.1.0",
     "@astrojs/preact": "^6.1.0",
     "astro": "^7.4.0",
+    "bootstrap-icons": "^1.13.2",
     "preact": "^11.0.1",
     "yaml": "^2.9.1"
   },

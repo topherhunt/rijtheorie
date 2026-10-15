@@ -18,7 +18,7 @@ export default function LessonTools({ lessonId }: { lessonId: string }) {
         {done ? `✓ ${es.lesson.done}` : es.lesson.markDone}
       </label>
       <label class="flex flex-col gap-1">
-        <span class="font-medium">{es.lesson.notes}</span>
+        <span class="font-medium"><i class="bi bi-pencil-square mr-1" aria-hidden="true"></i>{es.lesson.notes}</span>
         <textarea
           class="qa-note min-h-24 rounded-lg border border-slate-300 p-2"
           value={draft}

@@ -19,10 +19,18 @@ async function question(page: Page, id: string) {
 }
 const emptyState ={ version: 1, answers: {}, log: [], placements: [], done: {}, notes: {}, exams: [] };
 
-test('every page shows the unofficial disclaimer and a report link that carries the page path', async ({ page }) => {
+test('the home page warns that the course is unofficial, with report and about links', async ({ page }) => {
+  await page.goto('/es/');
+  const warning = page.locator('.qa-disclaimer');
+  await expect(warning).toContainText('no es oficial');
+  await expect(warning.locator('.qa-home-report')).toHaveAttribute('href', /\/issues\/new\?template=problema\.yml$/);
+  await expect(warning.locator('.qa-home-about')).toHaveAttribute('href', '/es/acerca/');
+});
+
+test('every page has a report link that carries the page path and explains itself in a tooltip', async ({ page }) => {
   await page.goto(LESSON);
-  await expect(page.locator('.qa-disclaimer')).toBeVisible();
   const report = page.locator('.qa-report-link');
+  await expect(report).toHaveAttribute('data-tip', /Errores/);
   await expect(report).toHaveAttribute('href', /\/issues\/new\?template=problema\.yml&url=%2Fes%2Fprioridad%2Fregla-derecha%2F$/);
 });
 
@@ -44,8 +52,30 @@ test('marking a lesson read shows a checkmark next to it on the home page', asyn
   await page.goto(LESSON);
   await page.locator('.qa-mark-done').check();
   await page.goto('/es/');
-  const item = page.locator(`li:has(> a.qa-lesson-link[href$="${LESSON}"])`);
-  await expect(item.locator('.qa-done-mark')).toBeVisible();
+  const row = page.locator(`.qa-lesson-row:has(a.qa-lesson-link[href$="${LESSON}"])`);
+  await expect(row.locator('.qa-done-mark')).toBeVisible();
+});
+
+test('the home page counts the questions of a lesson whose latest answer is correct', async ({ page }) => {
+  await page.goto(LESSON);
+  const q = await question(page, 'regla-derecha-basica');
+  await q.locator('.qa-option').nth(1).click();
+  await q.locator('.qa-check').click();
+  await expect(q.locator('.qa-feedback-correct')).toBeVisible();
+  await page.goto('/es/');
+  const score = page.locator(`.qa-lesson-row:has(a.qa-lesson-link[href$="${LESSON}"]) .qa-lesson-score`);
+  await expect(score).toHaveText(/^1 \/ \d+$/);
+});
+
+test('the theme toggle switches to dark mode and the choice survives a reload', async ({ page }) => {
+  await page.emulateMedia({ colorScheme: 'light' });
+  await page.goto('/es/');
+  const html = page.locator('html');
+  await expect(html).toHaveAttribute('data-theme', 'light');
+  await page.locator('.qa-theme-toggle').click();
+  await expect(html).toHaveAttribute('data-theme', 'dark');
+  await page.reload();
+  await expect(html).toHaveAttribute('data-theme', 'dark');
 });
 
 test('a lesson note survives a reload and is listed on the notes page', async ({ page }) => {
@@ -154,5 +184,4 @@ test('about page links the repo and the author', async ({ page }) => {
   await page.goto('/es/acerca/');
   await expect(page.locator('.qa-about-repo')).toHaveAttribute('href', 'https://github.com/topherhunt/rijtheorie');
   await expect(page.locator('.qa-about-made-by a')).toHaveAttribute('href', 'https://topherhunt.com');
-  await expect(page.locator('.qa-made-by a').first()).toHaveAttribute('href', 'https://topherhunt.com');
 });
