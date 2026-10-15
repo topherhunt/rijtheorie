@@ -46,7 +46,7 @@ questions:
 
   - id: eco-apagar
     type: number
-    prompt: A partir de cuántos minutos de parada prevista recomienda el CBR apagar el motor?
+    prompt: ¿A partir de cuántos minutos de parada prevista recomienda el CBR apagar el motor?
     answer: 1
     unit: minuto
     explain: Si vas a estar parado más de un minuto, apaga el motor.

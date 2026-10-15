@@ -1,7 +1,7 @@
 questions:
   - id: mistachter-distancia
     type: number
-    prompt: La luz antiniebla trasera solo se permite si la niebla o la nieve reducen la visibilidad a menos de cuántos metros?
+    prompt: ¿La luz antiniebla trasera solo se permite si la niebla o la nieve reducen la visibilidad a menos de cuántos metros?
     answer: 50
     unit: m
     explain: El límite legal es una visibilidad de menos de 50 metros.
@@ -59,9 +59,9 @@ questions:
 
   - id: detenido-poblado
     type: yesno
-    prompt: El artículo 38 trata de vehículos parados fuera de la zona urbana. ¿Es correcto que esta regla se refiere a vehículos de más de dos ruedas?
-    answer: true
-    explain: El texto habla de vehículos de motor de más de dos ruedas parados fuera de la bebouwde kom.
+    prompt: El artículo 38 regula las luces de un vehículo parado fuera de la zona urbana. ¿Se aplica a un vehículo de motor de dos ruedas?
+    answer: false
+    explain: Se aplica a vehículos de motor de más de dos ruedas parados fuera de la bebouwde kom.
     cites: ["rvv:38"]
 
   - id: bici-luces

@@ -53,7 +53,7 @@ questions:
     type: yesno
     prompt: ¿Sirve mirar por encima del hombro para revisar el ángulo muerto?
     answer: true
-    explain: Esa es su única finalidad según la guía del CBR.
+    explain: La guía del CBR lo usa para revisar el ángulo muerto, sin mirar atrás demasiado tiempo ni con demasiada frecuencia.
     cites: ["cbr-rijprocedure:3"]
 
   - id: vulnerables-hombro-error

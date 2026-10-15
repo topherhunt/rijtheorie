@@ -24,17 +24,17 @@ questions:
 
   - id: sanciones-accidente-herido
     type: yesno
-    prompt: Hubo un herido en un accidente en el que participaste. ¿Está prohibido abandonar el lugar?
+    prompt: Hubo un herido en un accidente en el que participaste. Nadie ha verificado aún tu identidad. ¿Está prohibido abandonar el lugar?
     answer: true
-    explain: Está prohibido abandonar el lugar del accidente si alguien resultó herido o muerto, o si dejarías a un herido desamparado.
+    explain: Con muertos, heridos o daños no puedes irte sin dar antes la oportunidad de verificar tu identidad. Y nunca puedes irte si dejas a un herido desamparado.
     cites: ["wvw:7"]
 
   - id: sanciones-accidente-12h
     type: number
-    prompt: Si huiste de un accidente, ¿dentro de cuántas horas debes presentarte voluntariamente para no ser procesado por ello?
+    prompt: Te fuiste de un accidente con daños sin dar tu identidad. ¿Dentro de cuántas horas desde el accidente debes avisar voluntariamente a la policía para no ser procesado por irte?
     answer: 12
     unit: horas
-    explain: Debes avisar voluntariamente dentro de 12 horas, con tu identidad, antes de ser detenido o interrogado.
+    explain: Debes avisar voluntariamente a la policía dentro de 12 horas, con tu identidad y la del vehículo, antes de ser detenido o interrogado como sospechoso. No cubre dejar a un herido desamparado.
     cites: ["wvw:184"]
 
   - id: sanciones-accidente-50

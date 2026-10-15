@@ -56,7 +56,7 @@ questions:
 
   - id: erf-parada-salida
     type: mc
-    prompt: Estás en una calle dentro del pueblo. Un bus parado en la parada pone el intermitente. ¿Qué haces?
+    prompt: Estás en una calle dentro de la bebouwde kom (zona urbana). Un bus parado en la parada pone el intermitente. ¿Qué haces?
     options:
       - Le dejas salir de la parada
       - Pasas antes que él
@@ -70,7 +70,7 @@ questions:
     type: yesno
     prompt: Según el artículo 56, ¿tiene que dejar salir de la parada a un bus que pone el intermitente fuera de la bebouwde kom?
     answer: false
-    explain: El artículo 56 solo menciona la bebouwde kom (dentro del pueblo).
+    explain: El artículo 56 solo vale dentro de la bebouwde kom (zona urbana).
     cites: ["rvv:56"]
     exam: false
 

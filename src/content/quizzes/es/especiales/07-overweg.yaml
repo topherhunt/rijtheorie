@@ -65,7 +65,7 @@ questions:
 
   - id: overweg-begeleider
     type: multi
-    prompt: ¿Con cuáles de estas señales te debe detener un acompañante (begeleider) de un vehículo ferroviario?
+    prompt: ¿Con cuáles de estas señales te debe detener un acompañante de un vehículo ferroviario (begeleider van een railvoertuig)?
     options:
       - Una señal F10
       - Una bandera roja

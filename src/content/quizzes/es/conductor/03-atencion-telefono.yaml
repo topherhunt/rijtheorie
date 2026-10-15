@@ -51,7 +51,7 @@ questions:
 
   - id: atencion-colarse
     type: yesno
-    prompt: La cola ante un semáforo en rojo avanza despacio. ¿Es buena práctica colarte por el costado para ganar posiciones?
+    prompt: Te acercas a un semáforo en rojo. ¿Es buena práctica adelantar rápido a otro auto justo antes de llegar?
     answer: false
-    explain: El CBR recomienda no colarse antes de un semáforo en rojo o un puente.
+    explain: El CBR recomienda no adelantar a toda prisa justo antes de un semáforo en rojo, un paso a nivel o un puente cerrado, o una cola detenida.
     cites: ["cbr-rijprocedure:2"]

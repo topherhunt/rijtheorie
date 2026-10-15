@@ -58,12 +58,12 @@ questions:
     prompt: ¿Cuántas luces de freno, además de la tercera luz, debe tener un auto?
     answer: 2
     unit: luces
-    explain: Dos luces de freno, más una tercera luz de freno en autos después de 2001.
+    explain: Dos luces de freno, más una tercera luz de freno en autos puestos en uso después del 30 de septiembre de 2001.
     cites: ["rv:5.2.51"]
 
   - id: luces-del-auto-testigo
     type: yesno
-    prompt: ¿Debe el auto avisar con una señal en el tablero cuando las luces largas están encendidas (autos de 1997 en adelante)?
+    prompt: ¿Debe el auto avisar con una señal en el tablero cuando las luces largas están encendidas (autos puestos en uso desde 1998)?
     answer: true
     explain: Las luces largas encendidas deben señalizarse al conductor con una señal óptica.
     cites: ["rv:5.2.62"]

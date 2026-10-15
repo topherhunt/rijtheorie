@@ -23,7 +23,7 @@ questions:
 
   - id: frenos-atras
     type: yesno
-    prompt: ¿Debe el freno de estacionamiento sostener el auto también cuando está en pendiente hacia atrás?
+    prompt: ¿Debe el freno de estacionamiento funcionar también en sentido hacia atrás?
     answer: true
     explain: Debe funcionar también hacia atrás.
     cites: ["rv:5.2.39"]

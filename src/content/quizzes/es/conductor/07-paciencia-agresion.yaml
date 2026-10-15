@@ -45,9 +45,9 @@ questions:
 
   - id: paciencia-colarse
     type: yesno
-    prompt: ¿Recomienda el CBR colarte por un costado ante un semáforo en rojo?
+    prompt: ¿Recomienda el CBR adelantar rápido a otro auto justo antes de un semáforo en rojo?
     answer: false
-    explain: La guía recomienda no colarse antes de un semáforo en rojo o un puente.
+    explain: La guía recomienda no adelantar a toda prisa justo antes de un semáforo en rojo, un paso a nivel o un puente cerrado, o una cola detenida.
     cites: ["cbr-rijprocedure:2"]
 
   - id: paciencia-irritado

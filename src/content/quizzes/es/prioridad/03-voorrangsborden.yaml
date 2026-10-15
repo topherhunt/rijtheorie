@@ -86,7 +86,7 @@ questions:
     type: yesno
     prompt: Una señal de prioridad (como B1) manda sobre la regla de la derecha.
     answer: true
-    explain: Las señales van por encima de las reglas generales de tráfico.
+    explain: Las señales van por encima de las reglas generales de tráfico cuando son incompatibles con ellas.
     cites: ["rvv:62", "rvv:63"]
 
   - id: voorrangsborden-afbuigend

@@ -40,7 +40,7 @@ questions:
     prompt: "La señal A4 indica una velocidad recomendada. ¿Es un máximo que debes cumplir como una A1?"
     answer: false
     explain: "A4 es una recomendación (adviessnelheid). El máximo lo da la A1."
-    cites: ["rvv:bijlage1.A4"]
+    cites: ["rvv:bijlage1.A4", "rvv:62"]
 
   - id: senal-zona
     type: yesno

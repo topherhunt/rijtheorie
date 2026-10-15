@@ -76,7 +76,7 @@ questions:
 
   - id: spitsstrook-linea
     type: yesno
-    prompt: Entre el carril que sigues y la spitsstrook hay una línea continua. ¿Puedes cruzarla para ir a la spitsstrook?
+    prompt: La spitsstrook está abierta (sin cruz roja) y entre tu carril y ella hay una línea continua. ¿Puedes cruzarla para ir a la spitsstrook?
     answer: true
     explain: "La regla de no cruzar líneas continuas tiene una excepción: cruzarla para llegar o salir de una vluchthaven, vluchtstrook o spitsstrook junto al carril que sigues."
     cites: ["rvv:76.1", "rvv:76.2"]
@@ -98,7 +98,7 @@ questions:
       - Solo si no hay tráfico
     answer: 2
     explain: La regla es que no se usan. La excepción es seguir una spitsstrook que pasa por una splitsing o samenvoeging (y lo mismo con una busbaan o busstrook usada legalmente).
-    cites: ["rvv:77.1", "rvv:77.2"]
+    cites: ["rvv:77.1", "rvv:77.2", "rvv:77.3"]
 
   - id: spitsstrook-averia
     type: mc

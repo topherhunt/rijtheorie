@@ -20,7 +20,7 @@ questions:
 
   - id: stilstaanverbod-oversteekplaats
     type: number
-    prompt: ¿A qué distancia mínima, en metros, de un paso para cruzar (oversteekplaats) puedes detenerte? Responde con el número de metros dentro de los cuales no puedes.
+    prompt: ¿A menos de cuántos metros de un paso para cruzar (oversteekplaats) está prohibido detenerse?
     answer: 5
     unit: m
     explain: No puedes detenerte en un paso para cruzar ni a menos de 5 m de él.
@@ -92,13 +92,13 @@ questions:
 
   - id: stilstaanverbod-orden-prohibido
     type: multi
-    prompt: ¿En cuáles de estos lugares está prohibido detenerte (stilstaan)?
+    prompt: Según la lista del artículo 23, ¿en cuáles de estos lugares está prohibido detenerte (stilstaan)?
     options:
       - En un overweg
       - Junto a una línea amarilla continua
       - En un túnel
-      - En una parada de taxi señalada con E5
+      - En una parada de bus a 20 m del cartel, sin marca de bloques
     answer: [0, 1, 2]
-    explain: Están en la lista del artículo 23 el overweg, la línea amarilla continua y el túnel. El artículo 23 no menciona las paradas de taxi.
+    explain: Están en la lista del artículo 23 el overweg, la línea amarilla continua y el túnel. Junto a una parada de bus sin marca de bloques solo está prohibido a menos de 12 m del cartel.
     cites: ["rvv:23.1"]
     exam: false

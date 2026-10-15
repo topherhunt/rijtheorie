@@ -21,9 +21,9 @@ questions:
     type: mc
     prompt: ¿Qué significa esta señal?
     sign: C5
-    options: ["Se permite entrar: sentido único en esta dirección", "Prohibido entrar", "Cerrado para ciclistas", "Fin de zona"]
+    options: ["Se permite entrar", "Prohibido entrar", "Cerrado para ciclistas", "Fin de zona"]
     answer: 0
-    explain: C5 indica que puedes entrar, porque la calle es de sentido único en tu dirección.
+    explain: "C5 es \"inrijden toegestaan\": se permite entrar."
     cites: ["rvv:bijlage1.C5"]
 
   - id: c-c6-c12

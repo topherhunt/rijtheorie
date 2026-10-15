@@ -34,7 +34,7 @@ questions:
     type: yesno
     prompt: Tu carga tapa las luces traseras. ¿Es suficiente con no hacer nada?
     answer: false
-    explain: Si el portabultos o la carga tapan luces, el portabultos debe llevar sus propias luces; la carga no puede tapar luces ni matrícula.
+    explain: Si el portabultos o la carga tapan luces, el portabultos debe llevar sus propias luces; la carga no puede tapar luces ni matrícula, salvo que lleve las suyas propias.
     cites: ["rv:5.18.12/1", "rv:5.18.7/1"]
 
   - id: carga-remolque-asegurada

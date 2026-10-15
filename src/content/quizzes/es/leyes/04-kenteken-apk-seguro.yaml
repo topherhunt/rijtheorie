@@ -46,9 +46,9 @@ questions:
 
   - id: kenteken-apk-seguro-apk
     type: yesno
-    prompt: Según la ley, ¿deben ser válido y legible el keuringsbewijs (APK) de un vehículo con matrícula?
+    prompt: Según la ley, ¿debe ser válido y legible el keuringsbewijs (APK) de un vehículo con matrícula?
     answer: true
-    explain: El keuringsbewijs debe cumplir los requisitos, ser válido y legible; el propietario y el conductor son responsables.
+    explain: Debe existir un keuringsbewijs válido y legible; el propietario y el conductor son responsables.
     cites: ["wvw:72"]
 
   - id: kenteken-apk-seguro-kr

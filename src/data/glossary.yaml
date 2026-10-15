@@ -28,11 +28,11 @@ doorgaande-rijbaan: { nl: doorgaande rijbaan, es: calzada principal / de paso, c
 linker-rijstrook: { nl: linker rijstrook, es: carril izquierdo, cbr: true }
 fietspad: { nl: fietspad, es: carril bici (separado), def: "Camino para bicicletas aparte de la calzada. Las señales son G11 (verplicht), G12a (fiets/bromfietspad) y G13 (onverplicht).", cite: "rvv:1, rvv:bijlage1.G11, rvv:bijlage1.G12a, rvv:bijlage1.G13" }
 fietsstrook: { nl: fietsstrook, es: carril bici pintado en la calzada, def: "Parte de la calzada marcada con líneas continuas o discontinuas y con dibujos de bicicleta.", cbr: true, cite: "rvv:1" }
-suggestiestrook: { nl: suggestiestrook, es: franja ciclista sugerida, def: "Franja de color (a menudo roja) pintada al borde de la calzada para sugerir dónde ir a los ciclistas. La palabra no aparece en el RVV y no es un fietsstrook.", cbr: true }
+suggestiestrook: { nl: suggestiestrook, es: franja ciclista sugerida, def: "Franja de color (a menudo roja) pintada al borde de la calzada para sugerir dónde ir a los ciclistas, sin dibujos de bicicleta. La palabra no aparece en el RVV; sin esos dibujos no cumple la definición de fietsstrook.", cbr: true, cite: "rvv:1" }
 trottoir: { nl: trottoir, es: acera, cbr: true }
 voetpad: { nl: voetpad, es: senda peatonal, def: "Camino para peatones, señalizado con la señal G7.", cite: "rvv:bijlage1.G7" }
-berm: { nl: berm, es: arcén de tierra / cuneta, def: "Franja lateral que forma parte de la vía, junto a la calzada.", cbr: true, cite: "wvw:1.1.b" }
-vluchtstrook: { nl: vluchtstrook, es: arcén de emergencia, def: "Franja a la derecha en la autosnelweg/autoweg, solo para emergencias.", cbr: true }
+berm: { nl: berm, es: "franja lateral de tierra o hierba", def: "Franja lateral que forma parte de la vía, junto a la calzada.", cbr: true, cite: "wvw:1.1.b" }
+vluchtstrook: { nl: vluchtstrook, es: arcén de emergencia, def: "Franja a la derecha en la autosnelweg o autoweg, separada por una línea continua, solo para emergencias, salvo cuando se abre como spitsstrook (señal C23-01).", cbr: true, cite: "rvv:1" }
 spitsstrook: { nl: spitsstrook, es: carril de hora punta, def: "Carril extra (a menudo el arcén) que se abre solo cuando lo indican las señales sobre la vía.", cbr: true }
 invoegstrook: { nl: invoegstrook, es: carril de aceleración / incorporación, cbr: true }
 uitvoegstrook: { nl: uitvoegstrook, es: carril de desaceleración / salida, cbr: true }
@@ -41,15 +41,15 @@ voorsorteerstrook: { nl: voorsorteerstrook, es: carril de preselección, def: "C
 busstrook: { nl: busstrook, es: carril bus, cbr: true }
 rijbaanscheiding: { nl: (verhoogde) rijbaanscheiding, es: separación (elevada) entre calzadas, def: "Mediana o isleta que separa calzadas.", cbr: true }
 bebouwde-kom: { nl: bebouwde kom, es: zona urbana (poblado), def: "Zona que empieza en la señal H1 (bebouwde kom) y termina en la H2 (einde bebouwde kom). Sus límites los fija el concejo municipal.", cbr: true, cite: "rvv:bijlage1.H1, rvv:bijlage1.H2, wvw:20a.1" }
-autosnelweg: { nl: autosnelweg, es: autopista, def: "Vía señalizada con G1. Solo para vehículos de motor que puedan y deban ir a más de 60 km/h. Máximo legal 130 km/h, pero las señales a menudo indican menos (ver capítulo 3).", cbr: true, cite: "rvv:42.1, rvv:21" }
-autoweg: { nl: autoweg, es: "autoweg (vía para automóviles)", def: "Vía señalizada con G3. Máximo 100 km/h; solo para vehículos de motor que puedan y deban ir a 50 km/h o más. El CBR no traduce esta palabra.", cbr: true, untranslated: true, cite: "rvv:42.2, rvv:21" }
-erf: { nl: erf, es: "erf (zona residencial)", def: "Zona señalizada con G5 donde peatones y niños pueden usar toda la vía. Máximo 15 km/h. El CBR no traduce esta palabra.", cbr: true, untranslated: true, cite: "rvv:45" }
+autosnelweg: { nl: autosnelweg, es: autopista, def: "Vía señalizada con G1. Solo para vehículos de motor que pueden y tienen permitido ir a 60 km/h o más. Máximo general fuera de zona urbana 130 km/h, pero las señales a menudo indican menos (ver el capítulo de velocidad).", cbr: true, cite: "rvv:42.1, rvv:21" }
+autoweg: { nl: autoweg, es: "autoweg (vía para automóviles)", def: "Vía señalizada con G3. Máximo general fuera de zona urbana 100 km/h, salvo otra señal; solo para vehículos de motor que pueden y tienen permitido ir a 50 km/h o más. El CBR no traduce esta palabra.", cbr: true, untranslated: true, cite: "rvv:42.2, rvv:21" }
+erf: { nl: erf, es: "erf (zona residencial)", def: "Zona señalizada con G5 donde los peatones pueden usar la vía en todo su ancho. Máximo 15 km/h. El CBR no traduce esta palabra.", cbr: true, untranslated: true, cite: "rvv:44, rvv:45" }
 eenrichtingsweg: { nl: eenrichtingsweg, es: calle de sentido único, cbr: true }
 doodlopende-weg: { nl: doodlopende weg, es: calle sin salida, cbr: true }
 kruispunt: { nl: kruispunt, es: cruce / intersección }
 splitsing: { nl: splitsing, es: bifurcación (cruce en T o Y), cbr: true }
 rotonde: { nl: rotonde, es: rotonda, def: "Nudo de vías con tráfico que circula en movimiento giratorio, señalizado con D1. Una plaza sin D1 no es una rotonda para la ley.", cite: "rvv:bijlage1.D1, cbr-rijprocedure:3.6" }
-turborotonde: { nl: turborotonde, es: turborrotonda, def: "Rotonda con carriles separados por bordillos elevados: eliges el carril ANTES de entrar y dentro no puedes cambiar de carril.", cbr: true, cite: "vvn-turborotonde" }
+turborotonde: { nl: turborotonde, es: turborrotonda, def: "Rotonda de varios carriles en la que eliges el carril según tu destino ANTES de entrar; dentro no puedes cambiar de carril.", cbr: true, cite: "vvn-turborotonde" }
 uitrit: { nl: uitrit, es: salida de un terreno / garaje, def: "Salida de un garaje, parking, gasolinera o camino privado hacia la vía. Quien sale de una uitrit cede el paso a todos.", cbr: true }
 inrit: { nl: inrit, es: entrada a un terreno / garaje }
 overweg: { nl: overweg, es: paso a nivel (cruce con tren), cbr: true }
@@ -59,7 +59,7 @@ tramkruising: { nl: tramkruising, es: cruce con tranvía, cbr: true }
 voetgangersoversteekplaats: { nl: voetgangersoversteekplaats, es: paso de peatones (paso de cebra), def: "En el habla diaria: zebrapad.", cbr: true }
 zebrapad: { nl: zebrapad, es: paso de cebra }
 viaduct: { nl: viaduct, es: viaducto / paso elevado, cbr: true }
-vluchthaven: { nl: vluchthaven, es: refugio de emergencia, def: "Ensanche junto a la vía (p. ej. en autopistas sin arcén o túneles) para detenerse en caso de avería.", cbr: true }
+vluchthaven: { nl: vluchthaven, es: refugio de emergencia, def: "Ensanche junto a la calzada de una autosnelweg o autoweg, separado por una línea continua, para detenerse en una emergencia. El RVV lo define junto con la vluchtstrook.", cbr: true, cite: "rvv:1" }
 uitwijkplaats: { nl: uitwijkplaats, es: apartadero, def: "Ensanche en una vía estrecha para dejar pasar al tráfico que viene de frente.", cbr: true }
 veerpont: { nl: veerpont, es: transbordador (ferry), cbr: true }
 rijbaanversmalling: { nl: rijbaanversmalling, es: estrechamiento de calzada, cbr: true }
@@ -74,8 +74,8 @@ wegomleiding: { nl: wegomleiding, es: desvío, cbr: true }
 uitwijkroute: { nl: uitwijkroute, es: ruta alternativa, cbr: true }
 parkeergelegenheid: { nl: parkeergelegenheid, es: lugar de estacionamiento, cbr: true }
 taxistandplaats: { nl: taxistandplaats, es: parada de taxis, cbr: true }
-zone: { nl: zone, es: zona, def: "Una señal con la palabra ZONE vale para toda el área hasta la señal de fin de zona.", cbr: true }
-wegligging: { nl: wegligging, es: trazado de la vía, cbr: true }
+zone: { nl: zone, es: zona, def: "Una señal con la palabra ZONE vale para toda el área indicada, o hasta la señal de fin de zona.", cbr: true, cite: "rvv:66" }
+wegligging: { nl: wegligging, es: estabilidad del auto en la vía, cbr: true }
 spoorvorming: { nl: spoorvorming, es: roderas (surcos en el asfalto), def: "Surcos formados por el paso de vehículos pesados; se acumula agua en ellos (riesgo de aquaplaning).", cbr: true }
 losliggende-stenen: { nl: losliggende stenen, es: gravilla suelta, cbr: true }
 
@@ -83,7 +83,7 @@ losliggende-stenen: { nl: losliggende stenen, es: gravilla suelta, cbr: true }
 weggebruiker: { nl: weggebruiker, es: usuario de la vía, cbr: true }
 medeweggebruiker: { nl: medeweggebruiker(s), es: otros usuarios de la vía, cbr: true }
 bestuurder: { nl: bestuurder, es: conductor/a, def: "Para la ley, todos los usuarios de la vía excepto los peatones: ciclistas, motociclistas, conductores de auto, jinetes, etc.", cite: "rvv:1" }
-beginnend-bestuurder: { nl: beginnend bestuurder, es: conductor/a novel, def: "Conductor/a con permiso desde hace poco (5 años desde el primer permiso emitido a los 18 años o más; 7 años desde el primer permiso AM o T emitido antes de los 18). Tiene un límite de alcohol más bajo: más de 88 microgramos por litro de aliento.", cite: "wvw:8.3", cbr: true }
+beginnend-bestuurder: { nl: beginnend bestuurder, es: conductor/a novel, def: "Conductor/a con permiso desde hace poco (5 años desde el primer permiso emitido a los 18 años o más; 7 años desde el primer permiso AM o T emitido antes de los 18; 5 años desde el permiso B si se obtuvo antes de los 18). Tiene un límite de alcohol más bajo: más de 88 microgramos por litro de aliento.", cite: "wvw:8.3", cbr: true }
 voetganger: { nl: voetganger, es: peatón }
 fietser: { nl: fietser, es: ciclista }
 ruiter: { nl: ruiter, es: jinete, cbr: true }
@@ -94,6 +94,7 @@ motorrijtuig: { nl: motorrijtuig, es: vehículo de motor (en la ley de seguros y
 personenauto: { nl: personenauto, es: turismo / auto, cbr: true }
 bedrijfsauto: { nl: bedrijfsauto, es: furgoneta / vehículo comercial ligero }
 vrachtauto: { nl: vrachtauto, es: camión }
+bestelauto: { nl: bestelauto, es: furgoneta de reparto, def: "Vehículo de motor para transportar mercancías, con masa máxima autorizada de hasta 3500 kg.", cite: "rvv:1" }
 autobus: { nl: autobus, es: autobús }
 touringcar: { nl: touringcar, es: autobús de turismo, cbr: true }
 lijnbus: { nl: lijnbus, es: autobús de línea }
@@ -107,11 +108,11 @@ brommobiel: { nl: brommobiel, es: "brommobiel (microcoche)", def: "Bromfiets de 
 gehandicaptenvoertuig: { nl: gehandicaptenvoertuig, es: vehículo para personas con discapacidad, def: "Vehículo para transportar a una persona con discapacidad, de ancho máximo 1,10 m, sin motor o con motor de máximo 45 km/h, y que no es una bromfiets.", cbr: true, cite: "rvv:1" }
 landbouwvoertuig: { nl: landbouwvoertuig, es: vehículo agrícola, cbr: true }
 veegwagen: { nl: veegwagen, es: barredora, cbr: true }
-voorrangsvoertuig: { nl: voorrangsvoertuig, es: vehículo prioritario, def: "Ambulancia, policía o bomberos con luces azules intermitentes y sirena encendidas. Debes dejarles pasar siempre.", cbr: true, cite: "rvv:50" }
+voorrangsvoertuig: { nl: voorrangsvoertuig, es: vehículo prioritario, def: "Ambulancia, policía o bomberos con luz azul (giratoria, de destellos o intermitente) y sirena de dos tonos encendidas. Debes dejarles pasar siempre.", cbr: true, cite: "rvv:50" }
 politieauto: { nl: politieauto, es: auto de policía, cbr: true }
 militaire-colonne: { nl: militaire colonne, es: columna militar, def: "Varios vehículos motorizados militares (o de la organización de lucha contra desastres) que van uno tras otro bajo un solo comandante y llevan los distintivos oficiales. No la debes cortar.", cbr: true, cite: "rvv:1, rvv:16" }
 uitvaartstoet: { nl: uitvaartstoet, es: cortejo fúnebre, def: "Fila de vehículos motorizados que acompañan a un difunto o las cenizas de un difunto y llevan los distintivos oficiales. No lo debes cortar.", cbr: true, cite: "rvv:1, rvv:16, rvv:30c" }
-verkeersregelaar: { nl: verkeersregelaar, es: controlador/a de tráfico, def: "Persona autorizada (con chaleco y la palabra 'verkeersregelaar') que da indicaciones de tráfico. Sus indicaciones se deben seguir.", cbr: true }
+verkeersregelaar: { nl: verkeersregelaar, es: controlador/a de tráfico, def: "Persona autorizada y reconocible como tal que da indicaciones de tráfico. Sus indicaciones se deben seguir.", cbr: true, cite: "rvv:82.1" }
 carpooler: { nl: carpooler, es: persona que comparte auto, cbr: true }
 passagier: { nl: passagier, es: pasajero/a, cbr: true }
 tegenpartij: { nl: tegenpartij, es: la otra parte (en un accidente), cbr: true }
@@ -121,16 +122,16 @@ tegenligger: { nl: tegenligger, es: vehículo que viene de frente }
 # --- Prioridad y maniobras ---
 voorrang: { nl: voorrang, es: prioridad (derecho de paso), def: "Tener voorrang = el otro debe dejarte pasar. Dar voorrang (voorrang verlenen) = dejar pasar al otro." }
 voorrang-verlenen: { nl: voorrang verlenen, es: ceder el paso }
-voor-laten-gaan: { nl: voor laten gaan, es: dejar pasar, def: "Expresión de la ley para girar (art. 18), maniobras especiales (art. 54), pasos de cebra (art. 49) y vehículos prioritarios (art. 50): debes dejar pasar a otros usuarios, también a los peatones.", cite: "rvv:18.1, rvv:54, rvv:49.2, rvv:50" }
+voor-laten-gaan: { nl: voor laten gaan, es: dejar pasar, def: "Expresión de la ley para girar (art. 18), maniobras especiales (art. 54), pasos de cebra (art. 49) y vehículos prioritarios (art. 50): debes dejar pasar a otros usuarios; al salir de un garaje o entrar en él, también a los peatones.", cite: "rvv:18.1, rvv:54, rvv:49.2, rvv:50" }
 voorrangsweg: { nl: voorrangsweg, es: vía con prioridad, def: "Vía señalizada con B1; en todos los cruces tienes prioridad hasta la señal B2.", cite: "rvv:bijlage1.B1, rvv:bijlage1.B2" }
 voorrangskruispunt: { nl: voorrangskruispunt, es: cruce con prioridad señalizada, cbr: true }
 gelijkwaardig-kruispunt: { nl: gelijkwaardig kruispunt, es: cruce sin prioridad señalizada, def: "Cruce donde ninguna vía tiene prioridad por señales: vale la regla de la derecha." }
-haaientanden: { nl: haaientanden, es: "dientes de tiburón (marca de ceda el paso)", def: "Triángulos blancos pintados en la calzada con la punta hacia ti: debes ceder el paso a los conductores de la vía que cruzas.", cite: "rvv:80, rvv:1" }
+haaientanden: { nl: haaientanden, es: "dientes de tiburón (marca de ceda el paso)", def: "Triángulos blancos pintados en tu carril antes de un cruce: debes ceder el paso a los conductores de la vía que cruzas.", cite: "rvv:80, rvv:1" }
 bijzondere-manoeuvre: { nl: bijzondere manoeuvre, es: maniobra especial, def: "Arrancar desde el borde, salir de una uitrit, dar marcha atrás, girar en U, etc. Quien la hace debe dejar pasar a todos los demás." }
 inhalen: { nl: inhalen, es: adelantar }
 invoegen: { nl: invoegen, es: incorporarse (a una vía rápida) }
 uitvoegen: { nl: uitvoegen, es: salir (de una vía rápida) }
-ritsen: { nl: ritsen, es: incorporarse en cremallera, def: "Cuando un carril termina, los vehículos se alternan uno a uno al final del carril." }
+ritsen: { nl: ritsen, es: incorporarse en cremallera, def: "En un estrechamiento de la calzada, dejar espacio a los conductores que adelantan para que entren delante de ti.", cite: "cbr-rijprocedure:2" }
 voorsorteren: { nl: voorsorteren, es: preseleccionar carril, def: "Antes de girar, colocarte a tiempo lo más a la derecha (giro a la derecha) o lo más cerca del eje / lo más a la izquierda (giro a la izquierda).", cite: "rvv:17.1" }
 rechts-houden: { nl: rechts houden, es: circular por la derecha, def: "Los conductores deben circular lo más a la derecha posible.", cite: "rvv:3.1" }
 rijstrook-wisselen: { nl: van rijstrook wisselen, es: cambiar de carril, def: "Es una maniobra especial: debes dejar pasar al resto del tráfico.", cite: "rvv:54" }
@@ -138,7 +139,9 @@ zijdelingse-verplaatsing: { nl: zijdelingse verplaatsing, es: desplazamiento lat
 voorbijgaan: { nl: voorbijgaan, es: pasar junto a un obstáculo, def: "Pasar junto a algo que no participa en el tráfico (auto estacionado, contenedor). No es 'inhalen', que es adelantar a otro usuario." }
 tegemoetkomen: { nl: tegemoetkomen, es: cruzarse con el tráfico que viene de frente }
 ingehaald-worden: { nl: ingehaald worden, es: ser adelantado }
-weefvak: { nl: weefvak, es: tramo de entrecruzamiento, def: "Tramo donde una calzada se divide con una línea de bloques y carriles con señales de dirección encima." }
+weefvak: { nl: weefvak, es: tramo de entrecruzamiento, def: "Tramo donde se cruzan los que entran y los que salen de la calzada principal, por ejemplo en un carril combinado de incorporación y salida. El CBR usa la palabra también para un punto donde la calzada se divide con una línea de bloques y carriles con señales de dirección encima." }
+hulppost: { nl: hulppost(kast), es: puesto de emergencia del túnel, def: "Armario en la pared del túnel con un teléfono de emergencia para llamar al wegverkeersleider y un extintor.", cite: "rws-tunnel" }
+wegverkeersleider: { nl: wegverkeersleider, es: operador de tráfico, def: "Persona que vigila el túnel desde la central de tráfico, atiende las llamadas desde el hulppost y da instrucciones.", cite: "rws-tunnel" }
 fileverkeer: { nl: fileverkeer, es: tráfico en atasco (fila), cite: "rvv:13" }
 inhaalverbod: { nl: inhaalverbod, es: prohibición de adelantar, def: "La señal F1 prohíbe a los vehículos de motor adelantarse entre sí.", cite: "rvv:bijlage1.F1" }
 portierbreedte: { nl: portierbreedte, es: ancho de una puerta (de auto), def: "Distancia lateral mínima recomendada al pasar junto a autos estacionados." }
@@ -148,7 +151,7 @@ over-de-schouder-kijken: { nl: over de schouder kijken, es: mirar por encima del
 rijstrooklichten: { nl: rijstrooklichten, es: señales luminosas sobre el carril, def: "Flecha verde o velocidad máxima: el carril se puede usar. Cruz roja: no se puede usar.", cite: "rvv:73" }
 achteruitrijden: { nl: achteruitrijden, es: dar marcha atrás, cbr: true }
 keren: { nl: keren, es: dar la vuelta (cambio de sentido) }
-wegrijden: { nl: wegrijden, es: arrancar (ponerte en marcha), def: "Ponerte en marcha desde una parada, p. ej. desde el borde de la calzada. Es una maniobra especial: dejas pasar a todo el tráfico y avisas con el intermitente.", cite: "rvv:54, rvv:55" }
+wegrijden: { nl: wegrijden, es: arrancar (ponerte en marcha), def: "Ponerte en marcha desde fuera del tráfico, p. ej. desde el borde de la calzada (no tras parar ante un semáforo). Es una maniobra especial: dejas pasar a todo el tráfico y avisas con el intermitente.", cite: "rvv:54, rvv:55" }
 afslaan: { nl: afslaan, es: girar (a la izquierda o derecha) }
 rijrichting: { nl: rijrichting, es: sentido de circulación, cbr: true }
 stilstaan: { nl: stilstaan, es: detenerse (parar brevemente), def: "Tener el vehículo parado. La ley no lo define aparte: lo que no es parkeren (ver abajo) es solo stilstaan, p. ej. parar para subir o bajar personas de inmediato.", cite: "rvv:1" }
@@ -164,7 +167,7 @@ verkeerssituatie: { nl: verkeerssituatie, es: situación de tráfico, cbr: true 
 verkeersbord: { nl: verkeersbord, es: señal de tráfico }
 verkeersteken: { nl: verkeersteken, es: señal de tráfico (señal o marca vial) }
 verkeerslicht: { nl: verkeerslicht, es: semáforo, cbr: true }
-aanwijzing: { nl: aanwijzing, es: indicación (de un agente o controlador), def: "Orden dada por un agente de policía o un verkeersregelaar. Tiene la máxima prioridad: por encima de semáforos, señales y reglas." }
+aanwijzing: { nl: aanwijzing, es: indicación (de un agente o controlador), def: "Orden dada por un agente de policía o un verkeersregelaar. Tiene la máxima prioridad: por encima de semáforos, señales y reglas.", cite: "rvv:84" }
 geslotenverklaring: { nl: geslotenverklaring, es: prohibición de acceso, cbr: true }
 matrixbord: { nl: matrixbord, es: panel electrónico sobre el carril, def: "Panel electrónico encima de los carriles de la autopista con velocidades, flechas o una cruz roja (carril cerrado).", cbr: true }
 vooraanduiding: { nl: vooraanduiding, es: preaviso (señal que anuncia algo más adelante), cbr: true }
@@ -172,7 +175,7 @@ symbool: { nl: symbool, es: símbolo, cbr: true }
 wegmarkering: { nl: (weg)markering, es: marcas viales, cbr: true }
 doorgetrokken-streep: { nl: doorgetrokken streep, es: línea continua }
 onderbroken-streep: { nl: onderbroken streep, es: línea discontinua }
-blokmarkering: { nl: blokmarkering, es: línea de bloques, def: "Línea discontinua de bloques cortos y anchos que separa un carril de incorporación/salida o un carril de giro de la calzada principal.", cbr: true }
+blokmarkering: { nl: blokmarkering, es: línea de bloques, def: "Línea discontinua de bloques cortos y anchos que separa un carril de incorporación o de salida de la calzada principal.", cbr: true, cite: "rvv:1" }
 verdrijvingsvlak: { nl: verdrijvingsvlak, es: zona cebreada (isleta pintada), def: "Zona pintada con rayas diagonales que separa flujos de tráfico. Los conductores no pueden usarla (con las excepciones de carril de hora punta y carril bus).", cbr: true, cite: "rvv:77" }
 stopstreep: { nl: stopstreep, es: línea de detención }
 maximumsnelheid: { nl: maximumsnelheid, es: velocidad máxima, cbr: true }
@@ -221,6 +224,7 @@ parkeerrem: { nl: parkeerrem, es: freno de estacionamiento (de mano), cbr: true 
 losbreekreminrichting: { nl: losbreekreminrichting, es: freno de emergencia por ruptura (del remolque), def: "Sistema que frena el remolque si se suelta del vehículo tractor.", cbr: true }
 achterruitverwarming: { nl: achterruitverwarming, es: desempañador de la luneta trasera, cbr: true }
 ruitensproeiervloeistof: { nl: ruitensproeiervloeistof, es: líquido limpiaparabrisas, cbr: true }
+ruitensproeierinstallatie: { nl: ruitensproeierinstallatie, es: sistema lavaparabrisas }
 bandenspanning: { nl: bandenspanning, es: presión de los neumáticos, cbr: true }
 reserveband: { nl: reserveband, es: rueda de repuesto, cbr: true }
 winterbanden: { nl: winterbanden, es: neumáticos de invierno, cbr: true }
@@ -248,8 +252,8 @@ stopafstand: { nl: stopafstand, es: distancia de detención, def: "Distancia de 
 reactieafstand: { nl: reactieafstand, es: distancia de reacción, def: "Lo que recorres desde que ves el peligro hasta que empiezas a frenar." }
 volgafstand: { nl: volgafstand, es: distancia de seguimiento, def: "Distancia que dejas al auto de delante. La regla práctica del CBR es como mínimo dos segundos.", cite: "cbr-rijprocedure:3.2" }
 twee-secondenregel: { nl: twee-secondenregel, es: regla de los dos segundos, def: "La distancia de seguimiento mínima es la que recorres en dos segundos.", cite: "cbr-rijprocedure:3.2" }
-buiten-de-bebouwde-kom: { nl: buiten de bebouwde kom, es: fuera de la zona urbana, def: "Velocidad máxima de un auto: 130 km/h en autosnelweg, 100 en autoweg, 80 en otras vías.", cite: "rvv:21" }
-kampeerwagen: { nl: kampeerwagen, es: autocaravana (casa rodante), cbr: true }
+buiten-de-bebouwde-kom: { nl: buiten de bebouwde kom, es: fuera de la zona urbana, def: "Todo lo que queda fuera de la bebouwde kom, es decir, fuera del tramo entre las señales H1 y H2. Allí los límites de velocidad son más altos (ver el capítulo de velocidad).", cite: "rvv:bijlage1.H1, rvv:21" }
+kampeerwagen: { nl: kampeerwagen, es: autocaravana (casa rodante) }
 aangepaste-snelheid: { nl: aangepaste snelheid, es: velocidad adaptada, def: "Debes poder detenerte en la distancia que ves libre.", cite: "rvv:19" }
 reactietijd: { nl: reactietijd, es: tiempo de reacción, cbr: true }
 reactievermogen: { nl: reactievermogen, es: capacidad de reacción, cbr: true }
@@ -288,11 +292,13 @@ emg: { nl: Educatieve maatregel gedrag en verkeer (EMG), es: curso obligatorio s
 kentekenbewijs: { nl: kentekenbewijs, es: permiso de circulación del vehículo, cbr: true }
 kentekenplaat: { nl: kentekenplaat, es: placa de matrícula, cbr: true }
 kenteken: { nl: kenteken, es: matrícula (combinación de letras y cifras), def: "Combinación de letras y cifras que identifica un vehículo; se pone en una placa aprobada.", cite: "kr:2" }
-kentekencard: { nl: kentekencard, es: tarjeta de matrícula (kentekencard), def: "El documento que debes mostrar a la policía como kentekenbewijs; la obligación vale desde 14 días después de poner el auto a tu nombre.", cite: "kr:22" }
+kentekencard: { nl: kentekencard, es: tarjeta de matrícula (kentekencard), def: "El documento que debes mostrar a la policía como kentekenbewijs; la obligación vale desde que te la entregan y, en todo caso, desde 14 días después de poner el auto a tu nombre.", cite: "kr:22" }
 band: { nl: band, es: neumático }
 begeleid-rijden: { nl: begeleid rijden, es: conducir acompañado (desde los 17 años), def: "A los 17 años puedes conducir la categoría B con permiso B, begeleiderspas y un acompañante.", cite: "rr:5.8" }
-begeleider: { nl: begeleider, es: acompañante registrado (en begeleid rijden), def: "Persona registrada que va contigo cuando conduces a los 17 años.", cite: "rr:5.8" }
+begeleider: { nl: begeleider, es: acompañante (en begeleid rijden), def: "Persona que figura en tu begeleiderspas y va contigo cuando conduces a los 17 años.", cite: "rr:5.8, rr:49a.5" }
+begeleiderspas: { nl: begeleiderspas, es: pase de acompañantes, def: "Documento a tu nombre para la conducción acompañada; en él figuran como máximo 5 acompañantes.", cite: "rr:5.8, rr:49a.5" }
 apk: { nl: APK, es: "APK (inspección técnica obligatoria)", def: "Algemene Periodieke Keuring: inspección técnica periódica del vehículo. El CBR no traduce esta palabra.", cbr: true, untranslated: true }
+keuringsbewijs: { nl: keuringsbewijs, es: certificado de la revisión técnica (APK), def: "Para un vehículo con matrícula debe existir un keuringsbewijs válido y legible.", cite: "wvw:72" }
 apk-gekeurd: { nl: APK-gekeurd, es: con la APK aprobada, cbr: true }
 apk-keuringsrapport: { nl: APK-keuringsrapport, es: informe de la inspección APK, cbr: true }
 wam: { nl: WAM-verzekering, es: seguro obligatorio de responsabilidad civil }

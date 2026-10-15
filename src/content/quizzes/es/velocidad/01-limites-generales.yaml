@@ -42,7 +42,7 @@ questions:
 
   - id: limites-minimo-autosnelweg
     type: number
-    prompt: "¿Cuál es la velocidad mínima que debe poder y poder permitirse un vehículo de motor para usar una autosnelweg?"
+    prompt: "Para usar una autosnelweg, ¿a qué velocidad mínima debe poder ir un vehículo de motor (y tener permitido ir)?"
     answer: 60
     unit: km/h
     explain: "El art. 42 lid 1 habla de ir a 60 km/h o más."
@@ -50,7 +50,7 @@ questions:
 
   - id: limites-minimo-autoweg
     type: number
-    prompt: "¿Cuál es la velocidad mínima que debe poder y permitirse un vehículo de motor para usar una autoweg?"
+    prompt: "Para usar una autoweg, ¿a qué velocidad mínima debe poder ir un vehículo de motor (y tener permitido ir)?"
     answer: 50
     unit: km/h
     explain: "El art. 42 lid 2 habla de 50 km/h o más."

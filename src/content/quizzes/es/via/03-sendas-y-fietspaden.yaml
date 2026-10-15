@@ -60,9 +60,9 @@ questions:
 
   - id: sendas-suggestie
     type: yesno
-    prompt: ¿Una suggestiestrook roja es lo mismo que un fietsstrook?
+    prompt: Una franja roja al borde de la calzada, sin dibujos de bicicleta (una suggestiestrook), ¿es un fietsstrook según el RVV?
     answer: false
-    explain: El fietsstrook se define en el RVV 1 por sus líneas y dibujos de bicicleta. La palabra suggestiestrook no aparece en el RVV.
+    explain: El RVV define el fietsstrook por sus líneas y sus dibujos de bicicleta. Una franja sin esos dibujos no cumple la definición; la palabra suggestiestrook no aparece en el RVV.
     cites: ["rvv:1"]
 
   - id: sendas-g7

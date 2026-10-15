@@ -9,7 +9,7 @@ questions:
 
   - id: voorsorteren-izquierda-unico-sentido
     type: mc
-    prompt: Vas a girar a la izquierda desde una calzada de un solo sentido. ¿Dónde puedes preseleccionar?
+    prompt: Vas a girar a la izquierda desde una calzada de un solo sentido, sin tráfico en contra. ¿Dónde puedes preseleccionar?
     options: [Lo más a la izquierda posible, Lo más a la derecha posible, En el centro, Pegado a la acera derecha]
     answer: 0
     explain: En calzadas para un solo sentido se preselecciona lo más a la izquierda posible.
@@ -26,8 +26,8 @@ questions:
     type: yesno
     prompt: Según el RVV, ¿estás obligado a preseleccionar antes de cada giro?
     answer: false
-    explain: El texto dice que quien gira "mag" (puede) preseleccionar. Es una facultad, no una obligación.
-    cites: ["rvv:17.1"]
+    explain: El RVV dice que quien gira "mag" (puede) preseleccionar. Pero la Rijprocedure B lo considera lo mejor al girar, y lo exige cuando no hacerlo crea una situación insegura o estorba la fluidez.
+    cites: ["rvv:17.1", "cbr-rijprocedure:3.3"]
 
   - id: voorsorteren-no-estorbar
     type: mc

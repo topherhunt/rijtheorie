@@ -33,17 +33,17 @@ questions:
   - id: adelantado-motos
     type: mc
     prompt: "Circulas lento en una fila y una moto se acerca por el lado. ¿Qué haces?"
-    options: ['No reduzco el espacio y, si puedo, lo amplío', Me pego a un lado, Cierro el hueco, Toco la bocina]
+    options: ['No reduzco el espacio y, si puedo, lo amplío', Me quedo en el centro del carril sin moverme, Cierro el hueco, Toco la bocina]
     answer: 0
-    explain: "Las motos adelantan por la izquierda o la derecha según el espacio. Hay que sentarse de modo que no se reduzca, y si es posible ampliarlo."
+    explain: "Las motos adelantan por la izquierda o la derecha según el espacio. Conduce de modo que no reduzcas el espacio disponible y, si puedes, amplíalo apartándote."
     cites: ["cbr-rijprocedure:3.2"]
 
   - id: tegemoetkomen-definicion
     type: mc
     prompt: "¿Cuándo se habla de tegemoetkomen en la Rijprocedure B?"
-    options: [Cuando el espacio no alcanza para pasarse sin molestias, Siempre que pasa un auto de frente, Solo en autopistas, Solo con ciclistas]
+    options: [Cuando el espacio no alcanza para pasar uno junto al otro sin estorbarse, Siempre que pasa un auto de frente, Solo en autopistas, Solo con ciclistas]
     answer: 0
-    explain: "Solo si el espacio disponible no alcanza para pasarse sin molestias."
+    explain: "Solo si el espacio disponible no alcanza para pasar uno junto al otro sin estorbarse."
     cites: ["cbr-rijprocedure:3.2"]
 
   - id: tegemoetkomen-velocidad

@@ -62,15 +62,6 @@ questions:
     cites: ["cbr-examenplan:4"]
     exam: false
 
-  - id: usuarios-y-vehiculos-kampeer
-    type: mc
-    prompt: ¿Qué es una "kampeerwagen"?
-    options: [Una autocaravana, Un camión, Un autobús, Un tractor]
-    answer: 0
-    explain: Kampeerwagen es una autocaravana.
-    cites: ["cbr-examenplan:4"]
-    exam: false
-
   - id: usuarios-y-vehiculos-veeg
     type: mc
     prompt: ¿Qué es una "veegwagen"?

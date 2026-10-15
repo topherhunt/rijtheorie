@@ -62,7 +62,7 @@ questions:
       - En la vluchtstrook
       - Solo en el semáforo al final
     answer: 1
-    explain: Normalmente solo se reduce en el uitrijstrook, para no molestar al tráfico que sigue. Frenar en la calzada principal es excepcional y de forma gradual.
+    explain: Normalmente solo se reduce en el uitrijstrook, para no molestar al tráfico que sigue. Reducir en la calzada principal solo se hace en algunos casos, y lo más gradualmente posible.
     cites: ["cbr-rijprocedure:3.4"]
 
   - id: uitvoegen-vluchtstrook
@@ -94,7 +94,7 @@ questions:
       - Ninguno; se entra en orden
     answer: 2
     explain: Entrar y salir son maniobras especiales, así que la ley obliga a los dos a dejar pasar al otro tráfico.
-    cites: ["rvv:54"]
+    cites: ["rvv:54", "cbr-rijprocedure:3.4"]
 
   - id: uitvoegen-weefvak-practica
     type: mc

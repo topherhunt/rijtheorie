@@ -17,7 +17,7 @@ questions:
 
   - id: parte-peaton-borde
     type: yesno
-    prompt: No hay trottoir, voetpad ni fietspad. ¿Puede el peatón ir por la berma?
+    prompt: No hay trottoir, voetpad, fietspad ni fiets/bromfietspad. ¿Puede el peatón ir por la berma?
     answer: true
     explain: Si no hay trottoir, voetpad, fietspad ni fiets/bromfietspad, el peatón usa la berma o el borde exterior de la rijbaan.
     cites: ["rvv:4"]

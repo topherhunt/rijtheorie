@@ -41,7 +41,7 @@ questions:
 
   - id: alcohol-novel-b17
     type: number
-    prompt: Te dieron tu primer permiso B a los 17 años (conducir acompañado). ¿Cuántos años rige el límite bajo desde esa fecha?
+    prompt: Te dieron tu primer permiso B a los 17 años (conducción acompañada), sin haber tenido antes un permiso AM ni T. ¿Cuántos años rige el límite bajo desde esa fecha?
     answer: 5
     unit: años
     explain: Para el primer permiso B emitido antes de los 18 años son 5 años desde la emisión.

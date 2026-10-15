@@ -55,7 +55,7 @@ questions:
 
   - id: rijstroken-camion-preseleccionar
     type: yesno
-    prompt: Un camión está en el carril de la derecha de una autosnelweg de tres carriles y necesita preseleccionar para tomar una salida a la izquierda. ¿Le está permitido usar un tercer carril?
+    prompt: Un camión circula por una autosnelweg de tres carriles y tiene que preseleccionar a la izquierda. ¿Puede usar el carril izquierdo?
     answer: true
     explain: La prohibición no vale cuando tienen que preseleccionar (voorsorteren).
     cites: ["rvv:43.4"]

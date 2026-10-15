@@ -26,6 +26,11 @@ How the material was produced and why it looks the way it does. Update the relev
 - Scenes (atmosphere, vehicle parts, weather, situations where exact geometry doesn't matter): AI-generated with `black-forest-labs/flux-3-image` via OpenRouter, 1K tier, $0.048/image (measured 2026-10-15). Prompts forbid traffic signs, road markings and text, because the model invents plausible but wrong signs. `scripts/images/generate.ts` writes several candidates per image; each is reviewed at full size against the checklist in `scripts/images/manifest.yaml` and the chosen one copied to `public/img/` by hand. 11 images approved and 2 dropped from 47 generations ($2.26).
 - What the model gets wrong: equipment use (gauge held at an impossible angle, a trailer's jockey wheel down while driving even when told it's raised -- describe the object without the part instead), fused objects (two bikes as one frame), distances (triangle 5-10 m behind the car instead of 30 m), which way a car faces, and lane markings. Where the teaching point is a marking or lane layout (acceleration lane), use an SVG diagram instead.
 
+## Verification
+- Layers 1-3 of AUDIT.md were run on every lesson: independent agents without the authoring context red-teamed the lessons in 9 groups against the law snapshots and the CBR *Rijprocedure B* text. Each finding was checked against its source before acting on it; some were rejected because the cite was correct.
+- Most findings were partial statements (a rule given without its exception or condition), invented emphasis ("solo", "única") and Dutch terms not wired to the glossary. Watch for these when writing new content.
+- Claims that no source in the repo supports were cut rather than re-cited; the resulting gaps are listed in ROADMAP.
+
 ## Content writing rules
 - Plain Spanish, short sentences, tú form, neutral Latin American vocabulary (carro/auto: use "auto"; manejar/conducir: use "conducir").
 - Each rule: the Spanish explanation, the Dutch term, the citation. Exam tips are marked as tips, not law.

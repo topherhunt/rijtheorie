@@ -53,8 +53,8 @@ questions:
 
   - id: usuarios-columna
     type: mc
-    prompt: Un cortejo fúnebre de peatones que sigue la calzada, ¿qué reglas sigue?
-    options: [Las de un peatón suelto, Las de las wagens, Ninguna, Las de los ciclistas]
+    prompt: Un cortejo fúnebre de peatones que sigue la calzada, ¿qué reglas se le aplican además de las de peatón?
+    options: [Ninguna más, Las de las wagens, Las de los vehículos de motor, Las de los ciclistas]
     answer: 1
-    explain: Las columnas, desfiles y cortejos fúnebres de peatones que siguen la rijbaan se tratan como wagens.
+    explain: A las columnas, desfiles y cortejos fúnebres de peatones que siguen la rijbaan se les aplican también las reglas de las wagens.
     cites: ["rvv:2.3"]

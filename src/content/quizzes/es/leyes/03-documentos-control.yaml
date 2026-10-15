@@ -31,10 +31,10 @@ questions:
 
   - id: documentos-control-ordenes
     type: yesno
-    prompt: Un agente te da una orden para proteger los intereses del tráfico. ¿Debes obedecerla?
+    prompt: Un agente de policía te da una indicación sobre el tráfico en la vía. ¿Debes seguirla?
     answer: true
-    explain: Es una obligación legal.
-    cites: ["wvw:160.6", "wvw:12"]
+    explain: Los usuarios de la vía deben seguir las indicaciones sobre el tráfico de la policía y otros funcionarios autorizados.
+    cites: ["wvw:12.1"]
 
   - id: documentos-control-185
     type: number
@@ -46,7 +46,7 @@ questions:
 
   - id: documentos-control-ue
     type: number
-    prompt: Vives aquí con un permiso de la UE. Puedes usarlo, como máximo, hasta que pasen X años desde que fue emitido. ¿Cuántos años?
+    prompt: Vives aquí con un permiso de categoría B de la UE, emitido hace mucho. Puedes usarlo, como máximo, hasta que pasen X años desde que fue emitido. ¿Cuántos años?
     answer: 15
     unit: años
     explain: Para los permisos de las categorías AM, A1, A2, A, B, B1 y BE el límite es de 15 años desde su emisión.
@@ -54,7 +54,7 @@ questions:
 
   - id: documentos-control-extranjero
     type: yesno
-    prompt: ¿Puedes conducir en los Países Bajos con tu permiso extranjero más de 185 días después de instalarte, si es de fuera de la UE y el EEE?
+    prompt: ¿Puedes conducir en los Países Bajos con tu permiso extranjero más de 185 días después de instalarte, si es de fuera de la UE, el EEE y Suiza?
     answer: false
     explain: Pasado ese plazo ya no basta ese permiso.
     cites: ["wvw:108.1.g"]

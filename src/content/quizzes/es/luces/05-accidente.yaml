@@ -9,9 +9,9 @@ questions:
   - id: accidente-danos
     type: mc
     prompt: Rozaste un auto estacionado y causaste daños, sin heridos. ¿Qué debes hacer para no cometer una infracción al irte?
-    options: [Nada, no hay nadie, Dar la oportunidad de establecer tu identidad y la del vehículo en el lugar, Irte y llamar mañana, Solo apuntar tus datos en el parabrisas sin quedarte nada más]
+    options: [Nada, no hay nadie, Dar la oportunidad de establecer tu identidad y la del vehículo en el lugar, Irte y llamar mañana, Irte sin dejar ningún dato]
     answer: 1
-    explain: Si das en el lugar la oportunidad de verificar tu identidad (y la del vehículo), la prohibición de abandonar el lugar por daños no se aplica.
+    explain: Si das en el lugar la oportunidad de establecer tu identidad (y la del vehículo), la prohibición de abandonar el lugar por daños no se aplica.
     cites: ["wvw:7.2"]
 
   - id: accidente-desamparo

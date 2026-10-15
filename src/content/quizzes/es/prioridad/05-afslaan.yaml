@@ -100,7 +100,7 @@ questions:
 
   - id: afslaan-ruedas
     type: mc
-    prompt: Esperas dentro del cruce para girar a la izquierda mientras pasan los de frente. ¿Cómo recomienda el CBR tener las ruedas delanteras?
+    prompt: Esperas en el cruce, sin bloquearlo, para girar a la izquierda mientras pasan los de frente. ¿Cómo recomienda el CBR tener las ruedas delanteras?
     options: [Rectas, Giradas a la izquierda, Giradas a la derecha, Da igual]
     answer: 0
     explain: El CBR pide mantener las ruedas delanteras rectas mientras esperas. No hace falta con semáforos ni si tu vía tiene prioridad.

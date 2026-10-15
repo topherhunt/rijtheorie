@@ -61,6 +61,14 @@ questions:
     explain: Las bromfietsen con más de dos ruedas o con remolque, de más de 0,75 m con carga, usan la rijbaan.
     cites: ["rvv:6.3"]
 
+  - id: ciclistas-bromfiets-g11
+    type: mc
+    prompt: Hay un fietspad con señal G11 y no hay fiets/bromfietspad. ¿Por dónde va un bromfietser?
+    options: [Por el fietspad, Por la rijbaan, Por la acera, Por donde quiera]
+    answer: 1
+    explain: El bromfietser usa el fiets/bromfietspad (G12a). Si no hay, va por la rijbaan; la regla no lo manda al fietspad G11.
+    cites: ["rvv:6.1", "rvv:6.2"]
+
   - id: ciclistas-fietsstrook
     type: mc
     prompt: ¿Quién puede usar un fietsstrook con líneas continuas?

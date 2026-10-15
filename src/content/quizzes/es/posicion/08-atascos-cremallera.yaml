@@ -28,7 +28,7 @@ questions:
     options: [Cuando se forma una fila y debes frenar de golpe, Cuando paras en un lugar de poca visibilidad, Cuando paras y por oscuridad o clima no te verían a tiempo, Cuando estás estacionado en un lugar permitido sin problemas]
     answer: [0, 1, 2]
     explain: "Las luces de emergencia avisan a los que vienen detrás en los tres primeros casos."
-    cites: ["cbr-rijprocedure:3.2"]
+    cites: ["cbr-rijprocedure:2"]
 
   - id: atascos-cruce
     type: yesno
@@ -43,7 +43,7 @@ questions:
     options: [Dejarles espacio (ritsen), Cerrarles el paso, Acelerar para no dejarlos, Pararte en medio]
     answer: 0
     explain: "En un estrechamiento se deja espacio a quienes adelantan, intercalándose uno a uno."
-    cites: ["cbr-rijprocedure:3.2"]
+    cites: ["cbr-rijprocedure:2"]
 
   - id: atascos-quien-cede
     type: mc
@@ -58,4 +58,4 @@ questions:
     prompt: "Se forma una fila. ¿Es correcto acelerar de forma llamativa para cerrar un hueco que otro conductor quería usar?"
     answer: false
     explain: "La Rijprocedure B pide evitar esa conducta, que irrita a otros."
-    cites: ["cbr-rijprocedure:3.2"]
+    cites: ["cbr-rijprocedure:2"]

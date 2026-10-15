@@ -2,9 +2,9 @@ questions:
   - id: via-y-lugares-berm
     type: mc
     prompt: ¿Qué significa "berm"?
-    options: [Acera, Arcén de tierra o cuneta, Carril bus, Paso a nivel]
+    options: [Acera, Berma (franja lateral de tierra o hierba), Carril bus, Paso a nivel]
     answer: 1
-    explain: La berm es el arcén de tierra o cuneta junto a la calzada.
+    explain: "La berm es la berma: la franja lateral de tierra o hierba junto a la calzada."
     cites: ["cbr-examenplan:4"]
     exam: false
 

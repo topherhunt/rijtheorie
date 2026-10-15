@@ -3,7 +3,7 @@ questions:
     type: multi
     prompt: ¿Cuáles de estas son maniobras especiales según el art. 54?
     options:
-      - Arrancar desde una parada
+      - Arrancar desde un estacionamiento
       - Dar marcha atrás
       - Salir de una uitrit a la vía
       - Cambiar de carril

@@ -23,7 +23,7 @@ questions:
 
   - id: edad-vigencia-toets
     type: mc
-    prompt: ¿Desde qué edad se puede hacer el examen intermedio del conducir acompañado?
+    prompt: ¿Desde qué edad se puede hacer el examen intermedio de la conducción acompañada?
     options: [15 años, 16 años y 6 meses, 17 años, 18 años]
     answer: 1
     explain: El examen intermedio para el begeleid rijden se puede hacer a los 16 años y 6 meses.

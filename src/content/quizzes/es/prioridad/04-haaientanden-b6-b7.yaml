@@ -25,14 +25,6 @@ questions:
     explain: Los haaientanden indican que debes dar voorrang a los conductores de la vía que cruzas.
     cites: ["rvv:80"]
 
-  - id: haaientanden-punta
-    type: mc
-    prompt: ¿Hacia dónde apuntan las puntas de los dientes de tiburón?
-    options: [Hacia ti, Hacia el cruce, Hacia la derecha, Hacia atrás]
-    answer: 0
-    explain: Las puntas apuntan hacia el conductor que debe ceder el paso.
-    cites: ["rvv:80"]
-
   - id: haaientanden-b6-nombre
     type: mc
     prompt: ¿Qué significa la señal B6?
@@ -92,8 +84,8 @@ questions:
     sign: B7
     options: [Antes de la línea de detención, Dentro del cruce, Después del cruce, Donde quieras]
     answer: 0
-    explain: Si debes parar, lo haces antes de la stopstreep.
-    cites: ["rvv:79"]
+    explain: Te detienes antes de la stopstreep. Si no hay, detente donde veas bien el cruce.
+    cites: ["rvv:79", "cbr-rijprocedure:3.3"]
 
   - id: haaientanden-ciclista
     type: yesno

@@ -73,7 +73,7 @@ questions:
 
   - id: especial-bromfiets
     type: number
-    prompt: "¿Cuál es la velocidad máxima de un bromfiets en la calzada?"
+    prompt: "¿Cuál es la velocidad máxima de un bromfiets (que no es snorfiets) en la calzada?"
     answer: 45
     unit: km/h
     explain: "Art. 20 y 21: 45 km/h en la calzada."

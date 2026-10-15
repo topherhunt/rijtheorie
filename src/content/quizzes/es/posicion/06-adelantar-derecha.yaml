@@ -53,14 +53,14 @@ questions:
 
   - id: derecha-rotonda-lado
     type: yesno
-    prompt: "En una rotonda, ¿puede un auto circular por un lugar distinto del lado derecho de la calzada?"
+    prompt: "En o justo antes de una rotonda, ¿puede un auto que sigue la calzada ir por un lugar distinto del lado derecho de la calzada?"
     answer: true
     explain: "El art. 47 lo permite a los conductores de vehículos de motor y a los ciclomotores, en o justo antes de la rotonda."
     cites: ["rvv:47"]
 
   - id: derecha-lentos
     type: yesno
-    prompt: "En una vía con carriles, ¿pueden adelantarse por la derecha los vehículos parados o lentos de otro carril?"
+    prompt: "Estás en un carril de preselección (voorsorteerstrook). En otro carril hay vehículos parados o lentos. ¿Puedes adelantarlos por la derecha?"
     answer: true
     explain: "La Rijprocedure B lo indica así para los carriles de preselección: los vehículos parados o lentos en otro carril se pueden adelantar por la derecha."
     cites: ["cbr-rijprocedure:3.3"]

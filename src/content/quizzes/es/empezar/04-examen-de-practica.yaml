@@ -20,10 +20,10 @@ questions:
   - id: examen-practica-dias
     type: mc
     exam: false
-    prompt: Una de las condiciones del dominio es haber acertado cada pregunta en días distintos. ¿Cuántos días distintos?
-    options: [Uno, Dos, Cinco, Treinta]
+    prompt: Una de las condiciones del dominio es haber acertado cada pregunta dos veces seguidas. ¿Cuánto tiempo debe pasar, como mínimo, entre los dos aciertos?
+    options: [Nada, 24 horas, Una semana, Un mes]
     answer: 1
-    explain: Cada pregunta debe haberse acertado en dos días distintos, en el Repaso.
+    explain: Un segundo acierto cuenta solo cuando la pregunta vuelve a tocar, 24 horas después del primero. Un fallo la devuelve al principio.
     cites: ["curso"]
 
   - id: examen-practica-todas-condiciones

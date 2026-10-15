@@ -69,7 +69,7 @@ questions:
     type: yesno
     prompt: Según el CBR, al acercarte, circular y salir de una rotonda no debes bloquear los carriles bici independientes.
     answer: true
-    explain: Es parte de la procedimiento práctico del CBR.
+    explain: Es parte del procedimiento práctico del CBR.
     cites: ["cbr-rijprocedure:3.6"]
 
   - id: rotonde-47

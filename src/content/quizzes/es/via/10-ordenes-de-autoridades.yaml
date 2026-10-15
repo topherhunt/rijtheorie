@@ -23,10 +23,10 @@ questions:
 
   - id: ordenes-rojo
     type: mc
-    prompt: Un guardia de ferrocarril te muestra una lámpara roja. ¿Qué haces?
+    prompt: La persona que acompaña un tranvía te muestra una lámpara roja. ¿Qué haces?
     options: [Reduces la velocidad, Paras, Sigues si no ves el tren, Tocas la bocina]
     answer: 1
-    explain: Debes parar cuando un guardia de ferrocarril muestra F10, una bandera roja o una lámpara roja.
+    explain: Debes parar cuando quien acompaña a un vehículo sobre rieles muestra F10, una bandera roja o una lámpara roja.
     cites: ["rvv:82.4"]
 
   - id: ordenes-stop-politie
@@ -50,7 +50,7 @@ questions:
     prompt: Según la Wegenverkeerswet, ¿en interés de qué pueden darse esas órdenes?
     options: [La seguridad en la vía, El mantenimiento y la utilidad de la vía, La libertad del tráfico, El interés personal del agente]
     answer: [0, 1, 2]
-    explain: El art. 12 WVW permite esas órdenes solo en interés de la seguridad, del mantenimiento y utilidad de la vía, o de la libertad del tráfico.
+    explain: El art. 12 WVW permite esas órdenes solo en interés de la seguridad, del mantenimiento y utilidad de la vía, o de la libertad del tráfico (y de estudios de tráfico autorizados por el ministro).
     cites: ["wvw:12"]
 
   - id: ordenes-82a

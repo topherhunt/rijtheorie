@@ -59,7 +59,7 @@ questions:
 
   - id: invoegen-vacia
     type: yesno
-    prompt: La autopista está vacía. ¿Puedes entrar directamente sin usar todo el invoegstrook?
+    prompt: La autopista está vacía. ¿Puedes entrar a la calzada principal nada más empezar el invoegstrook, sin usar la longitud que necesitas para mirar y acelerar?
     answer: false
     explain: El procedimiento recomienda usar el carril en la longitud necesaria incluso si la calzada está vacía, para mirar y acelerar.
     cites: ["cbr-rijprocedure:3.4"]
@@ -92,7 +92,7 @@ questions:
       - Sí, pero solo con el intermitente
       - Sí, si es de noche
     answer: 1
-    explain: Si el carril pasa a vluchtstrook, no se usa para la incorporación. La vluchtstrook solo se usa en emergencias.
+    explain: Si el carril pasa a vluchtstrook, en principio no se usa para la incorporación. La vluchtstrook solo se usa en emergencias.
     cites: ["cbr-rijprocedure:3.4", "rvv:43.3"]
 
   - id: invoegen-parar

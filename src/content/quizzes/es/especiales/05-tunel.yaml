@@ -93,11 +93,11 @@ questions:
     prompt: Tu auto se avería en un túnel y puedes seguir un poco. ¿Qué recomienda Rijkswaterstaat?
     options:
       - Detenerte en el carril, no mover el auto
-      - Salir del túnel o llegar a una vluchtstrook o vluchthaven si puedes
+      - Salir del túnel y detenerte en una vluchtstrook o vluchthaven fuera de él, si puedes
       - Dar marcha atrás hasta la entrada
       - Cruzar la calzada hasta el otro lado
     answer: 1
-    explain: Intenta conducir hasta salir o hasta una vluchtstrook o vluchthaven. Si no puedes, luces de emergencia y detenerte lo más cerca de la pared.
+    explain: Intenta salir del túnel y detenerte en una vluchtstrook o vluchthaven fuera de él. Si no puedes, luces de emergencia y detenerte lo más cerca de la pared.
     cites: ["rws-tunnel"]
 
   - id: tunel-averia-pasajeros
@@ -114,7 +114,7 @@ questions:
 
   - id: tunel-averia-llamar
     type: mc
-    prompt: ¿A quién llamas desde el teléfono de emergencia (hulppost) de un túnel?
+    prompt: ¿A quién llamas desde el teléfono de emergencia del hulppost de un túnel?
     options: [A la Wegenwacht, Al wegverkeersleider, A la policía local, A tu seguro]
     answer: 1
     explain: Desde el teléfono de emergencia se llama al wegverkeersleider.

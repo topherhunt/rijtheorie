@@ -9,10 +9,10 @@ questions:
 
   - id: horario-noche
     type: mc
-    prompt: "Fuera de las 06.00-19.00 en una autopista con ese régimen, ¿qué límite vale donde hay que ir a más?"
-    options: [120 o 130 km/h según la señal o la situación, 100 km/h, 50 km/h, No hay límite]
+    prompt: "En una autopista con 100 km/h de 06.00 a 19.00, ¿qué límite rige fuera de ese horario?"
+    options: [120 o 130 km/h según el tramo, 100 km/h, 50 km/h, No hay límite]
     answer: 0
-    explain: "Fuera de ese horario el límite es 120 o 130 km/h donde esté señalizado o sea seguro."
+    explain: "Fuera de ese horario rige 120 o 130 km/h, según lo que Rijkswaterstaat permite en ese tramo; si de noche vale 130, no hay señal porque es el máximo general."
     cites: ["rws-maximumsnelheid"]
 
   - id: horario-sin-horario

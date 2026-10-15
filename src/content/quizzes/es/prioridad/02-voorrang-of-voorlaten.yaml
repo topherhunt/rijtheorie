@@ -61,7 +61,7 @@ questions:
     type: yesno
     prompt: Ceder el paso (voorrang verlenen) siempre significa detenerse por completo.
     answer: false
-    explain: Puedes ceder el paso reduciendo la velocidad si el otro no tiene que frenar ni esquivarte. Solo la señal B7 (Stop) obliga a parar.
+    explain: Puedes ceder el paso reduciendo la velocidad si el otro no tiene que frenar ni esquivarte. Entre las señales de prioridad, solo B7 (Stop) obliga siempre a parar.
     cites: ["rvv:1", "rvv:bijlage1.B7"]
 
   - id: voorrang-of-voorlaten-acercarse

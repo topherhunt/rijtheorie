@@ -66,7 +66,7 @@ questions:
 
   - id: schijf-kaart-tres-horas
     type: number
-    prompt: ¿Hasta cuántas horas de estacionamiento permite la tarjeta la excepción de la señal E1 y la línea amarilla discontinua?
+    prompt: Con la tarjeta de estacionamiento para discapacitados, ¿hasta cuántas horas seguidas puedes estacionar pese a una señal E1 o una línea amarilla discontinua?
     answer: 3
     unit: horas
     explain: Las excepciones valen si no estacionas más de tres horas, y debes tener un disco visible con la hora de inicio.

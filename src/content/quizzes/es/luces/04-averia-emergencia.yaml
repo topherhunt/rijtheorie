@@ -70,7 +70,7 @@ questions:
     type: yesno
     prompt: Tu motor se para en una autosnelweg. ¿Puedes llegar a la vluchtstrook?
     answer: true
-    explain: Una avería es un caso de emergencia, el único en que se puede usar la vluchtstrook.
+    explain: Una avería es un caso de emergencia (noodgeval), y en emergencias sí puedes usar la vluchtstrook.
     cites: ["rvv:43.3"]
 
   - id: autopista-vuelta

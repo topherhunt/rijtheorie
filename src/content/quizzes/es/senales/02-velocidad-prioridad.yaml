@@ -108,5 +108,5 @@ questions:
     prompt: ¿Cuál de estas señales avisa de un cruce con prioridad donde una vía lateral entra por la derecha?
     options: ["B4", "B5", "B3", "B6"]
     answer: 1
-    explain: B5 muestra la vía lateral a la derecha. B4 la muestra a la izquierda y B3 no muestra vía lateral.
-    cites: ["rvv:bijlage1.B4", "rvv:bijlage1.B5"]
+    explain: B5 muestra la vía lateral a la derecha. B4 la muestra a la izquierda y B3 muestra vías laterales a ambos lados.
+    cites: ["rvv:bijlage1.B3", "rvv:bijlage1.B4", "rvv:bijlage1.B5"]

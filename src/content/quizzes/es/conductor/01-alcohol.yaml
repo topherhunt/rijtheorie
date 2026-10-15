@@ -79,5 +79,5 @@ questions:
     type: yesno
     prompt: Si te niegas a la prueba de aliento, ¿se puede ordenar un análisis de sangre?
     answer: true
-    explain: El artículo 163 prevé el análisis de sangre si se niega el consentimiento o la prueba de aliento falla.
+    explain: Si la prueba de aliento no se completa, te piden aceptar un análisis de sangre; si no lo aceptas, te lo pueden ordenar (art. 163).
     cites: ["wvw:163"]

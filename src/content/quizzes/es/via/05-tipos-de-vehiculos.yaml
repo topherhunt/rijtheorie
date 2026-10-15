@@ -16,7 +16,7 @@ questions:
 
   - id: vehiculos-autobus
     type: number
-    prompt: ¿Más de cuántas personas, además del conductor, debe transportar un vehículo para ser un autobus?
+    prompt: ¿Para más de cuántas personas, además del conductor, debe estar construido un vehículo para ser un autobus?
     answer: 8
     unit: personas
     explain: Autobus es un vehículo para más de 8 personas además del conductor.
