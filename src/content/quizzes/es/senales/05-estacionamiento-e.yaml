@@ -1,13 +1,4 @@
 questions:
-  - id: e-e1-pasajero
-    type: mc
-    prompt: Delante de ti está esta señal. Te detienes unos segundos para que baje un pasajero y sigues. ¿Está permitido?
-    sign: E1
-    options: ["Sí, parar para que baje alguien no es parkeren", "No, E1 prohíbe cualquier parada", "Sí, pero solo si apagas el motor", "No, solo se puede en el lado contrario"]
-    answer: 0
-    explain: E1 prohíbe estacionar, y estacionar no incluye el tiempo justo para que alguien suba o baje. Detenerte un instante está permitido. Lo que E1 no deja es quedarte esperando.
-    cites: ["rvv:1", "rvv:bijlage1.E1"]
-
   - id: e-e2-pasajero
     type: yesno
     prompt: Delante de ti está esta señal. ¿Puedes detenerte unos segundos para que baje un pasajero?
@@ -23,14 +14,6 @@ questions:
     answer: true
     explain: E3 prohíbe dejar bicicletas y ciclomotores (fietsen en bromfietsen). No menciona los autos, así que la señal no te afecta.
     cites: ["rvv:bijlage1.E3"]
-
-  - id: e-e8-categoria
-    type: yesno
-    prompt: Un parking tiene una señal E8 con un panel que indica solo camiones. Conduces un auto. ¿Puedes estacionar allí?
-    sign: E8
-    answer: false
-    explain: E8 es una parkeergelegenheid solo para la categoría indicada. Un auto no pertenece a ella.
-    cites: ["rvv:24.1", "rvv:bijlage1.E8"]
 
   - id: e-e9-permiso
     type: yesno
@@ -79,15 +62,6 @@ questions:
     answer: false
     explain: Si hay parkeervakken, solo puedes estacionar en esos espacios.
     cites: ["rvv:24.4"]
-
-  - id: e-e10-disco
-    type: mc
-    prompt: Estacionas tu auto en una plaza con línea azul, dentro de una zona con esta señal. ¿Qué debes hacer?
-    sign: E10
-    options: ["Poner el disco de estacionamiento visible detrás del parabrisas", "Pagar en el parquímetro", "Dejar una nota con tu hora de llegada", "Dejar el motor encendido"]
-    answer: 0
-    explain: En las plazas con línea azul, un vehículo de motor de más de dos ruedas debe llevar el disco visible detrás del parabrisas, y no puedes pasar del tiempo indicado.
-    cites: ["rvv:25.2", "rvv:bijlage1.E10"]
 
   - id: e-e10-moto
     type: yesno

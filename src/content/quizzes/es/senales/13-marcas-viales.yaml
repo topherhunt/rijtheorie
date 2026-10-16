@@ -20,13 +20,6 @@ questions:
     explain: El art. 76.2 levanta la prohibición de cruzar la línea para llegar a una vluchtstrook, y el art. 43.3 permite usarla en emergencias. Una avería lo es.
     cites: ["rvv:76.2", "rvv:43.3"]
 
-  - id: mv-vluchtstrook-cola
-    type: yesno
-    prompt: Hay cola en la autosnelweg y la vluchtstrook está libre, separada por una línea continua. ¿Puedes cruzar la línea y avanzar por la vluchtstrook?
-    answer: false
-    explain: La excepción del art. 76.2 solo levanta la prohibición de cruzar la línea. Usar la vluchtstrook sin emergencia sigue prohibido (art. 43.3), y una cola no lo es.
-    cites: ["rvv:76.2", "rvv:43.3"]
-
   - id: mv-flechas
     type: mc
     prompt: Estás en un voorsorteerstrook con una flecha a la derecha en un cruce. ¿Qué debes hacer?
@@ -63,13 +56,6 @@ questions:
     answer: false
     explain: El carril BUS es solo para autobuses de línea, autobuses y tranvías (art. 81). Un coche no está en la lista, aunque el carril esté libre.
     cites: ["rvv:81"]
-
-  - id: mv-amarilla-pasajero
-    type: yesno
-    prompt: Junto a una línea amarilla continua, paras unos segundos para que baje tu pasajero y sigues. ¿Está permitido?
-    answer: false
-    explain: Junto a una línea amarilla continua no puedes detenerte (stilstaan), ni siquiera un momento. La única excepción para dejar pasajeros es la parada de bus (art. 23.2).
-    cites: ["rvv:23.1", "rvv:23.2"]
 
   - id: mv-amarilla-disc-pasajero
     type: yesno

@@ -26,15 +26,6 @@ questions:
     explain: Ante un paso a nivel dejas pasar al tren (art. 15a.2), tenga o no barreras. Que no haya barreras no te da prioridad.
     cites: ["rvv:15a.2", "rvv:bijlage1.J11"]
 
-  - id: j-j14-tranvia
-    type: mc
-    prompt: Llegas a un cruce sin semáforo ni señales de prioridad. Por tu izquierda se acerca un tranvía. No viene nadie por tu derecha. ¿Quién pasa primero?
-    sign: J14
-    options: ["El tranvía", "Yo, porque el tranvía no viene por mi derecha", "El primero que llegue al cruce"]
-    answer: 0
-    explain: 'La regla de la derecha tiene una excepción: debes ceder el paso a un tranvía (art. 15.2.b). Que venga por la izquierda no importa.'
-    cites: ["rvv:15.2.b", "rvv:bijlage1.J14"]
-
   - id: j-j33-distancia
     type: mc
     prompt: J33 te avisa de un atasco más adelante. La carretera hace una curva y no ves dónde termina la cola. ¿Cómo debes ir?

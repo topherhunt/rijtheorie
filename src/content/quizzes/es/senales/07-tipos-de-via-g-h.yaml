@@ -48,12 +48,3 @@ questions:
     answer: 0
     explain: Sin indicar el área, la señal vale hasta la señal que marca el fin de la zona.
     cites: ["rvv:66.2"]
-
-  - id: gh-h1-inicio
-    type: mc
-    prompt: Pasas junto a una señal H1 (Bebouwde kom) circulando con tu auto por una carretera local, sin otras señales de velocidad. ¿Qué cambia?
-    sign: H1
-    options: ["Empieza la zona urbana: el máximo pasa a 50 km/h", "Termina la zona urbana: el máximo pasa a 80 km/h", "Empieza una zona de 30 km/h", "Empieza un erf y el máximo es 15 km/h"]
-    answer: 0
-    explain: H1 marca el inicio de la bebouwde kom, donde rige el máximo de 50 km/h para vehículos de motor. H2 es la que la termina. El erf lo marca G5, y las zonas de 30 las marca una señal A1 con la palabra zone.
-    cites: ["rvv:bijlage1.H1", "rvv:20"]

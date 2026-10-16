@@ -23,15 +23,6 @@ questions:
     explain: El camión tiene un máximo propio de 80 km/h. Si la señal permite más, vale la velocidad más baja.
     cites: ["rvv:63b.1", "rvv:22"]
 
-  - id: velocidad-remolque-a1
-    type: number
-    prompt: Conduces un auto con un remolque de 750 kg de masa máxima por una carretera fuera de la zona urbana. Una señal A1 indica 100 km/h. ¿Qué velocidad máxima puedes llevar?
-    sign: A1
-    answer: 90
-    unit: km/h
-    explain: Un auto con remolque de hasta 3500 kg tiene un máximo propio de 90 km/h (art. 22). La señal permite más, así que vale la velocidad más baja. Los 80 km/h son el máximo de otros motorvoertuigen con remolque, no el tuyo.
-    cites: ["rvv:63b.1", "rvv:22"]
-
   - id: velocidad-a2-kom
     type: number
     prompt: Dentro de la zona urbana, una señal A1 de 30 km/h es seguida por esta señal y no hay otras señales de velocidad. ¿Qué velocidad máxima tiene tu auto después?
@@ -40,33 +31,6 @@ questions:
     unit: km/h
     explain: Después de A2 vuelve el límite general. Dentro de la bebouwde kom es 50 km/h para vehículos de motor.
     cites: ["rvv:bijlage1.A2", "rvv:20"]
-
-  - id: velocidad-b2-efecto
-    type: mc
-    prompt: Pasas esta señal. Más adelante llegas a un cruce sin semáforo y sin ninguna señal de prioridad, y un auto se acerca por tu derecha. ¿Quién pasa primero?
-    sign: B2
-    options: ["Tú, porque vienes de la vía que tenía prioridad", "El auto de la derecha, porque vuelve la regla general", "El que llegue primero"]
-    answer: 1
-    explain: 'B2 cierra la voorrangsweg. Sin señales ni semáforo en el cruce, rige la regla de la derecha: cedes al que viene por tu derecha.'
-    cites: ["rvv:bijlage1.B2", "rvv:15.1"]
-
-  - id: velocidad-b3-derecha
-    type: mc
-    prompt: Circulas por una vía con la señal B3 en el cruce que tienes delante. Un auto sale de la vía lateral por tu derecha. ¿Qué haces?
-    sign: B3
-    options: ["Sigo: en este cruce la prioridad es mía", "Cedo, porque viene por mi derecha", "Cedo si es más grande que mi auto"]
-    answer: 0
-    explain: B3 es un voorrangskruispunt. La señal pasa por encima de la regla general de la derecha (art. 63), así que no cedes por venir alguien de la derecha. Sigues atento, pero la obligación de ceder es suya.
-    cites: ["rvv:63", "rvv:15.1", "rvv:bijlage1.B3"]
-
-  - id: velocidad-b5-lateral
-    type: mc
-    prompt: Circulas por una vía con prioridad y ves la señal B5. Más adelante, por la derecha, entra una vía lateral. ¿Qué te dice la señal?
-    sign: B5
-    options: ["Que en ese cruce mantienes la prioridad frente a la vía lateral de la derecha", "Que debes ceder a quien salga de la vía lateral", "Que la vía lateral de la derecha tiene un stop"]
-    answer: 0
-    explain: B5 es un voorrangskruispunt con zijweg rechts, y B4 con zijweg links. Avisan de por dónde entra la vía lateral; la prioridad sigue siendo tuya.
-    cites: ["rvv:bijlage1.B5", "rvv:bijlage1.B4"]
 
   - id: velocidad-b6-cede
     type: mc
@@ -77,14 +41,6 @@ questions:
     explain: B6 te obliga a dar voorrang a la vía que cruzas, que es dejar que los demás sigan sin estorbo. Eso vale venga por la izquierda o por la derecha, y llegues antes o después. Si la vía estuviera libre, no tendrías que detenerte.
     cites: ["rvv:bijlage1.B6", "rvv:1", "rvv:63"]
 
-  - id: velocidad-b6-b7-via-libre
-    type: mc
-    prompt: Llegas a un cruce y no viene nadie por la vía que cruzas. ¿Cuál de estas señales te obliga a detenerte de todos modos?
-    options: ["B6 (triángulo)", "B7 (stop)", "Las dos", "Ninguna"]
-    answer: 1
-    explain: B7 dice "Stop" y te obliga a parar aunque no venga nadie. Con B6 solo cedes si hay alguien a quien estorbarías.
-    cites: ["rvv:bijlage1.B6", "rvv:bijlage1.B7", "rvv:1"]
-
   - id: velocidad-b7-donde
     type: mc
     prompt: Ante una señal de stop hay una línea de detención pintada. ¿Dónde paras?
@@ -93,12 +49,3 @@ questions:
     answer: 0
     explain: Si hay una stopstreep para ti, paras detrás de ella (art. 79). Solo sin línea paras donde veas bien el cruce.
     cites: ["rvv:79", "cbr-rijprocedure:3.3"]
-
-  - id: velocidad-b7-sin-linea
-    type: mc
-    prompt: Ante una señal de stop no hay línea de detención y un seto te tapa la vista del cruce. ¿Dónde paras?
-    sign: B7
-    options: ["Donde pueda ver bien el cruce para entrar con seguridad", "Pegado al seto, aunque no vea nada", "Antes del seto, y entro sin volver a mirar"]
-    answer: 0
-    explain: La práctica del CBR es parar donde veas bien el cruce y entrar con seguridad. Parar sin ver nada, o entrar sin volver a mirar, no deja comprobar si alguien con prioridad se acerca.
-    cites: ["cbr-rijprocedure:3.3"]

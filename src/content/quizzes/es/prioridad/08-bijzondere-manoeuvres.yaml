@@ -72,13 +72,6 @@ questions:
     explain: "Entrar a una inrit es una maniobra especial (art. 54): dejas pasar al resto del tráfico, venga de donde venga. El CBR pide comprobar antes el carril bici y la acera."
     cites: ["rvv:54", "cbr-rijprocedure:3.6"]
 
-  - id: bijzondere-manoeuvres-aparcar-uitrit
-    type: yesno
-    prompt: Quieres aparcar (dejar el auto estacionado una hora) y ves un hueco justo delante de la entrada de un garaje. ¿Puedes estacionar ahí?
-    answer: false
-    explain: El art. 24.1.b prohíbe estacionar (parkeren) delante de una inrit o uitrit.
-    cites: ["rvv:24.1"]
-
   - id: bijzondere-manoeuvres-parada-uitrit
     type: yesno
     prompt: Paras delante de la salida de un garaje solo el tiempo de que baje un pasajero, y arrancas enseguida. ¿Infringes la prohibición de estacionar frente a una uitrit?
@@ -101,14 +94,6 @@ questions:
     answer: 0
     explain: "Keren es una maniobra especial: dejas pasar al resto del tráfico, venga de donde venga y sea de la categoría que sea."
     cites: ["rvv:54"]
-
-  - id: bijzondere-manoeuvres-invoegen-situacion
-    type: mc
-    prompt: Estás en el carril de incorporación de una vía principal y quieres pasar a la calzada principal. Ya tienes el intermitente puesto. Un auto circula por el carril derecho de la calzada principal. ¿Quién pasa primero?
-    options: [El auto de la calzada principal, "Tú, porque ya señalizaste", "Tú, porque llegas desde la derecha", El que vaya más rápido]
-    answer: 0
-    explain: "Pasar del carril de incorporación a la calzada principal es una maniobra especial (art. 54): dejas pasar al resto del tráfico. Señalizar (art. 55) es obligatorio pero no te da prioridad."
-    cites: ["rvv:54", "rvv:55"]
 
   - id: bijzondere-manoeuvres-cambio-carril-situacion
     type: mc

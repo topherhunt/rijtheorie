@@ -45,14 +45,6 @@ questions:
     explain: 'Por ley quien cambia de carril cede (art. 54), pero la Rijprocedure B pide ritsen: dejar entrar de uno en uno. Cerrar el paso bloquea a todos y no es comportamiento social.'
     cites: ["cbr-rijprocedure:2", "rvv:54"]
 
-  - id: atascos-incorporo-ceder
-    type: mc
-    prompt: Vas por un carril de incorporación y llegas a la calzada principal con tráfico. ¿Quién debe dejar pasar a quién?
-    options: [Yo dejo pasar al tráfico de la calzada principal, El tráfico de la calzada principal me deja pasar a mí, Pasa primero el más rápido, Pasa primero el más grande]
-    answer: 0
-    explain: Quien se incorpora a la calzada principal desde un carril de incorporación debe dejar pasar al resto del tráfico. Que otros te dejen paso es cortesía, no un derecho.
-    cites: ["rvv:54"]
-
   - id: atascos-ritsen-ayuda
     type: mc
     prompt: Circulas por la calzada principal de una autosnelweg y ves en el carril de incorporación un camión que no logra coger velocidad. ¿Qué haces si puedes?

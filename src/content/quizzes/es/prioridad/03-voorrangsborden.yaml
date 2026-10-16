@@ -1,19 +1,4 @@
 questions:
-  - id: voorrangsborden-b1-derecha
-    type: mc
-    prompt: Vas por una vía con la señal B1. ¿Quién pasa primero?
-    sign: B1
-    diagram:
-      arms: { n: { sign: B1 }, e: {}, s: { sign: B1 }, w: {} }
-      vehicles:
-        - { label: A, kind: car, from: s, to: straight, you: true }
-        - { label: B, kind: car, from: e, to: straight }
-      alt: Cruce. Tú (A) vienes del sur por una vía con la señal B1 y sigues recto. B viene del este, por tu derecha, por una vía sin señal de prioridad.
-    options: [Tú (A), El auto B]
-    answer: 0
-    explain: B1 es voorrangsweg. Tienes prioridad en los cruces, aunque el otro venga por tu derecha. La señal manda sobre la regla de la derecha.
-    cites: ["rvv:bijlage1.B1", "rvv:63", "general"]
-
   - id: voorrangsborden-b2-fin
     type: mc
     prompt: Pasas por la señal B2 y llegas a un cruce. B viene por tu derecha. ¿Quién pasa primero?

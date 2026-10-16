@@ -17,13 +17,6 @@ questions:
     cites: ["cbr-examenplan:4"]
     exam: false
 
-  - id: auto-y-equipo-claxon-semaforo
-    type: yesno
-    prompt: El auto de delante tarda en arrancar con el semáforo ya en verde. ¿Puedes tocar la bocina para que avance?
-    answer: false
-    explain: La bocina y la ráfaga solo se usan para evitar un peligro inminente. Apurar a otro conductor no lo es.
-    cites: ["rvv:28"]
-
   - id: auto-y-equipo-claxon-peligro
     type: yesno
     prompt: Un ciclista se cruza delante de ti sin mirar y vas a chocar con él si no avisas. ¿Puedes tocar la bocina?

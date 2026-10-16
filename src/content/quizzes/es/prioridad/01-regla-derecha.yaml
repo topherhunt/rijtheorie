@@ -62,11 +62,3 @@ questions:
     answer: 1
     explain: Sin señales no importa cuál calle parezca la principal. B viene por tu derecha y por eso pasa primero.
     cites: ["rvv:15.1"]
-
-  - id: regla-derecha-tram
-    type: mc
-    prompt: Llegas a un cruce sin señales ni semáforos y vas recto. Por tu derecha no viene nadie, y por tu izquierda se acerca un tranvía. ¿Quién pasa primero?
-    options: ["Tú, porque nadie viene por tu derecha", "El tranvía, aunque venga por tu izquierda"]
-    answer: 1
-    explain: Quien conduce cede el paso al tranvía, venga de donde venga (art. 15.2.b). Que nadie venga por tu derecha no te da la prioridad frente a él.
-    cites: ["rvv:15.2"]

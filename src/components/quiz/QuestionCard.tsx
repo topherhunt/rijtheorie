@@ -41,6 +41,7 @@ export function QuestionMedia({ q }: { q: ClientQuestion }) {
 
 /** Input controls; `value` is the in-progress response, `onChange` updates it. */
 export function QuestionInput({ q, value, onChange, disabled }: { q: ClientQuestion; value: Response | undefined; onChange: (r: Response | undefined) => void; disabled: boolean }) {
+  // Also the Preact key: keyed by display index, the shuffle would relabel a button node in place, under a pending click.
   const key = (i: number) => (q.optionKeys ? q.optionKeys[i] : i);
   const btn = (selected: boolean) =>
     `qa-option block w-full rounded-lg border px-3 py-2 text-left ${selected ? 'border-brand-600 bg-brand-50 font-medium' : 'border-slate-300 bg-white hover:border-slate-400'} disabled:cursor-default`;
@@ -48,7 +49,7 @@ export function QuestionInput({ q, value, onChange, disabled }: { q: ClientQuest
     case 'mc':
       return (
         <div class="flex flex-col gap-2">
-          {q.options.map((o, i) => <button type="button" key={i} class={`${btn(value === i)} qa-option-${key(i)}`} disabled={disabled} onClick={() => onChange(i)}>{o}</button>)}
+          {q.options.map((o, i) => <button type="button" key={key(i)} class={`${btn(value === i)} qa-option-${key(i)}`} disabled={disabled} onClick={() => onChange(i)}>{o}</button>)}
         </div>
       );
     case 'multi': {
@@ -57,7 +58,7 @@ export function QuestionInput({ q, value, onChange, disabled }: { q: ClientQuest
         <div class="flex flex-col gap-2">
           <p class="text-sm text-slate-500">{es.quiz.selectAll}</p>
           {q.options.map((o, i) => (
-            <button type="button" key={i} class={`${btn(sel.includes(i))} qa-option-${key(i)}`} disabled={disabled} onClick={() => onChange(sel.includes(i) ? sel.filter((x) => x !== i) : [...sel, i])}>
+            <button type="button" key={key(i)} class={`${btn(sel.includes(i))} qa-option-${key(i)}`} disabled={disabled} onClick={() => onChange(sel.includes(i) ? sel.filter((x) => x !== i) : [...sel, i])}>
               {sel.includes(i) ? '☑ ' : '☐ '}{o}
             </button>
           ))}

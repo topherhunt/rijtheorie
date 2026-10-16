@@ -41,14 +41,6 @@ questions:
     explain: Con "uitgezonderd", C1 deja de valer para las bicicletas. Los peatones nunca estuvieron cerrados por C1 (no son voertuigen), y el auto sigue excluido.
     cites: ["rvv:67.1", "rvv:bijlage1.C1", "rvv:1"]
 
-  - id: ob-lado-e1
-    type: yesno
-    prompt: La señal E1 (prohibido estacionar) está en el lado derecho de la calle y quieres estacionar en el lado izquierdo, sin otras señales. ¿Te alcanza la prohibición de E1?
-    sign: E1
-    answer: false
-    explain: E1, E2 y E3 valen solo para el lado de la vía donde están colocadas.
-    cites: ["rvv:65.2"]
-
   - id: ob-bestemmingsverkeer
     type: mc
     prompt: Una calle cerrada tiene una casa al fondo que solo se alcanza por esa calle. Según la definición del RVV, ¿cuál de estos conductores es bestemmingsverkeer?

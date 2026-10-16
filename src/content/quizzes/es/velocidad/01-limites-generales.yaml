@@ -42,27 +42,12 @@ questions:
     explain: "Dentro de la zona urbana el bromfiets va a 45 km/h en la calzada y a 30 km/h en el fiets/bromfietspad (fuera serían 45 y 40). No existe un 50 para la bromfiets, y el camino aparte no le da más velocidad sino menos."
     cites: ["rvv:20", "rvv:21"]
 
-  - id: limites-senal-prevalece
-    type: yesno
-    prompt: "Vas por una carretera normal fuera de la zona urbana, donde el máximo general es 80, y ves una señal de 70 km/h. No hay obras ni nadie delante. ¿Debes bajar a 70?"
-    answer: true
-    explain: "Sí. La señal de prohibición se obedece y prevalece sobre la regla general; que la vía esté libre no cambia nada. Los 80 son un tope general, no un derecho a ir a 80 con una señal que dice menos."
-    cites: ["rvv:62", "rvv:63"]
-
   - id: limites-exceso-grave
     type: yesno
     prompt: "Decides ir a propósito a 140 km/h en un tramo de 100 con tráfico, y tu forma de conducir pone a otro en peligro de lesión grave. ¿Puede contar como una de las conductas graves de la Wegenverkeerswet (art. 5a)?"
     answer: true
     explain: "Sí. Exceder el máximo a propósito, de forma que pone a otro en peligro de muerte o lesión grave, es una de las conductas del art. 5a. No es una simple infracción menor solo porque el límite sea 'general'."
     cites: ["wvw:5a"]
-
-  - id: limites-bromfiets-autoweg
-    type: yesno
-    prompt: "Un amigo conduce una bromfiets (máximo 45 km/h) y quiere tomar una autoweg (señal G3). ¿Puede usarla?"
-    sign: G3
-    answer: false
-    explain: "El art. 42 permite usar la autoweg solo a conductores de un motorvoertuig, y una bromfiets no es motorvoertuig según el art. 1. Tampoco alcanza el mínimo de 50 km/h."
-    cites: ["rvv:42.2", "rvv:1"]
 
   - id: limites-h2-otra-via
     type: mc

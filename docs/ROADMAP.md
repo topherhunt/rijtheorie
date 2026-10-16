@@ -16,6 +16,7 @@ v1 under construction: Spanish course with Dutch terms, browser-only progress. S
 - [x] Chapters 0-12 content and questions, including practical procedures (Rijprocedure B): 101 lessons, 1134 questions
 - [x] AI scene images: 11 in lessons, $2.26 of the $20 budget spent (`scripts/images/spend.jsonl`)
 - [ ] Owner: assess each AI image (`docs/IMAGE-REVIEW.md` says what each is meant to show)
+- [ ] Scenario questions from pictures (`docs/SCENES.md`): Mapillary scan and candidate shortlist, then storyboarded generation for the gaps
 - [ ] SVG diagram of an acceleration lane with block markings for `especiales/02-invoegen` (the AI image was dropped)
 - [x] Audit harness (`scripts/audit/`, `docs/AUDIT.md`); `npm run audit -- --strict` clean
 - [x] Red-team pass (AUDIT layer 3) over all 101 lessons; every finding checked against its source, then fixed or rejected

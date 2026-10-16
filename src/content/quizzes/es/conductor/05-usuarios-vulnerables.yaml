@@ -7,22 +7,6 @@ questions:
     explain: Los niños son impredecibles. La pelota anuncia que puede salir uno corriendo tras ella; hay que anticiparse y no esperar a verlo en la calzada.
     cites: ["cbr-rijprocedure:2"]
 
-  - id: vulnerables-baston-sin-paso
-    type: mc
-    prompt: En una calle sin paso de peatones, una persona con bastón blanco con anillos rojos está al borde de la acera, con claras dudas sobre si cruzar. ¿Qué haces?
-    options: ["La dejo pasar: debo dejar pasar a estas personas aunque no haya paso de peatones", "Sigo: sin paso de peatones no tengo que ceder", "Hago ráfagas de luces para que cruce deprisa", "Sigo despacio y ella decide cuándo cruzar"]
-    answer: 0
-    explain: La obligación de dejar pasar a ciegos con bastón blanco con anillos rojos (y a quienes se mueven con dificultad) no depende de que haya paso de peatones. Una persona ciega no ve tus luces; se orienta por el oído.
-    cites: ["rvv:49.1", "cbr-rijprocedure:2"]
-
-  - id: vulnerables-cebra-listo
-    type: mc
-    prompt: Te acercas a un paso de peatones sin semáforo. Un peatón está de pie en el borde, mirando el tráfico y con un pie ya fuera de la acera, pero todavía no ha puesto el pie en el paso. ¿Qué haces?
-    options: ["Paso rápido: todavía no ha empezado a cruzar", "Me detengo y lo dejo pasar: evidentemente está a punto de cruzar", "Hago ráfagas de luces para que se espere", "Reduzco un poco y paso si no cruza en ese momento"]
-    answer: 1
-    explain: La obligación de dejar pasar incluye al peatón que evidentemente está a punto de cruzar un paso de peatones, no solo al que ya está en él.
-    cites: ["rvv:49.2"]
-
   - id: vulnerables-cebra-semaforo-rojo
     type: mc
     prompt: Llegas a un paso de peatones. El semáforo de peatones está en rojo, pero un peatón ya ha empezado a cruzar. ¿Qué haces?

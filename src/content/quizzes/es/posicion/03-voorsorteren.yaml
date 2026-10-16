@@ -38,14 +38,6 @@ questions:
     explain: La Rijprocedure B dice que a veces es mejor no preseleccionar si, parado o lento en esa posición, estorbarías sin necesidad a ciclistas y ciclomotores.
     cites: ["cbr-rijprocedure:3.3"]
 
-  - id: voorsorteren-espera-giro-izquierda
-    type: mc
-    prompt: Esperas para girar a la izquierda mientras pasa el tráfico que viene de frente. ¿Cómo deja la Rijprocedure B las ruedas delanteras del auto?
-    options: [Giradas ya a la izquierda para arrancar antes, Lo más rectas posible, Giradas a la derecha para alejarte del eje, Como te resulte más cómodo]
-    answer: 1
-    explain: La Rijprocedure B pide mantener las ruedas delanteras lo más posible en posición "rechtuit". Es procedimiento, no ley; el motivo práctico es que, si te golpean por detrás, no te empujen hacia el tráfico de frente.
-    cites: ["cbr-rijprocedure:3.3"]
-
   - id: voorsorteren-flecha
     type: mc
     prompt: Estás en un carril de preselección con una flecha a la derecha y tenías pensado seguir recto. ¿Qué haces?
@@ -86,11 +78,3 @@ questions:
     answer: 0
     explain: Hay que avisar con tiempo, después de haber mirado, para que los demás ajusten su conducción, y terminar la señal tras la curva. La obligación de avisar viene del art. 17 lid 2.
     cites: ["rvv:17.2", "cbr-rijprocedure:3.3"]
-
-  - id: voorsorteren-ceder-lado
-    type: mc
-    prompt: Giras a la derecha en un cruce. Un ciclista viene por tu derecha, a tu altura, y sigue recto. ¿Quién deja pasar a quién?
-    options: [Tú le dejas pasar a él, Él te deja pasar a ti porque tú giras, El más rápido pasa primero, Los dos entran a la vez]
-    answer: 0
-    explain: Quien gira tiene que dejar pasar al tráfico que viene de frente y al que va a su lado o muy cerca detrás, a izquierda o a derecha. El que gira cede, aunque tenga que esperar.
-    cites: ["rvv:18.1"]

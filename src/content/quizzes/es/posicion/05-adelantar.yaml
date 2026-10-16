@@ -15,14 +15,6 @@ questions:
     explain: Los criterios incluyen la calzada, la posibilidad de coger velocidad, la visibilidad, el espacio disponible y la velocidad de quien adelantas. La prisa no es un criterio; no hace posible un adelantamiento que no lo es.
     cites: ["cbr-rijprocedure:3.5"]
 
-  - id: adelantar-f1-bici
-    type: yesno
-    prompt: Ves la señal F1 y delante de ti va un ciclomotor (bromfiets). ¿La señal te prohíbe adelantarlo?
-    answer: false
-    explain: La F1 prohíbe adelantarse entre vehículos de motor. En el RVV, los vehículos de motor no incluyen los bromfietsen.
-    cites: ["rvv:bijlage1.F1", "rvv:1"]
-    sign: F1
-
   - id: adelantar-f3-quien
     type: mc
     prompt: Conduces un auto y ves la señal F3 mientras alcanzas a un camión. ¿Qué te prohíbe la señal?

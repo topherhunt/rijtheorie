@@ -17,13 +17,6 @@ questions:
     cites: ["cbr-examenplan:4"]
     exam: false
 
-  - id: via-y-lugares-vluchthaven-parar
-    type: yesno
-    prompt: Circulas por una autoweg y ves una vluchthaven libre junto a la calzada. Quieres parar un momento a mirar el mapa, sin ninguna emergencia. ¿Puedes entrar en ella?
-    answer: false
-    explain: En una autosnelweg o autoweg está prohibido usar la vluchtstrook, la vluchthaven o la berm salvo en un noodgeval. Mirar el mapa no es una emergencia.
-    cites: ["rvv:43.3"]
-
   - id: via-y-lugares-berm-adelantar
     type: yesno
     prompt: Por una autoweg circulas detrás de un vehículo lento. No hay ninguna emergencia. ¿Puedes adelantarlo por la berm?
@@ -44,13 +37,6 @@ questions:
     options: [Tú dejas pasar al coche que viene de frente, El coche de frente te deja pasar a ti porque ya has puesto el intermitente, Pasa quien llegue antes al garaje, Pasa quien vaya más despacio]
     answer: 0
     explain: 'Girar para entrar en una inrit es una maniobra especial del art. 54: quien la hace deja pasar al resto del tráfico. El intermitente avisa, pero no te da preferencia.'
-    cites: ["rvv:54"]
-
-  - id: via-y-lugares-uitrit-ceder
-    type: yesno
-    prompt: Sales de un uitrit (la salida de un garaje) hacia la calle y se acerca un coche por la calzada. ¿Debes dejarlo pasar?
-    answer: true
-    explain: Salir de un uitrit a la vía es una maniobra especial. Quien la hace deja pasar al resto del tráfico.
     cites: ["rvv:54"]
 
   - id: via-y-lugares-erf-situacion

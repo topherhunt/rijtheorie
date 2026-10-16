@@ -6,13 +6,6 @@ questions:
     explain: Los ciclistas son conductores para la ley, así que la regla de la derecha les da prioridad igual que a un auto.
     cites: ["rvv:1", "rvv:15.1"]
 
-  - id: voorrang-of-voorlaten-peaton-garaje
-    type: yesno
-    prompt: Sales de un garaje (uitrit) y viene un peatón por la acera. ¿Debes dejarlo pasar?
-    answer: true
-    explain: "Salir de una uitrit es una maniobra especial: dejas pasar a todo el tráfico, peatones incluidos (art. 54). El CBR lo subraya expresamente."
-    cites: ["rvv:54", "cbr-rijprocedure:3.6"]
-
   - id: voorrang-of-voorlaten-detenerse
     type: yesno
     prompt: Ceder el paso (voorrang verlenen) siempre significa detenerse por completo.
@@ -54,17 +47,6 @@ questions:
     answer: 0
     explain: El art. 50 obliga a todos los usuarios a dejar pasar al voorrangsvoertuig. Una ambulancia con luces azules y sirena lo es (art. 29), y eso pesa más que tu prioridad de B1.
     cites: ["rvv:50", "rvv:29"]
-
-  - id: voorrang-of-voorlaten-giro-ciclista
-    type: mc
-    prompt: Giras a la derecha en un cruce y un ciclista va recto, a tu lado por la misma calle. ¿A quién dejas pasar?
-    options:
-      - Al ciclista, porque quien gira deja pasar al tráfico que va a su lado en la misma vía
-      - A nadie, porque el ciclista sigue recto y tú giras
-      - Al ciclista solo si el cruce no tiene señales
-    answer: 0
-    explain: El art. 18.1 obliga a quien gira a dejar pasar al tráfico de frente y al que va a su lado o pegado detrás en la misma vía, haya o no señales. Que tú gires no te da preferencia.
-    cites: ["rvv:18.1"]
 
   - id: voorrang-of-voorlaten-acercarse
     type: mc

@@ -17,15 +17,6 @@ questions:
     explain: Dentro de la bebouwde kom (desde H1) los vehículos de motor tienen un máximo de 50 km/h.
     cites: ["rvv:20", "rvv:bijlage1.H1"]
 
-  - id: zona-h2-velocidad-fuera
-    type: number
-    prompt: Sales de un pueblo al pasar la señal H2 y entras en una carretera normal (ni autoweg ni autosnelweg), sin otras señales de velocidad. ¿Cuál es la velocidad máxima de tu coche?
-    sign: H2
-    answer: 80
-    unit: km/h
-    explain: Fuera de la bebouwde kom, en las vías que no son autosnelweg ni autoweg, el máximo para vehículos de motor es 80 km/h.
-    cites: ["rvv:21", "rvv:bijlage1.H2"]
-
   - id: zona-bromfiets-kom
     type: mc
     prompt: Vas en bromfiets por la rijbaan y pasas de dentro a fuera de la bebouwde kom (sin otras señales de velocidad). ¿Cambia tu velocidad máxima?

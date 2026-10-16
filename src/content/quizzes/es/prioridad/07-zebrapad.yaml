@@ -55,13 +55,6 @@ questions:
     explain: El art. 49.2 cubre a peatones y conductores de gehandicaptenvoertuigen que cruzan o están a punto de cruzar el paso. El art. 49.1 obliga con ciegos y personas que se mueven con dificultad en cualquier lugar. Quien ya cruzó y camina por la acera ya no cruza ni va a cruzar.
     cites: ["rvv:49.1", "rvv:49.2"]
 
-  - id: zebrapad-colonne
-    type: yesno
-    prompt: Un motorvehículo de una columna militar debe dejar pasar a los peatones del paso de peatones, igual que los demás.
-    answer: false
-    explain: El art. 49.3 los exceptúa de la obligación del art. 49.2.
-    cites: ["rvv:49.3"]
-
   - id: zebrapad-adelantar-detenido
     type: mc
     prompt: Un auto va despacio delante de ti justo antes de un paso de peatones y el carril contrario está libre. ¿Puedes adelantarlo?

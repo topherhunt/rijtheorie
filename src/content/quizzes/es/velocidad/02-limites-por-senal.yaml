@@ -56,14 +56,6 @@ questions:
     cites: ["rvv:66.2", "babw:9", "rvv:20"]
     sign: A1
 
-  - id: senal-onderbord
-    type: mc
-    prompt: "Conduces un auto. Una señal tiene debajo un onderbord con la palabra uitgezonderd y el símbolo de bicicleta. ¿Qué significa para ti?"
-    options: [La señal no vale para los ciclistas pero sí para ti, La señal vale solo para ciclistas, La señal no vale para nadie, La señal no vale para ti por ser un vehículo de motor]
-    answer: 0
-    explain: "Uitgezonderd con símbolos: la señal vale para todos menos para los usuarios indicados. Los excluidos son los ciclistas; un auto sigue sujeto a la señal."
-    cites: ["rvv:67.1"]
-
   - id: senal-onderbord-solo-simbolo
     type: mc
     prompt: "Conduces un auto fuera de la zona urbana, por una vía normal. Ves una señal A1 de 50 km/h y debajo un onderbord que solo muestra el símbolo de un camión. ¿Qué máximo rige para ti?"

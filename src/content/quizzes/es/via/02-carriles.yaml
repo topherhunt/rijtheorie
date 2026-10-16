@@ -14,14 +14,6 @@ questions:
     explain: Pasar del invoegstrook a la doorgaande rijbaan es una maniobra especial; quien la hace deja pasar al resto del tráfico, y el art. 55 exige la señal con el intermitente. No tienes preferencia por estar ya en la autopista, y entrar muy despacio es un error, porque debes igualar tu velocidad a la del tráfico.
     cites: ["rvv:54", "rvv:55", "cbr-rijprocedure:3.4"]
 
-  - id: carriles-invoeg-velocidad
-    type: mc
-    prompt: Circulas por un invoegstrook y el tráfico de la doorgaande rijbaan va a unos 100 km/h. ¿Qué haces con tu velocidad antes de incorporarte?
-    options: ["La ajusto en el invoegstrook hasta igualarla a la del tráfico", "Me detengo al final del carril y espero un hueco amplio", "Entro a la velocidad que traigo y dejo que los demás se adapten", "La reduzco al mínimo para no molestar al tráfico"]
-    answer: 0
-    explain: Al incorporarte, tu velocidad debe ser casi igual a la del tráfico de la doorgaande rijbaan, y el invoegstrook sirve para ajustarla. Entrar mucho más despacio, o casi parado, entorpece al tráfico; entrar sin ajustarte tampoco vale, porque además debes dejar pasar al tráfico de la doorgaande rijbaan.
-    cites: ["cbr-rijprocedure:3.4", "rvv:54"]
-
   - id: carriles-uitrijstrook-intermitente
     type: yesno
     prompt: Circulas por la doorgaande rijbaan de una autosnelweg y vas a tomar la salida (uitrijstrook). ¿Debes dar la señal con el intermitente?
