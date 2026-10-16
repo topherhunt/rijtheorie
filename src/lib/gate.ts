@@ -1,5 +1,5 @@
 // Mock-exam gate: the exam should prove mastery of the whole course, not just the CBR pass mark.
-// Unlocked by mastery (all four checks) or by acing a placement test that samples every lesson.
+// Unlocked by mastery (all four checks) or by acing a placement test that samples every chapter.
 import { shuffle } from './grade.ts';
 import type { State } from './store.ts';
 
@@ -10,7 +10,7 @@ export const GATE = {
   minAccuracy: 0.98,
   /** Leitner box reached only by correct answers at least a day apart (see Store.recordAnswer). */
   minBox: 3,
-  /** Placement test length, drawn round-robin across chapters; all must be correct. */
+  /** Placement test length, drawn by `balanced`; all must be correct. */
   placementSize: 20,
   /** Wait after a failed placement test. */
   placementCooldownHours: 24,
@@ -67,6 +67,25 @@ export function spread<T>(groups: Map<string, T[]>, n: number, rand: () => numbe
     }
   }
   return out;
+}
+
+/**
+ * A fresh random draw of n questions with a fixed quota per chapter, proportional to its lesson count
+ * (largest remainder, ties broken at random). Within a chapter, `spread` across its lessons. Shuffled, so chapters don't come in blocks.
+ */
+export function balanced<T extends { lessonId: string }>(qs: T[], n: number, rand: () => number = Math.random): T[] {
+  const chapters = [...groupBy(qs, (q) => q.lessonId.slice(0, q.lessonId.lastIndexOf('/'))).entries()]
+    .map(([id, cqs]) => ({ id, lessons: groupBy(cqs, (q) => q.lessonId) }));
+  const lessonTotal = chapters.reduce((s, c) => s + c.lessons.size, 0);
+  const exact = chapters.map((c) => (n * c.lessons.size) / lessonTotal);
+  const quota = exact.map(Math.floor);
+  const byRemainder = shuffle(chapters.map((_, i) => i), rand).sort((a, b) => (exact[b] - quota[b]) - (exact[a] - quota[a]));
+  for (const i of byRemainder.slice(0, n - quota.reduce((s, q) => s + q, 0))) quota[i]++;
+  return shuffle(chapters.flatMap((c, i) => {
+    const picked = spread(c.lessons, quota[i], rand);
+    if (picked.length < quota[i]) throw new Error(`Chapter ${c.id} has ${picked.length} exam questions, quota is ${quota[i]}`);
+    return picked;
+  }), rand);
 }
 
 export function groupBy<T>(xs: T[], key: (x: T) => string): Map<string, T[]> {

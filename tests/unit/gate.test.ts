@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { GATE, gateStatus, groupBy, spread } from '../../src/lib/gate.ts';
+import { GATE, balanced, gateStatus, groupBy, spread } from '../../src/lib/gate.ts';
 import { Store, type Backend } from '../../src/lib/store.ts';
 
 const memory = (): Backend => {
@@ -90,5 +90,34 @@ describe('spread', () => {
   it('returns n distinct items and stops when the groups run out', () => {
     expect(new Set(spread(groups, 5, () => 0.5)).size).toBe(5);
     expect(spread(groups, 99, () => 0.5)).toHaveLength(6);
+  });
+});
+
+describe('balanced', () => {
+  // Chapter a: 3 lessons with 2 questions each; chapter b: 1 lesson with 4 questions.
+  const qs = [
+    ...['a/1', 'a/2', 'a/3'].flatMap((l) => [1, 2].map((k) => ({ lessonId: l, id: `${l}-${k}` }))),
+    ...[1, 2, 3, 4].map((k) => ({ lessonId: 'b/1', id: `b/1-${k}` })),
+  ];
+  const chapterCounts = (out: typeof qs) => ({ a: out.filter((q) => q.lessonId.startsWith('a/')).length, b: out.filter((q) => q.lessonId.startsWith('b/')).length });
+
+  it('gives each chapter a quota proportional to its lesson count, whatever the random draw', () => {
+    for (const r of [0, 0.3, 0.99]) expect(chapterCounts(balanced(qs, 4, () => r))).toEqual({ a: 3, b: 1 });
+  });
+
+  it('fills a chapter quota from every lesson before repeating one', () => {
+    const a = balanced(qs, 4, () => 0.5).filter((q) => q.lessonId.startsWith('a/'));
+    expect(new Set(a.map((q) => q.lessonId)).size).toBe(3);
+  });
+
+  it('gives the leftover seats to the largest remainders', () => {
+    // n=6: exact quotas 4.5 and 1.5, tie broken at random; both chapters get 4 or 5 and 1 or 2.
+    const c = chapterCounts(balanced(qs, 6));
+    expect(c.a + c.b).toBe(6);
+    expect([[5, 1], [4, 2]]).toContainEqual([c.a, c.b]);
+  });
+
+  it('fails loudly when a chapter has fewer questions than its quota', () => {
+    expect(() => balanced(qs, 10)).toThrow(/Chapter a/);
   });
 });

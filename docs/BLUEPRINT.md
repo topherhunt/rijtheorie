@@ -61,7 +61,7 @@ docs/                    this folder
 ## Mock-exam gate (`src/lib/gate.ts`)
 - The mock exam (50 questions, 44 to pass, `src/lib/exam.ts`; scaled down while the bank is smaller) is locked until the learner proves mastery of the whole course: every question answered, latest answer to each correct, at least 98 of the last 100 answers correct (full window required), every question at box 3 or higher.
 - Alternative: a placement test of 20 exam-pool questions, all correct; 24 h cooldown after a failure.
-- Both draw round-robin (`spread`) so every group is sampled before any repeats: the exam across lessons, the placement test across chapters.
+- Both are a fresh random draw each attempt (`balanced` in `gate.ts`): each chapter gets a quota proportional to its lesson count, filled round-robin across its lessons so no lesson repeats before every lesson in the chapter has one. Quotas are computed from the pool, so they follow new lessons automatically.
 
 ## Conventions
 - Every learner-facing rule is cited; `npm run audit` enforces cites resolve, questions are well-formed, glossary/sign ids exist, images exist with alt text, and every CBR topic is covered.
