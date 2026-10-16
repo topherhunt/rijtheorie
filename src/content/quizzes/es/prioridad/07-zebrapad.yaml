@@ -23,7 +23,7 @@ questions:
 
   - id: zebrapad-semaforo-cuando
     type: mc
-    prompt: Llegas a un paso de peatones con semáforo para peatones. ¿Cuándo rige tu obligación de dejar pasar del art. 49.2?
+    prompt: Llegas a un paso de peatones con semáforo para peatones. ¿Cuándo estás obligado a dejar pasar a los peatones que cruzan por él?
     options:
       - Cuando los peatones no tienen rojo ni amarillo intermitente
       - Solo cuando el paso no tiene ningún semáforo para peatones
@@ -38,7 +38,7 @@ questions:
     options:
       - Dejo que termine de cruzar aunque la ley ya no me obligue a eso
       - Acelero, porque con amarillo intermitente el peatón debe dejarme pasar
-      - Paso sin cambiar nada, porque el art. 49.2 ya no se aplica
+      - Paso sin cambiar nada, porque ya no tengo que dejarle pasar
     answer: 0
     explain: Con amarillo intermitente el art. 49.4 quita el deber del 49.2 y es el peatón quien debe dejar pasar al tráfico (art. 74.2). Aun así, el CBR pide tener en cuenta a los peatones que cruzan, así que no aceleras contra uno que ya está en el paso.
     cites: ["rvv:49.4", "rvv:74.2", "cbr-rijprocedure:2"]

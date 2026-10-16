@@ -17,7 +17,7 @@ questions:
     type: mc
     prompt: Estás estacionado junto al borde de la calzada y vas a arrancar. A tu derecha se acerca un auto y de frente se acerca otro. ¿Qué regla se aplica?
     options:
-      - Dejas pasar a todo el tráfico, también al de frente (art. 54)
+      - Dejas pasar a todo el tráfico, también al de frente
       - "Regla de la derecha: solo cedes al que viene por tu derecha"
       - Pasa primero quien llegue antes al cruce, sea quien sea
       - Dejas pasar solo al tráfico que viene de frente

@@ -26,7 +26,7 @@ questions:
 
   - id: usuarios-y-vehiculos-motorrijtuig-cuales
     type: multi
-    prompt: Según la WVW, ¿cuáles de estos vehículos son un motorrijtuig?
+    prompt: Para la ley, ¿cuáles de estos vehículos son un motorrijtuig?
     options: [Una bromfiets, Una brommobiel, Una bicicleta con pedaleo asistido, Una bicicleta normal]
     answer: [0, 1]
     explain: La WVW llama motorrijtuig a todo vehículo con fuerza mecánica, salvo las bicicletas con pedaleo asistido. La bromfiets y la brommobiel entran; la bicicleta con pedaleo asistido queda excluida expresamente y la normal no tiene motor.

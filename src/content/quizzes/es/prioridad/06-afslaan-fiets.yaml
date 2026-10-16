@@ -39,8 +39,8 @@ questions:
     type: mc
     prompt: Giras a la derecha. Por el fiets/bromfietspad que corre pegado a la calzada llega un ciclomotor (bromfiets) que sigue recto. ¿Qué haces?
     options:
-      - "Lo dejo pasar: el art. 18 incluye ciclomotores"
-      - Paso yo, porque el art. 18 solo se aplica a los ciclistas
+      - "Lo dejo pasar, igual que a un ciclista"
+      - "Paso yo: solo debo dejar pasar a los ciclistas"
       - Paso yo, porque un ciclomotor es más rápido y debe esperarme
     answer: 0
     explain: El art. 18.1 se refiere al tráfico que va a tu lado o pegado detrás, no solo a las bicicletas. Un bromfiets que sigue recto tiene que ser dejado pasar.
@@ -80,7 +80,7 @@ questions:
 
   - id: afslaan-fiets-haaientanden
     type: mc
-    prompt: Giras a la derecha. El carril bici se aleja de la calzada y llega al cruce por separado, con dientes de tiburón en el propio carril bici. ¿Se aplica el deber del art. 18 de dejar pasar al ciclista?
+    prompt: Giras a la derecha. El carril bici se aleja de la calzada y llega al cruce por separado, con dientes de tiburón en el propio carril bici. ¿Rige aquí el deber de quien gira de dejar pasar al ciclista que sigue recto?
     options:
       - "No: el CBR lo trata como un cruce aparte, con sus propios dientes"
       - Sí, igual que con cualquier ciclista que sigue recto por el carril bici

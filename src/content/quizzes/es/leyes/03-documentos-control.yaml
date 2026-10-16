@@ -1,7 +1,7 @@
 questions:
   - id: documentos-control-ilegible
     type: yesno
-    prompt: Tu permiso de conducir sigue vigente, pero está tan desgastado que los datos ya no se pueden leer. ¿Cumples con el artículo 107 de la WVW?
+    prompt: Tu permiso de conducir sigue vigente, pero está tan desgastado que los datos ya no se pueden leer. ¿Puedes seguir conduciendo con él?
     answer: false
     explain: El artículo 107 exige que el permiso no haya perdido su validez y sea legible. Vigente pero ilegible no cumple.
     cites: ["wvw:107"]
@@ -63,7 +63,7 @@ questions:
 
   - id: documentos-control-ue-restante
     type: mc
-    prompt: Te instalas hoy en los Países Bajos con un permiso B de otro país de la UE, emitido hace 10 años. Según el artículo 108, ¿hasta cuándo puedes usarlo para la categoría B?
+    prompt: Te instalas hoy en los Países Bajos con un permiso B de otro país de la UE, emitido hace 10 años. ¿Hasta cuándo puedes usarlo para la categoría B?
     options: ["Hasta que pasen 15 años desde su emisión, es decir, 5 más", "Durante 185 días desde que te instalaste", "Durante 15 años desde que te instalaste en el país", "Hasta que pasen 5 años desde su emisión, como en C y D"]
     answer: 0
     explain: Un permiso B de la UE puede usarse hasta que hayan pasado 15 años desde su emisión; si ya pasaron 10, quedan 5. Los 185 días son para permisos de fuera de la UE, y el plazo de 5 años es el de las categorías C y D.

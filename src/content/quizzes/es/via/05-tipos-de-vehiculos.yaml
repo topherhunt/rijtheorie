@@ -1,7 +1,7 @@
 questions:
   - id: vehiculos-motorvoertuig
     type: multi
-    prompt: ¿Cuáles de estos son motorvoertuigen según el RVV?
+    prompt: ¿Cuáles de estos son motorvoertuigen según las reglas de tráfico?
     options: [Un auto, Una motocicleta, Una bromfiets, Una bicicleta con asistencia al pedaleo]
     answer: [0, 1]
     explain: Motorvoertuig excluye las bromfietsen, las bicicletas con asistencia al pedaleo, los gehandicaptenvoertuigen y los vehículos sobre rieles.

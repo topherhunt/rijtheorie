@@ -48,7 +48,7 @@ questions:
 
   - id: adaptar-niebla-bajo-maximo
     type: mc
-    prompt: "Hay niebla densa y ves la vía libre solo hasta 40 m. A tu velocidad actual (80 km/h) necesitarías unos 60 m para detenerte. El máximo es 100 km/h. ¿Qué exige el art. 19?"
+    prompt: "Hay niebla densa y ves la vía libre solo hasta 40 m. A tu velocidad actual (80 km/h) necesitarías unos 60 m para detenerte. El máximo es 100 km/h. ¿Qué exige la ley?"
     options:
       - "Nada: voy por debajo del máximo de 100"
       - "Bajar hasta poder detenerme dentro de lo que veo"
@@ -60,7 +60,7 @@ questions:
 
   - id: adaptar-mojado-art19
     type: mc
-    prompt: "Ves 100 m de vía libre y, con calzada seca, te detienes en 90 m a tu velocidad. Empieza a llover y la calzada se moja. ¿Qué haces para seguir cumpliendo el art. 19?"
+    prompt: "Ves 100 m de vía libre y, con calzada seca, te detienes en 90 m a tu velocidad. Empieza a llover y la calzada se moja. ¿Qué haces para seguir cumpliendo la ley?"
     options: ["Mantengo la velocidad: con 10 m de margen me sobra", "Reduzco la velocidad: mojada, la calzada alarga el frenado", "Aumento la velocidad para salir antes de la lluvia", "Solo enciendo los limpiaparabrisas y las luces de cruce"]
     answer: 1
     explain: "La calzada mojada alarga la distancia de frenado; para poder parar dentro de lo que ves libre hay que ir más despacio."

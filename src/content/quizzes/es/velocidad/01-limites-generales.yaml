@@ -44,7 +44,7 @@ questions:
 
   - id: limites-exceso-grave
     type: yesno
-    prompt: "Decides ir a propósito a 140 km/h en un tramo de 100 con tráfico, y tu forma de conducir pone a otro en peligro de lesión grave. ¿Puede contar como una de las conductas graves de la Wegenverkeerswet (art. 5a)?"
+    prompt: "Decides ir a propósito a 140 km/h en un tramo de 100 con tráfico, y tu forma de conducir pone a otro en peligro de lesión grave. Además de la multa por velocidad, ¿puede ser un delito de conducción muy peligrosa?"
     answer: true
     explain: "Sí. Exceder el máximo a propósito, de forma que pone a otro en peligro de muerte o lesión grave, es una de las conductas del art. 5a. No es una simple infracción menor solo porque el límite sea 'general'."
     cites: ["wvw:5a"]

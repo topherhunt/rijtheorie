@@ -49,7 +49,7 @@ questions:
 
   - id: seguimiento-grave
     type: yesno
-    prompt: "Un conductor va pegado a propósito a 120 km/h, a pocos metros del auto de delante, y pone a ese conductor en peligro de lesión grave. ¿Puede contar como una de las conductas graves del art. 5a de la Wegenverkeerswet?"
+    prompt: "Un conductor va pegado a propósito a 120 km/h, a pocos metros del auto de delante, y pone a ese conductor en peligro de lesión grave. Además de la multa, ¿puede ser un delito de conducción muy peligrosa?"
     answer: true
     explain: "Sí: ir muy cerca detrás de otro vehículo (zeer dicht achter een ander voertuig rijden) figura entre las conductas del art. 5a cuando se hace a propósito y pone a otro en peligro de muerte o lesión grave."
     cites: ["wvw:5a"]

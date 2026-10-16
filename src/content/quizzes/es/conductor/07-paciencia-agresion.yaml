@@ -79,7 +79,7 @@ questions:
 
   - id: paciencia-ruido
     type: yesno
-    prompt: Estás parado frente a tu casa a las 10 de la noche y aceleras varias veces el motor en vacío sin ningún motivo. ¿Infringes el artículo 57 del RVV?
+    prompt: Estás parado frente a tu casa a las 10 de la noche y aceleras varias veces el motor en vacío sin ningún motivo. ¿Es una infracción?
     answer: true
     explain: El artículo 57 prohíbe a los conductores de vehículos de motor hacer ruido innecesario con su vehículo. Acelerar en vacío sin motivo lo es.
     cites: ["rvv:57"]

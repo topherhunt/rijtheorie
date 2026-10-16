@@ -63,7 +63,7 @@ questions:
     type: mc
     prompt: Estás sobre una rotonda con D1 y un coche circula despacio delante de ti, con espacio libre a su derecha. ¿Puedes adelantarlo por la derecha?
     options:
-      - Sí, el art. 48 lo permite sobre una rotonda
+      - Sí, sobre una rotonda está permitido
       - No, aquí también se adelanta por la izquierda
     answer: 0
     explain: La regla general es adelantar por la izquierda (art. 11.1), pero el art. 48 permite adelantar por la derecha justo antes de una rotonda o sobre ella.

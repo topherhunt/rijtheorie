@@ -30,14 +30,14 @@ questions:
 
   - id: accidente-curiosear
     type: yesno
-    prompt: Pasas junto a un accidente en el otro sentido y frenas casi hasta parar, en pleno carril, para mirar. Nadie choca contigo. ¿Has infringido el artículo 5 de la WVW?
+    prompt: Pasas junto a un accidente en el otro sentido y frenas casi hasta parar, en pleno carril, para mirar. Nadie choca contigo. ¿Has cometido una infracción?
     answer: true
     explain: El artículo 5 prohíbe comportarse de modo que se cause o pueda causarse peligro, o que el tráfico sea o pueda ser estorbado. Frenar en pleno carril para mirar puede causar ambas cosas, aunque al final no pase nada.
     cites: ["wvw:5"]
 
   - id: accidente-carril-herido
     type: yesno
-    prompt: Cambias de carril sin mirar, por tu culpa chocas con una motocicleta y su conductor sufre lesiones graves. Aparte de lo civil, ¿infringes el artículo 6 de la WVW?
+    prompt: Cambias de carril sin mirar, por tu culpa chocas con una motocicleta y su conductor sufre lesiones graves. Aparte de la responsabilidad civil, ¿cometes un delito (misdrijf)?
     answer: true
     explain: El artículo 6 prohíbe comportarse de modo que, por tu culpa, ocurra un accidente en el que otra persona sufra lesiones graves.
     cites: ["wvw:6"]

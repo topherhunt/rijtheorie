@@ -70,7 +70,7 @@ questions:
     sign: B5
     options:
       - Adapto la velocidad y estoy listo para frenar
-      - Mantengo la velocidad: la prioridad es mía
+      - "Mantengo la velocidad: la prioridad es mía"
       - Acelero un poco para pasar antes de que llegue
     answer: 0
     explain: Tener prioridad no evita el choque. El CBR pide adaptar la velocidad cuando el tráfico de la vía lateral no da la impresión de ceder el paso, y frenar a tiempo si el otro no lo hace.
@@ -91,9 +91,9 @@ questions:
     type: mc
     prompt: Un panel de afbuigende voorrang indica que la vía con prioridad gira a la derecha. En el cruce no sigues esa vía sino que continúas recto. Según el CBR, ¿cómo cuenta tu maniobra?
     options:
-      - Como girar (afslaan), según el art. 18
+      - Como girar (afslaan), con los deberes de quien gira
       - Como ir recto, y sigues con prioridad en el cruce
-      - Como una maniobra especial, y dejas pasar a todos (art. 54)
+      - Como una maniobra especial, y dejas pasar a todos
     answer: 0
     explain: Si sigues el trazado que indica el panel cuenta como recto; si te apartas de él, el CBR lo trata como afslaan, y entonces dejas pasar al tráfico de frente y al de tu lado (art. 18).
     cites: ["cbr-rijprocedure:3.3", "rvv:18.1"]

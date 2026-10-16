@@ -63,7 +63,7 @@ questions:
 
   - id: schijf-kaart-schijf
     type: yesno
-    prompt: Llevas a tu madre, titular de la tarjeta válida y visible, y estacionas en un lugar con línea azul. ¿Se aplica la regla del disco del artículo 25 a tu auto?
+    prompt: Llevas a tu madre, titular de la tarjeta válida y visible, y estacionas en un lugar con línea azul. ¿Tienes que poner el disco de estacionamiento?
     answer: false
     explain: El artículo 25 no se aplica a quien tiene la tarjeta, si el estacionamiento se relaciona directamente con el transporte de la persona con discapacidad. El disco con la hora de inicio solo hace falta en las excepciones de hasta tres horas, como bajo una señal E1 (artículo 85, lid 4).
     cites: ["rvv:85.1", "rvv:85.3", "rvv:85.4"]

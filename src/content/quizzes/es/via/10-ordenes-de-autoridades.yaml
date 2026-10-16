@@ -24,7 +24,7 @@ questions:
 
   - id: ordenes-interes
     type: multi
-    prompt: Según la Wegenverkeerswet, ¿en interés de qué pueden darse las órdenes de tráfico?
+    prompt: ¿En interés de qué pueden las autoridades dar órdenes de tráfico?
     options: [La seguridad en la vía, El mantenimiento y la utilidad de la vía, La libertad del tráfico, La comodidad de los demás conductores del barrio]
     answer: [0, 1, 2]
     explain: El art. 12 WVW permite esas órdenes solo en interés de la seguridad, del mantenimiento y utilidad de la vía, o de la libertad del tráfico (y de estudios de tráfico autorizados por el ministro). La comodidad de otros conductores no está en la lista.

@@ -29,7 +29,7 @@ questions:
   - id: senal-a5-fin
     type: mc
     prompt: "Pasas una señal A5 justo después de una curva donde había una A4 de 40 km/h. ¿Qué cambia para ti?"
-    options: ["Termina solo la recomendación; el máximo legal y el art. 19 siguen", "Termina también el máximo legal y puedo ir a la velocidad que quiera", "Debo acelerar hasta el máximo legal en cuanto vea la señal", "Debo seguir a 40 km/h hasta el siguiente cruce o desvío"]
+    options: ["Termina solo la recomendación; el máximo legal sigue igual", "Termina también el máximo legal y puedo ir a la velocidad que quiera", "Debo acelerar hasta el máximo legal en cuanto vea la señal", "Debo seguir a 40 km/h hasta el siguiente cruce o desvío"]
     answer: 0
     explain: "A5 es el final de la adviessnelheid. No termina ningún máximo ni la regla del art. 19, y tampoco te obliga a acelerar."
     cites: ["rvv:bijlage1.A5", "rvv:19"]

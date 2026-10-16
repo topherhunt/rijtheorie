@@ -43,7 +43,7 @@ questions:
 
   - id: ob-bestemmingsverkeer
     type: mc
-    prompt: Una calle cerrada tiene una casa al fondo que solo se alcanza por esa calle. Según la definición del RVV, ¿cuál de estos conductores es bestemmingsverkeer?
+    prompt: Una calle cerrada tiene una casa al fondo que solo se alcanza por esa calle. Según la definición legal, ¿cuál de estos conductores es bestemmingsverkeer?
     options: [El que visita a alguien en esa casa, "El que usa la calle para evitar un atasco", "El que vive en el barrio pero va a otra calle", "El que ya ha pasado antes por esa calle"]
     answer: 0
     explain: Bestemmingsverkeer es quien tiene como destino una parcela situada en la calle cerrada (o cerca) y a la que solo se llega por ella. Lo decide el destino, no que pases por allí o vivas cerca.

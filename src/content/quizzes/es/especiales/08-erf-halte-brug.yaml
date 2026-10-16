@@ -37,7 +37,7 @@ questions:
 
   - id: erf-parada-fuera
     type: yesno
-    prompt: Según el artículo 56, ¿tiene que dejar salir de la parada a un bus que pone el intermitente fuera de la bebouwde kom?
+    prompt: Fuera de la bebouwde kom, un autobús de línea pone el intermitente para salir de su parada. ¿Estás obligado a dejarlo salir?
     answer: false
     explain: El artículo 56 solo vale dentro de la bebouwde kom (zona urbana).
     cites: ["rvv:56"]

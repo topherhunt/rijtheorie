@@ -17,7 +17,7 @@ questions:
 
   - id: voorsorteren-obligatorio
     type: yesno
-    prompt: Según el RVV, ¿estás obligado a preseleccionar antes de cada giro?
+    prompt: ¿Te obliga la ley a preseleccionar antes de cada giro?
     answer: false
     explain: El RVV dice que quien gira "mag" (puede) preseleccionar. Pero la Rijprocedure B lo considera lo mejor al girar, y lo exige cuando no hacerlo crea una situación insegura o estorba la fluidez.
     cites: ["rvv:17.1", "cbr-rijprocedure:3.3"]

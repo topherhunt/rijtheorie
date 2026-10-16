@@ -46,14 +46,14 @@ questions:
 
   - id: detenido-dos-ruedas
     type: yesno
-    prompt: De noche una motocicleta está parada sobre la calzada fuera de la zona urbana. ¿Le exige el artículo 38 llevar stadslicht y luz trasera?
+    prompt: De noche una motocicleta está parada sobre la calzada fuera de la zona urbana. ¿Está obligada a llevar encendidas stadslicht y luz trasera?
     answer: false
     explain: El artículo 38 habla de vehículos de motor de más de dos ruedas, y la motocicleta tiene dos.
     cites: ["rvv:38"]
 
   - id: detenido-dia-despejado
     type: yesno
-    prompt: Es de día, hace sol y se ve perfectamente. Paras tu auto en una parkeerhaven junto a una autosnelweg. ¿El artículo 38 te exige llevar stadslicht y luz trasera?
+    prompt: Es de día, hace sol y se ve perfectamente. Paras tu auto en una parkeerhaven junto a una autosnelweg. ¿Estás obligado a llevar encendidas stadslicht y luz trasera?
     answer: false
     explain: El artículo 38 las exige de noche, y de día solo si la visibilidad está seriamente reducida.
     cites: ["rvv:38"]

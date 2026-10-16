@@ -1,7 +1,7 @@
 questions:
   - id: voorrangsvoertuigen-quien
     type: multi
-    prompt: ¿Cuáles de estos servicios llevan luz azul y bocina de dos tonos según el art. 29?
+    prompt: ¿Cuáles de estos servicios pueden usar luz azul y bocina de dos tonos?
     options:
       - Policía
       - Bomberos
@@ -16,7 +16,7 @@ questions:
     prompt: Circulas por una calle recta, sin cruces, y una ambulancia con luz azul y sirena se acerca por detrás. ¿Se aplica el deber de dejarla pasar?
     options:
       - Sí, en cualquier punto de la vía, no solo en los cruces
-      - No, el art. 50 solo regula quién pasa primero en un cruce
+      - No, ese deber solo rige al llegar a un cruce
     answer: 0
     explain: El art. 50 dice que los usuarios de la vía deben dejar pasar a un vehículo prioritario, sin limitarlo a los cruces. Pensar que solo vale en cruces es confundirlo con las reglas de prioridad.
     cites: ["rvv:50"]
@@ -70,13 +70,13 @@ questions:
     type: mc
     prompt: Estás parado ante un semáforo en rojo. Una ambulancia con luz azul y sirena se acerca por detrás y el cruce está libre. ¿Qué haces?
     options:
-      - Me quedo parado ante el rojo y no cruzo para abrirle paso
+      - Me quedo ante el rojo y, si hay sitio, me aparto a un lado sin pasar la línea
+      - Me quedo quieto en mi sitio, aunque haya hueco a un lado, hasta que se ponga verde
       - Cruzo el semáforo en rojo con cuidado para abrirle camino
-      - Avanzo hasta el centro del cruce para dejar libre el carril de la ambulancia
-      - Doy marcha atrás hasta dejarle espacio suficiente para pasar
+      - Avanzo unos metros más allá de la línea de parada para dejarle hueco
     answer: 0
-    explain: El art. 50 te obliga a dejarla pasar, pero no describe cómo hacerlo; el art. 91 da libertad al conductor de la ambulancia, no a ti. El semáforo en rojo sigue significando stop para ti (art. 68.1), así que cruzar o avanzar en rojo no es la respuesta por defecto.
-    cites: ["rvv:50", "rvv:91", "rvv:68.1"]
+    explain: Debes dejarla pasar (art. 50), así que si puedes apartarte a un lado, lo haces. Pero la libertad de saltarse el rojo es del conductor de la ambulancia (art. 91), no tuya; para ti el rojo sigue significando stop antes de la línea de parada (arts. 68.1 y 79).
+    cites: ["rvv:50", "rvv:91", "rvv:68.1", "rvv:79"]
 
   - id: voorrangsvoertuigen-verde
     type: mc

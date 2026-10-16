@@ -100,12 +100,15 @@ for (const file of walk(LESSONS, '.mdx')) {
 // --- Quizzes ---
 const questionIds = new Map<string, string>();
 const allQuestions: Question[] = [];
+/** Questions test the rule, not where it sits in the law; article numbers belong in `explain`. */
+const NAMES_LAW = /\b[Aa]rts?\.\s*\d|\b[Aa]rt[íi]culos?\s+\d|\b(?:RVV|WVW|Wegenverkeerswet)\b/; // case-sensitive: the course's own "rvv:15.1" cite format is fine
 function checkQuestion(rel: string, q: Question) {
   const where = `${rel} [${q.id}]`;
   if (questionIds.has(q.id)) err(where, `duplicate question id (also in ${questionIds.get(q.id)})`);
   questionIds.set(q.id, rel);
   for (const c of q.cites) checkCite(where, c);
   for (const field of [q.prompt, q.explain, ...('options' in q ? q.options : [])]) if (EM_DASH.test(field)) err(where, 'contains an em dash');
+  for (const field of [q.prompt, ...('options' in q ? q.options : [])]) if (NAMES_LAW.test(field)) err(where, 'prompt or option names a law article or act; test the rule, and cite it in explain');
   if (q.type === 'mc' && q.answer >= q.options.length) err(where, `answer ${q.answer} out of range (${q.options.length} options)`);
   else if (q.type === 'mc' && answerStandsOut(q)) warn(where, 'the answer is much longer than every other option; give the distractors the same detail');
   if (q.type === 'multi') {

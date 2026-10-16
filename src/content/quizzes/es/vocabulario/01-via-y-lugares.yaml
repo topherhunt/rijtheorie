@@ -13,7 +13,7 @@ questions:
     prompt: ¿Cuál es el carril para salir de una autopista?
     options: ["invoegstrook", "uitvoegstrook", "doorgaande rijbaan", "spitsstrook"]
     answer: 1
-    explain: Uitvoegstrook es el carril de salida/desaceleración.
+    explain: Uitvoegstrook es el carril de salida/desaceleración. La ley (RVV) lo llama uitrijstrook.
     cites: ["cbr-examenplan:4"]
     exam: false
 

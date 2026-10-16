@@ -22,7 +22,7 @@ questions:
 
   - id: partes-via-kruispunt
     type: multi
-    prompt: ¿Cuáles de estas situaciones son un "kruispunt" para el RVV?
+    prompt: ¿Cuáles de estas situaciones son un "kruispunt" según la ley?
     options: [Dos vías que se cruzan, Una vía que se divide en dos, Una vía recta que solo cambia de nombre, Dos vías paralelas que no se unen]
     answer: [0, 1]
     explain: Un kruispunt es una kruising (cruce) o una splitsing (bifurcación) de vías. Una vía que solo cambia de nombre o dos vías paralelas no se cruzan ni se dividen.

@@ -1,14 +1,14 @@
 questions:
   - id: parkeerverbod-inrit-prohibido
     type: yesno
-    prompt: "Solo queda un hueco libre, justo delante de la salida de un garaje, y vas a dejar el auto allí una hora. ¿Es una infracción del artículo 24?"
+    prompt: "Solo queda un hueco libre, justo delante de la salida de un garaje, y vas a dejar el auto allí una hora. ¿Es una infracción?"
     answer: true
     explain: "Estacionar delante de una inrit o una uitrit está prohibido, aunque sea el único sitio libre. El motivo es de sentido común: bloquearías la salida de quien vive o trabaja allí."
     cites: ["rvv:24.1"]
 
   - id: parkeerverbod-voorrangsweg
     type: mc
-    prompt: Conduces fuera de zona urbana por una voorrangsweg y quieres dejar el auto diez minutos en la calzada para comer algo. ¿Qué dice el artículo 24?
+    prompt: Conduces fuera de zona urbana por una voorrangsweg y quieres dejar el auto diez minutos en la calzada para comer algo. ¿Puedes hacerlo?
     options: ["Está prohibido estacionar en la calzada de una voorrangsweg", "Está permitido si pones las luces de emergencia al parar", "Está permitido porque son solo diez minutos y no molestas", "Está permitido de día, y prohibido solo de noche o con niebla"]
     answer: 0
     explain: Fuera de la zona urbana no puedes estacionar en la calzada de una voorrangsweg. Las luces de emergencia, los diez minutos o la hora del día no cambian la regla.
@@ -30,7 +30,7 @@ questions:
 
   - id: parkeerverbod-cruce-5m-prohibido
     type: yesno
-    prompt: "Quieres dejar el auto dos horas a 3 m antes de un cruce, lejos de cualquier paso de peatones. ¿Lo prohíbe el artículo 24?"
+    prompt: "Quieres dejar el auto dos horas a 3 m antes de un cruce, lejos de cualquier paso de peatones. ¿Es una infracción?"
     answer: true
     explain: Parkeren a menos de 5 m de un kruispunt está prohibido. Solo podrías detenerte un momento (por ejemplo, para que alguien baje). Dentro del cruce, ni eso.
     cites: ["rvv:24.1", "rvv:23.1"]
@@ -88,7 +88,7 @@ questions:
 
   - id: parkeerverbod-cruce-bajar
     type: yesno
-    prompt: A 3 m de un cruce (fuera del cruce mismo y sin paso de peatones cerca) te detienes lo justo para que un pasajero baje de inmediato. ¿Lo prohíbe el artículo 24 (parkeren)?
+    prompt: A 3 m de un cruce (fuera del cruce mismo y sin paso de peatones cerca) te detienes lo justo para que un pasajero baje de inmediato. ¿Infringes la ley?
     answer: false
     explain: Dejar bajar a un pasajero de inmediato no es parkeren, así que el art. 24 no se aplica. El art. 23 prohíbe detenerse en el cruce mismo o a menos de 5 m de un paso de peatones, no a 3 m de un cruce.
     cites: ["rvv:24.1", "rvv:1", "rvv:23.1"]

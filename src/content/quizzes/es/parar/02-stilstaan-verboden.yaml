@@ -1,14 +1,14 @@
 questions:
   - id: stilstaanverbod-kruispunt-prohibido
     type: yesno
-    prompt: "Te has equivocado de calle y paras en medio de un cruce para mirar el mapa del móvil. ¿Es una infracción del artículo 23?"
+    prompt: "Te has equivocado de calle y paras en medio de un cruce para mirar el mapa del móvil. ¿Es una infracción?"
     answer: true
     explain: Detenerse (stilstaan) en un kruispunt o en un overweg está prohibido, aunque sea un instante. El artículo 23 no da ninguna excepción para estos lugares.
     cites: ["rvv:23.1"]
 
   - id: stilstaanverbod-fietsstrook
     type: mc
-    prompt: Hay una fietsstrook a tu derecha. Paras 30 segundos en la calzada, justo a su lado, sin tocarla. ¿Qué dice el artículo 23?
+    prompt: Hay una fietsstrook a tu derecha. Paras 30 segundos en la calzada, justo a su lado, sin tocarla. ¿Está permitido?
     options: ["Prohibido, también en la calzada junto a la fietsstrook", "Está permitido, porque no estás encima de la fietsstrook", "Está permitido si pones las luces de emergencia encendidas", "Está prohibido solo si en ese momento pasa un ciclista"]
     answer: 0
     explain: La ley prohíbe detenerse en la fietsstrook y también en la calzada junto a ella. Estar al lado, las luces de emergencia o la presencia de ciclistas no cambian la regla.
@@ -16,14 +16,14 @@ questions:
 
   - id: stilstaanverbod-busstrook-prohibido
     type: yesno
-    prompt: "En la calzada junto a un busstrook paras 10 segundos para que tu hijo baje del auto. ¿Infringes el artículo 23?"
+    prompt: "En la calzada junto a un busstrook paras 10 segundos para que tu hijo baje del auto. ¿Infringes la ley?"
     answer: true
     explain: Detenerse en la calzada junto a un busstrook está prohibido. La excepción de dejar bajar pasajeros de inmediato existe solo para la parada de bus.
     cites: ["rvv:23.1", "rvv:23.2"]
 
   - id: stilstaanverbod-subir-donde
     type: mc
-    prompt: Necesitas dejar bajar a un pasajero de inmediato y arrancar. ¿En cuál de estos sitios no infringes el artículo 23?
+    prompt: Necesitas dejar bajar a un pasajero de inmediato y arrancar. ¿En cuál de estos sitios puedes hacerlo sin infringir la ley?
     options: ["En la calzada junto a una línea amarilla continua", "Sobre un paso de peatones, si no viene ningún peatón", "Dentro de un cruce, siempre que no molestes a nadie", "En una parada de bus, dentro de la zona prohibida"]
     answer: 3
     explain: La excepción del ascenso o descenso inmediato existe solo para la prohibición junto a la parada de bus. Junto a una amarilla continua, sobre un paso de peatones y dentro de un cruce no hay excepción, aunque no molestes.
@@ -31,7 +31,7 @@ questions:
 
   - id: stilstaanverbod-amarilla-pasajero-prohibido
     type: yesno
-    prompt: "Junto a una línea amarilla continua dejas bajar a un pasajero de inmediato y arrancas. ¿Lo prohíbe el artículo 23?"
+    prompt: "Junto a una línea amarilla continua dejas bajar a un pasajero de inmediato y arrancas. ¿Es una infracción?"
     answer: true
     explain: Junto a una amarilla continua no puedes ni detenerte. La excepción del ascenso o descenso inmediato aplica solo a la parada de bus, no a la línea amarilla continua.
     cites: ["rvv:23.1", "rvv:23.2"]
@@ -54,7 +54,7 @@ questions:
 
   - id: stilstaanverbod-lista-multi
     type: multi
-    prompt: Necesitas parar un momento. ¿En cuáles de estos lugares el artículo 23 te prohíbe detenerte (stilstaan)?
+    prompt: Necesitas parar un momento. ¿En cuáles de estos lugares está prohibido detenerte (stilstaan)?
     options:
       - En un overweg
       - Junto a una línea amarilla continua
@@ -66,14 +66,14 @@ questions:
 
   - id: stilstaanverbod-oversteek-4m
     type: yesno
-    prompt: Te detienes unos segundos a 4 m de un paso de peatones, en la calzada, para mirar el mapa. ¿Lo prohíbe el artículo 23?
+    prompt: Te detienes unos segundos a 4 m de un paso de peatones, en la calzada, para mirar el mapa. ¿Te lo prohíbe la ley?
     answer: true
     explain: No puedes detenerte en un paso para cruzar ni a menos de 5 m de él, aunque sea por poco tiempo.
     cites: ["rvv:23.1"]
 
   - id: stilstaanverbod-bushalte-esperar-prohibido
     type: yesno
-    prompt: "Una parada de bus no tiene marca de bloques. Te detienes a 10 m del cartel de la parada para esperar a una amiga que viene corriendo. ¿Infringes el artículo 23?"
+    prompt: "Una parada de bus no tiene marca de bloques. Te detienes a 10 m del cartel de la parada para esperar a una amiga que viene corriendo. ¿Infringes la ley?"
     answer: true
     explain: A menos de 12 m del cartel, sin marca, está prohibido detenerse. La excepción es solo para dejar subir o bajar pasajeros de inmediato, no para esperar.
     cites: ["rvv:23.1", "rvv:23.2"]

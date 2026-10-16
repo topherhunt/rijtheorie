@@ -23,7 +23,7 @@ questions:
 
   - id: sanciones-123b-nivel-bajo
     type: yesno
-    prompt: Hace 3 años te condenaron (sentencia firme) por soplar 400 µg/l. Ahora te condenan solo por soplar 300 µg/l, sin otra circunstancia. ¿Pierde tu permiso la validez para todas las categorías por el artículo 123b?
+    prompt: Hace 3 años te condenaron (sentencia firme) por soplar 400 µg/l. Ahora te condenan solo por soplar 300 µg/l, sin otra circunstancia. ¿Pierde tu permiso automáticamente la validez para todas las categorías por esta reincidencia?
     answer: false
     explain: El artículo 123b exige que la condena nueva sea de las graves (más de 570 µg/l, art. 8 lid 1 o 5, o negarte a lo ordenado por el art. 163). Con 300 µg/l no se cumple, aunque tengas un antecedente reciente.
     cites: ["wvw:123b"]
@@ -74,7 +74,7 @@ questions:
 
   - id: sanciones-rijontzegging-peligro-menos
     type: mc
-    prompt: Sin antecedentes, un juez te condena por poner en peligro el tráfico (art. 5), por ejemplo por haber frenado a propósito delante de otro conductor. ¿Hasta cuántos años de rijontzegging puede imponerte?
+    prompt: Sin antecedentes, un juez te condena por poner en peligro el tráfico, por ejemplo por haber frenado a propósito delante de otro conductor. ¿Hasta cuántos años de rijontzegging puede imponerte?
     options: ["Hasta 2 años", "Hasta 5 años", "Hasta 10 años", "Hasta 1 año"]
     answer: 0
     explain: El artículo 5 está entre las infracciones del segundo apartado (hasta 2 años). Los 5 años son para las graves, como conducir bajo influencia o huir de un accidente.
@@ -89,7 +89,7 @@ questions:
 
   - id: sanciones-accidente-20h
     type: yesno
-    prompt: Te fuiste de un accidente con daños sin dar tu identidad. A las 20 horas te presentas voluntariamente en la policía. ¿Te protege el artículo 184 contra la persecución por haberte ido?
+    prompt: Te fuiste de un accidente con daños sin dar tu identidad. A las 20 horas te presentas voluntariamente en la policía. ¿Te libra eso de ser perseguido por haberte ido?
     answer: false
     explain: El artículo 184 solo cubre el aviso voluntario dentro de las 12 horas siguientes al accidente. A las 20 horas ya no.
     cites: ["wvw:184"]

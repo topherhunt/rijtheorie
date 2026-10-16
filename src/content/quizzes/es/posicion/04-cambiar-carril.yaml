@@ -9,7 +9,7 @@ questions:
 
   - id: cambiar-carril-incorporacion
     type: multi
-    prompt: ¿Cuáles de estas maniobras te obligan a dejar pasar al resto del tráfico según el art. 54?
+    prompt: ¿Cuáles de estas maniobras te obligan a dejar pasar al resto del tráfico?
     options: [Cambiar de carril, Incorporarte a la calzada principal desde un carril de incorporación, Seguir recto en tu carril, Entrar al carril de salida desde la calzada principal]
     answer: [0, 1, 3]
     explain: El art. 54 cita el cambio de carril, la incorporación a la calzada principal y la entrada al carril de salida. Seguir recto en tu carril no es una maniobra especial.

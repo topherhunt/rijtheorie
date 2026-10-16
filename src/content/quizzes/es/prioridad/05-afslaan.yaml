@@ -84,7 +84,7 @@ questions:
 
   - id: afslaan-quien-dejas
     type: multi
-    prompt: Giras. ¿A quién debes dejar pasar según el art. 18?
+    prompt: Vas a girar en un cruce. ¿A quién debes dejar pasar por el hecho de girar?
     options:
       - Al tráfico que viene de frente por la misma vía
       - Al tráfico que va a tu lado en la misma vía

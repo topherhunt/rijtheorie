@@ -1,21 +1,21 @@
 questions:
   - id: general-peaton-posible
     type: yesno
-    prompt: Un peatón se queda parado en medio de la calzada sin ningún motivo, y los coches tendrían que esquivarlo. Nadie ha chocado todavía. ¿Le aplica la prohibición del art. 5 WVW?
+    prompt: Un peatón se queda parado en medio de la calzada sin ningún motivo, y los coches tendrían que esquivarlo. Nadie ha chocado todavía. ¿Comete una infracción?
     answer: true
     explain: El art. 5 vale para todos, no solo para los conductores, y prohíbe comportarse de manera que se cause o pueda causarse peligro. No hace falta que ya haya pasado algo.
     cites: ["wvw:5"]
 
   - id: general-obstaculizar-parar
     type: yesno
-    prompt: Detienes tu coche sin motivo en medio de una calle estrecha y los vehículos de detrás no pueden pasar. Nadie corre peligro. ¿Cubre esto el art. 5 WVW?
+    prompt: Detienes tu coche sin motivo en medio de una calle estrecha y los vehículos de detrás no pueden pasar. Nadie corre peligro. ¿Es una infracción?
     answer: true
     explain: El art. 5 prohíbe no solo causar peligro, sino también comportarse de manera que el tráfico sea o pueda ser obstaculizado. Que nadie corra peligro no basta para quedar fuera.
     cites: ["wvw:5"]
 
   - id: general-culpa
     type: multi
-    prompt: ¿Qué consecuencias de un accidente culpable cubre el art. 6 WVW?
+    prompt: Causas un accidente por tu culpa. ¿Con cuáles de estas consecuencias cometes un delito (misdrijf) por haberlo causado?
     options: [Muerte de otro, Lesiones graves de otro, Lesiones de otro que causan enfermedad temporal o impiden sus actividades normales, Daños solo materiales en el vehículo de otro]
     answer: [0, 1, 2]
     explain: El art. 6 se refiere a la muerte de otro, a lesiones graves y a lesiones que provocan enfermedad temporal o impiden las actividades normales. Los daños solo materiales no están en la lista.
@@ -23,15 +23,15 @@ questions:
 
   - id: general-art6-solo-chapa
     type: yesno
-    prompt: Por tu culpa chocas contra un coche aparcado y solo hay daños materiales, sin heridos. ¿Se aplica el art. 6 WVW?
+    prompt: Por tu culpa chocas contra un coche aparcado y solo hay daños materiales, sin heridos. ¿Es un delito (misdrijf) haber causado ese accidente?
     answer: false
     explain: 'El art. 6 exige que alguien muera o sufra lesiones. Pero esto no te deja libre: el art. 7 sigue prohibiendo irte del lugar si causaste daños a otro, salvo que hayas dado oportunidad adecuada de establecer tu identidad y la de tu vehículo.'
     cites: ["wvw:6", "wvw:7.1", "wvw:7.2"]
 
   - id: general-art6-y-art7
     type: multi
-    prompt: Por tu culpa chocas contra un motociclista, que queda herido de gravedad e inconsciente en el suelo. Dejas una nota con tu nombre en su moto y te vas. ¿Qué artículos de la WVW infringes?
-    options: ["El art. 6, por causar un accidente con lesiones graves", "El art. 7, por irte dejando a un herido en desamparo", "Ninguno, porque dejaste tu identidad en la nota", "El art. 10, por competir en la vía"]
+    prompt: Por tu culpa chocas contra un motociclista, que queda herido de gravedad e inconsciente en el suelo. Dejas una nota con tu nombre en su moto y te vas. ¿Qué has hecho que la ley castiga?
+    options: ["Causar por tu culpa un accidente con un herido grave", "Irte dejando a un herido grave sin ayuda", "Nada, porque dejaste tu identidad en la nota", "Participar en una carrera en la vía pública"]
     answer: [0, 1]
     explain: El art. 6 cubre el accidente culpable con lesiones graves, y el art. 7 prohíbe irte cuando dejas a un herido desamparado; la excepción de dar tus datos no cubre ese caso. El art. 10 trata de competiciones en la vía, que aquí no hay.
     cites: ["wvw:6", "wvw:7.1", "wvw:7.2"]
