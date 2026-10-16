@@ -3,7 +3,7 @@ questions:
     type: mc
     prompt: Entras a un erf con tu auto. La calle está vacía y recta. ¿A qué velocidad máxima puedes circular?
     sign: G5
-    options: [15 km/h, 20 km/h, 30 km/h, 50 km/h]
+    options: ["15 km/h, aunque la calle esté vacía", "20 km/h si la calle está vacía", "30 km/h, como en una zona 30", "50 km/h, como en el pueblo"]
     answer: 0
     explain: Dentro de un erf no puedes ir a más de 15 km/h, aunque la calle esté vacía y recta.
     cites: ["rvv:45", "rvv:bijlage1.G5"]
@@ -18,11 +18,7 @@ questions:
   - id: erf-estacionar-hueco
     type: mc
     prompt: Quieres dejar tu auto dentro de un erf. Junto a una fachada hay un espacio libre sin ninguna marca ni señal de estacionamiento. ¿Puedes estacionar ahí?
-    options:
-      - No, solo puedes estacionar en los lugares señalados o marcados como estacionamiento
-      - Sí, siempre que no estorbes a los peatones
-      - Sí, si dejas el auto bien pegado a la fachada
-      - Sí, si es solo por unos minutos
+    options: ["No, solo en lugares señalados o marcados para estacionar", "Sí, siempre que no estorbes a los peatones ni a otros vehículos", "Sí, si dejas el auto bien pegado a la fachada y con freno", "Sí, si es solo por unos minutos y nadie espera para pasar"]
     answer: 0
     explain: En un erf los vehículos de motor solo pueden estacionar en los lugares señalados o marcados como estacionamiento. Que el espacio esté libre o que no estorbe no basta.
     cites: ["rvv:46"]

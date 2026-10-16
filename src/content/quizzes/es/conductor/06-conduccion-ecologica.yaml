@@ -32,7 +32,7 @@ questions:
   - id: eco-rpm-alta
     type: mc
     prompt: En un tramo sin tráfico delante, el motor de tu auto manual gira muy alto en tercera y no hay motivo para ello. ¿Qué haces para consumir menos?
-    options: ["Mantengo la marcha: así tengo más potencia disponible", "Bajo a segunda para tener más freno motor", "Subo de marcha: una marcha más alta reduce el consumo", "Pongo el punto muerto y dejo rodar"]
+    options: ["Mantengo la marcha: así tengo más potencia disponible por si acaso", "Bajo a segunda para tener más freno motor y control", "Subo de marcha: una marcha más alta reduce el consumo", "Pongo el punto muerto y dejo rodar para no gastar nada"]
     answer: 2
     explain: "Conducir en una marcha relativamente alta reduce el consumo, siempre que sea seguro y no frene el tráfico. El punto muerto no ahorra: el motor sigue gastando al ralentí."
     cites: ["cbr-rijprocedure:1"]
@@ -48,7 +48,7 @@ questions:
   - id: eco-semaforo-adelante
     type: mc
     prompt: Ves que el semáforo, 200 m adelante, estará en rojo cuando llegues y tendrás que parar. ¿Qué haces?
-    options: ["Sigo acelerando y freno fuerte al final", "Pongo el punto muerto enseguida y ruedo hasta la línea", "Piso el embrague desde lejos y dejo que ruede", "Levanto el pie ya, dejo el auto engranado y piso el embrague justo antes de parar"]
+    options: ["Sigo acelerando hasta cerca de la línea y freno fuerte al final", "Pongo el punto muerto enseguida y dejo que el auto ruede","Piso el embrague desde lejos y dejo que el auto ruede", "Levanto el pie ya, con el auto engranado, y piso el embrague al final"]
     answer: 3
     explain: Soltar el acelerador con anticipación, con el auto engranado, corta el consumo mientras el auto sigue rodando. Se pisa el embrague justo antes de que el motor llegue al ralentí.
     cites: ["cbr-rijprocedure:1"]
@@ -56,7 +56,7 @@ questions:
   - id: eco-crucero
     type: mc
     prompt: Circulas por una carretera larga con poco tráfico y tu auto tiene control de crucero. ¿Qué te ayuda más a mantener una velocidad constante y gastar menos?
-    options: ["Ir acelerando y soltando según me parezca", "Usar el control de crucero cuando sea seguro", "Ir pegado al auto de delante para seguir su ritmo", "Ir un poco más rápido para llegar antes y compensar"]
+    options: ["Ir acelerando y soltando el pedal según me parezca", "Usar el control de crucero cuando sea seguro", "Ir pegado al auto de delante para seguir su ritmo", "Ir un poco más rápido para llegar antes y compensar"]
     answer: 1
     explain: El CBR dice que el control de crucero ayuda a mantener una velocidad constante. Pegarte al de delante resta seguridad y obliga a frenar y acelerar.
     cites: ["cbr-rijprocedure:1"]

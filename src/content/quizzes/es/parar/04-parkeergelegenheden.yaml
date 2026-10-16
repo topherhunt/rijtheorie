@@ -30,19 +30,19 @@ questions:
     explain: E11 marca el fin de la zona. Una zona sin área indicada vale entre el E10 y las señales de fin, así que después del E11 ya no rige el tiempo máximo.
     cites: ["rvv:bijlage1.E11", "rvv:66.2", "rvv:66.3"]
 
-  - id: gelegenheid-e7-estacionar
+  - id: gelegenheid-e7-prohibido
     type: yesno
-    prompt: Ves una señal E7 (lugar para cargar y descargar). Quieres dejar tu auto allí dos horas mientras haces compras. ¿Puedes?
+    prompt: "Ves una señal E7 (lugar para cargar y descargar). Quieres dejar tu auto allí dos horas mientras haces compras. ¿Lo prohíbe la ley?"
     sign: E7
-    answer: false
+    answer: true
     explain: Está prohibido estacionar en un lugar destinado a cargar y descargar mercancías de inmediato. Dos horas de compras es estacionar, no cargar o descargar de inmediato.
     cites: ["rvv:bijlage1.E7", "rvv:24.1"]
 
-  - id: gelegenheid-e8-camion
+  - id: gelegenheid-e8-camion-prohibido
     type: yesno
-    prompt: Un aparcamiento con señal E8 muestra el símbolo de un camión. Conduces un auto. ¿Puedes estacionar allí?
+    prompt: "Un aparcamiento con señal E8 muestra el símbolo de un camión. Conduces un auto. ¿Te prohíbe estacionar allí?"
     sign: E8
-    answer: false
+    answer: true
     explain: E8 es un parkeergelegenheid solo para la categoría que indica el cartel. Un auto no pertenece a la categoría camión, así que no puedes estacionar allí.
     cites: ["rvv:bijlage1.E8", "rvv:24.1"]
 
@@ -65,11 +65,7 @@ questions:
   - id: gelegenheid-e10-tiempo
     type: mc
     prompt: Entras en una zona de disco con tiempo máximo de 2 horas y encuentras una plaza permitida. Dejas el auto 3 horas con el disco bien puesto. ¿Qué pasa?
-    options:
-      - Está bien, porque el disco está bien puesto
-      - Está prohibido, porque pasaste del tiempo máximo de la señal
-      - Está bien, porque la zona no es una prohibición
-      - Solo está prohibido si hay una multa visible
+    options: ["Está bien, porque tienes el disco bien puesto y visible", "Está prohibido, porque pasaste del tiempo máximo de la señal", "Está bien, porque una zona de disco no es una prohibición", "Solo está prohibido si ya hay una multa en el parabrisas"]
     answer: 1
     explain: E10 es también un parkeerverbod si estacionas más tiempo que el máximo indicado. Tener el disco puesto no te da más tiempo.
     cites: ["rvv:bijlage1.E10"]

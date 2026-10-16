@@ -31,7 +31,7 @@ questions:
   - id: partes-via-estacionar-donde
     type: mc
     prompt: Necesitas estacionar tu coche. ¿En cuál de estas partes de la vía puedes hacerlo?
-    options: ["En una parkeerhaven junto a la calzada", "En un fietspad vacío, solo un momento", "En un trottoir ancho, dejando espacio", "En un ruiterpad poco usado, si es breve"]
+    options: ["En una parkeerhaven junto a la vía", "En un fietspad vacío, solo un momento", "En un trottoir ancho, dejando espacio", "En un ruiterpad poco usado, si es breve"]
     answer: 0
     explain: La parkeerhaven está pensada para vehículos estacionados. El trottoir, el voetpad, el fietspad, el fiets/bromfietspad y el ruiterpad están prohibidos para estacionar, y el poco tiempo o el poco tráfico no cambian nada.
     cites: ["rvv:1", "rvv:10.1"]

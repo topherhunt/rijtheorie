@@ -18,11 +18,7 @@ questions:
   - id: erf-peaton-en-el-centro
     type: mc
     prompt: "Dentro de un erf un peatón camina por el medio de la calzada delante de ti. ¿Qué es correcto?"
-    options:
-      - "Tiene derecho a usar todo el ancho; yo adapto mi velocidad y sigo con cuidado"
-      - "Debe apartarse a un lado porque yo soy el vehículo"
-      - "Le toco el claxon hasta que se aparte y sigo a mi velocidad"
-      - "Puedo pasar a 30 km/h si lo esquivo"
+    options: ["Puede usar todo el ancho; yo adapto la velocidad y sigo con cuidado", "Debe apartarse a un lado, porque yo soy el vehículo y él va a pie", "Le toco el claxon hasta que se aparte y sigo a mi velocidad", "Puedo pasar a 30 km/h si lo esquivo con cuidado por un lado"]
     answer: 0
     explain: "Los peatones pueden usar las vías de un erf en todo su ancho (art. 44) y el máximo para conductores es 15 km/h (art. 45). El procedimiento CBR pide conducir a la defensiva y mostrar que cuentas con ellos."
     cites: ["rvv:44", "rvv:45", "cbr-rijprocedure:3.6"]
@@ -46,7 +42,7 @@ questions:
   - id: erf-por-que-15
     type: mc
     prompt: "Un vecino te dice que en su erf nadie va a 15 km/h, que a 30 se ve igual. Según el procedimiento del CBR, ¿por qué el máximo es 15?"
-    options: ["A esa velocidad tú puedes reaccionar bien y los peatones tienen tiempo de reaccionar al auto", "Para que los autos no hagan ruido a los vecinos", "Porque los peatones tienen preferencia sobre cualquier vehículo", "Porque las calles de un erf siempre tienen baches"]
+    options: ["A esa velocidad tú y los peatones tenéis tiempo de reaccionar", "Para que los autos no hagan ruido ni molesten a los vecinos", "Porque los peatones tienen preferencia sobre cualquier vehículo", "Porque las calles de un erf siempre tienen adoquines y baches"]
     answer: 0
     explain: "El CBR explica que a 15 km/h el conductor reacciona bien a lo que encuentre y los peatones tienen tiempo de reaccionar al auto. No es una regla de ruido ni de preferencia: en el erf todos tienen igual derecho de uso."
     cites: ["cbr-rijprocedure:3.6", "rvv:45"]
@@ -63,11 +59,7 @@ questions:
   - id: erf-pelota
     type: mc
     prompt: "Circulas a 15 km/h por un erf y una pelota rueda a la calle desde entre dos casas. ¿Qué haces?"
-    options:
-      - "Reduzco y me preparo para parar, porque puede salir un niño detrás"
-      - "Sigo a 15 km/h, porque es el máximo permitido"
-      - "Toco el claxon y acelero para pasar antes"
-      - "Miro solo la pelota y sigo igual"
+    options: ["Reduzco y me preparo para parar, porque puede salir un niño", "Sigo a 15 km/h, porque es el máximo permitido en el erf", "Toco el claxon y acelero para pasar antes de la pelota", "Miro solo la pelota y sigo igual, sin cambiar la velocidad"]
     answer: 0
     explain: "En un erf cuentas con niños en cualquier punto y debes frenar y parar a tiempo si hace falta. Ir a 15 km/h no te dispensa de reaccionar."
     cites: ["cbr-rijprocedure:3.6", "rvv:44"]
@@ -76,11 +68,7 @@ questions:
   - id: erf-esquina-sin-vista
     type: mc
     prompt: "Dentro de un erf te acercas a una esquina donde un seto tapa la calle lateral. Vas a 15 km/h. ¿Qué es correcto?"
-    options:
-      - "Reduzco más y estoy listo para detenerme dentro de lo que veo libre"
-      - "Mantengo 15 km/h, porque es lo que permite la ley"
-      - "Acelero para cruzar la esquina rápido"
-      - "Paso por el lado izquierdo para ver mejor"
+    options: ["Reduzco más y estoy listo para detenerme en lo que veo libre", "Mantengo 15 km/h, porque es lo máximo que permite la ley", "Acelero para cruzar la esquina antes de que salga alguien", "Paso por el lado izquierdo de la calle para ver mejor"]
     answer: 0
     explain: "El art. 19 exige poder detenerte dentro de la distancia que ves libre, y el máximo de 15 km/h no sustituye esa regla. El procedimiento CBR pide además un campo de visión amplio y atención constante."
     cites: ["rvv:19", "rvv:45", "cbr-rijprocedure:3.6"]
@@ -89,11 +77,7 @@ questions:
   - id: erf-derecha-vacio
     type: mc
     prompt: "Circulas por una calle ancha de un erf, sin nadie a la vista. ¿Dónde circulas según el procedimiento CBR?"
-    options:
-      - "Lo más a la derecha posible, según la forma del erf"
-      - "Por el centro, porque no hay nadie"
-      - "Por la izquierda, para ver mejor"
-      - "Donde haya más espacio, sin importar el lado"
+    options: ["Lo más a la derecha que permita la forma del erf", "Por el centro, porque no hay nadie a la vista", "Por la izquierda, para ver mejor lo que viene", "Donde haya más espacio libre, sin importar el lado"]
     answer: 0
     explain: "El procedimiento pide circular lo más a la derecha posible, según la forma del erf."
     cites: ["cbr-rijprocedure:3.6"]

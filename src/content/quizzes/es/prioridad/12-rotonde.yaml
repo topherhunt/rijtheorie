@@ -3,8 +3,8 @@ questions:
     type: mc
     prompt: Llegas a una plaza redonda sin la señal D1 y quieres adelantar por la derecha a un coche lento, como se permite en las rotondas. ¿Puedes?
     options:
-      - No, sin D1 no valen las excepciones de las rotondas y se adelanta por la izquierda
-      - Sí, la plaza es redonda y funciona como una rotonda
+      - No, sin D1 se adelanta por la izquierda como siempre
+      - Sí, la plaza es redonda y funciona igual que una rotonda
     answer: 0
     explain: Según el CBR, en las plazas sin D1 no valen las excepciones legales de las rotondas, entre ellas la del art. 48. Que la plaza sea redonda no basta.
     cites: ["cbr-rijprocedure:3.6", "rvv:48"]
@@ -20,9 +20,9 @@ questions:
       kind: roundabout
       alt: Rotonda de cuatro entradas. Tú (A) entras desde el sur con la señal B6 y dientes de tiburón, y sigues recto, por la salida norte.
     options:
-      - Miro con atención aún mayor hacia delante y hacia la izquierda, y adapto la velocidad
+      - Miro más hacia delante y a la izquierda, y adapto la velocidad
       - Miro solo hacia la derecha, como en un cruce normal
-      - Miro igual que sin B6, porque cedo el paso de todos modos
+      - Miro igual que sin B6, porque de todos modos cedo el paso a la rotonda
     answer: 0
     explain: El CBR pide mirar hacia delante y hacia la izquierda, y con aún más atención y velocidad adaptada si hay B6. Mirar solo a la derecha ignora de dónde llega el tráfico de la rotonda.
     cites: ["cbr-rijprocedure:3.6"]
@@ -31,9 +31,9 @@ questions:
     type: mc
     prompt: Vas a salir de la rotonda y otro coche sigue circulando dentro de ella, cerca de tu salida. ¿Qué haces según el CBR?
     options:
-      - Lo dejo pasar, porque dejo pasar al tráfico que sigue circulando por la rotonda
-      - Salgo, porque ya me toca salir
-      - Salgo, porque él estaba detrás de mí
+      - "Lo dejo pasar: cedo al tráfico que sigue en la rotonda"
+      - Salgo, porque ya llevo el intermitente puesto y me toca salir
+      - Salgo, porque él venía detrás de mí en la rotonda
     answer: 0
     explain: Al salir se deja pasar al tráfico que continúa en la plaza, incluido el del carril bici independiente. Estar ya en la rotonda o ir delante no te da prioridad para salir.
     cites: ["cbr-rijprocedure:3.6"]
@@ -44,7 +44,7 @@ questions:
     options:
       - Espejo interior, espejo exterior derecho y mirada por encima del hombro derecho
       - Solo el espejo exterior izquierdo, porque el tráfico de la rotonda viene de la izquierda
-      - Espejo interior y mirada hacia delante, porque el lado derecho ya está libre al salir
+      - Espejo interior y mirar al frente, porque el lado derecho ya está libre
     answer: 0
     explain: El CBR pide mirar así y prestar atención extra a franjas ciclistas, carriles bici y aceras. El lado derecho no está libre, porque allí pueden ir ciclistas y peatones.
     cites: ["cbr-rijprocedure:3.6"]
@@ -53,8 +53,8 @@ questions:
     type: mc
     prompt: Dentro de una rotonda con D1, un ciclomotor (bromfiets) circula hacia el centro de la calzada y no pegado al borde derecho. ¿Infringe la regla de ir por la derecha?
     options:
-      - No, en las rotondas se permite circular fuera del lado derecho
-      - Sí, en cualquier calzada debe ir por el lado derecho
+      - No, en las rotondas se puede ir fuera del lado derecho
+      - Sí, en cualquier calzada debe ir pegado al lado derecho
     answer: 0
     explain: El art. 47 permite a motorvehículos y bromfietsers que siguen la calzada circular fuera del lado derecho justo antes de una rotonda o sobre ella.
     cites: ["rvv:47"]
@@ -64,7 +64,7 @@ questions:
     prompt: Estás sobre una rotonda con D1 y un coche circula despacio delante de ti, con espacio libre a su derecha. ¿Puedes adelantarlo por la derecha?
     options:
       - Sí, el art. 48 lo permite sobre una rotonda
-      - No, siempre se adelanta por la izquierda
+      - No, aquí también se adelanta por la izquierda
     answer: 0
     explain: La regla general es adelantar por la izquierda (art. 11.1), pero el art. 48 permite adelantar por la derecha justo antes de una rotonda o sobre ella.
     cites: ["rvv:48", "rvv:11.1"]
@@ -90,7 +90,7 @@ questions:
   - id: rotonde-entrar-ceder
     type: mc
     prompt: Entras a una rotonda con B6 y dientes de tiburón en tu entrada. Un auto ya circula por la rotonda y se acerca desde tu izquierda. No hay nadie por tu derecha. ¿Quién pasa primero?
-    options: [El auto que ya circula, "Tú, porque no viene nadie por tu derecha", Quien llegue primero a la entrada]
+    options: [El auto que ya circula por la rotonda, "Tú, porque no viene nadie por tu derecha", Quien llegue primero a la entrada]
     answer: 0
     explain: Con B6 o dientes de tiburón en la entrada cedes el paso a los conductores de la vía que cruzas, o sea a quien ya circula por la rotonda, aunque no venga por la derecha.
     cites: ["rvv:bijlage1.B6", "rvv:80"]
@@ -99,10 +99,10 @@ questions:
     type: mc
     prompt: Llegas a una rotonda con D1, pero en tu entrada no hay B6 ni dientes de tiburón. Un auto que ya circula por la rotonda se acerca por tu izquierda. ¿Quién pasa primero?
     options:
-      - Tú, porque sin señales rige la regla de la derecha y el auto viene por tu izquierda
-      - El auto, porque quien circula por una rotonda siempre tiene prioridad
+      - Tú, porque rige la regla de la derecha y el auto viene por tu izquierda
+      - El auto, porque quien ya circula por una rotonda siempre tiene prioridad
       - El auto, porque D1 da prioridad a quien circula por la rotonda
-      - Quien llegue primero a la entrada
+      - Quien llegue primero a la entrada de la rotonda, sea quien sea
     answer: 0
     explain: Sin B6 ni dientes de tiburón no hay señal que te obligue a ceder, así que rige la regla general de los cruces (art. 15.1). D1 solo indica el sentido de circulación. El auto de la rotonda te llega por la izquierda, así que pasas tú.
     cites: ["rvv:15.1", "rvv:bijlage1.D1"]
@@ -111,7 +111,7 @@ questions:
     type: mc
     prompt: Vas a salir de una rotonda. Junto a la salida hay un carril bici independiente que rodea la rotonda, y un ciclista que sigue por él se acerca a tu salida. ¿Qué haces?
     options:
-      - Lo dejas pasar antes de salir
+      - Lo dejas pasar antes de salir de la rotonda
       - Sales, porque el ciclista no está en la calzada
       - Sales, porque tú ya estás en la rotonda
       - Le haces señales con las luces para que pase

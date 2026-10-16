@@ -23,7 +23,7 @@ questions:
   - id: emergencia-peligro
     type: mc
     prompt: Una ambulancia con luz azul y bocina de dos tonos se acerca por detrás. A tu derecha va un ciclista pegado al borde y no hay hueco para apartarte. ¿Qué haces?
-    options: ["Dejo pasar a la ambulancia sin poner en peligro al ciclista, por ejemplo reduciendo y apartándome cuando haya hueco", "Me aparto a la derecha de golpe porque la ambulancia tiene prioridad", "Acelero para salir de su camino", "Me detengo en seco en mi carril"]
+    options: ["Dejo pasar a la ambulancia sin poner en peligro al ciclista", "Me aparto a la derecha de golpe, porque la ambulancia tiene paso", "Acelero para salir del camino de la ambulancia lo antes posible", "Me detengo en seco en mi carril para que la ambulancia me pase"]
     answer: 0
     explain: Hay que dejar pasar al vehículo prioritario, pero el artículo 5 de la WVW sigue prohibiendo maniobras que pongan en peligro a otros. Apartarte de golpe sobre el ciclista o frenar en seco crea otro peligro.
     cites: ["wvw:5", "rvv:50"]

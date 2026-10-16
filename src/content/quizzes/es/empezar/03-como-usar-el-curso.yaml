@@ -3,8 +3,8 @@ questions:
     type: mc
     exam: false
     prompt: Una compañera te dice que estudiar solo este curso basta, porque cada regla trae su fuente. Tú ves una regla que te sorprende. ¿Qué haces?
-    options: ["La compruebas en la fuente citada y, si dudas, en material actualizado", "La das por buena, porque lleva una cita y eso la hace oficial", "La das por buena mientras este curso no la contradiga en otra lección", "La ignoras y estudias solo las reglas que ya conocías"]
-    answer: 0
+    options: ["La das por buena, porque lleva una cita y eso garantiza que es oficial", "La compruebas en la fuente citada y, si dudas, en material actual", "La das por buena mientras este curso no la contradiga en otra lección", "La ignoras y repasas solo las reglas que ya conocías de antes"]
+    answer: 1
     explain: El curso lo escriben voluntarios y puede tener errores o quedar desactualizado. La cita sirve justamente para que compruebes la regla; si el curso y la ley o el CBR dicen algo distinto, vale la fuente oficial.
     cites: ["curso"]
 
@@ -12,7 +12,7 @@ questions:
     type: mc
     exam: false
     prompt: Lo que dice este curso contradice lo que dice la ley o el CBR. ¿Qué vale?
-    options: [Lo que dice este curso, Lo que dicen la ley o el CBR, Lo más estricto de los dos, Lo que dice tu instructor siempre]
+    options: ["Lo que dice este curso, porque lo revisan voluntarios", "Lo que dicen la ley o el CBR", "Lo más estricto de los dos, sea cual sea", "Lo que dice tu instructor de manejo, siempre"]
     answer: 1
     explain: Este curso no es una fuente oficial. Si hay diferencias, valen la ley y el CBR.
     cites: ["curso"]
@@ -21,8 +21,8 @@ questions:
     type: mc
     exam: false
     prompt: Encuentras una regla que crees incorrecta. ¿Cómo la reportas?
-    options: [Con el enlace "Reportar un problema" del pie de la página, Llamando al CBR, Escribiendo una nota en la lección, No se puede reportar]
-    answer: 0
+    options: ["Llamando al CBR para avisarles del error", "Con el enlace \"Reportar un problema\" del pie de cada página", "Escribiendo una nota en la lección para que los autores la lean", "No se puede reportar: el curso no admite cambios de los lectores"]
+    answer: 1
     explain: El enlace "Reportar un problema" está en el pie de cada página y abre una plantilla de GitHub. Una nota en la lección es solo para ti y se guarda en tu navegador.
     cites: ["curso"]
 
@@ -38,7 +38,7 @@ questions:
     type: mc
     exam: false
     prompt: En el Repaso, ¿cuándo cuenta una pregunta como aprendida?
-    options: [Cuando la contestas bien una vez, Cuando la contestas bien en días distintos, Cuando la lees dos veces, Cuando terminas la lección]
+    options: ["Cuando la contestas bien la primera vez", "Cuando la contestas bien en días distintos", "Cuando la contestas bien el mismo día", "Cuando terminas la lección donde aparece"]
     answer: 1
     explain: Una pregunta cuenta como aprendida solo cuando la has contestado bien en días distintos. Una sola respuesta correcta el mismo día no basta.
     cites: ["curso"]
@@ -47,7 +47,7 @@ questions:
     type: mc
     exam: false
     prompt: Contestas mal una pregunta en el Repaso. ¿Qué pasa con ella?
-    options: ["Nada, sigue igual", Vuelve a empezar su ciclo de repaso, Se elimina del curso, Cuenta como aprendida igual]
+    options: ["Nada, conserva el avance que ya tenía", "Vuelve al inicio de su ciclo de repaso", "Se elimina del curso y no vuelve a salir", "Cuenta como aprendida si ya acertó antes"]
     answer: 1
     explain: Si fallas, la pregunta vuelve al principio de su ciclo y tendrás que acertarla de nuevo en días distintos.
     cites: ["curso"]
@@ -81,7 +81,7 @@ questions:
     type: mc
     exam: false
     prompt: En una lección ves un cuadro de "consejo" (Tip). ¿Qué es?
-    options: [Una regla de ley, Una técnica para el examen que no es ley, Una pregunta del CBR, Una cita de un artículo]
+    options: ["Una regla de ley con su artículo citado", "Una técnica de examen, que no es ley", "Una pregunta real que salió en el CBR", "Una cita textual de un artículo de ley"]
     answer: 1
     explain: Los consejos son técnicas de examen. Las reglas de ley van en cuadros de regla con su fuente.
     cites: ["curso"]
@@ -90,8 +90,8 @@ questions:
     type: mc
     exam: false
     prompt: "Quieres sacarle más partido a una pregunta de práctica. Antes de mirar las opciones, ¿qué es lo más útil?"
-    options: ["Decidir qué harías tú y por qué, y después comparar con las opciones", "Leer las opciones y descartar las que suenan raras", "Buscar la opción que repite palabras de la lección", "Fijarte en cuál es la opción más larga"]
-    answer: 0
+    options: ["Leer las opciones y descartar primero las que suenan raras", "Decidir qué harías tú y por qué, y después comparar", "Buscar la opción que repite palabras de la lección", "Fijarte en cuál opción es más larga que las demás"]
+    answer: 1
     explain: Si decides primero, practicas aplicar la regla, que es lo que pide el examen. Descartar opciones por cómo suenan puede darte el acierto sin haber entendido la regla, y no te sirve cuando cambie la situación.
     cites: ["curso"]
 
@@ -99,7 +99,7 @@ questions:
     type: mc
     exam: false
     prompt: Fallaste una pregunta de prioridad en el Repaso. ¿Qué anotación en Notas te ayudará más?
-    options: ["La regla aplicable y el dato de la situación que decidía la respuesta", "Solo la letra de la opción correcta", "Solo el número de la lección para releerla entera", "Una frase como \"repasar prioridad\""]
-    answer: 0
+    options: ["Solo la letra de la opción correcta y la fecha del fallo", "La regla aplicable y el dato que decidía la respuesta", "Solo el número de la lección, para releerla entera después", "Una frase general como \"repasar bien prioridad\" y nada más"]
+    answer: 1
     explain: Para no repetir el error necesitas la regla y el dato que te la hizo aplicar (una señal, un tipo de vehículo, una dirección). La letra de la opción no te sirve, porque las opciones se mezclan cada vez.
     cites: ["curso"]

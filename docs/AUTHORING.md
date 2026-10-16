@@ -22,7 +22,7 @@ YAML `questions:` list. Fields: `id` (lowercase-hyphen, globally unique, start w
 - `mc`: `options` (2-6), `answer` index. `multi`: `answer` list of indices. `yesno`: `answer: true|false`. `number`: `answer`, `unit`. `order`: `answer` list of diagram labels, first to last.
 - Every rule in the lesson gets at least one question; important or often-confused rules get several from different angles (direct, applied scenario, exception, trap). Aim for 8-15 per lesson.
 - Answerable from the lesson alone, with exactly one defensible answer under the CBR assumptions: you drive the CBR car, others follow the rules, normal road and weather conditions unless stated.
-- Wrong options are plausible mistakes real learners make, not jokes.
+- Wrong options are plausible mistakes real learners make, not jokes, with the same detail, form and length as the answer: a wrong qualifier, not a missing one. The audit fails if the answer is the longest (or shortest) option more often than chance or much less often, or if yes/no answers drift outside 48-52% "yes".
 - `explain` says why the answer is right and, where useful, why the tempting wrong answer is wrong.
 
 ## Sources and verification

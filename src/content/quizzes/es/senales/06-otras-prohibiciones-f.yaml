@@ -19,16 +19,16 @@ questions:
     type: mc
     prompt: En una vía estrecha ves por tu lado la señal F5. ¿Qué haces si viene un vehículo de frente?
     sign: F5
-    options: ["Le dejo pasar y no sigo hasta que haya pasado", "Sigo, pero sin acelerar", "Sigo si él va más despacio que yo", "Sigo si mi vehículo es más grande"]
+    options: ["Le dejo pasar y sigo cuando haya pasado", "Sigo, pero reduzco la velocidad", "Sigo si él va más despacio que yo", "Sigo si mi vehículo es más grande"]
     answer: 0
     explain: 'F5 prohíbe seguir si se acerca tráfico en sentido contrario: debes esperar y dejarle pasar, sea cual sea la velocidad o el tamaño de cada uno. El conductor de frente verá F6.'
     cites: ["rvv:bijlage1.F5", "rvv:bijlage1.F6"]
 
-  - id: f-f7-vuelta
+  - id: f-f7-prohibido-vuelta
     type: yesno
-    prompt: Te pasaste de tu calle y quieres dar la vuelta en el sitio donde hay esta señal. La vía está vacía. ¿Puedes?
+    prompt: "Te pasaste de tu calle y quieres dar la vuelta en el sitio donde hay esta señal. La vía está vacía. ¿Está prohibido?"
     sign: F7
-    answer: false
+    answer: true
     explain: F7 es el keerverbod, una prohibición. Que la vía esté vacía no cambia nada.
     cites: ["rvv:bijlage1.F7", "rvv:62"]
 
@@ -76,7 +76,7 @@ questions:
     type: mc
     prompt: En un paso estrecho ves esta señal de tu lado y de frente viene un auto. ¿Qué haces?
     sign: F6
-    options: ["Sigo: el que viene de frente debe dejarme pasar", "Me detengo: él pasa primero", "Pasamos a la vez, cada uno por su lado", "Espero a que él decida si pasa"]
+    options: ["Sigo: el de frente debe dejarme pasar", "Me detengo y espero: él pasa primero", "Pasamos a la vez, cada uno por su lado", "Espero a que él decida si me deja pasar"]
     answer: 0
     explain: F6 obliga a los conductores del sentido contrario a dejar pasar el tráfico que viene de tu lado. Es la otra cara de F5, que obliga a esperar al que la ve.
     cites: ["rvv:bijlage1.F6", "rvv:bijlage1.F5"]

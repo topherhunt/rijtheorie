@@ -9,7 +9,7 @@ questions:
   - id: kenteken-apk-seguro-tapar
     type: mc
     prompt: Vas a viajar con un portabicicletas cargado que tapa la matrícula trasera. ¿Qué es lo correcto?
-    options: ["Poner en el portabicicletas una placa con el mismo kenteken", "Nada, si la matrícula delantera sigue visible", "Quitar la matrícula trasera mientras llevo el portabicicletas", "Tapar el portabicicletas con una lona"]
+    options: ["Poner en el portabicicletas una placa con el mismo kenteken", "Nada, si la matrícula delantera sigue visible", "Quitar la matrícula trasera durante el viaje", "Tapar el portabicicletas con una lona"]
     answer: 0
     explain: El kenteken debe verse. Si el portabultos o la carga tapan la placa, el portabultos debe llevar una placa con el mismo kenteken (y su luz si es obligatoria).
     cites: ["wvw:40", "rv:5.18.7/1"]
@@ -24,7 +24,7 @@ questions:
   - id: kenteken-apk-seguro-remolque
     type: mc
     prompt: Tu remolque tiene una masa máxima de 600 kg y no tiene matrícula propia. ¿Qué placa lleva?
-    options: ["Ninguna", "La del auto que lo arrastra", "Una placa temporal de papel", "La de tu casa"]
+    options: ["Ninguna, porque no circula por su cuenta", "La misma del auto que lo arrastra", "Una placa temporal de papel del RDW", "La del dueño del remolque, sea quien sea"]
     answer: 1
     explain: Un remolque de hasta 750 kg sin kenteken propio lleva el kenteken del vehículo que lo arrastra.
     cites: ["rv:5.18.10/1"]
@@ -53,7 +53,7 @@ questions:
   - id: kenteken-apk-diesel
     type: mc
     prompt: Tu auto diésel tiene 5 años y pasó su último APK hace 11 meses. ¿Cuándo toca el siguiente?
-    options: ["En aproximadamente 1 mes (cada año)", "Dentro de 13 meses", "Dentro de 2 años", "Ya no hace falta"]
+    options: ["En aproximadamente 1 mes, porque ahora es cada año", "Dentro de 13 meses, cuando se cumplan 2 años del primero", "Dentro de 2 años, como en los de gasolina", "Ya no hace falta, porque pasó el primero"]
     answer: 0
     explain: Los diésel y GLP tienen el primer APK a los 3 años y después cada año.
     cites: ["anwb-apk"]

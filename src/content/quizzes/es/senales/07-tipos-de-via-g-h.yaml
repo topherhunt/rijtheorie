@@ -3,7 +3,7 @@ questions:
     type: mc
     prompt: Ves la señal G1 (autosnelweg). ¿Cuál de estos vehículos NO puede entrar?
     sign: G1
-    options: ["Un auto", "Una motocicleta", "Un ciclomotor (bromfiets)", "Un camión"]
+    options: ["Una motocicleta de gran cilindrada", "Un auto de pasajeros", "Un ciclomotor (bromfiets)", "Un camión de carga pesada"]
     answer: 2
     explain: La autosnelweg es solo para vehículos de motor que pueden y son capaces de ir al menos a 60 km/h. Una bromfiets no es un motorvoertuig para el RVV (art. 1), aunque tenga motor.
     cites: ["rvv:42.1", "rvv:1", "rvv:bijlage1.G1"]
@@ -44,7 +44,7 @@ questions:
   - id: gh-zone
     type: mc
     prompt: Sobre una señal está escrita la palabra "zone", sin indicar un área. ¿Hasta dónde vale?
-    options: ["Hasta la señal que marca el fin de la zona", "Solo hasta el siguiente cruce", "Solo en el punto donde está la señal"]
+    options: ["Hasta la señal que marca el fin de la zona", "Hasta el siguiente cruce con otra calle", "Solo en el punto donde está la señal"]
     answer: 0
     explain: Sin indicar el área, la señal vale hasta la señal que marca el fin de la zona.
     cites: ["rvv:66.2"]

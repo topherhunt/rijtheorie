@@ -30,7 +30,7 @@ questions:
         - { label: A, kind: car, from: s, to: straight, you: true }
         - { label: B, kind: ambulance, from: w, to: straight, siren: true }
       alt: Cruce sin señales. Tú (A) vienes del sur y sigues recto. Una ambulancia (B) con luz azul y sirena viene del oeste, por tu izquierda, y sigue recto.
-    options: [Tú (A), La ambulancia B]
+    options: [Tú (el auto), Ambulancia B]
     answer: 1
     explain: Debes dejar pasar a un vehículo prioritario aunque no venga por tu derecha.
     cites: ["rvv:50"]
@@ -44,7 +44,7 @@ questions:
         - { label: A, kind: car, from: s, to: left, you: true }
         - { label: B, kind: police, from: n, to: straight, siren: true }
       alt: Cruce sin señales. Tú (A) vienes del sur y giras a la izquierda. Un auto de policía (B) con luz azul y sirena viene de frente, del norte, y sigue recto.
-    options: [Tú (A), El auto de policía B]
+    options: [Tú (auto), Policía B]
     answer: 1
     explain: Dejas pasar tanto por el art. 18 (giras a la izquierda) como por el art. 50 (vehículo prioritario).
     cites: ["rvv:50", "rvv:18.1"]
@@ -70,7 +70,7 @@ questions:
     type: mc
     prompt: Estás parado ante un semáforo en rojo. Una ambulancia con luz azul y sirena se acerca por detrás y el cruce está libre. ¿Qué haces?
     options:
-      - Me quedo parado ante el rojo y le dejo paso solo si puedo hacerlo de forma legal y segura
+      - Sigo en rojo y le dejo paso solo si es legal y seguro
       - Cruzo el semáforo en rojo con cuidado para abrirle camino
       - Avanzo hasta el centro del cruce para dejar libre el carril de la ambulancia
       - Doy marcha atrás hasta dejarle espacio suficiente para pasar
@@ -82,9 +82,9 @@ questions:
     type: mc
     prompt: Tienes el semáforo en verde y ves venir por el cruce una ambulancia con luz azul y sirena que no se detiene en su rojo. ¿Qué haces?
     options:
-      - Le dejo pasar, porque a un vehículo prioritario se le deja pasar aunque yo tenga verde
-      - Sigo, porque el verde me da paso y es ella quien debe parar
-      - Acelero para cruzar antes de que llegue
+      - "Le dejo pasar: a un vehículo prioritario se le cede aunque tenga verde"
+      - Sigo, porque el verde me da paso y es ella quien debe parar ante su rojo
+      - Acelero para cruzar antes de que llegue, porque yo tengo verde
     answer: 0
     explain: El art. 50 te obliga a dejar pasar a un vehículo prioritario, y el art. 91 permite a su conductor desviarse de las reglas en la medida en que su tarea lo exija. Tu verde no cambia esa obligación.
     cites: ["rvv:50", "rvv:91"]

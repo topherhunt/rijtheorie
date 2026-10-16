@@ -8,7 +8,7 @@ questions:
         - { label: A, kind: car, from: s, to: straight, you: true }
         - { label: B, kind: car, from: e, to: straight }
       alt: Cruce sin señales. Tú (A) vienes del sur y sigues recto. B viene del este, por tu derecha, y sigue recto.
-    options: [Tú (A), El auto B]
+    options: [Tú (A), Auto B]
     answer: 1
     explain: En un cruce sin señales cedes el paso a quien viene por tu derecha. B viene por tu derecha.
     cites: ["rvv:15.1"]
@@ -30,7 +30,7 @@ questions:
         - { label: A, kind: car, from: s, to: straight, you: true }
         - { label: B, kind: car, from: w, to: straight }
       alt: Tú (A) vienes del sur por un camino de tierra. B viene del oeste, por tu izquierda, por una vía asfaltada.
-    options: [Tú (A), El auto B]
+    options: [Tú (A), Auto B]
     answer: 1
     explain: Quien viene de un camino sin pavimentar cede el paso a quien va por una vía pavimentada, aunque venga por la izquierda.
     cites: ["rvv:15.2.a"]
@@ -58,7 +58,7 @@ questions:
         - { label: A, kind: car, from: w, to: straight, you: true }
         - { label: B, kind: car, from: s, to: right }
       alt: Cruce en T sin señales. Tú (A) vienes del oeste y sigues recto. B sale de la calle lateral del sur, por tu derecha, y gira a la derecha.
-    options: [Tú (A), El auto B]
+    options: [Tú (A), Auto B]
     answer: 1
     explain: Sin señales no importa cuál calle parezca la principal. B viene por tu derecha y por eso pasa primero.
     cites: ["rvv:15.1"]

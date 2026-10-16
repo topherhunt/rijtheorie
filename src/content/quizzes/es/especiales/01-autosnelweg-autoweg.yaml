@@ -32,10 +32,10 @@ questions:
     explain: El brommobiel es una bromfiets, y la ley no cuenta las bromfietsen como vehículos de motor. Como la autoweg es solo para vehículos de motor que alcancen 50 km/h, no puede entrar.
     cites: ["rvv:42.2", "rvv:1"]
 
-  - id: autosnelweg-gasolinera-parar
+  - id: autosnelweg-gasolinera-sin-infraccion
     type: yesno
-    prompt: Sales de la autosnelweg a una gasolinera (tankstation) que está junto a ella y paras el auto para repostar. ¿Infringes la prohibición de dejar el vehículo parado en la calzada de la autosnelweg?
-    answer: false
+    prompt: "Sales de la autosnelweg a una gasolinera (tankstation) que está junto a ella y paras el auto para repostar. En la autosnelweg está prohibido detenerse. ¿Puedes parar en la gasolinera?"
+    answer: true
     explain: Los tankstations, parkeerplaatsen y paradas de bus junto a la autosnelweg no forman parte de ella, y la prohibición de stilstaan vale en la rijbaan de la autosnelweg. Por eso parar allí no es dejar el vehículo parado en la calzada de la autosnelweg.
     cites: ["rvv:1", "rvv:43.2"]
 
@@ -51,21 +51,17 @@ questions:
     explain: Dar la vuelta y la marcha atrás están prohibidos en la autosnelweg, y usar el arcén sin emergencia también. Hay que seguir hasta la siguiente salida.
     cites: ["rvv:43.1", "rvv:43.3"]
 
-  - id: autosnelweg-vluchtstrook-adelantar
+  - id: autosnelweg-vluchtstrook-prohibida
     type: yesno
-    prompt: Hay un atasco en la autosnelweg y la vluchtstrook está libre. Sin ninguna emergencia, ¿puedes usarla para avanzar?
-    answer: false
+    prompt: "Hay un atasco en la autosnelweg y la vluchtstrook está libre. Sin ninguna emergencia, ¿está prohibido usarla para avanzar?"
+    answer: true
     explain: Salvo en emergencias está prohibido usar la vluchtstrook, la vluchthaven o la berm. Una spitsstrook abierta con señal C23-01 es otra cosa, y se ve en otra lección.
     cites: ["rvv:43.3"]
 
   - id: autosnelweg-averia-hectometer
     type: mc
     prompt: Tu auto se avería en una autosnelweg y llamas a Wegenwacht. ¿Cómo das tu posición?
-    options:
-      - Con el número de la salida más cercana
-      - Con el número de la carretera, la lectura del hectometerbordje más cercano y el lado
-      - Con el nombre del pueblo más cercano
-      - Con la dirección de la gasolinera más cercana
+    options: ["Con el número de la salida más cercana y el sentido", "Con el número de la carretera, el hectometerbordje más cercano y el lado", "Con el nombre del pueblo más cercano, la provincia y la dirección del tráfico", "Con la dirección postal de la gasolinera más cercana y el sentido de marcha"]
     answer: 1
     explain: Rijkswaterstaat recomienda dar el número de la carretera, la lectura del poste hectométrico y si estás a la izquierda o a la derecha.
     cites: ["rws-pech"]
@@ -73,11 +69,7 @@ questions:
   - id: autosnelweg-averia-guardarrail
     type: mc
     prompt: No puedes llegar a una vluchthaven y paras en la berma junto a un guardarraíl. ¿Cómo recomienda Rijkswaterstaat dejar el auto?
-    options:
-      - Lo más lejos posible del guardarraíl
-      - Lo más cerca posible, con las ruedas delanteras giradas hacia el guardarraíl
-      - Con las ruedas delanteras giradas hacia la calzada
-      - Paralelo al guardarraíl y a unos metros, para poder rodear el auto
+    options: ["Lo más lejos posible del guardarraíl, para poder rodear el auto", "Lo más cerca posible, con las ruedas giradas hacia el guardarraíl", "Con las ruedas delanteras giradas hacia la calzada", "Paralelo al guardarraíl y a unos metros, para rodear el auto"]
     answer: 1
     explain: Rijkswaterstaat recomienda quedar lo más cerca posible del guardarraíl, con las ruedas delanteras giradas hacia él. Dejar el auto alejado del guardarraíl o con las ruedas hacia la calzada es lo contrario de lo que recomienda.
     cites: ["rws-pech"]

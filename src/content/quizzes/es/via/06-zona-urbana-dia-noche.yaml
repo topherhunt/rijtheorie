@@ -20,7 +20,7 @@ questions:
   - id: zona-bromfiets-kom
     type: mc
     prompt: Vas en bromfiets por la rijbaan y pasas de dentro a fuera de la bebouwde kom (sin otras señales de velocidad). ¿Cambia tu velocidad máxima?
-    options: ["No, es 45 km/h dentro y fuera", "Sí, sube a 80 km/h", "Sí, sube a 60 km/h", "Sí, baja a 30 km/h"]
+    options: ["No, 45 km/h dentro y fuera de la kom", "Sí, sube a 80 km/h al salir de la bebouwde kom", "Sí, sube a 60 km/h al salir de la kom", "Sí, baja a 30 km/h dentro de la bebouwde kom"]
     answer: 0
     explain: Para las bromfietsen en la rijbaan el máximo es 45 km/h tanto dentro como fuera de la bebouwde kom. Lo que cambia con H1 y H2 es el límite de los vehículos de motor como el coche.
     cites: ["rvv:20", "rvv:21"]

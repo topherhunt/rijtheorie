@@ -13,7 +13,7 @@ questions:
     type: mc
     prompt: Conduces un auto y ves esta señal. ¿Puedes entrar?
     sign: C6
-    options: ["No, está cerrado para vehículos de motor de más de dos ruedas", "Sí, solo está cerrado para camiones", "Sí, solo está cerrado para motocicletas", "Sí, los autos particulares no cuentan"]
+    options: ["No, cierra los vehículos de motor de más de dos ruedas", "Sí, solo está cerrado para camiones y autobuses pesados", "Sí, solo está cerrado para motocicletas y ciclomotores", "Sí, los autos particulares no están incluidos en C6"]
     answer: 0
     explain: C6 cierra los vehículos de motor de más de dos ruedas. Tu auto lo es.
     cites: ["rvv:bijlage1.C6"]
@@ -27,12 +27,12 @@ questions:
     explain: C6 cierra los vehículos de motor de más de dos ruedas, así que el auto queda fuera y la moto pasa. Si fuera C12, que cierra todos los vehículos de motor, la moto tampoco pasaría.
     cites: ["rvv:bijlage1.C6", "rvv:bijlage1.C12"]
 
-  - id: c-c10-remolque
+  - id: c-c10-cierra-remolque
     type: yesno
-    prompt: Conduces un auto con remolque. ¿Puedes entrar donde hay esta señal?
+    prompt: "Conduces un auto con remolque y llegas a esta señal C10. ¿Te cierra el paso?"
     sign: C10
-    answer: false
-    explain: C10 cierra los vehículos de motor con remolque. El auto sin remolque sí pasaría, pero con remolque no.
+    answer: true
+    explain: "C10 cierra los vehículos de motor con remolque. El auto sin remolque sí pasaría, pero con remolque queda cerrado."
     cites: ["rvv:bijlage1.C10"]
 
   - id: c-c1-peaton
@@ -63,10 +63,10 @@ questions:
   - id: c-ciclomotor-no-bici
     type: mc
     prompt: Conduces un ciclomotor (bromfiets) con el motor en marcha. ¿Cuál de estas señales te cierra el paso?
-    options: ["C6", "C11", "C12", "C13"]
+    options: ["C10", "C11", "C12", "C13"]
     answer: 3
-    explain: C13 cierra bromfietsen, snorfietsen y vehículos para personas con discapacidad con el motor en marcha. C6, C11 y C12 cierran motorvoertuigen, y la bromfiets no lo es.
-    cites: ["rvv:bijlage1.C13", "rvv:bijlage1.C12", "rvv:1"]
+    explain: "C13 cierra bromfietsen, snorfietsen y vehículos para personas con discapacidad con el motor en marcha. C10, C11 y C12 cierran motorvoertuigen, y la bromfiets no lo es."
+    cites: ["rvv:bijlage1.C13", "rvv:bijlage1.C12", "rvv:bijlage1.C11", "rvv:bijlage1.C10", "rvv:1"]
 
   - id: c-c19-carga
     type: yesno
@@ -80,7 +80,7 @@ questions:
     type: mc
     prompt: Conduces un auto de gasolina y llegas a esta señal de una milieuzone. ¿Qué dice la ley?
     sign: C22e
-    options: ["Puedo entrar: la prohibición de una milieuzone alcanza a los vehículos con motor diésel", "No puedo entrar: C22e cierra todos los autos, sea cual sea su motor", "No puedo entrar: solo pasan los autos eléctricos", "Puedo entrar solo si el auto tiene 40 años o más"]
+    options: ["Puedo entrar: la milieuzone solo cierra los autos con motor diésel", "No puedo entrar: C22e cierra todos los autos con cualquier motor", "No puedo entrar: solo pasan los autos eléctricos o de hidrógeno", "Puedo entrar solo si el auto lleva un distintivo ambiental"]
     answer: 0
     explain: El art. 86d dice que la geslotenverklaring de una milieuzone se aplica a autos, vehículos de empresa, camiones y autobuses con dieselmotor. Un auto de gasolina no queda cerrado. La excepción de los 40 años es para vehículos que sí estarían cerrados.
     cites: ["rvv:86d.1", "rvv:bijlage1.C22e"]
@@ -89,7 +89,7 @@ questions:
     type: mc
     prompt: Conduces un auto diésel, matriculado por primera vez hace 45 años, y llegas a la señal de una milieuzone. ¿Puedes entrar?
     sign: C22e
-    options: ["Sí, la prohibición no se aplica a vehículos de cuarenta años o más", "No, es diésel y la milieuzone cierra los diésel", "No, los autos antiguos contaminan más", "Sí, pero solo si tiene un panel que lo permita"]
+    options: ["Sí, la prohibición no alcanza a los de 40 años o más", "No, es diésel y la milieuzone cierra todos los autos diésel", "No, los autos antiguos contaminan más y la zona los excluye", "Sí, pero solo si lleva un panel adicional que lo permita"]
     answer: 0
     explain: El art. 86d.1 cierra los autos diésel, pero el 86d.3 exceptúa los vehículos con fecha de primera admisión de cuarenta años o más. Que sea diésel es lo que te haría pensar que no pasas.
     cites: ["rvv:86d.1", "rvv:86d.3"]

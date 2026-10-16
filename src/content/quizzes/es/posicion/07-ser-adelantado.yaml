@@ -2,7 +2,7 @@ questions:
   - id: adelantado-no-acelerar
     type: mc
     prompt: Un auto empieza a adelantarte por la izquierda en una recta. ¿Qué haces con tu velocidad?
-    options: [No la aumento, La aumento para que pase rápido, La aumento solo si la recta es larga, Freno hasta parar]
+    options: ["No la aumento mientras me adelanta", "La aumento para que pase rápido", "La aumento solo si la recta es larga", "Freno hasta parar en el arcén"]
     answer: 0
     explain: Según la Rijprocedure B, al ser adelantado no se aumenta la velocidad. Acelerar parece ayudar, pero alarga el adelantamiento.
     cites: ["cbr-rijprocedure:3.2"]
@@ -10,7 +10,7 @@ questions:
   - id: adelantado-lado
     type: mc
     prompt: Te adelantan por la izquierda y hay espacio a tu derecha. ¿Qué haces, si hace falta?
-    options: [Me aparto a la derecha, Me aparto a la izquierda, Me quedo exactamente donde estoy, Cruzo al carril contrario]
+    options: ["Me aparto a la derecha, si hay sitio", "Me aparto a la izquierda", "Me quedo exactamente donde estoy", "Cruzo al carril contrario"]
     answer: 0
     explain: Si te adelantan por la izquierda, te apartas a la derecha si es necesario y posible.
     cites: ["cbr-rijprocedure:3.2"]
@@ -26,7 +26,7 @@ questions:
   - id: adelantado-impedir-solo-peligro
     type: mc
     prompt: En una calle estrecha un auto quiere adelantarte, pero si lo hace quedaría peligrosamente pegado a un ciclista que viene de frente. ¿Qué haces?
-    options: ["Conduzco de modo que adelantarme sea imposible, sin acelerar, porque sería peligroso", "Acelero para que no pueda adelantarme", "Freno de golpe para que se quede atrás", "Dejo el espacio justo para que nadie pueda pasar"]
+    options: ["Conduzco para que adelantar sea imposible, sin acelerar", "Acelero un poco para que no tenga tiempo de adelantarme", "Freno fuerte para que se quede atrás y no pueda adelantar", "Me pego a la línea central para que nadie pueda pasar"]
     answer: 0
     explain: La Rijprocedure B permite conducir de modo que adelantar sea imposible solo cuando ser adelantado podría crear una situación peligrosa, y sin aumentar la velocidad. No es un permiso para cerrar el paso cuando se puede adelantar con seguridad.
     cites: ["cbr-rijprocedure:3.2"]
@@ -42,7 +42,7 @@ questions:
   - id: adelantado-motos
     type: mc
     prompt: Circulas lento en una fila y una moto se acerca por el lado. ¿Qué haces?
-    options: ['No reduzco el espacio y, si puedo, lo amplío', Me quedo en el centro del carril sin moverme, Cierro el hueco para que no pase, Toco la bocina para que se espere]
+    options: ["No reduzco el espacio y, si puedo, lo amplío un poco", "Me quedo en el centro del carril sin moverme ni mirar", "Cierro el hueco hacia ese lado para que no pase", "Toco la bocina para que se espere detrás de mí"]
     answer: 0
     explain: Las motos pueden adelantar por la izquierda o la derecha según el espacio. Conduce de modo que no reduzcas el espacio disponible y, si puedes, amplíalo apartándote.
     cites: ["cbr-rijprocedure:3.2"]
@@ -50,7 +50,7 @@ questions:
   - id: tegemoetkomen-ciclistas-estrecho
     type: mc
     prompt: Conduces por una calzada muy estrecha y vienen muchos ciclistas de frente. ¿Qué haces?
-    options: [Reduzco más la velocidad o incluso paro, Mantengo la velocidad y toco la bocina, Acelero para pasar antes, Me aparto lo menos posible]
+    options: ["Reduzco aún más la velocidad o incluso paro", "Mantengo la velocidad y toco la bocina para avisar", "Acelero para pasar antes de que lleguen todos", "Me aparto lo menos posible para ir más rápido"]
     answer: 0
     explain: Con una calzada muy estrecha, sobre todo con muchos ciclistas, hay que reducir más o incluso parar. Mantener la velocidad no deja margen si falta espacio.
     cites: ["cbr-rijprocedure:3.2"]
@@ -58,7 +58,7 @@ questions:
   - id: tegemoetkomen-sin-espacio
     type: mc
     prompt: Te encuentras de frente con otro auto en una calle donde no caben los dos. ¿Quién debe resolverlo?
-    options: ["Los dos, con contacto visual o gestos, y parando si hace falta", Solo yo porque llegué primero, Solo el otro porque viene de frente, El que conduzca el vehículo más grande]
+    options: ["Los dos, con contacto visual o gestos, parando si hace falta", "Solo yo, porque llegué antes a ese tramo de la calle", "Solo el otro, porque es quien viene de frente hacia mí", "El que conduzca el vehículo más grande, porque maniobra peor"]
     answer: 0
     explain: Los dos conductores tienen la misma obligación (art. 5 WVW) uno hacia el otro. Si no cabéis, paras y lo resolvéis con contacto visual o gestos.
     cites: ["cbr-rijprocedure:3.2", "wvw:5"]
@@ -66,7 +66,7 @@ questions:
   - id: tegemoetkomen-obstaculos-ambos
     type: mc
     prompt: Hay obstáculos a ambos lados de la calzada y no hay ancho para cruzarte con el tráfico de frente. ¿Qué haces?
-    options: [Me coloco de modo que me vean a tiempo, Me meto en el hueco rápido antes de que lleguen, Me pego a los obstáculos de la derecha, Sigo sin cambiar nada y espero que cedan]
+    options: ["Me coloco de modo que me vean con bastante tiempo", "Me meto en el hueco rápido antes de que lleguen", "Me pego a los obstáculos de la derecha", "Sigo sin cambiar nada y espero que cedan"]
     answer: 0
     explain: Con obstáculos a ambos lados y poco ancho, te colocas de forma que te vean a tiempo, para que el otro pueda ajustar su marcha.
     cites: ["cbr-rijprocedure:3.2"]
@@ -74,7 +74,7 @@ questions:
   - id: tegemoetkomen-derecha
     type: mc
     prompt: Te cruzas con otro auto en una calle estrecha y vas a apartarte a la derecha, donde hay un grupo de peatones esperando en el borde. ¿Qué haces?
-    options: ["Tengo en cuenta a quienes están en ese lado y ajusto cuánto me aparto", "Me aparto igual: el otro auto es quien tiene que ceder", "Toco la bocina a los peatones para que se aparten", "Me aparto lo máximo posible a la derecha para dejar sitio"]
+    options: ["Tengo en cuenta a esas personas y ajusto cuánto me aparto", "Me aparto igual: el otro auto es quien tiene que ceder", "Toco la bocina a los peatones para que dejen libre el borde", "Me aparto lo máximo posible a la derecha para dejar sitio"]
     answer: 0
     explain: La Rijprocedure B pide pensar en quienes están en el lado derecho de la vía al apartarte a la derecha. Apartarte al máximo a ciegas puede poner en peligro a los peatones.
     cites: ["cbr-rijprocedure:3.2"]

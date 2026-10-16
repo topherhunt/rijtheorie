@@ -23,7 +23,7 @@ questions:
   - id: cinturon-tres-detras
     type: mc
     prompt: Quieres llevar a tres adultos en el asiento trasero, que tiene dos cinturones. El trayecto es de solo 500 metros. ¿Qué dice la norma?
-    options: ["Puedes, porque el trayecto es corto", "No más pasajeros que cinturones: solo dos en ese asiento", "Puedes si el del medio va sin cinturón", "Puedes si el del medio es el más delgado"]
+    options: ["Puedes, porque el trayecto es de solo 500 metros y vas despacio", "No: no más pasajeros que cinturones, así que solo dos en ese asiento", "Puedes si el del medio va sin cinturón, porque es un trayecto tan corto", "Puedes si el del medio es el más delgado de los tres adultos"]
     answer: 1
     explain: En los asientos con cinturones no se llevan más pasajeros que cinturones. Ni el trayecto corto ni la complexión de la persona cambian esto.
     cites: ["rvv:59.1"]
@@ -31,7 +31,7 @@ questions:
   - id: cinturon-sin-cinturones
     type: mc
     prompt: Un auto sin cinturones ni sistemas de retención. ¿Qué pasa con un niño de 5 años que mide menos de 1,35 m?
-    options: ["Va en cualquier asiento", "Va en un asiento que no sea uno de los delanteros", "No se puede llevar ningún niño", "Va sentado en las piernas del conductor"]
+    options: ["Va en cualquier asiento, con el niño sujeto por un adulto", "Va en un asiento que no sea uno de los delanteros", "No se puede llevar a ningún niño de esa edad", "Va en el asiento delantero, sentado en las piernas del copiloto"]
     answer: 1
     explain: Los de 3 a 18 años y menos de 1,35 m van en un asiento que no sea uno de los delanteros.
     cites: ["rvv:59.2"]
@@ -46,7 +46,7 @@ questions:
   - id: cinturon-taxi-nino
     type: mc
     prompt: Tomas un taxi con tu hijo de 5 años, que mide 1,10 m. El taxi no tiene sistema de retención infantil. ¿Dónde puede ir el niño?
-    options: ["En el asiento delantero, porque en un taxi no se exige el sistema infantil", "En un asiento que no sea el delantero", "En ninguna parte: sin sistema infantil no puede ir en taxi", "En el delantero, con el cinturón de adulto"]
+    options: ["En el asiento delantero, porque en un taxi no se exige el sistema infantil", "En un asiento que no sea el delantero, por ejemplo el trasero", "En ninguna parte: sin sistema infantil no puede ir en taxi", "En el delantero, con el cinturón de adulto"]
     answer: 1
     explain: En un taxi el sistema infantil no es obligatorio, pero si no lo hay, un menor de 18 años y de menos de 1,35 m no va en un asiento delantero.
     cites: ["rvv:59.5"]
@@ -83,7 +83,7 @@ questions:
   - id: cinturon-responsable-nino
     type: mc
     prompt: Tu sobrino de 8 años, que mide 1,25 m, se niega a ir en su silla y tú arrancas igual. Si te para la policía, ¿quién incumple?
-    options: ["El niño, que no quiso", "Tú, que conduces: la norma prohíbe al conductor llevar a menores de 12 años de otra manera que la prescrita", "Nadie, si el niño llevaba el cinturón de adulto", "Los padres del niño, aunque no estuvieran en el coche"]
+    options: ["El niño, que se negó a ir en su silla", "Tú, que conduces: no puedes llevar así a un menor de 12 años", "Nadie, si el niño llevaba puesto el cinturón de adulto del coche", "Los padres del niño, aunque no estuvieran en el coche ni lo supieran"]
     answer: 1
     explain: La responsabilidad es de quien conduce, no del niño. Con 1,25 m le corresponde un sistema de retención infantil.
     cites: ["rvv:59.1", "rvv:59.8"]

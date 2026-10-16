@@ -1,46 +1,38 @@
 questions:
-  - id: stilstaanverbod-kruispunt
+  - id: stilstaanverbod-kruispunt-prohibido
     type: yesno
-    prompt: Te has equivocado de calle y paras "un momento" en medio de un cruce para mirar el mapa del móvil. ¿Está permitido?
-    answer: false
+    prompt: "Te has equivocado de calle y paras \"un momento\" en medio de un cruce para mirar el mapa del móvil. ¿Lo prohíbe el artículo 23?"
+    answer: true
     explain: Detenerse (stilstaan) en un kruispunt o en un overweg está prohibido, aunque sea un instante. El artículo 23 no da ninguna excepción para estos lugares.
     cites: ["rvv:23.1"]
 
   - id: stilstaanverbod-fietsstrook
     type: mc
     prompt: Hay una fietsstrook a tu derecha. Paras 30 segundos en la calzada, justo a su lado, sin tocarla. ¿Qué dice el artículo 23?
-    options:
-      - "Está prohibido: la prohibición incluye la calzada junto a la fietsstrook"
-      - Está permitido, porque no estás encima de la fietsstrook
-      - Está permitido si pones las luces de emergencia
-      - Está prohibido solo si en ese momento pasa un ciclista
+    options: ["Prohibido, también en la calzada junto a la fietsstrook", "Está permitido, porque no estás encima de la fietsstrook", "Está permitido si pones las luces de emergencia encendidas", "Está prohibido solo si en ese momento pasa un ciclista"]
     answer: 0
     explain: La ley prohíbe detenerse en la fietsstrook y también en la calzada junto a ella. Estar al lado, las luces de emergencia o la presencia de ciclistas no cambian la regla.
     cites: ["rvv:23.1"]
 
-  - id: stilstaanverbod-busstrook
+  - id: stilstaanverbod-busstrook-prohibido
     type: yesno
-    prompt: En la calzada junto a un busstrook paras 10 segundos para que tu hijo baje del auto. ¿Está permitido?
-    answer: false
+    prompt: "En la calzada junto a un busstrook paras 10 segundos para que tu hijo baje del auto. ¿Infringes el artículo 23?"
+    answer: true
     explain: Detenerse en la calzada junto a un busstrook está prohibido. La excepción de dejar bajar pasajeros de inmediato existe solo para la parada de bus.
     cites: ["rvv:23.1", "rvv:23.2"]
 
   - id: stilstaanverbod-subir-donde
     type: mc
     prompt: Necesitas dejar bajar a un pasajero de inmediato y arrancar. ¿En cuál de estos sitios no infringes el artículo 23?
-    options:
-      - En la calzada junto a una línea amarilla continua
-      - Sobre un paso de peatones, si no viene nadie
-      - Dentro de un cruce, si no molestas a nadie
-      - En una parada de bus, dentro de la zona prohibida junto al cartel
+    options: ["En la calzada junto a una línea amarilla continua", "Sobre un paso de peatones, si no viene ningún peatón", "Dentro de un cruce, siempre que no molestes a nadie", "En una parada de bus, dentro de la zona prohibida"]
     answer: 3
     explain: La excepción del ascenso o descenso inmediato existe solo para la prohibición junto a la parada de bus. Junto a una amarilla continua, sobre un paso de peatones y dentro de un cruce no hay excepción, aunque no molestes.
     cites: ["rvv:23.1", "rvv:23.2"]
 
-  - id: stilstaanverbod-amarilla-pasajero
+  - id: stilstaanverbod-amarilla-pasajero-prohibido
     type: yesno
-    prompt: Junto a una línea amarilla continua dejas bajar a un pasajero de inmediato y arrancas. ¿Está permitido?
-    answer: false
+    prompt: "Junto a una línea amarilla continua dejas bajar a un pasajero de inmediato y arrancas. ¿Lo prohíbe el artículo 23?"
+    answer: true
     explain: Junto a una amarilla continua no puedes ni detenerte. La excepción del ascenso o descenso inmediato aplica solo a la parada de bus, no a la línea amarilla continua.
     cites: ["rvv:23.1", "rvv:23.2"]
 
@@ -48,11 +40,7 @@ questions:
     type: mc
     prompt: En tu lado de la calle hay una señal E2. Quieres dejar el auto allí media hora para ir a comprar. ¿Qué dice la señal?
     sign: E2
-    options:
-      - Puedes, porque la señal solo prohíbe pararse un instante
-      - Puedes, porque estacionar es otra cosa y la señal no lo prohíbe
-      - No puedes, porque estacionar es una forma de tener el vehículo parado y E2 prohíbe detenerse
-      - No puedes, pero solo en horario laboral
+    options: ["Puedes, porque la señal solo prohíbe pararse un instante", "Puedes, porque estacionar es otra cosa y E2 no lo prohíbe", "No puedes: estacionar es una forma de stilstaan y E2 lo prohíbe", "No puedes, pero la prohibición vale solo en horario laboral"]
     answer: 2
     explain: E2 es el verbod stil te staan. Parkeren es dejar el vehículo parado salvo ascensos o cargas inmediatas, así que es una forma de stilstaan y queda prohibido también.
     cites: ["rvv:bijlage1.E2", "rvv:1", "rvv:62"]
@@ -83,10 +71,10 @@ questions:
     explain: No puedes detenerte en un paso para cruzar ni a menos de 5 m de él, aunque sea por poco tiempo.
     cites: ["rvv:23.1"]
 
-  - id: stilstaanverbod-bushalte-esperar
+  - id: stilstaanverbod-bushalte-esperar-prohibido
     type: yesno
-    prompt: Una parada de bus no tiene marca de bloques. Te detienes a 10 m del cartel de la parada para esperar a una amiga que viene corriendo. ¿Está permitido?
-    answer: false
+    prompt: "Una parada de bus no tiene marca de bloques. Te detienes a 10 m del cartel de la parada para esperar a una amiga que viene corriendo. ¿Infringes el artículo 23?"
+    answer: true
     explain: A menos de 12 m del cartel, sin marca, está prohibido detenerse. La excepción es solo para dejar subir o bajar pasajeros de inmediato, no para esperar.
     cites: ["rvv:23.1", "rvv:23.2"]
 

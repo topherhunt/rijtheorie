@@ -2,7 +2,7 @@ questions:
   - id: adelantar-izquierda
     type: mc
     prompt: Vas detrás de un auto lento en una calle de doble sentido sin carriles marcados. A su derecha hay espacio de sobra y a su izquierda también. ¿Por dónde lo adelantas?
-    options: ["Por la izquierda", "Por la derecha, porque así no invado el carril contrario", "Por el lado que tenga más espacio", "Por el lado del conductor más lento"]
+    options: ["Por la izquierda, como siempre que se adelanta", "Por la derecha, porque así no invado el carril contrario", "Por el lado que tenga más espacio", "Por el lado del conductor más lento"]
     answer: 0
     explain: El art. 11 lid 1 dice que se adelanta por la izquierda. Las excepciones son concretas (se ven en la lección siguiente) y no incluyen "porque hay más sitio a la derecha".
     cites: ["rvv:11.1"]
@@ -19,7 +19,7 @@ questions:
     type: mc
     prompt: Conduces un auto y ves la señal F3 mientras alcanzas a un camión. ¿Qué te prohíbe la señal?
     sign: F3
-    options: ["Nada, la F3 prohíbe a los camiones adelantar vehículos de motor", "Adelantar al camión, igual que la F1", "Adelantar a cualquier vehículo de motor", "Adelantar a un camión con remolque"]
+    options: ["Nada: la F3 obliga solo a los camiones, no a ti", "Adelantar al camión, igual que haría la señal F1", "Adelantar a cualquier vehículo de motor, sea cual sea", "Adelantar solo a un camión que lleve remolque"]
     answer: 0
     explain: La F3 prohíbe a los vrachtauto's adelantar vehículos de motor. Tú, con un auto, puedes adelantar a un camión; la F1 sí te lo prohibiría.
     cites: ["rvv:bijlage1.F3"]
@@ -35,7 +35,7 @@ questions:
   - id: adelantar-por-que-paso-cebra
     type: mc
     prompt: Detrás de un autobús lento ves delante un paso de peatones sin semáforo. Hay hueco libre a la izquierda. ¿Por qué no puedes adelantar justo antes del paso?
-    options: ["El autobús te tapa a un peatón que podría estar cruzando, y adelantar justo antes del paso está prohibido", "Adelantar a un autobús lento está prohibido porque frena mucho al volver", "Antes de un paso de peatones solo se adelanta a menos de 30 km/h", "Ahí solo se puede adelantar por la derecha"]
+    options: ["El autobús te tapa a un peatón que podría estar cruzando", "Adelantar a un autobús lento está prohibido en toda vía urbana", "Antes de un paso solo se puede adelantar a menos de 30 km/h", "Antes de un paso de peatones solo se adelanta por la derecha"]
     answer: 0
     explain: 'El art. 12 RVV prohíbe adelantar vlak voor o sobre un paso de peatones. El motivo práctico (CBR) es la poca visibilidad: el vehículo adelantado te tapa al peatón.'
     cites: ["rvv:12", "cbr-rijprocedure:3.5"]
@@ -58,7 +58,7 @@ questions:
   - id: adelantar-volver
     type: mc
     prompt: Acabas de adelantar un camión. ¿Cuándo vuelves a tu carril?
-    options: [Cuando veas toda la parte delantera del camión en el retrovisor interior, En cuanto lo pases, En cuanto el camión se haga a un lado, Cuando el camión te dé las luces]
+    options: ["Al ver todo el frente del camión en el retrovisor interior", "En cuanto tu parachoques trasero pase su parte delantera", "En cuanto el camión se haga a un lado para dejarte sitio", "Cuando el camión te dé las luces para indicar que puedes"]
     answer: 0
     explain: Solo cuando la parte delantera entera del vehículo adelantado se ve en el retrovisor interior, para no estorbar su paso normal. Volver en cuanto lo pasas lo obliga a frenar.
     cites: ["cbr-rijprocedure:3.5"]
@@ -66,7 +66,7 @@ questions:
   - id: adelantar-ceder
     type: mc
     prompt: Adelantas a un tractor en un camino rural y, para hacerlo, entras en la parte de la vía por donde viene un auto de frente. ¿Qué haces?
-    options: [Dejo pasar al auto de frente, Sigo porque ya empecé el adelantamiento, Toco la bocina y acelero, Obligo al tractor a frenar para tener sitio]
+    options: [Dejo pasar al auto de frente, Sigo porque ya empecé el adelantamiento, Acelero y toco la bocina para pasar, Obligo al tractor a frenar para tener sitio]
     answer: 0
     explain: Si al adelantar entras en la parte de la vía de otro tráfico, deja pasar a ese tráfico, y también a quien tú mismo adelantas. Haber empezado no te da preferencia.
     cites: ["cbr-rijprocedure:3.5"]
@@ -74,7 +74,7 @@ questions:
   - id: adelantar-poca-vision
     type: mc
     prompt: Vas por una autopista y quieres adelantar a un camión cuyo conductor casi no ve hacia atrás. ¿Qué haces?
-    options: [Salgo con tiempo de mi carril y busco contacto visual por los espejos, Acelero por sorpresa para pasar rápido, Me quedo pegado a su parte trasera para que me vea, Toco la bocina sin parar]
+    options: ["Salgo antes del carril y busco contacto visual en sus espejos", "Acelero por sorpresa para que no tenga tiempo de reaccionar", "Me quedo pegado a su parte trasera hasta que me vea, sin salir", "Toco la bocina varias veces mientras me quedo detrás de él"]
     answer: 0
     explain: 'Hay que asegurarse de que el conductor te vea: salir antes del carril en autopistas, dejar más distancia en vías de doble sentido y buscar contacto visual por los espejos. Pegarte atrás es lo peor: sigues en su zona ciega.'
     cites: ["cbr-rijprocedure:3.5"]
@@ -82,7 +82,7 @@ questions:
   - id: adelantar-ciclista
     type: mc
     prompt: Adelantas a una persona mayor en bicicleta por una calle con poco espacio lateral. ¿Qué haces con la velocidad?
-    options: ["La adapto al espacio: cuanto menos sitio, menos diferencia con la suya", "Paso rápido para acabar cuanto antes", "Paso a la velocidad que llevaba", "Freno de golpe a su lado"]
+    options: ["La adapto: cuanto menos sitio, menos diferencia con él", "Paso rápido, para estar el menor tiempo posible a su lado", "Paso a la misma velocidad que llevaba antes de alcanzarlo", "Freno casi hasta parar a su lado y espero que se aparte"]
     answer: 0
     explain: Cuanto menos espacio lateral, menor debe ser la diferencia de velocidad, sobre todo con ciclistas mayores, niños o personas con discapacidad. Pasar rápido con poco espacio asusta y desestabiliza.
     cites: ["cbr-rijprocedure:3.5"]
@@ -90,7 +90,7 @@ questions:
   - id: adelantar-coche-estacionado
     type: mc
     prompt: Hay un auto estacionado en tu lado de la calzada y no viene nadie de frente. ¿Cómo lo pasas?
-    options: [Lo paso (voorbijgaan) en línea suave y vuelvo a la derecha después, Lo adelanto con el intermitente puesto hasta el final, Lo paso lo más pegado posible, Me detengo y espero a que se vaya]
+    options: ["Lo paso en línea suave y vuelvo a la derecha después", "Lo adelanto con el intermitente puesto hasta el final", "Lo paso lo más pegado posible, sin cambiar de línea", "Me detengo detrás y espero hasta que el auto se vaya"]
     answer: 0
     explain: 'Un obstáculo no se adelanta, se pasa (voorbijgaan): esquivas en línea suave y vuelves a la derecha cuando lo has pasado. Pegarte no es buena idea, porque conviene dejar al menos el ancho de una puerta.'
     cites: ["cbr-rijprocedure:3.5"]
@@ -98,7 +98,7 @@ questions:
   - id: adelantar-puerta-sin-espacio
     type: mc
     prompt: Al pasar junto a un obstáculo no puedes dejar el ancho de una puerta de separación. ¿Qué haces?
-    options: [Reduzco aún más la velocidad, Mantengo la velocidad para pasar rápido, Toco la bocina al pasar, Acelero para acabar antes]
+    options: [Reduzco aún más la velocidad, Mantengo la velocidad para pasar rápido, Toco la bocina varias veces al pasar, Acelero para acabar cuanto antes]
     answer: 0
     explain: Si no puedes dejar la separación de una portierbreedte, reduces todavía más la velocidad. Pasar rápido con poco espacio es lo contrario.
     cites: ["cbr-rijprocedure:3.5"]

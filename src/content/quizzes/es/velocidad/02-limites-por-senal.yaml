@@ -2,7 +2,7 @@ questions:
   - id: senal-recomendada-obligatoria
     type: mc
     prompt: "Vas por una carretera normal fuera de la zona urbana, de día y con la calzada seca. Ves una señal A4 de 60 km/h antes de una curva abierta que ves entera, y tú vas a 80. ¿Qué es correcto?"
-    options: ["La A4 recomienda 60, no obliga; sigo a 80 si veo que puedo detenerme", "Debo bajar a 60 porque toda señal de velocidad es un máximo", "Debo bajar a 60 porque la curva lo exige por ley", "Puedo acelerar a 100 porque la A4 anula el máximo de 80"]
+    options: ["La A4 solo recomienda; sigo a 80 si puedo detenerme a tiempo", "Debo bajar a 60 porque toda señal de velocidad es un máximo", "Debo bajar a 60 porque en cualquier curva lo exige la ley", "Puedo acelerar a 100 porque la A4 anula el máximo de 80"]
     answer: 0
     explain: "La A4 es una adviessnelheid: no manda ni prohíbe, así que no es un máximo como la A1. Aun así sigues obligado a poder detenerte dentro de lo que ves libre (art. 19); si en esa curva no lo consigues a 80, vas demasiado rápido. Y no anula el máximo de la vía."
     cites: ["rvv:bijlage1.A4", "rvv:62", "rvv:19"]
@@ -20,7 +20,7 @@ questions:
   - id: senal-a4-curva
     type: mc
     prompt: "Antes de una curva cerrada y sin visibilidad ves una señal A4 de 40 km/h. El máximo legal de la vía es 80 y tú vas a 70. ¿Qué es correcto?"
-    options: ["Voy bien: 70 está bajo el máximo y la A4 solo recomienda", "Debo poder detenerme dentro de lo que veo libre; si a 70 no puedo, voy demasiado rápido", "Debo ir exactamente a 40 porque toda señal de velocidad es obligatoria", "La A4 solo cuenta si llueve, así que sigo a 70"]
+    options: ["Voy bien: 70 está bajo el máximo legal y la A4 solo recomienda", "Debo poder detenerme en lo que veo libre; si no puedo, voy rápido", "Debo ir a 40 porque toda señal de velocidad es obligatoria", "La A4 solo cuenta cuando llueve o hay hielo, así que sigo a 70"]
     answer: 1
     explain: "La A4 (adviessnelheid) no obliga, pero el art. 19 sí: debes poder detenerte dentro de la distancia que ves libre. En una curva sin visibilidad esa distancia es corta, y estar bajo el máximo legal no sustituye esa regla. Ir a 40 exactos tampoco es la regla: lo que cuenta es poder parar."
     cites: ["rvv:bijlage1.A4", "rvv:62", "rvv:19"]
@@ -29,11 +29,7 @@ questions:
   - id: senal-a5-fin
     type: mc
     prompt: "Pasas una señal A5 justo después de una curva donde había una A4 de 40 km/h. ¿Qué cambia para ti?"
-    options:
-      - "Termina solo la recomendación; el máximo legal y la obligación de poder detenerme siguen"
-      - "Termina también el máximo legal y puedo ir a la velocidad que quiera"
-      - "Debo acelerar hasta el máximo legal"
-      - "Debo seguir a 40 km/h hasta el próximo cruce"
+    options: ["Termina solo la recomendación; el máximo legal y el art. 19 siguen", "Termina también el máximo legal y puedo ir a la velocidad que quiera", "Debo acelerar hasta el máximo legal en cuanto vea la señal", "Debo seguir a 40 km/h hasta el siguiente cruce o desvío"]
     answer: 0
     explain: "A5 es el final de la adviessnelheid. No termina ningún máximo ni la regla del art. 19, y tampoco te obliga a acelerar."
     cites: ["rvv:bijlage1.A5", "rvv:19"]

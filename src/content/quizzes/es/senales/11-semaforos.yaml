@@ -2,7 +2,7 @@ questions:
   - id: sf-amarillo
     type: mc
     prompt: El semáforo cambia a amarillo cuando aún puedes frenar con seguridad antes de la línea. ¿Qué haces?
-    options: ["Me detengo", "Acelero para pasar", "Paso si no hay nadie", "Paso si voy rápido"]
+    options: ["Me detengo antes de la línea blanca", "Acelero un poco para pasar antes del rojo", "Paso si no hay nadie en el cruce ni detrás", "Paso si voy rápido y veo que está libre"]
     answer: 0
     explain: El amarillo manda detenerse. Solo continúas si estás tan cerca que ya no puedes parar razonablemente.
     cites: ["rvv:68.1", "cbr-rijprocedure:3.3"]
@@ -18,7 +18,7 @@ questions:
   - id: sf-rojo-stopstreep
     type: mc
     prompt: Te acercas a un semáforo en rojo. Delante de él hay una línea blanca de parada. ¿Dónde te detienes?
-    options: ["Antes de la línea blanca", "Con las ruedas delanteras sobre la línea", "Pasada la línea, para ver mejor el semáforo", "Donde quede sitio, aunque pases la línea"]
+    options: ["Detrás de la línea blanca, sin pasarla", "Con las ruedas delanteras sobre la línea", "Pasada la línea, para ver mejor el semáforo", "Donde quede sitio, aunque pases la línea"]
     answer: 0
     explain: Si debes detenerte (rojo) y hay una stopstreep para ti, paras antes de ella.
     cites: ["rvv:68.1", "rvv:79"]
@@ -26,7 +26,7 @@ questions:
   - id: sf-verde-cola
     type: mc
     prompt: Tienes verde, pero la cola de delante avanza tan despacio que, al volverse rojo, te quedarías parado en medio del cruce. ¿Qué haces?
-    options: ["Espero antes del cruce hasta poder dejarlo libre", "Entro, porque el verde me da paso", "Entro y toco la bocina para que avancen", "Entro solo si no vienen coches de los lados"]
+    options: ["Espero antes del cruce hasta poder salir de él", "Entro, porque el verde me da derecho a pasar", "Entro y toco la bocina para que avancen", "Entro solo si no vienen coches de los lados"]
     answer: 0
     explain: El verde te deja avanzar, pero no te permite bloquear el cruce. Entras solo si puedes seguir de largo o dejarlo libre; que no vengan coches de los lados no cambia eso.
     cites: ["rvv:14", "cbr-rijprocedure:3.3"]
@@ -34,7 +34,7 @@ questions:
   - id: sf-flecha-recto
     type: mc
     prompt: Tu semáforo está en rojo, pero a su lado se enciende una flecha verde hacia la derecha. Quieres seguir recto. ¿Qué haces?
-    options: ["Me quedo parado, porque la flecha solo vale para girar a la derecha", "Sigo recto, porque hay algo en verde", "Sigo recto si no viene nadie", "Giro a la izquierda, porque la flecha no lo prohíbe"]
+    options: ["Me quedo parado: la flecha vale solo para la derecha", "Sigo recto, porque la flecha verde me deja pasar", "Sigo recto si no viene nadie por los lados", "Giro a la izquierda, porque la flecha no lo prohíbe"]
     answer: 0
     explain: Una flecha iluminada hace que la luz valga solo para esa dirección. Para seguir recto sigue valiendo el rojo.
     cites: ["rvv:68.2", "rvv:68.1"]
@@ -42,7 +42,7 @@ questions:
   - id: sf-bici-coche
     type: mc
     prompt: Estás en tu coche ante un semáforo en rojo. Al lado, el semáforo con la imagen de una bicicleta está en verde. ¿Puedes avanzar?
-    options: ["No, esa luz es para ciclistas y yo sigo el semáforo de la calzada", "Sí, porque hay un verde delante", "Sí, si avanzo muy despacio", "Sí, si no hay ciclistas cerca"]
+    options: ["No, esa luz es para los ciclistas", "Sí, porque hay una luz verde delante de mí", "Sí, si avanzo muy despacio y con cuidado", "Sí, si no hay ningún ciclista cerca del cruce"]
     answer: 0
     explain: La luz con la imagen de bicicleta vale para ciclistas, ciclomotoristas en un fiets/bromfietspad y vehículos para discapacitados, no para un coche.
     cites: ["rvv:68.3", "rvv:68.1"]
@@ -57,7 +57,7 @@ questions:
   - id: sf-tram-blanca
     type: mc
     prompt: Una luz blanca en un semáforo de tranvía o bus, ¿qué significa?
-    options: ["Vía libre, solo en las direcciones indicadas", "Vía libre en cualquier dirección", "Detenerse", "Precaución, pasa un tranvía"]
+    options: ["Vía libre, solo en las direcciones marcadas", "Vía libre en cualquier dirección que quieras", "Detenerse hasta que cambie de color", "Precaución, se acerca un tranvía o un bus"]
     answer: 0
     explain: La luz blanca (fija o intermitente) autoriza el paso, y solo en las direcciones indicadas.
     cites: ["rvv:70"]
@@ -65,7 +65,7 @@ questions:
   - id: sf-overweg-cola
     type: mc
     prompt: La luz blanca del paso a nivel parpadea, pero la cola de delante te dejaría parado encima de las vías al otro lado. ¿Qué haces?
-    options: ["Espero antes del paso a nivel", "Entro, porque no viene ningún tren", "Entro y acelero para salir pronto", "Entro hasta la mitad y espero ahí"]
+    options: ["Espero antes de las vías del paso a nivel", "Entro, porque no viene ningún tren por las vías", "Entro y acelero para salir pronto de las vías", "Entro hasta la mitad y espero ahí"]
     answer: 0
     explain: La luz blanca dice que no se acerca ningún tren, pero solo puedes entrar en un paso a nivel si puedes seguir de inmediato y dejarlo del todo libre.
     cites: ["rvv:71", "rvv:15a.1"]
@@ -73,7 +73,7 @@ questions:
   - id: sf-brug
     type: mc
     prompt: En un puente móvil la luz está roja. ¿Qué haces?
-    options: ["Me detengo", "Paso si no hay ningún barco a la vista", "Paso con precaución a baja velocidad", "Paso si la barrera todavía está levantada"]
+    options: ["Me detengo y espero a que cambie la luz", "Paso si no hay ningún barco a la vista del puente", "Paso con precaución a baja velocidad por el puente", "Paso si la barrera todavía está levantada"]
     answer: 0
     explain: "Rojo o rojo intermitente en un bruglicht: detenerse."
     cites: ["rvv:72"]
@@ -81,7 +81,7 @@ questions:
   - id: sf-amarillo-intermitente
     type: mc
     prompt: El semáforo de un cruce muestra solo amarillo intermitente. ¿Qué haces?
-    options: ["Extremo la precaución, porque señala un punto peligroso", "Me detengo como con el rojo", "Me detengo como con un amarillo normal", "Cedo el paso a todos los demás"]
+    options: ["Extremo la precaución: es un punto peligroso", "Me detengo como si fuera un semáforo en rojo", "Me detengo como con un amarillo normal fijo", "Cedo el paso a todo el tráfico que venga"]
     answer: 0
     explain: Amarillo intermitente señala un punto peligroso y pide precaución; no es una orden de detenerte.
     cites: ["rvv:75"]

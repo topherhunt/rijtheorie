@@ -24,11 +24,7 @@ questions:
   - id: rotonde-tres-cuartos
     type: mc
     prompt: Te acercas a una rotonda y tu salida es la tercera, tres cuartos de vuelta. ¿Qué señalizas al acercarte?
-    options:
-      - Intermitente izquierdo, y después señalizas la salida
-      - Intermitente derecho, como en cualquier salida
-      - Ningún intermitente hasta tener la salida a la vista
-      - Los dos intermitentes a la vez
+    options: ["Intermitente izquierdo, y después señalizas la salida", "Intermitente derecho, igual que en cualquier salida de la rotonda", "Ningún intermitente hasta tener la salida a la vista", "Los dos intermitentes a la vez, como aviso de rotonda"]
     answer: 0
     explain: Para tres cuartos de vuelta, intermitente izquierdo al acercarte; para la primera salida sería el derecho. Luego señalizas la salida.
     cites: ["cbr-rijprocedure:3.6"]
@@ -36,11 +32,7 @@ questions:
   - id: especial-rotonde-carril-media
     type: mc
     prompt: Rotonda de tres carriles sin flechas. Vas a tomar la segunda salida (media vuelta). ¿Cómo usas los carriles?
-    options:
-      - Entras por el carril medio y, pasada la primera salida, pasas al derecho
-      - Entras por el carril derecho y sigues por él
-      - Entras por el carril izquierdo y pasas al medio en la salida
-      - Entras por el carril medio y sales desde él
+    options: ["Entras por el carril medio y, pasada la primera salida, pasas al derecho", "Entras por el carril derecho y sigues por él hasta salir en la segunda", "Entras por el carril izquierdo y pasas al medio tras la primera salida", "Entras por el carril medio y te quedas en él hasta salir en la segunda"]
     answer: 0
     explain: "Media vuelta: de preferencia el carril medio y, pasada la primera salida, el derecho."
     cites: ["cbr-rijprocedure:3.6"]
@@ -48,11 +40,7 @@ questions:
   - id: rotonde-carril-completa
     type: mc
     prompt: Rotonda de tres carriles sin flechas. Das una vuelta completa. ¿En qué orden usas los carriles?
-    options:
-      - Derecho, medio, izquierdo
-      - Izquierdo, medio, derecho
-      - Solo el medio
-      - Solo el izquierdo
+    options: ["Derecho, luego medio y por último el izquierdo", "Izquierdo, luego medio y por último derecho", "Solo el carril medio hasta salir", "Solo el carril izquierdo hasta salir"]
     answer: 1
     explain: Primero el carril izquierdo, luego el medio (pasada la salida de media vuelta) y por último el derecho (pasada la de tres cuartos).
     cites: ["cbr-rijprocedure:3.6"]
@@ -60,10 +48,7 @@ questions:
   - id: rotonde-no-siempre
     type: mc
     prompt: Llegas a una rotonda de tres carriles con semáforos y flechas pintadas en el pavimento. ¿Aplicas el procedimiento de carriles de las rotondas sin flechas?
-    options:
-      - No, usas el carril que corresponde a tu dirección según las flechas
-      - Sí, es el procedimiento general de todas las rotondas
-      - Sí, pero solo si no hay tráfico intenso
+    options: ["No, usas el carril que corresponde a tu dirección según las flechas", "Sí, es el procedimiento general de todas las rotondas", "Sí, pero solo si no hay tráfico intenso en la rotonda ahora"]
     answer: 0
     explain: El procedimiento no vale en plazas asimétricas, rotondas sin carriles, rotondas con semáforos y flechas, con tráfico intenso ni para todos los vehículos. Con flechas, usas el carril de tu dirección.
     cites: ["cbr-rijprocedure:3.6"]

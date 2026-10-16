@@ -10,7 +10,7 @@ questions:
   - id: triangulo-cuando
     type: mc
     prompt: ¿Cuándo exige la ley colocar el triángulo?
-    options: [Siempre que te detienes en cualquier lugar, Cuando el vehículo parado es un obstáculo que los demás no pueden ver a tiempo y no llevas luces de emergencia, Solo de noche, Solo en una autosnelweg]
+    options: ["Siempre que te detienes, aunque sea en un lugar bien visible", "Si es un obstáculo no visible a tiempo y no hay luces de emergencia", "Solo de noche, aunque lleves las luces de emergencia puestas", "Solo en una autosnelweg, donde el tráfico va más rápido"]
     answer: 1
     explain: Artículo 58 lid 1 y 3. Si es un obstáculo no visible a tiempo, se señala con triángulo, salvo que lleves luces de emergencia intermitentes.
     cites: ["rvv:58.1", "rvv:58.3"]
@@ -34,7 +34,7 @@ questions:
   - id: averia-triangulo-sin-luces
     type: mc
     prompt: De noche tu auto se queda sin batería en la calzada, justo después de una curva, y las luces de emergencia no se encienden. Es un obstáculo que no se ve a tiempo. ¿Qué exige la ley?
-    options: ["Colocar el triángulo sobre la vía a unos 30 m hacia el tráfico que se acerca", "Nada, porque ya llamaste a la grúa", "Poner el triángulo pegado al auto para no alejarte", "Solo hace falta si es una autosnelweg"]
+    options: ["Triángulo en la vía a unos 30 m, hacia el tráfico que llega", "Nada especial, porque ya llamaste a la grúa y viene hacia ti", "Poner el triángulo pegado al auto para no alejarte de él", "Poner el triángulo solo si estás en una autosnelweg"]
     answer: 0
     explain: El deber de triángulo solo se anula si el vehículo lleva luces de emergencia intermitentes. Sin ellas, un obstáculo que no se ve a tiempo se señala con el triángulo a unos 30 m.
     cites: ["rvv:58.1", "rvv:58.2", "rvv:58.3"]

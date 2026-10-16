@@ -59,7 +59,7 @@ questions:
   - id: bocina-primero-evitar
     type: mc
     prompt: Un ciclista delante de ti, a la derecha, empieza a desviarse hacia tu carril sin mirar. Aún tienes tiempo y espacio. ¿Qué haces primero?
-    options: [Intentar quitar el peligro bajando la velocidad o esquivando, Tocar la bocina de inmediato, Hacer ráfagas con las luces, Acelerar para pasar antes]
+    options: ["Bajar la velocidad o esquivar al ciclista", "Tocar la bocina de inmediato para avisarle", "Hacer ráfagas con las luces para que me vea", "Acelerar para pasarlo antes de que se desvíe"]
     answer: 0
     explain: El CBR espera que primero intentes quitar el peligro (reducir la velocidad, esquivar, parar). La bocina o la ráfaga se reservan para cuando prevés que eso no bastará, y solo para evitar un peligro inminente.
     cites: ["cbr-rijprocedure:2", "rvv:28"]

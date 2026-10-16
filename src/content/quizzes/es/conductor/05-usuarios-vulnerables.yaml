@@ -2,7 +2,7 @@ questions:
   - id: vulnerables-pelota
     type: mc
     prompt: Circulas por una calle residencial y ves rodar una pelota desde entre dos coches aparcados hacia la calzada. Hay niños en la acera. ¿Qué haces?
-    options: ["Mantengo la velocidad: una pelota no es un peatón", "Suelto el acelerador y me preparo a frenar, porque puede salir un niño tras ella", "Toco la bocina para que los niños se queden donde están", "Acelero para pasar antes de que llegue a la calzada"]
+    options: ["Mantengo la velocidad: una pelota sola no es un peatón ni un peligro", "Suelto el acelerador y me preparo a frenar: puede salir un niño", "Toco la bocina para que los niños se queden quietos en la acera", "Acelero para pasar antes de que la pelota llegue a la calzada"]
     answer: 1
     explain: Los niños son impredecibles. La pelota anuncia que puede salir uno corriendo tras ella; hay que anticiparse y no esperar a verlo en la calzada.
     cites: ["cbr-rijprocedure:2"]
@@ -10,7 +10,7 @@ questions:
   - id: vulnerables-cebra-semaforo-rojo
     type: mc
     prompt: Llegas a un paso de peatones. El semáforo de peatones está en rojo, pero un peatón ya ha empezado a cruzar. ¿Qué haces?
-    options: ["Sigo sin cambiar nada: el peatón cruza con el semáforo en rojo", "Espero a que pase, porque no puedo ponerlo en peligro aunque el semáforo esté en rojo", "Hago ráfagas de luces para que vuelva a la acera", "Acelero para pasar antes de que llegue a mi carril"]
+    options: ["Sigo sin cambiar nada: el peatón cruza con el semáforo en rojo, es su problema", "Espero a que pase: no debo ponerlo en peligro aunque esté en rojo", "Hago ráfagas de luces para que se detenga o vuelva a la acera", "Acelero un poco para pasar antes de que llegue a mi carril"]
     answer: 1
     explain: Con el semáforo de peatones en rojo no rige la obligación especial del artículo 49, pero el artículo 5 sigue vigente y te prohíbe causar peligro. Por eso no sigues contra alguien que ya está cruzando.
     cites: ["rvv:49.4", "wvw:5"]
@@ -25,7 +25,7 @@ questions:
   - id: vulnerables-giro-secuencia
     type: mc
     prompt: Vas a girar a la derecha. ¿En qué orden miras?
-    options: ["Retrovisor interior, hacia delante, retrovisor exterior derecho, por encima del hombro derecho", "Por encima del hombro derecho, retrovisor exterior derecho, hacia delante, retrovisor interior", "Hacia delante, retrovisor interior, por encima del hombro derecho, retrovisor exterior derecho", "Retrovisor exterior derecho, retrovisor interior, hacia delante, por encima del hombro derecho"]
+    options: ["Retrovisor interior, hacia delante, retrovisor exterior derecho, por encima del hombro derecho", "Por encima del hombro derecho, retrovisor exterior derecho, hacia delante, retrovisor interior", "Hacia delante, luego retrovisor interior, por encima del hombro derecho, retrovisor exterior derecho", "Retrovisor exterior derecho, retrovisor interior, hacia delante, por encima del hombro derecho"]
     answer: 0
     explain: El orden del CBR para girar a la derecha termina con el hombro derecho, justo antes de girar, porque es lo que permite ver el tráfico que va pegado a tu lado.
     cites: ["cbr-rijprocedure:3"]

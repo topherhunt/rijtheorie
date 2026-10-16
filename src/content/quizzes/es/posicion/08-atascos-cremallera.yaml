@@ -40,7 +40,7 @@ questions:
   - id: atascos-ritsen-carril-termina
     type: mc
     prompt: Dos carriles se juntan en uno; el tuyo sigue y el otro termina. Hay cola. Un auto del otro carril quiere entrar delante de ti. ¿Qué pide la Rijprocedure B?
-    options: ["Dejo pasar uno por uno, alternando, sin cerrarle el paso", "Acorto la distancia con el de delante para que no entre", "Le toco la bocina para que espere detrás de todos", "Me paso yo al otro carril"]
+    options: ["Dejo pasar uno por uno, alternando, sin cerrar el paso", "Acorto la distancia con el de delante para que no entre", "Le toco la bocina para que espere detrás de todos", "Me paso yo al otro carril para evitar el conflicto"]
     answer: 0
     explain: 'Por ley quien cambia de carril cede (art. 54), pero la Rijprocedure B pide ritsen: dejar entrar de uno en uno. Cerrar el paso bloquea a todos y no es comportamiento social.'
     cites: ["cbr-rijprocedure:2", "rvv:54"]
@@ -48,7 +48,7 @@ questions:
   - id: atascos-ritsen-ayuda
     type: mc
     prompt: Circulas por la calzada principal de una autosnelweg y ves en el carril de incorporación un camión que no logra coger velocidad. ¿Qué haces si puedes?
-    options: [Ajusto mi velocidad o me muevo a la izquierda para dejarle sitio, Acelero para que no entre, Freno de golpe en mi carril, Toco la bocina para que se detenga]
+    options: ["Ajusto mi velocidad o me muevo a la izquierda", "Acelero para pasar antes de que él logre entrar", "Freno de golpe en mi carril hasta quedar parado", "Toco la bocina para que se detenga y espere"]
     answer: 0
     explain: La Rijprocedure B pide ayudar a incorporarse al tráfico pesado que no coge velocidad, ajustando tu velocidad o moviéndote a la izquierda. La obligación legal de ceder sigue siendo de quien se incorpora.
     cites: ["cbr-rijprocedure:2", "cbr-rijprocedure:3.2"]

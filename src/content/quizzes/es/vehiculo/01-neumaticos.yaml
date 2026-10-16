@@ -1,9 +1,9 @@
 questions:
-  - id: neumaticos-minimo-medido
+  - id: neumaticos-minimo-cambiar
     type: yesno
-    prompt: Mides el dibujo de un neumático con un medidor y en una de las ranuras principales marca 1,4 mm. ¿Puedes seguir circulando con él?
-    answer: false
-    explain: La profundidad de las ranuras principales debe ser de al menos 1,6 mm en toda la circunferencia. Con 1,4 mm el neumático ya no cumple.
+    prompt: "Mides el dibujo de un neumático con un medidor y en una de las ranuras principales marca 1,4 mm. ¿Debes cambiarlo antes de seguir circulando?"
+    answer: true
+    explain: "La profundidad de las ranuras principales debe ser de al menos 1,6 mm en toda la circunferencia. Con 1,4 mm el neumático ya no cumple y hay que cambiarlo."
     cites: ["rv:5.2.27"]
 
   - id: neumaticos-revision-cuatro
@@ -17,43 +17,43 @@ questions:
   - id: neumaticos-circunferencia
     type: mc
     prompt: El dibujo mide 3 mm en casi todo el neumático pero solo 1 mm en una parte de la circunferencia. ¿Cumple?
-    options: ["Sí, porque el promedio es mayor a 1,6 mm", "No, el mínimo se exige en toda la circunferencia", "Sí, si el neumático es nuevo", "Sí, si la parte gastada es pequeña"]
+    options: ["Sí, porque el promedio de todo el neumático supera 1,6 mm", "No, el mínimo de 1,6 mm vale en toda la circunferencia", "Sí, porque 1 mm en una parte tan pequeña no importa", "Sí, si el neumático es nuevo y el resto tiene buen dibujo"]
     answer: 1
     explain: El mínimo de 1,6 mm rige sobre toda la circunferencia del dibujo.
     cites: ["rv:5.2.27"]
 
-  - id: neumaticos-carcasa-dibujo-bueno
+  - id: neumaticos-carcasa-cambiar
     type: yesno
-    prompt: Un neumático tiene 5 mm de dibujo pero un corte en el costado deja ver la carcasa. ¿Puedes circular con él porque el dibujo es profundo?
-    answer: false
+    prompt: "Un neumático tiene 5 mm de dibujo pero un corte en el costado deja ver la carcasa. ¿Hay que cambiarlo aunque el dibujo sea profundo?"
+    answer: true
     explain: Los requisitos son independientes. Aunque el dibujo supere 1,6 mm, el neumático no puede tener daños que dejen ver la carcasa.
     cites: ["rv:5.2.27"]
 
-  - id: neumaticos-recortado
+  - id: neumaticos-recortado-incumple
     type: yesno
-    prompt: ¿Puedes recortar a mano un neumático gastado para recuperar dibujo?
-    answer: false
+    prompt: "Un neumático normal, sin la marca \"regroovable\", está gastado. ¿Incumples los requisitos si lo recortas a mano para recuperar dibujo?"
+    answer: true
     explain: Los neumáticos no pueden estar recortados, salvo los marcados "regroovable" y mientras no se vea la carcasa.
     cites: ["rv:5.2.27"]
 
-  - id: neumaticos-regroovable-carcasa
+  - id: neumaticos-regroovable-incumple
     type: yesno
-    prompt: Un neumático marcado "regroovable" fue recortado y ahora se ve la carcasa en el fondo de las ranuras. ¿Cumple?
-    answer: false
+    prompt: "Un neumático marcado \"regroovable\" fue recortado y ahora se ve la carcasa en el fondo de las ranuras. ¿Incumple los requisitos?"
+    answer: true
     explain: El recorte solo se permite en neumáticos marcados regroovable y siempre que la carcasa no sea visible. Que esté marcado no basta.
     cites: ["rv:5.2.27"]
 
-  - id: neumaticos-sentido
+  - id: neumaticos-sentido-incumple
     type: yesno
-    prompt: Montas un neumático con una flecha de sentido de giro de modo que la flecha apunta contra el giro de la rueda al avanzar. ¿Cumple?
-    answer: false
+    prompt: "Montas un neumático con una flecha de sentido de giro de modo que la flecha apunta contra el giro de la rueda al avanzar. ¿Incumple los requisitos?"
+    answer: true
     explain: El sentido indicado en el neumático debe coincidir con el giro de la rueda en marcha hacia adelante.
     cites: ["rv:5.2.27"]
 
-  - id: neumaticos-misma-medida
+  - id: neumaticos-misma-medida-eje
     type: yesno
-    prompt: Cambias un neumático del eje delantero y montas uno de otra medida que el de su lado. No es la rueda de repuesto de emergencia. ¿Cumple?
-    answer: false
+    prompt: "Cambias un neumático del eje delantero y no usas una rueda de emergencia o de repuesto. ¿Debe tener la misma medida que el neumático del otro lado de ese eje?"
+    answer: true
     explain: Los neumáticos de un mismo eje deben tener la misma medida, salvo que sea una rueda de emergencia o de repuesto.
     cites: ["rv:5.2.27"]
 
@@ -74,7 +74,7 @@ questions:
   - id: neumaticos-prestar-auto
     type: mc
     prompt: Tu auto tiene un neumático con 1,2 mm de dibujo. Se lo prestas a un amigo y él conduce. ¿Quién infringe?
-    options: ["Solo el amigo, que conduce", "Solo tú, que eres el dueño", "Los dos, el amigo por conducirlo y tú por dejarlo conducir", "Nadie, porque el amigo no sabía"]
+    options: ["Solo el amigo, que es quien lo conduce", "Solo tú, porque eres el dueño del auto", "Los dos: él por conducirlo y tú por dejarlo", "Nadie, el amigo no sabía del neumático"]
     answer: 2
     explain: Está prohibido conducir un vehículo que no cumple los requisitos y también está prohibido que el dueño o poseedor lo deje conducir.
     cites: ["rv:5.1.1", "rv:5.2.27"]

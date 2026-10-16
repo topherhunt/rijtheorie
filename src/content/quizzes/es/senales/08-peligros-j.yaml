@@ -4,16 +4,16 @@ questions:
     type: mc
     prompt: Una señal J22 te anunció un paso de peatones. Al llegar, un peatón está a punto de cruzar. ¿Qué haces?
     sign: J22
-    options: ["Le dejo pasar", "Paso rápido antes de que empiece a cruzar", "Toco la bocina para que espere"]
+    options: ["Le dejo pasar y sigo cuando haya cruzado", "Paso rápido antes de que cruce", "Toco la bocina para que me deje pasar"]
     answer: 0
     explain: Debes dejar pasar a los peatones que cruzan o están a punto de cruzar en el paso de peatones (art. 49.2). La bocina solo se usa para evitar un peligro inminente (art. 28), no para apurar a nadie.
     cites: ["rvv:49.2", "rvv:28", "rvv:bijlage1.J22"]
 
-  - id: j-j10-cola
+  - id: j-j10-esperar
     type: yesno
-    prompt: Te anuncia J10 un paso a nivel. Las barreras están arriba, pero justo después de las vías hay una cola y tu auto no cabría. ¿Puedes entrar y esperar sobre las vías a que la cola avance?
+    prompt: "Te anuncia J10 un paso a nivel. Las barreras están arriba, pero justo después de las vías hay una cola y tu auto no cabría. ¿Debes esperar antes de las vías?"
     sign: J10
-    answer: false
+    answer: true
     explain: Solo puedes entrar si puedes seguir sin parar y despejar las vías por completo (art. 15a.1), y no puedes detenerte sobre un paso a nivel (art. 23.1.a). Esperas antes de las vías.
     cites: ["rvv:15a.1", "rvv:23.1.a", "rvv:bijlage1.J10"]
 
@@ -30,7 +30,7 @@ questions:
     type: mc
     prompt: J33 te avisa de un atasco más adelante. La carretera hace una curva y no ves dónde termina la cola. ¿Cómo debes ir?
     sign: J33
-    options: ["A una velocidad con la que puedas detenerte dentro de la distancia que ves libre", "A la velocidad máxima de la vía, porque el triángulo solo avisa", "Despacio solo si veo ya la cola"]
+    options: ["A una velocidad que me deje parar en la distancia que veo libre", "A la velocidad máxima de la vía, porque el triángulo solo avisa de la cola", "Más despacio, pero solo cuando ya veo el final de la cola"]
     answer: 0
     explain: Debes poder detenerte dentro de la distancia que ves libre (art. 19). El triángulo no impone una velocidad, pero esa regla te obliga a frenar hasta poder parar antes de la cola que aún no ves.
     cites: ["rvv:19", "rvv:bijlage1.J33"]
@@ -39,7 +39,7 @@ questions:
     type: mc
     prompt: Circulas en auto por una carretera con máximo 80 km/h y ves J2, curva a la derecha. Un seto alto te deja ver solo 40 metros de carretera libre. ¿Qué haces?
     sign: J2
-    options: ["Reduzco hasta poder detenerme dentro de lo que veo libre", "Mantengo 80, porque es el máximo permitido", "Toco la bocina antes de la curva y sigo a 80", "Reduzco solo si veo a alguien de frente"]
+    options: ["Reduzco hasta poder detenerme dentro de lo que veo libre", "Mantengo 80, porque es el máximo permitido", "Toco la bocina antes de entrar en la curva y sigo a 80", "Reduzco solo cuando veo a alguien de frente"]
     answer: 0
     explain: Debes poder detener el auto dentro de la distancia que ves libre (art. 19), y el límite de 80 no te autoriza a ir tan rápido. La bocina solo vale para un peligro inminente (art. 28), y esperar a ver a alguien ya sería tarde.
     cites: ["rvv:19", "rvv:28", "rvv:bijlage1.J2"]

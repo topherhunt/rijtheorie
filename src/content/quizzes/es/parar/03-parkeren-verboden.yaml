@@ -1,27 +1,23 @@
 questions:
-  - id: parkeerverbod-inrit
+  - id: parkeerverbod-inrit-prohibido
     type: yesno
-    prompt: Solo queda un hueco libre, justo delante de la salida de un garaje, y vas a dejar el auto allí una hora. ¿Puedes?
-    answer: false
+    prompt: "Solo queda un hueco libre, justo delante de la salida de un garaje, y vas a dejar el auto allí una hora. ¿Lo prohíbe la ley aunque no haya otro sitio?"
+    answer: true
     explain: "Estacionar delante de una inrit o una uitrit está prohibido, aunque no haya otro sitio. El motivo es de sentido común: bloquearías la salida de quien vive o trabaja allí."
     cites: ["rvv:24.1"]
 
   - id: parkeerverbod-voorrangsweg
     type: mc
     prompt: Conduces fuera de zona urbana por una voorrangsweg y quieres dejar el auto diez minutos en la calzada para comer algo. ¿Qué dice el artículo 24?
-    options:
-      - Está prohibido estacionar en la calzada de una voorrangsweg fuera de zona urbana
-      - Está permitido si pones las luces de emergencia
-      - Está permitido porque son solo diez minutos
-      - Está permitido de día, y prohibido de noche
+    options: ["Está prohibido estacionar en la calzada de una voorrangsweg", "Está permitido si pones las luces de emergencia al parar", "Está permitido porque son solo diez minutos y no molestas", "Está permitido de día, y prohibido solo de noche o con niebla"]
     answer: 0
     explain: Fuera de la zona urbana no puedes estacionar en la calzada de una voorrangsweg. Las luces de emergencia, los diez minutos o la hora del día no cambian la regla.
     cites: ["rvv:24.1"]
 
-  - id: parkeerverbod-laden-tienda
+  - id: parkeerverbod-laden-tienda-prohibido
     type: yesno
-    prompt: En un lugar señalado para cargar y descargar mercancías descargas unas cajas de inmediato. Después dejas allí el auto media hora para hacer compras. ¿Está permitido?
-    answer: false
+    prompt: "En un lugar señalado para cargar y descargar mercancías descargas unas cajas de inmediato. Después dejas allí el auto media hora para hacer compras. ¿Infringes la prohibición de estacionar?"
+    answer: true
     explain: Descargar de inmediato no es parkeren, pero dejar el auto media hora para hacer compras sí lo es, y en un lugar destinado a carga y descarga inmediatas está prohibido estacionar.
     cites: ["rvv:24.1", "rvv:1"]
 
@@ -32,10 +28,10 @@ questions:
     explain: Sin permiso para esa plaza, estacionar en una plaza E9 está prohibido, sea cual sea el tiempo.
     cites: ["rvv:24.1", "rvv:bijlage1.E9"]
 
-  - id: parkeerverbod-cruce-5m
+  - id: parkeerverbod-cruce-5m-prohibido
     type: yesno
-    prompt: Quieres dejar el auto dos horas a 3 m antes de un cruce, lejos de cualquier paso de peatones. ¿Está permitido?
-    answer: false
+    prompt: "Quieres dejar el auto dos horas a 3 m antes de un cruce, lejos de cualquier paso de peatones. ¿Lo prohíbe el artículo 24?"
+    answer: true
     explain: Parkeren a menos de 5 m de un kruispunt está prohibido. Solo podrías detenerte un momento (por ejemplo, para que alguien baje). Dentro del cruce, ni eso.
     cites: ["rvv:24.1", "rvv:23.1"]
 

@@ -23,7 +23,7 @@ questions:
   - id: mv-flechas
     type: mc
     prompt: Estás en un voorsorteerstrook con una flecha a la derecha en un cruce. ¿Qué debes hacer?
-    options: ["Girar a la derecha", "Seguir recto", "Girar a la izquierda", "Elegir la dirección"]
+    options: ["Girar a la derecha", "Seguir recto por el carril", "Girar a la izquierda", "Elegir la dirección que prefiera"]
     answer: 0
     explain: En un cruce sigues la dirección del voorsorteerstrook en que estás.
     cites: ["rvv:78.1"]
@@ -45,7 +45,7 @@ questions:
   - id: mv-haaientanden
     type: mc
     prompt: Delante de ti hay triángulos blancos pintados en el suelo (haaientanden) y por la vía que cruzas viene un coche. ¿Qué haces?
-    options: ["Le cedo el paso", "Paso, porque yo sigo recto", "Paso, porque llegué primero", "Le cedo solo si va por la derecha"]
+    options: ["Le cedo el paso, venga por donde venga", "Paso, porque yo sigo recto y no giro", "Paso, porque llegué antes que él al cruce", "Le cedo solo si va por la derecha"]
     answer: 0
     explain: Los haaientanden mandan ceder el paso a los conductores de la vía que cruzas, vengan por donde vengan y llegues cuando llegues.
     cites: ["rvv:80"]
@@ -64,10 +64,10 @@ questions:
     explain: La línea discontinua solo prohíbe estacionar (art. 24.1). Estacionar no incluye el tiempo necesario para que suba o baje un pasajero (art. 1). Dejar el coche allí un rato sí estaría prohibido.
     cites: ["rvv:24.1", "rvv:1"]
 
-  - id: mv-5m-cruce
+  - id: mv-5m-cruce-prohibido
     type: yesno
-    prompt: Quieres dejar el coche aparcado una hora a 3 m de un cruce, en una calle sin ninguna línea pintada. ¿Puedes?
-    answer: false
+    prompt: "Quieres dejar el coche aparcado una hora a 3 m de un cruce, en una calle sin ninguna línea pintada. ¿Está prohibido?"
+    answer: true
     explain: No puedes estacionar a menos de 5 m de un cruce (art. 24.1), aunque no haya líneas ni señales.
     cites: ["rvv:24.1"]
 

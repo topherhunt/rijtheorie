@@ -40,10 +40,10 @@ questions:
     explain: Con un cartel de días y horas, las reglas del disco solo valen en esos días y horas. El domingo no rigen.
     cites: ["rvv:25.5"]
 
-  - id: schijf-e6-sin-tarjeta
+  - id: schijf-e6-sin-tarjeta-prohibido
     type: yesno
-    prompt: Hay una plaza E6 libre junto a la tienda. No tienes tarjeta de estacionamiento para discapacitados y solo vas a quedarte cinco minutos. ¿Puedes estacionar allí?
-    answer: false
+    prompt: "Hay una plaza E6 libre junto a la tienda. No tienes tarjeta de estacionamiento para discapacitados y solo vas a quedarte cinco minutos. ¿Infringes la regla si estacionas allí?"
+    answer: true
     explain: En una plaza E6 solo puede estacionar un gehandicaptenvoertuig, un auto con tarjeta válida y visible (para el transporte de la persona titular) o el vehículo para el que está reservada. Que sean cinco minutos no cambia la lista.
     cites: ["rvv:26.1"]
 
@@ -72,11 +72,7 @@ questions:
     type: mc
     prompt: Con la tarjeta válida, para llevar a su titular, estacionas dos horas bajo una señal E1 (parkeerverbod) en tu lado de la calle. ¿Qué es correcto?
     sign: E1
-    options:
-      - Está permitido si muestras un disco con la hora de inicio
-      - Está permitido sin disco, porque la tarjeta basta
-      - Está prohibido, porque E1 vale para todos
-      - Está permitido solo los primeros diez minutos
+    options: ["Está permitido con disco puesto a la hora de inicio", "Está permitido sin disco, porque la tarjeta basta por sí sola", "Está prohibido, porque E1 vale para todos los vehículos", "Está permitido solo durante los primeros diez minutos"]
     answer: 0
     explain: Con la tarjeta y para ese transporte, la señal E1 no se aplica si no estacionas más de tres horas, y en esos casos debes mostrar el disco con la hora de inicio. Sin disco o con más de tres horas, no cumples.
     cites: ["rvv:85.1", "rvv:85.3", "rvv:85.4"]

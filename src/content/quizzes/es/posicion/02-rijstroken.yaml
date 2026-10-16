@@ -2,7 +2,7 @@ questions:
   - id: rijstroken-carril-defecto
     type: mc
     prompt: La calzada tiene tres carriles en tu sentido y no hay atasco ni vas a adelantar. ¿Qué carril sigues en principio según la Rijprocedure B?
-    options: [El del medio para tener salida a ambos lados, El carril derecho, El carril izquierdo porque vas rápido, Cualquiera según tu velocidad]
+    options: ["El del medio para tener salida a ambos lados", "El carril derecho, salvo que vayas a adelantar", "El carril izquierdo porque vas rápido", "Cualquiera según tu velocidad"]
     answer: 1
     explain: La Rijprocedure B dice que, si la calzada está dividida en carriles, se sigue en principio el carril derecho (también si hay un carril de hora punta abierto). Ir en el del medio "por si acaso" bloquea a quien quiere pasar.
     cites: ["cbr-rijprocedure:3.2", "rvv:3.1"]
@@ -10,7 +10,7 @@ questions:
   - id: rijstroken-niebla
     type: mc
     prompt: Conduces por una autopista de tres carriles con niebla densa y lluvia fuerte. ¿Qué carril es mejor según la Rijprocedure B?
-    options: ["El izquierdo, para adelantar rápido y salir de la niebla", "El del medio, para estar lejos de los bordes", "El derecho, por la posibilidad de escape", "El que lleve más tráfico, para ir acompañado"]
+    options: ["El izquierdo, para adelantar y salir de la niebla", "El del medio, para estar lejos de los bordes", "El derecho, por la posibilidad de escape si hay peligro", "El que lleve más tráfico, para ir acompañado"]
     answer: 2
     explain: Con niebla, nieve, lluvia fuerte, oscuridad o agua que salpica se usa lo más posible el carril derecho, porque ofrece una posibilidad de escape.
     cites: ["cbr-rijprocedure:3.2"]
@@ -18,37 +18,37 @@ questions:
   - id: rijstroken-weefvak
     type: mc
     prompt: Tu calzada se divide con una línea de bloques y señales de dirección sobre los carriles. Quieres seguir recto. ¿Qué carril sigues en principio?
-    options: [El carril más a la izquierda, El carril más a la derecha de la dirección que sigues, El carril del medio, Cualquiera pisando la línea de bloques]
+    options: ["El carril central, el que da más margen a los dos lados", "El carril más a la derecha de la dirección que sigues", "El carril más a la izquierda de esa dirección, para adelantar", "Cualquier carril, pisando la línea de bloques si hace falta"]
     answer: 1
     explain: En un weefvak se sigue en principio el carril más a la derecha de la dirección que vas a seguir. No se circula por la línea de bloques.
     cites: ["cbr-rijprocedure:3.2"]
 
-  - id: rijstroken-atasco-excepcion
+  - id: rijstroken-atasco-izquierda
     type: yesno
-    prompt: Hay atasco y la calzada tiene dos carriles en tu sentido. El carril izquierdo avanza un poco más rápido que el derecho. ¿Estás obligado a quedarte en el carril más a la derecha?
-    answer: false
-    explain: En fileverkeer no es obligatorio seguir el carril más a la derecha, siempre que haya carriles del mismo sentido.
+    prompt: Hay atasco y la calzada tiene dos carriles en tu sentido. El carril izquierdo avanza un poco más rápido que el derecho. ¿Puedes ir por el carril izquierdo mientras dure el atasco?
+    answer: true
+    explain: Sí. En fileverkeer no es obligatorio seguir el carril más a la derecha, siempre que haya carriles del mismo sentido.
     cites: ["rvv:13.1"]
 
   - id: rijstroken-camion
     type: mc
     prompt: Conduces un camión por una autosnelweg con tres carriles en tu sentido. No vas a cambiar de dirección. ¿Qué carriles puedes usar?
-    options: [Los tres, Solo los dos de la derecha, Solo el de la derecha, Solo el de la izquierda]
+    options: ["Cualquiera de los tres carriles", "Solo los dos de la derecha", "Solo el carril de la derecha", "Solo los dos de la izquierda"]
     answer: 1
     explain: En una autosnelweg con tres o más carriles, los camiones solo pueden usar los dos más a la derecha, salvo que deban preseleccionar.
     cites: ["rvv:43.4"]
 
-  - id: rijstroken-remolque
+  - id: rijstroken-remolque-izquierda
     type: yesno
-    prompt: Conduces un auto con un remolque. El conjunto mide más de 7 metros. En una autosnelweg de tres carriles, ¿puedes usar el carril izquierdo?
-    answer: false
-    explain: La prohibición del art. 43.4 afecta también a los conjuntos de vehículos con una longitud total de más de 7 metros, no solo a los camiones.
+    prompt: Conduces un auto con un remolque. El conjunto mide más de 7 metros. En una autosnelweg de tres carriles, ¿tienes prohibido usar el carril izquierdo?
+    answer: true
+    explain: Sí. La prohibición del art. 43.4 afecta también a los conjuntos de vehículos con una longitud total de más de 7 metros, no solo a los camiones.
     cites: ["rvv:43.4"]
 
   - id: rijstroken-camion-giro-izquierda
     type: mc
     prompt: Conduces un camión por el carril central de una autosnelweg de tres carriles. En 500 metros tu salida está a la izquierda. ¿Qué haces?
-    options: [Sigues en el carril central hasta pasar la salida, Pasas al carril izquierdo porque tienes que preseleccionar, Pasas al carril izquierdo solo si no hay coches, Tomas la salida desde el carril derecho]
+    options: ["Sigues en el carril central y sales en el último momento", "Pasas al carril izquierdo, porque debes preseleccionar", "Pasas al carril izquierdo solo si no viene ningún auto", "Tomas la salida cruzando desde el carril derecho"]
     answer: 1
     explain: La prohibición de usar el carril izquierdo no vale cuando tienes que preseleccionar (voorsorteren). Salir a la izquierda es preseleccionar; la salida desde otro carril no es posible sin cruzar el tráfico.
     cites: ["rvv:43.4"]
@@ -65,7 +65,7 @@ questions:
     type: mc
     prompt: Una autosnelweg de dos carriles tiene un spitsstrook abierto (C23-01) a la derecha. No hay atasco ni vas a adelantar. ¿Qué carril sigues en principio según la Rijprocedure B?
     sign: C23-01
-    options: [El carril izquierdo, "El carril derecho, incluido el spitsstrook abierto", Solo los dos carriles de la izquierda, Cualquiera según tu velocidad]
+    options: ["El carril izquierdo, para adelantar cuando haga falta", "El carril derecho, incluido el spitsstrook abierto", "Solo los dos carriles de la izquierda, sin el spitsstrook", "El carril central, sea cual sea tu velocidad"]
     answer: 1
     explain: Si la calzada está dividida en carriles se sigue en principio el carril derecho, y eso vale también para un spitsstrook abierto.
     cites: ["cbr-rijprocedure:3.2", "rvv:bijlage1.C23-01"]

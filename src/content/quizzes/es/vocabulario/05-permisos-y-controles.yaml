@@ -2,7 +2,7 @@ questions:
   - id: permisos-y-controles-apk
     type: mc
     prompt: ¿Qué significa "APK-gekeurd"?
-    options: [Con la inspección técnica aprobada, Con el seguro pagado, Con permiso nuevo, Recién matriculado]
+    options: [Con la inspección técnica aprobada, Con el seguro obligatorio al día, Con el permiso renovado, Recién matriculado en el RDW]
     answer: 0
     explain: APK-gekeurd significa que pasó la inspección APK.
     cites: ["cbr-examenplan:4"]
@@ -11,7 +11,7 @@ questions:
   - id: permisos-y-controles-lema
     type: mc
     prompt: ¿Qué es la EMA/LEMA?
-    options: [Un curso obligatorio sobre alcohol y tráfico, Un curso sobre velocidad, Una prueba de drogas, Un permiso]
+    options: [Un curso obligatorio sobre alcohol y tráfico, Un curso obligatorio de velocidad y tráfico, Una prueba de drogas en el control, Un permiso para conducir tras una condena]
     answer: 0
     explain: LEMA/EMA es la Educatieve maatregel alcohol en verkeer.
     cites: ["cbr-examenplan:4"]
@@ -20,7 +20,7 @@ questions:
   - id: permisos-y-controles-pruebas-obligadas
     type: mc
     prompt: En un control, ¿a qué pruebas estás obligado a colaborar ante la primera orden de un agente competente?
-    options: [A la blaastest y a la speekseltest, Solo a la blaastest, Solo a la speekseltest, A ninguna sin orden de un juez]
+    options: [A la blaastest y a la speekseltest, "Solo a la blaastest, no a la speekseltest", Solo a la speekseltest, A ninguna sin orden de un juez]
     answer: 0
     explain: El art. 160.5 obliga a colaborar con el examen de aliento y con el de saliva, y a seguir las indicaciones del agente. No hace falta ninguna orden judicial.
     cites: ["wvw:160.5"]
@@ -28,7 +28,7 @@ questions:
   - id: permisos-y-controles-rijverbod-sientes-bien
     type: mc
     prompt: La policía te impone un rijverbod por drogas. Una hora después te sientes bien. ¿Puedes conducir?
-    options: ["Sí, porque ya te sientes bien", "No, mientras dure el rijverbod", "Sí, si conduces despacio", "Sí, si te acompaña otro conductor"]
+    options: ["Sí, porque ya te sientes bien", "No: sigue el rijverbod", "Sí, si conduces despacio", "Sí, si te acompaña otro conductor"]
     answer: 1
     explain: Durante el tiempo que dura el rijverbod (como máximo 24 horas) está prohibido conducir, aunque te sientas bien.
     cites: ["wvw:162"]
@@ -41,17 +41,17 @@ questions:
     explain: El rijverbod dura el tiempo en que se espera que dure ese estado, como máximo 24 horas. No depende de un curso ni de un juez.
     cites: ["wvw:162"]
 
-  - id: permisos-y-controles-rijontzegging-agente
+  - id: permisos-y-controles-rijverbod-agente
     type: yesno
-    prompt: Un agente te para por conducir bajo los efectos del alcohol. ¿Puede imponerte en ese momento una rijontzegging?
-    answer: false
-    explain: La rijontzegging es una pena que se impone al condenar por una infracción. Lo que sí puede imponer un agente en el momento es un rijverbod de hasta 24 horas.
+    prompt: Un agente te para por conducir bajo los efectos del alcohol. ¿Puede imponerte en ese momento un rijverbod, sin esperar a ninguna condena?
+    answer: true
+    explain: Lo que un agente puede imponer en el momento es un rijverbod de hasta 24 horas. La rijontzegging, en cambio, es una pena que solo se impone al condenar por una infracción.
     cites: ["wvw:179", "wvw:162"]
 
   - id: permisos-y-controles-rijontzegging-condena
     type: mc
     prompt: Tras una condena por conducir ebrio, se te retira el derecho a conducir durante dos años. ¿Cómo se llama esa medida?
-    options: [Una rijontzegging, Un rijverbod, Una APK, Una EMA]
+    options: [Una rijontzegging temporal, Un rijverbod impuesto por la policía, Una EMA obligatoria, Una APK extraordinaria]
     answer: 0
     explain: La rijontzegging es la pena que retira la bevoegdheid por un tiempo al condenar por ciertas infracciones. El rijverbod, en cambio, es la prohibición inmediata de hasta 24 horas que impone un agente.
     cites: ["wvw:179", "wvw:162"]

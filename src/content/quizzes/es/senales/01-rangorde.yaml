@@ -2,7 +2,7 @@ questions:
   - id: rangorde-agente-semaforo
     type: mc
     prompt: El semáforo de tu dirección está en verde, pero un agente de policía te hace señal de parar. ¿Qué haces?
-    options: ["Sigues, porque el semáforo está en verde", "Paras, porque la indicación del agente manda sobre el semáforo", "Esperas a que el semáforo cambie a amarillo"]
+    options: ["Sigues, porque el semáforo está en verde", "Paras, porque el agente manda sobre el semáforo", "Sigues con cuidado, porque ya tenías verde"]
     answer: 1
     explain: Las indicaciones de un agente o de un controlador autorizado van por encima de las señales, los semáforos y las reglas.
     cites: ["rvv:84"]
@@ -18,7 +18,7 @@ questions:
     type: mc
     prompt: Estás en una vía con prioridad y llegas a un cruce con el semáforo en rojo. ¿Qué haces?
     sign: B1
-    options: ["Sigues, porque tienes prioridad", "Paras, porque el semáforo manda sobre las señales de prioridad", "Reduces y sigues si no viene nadie"]
+    options: ["Sigues, porque tu vía tiene prioridad", "Paras, porque el semáforo manda sobre B1", "Reduces y sigues si no viene nadie"]
     answer: 1
     explain: Los semáforos van por encima de las señales que regulan la prioridad. Con luz roja, paras aunque la vía tenga prioridad.
     cites: ["rvv:64", "rvv:68.1"]
@@ -36,7 +36,7 @@ questions:
     type: mc
     prompt: Llegas a un cruce de una vía con prioridad (B1). Tu semáforo está en verde y un agente te hace señal de parar. ¿Qué sigues?
     sign: B1
-    options: ["Al agente: paras", "Al semáforo: sigues, porque está en verde", "La señal B1: sigues, porque tienes prioridad"]
+    options: ["Al agente: paras aunque haya verde", "Al semáforo: sigues, porque está en verde", "La señal B1: sigues, porque tienes prioridad"]
     answer: 0
     explain: El agente va por encima del semáforo (art. 84) y el semáforo por encima de la señal de prioridad (art. 64). El agente gana a los dos.
     cites: ["rvv:84", "rvv:64"]
@@ -53,7 +53,7 @@ questions:
   - id: rangorde-marcas-temporales
     type: mc
     prompt: En unas obras hay marcas viales temporales en la calzada que contradicen las marcas antiguas. ¿Cuáles sigues?
-    options: ["Las antiguas, porque llevan más tiempo", "Las temporales, porque mandan sobre las otras marcas en lo incompatible", "La que te parezca más segura"]
+    options: ["Las antiguas, porque llevan más tiempo pintadas", "Las temporales, porque mandan en lo incompatible", "Las que te parezcan más seguras en cada tramo"]
     answer: 1
     explain: Las marcas temporales en la calzada van por encima de las marcas ya existentes, en lo que sean incompatibles.
     cites: ["rvv:63a"]
@@ -62,7 +62,7 @@ questions:
     type: mc
     prompt: Circulas por una vía con la señal B1. En un cruce sin semáforo, un auto sale de una vía lateral por tu derecha. ¿Quién pasa primero?
     sign: B1
-    options: ["Tú, porque tu señal manda sobre la regla de la derecha", "El otro auto, porque viene por tu derecha", "El que llegue primero al cruce"]
+    options: ["Tú, porque B1 manda sobre la regla de la derecha", "El otro auto, porque viene por tu derecha", "El que llegue primero, porque no hay semáforo"]
     answer: 0
     explain: Una señal de prioridad va por encima de la regla general de la derecha (art. 63), así que la regla de la derecha no se aplica en ese cruce y el que viene de la vía lateral debe ceder.
     cites: ["rvv:63", "rvv:bijlage1.B1"]
@@ -71,7 +71,7 @@ questions:
     type: mc
     prompt: Tienes una señal de stop en tu vía, pero un controlador de tráfico autorizado te hace gestos de que avances. ¿Qué haces?
     sign: B7
-    options: ["Paras de todas formas, porque la señal de stop se cumple siempre", "Sigues la indicación del controlador", "Esperas a que el controlador salga del cruce"]
+    options: ["Paras de todas formas, porque el stop se cumple siempre", "Sigues la indicación del controlador, no la señal", "Esperas a que el controlador termine y salga del cruce"]
     answer: 1
     explain: Las indicaciones de un agente o controlador autorizado van por encima de las señales y las reglas.
     cites: ["rvv:84", "rvv:bijlage1.B7"]

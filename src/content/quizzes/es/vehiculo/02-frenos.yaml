@@ -1,22 +1,22 @@
 questions:
-  - id: frenos-fugas
+  - id: frenos-fugas-incumple
     type: yesno
-    prompt: Al revisar tu auto antes de un viaje ves una mancha de líquido de frenos bajo una rueda y el pedal está algo más blando. El resto del sistema parece intacto. ¿Cumple los requisitos?
-    answer: false
+    prompt: "Al revisar tu auto antes de un viaje ves una mancha de líquido de frenos bajo una rueda y el pedal está algo más blando. El resto del sistema parece intacto. ¿Incumple los requisitos?"
+    answer: true
     explain: Las piezas del freno no pueden tener fugas, estar dañadas ni tener corrosión grave. Que el resto parezca bien no compensa la fuga.
     cites: ["rv:5.2.31"]
 
-  - id: frenos-abs-aviso
+  - id: frenos-abs-aviso-reparar
     type: yesno
-    prompt: En un auto de 2020 se enciende el aviso de defecto del ABS. ¿Cumple?
-    answer: false
+    prompt: "En un auto de 2020 se enciende el aviso de defecto del ABS. ¿Hay que repararlo para cumplir los requisitos?"
+    answer: true
     explain: Para autos puestos en uso después de 2017 el aviso del ABS no debe indicar un defecto.
     cites: ["rv:5.2.31"]
 
-  - id: frenos-sin-frenos-no
+  - id: frenos-remolque-750-necesita
     type: yesno
-    prompt: Un remolque de 750 kg de masa total detrás de un auto de 1.200 kg en orden de marcha. ¿Puede no tener frenos?
-    answer: false
+    prompt: "Un remolque de 750 kg de masa total detrás de un auto de 1.200 kg en orden de marcha. ¿Debe tener frenos?"
+    answer: true
     explain: La mitad del auto es 600 kg; el remolque de 750 kg la supera, así que necesita frenos.
     cites: ["rv:5.18.33"]
 
@@ -37,15 +37,15 @@ questions:
   - id: frenos-losbreek-suelto
     type: mc
     prompt: Circulas con un remolque y el acople se suelta. ¿Qué debe hacer el freno de seguridad (losbreekreminrichting)?
-    options: [Frenar el remolque porque el acople se soltó, Frenar el remolque siempre que pisas el pedal, Mantener el remolque pegado al auto, Frenar el auto y el remolque a la vez cuando tiras del freno de mano]
+    options: [Frenar el remolque porque el acople se soltó, Frenar el remolque al pisar el pedal, Mantener el remolque pegado al auto, Frenar el auto y el remolque a la vez]
     answer: 0
     explain: Debe estar conectado para actuar solo tras soltarse el acople, y entonces frena el remolque. Cuando pisas el pedal con el remolque enganchado frenan los frenos normales del remolque, no este.
     cites: ["rv:5.18.34/2"]
 
-  - id: frenos-remolque-900-pesado
+  - id: frenos-remolque-900-necesita
     type: yesno
-    prompt: Arrastras un remolque de 900 kg de masa total con un auto de 2.400 kg en orden de marcha. ¿Puede el remolque no tener frenos?
-    answer: false
+    prompt: "Arrastras un remolque de 900 kg de masa total con un auto de 2.400 kg en orden de marcha. ¿Debe el remolque tener frenos?"
+    answer: true
     explain: 'Solo un remolque de hasta 750 kg puede ir sin frenos. Que 900 kg sea menos de la mitad del auto no basta: con más de 750 kg necesita frenos.'
     cites: ["rv:5.18.33"]
 
@@ -63,9 +63,9 @@ questions:
     explain: El 1,6 m/s² vale solo para autos puestos en uso después del 31 de diciembre de 2017. Para los puestos en uso entre 1967 y 2017 basta 1,2 m/s², y 1,3 lo supera.
     cites: ["rv:5.2.39"]
 
-  - id: frenos-parkeerrem-ruedas
+  - id: frenos-parkeerrem-ruedas-incumple
     type: yesno
-    prompt: El freno de mano de un auto bloquea bien una sola rueda trasera y el auto no se mueve en la cuesta. ¿Cumple el requisito del freno de estacionamiento?
-    answer: false
+    prompt: "El freno de mano de un auto bloquea bien una sola rueda trasera y el auto no se mueve en la cuesta. ¿Incumple el requisito del freno de estacionamiento?"
+    answer: true
     explain: El freno de estacionamiento debe actuar sobre al menos dos ruedas. Que sostenga el auto en una cuesta no basta si actúa en una sola.
     cites: ["rv:5.2.39"]

@@ -16,7 +16,7 @@ questions:
   - id: alcohol-principiante-quien
     type: mc
     prompt: Obtuviste tu primer permiso a los 25 años, hace 3 años. ¿Qué límite de alcohol te corresponde al conducir?
-    options: ["El límite general (220 µg/l)", "El límite de principiante (88 µg/l)", "El de principiante, pero solo hasta los 30 años de edad", "Ninguno, porque ya eres adulto"]
+    options: ["El límite general de adultos (220 µg/l)", "El límite de principiante (88 µg/l)", "El de principiante, pero solo hasta los 30 años de edad", "Ninguno, porque ya eres mayor de edad"]
     answer: 1
     explain: Si el primer permiso se expidió a los 18 años o más, eres principiante durante los primeros 5 años, sin importar tu edad. Que seas adulto no cambia el plazo.
     cites: ["wvw:8.3"]
@@ -60,7 +60,7 @@ questions:
   - id: alcohol-capacidad
     type: mc
     prompt: Has tomado dos copas, soplas 150 µg/l (por debajo del límite) pero te notas mareado y con la vista borrosa. Tienes que volver a casa. ¿Qué haces?
-    options: ["Conduzco: la cifra está por debajo del límite", "No conduzco: sin estar en condiciones de conducir está prohibido aunque no supere el límite", "Conduzco despacio y por calles tranquilas", "Conduzco solo si pongo la ventanilla abierta"]
+    options: ["Conduzco: la cifra está por debajo del límite y eso es lo que cuenta", "No conduzco: no estoy en condiciones, aunque no supere el límite", "Conduzco despacio y por calles tranquilas, para no arriesgar a nadie", "Conduzco solo si abro la ventanilla y me da el aire un rato"]
     answer: 1
     explain: El artículo 8 lid 1 prohíbe conducir cuando no estás en condiciones de hacerlo, aunque estés bajo los límites numéricos.
     cites: ["wvw:8.1"]
@@ -68,7 +68,7 @@ questions:
   - id: alcohol-prestar-amigo
     type: mc
     prompt: Tu amigo se tambalea y arrastra las palabras después de la fiesta, pero te pide tu coche "para llegar antes". Sabes que ha bebido mucho. ¿Qué pasa si se lo dejas?
-    options: ["Nada para ti: si lo paran, la infracción es solo suya", "También cometes una infracción tú, por dejar conducir a quien sabes que no está en condiciones", "Solo es infracción si le pasa algo", "Está permitido si tú vas de copiloto"]
+    options: ["Nada para ti: si lo paran, la infracción es solo de él, que conduce", "También infringes tú: dejar conducir a alguien así está prohibido", "Solo es infracción para ti si le pasa algo a él o a otra persona", "Está permitido si tú vas de copiloto y le vigilas todo el trayecto"]
     answer: 1
     explain: Está prohibido dejar conducir a quien sabes, o deberías saber, que no está en condiciones. La infracción es tuya aunque no conduzcas.
     cites: ["wvw:8.6"]
@@ -76,7 +76,7 @@ questions:
   - id: alcohol-negarse-consecuencia
     type: mc
     prompt: Un agente sospecha que has bebido y te ordena soplar en el aparato. Te niegas porque "seguro que no llego al límite". ¿Qué puede pasar?
-    options: ["Nada, porque soplar es voluntario", "Negarte es una infracción por sí sola y te pueden retirar el permiso en el acto", "Solo te multan si luego un análisis de sangre da positivo", "Solo te piden que lo repitas al día siguiente"]
+    options: ["Nada, porque soplar es voluntario y puedes negarte sin consecuencias", "Es una infracción por sí sola y pueden retirarte el permiso en el acto", "Solo te multan si un análisis de sangre posterior da positivo en alcohol", "Solo te piden que repitas la prueba más tarde, en la comisaría"]
     answer: 1
     explain: Quien recibe la orden está obligado a soplar. Negarte tiene consecuencias propias, incluida la retirada inmediata del permiso (invordering), sin importar cuánto alcohol tuvieras.
     cites: ["wvw:163", "wvw:164"]

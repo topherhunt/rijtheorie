@@ -15,9 +15,9 @@ questions:
     type: mc
     prompt: Vas a arrancar desde el borde derecho de la calzada, donde estás estacionado. ¿Qué miras antes de salir, según el CBR?
     options:
-      - Retrovisor interior, adelante, retrovisor exterior izquierdo y por encima del hombro izquierdo
-      - Solo el retrovisor interior, porque el tráfico viene de atrás
-      - Retrovisor exterior derecho y por encima del hombro derecho
+      - Retrovisor interior, adelante, exterior y hombro izquierdos
+      - Adelante y retrovisor interior, porque lo que te alcanza viene de atrás
+      - Retrovisor interior, adelante, exterior derecho y hombro derecho
     answer: 0
     explain: Al arrancar desde el lado derecho entras en el carril por tu izquierda, así que el tráfico que te alcanza viene por ese lado. El CBR indica esa secuencia, y además debes dejar pasar a todo el tráfico, también al de frente.
     cites: ["cbr-rijprocedure:3.1", "rvv:54"]
@@ -32,7 +32,7 @@ questions:
   - id: bijzondere-manoeuvres-senal
     type: mc
     prompt: Quieres arrancar desde el borde de la calzada con tu auto. ¿Qué debes hacer antes?
-    options: [Avisar con el intermitente, Tocar la bocina, Encender las luces de emergencia, "Nada, si no viene nadie"]
+    options: [Avisar con el intermitente, Tocar la bocina, Encender las emergencias, "Nada, si no viene nadie"]
     answer: 0
     explain: Los conductores de motorvehículos deben avisar con el intermitente al arrancar.
     cites: ["rvv:55"]
@@ -41,10 +41,10 @@ questions:
     type: mc
     prompt: Sales de una uitrit (salida de un garaje) a la calle. Por tu derecha no viene nadie, pero por tu izquierda se acerca una bicicleta y por la acera pasa un peatón. ¿A quién dejas pasar?
     options:
-      - "A todos: a la bicicleta y al peatón"
+      - "A todos: a la bicicleta y al peatón, vengan de donde vengan"
       - Solo a quien viene por tu derecha, o sea a nadie
       - Solo a la bicicleta, porque el peatón no es conductor
-      - A nadie, porque estás saliendo de una propiedad privada y ellos van por la vía
+      - A nadie, porque sales de una propiedad privada y ellos van por la vía
     answer: 0
     explain: Salir de una uitrit es una maniobra especial (art. 54) y dejas pasar a todo el tráfico, también al que viene por la izquierda y a los peatones. La regla de la derecha no se aplica aquí. El CBR dice que no importa desde dónde ni qué tipo de usuario se acerque.
     cites: ["rvv:54", "cbr-rijprocedure:3.6"]
@@ -53,9 +53,9 @@ questions:
     type: mc
     prompt: Un auto sale de una uitrit y otro entra a ella al mismo tiempo. Según la ley y la preferencia del CBR, ¿qué se espera?
     options:
-      - Ambos deben dejarse pasar según la ley, y el CBR prefiere que se deje pasar al que sale
-      - Solo el que sale debe ceder, por ley
-      - Solo el que entra debe ceder, por ley
+      - Ambos ceden por ley; el CBR prefiere al que sale
+      - Solo el que sale cede, porque el que entra va por la vía
+      - Solo el que entra debe ceder, porque el que sale ya está en marcha
     answer: 0
     explain: Ambos hacen una maniobra especial, así que por ley ambos deben dejar pasar. Que se deje pasar al que sale es una preferencia del CBR, no una regla de la ley.
     cites: ["rvv:54", "cbr-rijprocedure:3.6"]
@@ -64,7 +64,7 @@ questions:
     type: mc
     prompt: Vas a entrar con tu auto a una inrit y para llegar a ella cruzas un carril bici. Un ciclista se acerca por ese carril. ¿Qué haces?
     options:
-      - Lo dejas pasar antes de entrar
+      - Lo dejas pasar y entras cuando ya haya pasado
       - Entras, porque tú ya estás en la calzada
       - Entras si le haces señales con el intermitente
       - Entras si el ciclista viene por tu derecha
@@ -82,7 +82,7 @@ questions:
   - id: bijzondere-manoeuvres-marcha-atras-situacion
     type: mc
     prompt: Das marcha atrás para salir de un estacionamiento. Un ciclista pasa por detrás de tu auto. ¿Quién pasa primero?
-    options: [El ciclista, "Tú, porque ya empezaste la maniobra", Quien venga por la derecha, Quien llegue primero al punto de cruce]
+    options: [El ciclista que cruza por detrás, "Tú, porque ya empezaste la maniobra", Quien venga por la derecha, Quien llegue primero al punto de cruce]
     answer: 0
     explain: "Dar marcha atrás es una maniobra especial (art. 54): dejas pasar al resto del tráfico, sea de la categoría que sea. Haber empezado antes no te da prioridad."
     cites: ["rvv:54", "cbr-rijprocedure:3.7"]
@@ -90,7 +90,7 @@ questions:
   - id: bijzondere-manoeuvres-keren-quien
     type: mc
     prompt: Das la vuelta (keren) en una calle de doble sentido. Un auto se acerca por detrás y un ciclista viene de frente por el otro carril. ¿A quién dejas pasar?
-    options: [A los dos, Solo al auto, Solo al ciclista, Solo a quien viene por tu derecha]
+    options: ["A los dos, al auto y al ciclista", Solo al auto que viene por detrás, Solo al ciclista que viene de frente, Solo a quien viene por tu derecha]
     answer: 0
     explain: "Keren es una maniobra especial: dejas pasar al resto del tráfico, venga de donde venga y sea de la categoría que sea."
     cites: ["rvv:54"]

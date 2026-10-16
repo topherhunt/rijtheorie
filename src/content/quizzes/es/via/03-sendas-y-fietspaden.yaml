@@ -29,7 +29,7 @@ questions:
     type: mc
     prompt: Una speed-pedelec (bicicleta eléctrica que sigue empujando por encima de 25 km/h) llega a un tramo con un camino con esta señal, sin ninguna placa debajo, y ningún otro camino. ¿Por dónde va?
     sign: G11
-    options: [Por la calzada, Por el camino porque tiene pedales, Por el camino si no pasa de 25 km/h, Por la acera]
+    options: [Por la calzada, Por el camino porque tiene pedales, Por el camino si no pasa de 25 km/h, Por el trottoir]
     answer: 0
     explain: La ley define la speed-pedelec como una bromfiets, y no como un snorfiets. La bromfiets no usa el G11; sin fiets/bromfietspad va por la calzada. Tener pedales no la convierte en bicicleta.
     cites: ["rvv:1", "rvv:6.2"]
@@ -38,7 +38,7 @@ questions:
     type: mc
     prompt: Al lado de la calzada hay un camino con esta señal. ¿Qué hace una bromfiets?
     sign: G12a
-    options: [Debe ir por el camino, Puede elegir entre el camino y la calzada, Debe ir por la calzada, Va por el camino solo de noche]
+    options: [Debe ir por el camino y no por la calzada, Puede elegir camino o calzada, "Debe ir por la calzada, como un coche", Va por el camino solo si llueve]
     answer: 0
     explain: El G12a es un fiets/bromfietspad. Bicicletas, snorfietsen y bromfietsen deben usarlo; la bromfiets solo va por la calzada si no hay uno.
     cites: ["rvv:6.1", "rvv:6.2"]
@@ -55,7 +55,7 @@ questions:
     type: mc
     prompt: Al lado de la calzada hay un camino con esta señal. ¿Qué hace una bromfiets?
     sign: G13
-    options: [Va por la calzada, Puede usar el camino porque no es obligatorio, Debe usar el camino, Puede usar el camino con el motor apagado]
+    options: ["Va por la calzada, no puede usar el camino", "Puede usar el camino, no es obligatorio", Debe usar el camino porque hay señal G13, Puede usar el camino con el motor apagado]
     answer: 0
     explain: '"No obligatorio" se refiere a los ciclistas: pueden elegir. La bromfiets no puede usar ningún fietspad, ni obligatorio ni no obligatorio; sin fiets/bromfietspad va por la calzada. Lo del motor apagado vale para el snorfiets de gasolina, no para la bromfiets.'
     cites: ["rvv:5.3", "rvv:6.2"]
@@ -72,7 +72,7 @@ questions:
     type: mc
     prompt: Ves esta señal al principio de un camino al lado de la calzada. ¿Qué significa para quién?
     sign: G9
-    options: [Los jinetes deben usar ese camino, Los peatones deben usar ese camino, Los ciclistas pueden elegir ese camino, Los jinetes pueden usar ese camino o la calzada a su elección]
+    options: ["Los jinetes deben usar ese camino, no la calzada", Los peatones deben usar ese camino en lugar del voetpad, Los ciclistas pueden elegir ese camino o la calzada, Los jinetes pueden usar ese camino o la calzada]
     answer: 0
     explain: El G9 es un ruiterpad. Los jinetes deben usarlo, no tienen la opción de ir por la calzada. Los peatones y los ciclistas tienen sus propios caminos, y un coche no puede aparcar en un ruiterpad.
     cites: ["rvv:bijlage1.G9", "rvv:8.1", "rvv:10.1"]
@@ -88,7 +88,7 @@ questions:
     type: mc
     prompt: Un ciclista pasa esta señal y después no hay ningún otro fietspad ni fiets/bromfietspad. ¿Por dónde sigue?
     sign: G12
-    options: [Por la calzada, Por la acera, Por donde quiera, Debe bajarse y caminar]
+    options: [Por la calzada, Por el trottoir, Por donde quiera, Debe bajarse y caminar]
     answer: 0
     explain: El G12 marca el fin del fietspad obligatorio. Sin fietspad obligatorio ni fiets/bromfietspad, los ciclistas usan la calzada.
     cites: ["rvv:bijlage1.G12", "rvv:5.2"]
@@ -103,7 +103,7 @@ questions:
   - id: sendas-franjas-coche
     type: mc
     prompt: ¿En cuál de estas franjas NO puede entrar tu coche?
-    options: ["Un fietsstrook de líneas continuas", "Un fietsstrook de líneas discontinuas, cuando la situación lo hace necesario", "Una suggestiestrook, al girar a la derecha", "Un carril de la calzada sin ninguna marca de bicicletas"]
+    options: ["Un fietsstrook delimitado por líneas continuas", "Un fietsstrook de líneas discontinuas si es necesario", "Una suggestiestrook, al girar a la derecha", "Un carril de la calzada sin marcas de bicicletas"]
     answer: 0
     explain: Solo el fietsstrook con líneas continuas está prohibido para el coche. El discontinuo es parte de la rijbaan y la ley no lo prohíbe; la suggestiestrook se puede usar al girar a la derecha; y un carril normal es tu sitio.
     cites: ["rvv:10.2", "cbr-rijprocedure:3.3"]

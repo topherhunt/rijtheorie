@@ -9,7 +9,7 @@ questions:
   - id: adaptar-lento
     type: mc
     prompt: "Vas por una carretera normal seca y despejada, con máximo de 80, y llevas 40 km/h sin ningún motivo. Detrás tuyo se forma una cola. ¿Qué es lo correcto?"
-    options: ["Subir hasta una velocidad acorde al tráfico, sin pasar de 80", "Seguir a 40: más despacio siempre es más seguro", "Parar en el arcén para que pasen todos", "Poner las luces de emergencia y seguir"]
+    options: ["Subir a una velocidad acorde al tráfico, sin pasar de 80", "Seguir a 40 km/h: ir más despacio siempre es más seguro", "Parar en el arcén cada vez que se forme una cola detrás", "Poner las luces de emergencia y seguir a la misma velocidad"]
     answer: 0
     explain: "Sin necesidad, ir excepcionalmente lento respecto al resto del tráfico causa estorbo y puede ser peligroso. Ir más despacio no es seguro por sí solo; lo correcto es ajustarte a la situación y al tráfico, sin pasar del máximo."
     cites: ["cbr-rijprocedure:3.2", "wvw:5"]
@@ -17,7 +17,7 @@ questions:
   - id: adaptar-curva
     type: mc
     prompt: "Vas a 90 km/h en una carretera de 100 y ves que se acerca una curva cerrada. ¿Cuándo regulas la velocidad?"
-    options: ["Antes de entrar en la curva", "Cuando ya estoy en medio de la curva", "Al ver el final de la curva", "No hace falta: sigo a 90 si no pasa de 100"]
+    options: ["Antes de entrar en la curva", "Cuando ya estoy en medio de la curva", "Cuando veo el final de la curva", "No hace falta: sigo a 90 si no pasa de 100"]
     answer: 0
     explain: "La velocidad se regula antes de entrar, para recorrer la curva de forma segura. Frenar ya dentro puede ser tarde, y estar bajo el máximo (100) no significa que 90 sea una velocidad adecuada para esa curva."
     cites: ["cbr-rijprocedure:3.2"]
@@ -25,7 +25,7 @@ questions:
   - id: adaptar-salida-curva
     type: mc
     prompt: "Sales de una curva cerrada a 50 km/h y ves que el tramo siguiente es recto, seco y despejado; el máximo es 80. ¿Qué haces con la velocidad?"
-    options: ["La subo de nuevo hasta el máximo vigente, según el tráfico", "Me quedo a 50 por si aparece otra curva", "Freno un poco más, por seguridad", "La subo por encima de 80, que está despejado"]
+    options: ["La subo de nuevo hasta el máximo, según el tráfico", "Me quedo a 50 por si aparece otra curva más adelante", "Freno un poco más por si hay más curvas cerradas", "La subo por encima de 80, porque está despejado"]
     answer: 0
     explain: "Al salir de la curva, con visibilidad, se vuelve a subir la velocidad hasta el máximo vigente. Quedarte lento sin necesidad estorba al tráfico, y pasar del máximo nunca es opción."
     cites: ["cbr-rijprocedure:3.2"]
@@ -41,7 +41,7 @@ questions:
   - id: adaptar-poco-espacio
     type: mc
     prompt: "Circulas por una calle estrecha dentro de la zona urbana con coches aparcados a ambos lados, peatones en la acera y ciclistas cerca. El máximo es 50. ¿Qué velocidad eliges?"
-    options: ["Menor de 50, porque hay poco espacio entre mi coche y los demás", "50, porque es el máximo permitido", "Menor de 50 solo si llueve", "50, porque los ciclistas se apartan"]
+    options: ["Menos de 50, porque hay poco espacio a mi alrededor", "50, porque es el máximo permitido en toda la zona", "Menos de 50 solo si llueve o hay poca luz en la calle", "50, porque los peatones y ciclistas se apartan solos"]
     answer: 0
     explain: "Cuanto menos espacio hay entre tú y otros, más despacio debes ir. El 50 es un tope, no la velocidad adecuada en cualquier calle, y que los demás tengan que apartarse no te libera de adaptar la velocidad."
     cites: ["cbr-rijprocedure:3.2", "wvw:5"]
@@ -52,7 +52,7 @@ questions:
     options:
       - "Nada: voy por debajo del máximo de 100"
       - "Bajar hasta poder detenerme dentro de lo que veo"
-      - "Mantener 80 y encender las luces para que me vean"
+      - "Mantener 80 y encender las luces"
       - "Pegarme al auto de delante para guiarme"
     answer: 1
     explain: "El art. 19 obliga a poder detenerse dentro de la distancia que ves libre: aquí 40 m, y a 80 km/h necesitas 60. Estar bajo el máximo no basta, y pegarte al de delante te quita aún más margen."
@@ -61,7 +61,7 @@ questions:
   - id: adaptar-mojado-art19
     type: mc
     prompt: "Ves 100 m de vía libre y, con calzada seca, te detienes en 90 m a tu velocidad. Empieza a llover y la calzada se moja. ¿Qué haces para seguir cumpliendo el art. 19?"
-    options: [Mantengo la velocidad, "Reduzco la velocidad, porque la calzada mojada alarga la distancia de frenado", Aumento la velocidad para salir antes de la lluvia, Solo enciendo los limpiaparabrisas]
+    options: ["Mantengo la velocidad: con 10 m de margen me sobra", "Reduzco la velocidad: mojada, la calzada alarga el frenado", "Aumento la velocidad para salir antes de la lluvia", "Solo enciendo los limpiaparabrisas y las luces de cruce"]
     answer: 1
     explain: "La calzada mojada alarga la distancia de frenado; para poder parar dentro de lo que ves libre hay que ir más despacio."
     cites: ["rvv:19", "cbr-examenplan"]
@@ -69,7 +69,7 @@ questions:
   - id: adaptar-estrecho
     type: mc
     prompt: "Entras en un tramo estrecho de una vía donde el máximo es 80 km/h y ves venir otro auto de frente. ¿Qué haces con la velocidad?"
-    options: ["Voy más despacio, tanto más cuanto más estrecha es la calzada", "Mantengo 80, porque es el máximo permitido", "Acelero para cruzarme antes en la parte ancha", "Freno hasta parar siempre"]
+    options: ["Voy más despacio cuanto más estrecha es la calzada", "Mantengo 80 km/h, porque es el máximo permitido ahí", "Acelero para cruzarme antes en la parte ancha", "Freno hasta parar siempre que venga alguien de frente"]
     answer: 0
     explain: "En un tramo estrecho se circula más despacio, y cuánto depende sobre todo del ancho; al cruzarte con otro vehículo adaptas la velocidad. El máximo es un tope, no una meta, y detenerse siempre no es lo que pide el procedimiento."
     cites: ["cbr-rijprocedure:3.2"]

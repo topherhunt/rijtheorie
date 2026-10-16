@@ -24,7 +24,7 @@ questions:
   - id: drogas-bajo-limite-afectado
     type: mc
     prompt: Consumiste una droga y un análisis de sangre no supera el límite de esa sustancia, pero sigues mareado y con los reflejos lentos. ¿Puedes conducir?
-    options: ["Sí, porque no superas el límite", "No: si no estás en condiciones de conducir, está prohibido aunque no superes el límite", "Sí, si conduces despacio", "Sí, pero solo en trayectos cortos"]
+    options: ["Sí, porque el análisis de sangre demuestra que no superas el límite de esa sustancia", "No: sin estar en condiciones está prohibido, aunque no superes el límite", "Sí, si conduces despacio y evitas las vías con más tráfico hasta llegar a casa", "Sí, pero solo en trayectos cortos y por calles tranquilas"]
     answer: 1
     explain: El límite en sangre es una infracción aparte. La regla de fondo del artículo 8 lid 1 prohíbe conducir sin estar capaz, superes o no el límite.
     cites: ["wvw:8.1", "wvw:8.5"]
@@ -47,7 +47,7 @@ questions:
   - id: drogas-prestar-medicamento
     type: mc
     prompt: Tu pareja acaba de tomar un medicamento cuyo prospecto dice que no se conduzca, y está adormilada. Te pide el coche para ir a la farmacia. ¿Qué ocurre si se lo das?
-    options: ["Nada para ti: la responsable es ella", "También infringes tú: está prohibido dejar conducir a quien sabes que no está en condiciones", "Solo infringes si ocurre un accidente", "Es legal si el trayecto es corto"]
+    options: ["Nada para ti: la responsable es ella, que es quien conduce y quien decide", "También infringes tú: está prohibido dejarle el coche en ese estado", "Solo infringes si ocurre un accidente durante ese trayecto", "Es legal si el trayecto es corto y solo va a la farmacia"]
     answer: 1
     explain: Dejar conducir a alguien de quien sabes, o deberías saber, que no está en condiciones es una infracción tuya. Que el trayecto sea corto no cambia nada.
     cites: ["wvw:8.6"]

@@ -3,7 +3,7 @@ questions:
     type: mc
     prompt: ¿Qué indica esta señal?
     sign: J10
-    options: [Paso a nivel sin barreras, Paso a nivel con barreras, Cruce con tranvía, Puente móvil]
+    options: ["Un paso a nivel sin barreras", "Un paso a nivel con barreras", "Un cruce con una línea de tranvía", "Un puente móvil sobre un canal"]
     answer: 1
     explain: J10 es "overweg met slagbomen". Sin barreras sería J11.
     cites: ["rvv:bijlage1.J10"]
@@ -11,11 +11,7 @@ questions:
   - id: overweg-roja-barreras-arriba
     type: mc
     prompt: Te acercas a un paso a nivel. Las barreras están arriba, pero la luz roja intermitente está encendida. ¿Qué haces?
-    options:
-      - Cruzas, porque sin barreras bajadas no hay peligro
-      - Te detienes, porque la luz roja intermitente significa alto
-      - Cruzas más rápido para librarte del tren
-      - Cruzas si no ves ningún tren
+    options: ["Cruzas, porque con las barreras arriba todavía no hay peligro", "Te detienes, porque la luz roja intermitente significa alto", "Cruzas más rápido para librarte antes del tren que se acerca", "Cruzas si no ves ningún tren acercándose por ninguno de los dos lados"]
     answer: 1
     explain: La luz roja intermitente significa alto, aunque las barreras todavía no hayan bajado. Mandan las luces, no las barreras.
     cites: ["rvv:71"]
@@ -23,11 +19,7 @@ questions:
   - id: overweg-blanca-fila
     type: mc
     prompt: En un paso a nivel la luz blanca intermitente está encendida, pero hay una fila de autos parados justo después de la vía y no cabe tu auto. ¿Qué haces?
-    options:
-      - Entras y esperas encima de la vía, porque no viene ningún tren
-      - Esperas antes del paso hasta que haya sitio para cruzar y salir
-      - Entras con las luces de emergencia
-      - Entras y haces sonar la bocina
+    options: ["Entras y esperas encima de la vía, porque no viene ningún tren", "Esperas antes del paso hasta que haya sitio para cruzar y salir", "Entras con las luces de emergencia puestas para avisar a los de atrás", "Entras y haces sonar la bocina para que los de delante avancen"]
     answer: 1
     explain: La luz blanca solo dice que no se acerca ningún tren. Aun así solo puedes entrar si puedes seguir sin detenerte y dejar el paso completamente libre, y detenerte en el overweg está prohibido.
     cites: ["rvv:71", "rvv:15a", "rvv:23.1"]
@@ -35,11 +27,7 @@ questions:
   - id: overweg-tren-prioridad
     type: mc
     prompt: Llegas a un paso a nivel y ves un tren que se acerca. ¿Quién pasa primero?
-    options:
-      - El tren, porque dejas pasar al vehículo ferroviario
-      - Tú, si llegaste antes al paso
-      - Tú, si cruzas a buena velocidad
-      - El que tenga prioridad por venir de la derecha
+    options: ["El tren, porque el vehículo ferroviario pasa primero", "Tú, si llegaste antes que el tren al paso", "Tú, si cruzas a buena velocidad y sin parar", "El vehículo que tenga prioridad por venir de la derecha"]
     answer: 0
     explain: En los pasos a nivel dejas pasar primero al vehículo ferroviario. Llegar antes o acelerar no cambia la regla.
     cites: ["rvv:15a"]
@@ -71,11 +59,7 @@ questions:
   - id: overweg-ahob
     type: mc
     prompt: En un paso con AHOB, ¿cuándo puedes cruzar según el procedimiento?
-    options:
-      - Cuando las barreras empiezan a subir
-      - Cuando la luz roja se apagó, es decir, con las barreras completamente arriba
-      - Cuando suena la campana
-      - Cuando no ves un tren
+    options: ["Cuando las barreras empiezan a subir, aunque haya luz roja", "Cuando la luz roja se apaga, con las barreras del todo arriba", "Cuando deja de sonar la campana de aviso y el tren ya pasó", "Cuando no ves ningún tren acercándose por los dos lados"]
     answer: 1
     explain: Con AHOB la luz roja se apaga solo cuando las barreras están completamente arriba, y solo entonces cruzas.
     cites: ["cbr-rijprocedure:3.6"]
@@ -83,11 +67,7 @@ questions:
   - id: overweg-mirar
     type: mc
     prompt: Acabas de ver pasar un tren. ¿Qué haces antes de cruzar?
-    options:
-      - Cruzas de inmediato
-      - Compruebas si no viene otro tren por el otro lado
-      - Esperas a que suene la campana
-      - Tocas la bocina
+    options: ["Cruzas de inmediato, porque el tren ya pasó y la vía está libre", "Compruebas que no viene otro tren por el otro lado", "Esperas a que vuelva a sonar la campana de aviso del paso", "Tocas la bocina para avisar al otro tren y cruzas despacio"]
     answer: 1
     explain: "Después de que pasa un tren, mira de nuevo: puede venir otro del otro lado."
     cites: ["cbr-rijprocedure:3.6"]
@@ -95,11 +75,7 @@ questions:
   - id: overweg-motor
     type: mc
     prompt: Tu auto se cala con facilidad al arrancar. Te acercas a un paso a nivel. ¿Qué te conviene hacer?
-    options:
-      - Aprovechar la inercia y hacer el arranque más crítico lejos del paso
-      - Cambiar a primera justo encima de la vía para tener más fuerza
-      - Cruzar con la menor velocidad posible para ir seguro
-      - Apagar el motor antes de la vía y encenderlo al cruzar
+    options: ["Aprovechar la inercia y hacer el arranque crítico lejos del paso", "Cambiar a primera justo encima de la vía para tener más fuerza al salir", "Cruzar con la menor velocidad posible para ir seguro", "Apagar el motor antes de la vía y encenderlo al cruzar"]
     answer: 0
     explain: Un motor calado encima de la vía es el peor sitio posible. El procedimiento recomienda usar el impulso del auto y que el momento más crítico de arrancar ocurra lejos del paso.
     cites: ["cbr-rijprocedure:3.6"]
@@ -107,11 +83,7 @@ questions:
   - id: overweg-sol-sin-luz
     type: mc
     prompt: Vas de frente a un sol muy bajo y no ves ninguna luz roja en el paso a nivel que se acerca. ¿Qué haces?
-    options:
-      - Reduces y miras bien a ambos lados, porque el sol puede ocultar la luz roja
-      - Cruzas, porque sin luz roja visible no hay tren
-      - Cruzas si no oyes ninguna campana
-      - Cruzas, porque el sol bajo apaga las luces del paso
+    options: ["Reduces y miras a ambos lados, porque el sol puede ocultar la luz", "Cruzas, porque si no ves la luz roja es que no viene ningún tren", "Cruzas si no oyes ninguna campana ni ves barreras bajadas en el paso", "Cruzas, porque el sol bajo apaga las luces del paso"]
     answer: 0
     explain: El sol bajo puede hacer invisible la luz roja, y los equipos de seguridad también pueden fallar. No ver la luz no prueba que no venga un tren.
     cites: ["cbr-rijprocedure:3.6"]
@@ -119,7 +91,7 @@ questions:
   - id: overweg-baliza-dos-rayas
     type: mc
     prompt: Circulas hacia un paso a nivel y ves una baliza con 2 rayas diagonales. ¿A qué distancia aproximada está el paso?
-    options: [Unos 80 m, Unos 160 m, Unos 240 m, Unos 400 m]
+    options: ["Unos 80 metros", "Unos 160 m", "Unos 240 m", "Unos 400 metros"]
     answer: 1
     explain: Cada raya diagonal indica unos 80 m hasta el paso a nivel, así que 2 rayas son unos 160 m.
     cites: ["cbr-rijprocedure:3.6"]

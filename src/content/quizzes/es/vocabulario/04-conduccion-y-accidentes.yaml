@@ -11,7 +11,7 @@ questions:
   - id: conduccion-y-accidentes-blikschade
     type: mc
     prompt: ¿Qué es la "blikschade"?
-    options: [Daños solo materiales, Lesiones graves, Una multa, Un seguro]
+    options: [Daños materiales sin heridos, Lesiones graves sin daños, Una multa por el accidente, Un seguro del vehículo dañado]
     answer: 0
     explain: Blikschade es daño material (chapa) sin heridos.
     cites: ["cbr-examenplan:4"]
@@ -27,7 +27,7 @@ questions:
   - id: conduccion-y-accidentes-matrixbord-def
     type: mc
     prompt: ¿Qué es un "matrixbord"?
-    options: [Un panel electrónico sobre los carriles de la autopista, Un semáforo de un cruce, Una señal de prohibición fija, Un mapa de la ruta]
+    options: [Un panel electrónico sobre los carriles, Un semáforo de un cruce con peatones, Una señal de prohibición fija, Un mapa de la ruta con las salidas]
     answer: 0
     explain: Un matrixbord es el panel electrónico encima de los carriles de la autopista que muestra velocidades, flechas o una cruz roja.
     cites: ["cbr-examenplan:4"]
@@ -45,7 +45,7 @@ questions:
   - id: conduccion-y-accidentes-schadeformulier-def
     type: mc
     prompt: ¿Qué es el "schadeformulier"?
-    options: [El parte amistoso de accidente, La multa por un accidente, El permiso de conducir, El seguro del auto]
+    options: [El parte amistoso de accidente, La multa que impone el agente, El carnet de conducir europeo, La póliza de seguro del coche]
     answer: 0
     explain: El Europees schadeformulier es el formulario europeo de declaración de accidente que rellenan los implicados.
     cites: ["cbr-examenplan:4"]

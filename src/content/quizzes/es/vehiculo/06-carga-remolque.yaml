@@ -2,7 +2,7 @@ questions:
   - id: carga-remolque-asegurada
     type: mc
     prompt: Llevas cajas pesadas en el maletero abierto de una furgoneta pequeña y solo vas a recorrer 10 km por una carretera tranquila. ¿Hasta qué punto debe estar asegurada la carga?
-    options: [Basta con que aguante si conduzco despacio y en recta, Debe aguantar también una frenada fuerte o una maniobra brusca, Solo hace falta si llueve, Solo hace falta en autopista]
+    options: ["Basta con que aguante si conduzco despacio y en línea recta", "Debe aguantar una frenada fuerte o un golpe de volante", "Solo hace falta si el trayecto es largo o voy por autopista", "Solo hace falta si llueve o hay viento fuerte"]
     answer: 1
     explain: "La carga debe soportar frenadas fuertes, maniobras bruscas y mal pavimento sin caerse. La distancia corta o la carretera tranquila no cambian eso: la frenada de emergencia puede llegar en cualquier trayecto."
     cites: ["rv:5.18.6/1"]
@@ -10,7 +10,7 @@ questions:
   - id: carga-remolque-suelta
     type: mc
     prompt: Llevas arena suelta en un remolque abierto y el viento puede levantarla. ¿Qué debes hacer?
-    options: ["Taparla bien porque puede volar y molestar a otros", "Atarla con cuerdas como si fueran cajas", "Ir más rápido para que no se caiga", "Nada, porque la arena pesa"]
+    options: ["Taparla bien, porque puede volarse y molestar", "Atarla con cuerdas como si fueran cajas o bultos", "Ir más rápido para que el viento no la levante", "Nada, porque la arena pesa demasiado para volar"]
     answer: 0
     explain: La carga suelta que no se puede fijar debe taparse bien si puede caerse o volar y causar peligro o molestia. Atarla no funciona con arena suelta.
     cites: ["rv:5.18.6/2"]
@@ -25,7 +25,7 @@ questions:
   - id: carga-remolque-stootbalk
     type: mc
     prompt: Con tu auto puesto en uso en 2020 llevas un tubo que sobresale 0,80 m por detrás, y su parte de abajo está a 0,70 m del suelo. ¿Qué más hace falta?
-    options: ["Nada, porque está dentro de 1,00 m", "Una barra de protección firme a no más de 0,60 m del final del tubo", Una bandera roja en el extremo, Una luz de freno adicional en el extremo del tubo]
+    options: ["Nada más, porque sobresale menos de 1,00 m por detrás", "Una barra firme a no más de 0,60 m del final del tubo", "Una bandera roja bien visible atada en el extremo del tubo", "Una luz de freno adicional colocada en el extremo del tubo"]
     answer: 1
     explain: Si la parte de abajo de la carga que sobresale está a más de 0,55 m del suelo, hace falta una stootbalk firme a no más de 0,60 m del final. Estar dentro de 1,00 m no basta.
     cites: ["rv:5.18.12/1"]
@@ -33,7 +33,7 @@ questions:
   - id: carga-remolque-luces
     type: mc
     prompt: Llevas bicicletas en un portabultos trasero que tapa las luces traseras del auto. ¿Qué es lo correcto?
-    options: ["Ir despacio con las luces de emergencia puestas", "El portabultos debe llevar sus propias luces traseras, de freno, reflectores e intermitentes", "Poner cinta reflectante en las bicicletas", "Nada, si es de día"]
+    options: ["Ir despacio con las luces de emergencia puestas durante el trayecto", "El portabultos debe llevar sus propias luces e intermitentes", "Poner cinta reflectante en las bicicletas y en el portabultos", "Nada especial, si es de día y el portabultos se ve bien"]
     answer: 1
     explain: Si el portabultos o la carga tapan luces, el portabultos debe llevar sus propias luces traseras, de freno, reflectores e intermitentes. Ir despacio, cinta o el día no sustituyen a las luces.
     cites: ["rv:5.18.12/1", "rv:5.18.7/1"]
@@ -70,7 +70,7 @@ questions:
   - id: carga-remolque-techo-limite
     type: mc
     prompt: La baca de tu auto aguanta 100 kg, pero el fabricante del auto fija una carga máxima de 75 kg en el techo. ¿Cuánto puedes llevar?
-    options: [Hasta 75 kg, Hasta 100 kg, Hasta 175 kg, Lo que quieras si la atas bien]
+    options: ["Hasta 75 kg, el máximo que fija el fabricante de tu auto", "Hasta 100 kg, lo que aguanta la baca", "Hasta 175 kg, sumando el límite del auto y el de la baca", "Cualquier peso mientras la carga esté bien atada"]
     answer: 0
     explain: No puedes pasar la carga máxima del techo que fija el fabricante del auto. Que la baca aguante más no cambia ese límite.
     cites: ["rv:5.18.7/2"]

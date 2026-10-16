@@ -19,12 +19,12 @@ Obligations:
 - Fetch only through the official API (no scraping), never try to unblur faces or plates.
 
 Scan (`scripts/scenes/`, token `MAPILLARY_API_TOKEN` in `dev.env`; the API is free):
-1. Find target objects with `/map_features` (`object_values` filter, bbox under 0.01 square degrees, so cities are tiled).
-2. Fetch the images that saw each feature; drop panoramas and on-foot captures; prefer recent images facing the object.
-3. Rank by how many distinct detected classes an image holds.
-4. Review the shortlist by eye; keepers go into a manifest with image id, creator, licence and the question idea.
+1. Find target objects with `/map_features` (`object_values` filter; bboxes over ~0.03 x 0.018 degrees fail, so areas are tiled; an unknown class name is ignored and returns every feature, so names are matched client-side).
+2. Fetch the images that saw each feature, 8-45 m away; drop panoramas, images before 2019 and images not facing the object; keep the farthest one shot from a car (hood or mount detected, or the camera moved at 30 km/h or more between frames of its sequence).
+3. Rank by distinct detected classes (signs, markings, lights, road users) plus the number of road users, capped at 5.
+4. Review the contact sheets by eye; keepers go into a manifest with image id, creator, licence and the question idea.
 
-Strong for reading the road (priority, lanes, markings, speed, crossings). Weak for moving hazards: road users appear only by chance and are blurred.
+Strong for reading the road (priority, lanes, markings, speed, crossings). Weak for moving hazards: road users appear only by chance and are blurred. Utrecht pilot (2026-10-16, 75 candidates over 11 targets): most are true driver's-seat views close to CBR photos; misses are dashcams that burn speed and GPS text into the bottom strip (crop it off), a few bike photos whose handlebars pass as a car mount, and rare signs (erf, stop, children) whose feature position is too rough to put the sign in frame.
 
 ## 2. Storyboarded, conditioned generation
 

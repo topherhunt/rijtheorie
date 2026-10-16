@@ -1,14 +1,17 @@
 // Static content audit: node scripts/audit/check-content.ts [--strict]
-// Errors exit 1. --strict also fails on warnings (missing CBR topic coverage, uncited glossary claims).
+// Errors exit 1. --strict also fails on warnings (missing CBR topic coverage, uncited glossary claims, an answer that stands out by length).
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { join, relative } from 'node:path';
 import { isMap, isScalar, isSeq, parseDocument, parse as parseYaml } from 'yaml';
 import { isLaw, isSecondary, parseCite } from '../../src/lib/cite.ts';
 import { chapters, glossary, signs, sources } from '../../src/lib/data.ts';
 import { CBR_TOPICS, lessonSchema, quizSchema, type Question } from '../../src/lib/schema.ts';
+import { answerStandsOut, lengthRates, yesShare } from './lib/bias.ts';
 import { resolveCite } from './lib/law.ts';
 
 const ROOT = process.cwd();
+/** How far below chance the answer may be the longest (or shortest) mc option: about 3 standard errors over ~600 questions. */
+const LENGTH_SLACK = 0.05;
 const LESSONS = join(ROOT, 'src/content/lessons');
 const QUIZZES = join(ROOT, 'src/content/quizzes');
 const PUBLIC = join(ROOT, 'public');
@@ -96,6 +99,7 @@ for (const file of walk(LESSONS, '.mdx')) {
 
 // --- Quizzes ---
 const questionIds = new Map<string, string>();
+const allQuestions: Question[] = [];
 function checkQuestion(rel: string, q: Question) {
   const where = `${rel} [${q.id}]`;
   if (questionIds.has(q.id)) err(where, `duplicate question id (also in ${questionIds.get(q.id)})`);
@@ -103,6 +107,7 @@ function checkQuestion(rel: string, q: Question) {
   for (const c of q.cites) checkCite(where, c);
   for (const field of [q.prompt, q.explain, ...('options' in q ? q.options : [])]) if (EM_DASH.test(field)) err(where, 'contains an em dash');
   if (q.type === 'mc' && q.answer >= q.options.length) err(where, `answer ${q.answer} out of range (${q.options.length} options)`);
+  else if (q.type === 'mc' && answerStandsOut(q)) warn(where, 'the answer is much longer than every other option; give the distractors the same detail');
   if (q.type === 'multi') {
     if (q.answer.some((a) => a >= q.options.length)) err(where, 'answer index out of range');
     if (new Set(q.answer).size !== q.answer.length) err(where, 'duplicate answer index');
@@ -152,11 +157,22 @@ for (const file of walk(QUIZZES, '.yaml')) {
   }
   for (const q of parsed.data.questions) {
     checkQuestion(rel, q);
+    allQuestions.push(q);
     if (citesSecondary(q.cites)) usesSecondary.add(id);
   }
 }
 for (const [id, flag] of secondaryFlag)
   if (flag !== usesSecondary.has(id)) err(`src/content/lessons/${id}.mdx`, flag ? 'secondary: true but nothing cites a secondary source' : 'cites a secondary source; set secondary: true in the frontmatter');
+// Course-wide guessability: "pick the longest" and "pick the shortest" may not beat a random pick, nor fall so far below it that "rule out the extremes" does; yes/no stays near 50/50.
+const mcs = allQuestions.filter((q) => q.type === 'mc');
+const rates = lengthRates(mcs);
+const pct = (x: number) => `${(x * 100).toFixed(1)}%`;
+for (const extreme of ['longest', 'shortest'] as const) {
+  const r = rates[extreme], lo = rates.chance - LENGTH_SLACK;
+  if (r > rates.chance || r < lo) err('quizzes', `the answer is the ${extreme} option in ${pct(r)} of mc questions; keep it within ${pct(lo)}-${pct(rates.chance)} (a random pick gets ${pct(rates.chance)})`);
+}
+const yes = yesShare(allQuestions.filter((q) => q.type === 'yesno'));
+if (Math.abs(yes - 0.5) > 0.02) err('quizzes', `${pct(yes)} of yes/no questions answer "yes"; keep it within 48-52%`);
 for (const { where, id } of checkRefs) if (!questionIds.has(id)) err(where, `<Check id="${id}">: no such question`);
 
 // --- Glossary ---

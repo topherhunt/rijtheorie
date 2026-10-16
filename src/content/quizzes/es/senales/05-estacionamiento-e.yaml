@@ -1,9 +1,9 @@
 questions:
-  - id: e-e2-pasajero
+  - id: e-e2-prohibe-pasajero
     type: yesno
-    prompt: Delante de ti está esta señal. ¿Puedes detenerte unos segundos para que baje un pasajero?
+    prompt: "Delante de ti está esta señal. ¿Te prohíbe detenerte unos segundos para que baje un pasajero?"
     sign: E2
-    answer: false
+    answer: true
     explain: E2 prohíbe stilstaan, y detenerse para que baje alguien también es stilstaan. La excepción de "bajar o subir un momento" existe solo para estacionar (E1), no para detenerse.
     cites: ["rvv:1", "rvv:bijlage1.E2"]
 
@@ -23,11 +23,11 @@ questions:
     explain: E9 es solo para titulares de permiso. Sin permiso, no puedes estacionar.
     cites: ["rvv:24.1", "rvv:bijlage1.E9"]
 
-  - id: e-e7-estacionar
+  - id: e-e7-prohibido-estacionar
     type: yesno
-    prompt: Esta señal marca una zona para carga y descarga inmediata de mercancías. ¿Puedes estacionar tu auto allí para ir de compras?
+    prompt: "Esta señal marca una zona para carga y descarga inmediata de mercancías. Quieres estacionar tu auto allí para ir de compras. ¿Está prohibido?"
     sign: E7
-    answer: false
+    answer: true
     explain: En un lugar destinado a carga y descarga inmediata no se puede estacionar.
     cites: ["rvv:24.1", "rvv:bijlage1.E7"]
 

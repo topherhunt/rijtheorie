@@ -18,7 +18,7 @@ questions:
   - id: especial-remolque-otros
     type: mc
     prompt: "Un amigo dice que su camión con un remolque ligero puede ir a 90 km/h en la autosnelweg, igual que tu auto con remolque. ¿Cuál es el máximo de ese camión con remolque?"
-    options: ["90 km/h, porque el remolque es ligero", "80 km/h, como todos los demás vehículos de motor con remolque", "100 km/h, como una T100-bus", "130 km/h, porque no hay señales"]
+    options: ["90 km/h, porque el remolque no pasa de 3500 kg", "80 km/h, como otros vehículos de motor con remolque", "100 km/h, como una T100-bus con remolque ligero", "130 km/h, porque en la autosnelweg no hay señales"]
     answer: 1
     explain: "El 90 es solo para auto, furgoneta, moto, vehículo de tres ruedas y T100-bus con un remolque de hasta 3500 kg. Cualquier otro vehículo de motor con remolque, como un camión, va a 80 (art. 22 f); que el remolque sea ligero no cambia el grupo."
     cites: ["rvv:22"]
@@ -50,7 +50,7 @@ questions:
   - id: especial-snorfiets-brommobiel
     type: mc
     prompt: "En la calzada de una carretera normal fuera de la zona urbana, un snorfiets y un brommobiel circulan en el mismo sentido sin señales. ¿Qué máximos les tocan?"
-    options: ["Snorfiets 25 km/h y brommobiel 45 km/h", "Los dos 45 km/h", "Snorfiets 45 km/h y brommobiel 25 km/h", "Los dos 80 km/h, como las demás vías"]
+    options: ["Snorfiets 25 km/h y brommobiel 45 km/h", "Los dos 45 km/h, como cualquier ciclomotor", "Snorfiets 45 km/h y brommobiel 25 km/h", "Los dos 80 km/h, como las demás vías de ese tipo"]
     answer: 0
     explain: "El snorfiets va a 25 km/h (art. 22 d) y el brommobiel a 45 km/h (art. 22 c). Ninguno de los dos usa el 80 de las demás vías, que es para otros vehículos de motor, y el snorfiets no es una bromfiets de 45 aunque lo sea por definición."
     cites: ["rvv:22"]

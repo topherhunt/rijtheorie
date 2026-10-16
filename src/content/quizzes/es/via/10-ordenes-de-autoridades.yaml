@@ -9,7 +9,7 @@ questions:
   - id: ordenes-rojo
     type: mc
     prompt: La persona que acompaña un tranvía te muestra una lámpara roja. ¿Qué haces?
-    options: [Reduces la velocidad y sigues, Paras, Sigues si no ves el tren, Tocas la bocina y pasas]
+    options: [Reduces la velocidad y sigues, Te detienes ante la lámpara, Sigues si no ves el tren, Tocas la bocina y pasas]
     answer: 1
     explain: Debes parar cuando quien acompaña a un vehículo sobre rieles muestra F10, una bandera roja o una lámpara roja.
     cites: ["rvv:82.4"]
@@ -17,7 +17,7 @@ questions:
   - id: ordenes-agente-regla-derecha
     type: mc
     prompt: Llegas a un cruce donde normalmente cederías el paso a quien viene por tu derecha, y un agente competente y reconocible te hace señal de que pases primero. ¿Qué haces?
-    options: ["Paso, como indica el agente", "Cedo el paso a la derecha, como manda la regla", "Paso solo si nadie viene por la derecha", "Me detengo hasta que el agente lo repita con la voz"]
+    options: ["Paso, porque la orden del agente va primero", "Cedo el paso a la derecha, como manda la regla", "Paso solo si nadie viene por la derecha", "Me detengo hasta que el agente lo repita con la voz"]
     answer: 0
     explain: Las órdenes van por encima de las señales y de las reglas de tráfico, y la regla de la derecha es una regla de tráfico.
     cites: ["rvv:84"]

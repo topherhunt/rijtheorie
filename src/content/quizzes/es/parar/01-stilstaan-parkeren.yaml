@@ -2,37 +2,29 @@ questions:
   - id: stilstaan-reloj
     type: mc
     prompt: Dejas el auto junto a la acera y entras en una tienda cinco minutos. Otro conductor dice que "hasta diez minutos no cuenta como estacionar". ¿Qué dice la definición legal?
-    options:
-      - Tiene razón, parkeren empieza después de unos diez minutos
-      - Estás estacionando (parkeren), porque no fue para un ascenso, descenso, carga o descarga inmediatos
-      - Solo estás parado (stilstaan) si dejas el motor encendido
-      - Solo estás estacionando si la zona tiene una señal de parking
+    options: ["Tiene razón: parkeren empieza solo después de unos diez minutos", "Estacionas (parkeren): no fue un ascenso o carga inmediatos", "Solo estás parado (stilstaan) si dejas el motor encendido", "Solo estás estacionando si la zona tiene una señal de parking"]
     answer: 1
     explain: La ley define parkeren por el motivo y la inmediatez, no por minutos. Ir a una tienda no es subir, bajar, cargar o descargar de inmediato, así que estacionas aunque sean cinco minutos. El motor y las señales no cambian la definición.
     cites: ["rvv:1"]
 
-  - id: stilstaan-subir-bajar
+  - id: stilstaan-subir-bajar-parado
     type: yesno
-    prompt: Te detienes en la calle solo el tiempo necesario para que un pasajero baje. ¿Estás estacionando (parkeren)?
-    answer: false
+    prompt: "Te detienes en la calle solo el tiempo necesario para que un pasajero baje. ¿Estás solo parado (stilstaan), sin estacionar?"
+    answer: true
     explain: Parar el tiempo necesario para que suban o bajen pasajeros de inmediato no es parkeren. Solo estás parado (stilstaan).
     cites: ["rvv:1"]
 
-  - id: stilstaan-carga
+  - id: stilstaan-carga-fuera
     type: yesno
-    prompt: Te detienes lo necesario para descargar de inmediato unas cajas. ¿Eso es parkeren?
-    answer: false
+    prompt: "Te detienes lo necesario para descargar de inmediato unas cajas. ¿Queda esa parada fuera de la definición de parkeren?"
+    answer: true
     explain: La carga o descarga inmediata de mercancías queda fuera de la definición de parkeren.
     cites: ["rvv:1"]
 
   - id: stilstaan-esperar
     type: mc
     prompt: Te detienes en la calle y esperas diez minutos con el motor encendido a un amigo que todavía no baja. ¿Qué haces según la definición legal?
-    options:
-      - Solo estás parado, no estacionas
-      - Estás estacionando (parkeren), porque no es el tiempo necesario para el ascenso inmediato
-      - Depende de si apagas el motor
-      - Depende de si pones las luces de emergencia
+    options: ["Solo estás parado, porque tu amigo todavía no ha tardado demasiado", "Estacionas (parkeren): esperar no es un ascenso inmediato", "Depende de si apagas el motor mientras esperas a tu amigo", "Depende de si pones las luces de emergencia al esperar"]
     answer: 1
     explain: Esperar a alguien que todavía no sube o baja no es el tiempo necesario para el ascenso o descenso inmediato, así que cuenta como parkeren.
     cites: ["rvv:1"]
@@ -49,10 +41,10 @@ questions:
     explain: Esperar veinte minutos no es un ascenso inmediato, así que es parkeren (rvv:1), y hacerlo al lado de coches ya aparcados es estacionar en doble fila, que la ley prohíbe (rvv:24.3). Estar sentado en el auto o poner las luces de emergencia no lo cambia.
     cites: ["rvv:1", "rvv:24.3"]
 
-  - id: stilstaan-acera
+  - id: stilstaan-acera-prohibido
     type: yesno
-    prompt: ¿Puede un auto estacionar en el trottoir (acera)?
-    answer: false
+    prompt: "¿Está prohibido que un auto estacione en el trottoir (acera)?"
+    answer: true
     explain: Para estacionar se pueden usar otras partes de la vía, pero no el trottoir, el voetpad, el fietspad, el fiets/bromfietspad ni el ruiterpad.
     cites: ["rvv:10.1"]
 

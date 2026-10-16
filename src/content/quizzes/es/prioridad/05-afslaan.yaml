@@ -3,8 +3,8 @@ questions:
     type: mc
     prompt: Vas a girar a la derecha en una calle ancha. Si te quedas en el centro, los autos de detrás tendrían que esperarte sin poder pasar. ¿Cómo te colocas con tiempo?
     options:
-      - Lo más a la derecha posible
-      - En el centro de la vía, para tomar la curva con más amplitud
+      - Lo más a la derecha posible de tu carril
+      - En el centro de la vía, para una curva más amplia
       - Junto al eje, para ver mejor el cruce
     answer: 0
     explain: El art. 17.1 permite colocarte lo más a la derecha posible para girar a la derecha, y el CBR lo pide cuando no hacerlo entorpece el tráfico o es inseguro. Quedarte en el centro hace esperar a los de detrás.
@@ -14,8 +14,8 @@ questions:
     type: mc
     prompt: Vas a girar a la izquierda en una vía de doble sentido. Si te quedas a la derecha mientras esperas a los de frente, los de detrás querrán adelantarte por la izquierda. ¿Cómo te colocas con tiempo?
     options:
-      - Junto al eje de la vía
-      - Lo más a la derecha posible, para no estorbar
+      - Junto al eje, sin invadir el carril de frente
+      - Lo más a la derecha posible, sin estorbar
       - Sobre el carril contrario, para ver mejor
     answer: 0
     explain: El art. 17.1 permite colocarte junto al eje para girar a la izquierda. El CBR explica que así el tráfico de detrás no te adelanta por la izquierda y puede pasar por la derecha.
@@ -32,9 +32,9 @@ questions:
     type: mc
     prompt: Vas a girar. ¿Cuándo das el intermitente, según el CBR?
     options:
-      - Con tiempo, después de haber mirado, y lo apago al terminar el giro
-      - Justo al empezar a mover el volante, para no confundir a nadie
-      - Solo cuando hay otros vehículos a la vista
+      - Con tiempo, después de mirar, y lo apago al terminar el giro
+      - Justo al mover el volante, para no confundir a nadie
+      - Solo si veo otros vehículos o ciclistas que puedan verlo
     answer: 0
     explain: El CBR pide señalizar con tiempo y tras mirar, para que los demás puedan adaptarse. El art. 17.2 obliga a señalizar en cualquier caso, haya o no tráfico a la vista.
     cites: ["cbr-rijprocedure:3.3", "rvv:17.2"]
@@ -48,7 +48,7 @@ questions:
         - { label: A, kind: car, from: s, to: left, you: true }
         - { label: B, kind: car, from: n, to: straight }
       alt: Cruce sin señales. Tú (A) vienes del sur y giras a la izquierda hacia el oeste. B viene del norte, de frente, y sigue recto.
-    options: [Tú (A), El auto B]
+    options: [Tú (A), Auto B]
     answer: 1
     explain: Quien gira debe dejar pasar al tráfico que viene de frente por la misma vía.
     cites: ["rvv:18.1"]
@@ -63,7 +63,7 @@ questions:
         - { label: A, kind: car, from: s, to: left, you: true }
         - { label: B, kind: car, from: n, to: straight }
       alt: Cruce en una vía con prioridad B1. Tú (A) vienes del sur y giras a la izquierda. B viene del norte, de frente, y sigue recto.
-    options: [Tú (A), El auto B]
+    options: [Tú (A), Auto B]
     answer: 1
     explain: La prioridad de la vía no te libera del deber de quien gira. Dejas pasar al tráfico de frente.
     cites: ["rvv:18.1"]
@@ -77,7 +77,7 @@ questions:
         - { label: A, kind: car, from: s, to: left, you: true }
         - { label: B, kind: car, from: n, to: right }
       alt: Cruce sin señales. Tú (A) vienes del sur y giras a la izquierda. B viene del norte, de frente, y gira a su derecha, hacia el oeste.
-    options: [Tú (A), El auto B]
+    options: [Tú (A), Auto B]
     answer: 1
     explain: El que gira a la izquierda deja pasar al que gira a la derecha en el mismo cruce.
     cites: ["rvv:18.2"]
@@ -111,7 +111,7 @@ questions:
   - id: afslaan-ruedas
     type: mc
     prompt: Esperas en el cruce, sin bloquearlo, para girar a la izquierda mientras pasan los de frente. ¿Cómo recomienda el CBR tener las ruedas delanteras?
-    options: [Rectas, Giradas a la izquierda, Giradas a la derecha, Da igual]
+    options: ["Rectas, sin girar el volante", Giradas a la izquierda, Giradas a la derecha, Da igual cómo estén]
     answer: 0
     explain: El CBR pide mantener las ruedas delanteras rectas mientras esperas. No hace falta con semáforos ni si tu vía tiene prioridad.
     cites: ["cbr-rijprocedure:3.3"]
@@ -125,7 +125,7 @@ questions:
         - { label: A, kind: car, from: s, to: right, you: true }
         - { label: B, kind: car, from: n, to: left }
       alt: Cruce sin señales. Tú (A) vienes del sur y giras a la derecha, hacia el este. B viene del norte, de frente, y gira a su izquierda, también hacia el este.
-    options: [Tú (A), El auto B]
+    options: [Tú (A), Auto B]
     answer: 0
     explain: Quien gira a la izquierda deja pasar al que viene de frente y gira a la derecha (art. 18.2). Aquí el que gira a la izquierda es B, así que cede B y pasas tú.
     cites: ["rvv:18.2"]
@@ -135,7 +135,7 @@ questions:
     prompt: Vas a girar a la derecha y miras por encima del hombro derecho. ¿Qué compruebas con esa mirada?
     options:
       - El tráfico que va a tu lado derecho, junto a tu vehículo
-      - El tráfico que viene de frente por la vía a la que entras
+      - El tráfico de frente por la vía a la que entras
       - Si el auto de detrás mantiene la distancia
     answer: 0
     explain: Mirar por encima del hombro permite ver el tráfico que va junto a tu vehículo. No debe convertirse en mirar hacia atrás durante mucho tiempo, porque entonces no ves lo que pasa delante.

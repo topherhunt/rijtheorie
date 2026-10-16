@@ -9,7 +9,7 @@ questions:
   - id: accidente-danos
     type: mc
     prompt: Rozaste un auto estacionado y causaste daños, sin heridos. ¿Qué debes hacer para no cometer una infracción al irte?
-    options: ["Irte, porque nadie resultó herido", "Dar en el lugar la oportunidad de establecer tu identidad y la del vehículo", "Irte y llamar a tu aseguradora esa tarde", "Irte si no hay ningún testigo"]
+    options: ["Irte, porque nadie resultó herido y los daños son leves", "Dar en el lugar la oportunidad de identificarte a ti y al auto", "Irte y avisar a tu aseguradora esa misma tarde, sin demora", "Irte si no hay ningún testigo que haya visto el roce"]
     answer: 1
     explain: Si das en el lugar la oportunidad de establecer tu identidad (y la del vehículo), la prohibición de abandonar el lugar por daños no se aplica. Que no haya heridos o testigos, o avisar luego a la aseguradora, no sustituye eso.
     cites: ["wvw:7.2"]

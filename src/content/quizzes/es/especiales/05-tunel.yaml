@@ -11,11 +11,7 @@ questions:
     type: mc
     prompt: Tu auto se ha averiado en un túnel y vas a pie por la pared. Ves esta señal. ¿Qué te indica?
     sign: L19
-    options:
-      - La salida más cercana, o las dos más cercanas, en la dirección y a la distancia marcadas
-      - El límite de velocidad hasta el final del túnel
-      - La distancia hasta el siguiente teléfono de emergencia
-      - La distancia hasta el fin del túnel
+    options: ["La salida o las dos salidas más cercanas, con su dirección y distancia", "El límite de velocidad y la distancia hasta el final del túnel", "La dirección y la distancia hasta el siguiente teléfono de emergencia", "La dirección y la distancia hasta la salida por la que entraste"]
     answer: 0
     explain: L19 indica la salida o las dos salidas más cercanas, en la dirección y a la distancia del cartel. Te dice hacia dónde caminar.
     cites: ["rvv:bijlage1.L19"]
@@ -24,26 +20,22 @@ questions:
     type: mc
     prompt: Después de una avería en un túnel caminas por la pared y ves esta señal. ¿Qué haces?
     sign: L16
-    options:
-      - Llamas al wegverkeersleider desde el teléfono de emergencia
-      - Llamas a la Wegenwacht desde el teléfono de emergencia
-      - Usas el extintor
-      - Sales por la salida de emergencia sin llamar
+    options: ["Llamas al wegverkeersleider desde ese teléfono", "Llamas a la Wegenwacht desde ese mismo teléfono de emergencia", "Usas el extintor del armario que hay junto al teléfono", "Sales por la salida de emergencia sin llamar a nadie"]
     answer: 0
     explain: L16 marca un teléfono de emergencia. Rijkswaterstaat recomienda llamar desde él al wegverkeersleider.
     cites: ["rvv:bijlage1.L16", "rws-tunnel"]
 
-  - id: tunel-parar-pasajero
+  - id: tunel-parar-pasajero-prohibido
     type: yesno
-    prompt: Estás en un túnel y un pasajero quiere bajar. ¿Está permitido detenerte para que baje, según la ley?
-    answer: false
+    prompt: "Estás en un túnel y un pasajero quiere bajar. ¿Te prohíbe la ley detenerte para que baje?"
+    answer: true
     explain: La excepción de subir y bajar personas solo existe para el caso de las paradas de bus. En un túnel la prohibición no tiene esa excepción.
     cites: ["rvv:23.1", "rvv:23.2"]
 
-  - id: tunel-marcha-atras
+  - id: tunel-marcha-atras-prohibida
     type: yesno
-    prompt: Hay un atasco en un túnel de una autosnelweg y quieres dar marcha atrás para salir. ¿Es correcto?
-    answer: false
+    prompt: "Hay un atasco en un túnel de una autosnelweg y quieres dar marcha atrás para salir. ¿Te lo prohíbe la ley?"
+    answer: true
     explain: En una autosnelweg o autoweg la ley prohíbe ir marcha atrás (art. 43), y eso incluye un túnel que forma parte de ellas. La ANWB da el mismo consejo para cualquier túnel. Además, por detrás vienen vehículos que no esperan que retrocedas.
     cites: ["rvv:43.1", "anwb-tunnel"]
 
@@ -62,11 +54,7 @@ questions:
   - id: tunel-averia-sitio
     type: mc
     prompt: Tu auto se avería en un túnel y puedes seguir un poco. ¿Qué recomienda Rijkswaterstaat?
-    options:
-      - Detenerte en el carril, no mover el auto
-      - Salir del túnel y detenerte en una vluchtstrook o vluchthaven fuera de él, si puedes
-      - Dar marcha atrás hasta la entrada
-      - Cruzar la calzada hasta el otro lado
+    options: ["Detenerte enseguida en el carril, aunque aún puedas seguir un poco", "Salir del túnel si puedes y detenerte en una vluchtstrook o vluchthaven", "Dar marcha atrás hasta la entrada del túnel, con las luces de emergencia puestas", "Cruzar la calzada hasta el otro lado del túnel, donde hay más espacio"]
     answer: 1
     explain: Intenta salir del túnel y detenerte en una vluchtstrook o vluchthaven fuera de él. Si no puedes, luces de emergencia y detenerte lo más cerca de la pared.
     cites: ["rws-tunnel"]
@@ -74,11 +62,7 @@ questions:
   - id: tunel-averia-orden
     type: mc
     prompt: Tu auto se avería a mitad de un túnel y no puedes salir conduciendo. ¿Qué secuencia recomienda Rijkswaterstaat?
-    options:
-      - Luces de emergencia, detenerte lo más cerca posible de la pared, pasajeros a unos 50 m más allá del auto, caminar junto a la pared hasta el hulppost y llamar al wegverkeersleider
-      - Detenerte en el carril, cruzar la calzada con los pasajeros hasta el lado del hulppost y llamar a la Wegenwacht desde tu móvil
-      - Luces de emergencia, esperar todos dentro del auto junto a la pared y llamar a la Wegenwacht desde tu móvil
-      - Luces de emergencia, dar marcha atrás hasta la entrada del túnel y esperar fuera del auto con los pasajeros
+    options: ["Luces de emergencia, detenerte pegado a la pared, pasajeros a unos 50 m del auto, caminar por la pared hasta el hulppost y llamar al wegverkeersleider", "Detenerte en el carril sin luces de emergencia, cruzar la calzada con los pasajeros hasta el hulppost y llamar a la Wegenwacht desde el teléfono de emergencia", "Luces de emergencia, esperar todos dentro del auto pegados a la pared y llamar a la Wegenwacht desde tu móvil hasta que llegue la grúa", "Luces de emergencia, dar marcha atrás hasta la entrada del túnel y esperar fuera del auto con los pasajeros hasta que llegue la ayuda"]
     answer: 0
     explain: Rijkswaterstaat pide detenerte lo más cerca posible de la pared con las luces de emergencia, que los pasajeros esperen unos 50 m más allá del vehículo, y avisar al wegverkeersleider desde el hulppost. Nunca se cruza la calzada ni se da marcha atrás.
     cites: ["rws-tunnel", "rvv:43.1"]
@@ -99,11 +83,7 @@ questions:
   - id: tunel-fuego-llave
     type: mc
     prompt: Tu auto se incendia en un túnel y no puedes seguir. ¿Qué haces con el motor y la llave?
-    options:
-      - Motor encendido y llave puesta
-      - Apagas el motor y dejas la llave puesta
-      - Apagas el motor y te llevas la llave
-      - Apagas el motor y la tiras
+    options: ["Dejas el motor encendido y la llave puesta", "Apagas el motor y dejas la llave puesta en el contacto", "Apagas el motor y sacas la llave del contacto", "Apagas el motor y tiras la llave lejos del auto"]
     answer: 1
     explain: Rijkswaterstaat recomienda apagar el motor y dejar la llave puesta.
     cites: ["rws-tunnel"]
@@ -111,11 +91,7 @@ questions:
   - id: tunel-fuego-otro
     type: mc
     prompt: Se incendia otro auto delante de ti en el túnel. ¿Qué recomienda Rijkswaterstaat?
-    options:
-      - Pasar al lado lo más rápido posible
-      - Guardar distancia, luces de emergencia y detenerte lo más a la derecha posible
-      - Dar marcha atrás
-      - Intentar apagar el fuego con el extintor
+    options: ["Pasar al lado lo más rápido posible, antes de que el fuego se extienda más", "Guardar distancia, luces de emergencia y parar lo más a la derecha", "Dar marcha atrás hasta la entrada del túnel, con las luces puestas", "Bajar a intentar apagar el fuego con el extintor del armario"]
     answer: 1
     explain: Si se incendia otro auto, guarda distancia, enciende las luces de emergencia y detente lo más a la derecha posible.
     cites: ["rws-tunnel"]
@@ -123,11 +99,7 @@ questions:
   - id: tunel-fuego-grande
     type: mc
     prompt: Tu auto se incendia en el túnel, no puedes seguir conduciendo y el fuego ya no es pequeño. ¿Qué haces?
-    options:
-      - Sales del auto y caminas junto a la pared, alejándote del fuego, hasta la salida de emergencia más cercana
-      - Usas el extintor del armario hasta apagar el fuego
-      - Esperas dentro del auto con las luces de emergencia a que lleguen los bomberos
-      - Caminas hacia el fuego para llegar antes al teléfono de emergencia
+    options: ["Sales del auto y caminas junto a la pared, lejos del fuego, hasta la salida de emergencia", "Usas el extintor del armario hasta apagar el fuego, aunque ya no sea pequeño", "Esperas dentro del auto con las luces de emergencia a que lleguen los bomberos", "Caminas hacia el fuego para llegar antes al teléfono de emergencia que hay al otro lado"]
     answer: 0
     explain: El extintor es solo para un fuego pequeño que acaba de empezar. Si el fuego ya no es pequeño, sales y te alejas hacia la salida de emergencia más cercana, junto a la pared.
     cites: ["rws-tunnel"]

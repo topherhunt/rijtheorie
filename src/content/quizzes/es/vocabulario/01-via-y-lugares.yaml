@@ -2,7 +2,7 @@ questions:
   - id: via-y-lugares-berm
     type: mc
     prompt: ¿Qué significa "berm"?
-    options: [Acera, Berma (franja lateral de tierra o hierba), Carril bus, Paso a nivel]
+    options: [Acera elevada junto a la calzada, Franja lateral de tierra o hierba, Carril exclusivo para autobuses y taxis, Cruce de la vía con el tren]
     answer: 1
     explain: "La berm es la berma: la franja lateral de tierra o hierba junto a la calzada."
     cites: ["cbr-examenplan:4"]
@@ -11,7 +11,7 @@ questions:
   - id: via-y-lugares-uitvoeg
     type: mc
     prompt: ¿Cuál es el carril para salir de una autopista?
-    options: ["invoegstrook", "uitvoegstrook", "busstrook", "spitsstrook"]
+    options: ["invoegstrook", "uitvoegstrook", "doorgaande rijbaan", "spitsstrook"]
     answer: 1
     explain: Uitvoegstrook es el carril de salida/desaceleración.
     cites: ["cbr-examenplan:4"]
@@ -47,9 +47,9 @@ questions:
     explain: En un erf el máximo es 15 km/h y los peatones pueden usar toda la anchura. No hay excepción "si no hay nadie", y los peatones no tienen que apartarse.
     cites: ["rvv:44", "rvv:45", "rvv:46"]
 
-  - id: via-y-lugares-erf-aparcar
+  - id: via-y-lugares-erf-aparcar-plaza
     type: yesno
-    prompt: Dentro de un erf ves un hueco libre delante de una casa, sin ninguna plaza marcada. ¿Puedes aparcar tu coche ahí?
-    answer: false
-    explain: Un vehículo de motor solo puede aparcar en un erf en plazas señaladas o marcadas como parkeerplaats.
+    prompt: Dentro de un erf ves una plaza marcada como parkeerplaats. ¿Puedes aparcar tu coche ahí?
+    answer: true
+    explain: Un vehículo de motor solo puede aparcar en un erf en plazas señaladas o marcadas como parkeerplaats. Un hueco libre sin marcar delante de una casa no vale.
     cites: ["rvv:46"]

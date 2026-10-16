@@ -9,9 +9,10 @@ How to check that the course is correct. What has actually been checked so far, 
 - question schema, duplicate ids, answers out of range, order labels not in the diagram, unknown signs, missing images;
 - an unquoted option in a flow list (`options: [...]`) that starts lowercase: almost always the tail of an option split by an unquoted comma. Quote it if the lowercase is meant;
 - any cite that doesn't resolve to an article/lid/onderdeel in the law snapshots (`audit/law/`);
-- a lesson whose `secondary` frontmatter flag doesn't match whether it (or its quiz) cites a `secondary: true` source. The summary line counts those lessons.
+- a lesson whose `secondary` frontmatter flag doesn't match whether it (or its quiz) cites a `secondary: true` source. The summary line counts those lessons;
+- guessability across all quizzes (`scripts/audit/lib/bias.ts`): the mc answer is the longest option, or the shortest, more often than a random option would be, or more than 5 points less often (then "rule out the extremes" wins); yes/no answers outside 48-52% "yes".
 
-It warns on glossary definitions that read like legal claims without a cite, and CBR topics no lesson covers. `npm run audit -- --strict` turns warnings into failures; use it before a release.
+It warns on glossary definitions that read like legal claims without a cite, CBR topics no lesson covers, and an mc answer much longer than every distractor (1.3x and 15 characters over the next). `npm run audit -- --strict` turns warnings into failures; use it before a release.
 
 ## 2. Claim verification against the law text
 Resolving a cite only proves the article exists, not that it says what the lesson claims. For every `<Rule>` and every question:

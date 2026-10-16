@@ -2,7 +2,7 @@ questions:
   - id: mistachter-40m
     type: mc
     prompt: Hay niebla y ves el auto de delante a unos 40 metros. ¿Qué dice la ley sobre tu luz antiniebla trasera?
-    options: [La puedes llevar porque ves a menos de 50 m, Solo la puedes llevar si además llueve, Solo la puedes llevar si ves a menos de 20 m, La debes llevar y no puedes encender las de cruce]
+    options: [La puedes llevar porque ves a menos de 50 m, Solo la puedes llevar si además llueve, Solo puedes llevarla si ves a menos de 20 m, La debes llevar y no encender las de cruce]
     answer: 0
     explain: La antiniebla trasera se puede llevar con niebla o nieve que reduce la visibilidad a menos de 50 metros. La lluvia no es condición, y la ley no fija 20 m.
     cites: ["rvv:34.2"]
@@ -22,18 +22,18 @@ questions:
     explain: Con 80 m la visibilidad no es de menos de 50 m, así que la trasera no está permitida. Como los 50 m son el límite, el "por si acaso" no vale.
     cites: ["rvv:34.2"]
 
-  - id: mistvoor-dimlicht
+  - id: mistvoor-sin-dimlicht
     type: yesno
-    prompt: Con las antiniebla delanteras encendidas por niebla densa, ¿es obligatorio llevar además las luces de cruce?
-    answer: false
+    prompt: "Con las antiniebla delanteras encendidas por niebla densa, ¿puedes prescindir de las luces de cruce?"
+    answer: true
     explain: La ley dice que en ese caso no hace falta llevar dimlicht.
     cites: ["rvv:34.1"]
 
   - id: detenido-luces
     type: mc
     prompt: De noche, tu auto está parado en la vluchtstrook de una autosnelweg. ¿Qué luces debe llevar?
-    options: [Luces de posición (stadslicht) y luz trasera, Solo luces de emergencia, Solo la luz trasera, Solo luces de carretera]
-    answer: 1
+    options: [Stadslicht y luz trasera, Solo las luces de emergencia, Solo la luz trasera, Solo las luces de carretera]
+    answer: 0
     explain: Un vehículo de más de dos ruedas parado en la vluchtstrook lleva stadslicht y luz trasera de noche. Las luces de emergencia solas o la luz trasera sin las de posición no bastan.
     cites: ["rvv:38"]
 

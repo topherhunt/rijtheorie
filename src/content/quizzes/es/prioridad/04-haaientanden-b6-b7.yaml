@@ -8,7 +8,7 @@ questions:
         - { label: A, kind: car, from: s, to: straight, you: true }
         - { label: B, kind: car, from: w, to: straight }
       alt: Cruce. Tú (A) vienes del sur y ves dientes de tiburón pintados frente a ti. B viene del oeste, por tu izquierda, por la vía que cruzas.
-    options: [Tú (A), El auto B]
+    options: [Tú (A), Auto B]
     answer: 1
     explain: Los dientes de tiburón te obligan a ceder el paso a los conductores de la vía que cruzas, vengan por la izquierda o por la derecha.
     cites: ["rvv:80"]
@@ -23,7 +23,7 @@ questions:
         - { label: A, kind: car, from: s, to: right, you: true }
         - { label: B, kind: car, from: w, to: straight }
       alt: Cruce. Tú (A) vienes del sur con la señal B6 y dientes de tiburón, y giras a la derecha. B viene del oeste, por tu izquierda, y sigue recto.
-    options: [Tú (A), El auto B]
+    options: [Tú (A), Auto B]
     answer: 1
     explain: B6 te obliga a ceder el paso a la vía que cruzas, también si giras a la derecha.
     cites: ["rvv:bijlage1.B6", "rvv:80"]
@@ -41,8 +41,8 @@ questions:
     prompt: Llegas a un cruce con B6 y desde tu posición ves que la vía que cruzas está libre en los dos sentidos. ¿Qué haces?
     sign: B6
     options:
-      - Miro bien a ambos lados y sigo sin detenerme si no estorbo a nadie
-      - Me detengo del todo, como con B7
+      - Miro bien y sigo sin parar si no estorbo a nadie
+      - Paro del todo antes de la línea, como con B7
       - Sigo sin mirar más, porque no se ve a nadie
     answer: 0
     explain: B6 obliga a ceder el paso, no a parar. Si la vía está libre y compruebas que nadie tendrá que frenar ni esquivarte, puedes seguir. Parar siempre es la regla de B7, y no mirar es peligroso.
@@ -53,9 +53,9 @@ questions:
     prompt: Llegas a un cruce con B7 y no hay línea de detención pintada. ¿Dónde te detienes?
     sign: B7
     options:
-      - En un punto desde el que se vea bien el cruce y se pueda entrar con seguridad
-      - Donde empieza la vía que cruzas, sin mirar más
-      - No hace falta detenerse si no viene nadie
+      - Donde se vea bien el cruce y entre seguro
+      - Justo en el borde de la vía que cruzas, sin mirar más
+      - No hace falta detenerse si no se ve venir a ningún vehículo
     answer: 0
     explain: Con B7 hay que detenerse siempre. Sin stopstreep, el CBR indica parar donde el cruce se vea lo mejor posible. Que no venga nadie no elimina el stop.
     cites: ["cbr-rijprocedure:3.3", "rvv:bijlage1.B7"]
@@ -70,7 +70,7 @@ questions:
         - { label: B, kind: car, from: e, to: straight }
         - { label: C, kind: car, from: w, to: straight }
       alt: Cruce en T. Tú (A) vienes de la calle lateral del sur, con dientes de tiburón frente a ti, y giras a la izquierda. B viene del este y C del oeste, los dos en recto por la calle principal.
-    options: ["Solo B, que viene por tu derecha", "Los dos, B y C", "Ninguno, porque giras a la izquierda"]
+    options: ["Solo B, que viene por tu derecha", "Los dos, B y C, vengan de donde vengan", "Ninguno, porque giras a la izquierda"]
     answer: 1
     explain: Los dientes de tiburón te obligan a dar voorrang a los conductores de la vía que cruzas, vengan de donde vengan. Girar a la izquierda no cambia eso.
     cites: ["rvv:80"]
@@ -86,7 +86,7 @@ questions:
         - { label: B, kind: bike, from: w, to: straight }
         - { label: C, kind: car, from: e, to: straight }
       alt: Cruce. Tú (A) vienes del sur con B6 y dientes de tiburón y sigues recto. Una bicicleta (B) viene del oeste y un auto (C) viene del este, los dos en recto por la vía que cruzas.
-    options: ["Solo al auto, a la bicicleta no porque es más lenta", "A los dos", "Solo a la bicicleta, porque viene por tu izquierda"]
+    options: ["Solo al auto, porque la bici es más lenta", "A los dos, a la bicicleta y también al auto", "Solo a la bici, por venir por tu izquierda"]
     answer: 1
     explain: B6 te obliga a ceder el paso a los conductores (bestuurders) de la vía que cruzas, y los ciclistas lo son (art. 1). Cedes a los dos, vengan por la izquierda o por la derecha.
     cites: ["rvv:bijlage1.B6", "rvv:80", "rvv:1"]
@@ -95,8 +95,8 @@ questions:
     type: mc
     prompt: Según el CBR, ¿cómo te acercas a un cruce con B6 o B7?
     options:
-      - Mirando con atención extra y adaptando la velocidad a lo que veo
-      - Con la velocidad de la vía, porque la señal obliga al otro a verme
+      - Mirando con atención extra y adaptando la velocidad
+      - A la velocidad de la vía, porque la señal obliga a verme
       - Reduciendo hasta casi parar en cualquier cruce, incluso con B6 libre
     answer: 0
     explain: El CBR pide mirar con más atención y adaptar la velocidad ante B6 y B7, y acercarse de modo que el tráfico con prioridad confíe en que vas a ceder.
@@ -119,7 +119,7 @@ questions:
   - id: haaientanden-direccion
     type: mc
     prompt: Hay dientes de tiburón pintados en un cruce. ¿Quién debe ceder el paso?
-    options: ["Quien ve las puntas de los triángulos apuntando hacia él", "Quien ve la base de los triángulos frente a él", "Quien viene por la derecha del cruce"]
+    options: ["Quien ve las puntas de los triángulos hacia él", "Quien ve las bases de los triángulos hacia él", "Quien viene por la derecha, como siempre"]
     answer: 0
     explain: Las puntas apuntan hacia quien cede el paso; las bases forman una línea paralela a la vía con prioridad.
     cites: ["general"]

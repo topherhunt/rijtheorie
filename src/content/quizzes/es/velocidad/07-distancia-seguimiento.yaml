@@ -2,7 +2,7 @@ questions:
   - id: seguimiento-regla
     type: mc
     prompt: "Vas detrás de otro auto en una autosnelweg y quieres saber si dejas la distancia de seguimiento básica. ¿Cómo lo compruebas?"
-    options: ["Cuento dos segundos desde que el de delante pasa un poste hasta que lo paso yo", "Dejo siempre dos metros por cada auto", "Dejo la distancia de dos autos, sin importar la velocidad", "Cuento dos segundos desde que freno hasta que me detengo"]
+    options: ["Cuento dos segundos entre que el de delante pasa un poste y yo", "Dejo siempre dos metros por cada 10 km/h de velocidad", "Dejo la distancia de dos autos, sin importar la velocidad a la que voy", "Cuento dos segundos desde que freno hasta que me detengo"]
     answer: 0
     explain: "La volgafstand básica es la distancia que recorres en dos segundos a tu velocidad, que se comprueba con un punto fijo. No es una distancia fija en metros ni en autos: depende de tu velocidad."
     cites: ["cbr-rijprocedure:3.2"]
@@ -26,7 +26,7 @@ questions:
   - id: seguimiento-lluvia
     type: mc
     prompt: "Vas a 100 km/h con calzada seca, dejando unos 50 m. De pronto empieza a llover y la calzada se moja. ¿Qué haces con esa distancia?"
-    options: ["La aumento, porque con tiempo mojado hace falta más", "La mantengo: 50 m ya son dos segundos", "La reduzco para ver mejor al de delante", "La mantengo si llevo buenos neumáticos"]
+    options: ["La aumento: con tiempo mojado hace falta más", "La mantengo: 50 m ya equivalen a dos segundos", "La reduzco para ver mejor al auto que va delante", "La mantengo si llevo neumáticos en buen estado"]
     answer: 0
     explain: "Con tiempo mojado hace falta una distancia mayor que el punto de partida. Que 50 m sean dos segundos a 100 km/h es cierto, pero ese es el mínimo con seca, no con lluvia."
     cites: ["cbr-rijprocedure:3.2"]
@@ -34,7 +34,7 @@ questions:
   - id: seguimiento-opaco
     type: mc
     prompt: "Con calzada seca vas detrás de una furgoneta alta que no te deja ver lo que pasa más adelante. ¿Qué haces?"
-    options: ["Dejo más distancia que los dos segundos de siempre", "Me pego a ella para ver mejor por los lados", "Mantengo los dos segundos: la calzada está seca", "Me pego a ella para que nadie se meta"]
+    options: ["Dejo más distancia que los dos segundos de siempre", "Me pego a ella para ver mejor por los lados", "Mantengo los dos segundos: la calzada está seca", "Me pego a ella para que nadie se me meta delante"]
     answer: 0
     explain: "Detrás de un vehículo opaco hace falta más distancia, porque no ves el peligro hasta que reacciona el de delante. Pegarte tapa aún más la vista."
     cites: ["cbr-rijprocedure:3.2"]
@@ -57,7 +57,7 @@ questions:
   - id: seguimiento-siguen
     type: mc
     prompt: "Un auto te sigue demasiado pegado en una carretera mojada. ¿Qué haces?"
-    options: ["Dejo algo más de distancia con el de delante", "Freno de golpe para que se aparte", "Acelero para dejarlo atrás", "Mantengo todo igual y toco la bocina"]
+    options: ["Dejo algo más de distancia con el de delante", "Freno de golpe para que deje de pegarse a mi auto", "Acelero para dejarlo atrás cuanto antes", "Mantengo todo igual y le toco la bocina a ese auto"]
     answer: 0
     explain: "Con un vehículo pegado detrás hace falta más distancia con el de delante: así frenas con suavidad y el de atrás gana tiempo. Frenar de golpe o acelerar sin necesidad aumenta el riesgo."
     cites: ["cbr-rijprocedure:3.2"]
@@ -65,7 +65,7 @@ questions:
   - id: seguimiento-punto-fijo
     type: mc
     prompt: "En una autosnelweg el auto de delante pasa un poste y tú lo pasas 1 segundo después. ¿Qué pasa con tu volgafstand?"
-    options: [Es suficiente, "Es demasiado corta: debería ser de al menos 2 segundos", Es demasiado larga, Depende solo del color del auto]
+    options: ["Es suficiente: un segundo basta con calzada seca", "Es demasiado corta: debería ser de 2 segundos", "Es demasiado larga: podría ser de medio segundo", "Depende solo del tamaño del auto de delante"]
     answer: 1
     explain: "La regla de los dos segundos pide una distancia que se recorre en 2 segundos. Con 1 segundo dejas la mitad."
     cites: ["cbr-rijprocedure:3.2"]
@@ -80,7 +80,7 @@ questions:
   - id: seguimiento-lluvia-opaco
     type: mc
     prompt: "Vas a 90 km/h, llueve y vas detrás de un camión que te tapa la vista. La regla básica da unos 45 m. ¿Qué haces?"
-    options: [Dejo 45 m justos, Dejo más de 45 m, Dejo menos de 45 m para ver mejor, Dejo 45 m solo si el camión frena]
+    options: [Dejo exactamente 45 m,Dejo más de 45 m, Dejo menos de 45 m para ver mejor, Dejo 45 m solo si el camión frena]
     answer: 1
     explain: "Con tiempo mojado y detrás de un vehículo opaco hace falta una distancia mayor que el punto de partida."
     cites: ["cbr-rijprocedure:3.2"]

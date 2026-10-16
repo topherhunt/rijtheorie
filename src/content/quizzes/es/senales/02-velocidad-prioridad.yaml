@@ -1,9 +1,9 @@
 questions:
-  - id: velocidad-a1-limite
+  - id: velocidad-a1-sesenta
     type: yesno
-    prompt: Conduces un auto por una carretera normal fuera de la zona urbana, donde el máximo general es 80 km/h. Una señal A1 indica 60. ¿Puedes ir a 80, que es lo que permite la vía?
+    prompt: "Conduces un auto por una carretera normal fuera de la zona urbana, donde el máximo general es 80 km/h. Una señal A1 indica 60. ¿Debes ir a 60 como máximo?"
     sign: A1
-    answer: false
+    answer: true
     explain: A1 es la maximumsnelheid. Si indica menos que el máximo general, su número es tu máximo hasta que otra señal (por ejemplo A2) lo cierre.
     cites: ["rvv:bijlage1.A1", "rvv:62", "rvv:21"]
 
@@ -36,7 +36,7 @@ questions:
     type: mc
     prompt: Llegas a un cruce con esta señal y se acerca un auto por la vía que cruzas. ¿Qué haces?
     sign: B6
-    options: ["Dejo pasar al auto y sigo cuando no lo estorbe", "Cedo solo si viene por mi derecha, como en la regla general", "Me detengo siempre, aunque la vía esté libre", "Paso primero si llegué antes que él al cruce"]
+    options: ["Dejo pasar al auto y sigo cuando no lo estorbe", Cedo solo al que viene por mi derecha, "Me detengo siempre, aunque la vía esté libre", "Paso primero si llegué antes que él al cruce"]
     answer: 0
     explain: B6 te obliga a dar voorrang a la vía que cruzas, que es dejar que los demás sigan sin estorbo. Eso vale venga por la izquierda o por la derecha, y llegues antes o después. Si la vía estuviera libre, no tendrías que detenerte.
     cites: ["rvv:bijlage1.B6", "rvv:1", "rvv:63"]
@@ -45,7 +45,7 @@ questions:
     type: mc
     prompt: Ante una señal de stop hay una línea de detención pintada. ¿Dónde paras?
     sign: B7
-    options: ["Antes de la línea", "Con las ruedas delanteras sobre la línea, para ver mejor", "Después de la línea, para ver mejor el cruce"]
+    options: ["Antes de la línea, sin que las ruedas la toquen", "Con las ruedas delanteras sobre la línea, para ver mejor", "Después de la línea, para ver mejor el cruce"]
     answer: 0
     explain: Si hay una stopstreep para ti, paras detrás de ella (art. 79). Solo sin línea paras donde veas bien el cruce.
     cites: ["rvv:79", "cbr-rijprocedure:3.3"]

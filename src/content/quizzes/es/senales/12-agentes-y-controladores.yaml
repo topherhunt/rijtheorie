@@ -18,7 +18,7 @@ questions:
   - id: ag-brigadier-verde
     type: mc
     prompt: Tienes verde. Junto a una escuela, un verkeersbrigadier reconocible te muestra la señal de parar para dejar cruzar a los niños. ¿Qué haces?
-    options: ["Me detengo, aunque el semáforo esté en verde", "Sigo, porque tengo verde", "Reduzco y paso si los niños aún están lejos", "Toco la bocina y sigo"]
+    options: ["Me detengo aunque el semáforo esté en verde", "Sigo, porque el semáforo de mi vía está en verde", "Reduzco y paso si los niños aún están lejos", "Toco la bocina para avisarles y sigo"]
     answer: 0
     explain: Los conductores deben obedecer la instrucción de parar del verkeersbrigadier (art. 82.3), y las instrucciones van por encima de los semáforos (art. 84).
     cites: ["rvv:82.3", "rvv:84"]
@@ -26,7 +26,7 @@ questions:
   - id: ag-lampara-roja
     type: mc
     prompt: Un agente reconocible, desde el arcén, te muestra una lámpara roja. ¿Qué debes hacer?
-    options: ["Detenerme", "Reducir la velocidad", "Ceder el paso", "Continuar con cuidado"]
+    options: ["Detenerme de inmediato", "Reducir la velocidad al pasar", "Ceder el paso a los demás", "Continuar con mucho cuidado"]
     answer: 0
     explain: "Art. 83: una lámpara roja mostrada como stopteken obliga a parar."
     cites: ["rvv:83"]
@@ -34,7 +34,7 @@ questions:
   - id: ag-stop-politie
     type: mc
     prompt: Un coche de la policía tiene un letrero iluminado con las palabras "stop politie" en rojo. ¿Qué debes hacer?
-    options: ["Detenerme", "Adelantar al coche de policía", "Cambiar de carril y continuar", "Reducir y continuar si no hay peligro"]
+    options: ["Detenerme y seguir sus indicaciones", "Adelantar al coche de policía", "Cambiar de carril y continuar", "Reducir y continuar si no hay peligro"]
     answer: 0
     explain: El letrero iluminado en un vehículo policial con "stop" o "stop politie" obliga a parar; reducir o esquivar no basta.
     cites: ["rvv:83"]
@@ -44,7 +44,7 @@ questions:
     prompt: Un agente en un cruce levanta un brazo en vertical, como en el dibujo. ¿Qué significa?
     image: rvv-gesto-1.webp
     imageAlt: Agente de tráfico con un brazo levantado en vertical.
-    options: ["Todos paran", "Solo para el tráfico que viene por su derecha", "Reduce la velocidad", "Puedes pasar"]
+    options: ["Todos los vehículos paran", "Para solo el tráfico de su derecha", "Reduce la velocidad", "Puedes pasar con precaución"]
     answer: 0
     explain: "Gesto 1 del anexo II: algemeen stopteken, la señal general de parar."
     cites: ["rvv:82.2", "rvv:bijlage2"]
@@ -54,7 +54,7 @@ questions:
     prompt: Un agente levanta el brazo con el dedo índice hacia arriba. Tú tenías paso y aún no has entrado en el cruce. ¿Qué haces?
     image: rvv-gesto-6.webp
     imageAlt: Agente de tráfico con el brazo levantado y el dedo índice hacia arriba.
-    options: ["Paro", "Sigo, porque tenía paso", "Acelero para pasar antes del cambio", "Toco la bocina"]
+    options: ["Paro antes de entrar en el cruce", "Sigo, porque yo tenía paso", "Acelero para pasar antes del cambio", "Toco la bocina para avisar al agente"]
     answer: 0
     explain: "Gesto 6: parar para el tráfico que tenía paso (vrije richtingen), atención para el que estaba parado, y quien ya está en el cruce lo deja libre."
     cites: ["rvv:82.2", "rvv:bijlage2"]
@@ -73,7 +73,7 @@ questions:
     prompt: Un agente extiende el brazo y lo mueve hacia arriba y hacia abajo. ¿Qué significa?
     image: rvv-gesto-7.webp
     imageAlt: Agente de tráfico de perfil, con el brazo extendido que sube y baja.
-    options: ["Reduce la velocidad", "Para", "Acelera", "Gira a la derecha"]
+    options: ["Reduce la velocidad", "Para y espera nuevas señales", "Acelera para despejar el cruce", "Gira a la derecha ya"]
     answer: 0
     explain: "Gesto 7: teken tot snelheid verminderen, reducir la velocidad."
     cites: ["rvv:82.2", "rvv:bijlage2"]

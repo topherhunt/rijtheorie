@@ -2,7 +2,7 @@ questions:
   - id: usuarios-y-vehiculos-ruiter
     type: mc
     prompt: ¿Qué es un "ruiter"?
-    options: [Un ciclista, Un jinete, Un peatón, Un motociclista]
+    options: [Un ciclista, Un jinete, Un patinador, Un motociclista]
     answer: 1
     explain: Ruiter es el jinete.
     cites: ["cbr-examenplan:4"]
@@ -11,7 +11,7 @@ questions:
   - id: usuarios-y-vehiculos-tegenpartij
     type: mc
     prompt: ¿Qué es la "tegenpartij" en un accidente?
-    options: [El testigo, La otra parte involucrada, El policía, La aseguradora]
+    options: [El testigo que presenció todo el choque, La otra parte implicada en el choque, El agente que atendió el choque, La aseguradora que paga el choque]
     answer: 1
     explain: Tegenpartij es la otra parte.
     cites: ["cbr-examenplan:4"]
@@ -40,10 +40,10 @@ questions:
     explain: Es un voorrangsvoertuig y los usuarios de la vía deben dejarlo pasar, es decir, permitirle seguir sin estorbos. No tienes prioridad sobre él ni debes bloquear el paso.
     cites: ["rvv:50", "rvv:29", "rvv:1"]
 
-  - id: usuarios-y-vehiculos-tegenpartij-irse
+  - id: usuarios-y-vehiculos-tegenpartij-datos
     type: yesno
-    prompt: Rozas el auto de otro conductor, que está presente, y le haces daño. ¿Puedes irte sin darle tus datos?
-    answer: false
+    prompt: Rozas el auto de otro conductor, que está presente, y le haces daño. ¿Debes darle la oportunidad de establecer tu identidad y la de tu auto antes de irte?
+    answer: true
     explain: Quien está implicado en un accidente con daño a otro tiene prohibido irse del lugar, salvo que haya dado la oportunidad de establecer su identidad y la de su vehículo. Sin dar tus datos no se cumple esa salvedad.
     cites: ["wvw:7"]
 

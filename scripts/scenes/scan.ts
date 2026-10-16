@@ -13,6 +13,10 @@ const MIN_DIST = 8, MAX_DIST = 45, MAX_ANGLE = 35;
 const MIN_YEAR = 2019;
 // Detection classes that make a scene richer to read: road users, signs, markings, lights.
 const RICH = /^(human--|object--vehicle--|regulatory--|warning--|information--|complementary--|marking--|object--traffic-light--)/;
+const ROAD_USER = /^(human--|object--vehicle--)/;
+// Shot from a car: the hood or mount is detected, or the camera moved faster than a bike.
+const CAR_MOUNT = /^void--(ego-vehicle|car-mount)/;
+const CAR_KMH = 30;
 
 interface Target { id: string; classes: string[]; note: string }
 interface Config { areas: Record<string, [number, number, number, number]>; targets: Target[] }
@@ -30,10 +34,13 @@ async function get(pathname: string, params: Record<string, string>): Promise<an
   const url = new URL(API + pathname);
   for (const [k, v] of Object.entries(params)) url.searchParams.set(k, v);
   for (let attempt = 1; ; attempt++) {
-    const res = await fetch(url, { headers: { Authorization: `OAuth ${token}` } });
-    const body = await res.json();
-    if (!body.error) return body;
-    if (attempt === 3) throw new Error(`${pathname}: ${JSON.stringify(body.error)}`);
+    let error: unknown;
+    try {
+      const body = await (await fetch(url, { headers: { Authorization: `OAuth ${token}` }, signal: AbortSignal.timeout(60_000) })).json();
+      if (!body.error) return body;
+      error = body.error;
+    } catch (e) { error = e; }
+    if (attempt === 3) throw new Error(`${pathname}: ${error instanceof Error ? error.message : JSON.stringify(error)}`);
     await new Promise((r) => setTimeout(r, 1000 * attempt));
   }
 }
@@ -60,20 +67,30 @@ function distBearing([lon1, lat1]: number[], [lon2, lat2]: number[]) {
 }
 const angleDiff = (a: number, b: number) => Math.abs(((a - b + 540) % 360) - 180);
 
+// Capture speed from the nearest-in-time other image of the same sequence, if one is in `all`.
+function speed(m: any, all: any[]): number | undefined {
+  const other = all.filter((o) => o.id !== m.id && o.sequence === m.sequence && o.captured_at !== m.captured_at)
+    .sort((a, b) => Math.abs(a.captured_at - m.captured_at) - Math.abs(b.captured_at - m.captured_at))[0];
+  if (!other) return undefined;
+  return distBearing(m.geometry.coordinates, other.geometry.coordinates).dist / (Math.abs(other.captured_at - m.captured_at) / 1000) * 3.6;
+}
+
 interface Candidate {
   target: string; imageId: string; featureId: string; featureClass: string; creator: string; capturedAt: string;
-  dist: number; score: number; rich: string[]; url: string; mapillary: string;
+  dist: number; kmh?: number; score: number; users: number; rich: string[]; url: string; mapillary: string;
 }
 
 async function scanTarget(t: Target): Promise<Candidate[]> {
   const features = new Map<string, { cls: string; at: number[] }>();
-  for (const cls of t.classes) for (const bbox of tiles(box)) {
+  const queries = t.classes.flatMap((cls) => tiles(box).map((bbox) => ({ cls, bbox })));
+  await pool(queries, 8, async ({ cls, bbox }) => {
     const r = await get('/map_features', { fields: 'id,object_value,geometry', bbox, object_values: cls, limit: '2000' });
-    for (const f of r.data) features.set(f.id, { cls: f.object_value, at: f.geometry.coordinates });
-  }
+    // An unknown class name is ignored and every feature in the bbox comes back, so match it here.
+    for (const f of r.data) if (f.object_value === cls) features.set(f.id, { cls, at: f.geometry.coordinates });
+  });
   // Spread over the area: shuffle, then look at a bounded number of features.
   const picked = [...features.entries()].sort(() => Math.random() - 0.5).slice(0, perTarget * 4);
-  const found = await pool(picked, 8, async ([fid, f]) => {
+  const found = await pool(picked, 8, async ([fid, f]): Promise<Candidate | undefined> => {
     const imgs = (await get(`/${fid}`, { fields: 'images' })).images?.data ?? [];
     const near = imgs
       .map((im: any) => ({ id: im.id as string, ...distBearing(im.geometry.coordinates, f.at) }))
@@ -82,23 +99,29 @@ async function scanTarget(t: Target): Promise<Candidate[]> {
     if (!near.length) return undefined;
     const meta = await get('/images', {
       image_ids: near.map((n: any) => n.id).join(','),
-      fields: 'id,captured_at,compass_angle,computed_compass_angle,is_pano,creator,thumb_1024_url,thumb_2048_url',
+      fields: 'id,captured_at,compass_angle,computed_compass_angle,is_pano,creator,sequence,geometry,thumb_1024_url,thumb_2048_url',
     });
     const ok = meta.data.filter((m: any) => {
       const n = near.find((x: any) => x.id === m.id);
       const heading = m.computed_compass_angle ?? m.compass_angle;
       return !m.is_pano && heading !== undefined && new Date(m.captured_at).getFullYear() >= MIN_YEAR && angleDiff(heading, n.bearing) <= MAX_ANGLE;
     });
-    if (!ok.length) return undefined;
-    // Farthest qualifying image shows the most approach context.
-    const best = ok.map((m: any) => ({ m, n: near.find((x: any) => x.id === m.id) })).sort((a: any, b: any) => b.n.dist - a.n.dist)[0];
-    const det = await get(`/${best.m.id}/detections`, { fields: 'value' });
-    const rich = [...new Set<string>(det.data.map((d: any) => d.value).filter((v: string) => RICH.test(v)))].sort();
-    return {
-      target: t.id, imageId: best.m.id, featureId: fid, featureClass: f.cls, creator: best.m.creator?.username ?? '?',
-      capturedAt: new Date(best.m.captured_at).toISOString().slice(0, 10), dist: Math.round(best.n.dist),
-      score: rich.length, rich, url: best.m.thumb_2048_url ?? best.m.thumb_1024_url, mapillary: `https://www.mapillary.com/app/?pKey=${best.m.id}`,
-    } satisfies Candidate;
+    // Farthest qualifying images show the most approach context; take the first that was shot from a car.
+    const ranked = ok.map((m: any) => ({ m, n: near.find((x: any) => x.id === m.id), kmh: speed(m, meta.data) }))
+      .sort((a: any, b: any) => b.n.dist - a.n.dist).slice(0, 3);
+    for (const best of ranked) {
+      const values: string[] = (await get(`/${best.m.id}/detections`, { fields: 'value' })).data.map((d: any) => d.value);
+      if (!(values.some((v) => CAR_MOUNT.test(v)) || (best.kmh ?? 0) >= CAR_KMH)) continue;
+      const rich = [...new Set(values.filter((v) => RICH.test(v)))].sort();
+      const users = Math.min(values.filter((v) => ROAD_USER.test(v)).length, 5);
+      return {
+        target: t.id, imageId: best.m.id, featureId: fid, featureClass: f.cls, creator: best.m.creator?.username ?? '?',
+        capturedAt: new Date(best.m.captured_at).toISOString().slice(0, 10), dist: Math.round(best.n.dist),
+        kmh: best.kmh === undefined ? undefined : Math.round(best.kmh), score: rich.length + users, users, rich,
+        url: best.m.thumb_2048_url ?? best.m.thumb_1024_url, mapillary: `https://www.mapillary.com/app/?pKey=${best.m.id}`,
+      } satisfies Candidate;
+    }
+    return undefined;
   });
   const seen = new Set<string>();
   const cands = found.filter((c): c is Candidate => !!c && !seen.has(c.imageId) && !!seen.add(c.imageId))
@@ -126,7 +149,8 @@ for (const t of cfg.targets) {
   const files = await pool(cands, 6, (c) => download(c, dir));
   // Contact sheet for review: numbered tiles, 3 across.
   execFileSync('montage', [...files.flatMap((f, i) => ['-label', `${i + 1}: ${path.basename(f, '.jpg')}`, f]),
-    '-tile', '3x', '-geometry', '640x480+6+6', '-pointsize', '18', path.join(DIR, 'candidates', area, `${t.id}.jpg`)]);
+    '-tile', '3x', '-geometry', '640x480+6+6', '-font', '/System/Library/Fonts/Supplemental/Arial.ttf', '-pointsize', '18',
+    path.join(DIR, 'candidates', area, `${t.id}.jpg`)]);
+  fs.writeFileSync(path.join(DIR, 'candidates', `${area}.json`), JSON.stringify(out, null, 2));
 }
-fs.writeFileSync(path.join(DIR, 'candidates', `${area}.json`), JSON.stringify(out, null, 2));
 console.log(`wrote ${out.length} candidates to ${DIR}/candidates/${area}.json`);

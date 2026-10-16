@@ -34,7 +34,7 @@ questions:
   - id: auto-y-equipo-nino-1-30
     type: mc
     prompt: Llevas en el asiento trasero a una niña de 10 años que mide 1,30 m. ¿Cómo debe ir?
-    options: [Con el cinturón normal de adulto, En un sistema de retención infantil con homologación, Con el cinturón y un cojín sin homologar, Solo con el cinturón de regazo]
+    options: ["Con el cinturón de adulto, sin ayuda extra", En un asiento infantil homologado, Con el cinturón y un cojín elevador sin homologar, Solo con el cinturón de regazo central]
     answer: 1
     explain: Un pasajero menor de 18 años y de menos de 1,35 m debe usar un sistema de retención infantil con homologación.
     cites: ["rvv:59"]
@@ -42,7 +42,7 @@ questions:
   - id: auto-y-equipo-examen-aceite
     type: mc
     prompt: En el examen práctico el examinador te pregunta por el nivel de aceite. ¿Qué esperan de ti?
-    options: [Que midas tú el nivel con el motor caliente, Que nombres el tipo de aceite del motor, Que señales con qué se comprueba y expliques cómo, Que expliques de qué está compuesto el aceite]
+    options: [Que midas tú el nivel con el motor caliente, Que nombres el tipo de aceite que usa el motor, Que señales con qué se comprueba y expliques cómo, Que expliques de qué está compuesto el aceite del motor]
     answer: 2
     explain: El examinador no te pide comprobar el nivel ni pregunta por tipos o composición del aceite; debes poder señalar con qué se controla y explicar cómo.
     cites: ["cbr-rijprocedure:3.7"]
@@ -50,7 +50,7 @@ questions:
   - id: auto-y-equipo-examen-frenos
     type: mc
     prompt: En el examen práctico, ¿qué debes poder hacer con el líquido de frenos (remvloeistof)?
-    options: [Explicar de qué está compuesto, Señalar el depósito y explicar cómo se lee el nivel, Explicar cómo funciona dentro del sistema, Rellenarlo tú si está bajo]
+    options: [Explicar de qué sustancias se compone el líquido, Señalar el depósito y explicar cómo se lee el nivel, Explicar cómo actúa el líquido en el sistema, Rellenarlo tú mismo si el nivel está bajo]
     answer: 1
     explain: No se pregunta por el doble propósito, el funcionamiento ni la composición del líquido. Lo que se espera es señalar el depósito y explicar cómo se lee el nivel.
     cites: ["cbr-rijprocedure:3.7"]

@@ -18,19 +18,15 @@ questions:
     type: mc
     prompt: Circulas por la spitsstrook abierta y ves la señal C23-03. ¿Qué significa para ti?
     sign: C23-03
-    options:
-      - Que la spitsstrook termina y sigues por los demás carriles
-      - Que la spitsstrook empieza en ese punto
-      - Que debes dejar libre el carril de tu derecha
-      - Que puedes seguir por la vluchtstrook hasta la salida
+    options: ["Que la spitsstrook termina en ese punto", "Que la spitsstrook empieza justo en ese punto de la vía", "Que debes dejar libre el carril que está a tu derecha", "Que puedes seguir por la vluchtstrook hasta la próxima salida"]
     answer: 0
     explain: C23-03 es "einde spitsstrook". Fuera de la spitsstrook, la vluchtstrook vuelve a ser vluchtstrook, y sin emergencia está prohibido usarla.
     cites: ["rvv:bijlage1.C23-03", "rvv:43.3"]
 
-  - id: spitsstrook-cruz-sin-emergencia
+  - id: spitsstrook-cruz-prohibida-retencion
     type: yesno
-    prompt: Hay retención en tu carril y la vluchtstrook, vacía, tiene una cruz roja. No hay ninguna emergencia. ¿Puedes usarla para avanzar?
-    answer: false
+    prompt: "Hay retención en tu carril y la vluchtstrook, vacía, tiene una cruz roja. No hay ninguna emergencia. ¿Está prohibido usarla para avanzar?"
+    answer: true
     explain: La cruz roja prohíbe usar el carril, y en la vluchtstrook solo deja una excepción, las emergencias. Que haya retención no es una emergencia.
     cites: ["rvv:73", "rvv:43.3"]
 
@@ -44,10 +40,7 @@ questions:
   - id: spitsstrook-linea
     type: mc
     prompt: Vas por el carril derecho, la spitsstrook está abierta a tu derecha y entre tu carril y ella hay una línea continua. ¿Puedes cruzarla para pasar a la spitsstrook?
-    options:
-      - Sí, la ley permite cruzar una línea continua para llegar a una spitsstrook junto al carril que sigues
-      - No, una línea continua nunca se cruza
-      - Solo si hay una cruz roja en tu carril
+    options: ["Sí, la ley permite cruzarla para llegar a una spitsstrook junto a tu carril", "No, una línea continua nunca se cruza, tampoco para llegar a una spitsstrook abierta", "Solo si hay una cruz roja sobre tu carril y no viene ningún vehículo"]
     answer: 0
     explain: La regla general es no cruzar la línea continua, pero hay una excepción para llegar a (o salir de) una vluchthaven, una vluchtstrook o una spitsstrook junto al carril que sigues.
     cites: ["rvv:76.1", "rvv:76.2"]
@@ -55,11 +48,7 @@ questions:
   - id: spitsstrook-verdrijvingsvlak
     type: mc
     prompt: Sigues una spitsstrook que pasa por una bifurcación con un verdrijvingsvlak. ¿Puedes circular por él?
-    options:
-      - Sí, la excepción permite usarlo mientras sigues la spitsstrook
-      - No, un verdrijvingsvlak o puntstuk no se usa nunca
-      - Solo si no viene tráfico por la bifurcación
-      - Solo si vas a una velocidad baja
+    options: ["Sí, es una excepción si sigues la spitsstrook abierta", "No, un verdrijvingsvlak o puntstuk no se puede usar nunca", "Solo si no viene tráfico por la bifurcación en ese momento", "Solo si vas a una velocidad baja, como en un atasco"]
     answer: 0
     explain: La regla es no usar el verdrijvingsvlak ni el puntstuk. La excepción es seguir una spitsstrook que pasa por una splitsing o samenvoeging (y lo mismo con una busbaan o busstrook usada legalmente).
     cites: ["rvv:77.1", "rvv:77.2", "rvv:77.3"]

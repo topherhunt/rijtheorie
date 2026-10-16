@@ -30,7 +30,7 @@ questions:
   - id: edad-vigencia-vigencia
     type: mc
     prompt: Te dieron el permiso B el 1 de marzo de 2016, a los 30 años, sin limitación médica. ¿Hasta cuándo vale?
-    options: ["Hasta el 1 de marzo de 2026", "Hasta el 1 de marzo de 2021", "Hasta que cumplas 75 años", "Hasta el 1 de marzo de 2031"]
+    options: ["Hasta el 1 de marzo de 2026", "Hasta el 1 de marzo del 2021", "Hasta que cumplas 75 años", "Hasta el 1 de marzo de 2031"]
     answer: 0
     explain: Con menos de 65 años al emitirlo, vale 10 años desde la fecha de emisión que figura en el permiso. Los otros plazos son de otras edades.
     cites: ["rr:25a"]
@@ -38,7 +38,7 @@ questions:
   - id: edad-vigencia-70
     type: mc
     prompt: A los 72 años, el 10 de junio de 2024, te dan un permiso B nuevo. ¿Hasta cuándo vale?
-    options: ["Hasta el 10 de junio de 2029", "Hasta el 10 de junio de 2034", "Hasta que cumplas 75 años", "Hasta que cumplas 80 años"]
+    options: ["Hasta el 10 de junio de 2029", "Hasta el 10 de junio del 2034", "Hasta que cumplas 75 años", "Hasta que cumplas 80 años"]
     answer: 0
     explain: Con 70 años o más al emitirlo, la vigencia es de 5 años desde la fecha de emisión. "Hasta los 75" es la regla de los 65 a 69 años.
     cites: ["rr:25a"]

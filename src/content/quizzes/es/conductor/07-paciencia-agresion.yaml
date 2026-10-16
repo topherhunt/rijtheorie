@@ -17,7 +17,7 @@ questions:
   - id: paciencia-claxon
     type: mc
     prompt: El semáforo se pone en verde y el auto de delante, con el conductor distraído, no arranca. No hay peligro. ¿Qué haces?
-    options: ["Espero un momento sin tocar la bocina", "Doy un toque corto de bocina como recordatorio", "Hago destellos con las luces para apurarlo", "Toco la bocina hasta que arranque"]
+    options: ["Espero un momento sin tocar la bocina", "Doy un toque corto de bocina como recordatorio", "Hago destellos con las luces para apurarlo", "Toco la bocina sin parar hasta que arranque"]
     answer: 0
     explain: Las señales sonoras y luminosas solo se pueden dar para evitar un peligro inminente, y un auto que tarda en arrancar no lo es. Un toque "corto" tampoco está permitido.
     cites: ["rvv:28"]

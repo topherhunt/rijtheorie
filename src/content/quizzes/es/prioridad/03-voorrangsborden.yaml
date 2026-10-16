@@ -9,7 +9,7 @@ questions:
         - { label: A, kind: car, from: s, to: straight, you: true }
         - { label: B, kind: car, from: e, to: straight }
       alt: Cruce. Tú (A) vienes del sur y pasas junto a la señal B2, que marca el final de la vía con prioridad. B viene del este, por tu derecha.
-    options: [Tú (A), El auto B]
+    options: [Tú (A), Auto B]
     answer: 1
     explain: B2 es einde voorrangsweg, la prioridad terminó. En un cruce sin otras señales vale la regla de la derecha.
     cites: ["rvv:bijlage1.B2", "rvv:15.1"]
@@ -23,7 +23,7 @@ questions:
         - { label: A, kind: car, from: s, to: straight, you: true }
         - { label: B, kind: car, from: w, to: straight }
       alt: Cruce. Tú (A) vienes del sur por una vía sin señales y sigues recto. B viene del oeste, por tu izquierda, por una vía con la señal B1.
-    options: [Tú (A), El auto B]
+    options: [Tú (A), Auto B]
     answer: 1
     explain: B circula por la vía con prioridad y la señal manda sobre la regla de la derecha, así que pasa antes que tú aunque venga por tu izquierda. La derecha no te salva aquí.
     cites: ["rvv:bijlage1.B1", "rvv:63", "general"]
@@ -59,7 +59,7 @@ questions:
         - { label: A, kind: car, from: s, to: straight, you: true }
         - { label: B, kind: car, from: e, to: straight }
       alt: Cruce. Tú (A) vienes del sur, con la señal B5 en tu vía, y sigues recto. B viene del este, por tu derecha, por una vía lateral con la señal B6.
-    options: [Tú (A), El auto B]
+    options: [Tú (A), Auto B]
     answer: 0
     explain: Quien tiene delante B6 debe ceder el paso a los conductores de la vía que cruza (art. 80). Esa señal manda sobre la regla de la derecha, así que B cede aunque venga por tu derecha.
     cites: ["rvv:bijlage1.B6", "rvv:80", "rvv:63"]
@@ -69,9 +69,9 @@ questions:
     prompt: Vas por una vía con B5 y te acercas al cruce. Por la vía lateral de la derecha llega un auto a buena velocidad y no parece que vaya a detenerse en la B6. ¿Qué haces?
     sign: B5
     options:
-      - Adapto mi velocidad y freno a tiempo si hace falta, para evitar el choque
-      - Sigo a la misma velocidad, porque la prioridad es mía
-      - Toco el claxon y acelero para pasar antes que él
+      - Adapto la velocidad y freno si hace falta
+      - Sigo a la misma velocidad, porque tengo prioridad
+      - Toco el claxon y acelero para pasar antes de que llegue
     answer: 0
     explain: Tener prioridad no evita el choque. El CBR pide adaptar la velocidad cuando el tráfico de la vía lateral no da la impresión de ceder el paso, y frenar a tiempo si el otro no lo hace.
     cites: ["cbr-rijprocedure:3.3"]
@@ -91,9 +91,9 @@ questions:
     type: mc
     prompt: Un panel de afbuigende voorrang indica que la vía con prioridad gira a la derecha. En el cruce no sigues esa vía sino que continúas recto. Según el CBR, ¿cómo cuenta tu maniobra?
     options:
-      - Como girar (afslaan), con las obligaciones del art. 18
-      - Como ir recto, y conservas la prioridad
-      - Como una maniobra especial (art. 54)
+      - Como girar (afslaan), según el art. 18
+      - Como ir recto, y sigues con prioridad en el cruce
+      - Como una maniobra especial, y dejas pasar a todos (art. 54)
     answer: 0
     explain: Si sigues el trazado que indica el panel cuenta como recto; si te apartas de él, el CBR lo trata como afslaan, y entonces dejas pasar al tráfico de frente y al de tu lado (art. 18).
     cites: ["cbr-rijprocedure:3.3", "rvv:18.1"]

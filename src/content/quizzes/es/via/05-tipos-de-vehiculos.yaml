@@ -57,7 +57,7 @@ questions:
     type: mc
     prompt: Conduces una brommobiel (bromfiets de más de dos ruedas con carrocería). Junto a la calzada hay un camino con la señal G12a. ¿Por dónde vas?
     sign: G12a
-    options: ["Por el camino G12a, como cualquier bromfiets", Por la rijbaan, Por donde prefieras, Por el camino si no hay nadie en él]
+    options: ["Por el camino G12a, como cualquier bromfiets", "Por la rijbaan, como los autos", "Por donde prefieras, camino o rijbaan", Por el camino si no hay nadie en él]
     answer: 1
     explain: Una brommobiel sigue las reglas de los vehículos de motor en lugar de las de la bromfiets (art. 2a), y los vehículos de motor usan la rijbaan (art. 10.1). El G12a no es para ella aunque el camino esté vacío.
     cites: ["rvv:2a", "rvv:10.1"]

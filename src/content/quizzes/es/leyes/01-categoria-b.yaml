@@ -44,7 +44,7 @@ questions:
   - id: categoria-be
     type: mc
     prompt: Tu auto tiene una masa máxima de 2.000 kg y el remolque, 2.500 kg (conjunto de 4.500 kg). Tienes la categoría B sin ningún código. ¿Qué te falta para conducirlo?
-    options: ["La categoría BE", "La categoría C1", "El código de los 4.250 kg", "Nada: el remolque pesa menos de 3.500 kg"]
+    options: ["La categoría BE, aparte de la B", "La categoría C1, aparte de la B", "El código de los 4.250 kg", "Nada: el remolque pesa menos de 3.500 kg"]
     answer: 0
     explain: El conjunto pasa de 4.250 kg, así que ni siquiera el código de la categoría B sirve. Un remolque de hasta 3.500 kg con un auto de la categoría B es lo que cubre la BE. Que el remolque solo pese 2.500 kg no basta con la B.
     cites: ["rr:15.1", "rr:15.5"]

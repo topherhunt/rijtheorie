@@ -9,7 +9,7 @@ questions:
   - id: sanciones-accidente-ongeldig
     type: mc
     prompt: El CBR te pidió un examen de aptitud y no cooperas. ¿Qué pasa con tu permiso?
-    options: ["El CBR lo declara inválido a partir del séptimo día tras notificarte, y debes entregarlo", "Queda suspendido solo hasta que pagues una multa", "Sigue válido y el CBR te vuelve a citar después", "Se invalida al instante, antes de notificarte"]
+    options: ["El CBR lo declara inválido desde el séptimo día tras notificarte", "Queda suspendido solo hasta que pagues una multa al CBR", "Sigue válido mientras el CBR te vuelve a citar para otra fecha de examen", "Se invalida al instante, incluso antes de que te notifiquen"]
     answer: 0
     explain: Si no cooperas, el CBR declara el permiso inválido; la decisión entra en vigor el séptimo día después de la notificación y debes entregar el permiso.
     cites: ["wvw:132"]
@@ -45,7 +45,7 @@ questions:
   - id: sanciones-puntos-novel
     type: mc
     prompt: Tienes el beginnersrijbewijs y la policía te para por segunda vez por una infracción grave. ¿Qué pasa?
-    options: ["El Openbaar Ministerie te comunica al CBR, que investiga tu aptitud", "Nada, los puntos solo cuentan a partir de 5", "Pagas una multa más alta y nada más", "Te quitan el auto"]
+    options: ["El OM te comunica al CBR, que investiga tu aptitud", "Nada: los puntos solo cuentan a partir de 5 infracciones", "Pagas una multa más alta y no pasa nada más", "Te quitan el auto durante un mes"]
     answer: 0
     explain: Con el 2.º strafpunt del beginnersrijbewijs, el OM te comunica al CBR.
     cites: ["rijksoverheid-beginners"]

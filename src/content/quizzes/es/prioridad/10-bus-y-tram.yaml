@@ -8,7 +8,7 @@ questions:
         - { label: A, kind: car, from: s, to: straight, you: true }
         - { label: B, kind: tram, from: w, to: straight }
       alt: Cruce sin señales. Tú (A) vienes del sur y sigues recto. Un tranvía (B) viene del oeste por su vía en el centro de la calzada, por tu izquierda, y sigue recto.
-    options: [Tú (A), El tranvía B]
+    options: [Tú (auto), Tranvía B]
     answer: 1
     explain: Los conductores deben dar prioridad a los tranvías, aunque vengan por la izquierda.
     cites: ["rvv:15.2.b"]
@@ -22,7 +22,7 @@ questions:
         - { label: A, kind: car, from: s, to: left, you: true }
         - { label: B, kind: tram, from: n, to: straight }
       alt: Cruce. Tú (A) vienes del sur y giras a la izquierda. Un tranvía (B) viene de frente, del norte, y sigue recto.
-    options: [Tú (A), El tranvía B]
+    options: [Tú (auto), Tranvía B]
     answer: 1
     explain: Dejas pasar al tráfico de frente al girar (art. 18) y además debes dar prioridad al tranvía (art. 15).
     cites: ["rvv:18.1", "rvv:15.2.b"]
@@ -36,7 +36,7 @@ questions:
         - { label: A, kind: car, from: s, to: straight, you: true }
         - { label: B, kind: tram, from: n, to: left }
       alt: Cruce. Tú (A) vienes del sur y sigues recto. Un tranvía (B) viene de frente, del norte, y gira a la izquierda cruzando tu carril.
-    options: [Tú (A), El tranvía B]
+    options: [Tú (auto), Tranvía B]
     answer: 1
     explain: Al tranvía no se le aplican las reglas de giro del art. 18 (art. 18.3), así que no tiene que dejarte pasar. Y tú sigues debiéndole prioridad por el art. 15.2.b. Pensar que "el que gira cede" también vale para el tranvía es el error.
     cites: ["rvv:18.3", "rvv:15.2.b"]
@@ -56,7 +56,7 @@ questions:
     prompt: Quieres pasar un autobús detenido por el lado donde suben y bajan pasajeros. ¿Qué debes hacer?
     options:
       - Pasar solo si les dejo la oportunidad de subir y bajar
-      - Pasar despacio sin parar, porque los pasajeros deben esperar a que pase
+      - Pasar despacio sin parar, porque ellos deben esperar
       - Pasar si no veo pasajeros subiendo o bajando en ese momento
     answer: 0
     explain: El art. 52 obliga a dar a los pasajeros la oportunidad de subir y bajar. No basta pasar despacio ni fijarse solo en quien ya está bajando, porque no tienes que quitarles esa oportunidad.
@@ -66,9 +66,9 @@ questions:
     type: mc
     prompt: Pasas por el lado de las puertas de un autobús detenido en una parada. ¿Qué haces además de dejar subir y bajar a los pasajeros?
     options:
-      - Voy preparado para frenar, porque pueden aparecer pasajeros por delante o por detrás del autobús
-      - Acelero para pasar antes de que el autobús arranque
-      - Miro solo hacia las puertas, porque los pasajeros salen por ahí
+      - "Voy listo para frenar: pueden salir pasajeros por delante o detrás"
+      - Acelero para pasar antes de que el autobús arranque y cierre el paso
+      - Miro solo hacia las puertas, porque ahí es por donde salen los pasajeros
     answer: 0
     explain: El CBR pide atención a los pasajeros que aparecen por delante o por detrás del autobús, no solo junto a las puertas.
     cites: ["cbr-rijprocedure:3.6"]

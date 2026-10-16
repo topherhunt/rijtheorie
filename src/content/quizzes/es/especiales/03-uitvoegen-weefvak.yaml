@@ -25,11 +25,7 @@ questions:
   - id: uitvoegen-distancias
     type: mc
     prompt: Tu salida está a unos 600 m y vas por el carril central de una autopista de tres carriles. Según el procedimiento recomendado, ¿qué haces ahora?
-    options:
-      - Pasas al carril derecho, el que linda con el uitrijstrook, y pones el intermitente de salida hacia los 300 m
-      - Sigues por el centro hasta ver el uitrijstrook y cambias de carril entonces
-      - Pasas al carril derecho solo cuando ves el inicio del uitrijstrook
-      - Pasas al carril derecho y pones el intermitente de salida ya, a los 600 m
+    options: ["Pasas al carril derecho y pones el intermitente de salida hacia los 300 m", "Sigues por el centro hasta ver el uitrijstrook y cambias entonces", "Pasas al carril derecho solo cuando ves el inicio del uitrijstrook", "Pasas al carril derecho y pones el intermitente ya, a los 600 m"]
     answer: 0
     explain: El procedimiento pide colocarte con tiempo (circa 600 m antes) en el carril junto al uitrijstrook y señalizar la salida circa 300 m antes. Esperar a verlo de cerca te obliga a cambiar de carril tarde y deprisa.
     cites: ["cbr-rijprocedure:3.4"]
@@ -37,11 +33,7 @@ questions:
   - id: uitvoegen-hombro
     type: mc
     prompt: Te acercas a un uitrijstrook a la derecha. ¿Qué miras antes de dejar la calzada principal?
-    options:
-      - El espejo interior, el espejo exterior derecho y por encima del hombro derecho
-      - Los dos espejos exteriores, sin mirar por encima del hombro
-      - El espejo interior y por encima del hombro izquierdo
-      - Nada, basta con poner el intermitente con tiempo
+    options: ["El espejo interior, el exterior derecho y por encima del hombro derecho", "Los dos espejos exteriores, sin mirar por encima del hombro", "El espejo interior, el exterior izquierdo y por encima del hombro izquierdo", "Nada, basta con poner el intermitente derecho con tiempo suficiente"]
     answer: 0
     explain: La salida está a la derecha, así que revisas por ese lado. Así notas a un vehículo que viene detrás y también quiere salir. El intermitente avisa, pero no sustituye a mirar.
     cites: ["cbr-rijprocedure:3.4"]
@@ -49,10 +41,7 @@ questions:
   - id: uitvoegen-hombro-izquierda
     type: mc
     prompt: Tu salida es un uitrijstrook a la izquierda de la calzada. ¿Qué miras antes de salir?
-    options:
-      - El espejo interior, el espejo exterior izquierdo y por encima del hombro izquierdo
-      - El espejo interior, el espejo exterior derecho y por encima del hombro derecho
-      - Solo el espejo interior, porque no hay vehículos a tu izquierda
+    options: ["El espejo interior, el exterior izquierdo y por encima del hombro izquierdo", "El espejo interior, el exterior derecho y por encima del hombro derecho", "Solo el espejo interior, porque no hay vehículos a tu izquierda que quieran salir"]
     answer: 0
     explain: El lado de la revisión es el de la salida. Con un uitrijstrook a la izquierda miras interior, izquierdo y hombro izquierdo, para ver a quien viene detrás y también quiere salir.
     cites: ["cbr-rijprocedure:3.4"]
@@ -91,11 +80,7 @@ questions:
   - id: uitvoegen-intermitente-cuando
     type: mc
     prompt: Ya vas por el carril derecho hacia tu salida y no viene nadie detrás. ¿Cuándo usas el intermitente derecho?
-    options:
-      - Lo pones circa 300 m antes y lo apagas donde el carril se separa de la calzada principal
-      - Lo pones al pisar la blokmarkering y lo apagas al terminar la salida
-      - No lo pones, porque no viene nadie detrás
-      - Lo pones circa 300 m antes y lo mantienes hasta el final del uitrijstrook
+    options: ["Lo pones circa 300 m antes y lo apagas donde el carril se separa", "Lo pones al pisar la blokmarkering y lo apagas al terminar la salida", "No lo pones, porque no viene nadie detrás y la salida es tuya", "Lo pones circa 300 m antes y lo mantienes hasta el final del uitrijstrook"]
     answer: 0
     explain: La ley obliga a señalizar al dejar la calzada principal aunque no haya nadie cerca. El procedimiento pide ponerlo a tiempo y apagarlo donde la strook se separa de la calzada (antes, en carriles largos).
     cites: ["rvv:55", "cbr-rijprocedure:3.4"]
@@ -103,11 +88,7 @@ questions:
   - id: uitvoegen-weefvak-ley
     type: mc
     prompt: En un weefvak, ¿quién tiene la obligación legal de dejar pasar al otro tráfico?
-    options:
-      - Solo el que se incorpora
-      - Solo el que sale
-      - Los dos, el que se incorpora y el que sale
-      - Ninguno; se entra en orden
+    options: ["Solo el que se incorpora a la calzada principal", "Solo el que sale de la calzada principal", "Los dos: el que se incorpora y el que sale", "Ninguno; se entra y se sale por orden de llegada"]
     answer: 2
     explain: Entrar y salir son maniobras especiales, así que la ley obliga a los dos a dejar pasar al otro tráfico.
     cites: ["rvv:54", "cbr-rijprocedure:3.4"]
@@ -115,11 +96,7 @@ questions:
   - id: uitvoegen-weefvak-practica
     type: mc
     prompt: En un weefvak, según el punto de partida del procedimiento práctico, ¿quién deja pasar primero?
-    options:
-      - El que sale deja pasar al que se incorpora
-      - El que se incorpora deja salir primero al que sale
-      - El de más velocidad
-      - El de la derecha
+    options: ["El que sale deja pasar al que se incorpora", "El que se incorpora deja salir primero al que sale", "Pasa primero el vehículo que va a más velocidad", "Pasa primero el que viene por la derecha, como siempre"]
     answer: 1
     explain: "Es el punto de partida del procedimiento: quien se incorpora deja salir primero. La ley en sí obliga a los dos."
     cites: ["cbr-rijprocedure:3.4"]
@@ -127,11 +104,7 @@ questions:
   - id: uitvoegen-weefvak-corto
     type: mc
     prompt: El weefvak es corto y vas a incorporarte. ¿Qué recomienda el procedimiento?
-    options:
-      - Esperar al final del tramo
-      - Incorporarte lo antes posible para dejar espacio a quienes salen
-      - Adelantar a los autos que salen
-      - Frenar hasta parar
+    options: ["Esperar al final del tramo y entrar con la mayor velocidad posible", "Incorporarte pronto para dejar espacio a quienes salen", "Adelantar a los autos que salen para entrar antes que ellos", "Frenar hasta parar y esperar a que pase todo el tráfico"]
     answer: 1
     explain: En un tramo corto, incorpórate pronto para dejar espacio a quienes salen. Tampoco adelantes sin necesidad.
     cites: ["cbr-rijprocedure:3.4"]
@@ -139,11 +112,7 @@ questions:
   - id: uitvoegen-weefvak-seguir
     type: mc
     prompt: Quieres salir por un carril combinado de gran longitud, pero al inicio hay tráfico en ese carril y no puedes entrar. ¿Qué haces?
-    options:
-      - Sigues por la calzada principal solo si más adelante en ese carril tendrás otra oportunidad de salir, y evitas detenerte
-      - Te detienes en la calzada principal hasta que haya un hueco
-      - Llegas a la salida por la vluchtstrook
-      - Das marcha atrás hasta el inicio del carril
+    options: ["Sigues por la calzada principal solo si habrá otra oportunidad de salir, sin detenerte", "Te detienes en la calzada principal con las luces de emergencia hasta que se abra un hueco", "Llegas a la salida por la vluchtstrook, que va libre a tu derecha", "Das marcha atrás hasta el inicio del carril combinado y vuelves a intentar entrar"]
     answer: 0
     explain: Según el procedimiento, en un carril combinado largo puedes seguir por la calzada principal si hay otra oportunidad de salir en ese carril, y debes evitar pararte en la calzada. La vluchtstrook y la marcha atrás están prohibidas.
     cites: ["cbr-rijprocedure:3.4", "rvv:43.1", "rvv:43.3"]
@@ -151,10 +120,7 @@ questions:
   - id: uitvoegen-fila-uit
     type: mc
     prompt: Hay una fila casi parada en la calzada principal y quieres salir por un carril combinado. ¿Cómo consigues el espacio para entrar al carril?
-    options:
-      - Con contacto visual con los conductores y el intermitente, al inicio del uitrijstrook
-      - Tocando la bocina hasta que te abran paso
-      - Avanzando por la vluchtstrook hasta tu salida
+    options: ["Con contacto visual y el intermitente, al inicio del uitrijstrook", "Tocando la bocina un par de veces hasta que te abran paso", "Avanzando por la vluchtstrook hasta tu salida, que está más adelante"]
     answer: 0
     explain: En una fila parada o muy lenta se "pide" la oportunidad al inicio del uitrijstrook con contacto visual y el intermitente. La vluchtstrook solo se usa en emergencias.
     cites: ["cbr-rijprocedure:3.4", "rvv:43.3"]
@@ -162,10 +128,7 @@ questions:
   - id: uitvoegen-weefvak-no-incorporas
     type: mc
     prompt: Vas por el carril combinado de un weefvak y no te vas a incorporar a la calzada principal. ¿Qué recomienda el procedimiento?
-    options:
-      - Nada especial
-      - Poner el intermitente derecho poco antes de que el carril se junte con la calzada principal y mirar como si te fueras a incorporar
-      - No poner ningún intermitente, porque no cambias de carril
+    options: ["Nada especial: como sigues por el mismo carril, no hace falta señalizar ni mirar distinto", "Señalizar a la derecha poco antes de que el carril se junte y mirar como si te incorporaras", "No poner ningún intermitente ni mirar atrás, porque no cambias de carril ni de calzada"]
     answer: 1
     explain: Si no te incorporas, señaliza a la derecha poco antes de que el carril se junte con la calzada principal y mira como si te incorporaras. Así los demás saben que sigues por ese carril.
     cites: ["cbr-rijprocedure:3.4"]

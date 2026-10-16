@@ -3,7 +3,7 @@ questions:
     type: mc
     exam: false
     prompt: En tu examen fallas 5 de las 50 preguntas que cuentan y 1 de las 2 preguntas de prueba. ¿Cuál es el resultado?
-    options: ["Apruebas: 45 aciertos de 50 cuentan, y la de prueba no cuenta", "Suspendes: sumas 6 errores y el máximo son 5", "Suspendes: hay que acertar las dos preguntas de prueba", "Depende de cuál de las dos de prueba fallaste"]
+    options: ["Apruebas: tienes 45 aciertos de 50 y la de prueba no cuenta", "Suspendes: sumas 6 errores y el máximo permitido es 5", "Suspendes: debes acertar también las dos de prueba", "Depende de cuál de las dos preguntas de prueba fallaste"]
     answer: 0
     explain: Solo cuentan las 50 preguntas normales y necesitas 44 aciertos, así que con 5 errores tienes 45 y apruebas. La pregunta de prueba que fallaste no suma ningún error, y tú no sabes cuáles son, por eso conviene responder todas con cuidado.
     cites: ["cbr-examenplan:1"]
@@ -20,7 +20,7 @@ questions:
     type: mc
     exam: false
     prompt: ¿Cómo contestas una invulvraag?
-    options: [Arrastrando una marca a la imagen, Escribiendo el número correcto con el teclado de la pantalla, Tocando un punto de la imagen, Eligiendo sí o no]
+    options: ["Arrastrando una marca al punto correcto de la imagen", "Escribiendo el número con el teclado de la pantalla", "Tocando el lugar correcto dentro de la imagen", "Eligiendo entre dos respuestas: sí o no"]
     answer: 1
     explain: En una invulvraag escribes el número correcto (por ejemplo una velocidad o una distancia) con el teclado de la pantalla.
     cites: ["cbr-vragen"]
@@ -29,7 +29,7 @@ questions:
     type: mc
     exam: false
     prompt: En una hotspotvraag, ¿qué haces?
-    options: [Arrastras números a la imagen, Escribes un número, Tocas la respuesta correcta dentro de la imagen, Marcas varias respuestas de una lista]
+    options: ["Arrastras un número a un lugar de la imagen", "Escribes el número correcto con el teclado", "Tocas el lugar correcto dentro de la imagen", "Marcas las respuestas correctas de una lista"]
     answer: 2
     explain: En la hotspotvraag tocas el lugar correcto dentro de la imagen.
     cites: ["cbr-vragen"]
@@ -46,8 +46,8 @@ questions:
     type: mc
     exam: false
     prompt: ¿Qué se hace en una single-sleepvraag?
-    options: [Se arrastra una sola marca al lugar correcto de la imagen, Se arrastran tres números a la imagen, Se escribe un número, Se contesta sí o no]
-    answer: 0
+    options: ["Se arrastran varios números a la imagen en orden", "Se arrastra una sola marca al lugar de la imagen", "Se escribe el número correcto con el teclado de la pantalla", "Se contesta sí o no tocando uno de dos botones"]
+    answer: 1
     explain: En la single-sleepvraag arrastras una sola marca (un visto) al lugar correcto de la imagen.
     cites: ["cbr-vragen"]
 
@@ -55,7 +55,7 @@ questions:
     type: mc
     exam: false
     prompt: ¿Cuál de estas preguntas corresponde al nivel "más que conocer" (K+) del CBR?
-    options: ["¿Qué significa esta señal?", "¿Cuál es el orden correcto en el que pasan estos vehículos?", "¿Cómo se llama esta señal en neerlandés?", "Nombra la regla de la derecha"]
+    options: ["¿Qué significa esta señal de límite de velocidad?", "¿En qué orden pasan estos vehículos en el cruce?", "¿Cómo se llama esta señal en neerlandés?", "¿Cómo se llama la regla de la derecha en neerlandés?"]
     answer: 1
     explain: K+ significa tomar la decisión correcta en una situación y entender cómo funciona la regla. Ordenar quién pasa primero es un ejemplo del plan del CBR. Las otras tres piden solo nombrar o reconocer un hecho (nivel K).
     cites: ["cbr-examenplan:1"]

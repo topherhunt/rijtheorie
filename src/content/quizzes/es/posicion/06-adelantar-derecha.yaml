@@ -2,29 +2,29 @@ questions:
   - id: derecha-giro-izquierda
     type: mc
     prompt: Delante de ti un auto está preseleccionado a la izquierda con el intermitente izquierdo, para girar. ¿Cómo lo pasas?
-    options: [Por la derecha, Por la izquierda, Esperando detrás hasta que gire, Tocando la bocina para que se aparte]
+    options: ["Por la derecha, sin invadir el carril contrario", "Por la izquierda, pasando al carril contrario", "Esperando detrás hasta que gire", "Tocando la bocina para que se aparte"]
     answer: 0
     explain: Quien ha preseleccionado a la izquierda e indica que girará a la izquierda se adelanta por la derecha (art. 11 lid 2). Pasar por la izquierda lo haría invadir el carril contrario.
     cites: ["rvv:11.2"]
 
-  - id: derecha-giro-sin-senal
+  - id: derecha-giro-sin-senal-izquierda
     type: yesno
-    prompt: El auto de delante va pegado a la izquierda de su carril, pero no ha puesto ningún intermitente. No sabes si va a girar. ¿Puedes pasarlo por la derecha?
-    answer: false
-    explain: La excepción del art. 11 lid 2 exige las dos cosas, haber preseleccionado a la izquierda e indicado que se girará a la izquierda. Sin la señal vale la regla general, que se adelanta por la izquierda.
+    prompt: El auto de delante va pegado a la izquierda de su carril, pero no ha puesto ningún intermitente. No sabes si va a girar. ¿Debes pasarlo por la izquierda?
+    answer: true
+    explain: Sí. La excepción del art. 11 lid 2 exige las dos cosas, haber preseleccionado a la izquierda e indicado que se girará a la izquierda. Sin la señal vale la regla general, que se adelanta por la izquierda.
     cites: ["rvv:11.1", "rvv:11.2"]
 
-  - id: derecha-recto-lento
+  - id: derecha-recto-lento-izquierda
     type: yesno
-    prompt: Un auto lento va delante de ti por la calzada, sin indicar ningún giro, y a su derecha hay espacio de sobra. No hay fila, línea de bloques ni rotonda. ¿Puedes adelantarlo por la derecha?
-    answer: false
-    explain: El art. 11 lid 1 dice que se adelanta por la izquierda. Que haya espacio a la derecha o que el otro vaya lento no es ninguna de las excepciones del art. 11 (preselección con señal, ciclistas, línea de bloques, tranvías) ni del 13 y 48 (filas, rotondas).
+    prompt: Un auto lento va delante de ti por la calzada, sin indicar ningún giro, y a su derecha hay espacio de sobra. No hay fila, línea de bloques ni rotonda. ¿Tienes que adelantarlo por la izquierda?
+    answer: true
+    explain: Sí. El art. 11 lid 1 dice que se adelanta por la izquierda. Que haya espacio a la derecha o que el otro vaya lento no es ninguna de las excepciones del art. 11 (preselección con señal, ciclistas, línea de bloques, tranvías) ni del 13 y 48 (filas, rotondas).
     cites: ["rvv:11.1", "rvv:11.2"]
 
   - id: derecha-bloques
     type: mc
     prompt: Circulas en un tramo con una línea de bloques que separa dos carriles. Tú vas a la derecha de la línea y otro auto va a la izquierda de ella, más despacio. ¿Puedes pasarlo por la derecha?
-    options: ["Sí, quien está a la derecha de una blokmarkering puede adelantar por la derecha", "Solo si hay atasco", "No, tengo que pasar al otro lado de la línea para adelantar", "Solo con permiso del otro conductor"]
+    options: ["Sí, desde la derecha de la blokmarkering se puede adelantar", "Solo si hay atasco y pongo el intermitente derecho", "No, tengo que pasar al otro lado de la línea para adelantar", "Solo si el otro conductor me hace señas de que pase"]
     answer: 0
     explain: Quien está a la derecha de una blokmarkering puede adelantar por la derecha a quien está a su izquierda (art. 11 lid 4). No hace falta cruzar la línea ni que haya atasco.
     cites: ["rvv:11.4"]
@@ -32,7 +32,7 @@ questions:
   - id: derecha-fila
     type: mc
     prompt: En un atasco el carril izquierdo avanza muy despacio y tu carril derecho avanza algo más rápido. Pasas junto a la fila del carril izquierdo. ¿Es legal?
-    options: ["Sí, las filas pueden adelantarse por la derecha", "No, hay que esperar a que la fila se mueva", "Solo si pongo el intermitente derecho", "Solo si el otro carril está del todo parado"]
+    options: ["Sí, las filas pueden adelantarse por la derecha", "No, tendría que esperar a que la fila vuelva a avanzar", "Solo si pongo el intermitente derecho antes de pasar", "Solo si la fila del otro carril está del todo parada"]
     answer: 0
     explain: El art. 13 lid 2 permite adelantar las filas por la derecha. Ni el intermitente ni que la fila esté parada del todo son condiciones de esa regla.
     cites: ["rvv:13.2"]
@@ -85,7 +85,7 @@ questions:
   - id: derecha-incorporacion
     type: mc
     prompt: Acabas de adelantar por la izquierda y llegas a la altura de un carril de incorporación por el que entran vehículos. ¿Qué haces?
-    options: [No paso al carril de más a la derecha en ese punto, Paso enseguida al carril más a la derecha, Acelero para pasar antes de que entren, Freno de golpe para dejarlos entrar]
+    options: ["No paso al carril derecho a la altura de la incorporación", "Paso enseguida al carril derecho, como siempre tras adelantar", "Acelero para pasar delante de quienes se incorporan", "Freno de golpe en el carril para dejarlos entrar"]
     answer: 0
     explain: Después de adelantar no hay que ir al carril más a la derecha a la altura de un carril de incorporación con tráfico entrando, porque chocarías con quien se incorpora.
     cites: ["cbr-rijprocedure:3.5"]

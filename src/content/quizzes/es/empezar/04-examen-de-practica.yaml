@@ -3,7 +3,7 @@ questions:
     type: mc
     exam: false
     prompt: ¿Por qué el examen de práctica de este curso está bloqueado hasta que domines todo?
-    options: [Porque el CBR lo exige, Porque el objetivo es conocer las reglas a fondo y no solo sacar el mínimo para aprobar, Porque es más difícil que el examen real, Para que pagues más]
+    options: ["Porque el CBR exige haber dominado el curso antes del examen", "Porque busca que conozcas las reglas a fondo y no solo aprobar", "Porque es mucho más difícil que el examen real del CBR", "Porque se usa para controlar cuántas horas estudias"]
     answer: 1
     explain: El objetivo del curso es que conozcas las reglas a fondo. Con 44 de 50 se aprueba el examen real, pero eso deja hasta 6 reglas falladas.
     cites: ["curso", "cbr-examenplan:1"]
@@ -73,7 +73,7 @@ questions:
     type: mc
     exam: false
     prompt: Ya conduces en otro país y crees saber todo. ¿Qué puedes hacer para saltarte el camino largo del dominio?
-    options: [Pedir que te lo desbloqueen, Hacer la prueba de nivel y acertar todas las preguntas, Esperar 24 horas, Descargar tu progreso]
+    options: ["Pedir al curso que te desbloquee el examen sin más", "Hacer la prueba de nivel y acertar todas las preguntas", "Esperar 24 horas y volver a entrar sin más trámite", "Descargar tu progreso y volver a importarlo después"]
     answer: 1
     explain: La prueba de nivel desbloquea el examen de práctica si aciertas todas sus preguntas.
     cites: ["curso"]

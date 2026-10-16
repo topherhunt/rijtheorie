@@ -10,9 +10,9 @@ questions:
     type: mc
     prompt: En un cruce ves varios coches que van seguidos. ¿Cuándo son un cortejo fúnebre al que se aplica el art. 16?
     options:
-      - Cuando son motorvehículos que acompañan a un difunto y llevan los distintivos oficiales
-      - Cuando varios coches van seguidos con las luces encendidas
-      - Cuando son más de cinco coches seguidos que van al mismo sitio
+      - Cuando son motorvehículos con distintivos oficiales que acompañan a un difunto
+      - Cuando varios coches van seguidos, con luces y a poca distancia
+      - Cuando son más de cinco coches seguidos que van al mismo destino y sin parar
     answer: 0
     explain: La definición pide motorvehículos que acompañan a un difunto o a sus cenizas y llevan los distintivos oficiales. Ir seguidos, con luces o en número no los convierte en cortejo.
     cites: ["rvv:1", "rvv:16"]
@@ -21,9 +21,9 @@ questions:
     type: mc
     prompt: Vas en bicicleta y un cortejo fúnebre de motorvehículos con distintivos oficiales pasa por el cruce. Entre dos coches hay un hueco grande. ¿Puedes cruzar por ahí?
     options:
-      - "No, el art. 16 también obliga a los ciclistas: espero a que termine de pasar"
-      - Sí, el art. 16 solo obliga a quienes van en coche
-      - Sí, si el hueco es lo bastante grande para pasar
+      - "No: el art. 16 también obliga a los ciclistas y espero a que pase"
+      - Sí, el art. 16 solo obliga a quienes conducen un motorvehículo
+      - Sí, si el hueco es lo bastante grande para pasar con la bicicleta
     answer: 0
     explain: El art. 16 se dirige a los weggebruikers, todos los usuarios de la vía, ciclistas incluidos. El tamaño del hueco no importa.
     cites: ["rvv:16"]
@@ -55,9 +55,9 @@ questions:
     type: mc
     prompt: Vas en tu coche particular detrás de una columna militar. La luz se pone roja cuando ya han pasado varios camiones, y aún quedan más por pasar. ¿Qué haces?
     options:
-      - Me detengo ante el rojo, porque la excepción del art. 68.4 es solo para los vehículos de la columna
+      - "Me detengo ante el rojo: la excepción del art. 68.4 es solo de la columna"
       - Sigo detrás del último camión, como si formara parte de la columna
-      - Acelero para cruzar antes de que cierre el cruce
+      - Acelero para cruzar antes de que los camiones cierren el cruce
     answer: 0
     explain: Tú no perteneces a la columna, así que el rojo (art. 68.1) rige para ti. Seguir detrás de un camión no te da su excepción.
     cites: ["rvv:68.1", "rvv:68.4"]

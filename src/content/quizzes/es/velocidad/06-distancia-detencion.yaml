@@ -47,7 +47,7 @@ questions:
   - id: detencion-frenado-vista-libre
     type: mc
     prompt: "A 40 km/h tu distancia de frenado es de unos 10 m. Ves la vía libre solo en los próximos 25 m (curva sin visibilidad) y quieres pasar a 80 km/h. ¿Qué conclusión sacas, contando solo el frenado?"
-    options: ["A 80 necesito unos 40 m, más de los 25 que veo: no puedo ir a 80", "A 80 necesito unos 20 m, menos de 25: puedo ir a 80", "A 80 necesito unos 25 m, justo lo que veo: puedo ir a 80", "La distancia de frenado no depende de lo que veo libre"]
+    options: ["A 80 necesito unos 40 m, más de los 25 que veo: no puedo ir a 80", "A 80 necesito unos 20 m, menos de los 25 que veo: sí puedo ir a 80", "A 80 necesito unos 25 m, justo lo que veo: puedo ir a 80", "La distancia de frenado no depende de lo que veo libre"]
     answer: 0
     explain: "Al doble de velocidad el frenado es unas 4 veces mayor: 10 x 4 = 40 m. Con solo 25 m libres no te detienes a tiempo (art. 19), y eso sin contar la reacción. Calcular 20 m sería suponer que crece de forma proporcional."
     cites: ["rvv:19", "general"]
@@ -65,7 +65,7 @@ questions:
   - id: detencion-lluvia-reaccion-rapida
     type: mc
     prompt: "Un amigo dice: \"Con lluvia no necesito más distancia, porque reacciono rápido\". Vas por una autosnelweg con calzada mojada. ¿Por qué se equivoca?"
-    options: ["Reaccionar rápido acorta la distancia de reacción, pero la calzada mojada alarga el frenado", "La lluvia alarga la distancia de reacción, aunque reacciones rápido", "Con lluvia el auto frena igual; el problema es la visibilidad", "Reaccionar rápido no cambia ninguna de las dos distancias"]
+    options: ["Reaccionar rápido acorta la reacción, pero la calzada mojada alarga el frenado", "La lluvia alarga la distancia de reacción, aunque reacciones rápido y frenes bien", "Con lluvia el auto frena igual que en seco; el problema es la visibilidad", "Reaccionar rápido no cambia ninguna de las dos distancias en ningún caso"]
     answer: 0
     explain: "La distancia de reacción depende de tu tiempo de reacción y de la velocidad; el frenado depende de la adherencia, y mojado se alarga. Tu rapidez de reacción no arregla eso. La lluvia no alarga la reacción: la visibilidad es otro tema."
     cites: ["general"]

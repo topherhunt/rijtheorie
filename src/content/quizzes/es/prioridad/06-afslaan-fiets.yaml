@@ -8,7 +8,7 @@ questions:
         - { label: A, kind: car, from: s, to: right, you: true }
         - { label: B, kind: bike, from: s, to: straight, lane: path }
       alt: Cruce. Tú (A) vienes del sur y giras a la derecha. A tu derecha, por el carril bici, B es un ciclista que sigue recto.
-    options: [Tú (A), El ciclista B]
+    options: [Tú (auto), Ciclista B]
     answer: 1
     explain: Quien gira debe dejar pasar al tráfico que va a su lado en la misma vía, también al ciclista del carril bici.
     cites: ["rvv:18.1"]
@@ -17,8 +17,8 @@ questions:
     type: mc
     prompt: Vas a girar a la derecha y tendrás que cruzar un carril bici que corre junto a la calzada. Según el CBR, ¿qué haces antes de cruzarlo?
     options:
-      - Compruebo el retrovisor exterior y el ángulo muerto mientras sigo en línea recta
-      - Miro solo hacia delante, porque el ciclista debe verme y ceder
+      - Miro retrovisor exterior y ángulo muerto, en línea recta
+      - Miro solo hacia delante, porque el ciclista debe verme y ceder el paso
       - Compruebo el retrovisor interior justo cuando ya estoy girando
     answer: 0
     explain: El CBR pide comprobar el retrovisor exterior y el ángulo muerto antes de cruzar un fietspad, y hacerlo yendo en línea recta. Si ya estás girando, el ciclista puede estar justo donde no ves.
@@ -29,7 +29,7 @@ questions:
     prompt: Giras a la derecha y vas a cruzar un carril bici con tráfico en los dos sentidos. ¿Desde dónde pueden llegar ciclistas?
     options:
       - Desde los dos lados, así que miro a ambos
-      - Solo desde atrás, porque los ciclistas van por su derecha
+      - Solo desde atrás, por su derecha
       - Solo desde el lado hacia el que giro
     answer: 0
     explain: En un carril bici de doble sentido el CBR pide atención extra, porque pueden venir ciclistas desde ambos lados.
@@ -39,9 +39,9 @@ questions:
     type: mc
     prompt: Giras a la derecha. Por el fiets/bromfietspad que corre pegado a la calzada llega un ciclomotor (bromfiets) que sigue recto. ¿Qué haces?
     options:
-      - Lo dejo pasar, porque el art. 18 habla de todo el tráfico que va a mi lado
+      - "Lo dejo pasar: el art. 18 incluye ciclomotores"
       - Paso yo, porque el art. 18 solo se aplica a los ciclistas
-      - Paso yo, porque un ciclomotor es más rápido y debe esperar
+      - Paso yo, porque un ciclomotor es más rápido y debe esperarme
     answer: 0
     explain: El art. 18.1 se refiere al tráfico que va a tu lado o pegado detrás, no solo a las bicicletas. Un bromfiets que sigue recto tiene que ser dejado pasar.
     cites: ["rvv:18.1"]
@@ -49,7 +49,7 @@ questions:
   - id: afslaan-fiets-atras
     type: mc
     prompt: Giras a la derecha por una calle con carril bici pegado a la calzada. Un ciclista viene por el carril bici, un poco por detrás y a tu derecha, y sigue recto. ¿Quién pasa primero?
-    options: ["El ciclista", "Tú, si ya has empezado a girar", "Tú, porque el ciclista viene por detrás"]
+    options: ["El ciclista, aunque venga por detrás", "Tú, si ya has empezado a girar", "Tú, porque viene por detrás"]
     answer: 0
     explain: El art. 18.1 incluye al tráfico que va pegado detrás de ti, a la derecha o a la izquierda, en la misma vía. Haber empezado a girar no te da prioridad.
     cites: ["rvv:18.1"]
@@ -63,7 +63,7 @@ questions:
         - { label: A, kind: car, from: s, to: left, you: true }
         - { label: B, kind: bike, from: n, to: straight }
       alt: Cruce. Tú (A) vienes del sur y giras a la izquierda. B es un ciclista que viene del norte, de frente, y sigue recto.
-    options: [Tú (A), El ciclista B]
+    options: [Tú (auto), Ciclista B]
     answer: 1
     explain: Quien gira deja pasar al tráfico que viene de frente por la misma vía, ciclistas incluidos.
     cites: ["rvv:18.1"]
@@ -72,8 +72,8 @@ questions:
     type: mc
     prompt: Giras a la derecha. El carril bici corre pegado a la calzada, sin dientes de tiburón, y un ciclista sigue recto por él. ¿Debes dejarlo pasar?
     options:
-      - Sí, porque es tráfico de la misma vía que sigue recto a tu lado
-      - No, porque el carril bici no es parte de la calzada
+      - Sí, es tráfico de la misma vía que va recto a tu lado
+      - No, porque el carril bici no es parte de la calzada por la que giras
     answer: 0
     explain: Si el carril bici corre pegado a la calzada sigue siendo la misma vía, y el art. 18.1 te obliga a dejar pasar al tráfico que va a tu lado. Que no sea calzada no cambia nada.
     cites: ["rvv:18.1", "cbr-rijprocedure:3.3"]
@@ -82,8 +82,8 @@ questions:
     type: mc
     prompt: Giras a la derecha. El carril bici se aleja de la calzada y llega al cruce por separado, con dientes de tiburón en el propio carril bici. ¿Se aplica el deber del art. 18 de dejar pasar al ciclista?
     options:
-      - "No: el CBR lo trata como un cruce aparte, que regulan sus propios dientes de tiburón"
-      - Sí, igual que con cualquier ciclista que sigue recto
+      - "No: el CBR lo trata como un cruce aparte, con sus propios dientes"
+      - Sí, igual que con cualquier ciclista que sigue recto por el carril bici
     answer: 0
     explain: Según el CBR, un fietspad apartado de la calzada se ve como un cruce independiente, normalmente reconocible por los haaientanden en el carril bici. En ese caso no rige la obligación legal de dejar pasar a los ciclistas por girar.
     cites: ["cbr-rijprocedure:3.3"]

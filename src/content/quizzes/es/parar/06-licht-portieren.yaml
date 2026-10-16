@@ -2,11 +2,7 @@ questions:
   - id: licht-aanhanger
     type: mc
     prompt: Dejas un remolque desenganchado, de noche, sobre la calzada fuera de la zona urbana. ¿Qué luces debe llevar?
-    options:
-      - Luz trasera y la luz de posición que prescribe la Regeling voertuigen
-      - Solo la luz trasera
-      - Ninguna, porque un remolque no es un vehículo a motor
-      - Luz delantera y trasera, como un wagen
+    options: ["Luz trasera y el stadslicht que prescribe la Regeling voertuigen", "Solo la luz trasera, porque el remolque no tiene faros propios", "Ninguna, porque un remolque no es un vehículo a motor", "Luz delantera y trasera, como en un carro de tracción"]
     answer: 0
     explain: "Un remolque parado en esos lugares lleva luz trasera y el stadslicht prescrito en la Regeling voertuigen. Que no sea un vehículo a motor no lo exime: el artículo 39 habla de remolques."
     cites: ["rvv:39"]
@@ -27,11 +23,7 @@ questions:
   - id: licht-puerta-ciclista
     type: mc
     prompt: Aparcaste junto a la acera y vas a bajar por la puerta del lado de la calle. Por detrás se acerca un ciclista. ¿Qué haces antes de abrir?
-    options:
-      - Miras el espejo interior, el exterior izquierdo y por encima del hombro izquierdo, y abres cuando esté libre
-      - Abres un poco y miras después
-      - Tocas el claxon y abres enseguida
-      - Miras solo el espejo interior
+    options: ["Miras los espejos y por encima del hombro, y abres si está libre", "Abres un poco la puerta y miras después, por si viene algún ciclista", "Tocas el claxon para avisar y abres la puerta enseguida", "Miras solo el espejo interior y abres si no ves a nadie"]
     answer: 0
     explain: El CBR espera que mires el espejo interior, el exterior izquierdo y por encima del hombro izquierdo antes de abrir. Abrir y mirar después, o avisar con el claxon, deja al ciclista sin tiempo para esquivar la puerta.
     cites: ["cbr-rijprocedure:3.7", "wvw:5"]
@@ -57,10 +49,10 @@ questions:
     cites: ["cbr-rijprocedure:3.7"]
     exam: false
 
-  - id: licht-puerta-sin-mirar
+  - id: licht-puerta-sin-mirar-inaceptable
     type: yesno
-    prompt: Tu auto está bien estacionado junto a la calzada. Abres de golpe la puerta del lado de la calle sin mirar, y un ciclista que pasa tiene que esquivarla. ¿Es un comportamiento aceptable?
-    answer: false
+    prompt: "Tu auto está bien estacionado junto a la calzada. Abres de golpe la puerta del lado de la calle sin mirar, y un ciclista que pasa tiene que esquivarla. No hay choque y nadie se hace daño. ¿Has cometido una infracción?"
+    answer: true
     explain: Nadie debe comportarse en la vía de modo que cause o pueda causar peligro o estorbo (art. 5 WVW); estar bien estacionado no te dispensa. El procedimiento CBR pide mirar el espejo interior, el exterior y por encima del hombro antes de abrir.
     cites: ["wvw:5", "cbr-rijprocedure:3.7"]
     exam: false

@@ -2,7 +2,7 @@ questions:
   - id: parte-derecha-ciclista
     type: mc
     prompt: Vas en bicicleta por una rijbaan donde no hay fietspad, y la calle está vacía. ¿Dónde circulas?
-    options: ["Lo más a la derecha posible", "Por el centro, para que te vean mejor", "Por donde quieras mientras no venga nadie", "Por la izquierda, para ver a los coches de frente"]
+    options: ["Lo más a la derecha posible de la rijbaan", "Por el centro, para que te vean mejor", "Por donde quieras si no viene nadie", "Por la izquierda, para ver los coches"]
     answer: 0
     explain: Los bestuurders deben circular lo más a la derecha posible, y el ciclista que va por la rijbaan lo es. Que la calle esté vacía no cambia la regla.
     cites: ["rvv:3.1", "rvv:5.2"]
@@ -10,7 +10,7 @@ questions:
   - id: parte-peaton-sin-camino
     type: mc
     prompt: Caminas por una carretera donde no hay trottoir, voetpad, fietspad ni fiets/bromfietspad. ¿Por dónde vas?
-    options: ["Por la berma o el borde exterior de la rijbaan", "Por el centro de la rijbaan", "Por un ruiterpad, si lo hay", "Por donde haya más espacio, sin regla"]
+    options: ["Por la berma o el borde exterior de la rijbaan", "Por el centro de la rijbaan, si no hay coches", "Por un ruiterpad, si lo hay junto a la rijbaan", "Por donde haya más espacio, sin regla"]
     answer: 0
     explain: El peatón usa el trottoir o el voetpad; si no hay, el fietspad o el fiets/bromfietspad; y solo si tampoco hay, la berma o el borde exterior de la rijbaan.
     cites: ["rvv:4"]
@@ -25,7 +25,7 @@ questions:
   - id: parte-patines
     type: mc
     prompt: Vas en patines en línea y no hay trottoir, voetpad, fietspad ni fiets/bromfietspad. ¿Dónde puedes ir?
-    options: [Por la berma, Por la rijbaan, Por ningún lado, Solo por el ruiterpad]
+    options: [Por la berma de la derecha, Por la rijbaan, Por ningún lado, Solo por el ruiterpad]
     answer: 1
     explain: Quien se mueve con objetos que no son vehículos usa el fietspad, el fiets/bromfietspad, el trottoir o el voetpad, y si no existen, la rijbaan.
     cites: ["rvv:4.4"]

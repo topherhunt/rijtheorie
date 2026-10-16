@@ -1,0 +1,37 @@
+# Areas (west, south, east, north) and the Mapillary classes that mark each exam scenario. Class names: https://www.mapillary.com/developer/api-documentation (traffic signs / points); an unknown name silently matches nothing.
+areas:
+  utrecht: [5.07, 52.07, 5.15, 52.11]
+targets:
+  - id: haaientanden
+    classes: [marking--discrete--give-way-row, regulatory--yield--g1]
+    note: B6 / shark's teeth; who yields, incl. bike paths crossing
+  - id: zebrapad
+    classes: [marking--discrete--crosswalk-zebra]
+    note: pedestrians on or near a zebra crossing
+  - id: voorsorteren
+    classes: [marking--discrete--arrow--left, marking--discrete--arrow--split-left-or-straight]
+    note: which lane for a turn
+  - id: busbaan
+    classes: [marking--discrete--text--bus, regulatory--buses-only--g1]
+    note: bus lane; may I use it
+  - id: fiets-licht
+    classes: [object--traffic-light--cyclists, warning--bicycles-crossing--g1]
+    note: cyclist lights and crossings beside car traffic
+  - id: tram
+    classes: [warning--trams-crossing--g1]
+    note: tram crossing / tram priority
+  - id: voorrangsweg
+    classes: [regulatory--priority-road--g1, regulatory--end-of-priority-road--g1]
+    note: B1 / B2 priority road
+  - id: erf
+    classes: [information--living-street--g1]
+    note: woonerf entry
+  - id: stop
+    classes: [regulatory--stop--g1]
+    note: B7 stop sign
+  - id: kinderen
+    classes: [warning--children--g1]
+    note: children / school
+  - id: inrijverbod
+    classes: [regulatory--no-entry--g1]
+    note: C2 no entry, often with "uitgezonderd fietsers"

@@ -30,31 +30,31 @@ questions:
     explain: Las tres primeras son las excepciones del artículo 32 lid 2. En una vía oscura y vacía las largas están permitidas.
     cites: ["rvv:32.2"]
 
-  - id: grootlicht-bici
+  - id: grootlicht-bici-cruce
     type: yesno
-    prompt: De noche, en una vía sin alumbrado, te cruzas con un ciclista. ¿Puedes mantener las luces de carretera?
-    answer: false
+    prompt: "De noche, en una vía sin alumbrado, te cruzas con un ciclista. ¿Debes pasar a las luces de cruce?"
+    answer: true
     explain: La prohibición vale al cruzarte con cualquier "otro usuario de la vía", no solo con autos. El ciclista es un usuario de la vía.
     cites: ["rvv:32.2"]
 
-  - id: grootlicht-seguir
+  - id: grootlicht-seguir-cruce
     type: yesno
-    prompt: De noche sigues a otro auto a poca distancia. ¿Puedes llevar luces de carretera si no hay nadie más?
-    answer: false
+    prompt: "De noche sigues a otro auto a poca distancia y no hay nadie más. ¿Debes llevar luces de cruce en lugar de las de carretera?"
+    answer: true
     explain: Seguir de cerca a otro vehículo es una de las tres excepciones en que las largas no se permiten.
     cites: ["rvv:32.2"]
 
-  - id: grootlicht-dia
+  - id: grootlicht-dia-cruce
     type: yesno
-    prompt: Hay niebla densa de día y no hay nadie alrededor. ¿Puedes llevar luces de carretera en lugar de las de cruce?
-    answer: false
+    prompt: "Hay niebla densa de día y no hay nadie alrededor. ¿Debes llevar las luces de cruce y no las de carretera?"
+    answer: true
     explain: De día las largas están prohibidas, aunque la visibilidad sea mala. Se usan luces de cruce.
     cites: ["rvv:32.2"]
 
   - id: dagrijlicht-niebla
     type: mc
     prompt: Tu auto lleva las luces de circulación diurna encendidas y de pronto entras en una niebla muy densa a mediodía. ¿Qué haces?
-    options: [Sigo solo con las diurnas porque son luces delanteras, Paso a las luces de cruce porque las diurnas no las sustituyen, Pongo las de cruce además de las diurnas, Paso a las largas porque las diurnas son débiles]
+    options: ["Sigo con las diurnas, porque ya son luces delanteras", "Paso a las de cruce: las diurnas no las sustituyen", "Añado las luces de cruce y dejo encendidas las diurnas", "Paso a las largas, porque las diurnas son muy débiles"]
     answer: 1
     explain: Con visibilidad seriamente reducida la ley exige dimlicht. Las diurnas son opcionales, no sustituyen a las de cruce y no se llevan a la vez que otra luz delantera; las largas están prohibidas de día.
     cites: ["rvv:41.1", "rvv:32.1", "rvv:32.2"]
@@ -77,7 +77,7 @@ questions:
   - id: dimlicht-todos-con-luces
     type: mc
     prompt: De día pasas por un tramo de sombra densa de árboles y todos los autos que ves llevan las luces de cruce. ¿Qué haces?
-    options: ["Pongo las de cruce, porque puedo suponer que hace falta y sirven para que me vean", "Las dejo apagadas porque brilla el sol", "Pongo las largas para ver mejor", "Pongo solo las de posición"]
+    options: ["Las pongo: puedo suponer que hacen falta y así me ven", "Las dejo apagadas porque brilla el sol y se ve bien", "Pongo las largas para ver mejor el camino en sombra", "Pongo solo las luces de posición, que son suficientes"]
     answer: 0
     explain: El CBR dice que si la mayoría de conductores lleva luces puedes suponer que son necesarias, y la sombra de los árboles cuenta entre las situaciones de visibilidad reducida. Las largas están prohibidas de día.
     cites: ["cbr-rijprocedure:1", "rvv:32.2"]

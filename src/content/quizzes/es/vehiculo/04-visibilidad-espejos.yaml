@@ -1,8 +1,8 @@
 questions:
-  - id: visibilidad-espejos-parabrisas-luz
+  - id: visibilidad-espejos-parabrisas-incumple
     type: yesno
-    prompt: Pones una lámina oscura en el parabrisas de tu auto y ahora deja pasar solo el 50% de la luz. ¿Cumple?
-    answer: false
+    prompt: "Pones una lámina oscura en el parabrisas de tu auto y ahora deja pasar solo el 50% de la luz. ¿Incumples el mínimo?"
+    answer: true
     explain: El parabrisas debe dejar pasar al menos el 55% de la luz. Con 50% no cumple.
     cites: ["rv:5.2.42"]
 
@@ -14,24 +14,24 @@ questions:
     explain: Un auto puesto en uso después de enero de 2010 necesita espejo exterior izquierdo, derecho e interior.
     cites: ["rv:5.2.45"]
 
-  - id: visibilidad-espejos-camara-averiada
+  - id: visibilidad-espejos-camara-incumple
     type: yesno
-    prompt: Un auto de 2022 lleva un sistema de cámara y monitor en lugar del espejo exterior derecho, pero la pantalla no funciona. ¿Cumple con la obligación del espejo?
-    answer: false
+    prompt: "Un auto de 2022 lleva un sistema de cámara y monitor en lugar del espejo exterior derecho, pero la pantalla no funciona. ¿Incumple la obligación del espejo?"
+    answer: true
     explain: Un sistema cámara-monitor puede sustituir al espejo, pero tiene que funcionar bien y estar bien fijado. Una pantalla que no funciona no da la vista que exige la ley.
     cites: ["rv:5.2.45", "rv:5.18.4"]
 
-  - id: visibilidad-espejos-objetos
+  - id: visibilidad-espejos-objetos-quitar
     type: yesno
-    prompt: Cuelgas del parabrisas un ambientador grande y varias tarjetas que tapan parte de la vista hacia adelante, pero casi nunca los miras. ¿Cumple?
-    answer: false
+    prompt: "Cuelgas del parabrisas un ambientador grande y varias tarjetas que tapan parte de la vista hacia adelante, pero casi nunca los miras. ¿Debes quitarlos?"
+    answer: true
     explain: No puede haber objetos innecesarios que bloqueen la vista.
     cites: ["rv:5.2.42"]
 
-  - id: visibilidad-espejos-sin-lavaparabrisas
+  - id: visibilidad-espejos-lavaparabrisas-reparar
     type: yesno
-    prompt: En tu auto de 2015 el limpiaparabrisas funciona bien, pero el lavaparabrisas ya no echa líquido. ¿Cumple?
-    answer: false
+    prompt: "En tu auto de 2015 el limpiaparabrisas funciona bien, pero el lavaparabrisas ya no echa líquido. ¿Debes repararlo para cumplir?"
+    answer: true
     explain: El auto debe tener limpiaparabrisas y también un lavaparabrisas que funcionen. Que uno funcione no compensa el otro.
     cites: ["rv:5.2.43"]
 
@@ -42,17 +42,17 @@ questions:
     explain: El claxon debe tener un tono fijo. Fuera de él solo se permiten el aviso de marcha atrás y la alarma antirrobo, no una melodía.
     cites: ["rv:5.2.71"]
 
-  - id: visibilidad-espejos-velocimetro-noche
+  - id: visibilidad-espejos-velocimetro-incumple
     type: yesno
-    prompt: El velocímetro de tu auto funciona de día, pero de noche no se ilumina y no puedes leerlo. ¿Cumple?
-    answer: false
+    prompt: "El velocímetro de tu auto funciona de día, pero de noche no se ilumina y no puedes leerlo. ¿Incumple los requisitos?"
+    answer: true
     explain: El velocímetro debe funcionar y ser legible para el conductor también de noche.
     cites: ["rv:5.2.15"]
 
   - id: visibilidad-espejos-ajuste-exterior
     type: mc
     prompt: Ajustas el espejo exterior izquierdo antes de salir. ¿Cómo debe quedar?
-    options: [Sin ver el auto para ver más carretera, Viendo justo el costado del auto y la mayor parte posible de la carretera al lado y detrás, Con el horizonte en la mitad del espejo y el auto muy visible, Viendo mucha parte del auto para saber dónde termina]
+    options: ["Sin ver nada del auto, para ganar el máximo de carretera detrás", "Viendo justo el costado del auto y el máximo de carretera", "Con el horizonte en la mitad del espejo y el auto bien visible", "Viendo buena parte del auto para saber dónde termina el costado"]
     answer: 1
     explain: En el espejo exterior debe verse justo el costado del auto y el mayor trozo posible de carretera al lado y detrás, con el horizonte a una cuarta parte desde arriba. Ver demasiado del propio auto o dejarlo fuera de la vista te quita información útil.
     cites: ["cbr-rijprocedure:1"]
@@ -71,17 +71,17 @@ questions:
     explain: El espejo interior no es obligatorio si no da vista hacia atrás. Los espejos exteriores siguen siendo obligatorios.
     cites: ["rv:5.2.45"]
 
-  - id: visibilidad-espejos-ventanilla-lateral
+  - id: visibilidad-espejos-ventanilla-incumple
     type: yesno
-    prompt: Tiñes la ventanilla lateral junto al conductor de modo que deja pasar el 45% de la luz. El parabrisas está intacto. ¿Cumple?
-    answer: false
+    prompt: "Tiñes la ventanilla lateral junto al conductor de modo que deja pasar el 45% de la luz. El parabrisas está intacto. ¿Incumples el mínimo?"
+    answer: true
     explain: "El mínimo de 55% de transmisión de luz no vale solo para el parabrisas: también para las ventanillas laterales junto al asiento del conductor."
     cites: ["rv:5.2.42"]
 
-  - id: visibilidad-espejos-desempanador
+  - id: visibilidad-espejos-desempanador-incumple
     type: yesno
-    prompt: En tu auto de 2016 el limpiaparabrisas y el lavaparabrisas funcionan, pero el dispositivo para desempañar el parabrisas no. ¿Cumple?
-    answer: false
+    prompt: "En tu auto de 2016 el limpiaparabrisas y el lavaparabrisas funcionan, pero el dispositivo para desempañar el parabrisas no. ¿Incumple los requisitos?"
+    answer: true
     explain: Un auto puesto en uso después de septiembre de 1971 debe tener un dispositivo que funcione para descongelar y desempañar el parabrisas. Limpiar con las escobillas no lo sustituye.
     cites: ["rv:5.2.44"]
 

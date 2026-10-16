@@ -10,7 +10,7 @@ questions:
   - id: voorsorteren-izquierda-unico-sentido
     type: mc
     prompt: Vas a girar a la izquierda desde una calzada de un solo sentido, sin tráfico en contra. ¿Dónde puedes preseleccionar?
-    options: [Lo más a la izquierda posible, Lo más a la derecha posible, Lo más cerca posible del eje de la calzada, Pegado a la acera derecha]
+    options: [Lo más a la izquierda posible, Lo más a la derecha posible del carril, Lo más cerca posible del eje de la calzada, Junto a la acera de la derecha]
     answer: 0
     explain: En calzadas para un solo sentido se preselecciona lo más a la izquierda posible; no hay tráfico de frente ni eje al que acercarse.
     cites: ["rvv:17.1"]
@@ -25,7 +25,7 @@ questions:
   - id: voorsorteren-por-que-izquierda
     type: mc
     prompt: Vas a girar a la izquierda en una calle de doble sentido y un auto viene pegado detrás de ti. ¿Qué riesgo evita acercarte al eje antes de girar?
-    options: [Que el auto de atrás te adelante por la izquierda hacia el tráfico que viene de frente, Que el auto de frente te ceda el paso sin querer, Que tengas que poner el intermitente demasiado pronto, Que el auto de atrás se vea obligado a detenerse del todo]
+    options: ["Que el de atrás te adelante por la izquierda, hacia el de frente", "Que el tráfico de frente crea que vas a ceder el paso y se detenga", "Que el intermitente se vea poco desde los autos que vienen detrás", "Que el de atrás tenga que frenar hasta detenerse detrás de ti"]
     answer: 0
     explain: Según la Rijprocedure B, al preseleccionar a la izquierda el de atrás no te adelanta por la izquierda hacia el tráfico de frente, y a menudo tiene sitio para pasarte por la derecha. El intermitente se pone igual en cualquier posición.
     cites: ["cbr-rijprocedure:3.3"]
@@ -33,7 +33,7 @@ questions:
   - id: voorsorteren-no-estorbar
     type: mc
     prompt: Vas a girar a la derecha, pero tendrás que ir lento o parar, y por tu derecha circulan ciclistas y ciclomotores que tu coche preseleccionado frenaría. ¿Qué dice la Rijprocedure B?
-    options: ["Preseleccionas igual, porque siempre es lo mejor", "A veces es mejor no preseleccionar para no estorbar sin necesidad a ciclistas y ciclomotores", "Preseleccionas y les tocas la bocina para que pasen", "Pasas por el fietsstrook para dejarles la calzada"]
+    options: ["Preseleccionas igual, porque es siempre la posición más segura al girar", "A veces no preseleccionar, para no estorbar a ciclistas y ciclomotores", "Preseleccionas y les haces señas para que pasen por tu derecha", "Giras desde el fietsstrook para dejar libre la calzada a los demás"]
     answer: 1
     explain: La Rijprocedure B dice que a veces es mejor no preseleccionar si, parado o lento en esa posición, estorbarías sin necesidad a ciclistas y ciclomotores.
     cites: ["cbr-rijprocedure:3.3"]
@@ -42,7 +42,7 @@ questions:
     type: mc
     prompt: Estás en un carril de preselección con una flecha a la derecha y tenías pensado seguir recto. ¿Qué haces?
     sign: L4
-    options: [Sigo recto de todos modos, Sigo la dirección que indica el carril, Cambio de carril dentro del cruce, Giro a la izquierda desde ese carril]
+    options: ["Sigo recto de todos modos, como tenía pensado", "Sigo la dirección que marca la flecha del carril", "Cambio de carril dentro del cruce para seguir recto", "Giro a la izquierda desde ese carril de la derecha"]
     answer: 1
     explain: Quien sigue la calzada está obligado a seguir en el cruce la dirección que indica el carril de preselección en el que está. Si querías seguir recto, tenías que haber elegido otro carril antes.
     cites: ["rvv:78.1"]
@@ -50,7 +50,7 @@ questions:
   - id: voorsorteren-uitrijstrook
     type: mc
     prompt: Has tomado un uitrijstrook y, a la altura de las flechas pintadas, te das cuenta de que preferirías seguir por la autopista. ¿Qué haces?
-    options: [Sigo la dirección que indica el carril de salida, Vuelvo a la calzada principal cruzando la línea, Freno hasta parar y decidir, Sigo recto cruzando la línea de borde]
+    options: ["Sigo la dirección que indica el uitrijstrook", "Vuelvo a la calzada principal cruzando la línea", "Freno casi hasta parar y decido ahí mismo", "Sigo recto por encima de la línea de borde"]
     answer: 0
     explain: Quien deja la calzada principal por un uitrijstrook tiene que seguir, a la altura de las flechas, la dirección que indica el carril en el que está. Por eso hay que decidir antes de entrar.
     cites: ["rvv:78.2"]

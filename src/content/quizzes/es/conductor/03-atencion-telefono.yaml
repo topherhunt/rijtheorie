@@ -30,7 +30,7 @@ questions:
   - id: atencion-bici-celular
     type: mc
     prompt: Vas en bicicleta por un fietspad y sostienes el celular con una mano para contestar un mensaje. ¿Qué dice la norma?
-    options: ["Está permitido: la prohibición es solo para coches", "Está prohibido: la norma vale para quien conduce cualquier vehículo", "Está permitido si solo lo miras y no escribes", "Está permitido en un fietspad porque no es calzada"]
+    options: ["Está permitido: la prohibición es solo para quienes conducen un coche", "Está prohibido: la norma vale para quien conduce cualquier vehículo", "Está permitido si solo lo miras y no escribes ni hablas", "Está permitido en un fietspad, porque ahí no hay tráfico de coches"]
     answer: 1
     explain: El artículo 61a se dirige a quien conduce un vehículo, y la bicicleta lo es. No depende del tipo de vía ni de que escribas o solo mires.
     cites: ["rvv:61a"]
@@ -45,7 +45,7 @@ questions:
   - id: atencion-cansado-salir
     type: mc
     prompt: Vas a empezar un viaje largo y estás muy cansado porque dormiste poco. Según el CBR, ¿qué haces?
-    options: ["Descansar o posponer el viaje antes de salir", "Salir y poner la radio fuerte para mantenerme despierto", "Salir y parar solo cuando me dé mucho sueño", "Salir y compensar con un café en cuanto arranque"]
+    options: ["Descansar o posponer el viaje antes de salir", "Salir y poner la radio fuerte para mantenerme despierto", "Salir y parar solo cuando me dé mucho sueño al volante", "Salir y compensar con un café en cuanto arranque"]
     answer: 0
     explain: La guía del CBR dice que no se empieza un viaje cansado o irritado. La radio, parar tarde o el café no quitan el cansancio ni garantizan que reacciones a tiempo.
     cites: ["cbr-rijprocedure:2"]
@@ -53,7 +53,7 @@ questions:
   - id: atencion-irritado
     type: mc
     prompt: Acabas de discutir fuerte con tu jefe y sales furioso hacia casa. Según el CBR, ¿qué es lo adecuado?
-    options: ["Calmarme antes de arrancar, porque no se empieza un viaje irritado", "Salir ya: conducir me ayudará a desahogarme", "Salir, pero conducir más deprisa para llegar antes", "Salir y poner música para no pensar"]
+    options: ["Calmarme antes de arrancar: no se empieza un viaje irritado", "Salir ya: conducir un rato me ayudará a desahogarme y calmarme", "Salir, pero conducir más deprisa para llegar antes y acabar con esto", "Salir y poner música para no pensar en la discusión"]
     answer: 0
     explain: "La guía del CBR pide no empezar un viaje cansado o irritado: el enfado te distrae y te hace reaccionar peor. Desahogarte conduciendo o ir más deprisa aumenta el riesgo."
     cites: ["cbr-rijprocedure:2"]

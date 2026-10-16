@@ -17,10 +17,10 @@ questions:
     type: mc
     prompt: Estás estacionado junto al borde de la calzada y vas a arrancar. A tu derecha se acerca un auto y de frente se acerca otro. ¿Qué regla se aplica?
     options:
-      - Dejas pasar a todo el tráfico, incluido el que viene de frente (art. 54)
+      - Dejas pasar a todo el tráfico, también al de frente (art. 54)
       - "Regla de la derecha: solo cedes al que viene por tu derecha"
-      - Pasa primero el que llegue antes al punto de cruce
-      - Dejas pasar solo al que viene de frente
+      - Pasa primero quien llegue antes al cruce, sea quien sea
+      - Dejas pasar solo al tráfico que viene de frente
     answer: 0
     explain: "Arrancar desde un estacionamiento es una maniobra especial: es voor laten gaan, no voorrang verlenen, y el círculo incluye a todos, también a los de frente."
     cites: ["rvv:54", "rvv:15.1", "cbr-rijprocedure:3.1"]
@@ -29,10 +29,10 @@ questions:
     type: mc
     prompt: Vas recto por un cruce sin señales ni paso de cebra. Un ciclista llega por tu derecha por la calle que cruzas y un peatón se dispone a cruzar tu calle. ¿A quién debes dar voorrang según la regla de la derecha?
     options:
-      - Al ciclista; al peatón la regla no le da voorrang, pero debes tener en cuenta su interés
-      - A los dos, porque ambos son usuarios más vulnerables
-      - Solo al peatón, porque no es conductor
-      - A ninguno, porque van por la calle que cruzas
+      - Al ciclista; al peatón no, pero considera su interés
+      - A los dos, porque ambos son usuarios vulnerables y la ley los protege
+      - Solo al peatón, porque va a cruzar tu calle y el ciclista no
+      - A ninguno, porque ambos van por la calle que cruzas y tú sigues recto
     answer: 0
     explain: El art. 15.1 da voorrang a los bestuurders que vienen de la derecha, y el ciclista lo es; el peatón no (art. 1). El CBR añade que en los cruces debes tener muy en cuenta el interés de los peatones.
     cites: ["rvv:1", "rvv:15.1", "cbr-rijprocedure:3.3"]
@@ -41,9 +41,9 @@ questions:
     type: mc
     prompt: Circulas por una vía con la señal B1, así que tienes prioridad. Por la vía lateral, que tiene B6, llega una ambulancia con luces azules y sirena, y no se detiene. ¿Quién cede?
     options:
-      - Tú, porque todos deben dejar pasar al vehículo prioritario
-      - La ambulancia, porque tú tienes la prioridad de B1
-      - Quien llegue antes al cruce
+      - "Tú: a un vehículo prioritario lo deja pasar todo el mundo"
+      - La ambulancia, porque tu B1 vale más que su urgencia
+      - Quien llegue antes al cruce, sea cual sea el vehículo
     answer: 0
     explain: El art. 50 obliga a todos los usuarios a dejar pasar al voorrangsvoertuig. Una ambulancia con luces azules y sirena lo es (art. 29), y eso pesa más que tu prioridad de B1.
     cites: ["rvv:50", "rvv:29"]
@@ -52,9 +52,9 @@ questions:
     type: mc
     prompt: Te acercas a un cruce donde debes ceder el paso y por la vía que cruzas viene un auto. ¿Cómo te acercas, según el CBR?
     options:
-      - Reduzco con tiempo para que el otro vea que le voy a ceder el paso
-      - Mantengo la velocidad y freno en el último momento
-      - Voy despacio pero sin frenar, y decido al llegar
+      - Reduzco con tiempo y así el otro ve que le voy a ceder el paso
+      - Mantengo la velocidad y freno al último momento si hace falta
+      - Voy despacio pero sin frenar, y decido cuando llego al cruce
     answer: 0
     explain: El CBR pide acercarse de manera que quien tiene prioridad confíe en que se la vas a ceder. Frenar tarde o dudar hasta el final le obliga a adivinar tus intenciones.
     cites: ["cbr-rijprocedure:3.3"]

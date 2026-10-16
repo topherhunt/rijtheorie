@@ -1,23 +1,23 @@
 questions:
-  - id: luces-del-auto-tercera-freno
+  - id: luces-del-auto-tercera-freno-falta
     type: yesno
-    prompt: Un auto puesto en uso en 2015 tiene sus dos luces de freno funcionando, pero no tiene tercera luz de freno. ¿Cumple los requisitos de luces?
-    answer: false
+    prompt: "Un auto puesto en uso en 2015 tiene sus dos luces de freno funcionando, pero no tiene tercera luz de freno. ¿Le falta una luz obligatoria?"
+    answer: true
     explain: Los autos puestos en uso después del 30 de septiembre de 2001 deben llevar, además de las dos luces de freno, una tercera luz de freno. Que las dos luces funcionen no suple la que falta.
     cites: ["rv:5.2.51"]
 
   - id: luces-del-auto-colores-cambio
     type: mc
     prompt: Quieres cambiar las luces de tu auto por otras de color. ¿Cuál de estos cambios está permitido?
-    options: [Luces de freno ámbar, Luces traseras de posición blancas, Una luz de marcha atrás roja, Luz de la matrícula azulada]
+    options: ["Luces de freno ámbar en lugar de rojas", "Luces traseras de posición de color blanco", "Una luz de marcha atrás de color rojo", "Luz de la matrícula de color azulado"]
     answer: 0
     explain: Las luces de freno pueden ser rojas o ámbar. Las luces traseras deben ser rojas, la de marcha atrás blanca o amarilla y la de la matrícula blanca; un color válido para una luz no vale para otra.
     cites: ["rv:5.2.53"]
 
-  - id: luces-del-auto-trasero-blanco
+  - id: luces-del-auto-trasero-ambar-rojo
     type: yesno
-    prompt: Cambias los intermitentes traseros de tu auto por unos que dan luz blanca. Delante el blanco está permitido. ¿Está permitido también detrás?
-    answer: false
+    prompt: "Quieres cambiar los intermitentes traseros de tu auto por unos que dan luz blanca. Delante el blanco está permitido. ¿Tienen que ser ámbar o rojos los traseros?"
+    answer: true
     explain: Los intermitentes delanteros pueden ser ámbar o blancos, pero los traseros solo ámbar o rojos. Que el blanco valga delante no lo hace válido detrás.
     cites: ["rv:5.2.53"]
 
@@ -29,10 +29,10 @@ questions:
     explain: Una luz hecha de varias fuentes no puede perder más del 25% de su superficie. 2 de 8 son justo el 25%, así que sigue permitida; con 3 de 8 (37,5%) ya no.
     cites: ["rv:5.2.55"]
 
-  - id: luces-del-auto-lamina
+  - id: luces-del-auto-lamina-incumple
     type: yesno
-    prompt: Pegas una lámina oscura que tapa un tercio de la luz trasera de tu auto, y la luz funciona perfectamente. ¿Está permitido?
-    answer: false
+    prompt: "Pegas una lámina oscura que tapa un tercio de la luz trasera de tu auto, y la luz funciona perfectamente. ¿Superas el límite de lo que se puede tapar?"
+    answer: true
     explain: La parte de la luz por donde sale la luz no puede estar tapada en más del 25%, y un tercio es más. Que la luz funcione no cambia el límite de lo tapado.
     cites: ["rv:5.2.55"]
 
@@ -58,10 +58,10 @@ questions:
     explain: La antiniebla trasera encendida debe avisar al conductor con una señal óptica, para que no la dejes encendida sin necesidad.
     cites: ["rv:5.2.62"]
 
-  - id: luces-del-auto-azul
+  - id: luces-del-auto-azul-prohibido
     type: yesno
-    prompt: Quieres montar una luz azul intermitente en el techo de tu auto particular para que te dejen pasar en los atascos. ¿Está permitido?
-    answer: false
+    prompt: "Quieres montar una luz azul intermitente en el techo de tu auto particular para que te dejen pasar en los atascos. ¿Está prohibido?"
+    answer: true
     explain: Las luces azules intermitentes solo están permitidas para los servicios autorizados.
     cites: ["rv:5.2.65"]
 

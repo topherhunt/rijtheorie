@@ -3,7 +3,7 @@ questions:
     type: mc
     prompt: Tienes B6 en tu entrada, pero el semáforo del cruce está en verde para ti. ¿Qué rige tu paso?
     options:
-      - El semáforo, que va por encima de la señal B6
+      - El semáforo, que va por encima de B6 y de la regla general
       - La señal B6, porque obliga a ceder aunque tengas verde
       - La regla de la derecha, porque las otras dos se contradicen
     answer: 0
