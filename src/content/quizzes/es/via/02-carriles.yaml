@@ -24,7 +24,7 @@ questions:
   - id: carriles-uitrijstrook-velocidad
     type: mc
     prompt: Circulas por la doorgaande rijbaan de una autosnelweg y vas a tomar la salida. En condiciones normales, ¿dónde reduces la velocidad?
-    options: ["Dentro del uitrijstrook, ya fuera de la doorgaande rijbaan", "En la doorgaande rijbaan, antes de pasar hacia la salida", "En la doorgaande rijbaan, junto a la blokmarkering", "En la doorgaande rijbaan, con el intermitente ya puesto"]
+    options: ["Dentro del uitrijstrook, ya fuera de la doorgaande rijbaan", "En la doorgaande rijbaan, antes de pasar hacia la salida", "En la doorgaande rijbaan, junto a la blokmarkering", "Al borde del uitrijstrook, todavía sobre la doorgaande rijbaan"]
     answer: 0
     explain: En condiciones normales solo reduces la velocidad dentro del uitrijstrook, así el tráfico que sigue por la doorgaande rijbaan puede continuar sin que lo frenes. Las otras tres opciones frenan en la doorgaande rijbaan.
     cites: ["cbr-rijprocedure:3.4"]

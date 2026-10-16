@@ -31,9 +31,9 @@ questions:
 
   - id: luces-del-auto-lamina-incumple
     type: yesno
-    prompt: "Pegas una lámina oscura que tapa un tercio de la luz trasera de tu auto, y la luz funciona perfectamente. ¿Superas el límite de lo que se puede tapar?"
+    prompt: "Pegas una lámina oscura que tapa un tercio de la superficie luminosa de la luz trasera de tu auto. ¿Tienes que quitarla?"
     answer: true
-    explain: La parte de la luz por donde sale la luz no puede estar tapada en más del 25%, y un tercio es más. Que la luz funcione no cambia el límite de lo tapado.
+    explain: La parte de la luz por donde sale la luz no puede estar tapada en más del 25%, y un tercio es más. Aunque la luz siga funcionando, el límite de lo tapado se aplica igual.
     cites: ["rv:5.2.55"]
 
   - id: luces-del-auto-freno-colores-mezclados

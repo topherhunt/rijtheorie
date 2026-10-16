@@ -3,7 +3,7 @@ questions:
     type: mc
     exam: false
     prompt: En tu examen fallas 5 de las 50 preguntas que cuentan y 1 de las 2 preguntas de prueba. ¿Cuál es el resultado?
-    options: ["Apruebas: tienes 45 aciertos de 50 y la de prueba no cuenta", "Suspendes: sumas 6 errores y el máximo permitido es 5", "Suspendes: debes acertar también las dos de prueba", "Depende de cuál de las dos preguntas de prueba fallaste"]
+    options: ["Tienes 45 aciertos de 50, la de prueba no cuenta y apruebas", "Sumas 6 errores y el máximo permitido es 5, así que suspendes", "Para aprobar tendrías que acertar también las dos de prueba", "Depende de cuál de las dos preguntas de prueba fallaste"]
     answer: 0
     explain: Solo cuentan las 50 preguntas normales y necesitas 44 aciertos, así que con 5 errores tienes 45 y apruebas. La pregunta de prueba que fallaste no suma ningún error, y tú no sabes cuáles son, por eso conviene responder todas con cuidado.
     cites: ["cbr-examenplan:1"]

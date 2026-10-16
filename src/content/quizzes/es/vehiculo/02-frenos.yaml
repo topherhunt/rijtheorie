@@ -1,7 +1,7 @@
 questions:
   - id: frenos-fugas-incumple
     type: yesno
-    prompt: "Al revisar tu auto antes de un viaje ves una mancha de líquido de frenos bajo una rueda y el pedal está algo más blando. El resto del sistema parece intacto. ¿Incumple los requisitos?"
+    prompt: "Al revisar tu auto antes de un viaje ves una mancha de líquido de frenos bajo una rueda. ¿Tienes que repararlo antes de circular?"
     answer: true
     explain: Las piezas del freno no pueden tener fugas, estar dañadas ni tener corrosión grave. Que el resto parezca bien no compensa la fuga.
     cites: ["rv:5.2.31"]
@@ -65,7 +65,7 @@ questions:
 
   - id: frenos-parkeerrem-ruedas-incumple
     type: yesno
-    prompt: "El freno de mano de un auto bloquea bien una sola rueda trasera y el auto no se mueve en la cuesta. ¿Incumple el requisito del freno de estacionamiento?"
+    prompt: "El freno de mano de un auto actúa solo sobre una rueda trasera y sostiene el auto en una cuesta. ¿Hay que corregirlo para cumplir el requisito del freno de estacionamiento?"
     answer: true
     explain: El freno de estacionamiento debe actuar sobre al menos dos ruedas. Que sostenga el auto en una cuesta no basta si actúa en una sola.
     cites: ["rv:5.2.39"]

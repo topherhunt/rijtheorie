@@ -1,9 +1,9 @@
 questions:
   - id: parkeerverbod-inrit-prohibido
     type: yesno
-    prompt: "Solo queda un hueco libre, justo delante de la salida de un garaje, y vas a dejar el auto allí una hora. ¿Lo prohíbe la ley aunque no haya otro sitio?"
+    prompt: "Solo queda un hueco libre, justo delante de la salida de un garaje, y vas a dejar el auto allí una hora. ¿Es una infracción del artículo 24?"
     answer: true
-    explain: "Estacionar delante de una inrit o una uitrit está prohibido, aunque no haya otro sitio. El motivo es de sentido común: bloquearías la salida de quien vive o trabaja allí."
+    explain: "Estacionar delante de una inrit o una uitrit está prohibido, aunque sea el único sitio libre. El motivo es de sentido común: bloquearías la salida de quien vive o trabaja allí."
     cites: ["rvv:24.1"]
 
   - id: parkeerverbod-voorrangsweg
@@ -88,9 +88,9 @@ questions:
 
   - id: parkeerverbod-cruce-bajar
     type: yesno
-    prompt: A 3 m de un cruce (fuera del cruce mismo) te detienes lo justo para que un pasajero baje de inmediato. ¿Lo prohíbe el artículo 24 (parkeren)?
+    prompt: A 3 m de un cruce (fuera del cruce mismo y sin paso de peatones cerca) te detienes lo justo para que un pasajero baje de inmediato. ¿Lo prohíbe el artículo 24 (parkeren)?
     answer: false
-    explain: Dejar bajar a un pasajero de inmediato no es parkeren, así que el art. 24 no se aplica. El art. 23 solo prohíbe detenerse dentro del cruce.
+    explain: Dejar bajar a un pasajero de inmediato no es parkeren, así que el art. 24 no se aplica. El art. 23 prohíbe detenerse en el cruce mismo o a menos de 5 m de un paso de peatones, no a 3 m de un cruce.
     cites: ["rvv:24.1", "rvv:1", "rvv:23.1"]
 
   - id: parkeerverbod-e3-auto

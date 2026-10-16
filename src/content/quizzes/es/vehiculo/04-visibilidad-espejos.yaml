@@ -16,16 +16,16 @@ questions:
 
   - id: visibilidad-espejos-camara-incumple
     type: yesno
-    prompt: "Un auto de 2022 lleva un sistema de cámara y monitor en lugar del espejo exterior derecho, pero la pantalla no funciona. ¿Incumple la obligación del espejo?"
+    prompt: "Un auto de 2022 lleva un sistema de cámara y monitor en lugar del espejo exterior derecho, y la pantalla se queda en negro. ¿Hay que repararlo para cumplir la obligación del espejo?"
     answer: true
     explain: Un sistema cámara-monitor puede sustituir al espejo, pero tiene que funcionar bien y estar bien fijado. Una pantalla que no funciona no da la vista que exige la ley.
     cites: ["rv:5.2.45", "rv:5.18.4"]
 
   - id: visibilidad-espejos-objetos-quitar
     type: yesno
-    prompt: "Cuelgas del parabrisas un ambientador grande y varias tarjetas que tapan parte de la vista hacia adelante, pero casi nunca los miras. ¿Debes quitarlos?"
+    prompt: "Llevas colgados del parabrisas un ambientador grande y varias tarjetas que quedan en tu campo de visión hacia adelante, pero casi nunca los miras. ¿Debes quitarlos?"
     answer: true
-    explain: No puede haber objetos innecesarios que bloqueen la vista.
+    explain: No puede haber objetos innecesarios que bloqueen la vista, aunque no los mires.
     cites: ["rv:5.2.42"]
 
   - id: visibilidad-espejos-lavaparabrisas-reparar

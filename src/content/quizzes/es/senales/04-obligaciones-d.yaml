@@ -9,7 +9,7 @@ questions:
 
   - id: d-d2-derecha
     type: yesno
-    prompt: "Hay un obstáculo en la calzada con esta señal, y la flecha apunta a la derecha. ¿Debes pasar por su derecha?"
+    prompt: "Hay un obstáculo en la calzada con esta señal. La izquierda está más despejada, pero la flecha apunta a la derecha. ¿Cumples la señal pasando por la derecha?"
     sign: D2
     answer: true
     explain: D2 te ordena pasar la señal por el lado que indica la flecha. Si la flecha apunta a la derecha, solo puedes pasar por la derecha.
@@ -25,7 +25,7 @@ questions:
 
   - id: d-d4-seguir-recto
     type: yesno
-    prompt: "Quieres girar a la derecha en este cruce, pero la señal tiene una flecha recta. ¿Debes seguir recto?"
+    prompt: "Llegas a un cruce con esta señal y quieres girar a la derecha. ¿Te lo impide la señal?"
     sign: D4
     answer: true
     explain: 'D4 es un gebod: debes seguir la dirección que muestra la flecha. Solo puedes ir recto.'

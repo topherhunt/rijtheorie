@@ -30,7 +30,7 @@ questions:
     options: ["Tú, porque la regla de la derecha solo te hace ceder a quien viene por tu derecha", "El otro auto, porque la señal manda sobre la regla general", "El que llegue primero al cruce, porque no hay semáforo"]
     answer: 1
     explain: La señal B6 te obliga a dar voorrang a la vía que cruza. Una señal pasa por encima de la regla general de la derecha, y aquí la señal te hace ceder aunque el otro venga por tu izquierda.
-    cites: ["rvv:63", "rvv:bijlage1.B6", "rvv:80"]
+    cites: ["rvv:63", "rvv:bijlage1.B6"]
 
   - id: rangorde-cadena-tres
     type: mc

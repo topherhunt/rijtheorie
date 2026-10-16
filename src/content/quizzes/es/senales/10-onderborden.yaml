@@ -58,7 +58,7 @@ questions:
 
   - id: ob-c22e-furgoneta
     type: yesno
-    prompt: Conduces una furgoneta de empresa diésel y llegas a una señal C22e de una milieuzone cuyo panel incluye a tu vehículo. No te aplica ninguna excepción. ¿Puedes entrar?
+    prompt: Conduces una furgoneta de empresa diésel y llegas a una señal C22e de una milieuzone cuyo panel no admite la clase de emisión de tu furgoneta. No te aplica ninguna excepción. ¿Puedes entrar?
     sign: C22e
     answer: false
     explain: La geslotenverklaring de una milieuzone se aplica a autos, vehículos de empresa, camiones y autobuses con motor diésel (art. 86d.1). Sin excepción del art. 86d.3, tu furgoneta diésel queda cerrada.

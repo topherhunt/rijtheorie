@@ -11,7 +11,7 @@ questions:
 
   - id: j-j10-esperar
     type: yesno
-    prompt: "Te anuncia J10 un paso a nivel. Las barreras están arriba, pero justo después de las vías hay una cola y tu auto no cabría. ¿Debes esperar antes de las vías?"
+    prompt: "Te anuncia J10 un paso a nivel. Las barreras están arriba y, justo después de las vías, una cola ocupa todo el espacio libre. ¿Tienes que quedarte antes de las vías?"
     sign: J10
     answer: true
     explain: Solo puedes entrar si puedes seguir sin parar y despejar las vías por completo (art. 15a.1), y no puedes detenerte sobre un paso a nivel (art. 23.1.a). Esperas antes de las vías.

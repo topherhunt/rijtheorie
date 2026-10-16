@@ -9,7 +9,7 @@ questions:
 
   - id: derecha-giro-sin-senal-izquierda
     type: yesno
-    prompt: El auto de delante va pegado a la izquierda de su carril, pero no ha puesto ningún intermitente. No sabes si va a girar. ¿Debes pasarlo por la izquierda?
+    prompt: El auto de delante va pegado a la izquierda de su carril y no lleva ningún intermitente puesto. Hay espacio a su derecha. ¿Debes pasarlo por la izquierda?
     answer: true
     explain: Sí. La excepción del art. 11 lid 2 exige las dos cosas, haber preseleccionado a la izquierda e indicado que se girará a la izquierda. Sin la señal vale la regla general, que se adelanta por la izquierda.
     cites: ["rvv:11.1", "rvv:11.2"]

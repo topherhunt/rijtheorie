@@ -46,7 +46,7 @@ questions:
 
   - id: grootlicht-dia-cruce
     type: yesno
-    prompt: "Hay niebla densa de día y no hay nadie alrededor. ¿Debes llevar las luces de cruce y no las de carretera?"
+    prompt: "Hay niebla densa de día y no hay nadie alrededor. Tu auto no tiene antiniebla delanteras. ¿Debes llevar las luces de cruce y no las de carretera?"
     answer: true
     explain: De día las largas están prohibidas, aunque la visibilidad sea mala. Se usan luces de cruce.
     cites: ["rvv:32.2"]

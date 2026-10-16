@@ -69,9 +69,9 @@ questions:
     prompt: Vas por una vía con B5 y te acercas al cruce. Por la vía lateral de la derecha llega un auto a buena velocidad y no parece que vaya a detenerse en la B6. ¿Qué haces?
     sign: B5
     options:
-      - Adapto la velocidad y freno si hace falta
-      - Sigo a la misma velocidad, porque tengo prioridad
-      - Toco el claxon y acelero para pasar antes de que llegue
+      - Adapto la velocidad y estoy listo para frenar
+      - Mantengo la velocidad: la prioridad es mía
+      - Acelero un poco para pasar antes de que llegue
     answer: 0
     explain: Tener prioridad no evita el choque. El CBR pide adaptar la velocidad cuando el tráfico de la vía lateral no da la impresión de ceder el paso, y frenar a tiempo si el otro no lo hace.
     cites: ["cbr-rijprocedure:3.3"]

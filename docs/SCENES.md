@@ -11,10 +11,10 @@ Unconditioned AI images (`scripts/images/`) are only for atmosphere and vehicle 
 
 ## 1. Mapillary photos
 
-Licence: the Mapillary Terms of Use (in force 2024-02-15) s. 3(b) put other users' content under CC BY-SA, unless a dataset says otherwise (some are CC BY-NC-SA: check each image). Course content is already CC BY-SA 4.0 (`LICENSE`), so share-alike costs nothing; crops and annotations are adaptations and stay CC BY-SA. Non-commercial, so s. 12 (commercial use) doesn't apply. Not confirmed by Mapillary staff; asking their support once would settle it.
+Licence: the Mapillary Terms of Use (in force 2024-02-15) s. 3(b) put other users' content under CC BY-SA, unless a dataset says otherwise (some are CC BY-NC-SA: check each image). Course content is already CC BY-SA 4.0 (`LICENSE`), so share-alike costs nothing; crops and annotations are adaptations and stay CC BY-SA. Non-commercial, so s. 12 (commercial use) doesn't apply. The owner accepts this reading; no confirmation from Mapillary is sought.
 
 Obligations:
-- Credit per image: photographer's Mapillary username, link to the image, "CC BY-SA 4.0".
+- Credit per image, in its caption and on a credits page in the app: photographer's Mapillary username, link to the image, licence. A manifest records these for every photo we use.
 - Show the Mapillary logo and link back to Mapillary for images we serve (Terms s. 11).
 - Fetch only through the official API (no scraping), never try to unblur faces or plates.
 
@@ -22,9 +22,9 @@ Scan (`scripts/scenes/`, token `MAPILLARY_API_TOKEN` in `dev.env`; the API is fr
 1. Find target objects with `/map_features` (`object_values` filter; bboxes over ~0.03 x 0.018 degrees fail, so areas are tiled; an unknown class name is ignored and returns every feature, so names are matched client-side).
 2. Fetch the images that saw each feature, 8-45 m away; drop panoramas, images before 2019 and images not facing the object; keep the farthest one shot from a car (hood or mount detected, or the camera moved at 30 km/h or more between frames of its sequence).
 3. Rank by distinct detected classes (signs, markings, lights, road users) plus the number of road users, capped at 5.
-4. Review the contact sheets by eye; keepers go into a manifest with image id, creator, licence and the question idea.
+4. Review by eye; keepers go into the manifest with image id, URL, creator, licence and the question it serves.
 
-Strong for reading the road (priority, lanes, markings, speed, crossings). Weak for moving hazards: road users appear only by chance and are blurred. Utrecht pilot (2026-10-16, 75 candidates over 11 targets): most are true driver's-seat views close to CBR photos; misses are dashcams that burn speed and GPS text into the bottom strip (crop it off), a few bike photos whose handlebars pass as a car mount, and rare signs (erf, stop, children) whose feature position is too rough to put the sign in frame.
+Strong for reading the road (priority, lanes, markings, speed, crossings). Weak for moving hazards: road users appear only by chance and are blurred. Utrecht pilot (2026-10-16, 75 candidates over 11 targets): most are true driver's-seat views close to CBR photos, but by eye only 11 clearly show their target (17 partly, 47 not). Causes: the target is out of frame or too small to read (flat markings vanish beyond ~15 m), bike photos whose handlebars pass as a car mount or that move at e-bike speed, and several picks from the same spot. Many misses show a different target well, so the photos are better than the labels. Some dashcams burn speed and GPS text into the bottom strip (crop it off).
 
 ## 2. Storyboarded, conditioned generation
 

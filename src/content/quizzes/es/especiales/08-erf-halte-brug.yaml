@@ -10,7 +10,7 @@ questions:
 
   - id: erf-peaton-medio
     type: yesno
-    prompt: Dentro de un erf, un peatón camina por el medio de la calzada aunque hay un borde libre. ¿Está haciendo algo que la ley no permite?
+    prompt: Dentro de un erf, un peatón camina por el medio de la calzada aunque hay un borde libre. ¿Está obligado a caminar por el borde?
     answer: false
     explain: Los peatones pueden usar todo el ancho de las vías dentro de un erf. Por eso hay que conducir a la defensiva y contar con encontrarlos en cualquier parte.
     cites: ["rvv:44"]

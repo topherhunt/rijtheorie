@@ -41,9 +41,9 @@ questions:
     type: mc
     prompt: Circulas por una vía con la señal B1, así que tienes prioridad. Por la vía lateral, que tiene B6, llega una ambulancia con luces azules y sirena, y no se detiene. ¿Quién cede?
     options:
-      - "Tú: a un vehículo prioritario lo deja pasar todo el mundo"
-      - La ambulancia, porque tu B1 vale más que su urgencia
-      - Quien llegue antes al cruce, sea cual sea el vehículo
+      - "Tú, que debes cederle el paso a la ambulancia"
+      - "La ambulancia, que debe cederte el paso por tu B1"
+      - Quien llegue primero al cruce de los dos
     answer: 0
     explain: El art. 50 obliga a todos los usuarios a dejar pasar al voorrangsvoertuig. Una ambulancia con luces azules y sirena lo es (art. 29), y eso pesa más que tu prioridad de B1.
     cites: ["rvv:50", "rvv:29"]
@@ -52,9 +52,9 @@ questions:
     type: mc
     prompt: Te acercas a un cruce donde debes ceder el paso y por la vía que cruzas viene un auto. ¿Cómo te acercas, según el CBR?
     options:
-      - Reduzco con tiempo y así el otro ve que le voy a ceder el paso
-      - Mantengo la velocidad y freno al último momento si hace falta
-      - Voy despacio pero sin frenar, y decido cuando llego al cruce
+      - Reduzco la velocidad con tiempo, de forma visible
+      - Mantengo la velocidad y freno al último momento
+      - Voy despacio pero sin frenar, decidiendo al llegar
     answer: 0
     explain: El CBR pide acercarse de manera que quien tiene prioridad confíe en que se la vas a ceder. Frenar tarde o dudar hasta el final le obliga a adivinar tus intenciones.
     cites: ["cbr-rijprocedure:3.3"]

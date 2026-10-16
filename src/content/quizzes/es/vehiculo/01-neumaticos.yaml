@@ -24,9 +24,9 @@ questions:
 
   - id: neumaticos-carcasa-cambiar
     type: yesno
-    prompt: "Un neumático tiene 5 mm de dibujo pero un corte en el costado deja ver la carcasa. ¿Hay que cambiarlo aunque el dibujo sea profundo?"
+    prompt: "Un neumático tiene 5 mm de dibujo y un corte en el costado por el que se ve la carcasa. ¿Tienes que cambiarlo?"
     answer: true
-    explain: Los requisitos son independientes. Aunque el dibujo supere 1,6 mm, el neumático no puede tener daños que dejen ver la carcasa.
+    explain: Los requisitos son independientes. Aunque el dibujo supere 1,6 mm, el neumático no puede tener daños que dejen ver la carcasa, así que un dibujo profundo no lo salva.
     cites: ["rv:5.2.27"]
 
   - id: neumaticos-recortado-incumple

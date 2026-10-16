@@ -1,7 +1,7 @@
 questions:
   - id: velocidad-a1-sesenta
     type: yesno
-    prompt: "Conduces un auto por una carretera normal fuera de la zona urbana, donde el máximo general es 80 km/h. Una señal A1 indica 60. ¿Debes ir a 60 como máximo?"
+    prompt: "Conduces un auto por una carretera normal fuera de la zona urbana, donde el máximo general es 80 km/h. Pasas una señal A1 que indica 60 y sigues varios kilómetros por la misma carretera sin ver otra señal de velocidad. ¿Sigue valiendo el límite de 60?"
     sign: A1
     answer: true
     explain: A1 es la maximumsnelheid. Si indica menos que el máximo general, su número es tu máximo hasta que otra señal (por ejemplo A2) lo cierre.

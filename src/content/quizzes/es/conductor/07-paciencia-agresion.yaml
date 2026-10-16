@@ -72,7 +72,7 @@ questions:
   - id: paciencia-adelantar-rojo
     type: mc
     prompt: Ves un semáforo en rojo cercano, con un auto lento delante de ti. ¿Qué es lo adecuado?
-    options: ["Quedarme detrás: adelantar solo me haría llegar al mismo semáforo", "Adelantar a toda prisa para llegar el primero al semáforo", "Acelerar, adelantar y frenar fuerte justo antes de la línea", "Adelantarlo y seguir pegado a su carril por si cambia"]
+    options: ["Quedarme detrás del auto lento, sin adelantar antes del semáforo", "Adelantarlo ahora para ser el primero en la fila del semáforo", "Adelantarlo solo si hay hueco, porque así pierdo menos tiempo", "Adelantarlo y frenar justo antes de la línea para no arriesgar"]
     answer: 0
     explain: "El CBR pide no adelantar a toda prisa justo antes de un semáforo en rojo (o paso a nivel, puente o cola detenida): irrita a los demás y no gana nada, porque de todas formas tendrás que parar."
     cites: ["cbr-rijprocedure:2"]

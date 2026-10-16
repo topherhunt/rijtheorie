@@ -72,7 +72,7 @@ questions:
 
   - id: gelegenheid-e10-dentro-tiempo
     type: yesno
-    prompt: En una zona E10 con tiempo máximo de 2 horas dejas el auto una hora y media con el disco bien puesto. ¿Está permitido?
+    prompt: En una zona E10 con tiempo máximo de 2 horas dejas el auto una hora y media en un lugar con línea azul, con el disco bien puesto. ¿Está permitido?
     sign: E10
     answer: true
     explain: E10 obliga a usar el disco y prohíbe quedarse más del tiempo máximo. Con el disco puesto y dentro del tiempo, no infringes la señal.

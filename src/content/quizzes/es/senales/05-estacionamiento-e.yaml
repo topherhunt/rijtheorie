@@ -4,8 +4,8 @@ questions:
     prompt: "Delante de ti está esta señal. ¿Te prohíbe detenerte unos segundos para que baje un pasajero?"
     sign: E2
     answer: true
-    explain: E2 prohíbe stilstaan, y detenerse para que baje alguien también es stilstaan. La excepción de "bajar o subir un momento" existe solo para estacionar (E1), no para detenerse.
-    cites: ["rvv:1", "rvv:bijlage1.E2"]
+    explain: E2 prohíbe stilstaan, y detenerse para que baje alguien también es stilstaan. La excepción de "bajar o subir un momento" está en la definición de estacionar (E1); para detenerse, la ley solo la da junto a una parada de autobús (art. 23.2).
+    cites: ["rvv:1", "rvv:bijlage1.E2", "rvv:23.2"]
 
   - id: e-e3-auto
     type: yesno
@@ -25,7 +25,7 @@ questions:
 
   - id: e-e7-prohibido-estacionar
     type: yesno
-    prompt: "Esta señal marca una zona para carga y descarga inmediata de mercancías. Quieres estacionar tu auto allí para ir de compras. ¿Está prohibido?"
+    prompt: "Esta señal marca una zona para carga y descarga inmediata de mercancías. Dejas tu auto allí una hora sin cargar ni descargar nada. ¿Es una infracción?"
     sign: E7
     answer: true
     explain: En un lugar destinado a carga y descarga inmediata no se puede estacionar.

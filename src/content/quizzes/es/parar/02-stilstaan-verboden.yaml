@@ -1,7 +1,7 @@
 questions:
   - id: stilstaanverbod-kruispunt-prohibido
     type: yesno
-    prompt: "Te has equivocado de calle y paras \"un momento\" en medio de un cruce para mirar el mapa del móvil. ¿Lo prohíbe el artículo 23?"
+    prompt: "Te has equivocado de calle y paras en medio de un cruce para mirar el mapa del móvil. ¿Es una infracción del artículo 23?"
     answer: true
     explain: Detenerse (stilstaan) en un kruispunt o en un overweg está prohibido, aunque sea un instante. El artículo 23 no da ninguna excepción para estos lugares.
     cites: ["rvv:23.1"]

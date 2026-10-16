@@ -27,14 +27,14 @@ questions:
 
   - id: tunel-parar-pasajero-prohibido
     type: yesno
-    prompt: "Estás en un túnel y un pasajero quiere bajar. ¿Te prohíbe la ley detenerte para que baje?"
+    prompt: "Estás en un túnel y un pasajero quiere bajar. ¿Infringes la ley si te detienes para que baje?"
     answer: true
     explain: La excepción de subir y bajar personas solo existe para el caso de las paradas de bus. En un túnel la prohibición no tiene esa excepción.
     cites: ["rvv:23.1", "rvv:23.2"]
 
   - id: tunel-marcha-atras-prohibida
     type: yesno
-    prompt: "Hay un atasco en un túnel de una autosnelweg y quieres dar marcha atrás para salir. ¿Te lo prohíbe la ley?"
+    prompt: "Hay un atasco en un túnel de una autosnelweg y quieres dar marcha atrás para salir. ¿Es una infracción hacerlo?"
     answer: true
     explain: En una autosnelweg o autoweg la ley prohíbe ir marcha atrás (art. 43), y eso incluye un túnel que forma parte de ellas. La ANWB da el mismo consejo para cualquier túnel. Además, por detrás vienen vehículos que no esperan que retrocedas.
     cites: ["rvv:43.1", "anwb-tunnel"]

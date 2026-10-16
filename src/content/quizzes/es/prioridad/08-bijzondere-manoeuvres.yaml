@@ -24,7 +24,7 @@ questions:
 
   - id: bijzondere-manoeuvres-semaforo-arrancar
     type: yesno
-    prompt: Estabas detenido ante un semáforo en rojo y arrancas cuando se pone verde. ¿Es una maniobra especial en la que debes dejar pasar a todo el tráfico, como al arrancar desde el borde de la calzada?
+    prompt: Estabas detenido ante un semáforo en rojo y arrancas cuando se pone verde. ¿Es una maniobra especial en la que debes dejar pasar a todo el tráfico?
     answer: false
     explain: Según el CBR, arrancar tras una parada en el tráfico no se considera maniobra especial (aunque debes seguir molestando lo menos posible). Arrancar desde un estacionamiento o el borde sí lo es.
     cites: ["cbr-rijprocedure:3.1"]

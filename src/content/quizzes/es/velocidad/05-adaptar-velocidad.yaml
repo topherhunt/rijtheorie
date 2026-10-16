@@ -8,7 +8,7 @@ questions:
 
   - id: adaptar-lento
     type: mc
-    prompt: "Vas por una carretera normal seca y despejada, con máximo de 80, y llevas 40 km/h sin ningún motivo. Detrás tuyo se forma una cola. ¿Qué es lo correcto?"
+    prompt: "Vas por una carretera normal seca y despejada, con máximo de 80, y llevas 40 km/h. Detrás tuyo se forma una cola. ¿Qué es lo correcto?"
     options: ["Subir a una velocidad acorde al tráfico, sin pasar de 80", "Seguir a 40 km/h: ir más despacio siempre es más seguro", "Parar en el arcén cada vez que se forme una cola detrás", "Poner las luces de emergencia y seguir a la misma velocidad"]
     answer: 0
     explain: "Sin necesidad, ir excepcionalmente lento respecto al resto del tráfico causa estorbo y puede ser peligroso. Ir más despacio no es seguro por sí solo; lo correcto es ajustarte a la situación y al tráfico, sin pasar del máximo."
@@ -41,9 +41,9 @@ questions:
   - id: adaptar-poco-espacio
     type: mc
     prompt: "Circulas por una calle estrecha dentro de la zona urbana con coches aparcados a ambos lados, peatones en la acera y ciclistas cerca. El máximo es 50. ¿Qué velocidad eliges?"
-    options: ["Menos de 50, porque hay poco espacio a mi alrededor", "50, porque es el máximo permitido en toda la zona", "Menos de 50 solo si llueve o hay poca luz en la calle", "50, porque los peatones y ciclistas se apartan solos"]
+    options: ["Menos de 50: en una calle así el 50 puede ser demasiado", "50, porque es el máximo permitido en toda la zona", "Menos de 50 solo si llueve o hay poca luz en la calle", "Menos de 50, pero solo mientras un peatón esté en la calzada"]
     answer: 0
-    explain: "Cuanto menos espacio hay entre tú y otros, más despacio debes ir. El 50 es un tope, no la velocidad adecuada en cualquier calle, y que los demás tengan que apartarse no te libera de adaptar la velocidad."
+    explain: "Cuanto menos espacio hay entre tú y otros, más despacio debes ir. El 50 es un tope, no la velocidad adecuada en cualquier calle, y adaptarla no depende solo de que llueva o de que haya un peatón en la calzada."
     cites: ["cbr-rijprocedure:3.2", "wvw:5"]
 
   - id: adaptar-niebla-bajo-maximo

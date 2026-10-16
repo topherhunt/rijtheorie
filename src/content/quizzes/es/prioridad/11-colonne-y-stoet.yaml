@@ -11,8 +11,8 @@ questions:
     prompt: En un cruce ves varios coches que van seguidos. ¿Cuándo son un cortejo fúnebre al que se aplica el art. 16?
     options:
       - Cuando son motorvehículos con distintivos oficiales que acompañan a un difunto
-      - Cuando varios coches van seguidos, con luces y a poca distancia
-      - Cuando son más de cinco coches seguidos que van al mismo destino y sin parar
+      - Cuando son motorvehículos que circulan juntos, con luces y a poca distancia
+      - Cuando son motorvehículos que acompañan a un difunto, aunque no lleven distintivos
     answer: 0
     explain: La definición pide motorvehículos que acompañan a un difunto o a sus cenizas y llevan los distintivos oficiales. Ir seguidos, con luces o en número no los convierte en cortejo.
     cites: ["rvv:1", "rvv:16"]

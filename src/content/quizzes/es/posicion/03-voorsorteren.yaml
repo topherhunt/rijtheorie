@@ -32,8 +32,8 @@ questions:
 
   - id: voorsorteren-no-estorbar
     type: mc
-    prompt: Vas a girar a la derecha, pero tendrás que ir lento o parar, y por tu derecha circulan ciclistas y ciclomotores que tu coche preseleccionado frenaría. ¿Qué dice la Rijprocedure B?
-    options: ["Preseleccionas igual, porque es siempre la posición más segura al girar", "A veces no preseleccionar, para no estorbar a ciclistas y ciclomotores", "Preseleccionas y les haces señas para que pasen por tu derecha", "Giras desde el fietsstrook para dejar libre la calzada a los demás"]
+    prompt: Vas a girar a la derecha, pero tendrás que ir lento o parar, y por tu derecha circulan ciclistas y ciclomotores. ¿Qué dice la Rijprocedure B sobre preseleccionar?
+    options: ["Preseleccionas igual, porque es siempre la posición más segura al girar", "En esa situación a veces es mejor no preseleccionar del todo", "Preseleccionas y les haces señas para que pasen por tu derecha", "Giras desde el fietsstrook para dejar libre la calzada a los demás"]
     answer: 1
     explain: La Rijprocedure B dice que a veces es mejor no preseleccionar si, parado o lento en esa posición, estorbarías sin necesidad a ciclistas y ciclomotores.
     cites: ["cbr-rijprocedure:3.3"]
@@ -73,7 +73,7 @@ questions:
 
   - id: voorsorteren-intermitente
     type: mc
-    prompt: Estás a unos 100 metros del cruce donde vas a girar a la izquierda y ya miraste por el retrovisor. ¿Cuándo das la señal según la Rijprocedure B?
+    prompt: Estás a unos 100 metros del cruce donde vas a girar a la izquierda. ¿Cuándo das la señal según la Rijprocedure B?
     options: ["Ahora, con tiempo y después de mirar", "Cuando ya empiezas a girar el volante", "Cuando llegues al eje de la calzada", "Solo si ves otros autos cerca"]
     answer: 0
     explain: Hay que avisar con tiempo, después de haber mirado, para que los demás ajusten su conducción, y terminar la señal tras la curva. La obligación de avisar viene del art. 17 lid 2.

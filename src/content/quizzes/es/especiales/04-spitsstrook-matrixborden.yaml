@@ -25,7 +25,7 @@ questions:
 
   - id: spitsstrook-cruz-prohibida-retencion
     type: yesno
-    prompt: "Hay retención en tu carril y la vluchtstrook, vacía, tiene una cruz roja. No hay ninguna emergencia. ¿Está prohibido usarla para avanzar?"
+    prompt: "Hay retención en tu carril y ves la vluchtstrook vacía, con una cruz roja encima. Piensas usarla para avanzar más rápido. ¿Cometerías una infracción?"
     answer: true
     explain: La cruz roja prohíbe usar el carril, y en la vluchtstrook solo deja una excepción, las emergencias. Que haya retención no es una emergencia.
     cites: ["rvv:73", "rvv:43.3"]

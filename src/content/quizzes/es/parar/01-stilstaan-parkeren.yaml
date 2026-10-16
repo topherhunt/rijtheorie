@@ -9,7 +9,7 @@ questions:
 
   - id: stilstaan-subir-bajar-parado
     type: yesno
-    prompt: "Te detienes en la calle solo el tiempo necesario para que un pasajero baje. ¿Estás solo parado (stilstaan), sin estacionar?"
+    prompt: "Te detienes en la calle el tiempo justo para que un pasajero baje de inmediato. Un amigo dice que has estacionado (parkeren). ¿Se equivoca?"
     answer: true
     explain: Parar el tiempo necesario para que suban o bajen pasajeros de inmediato no es parkeren. Solo estás parado (stilstaan).
     cites: ["rvv:1"]

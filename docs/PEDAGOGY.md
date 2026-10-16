@@ -1,8 +1,8 @@
 # Pedagogy review record
 
-What two model-run pedagogy reviews found wrong with the first-draft lessons and quizzes, and what was changed. Kept as a historical record of the problems that showed up when the course was first written, so future content avoids them. Correctness checks (does a cite support its claim) are recorded in VERIFICATION.md; this file is about whether the lessons teach.
+What the model-run pedagogy reviews found wrong with the first-draft lessons and quizzes, and what was changed. Kept as a historical record of the problems that showed up when the course was first written, so future content avoids them. Correctness checks (does a cite support its claim) are recorded in VERIFICATION.md; this file is about whether the lessons teach.
 
-Detailed per-lesson findings and fixes live in `audit/reviews/`: pass 1 in `pedagogy-rubric.md`, `pedagogy-b1..b7.md`, `pedagogy-apply-brief.md`; pass 2 in `pedagogy2-review-brief.md`, the seven `pedagogy2-<chapters>.md` reports (each ends with an `## Applied` section), `pedagogy2-apply-brief.md` and `pedagogy2-dedup.md`.
+Detailed per-lesson findings and fixes live in `audit/reviews/`: pass 1 in `pedagogy-rubric.md`, `pedagogy-b1..b7.md`, `pedagogy-apply-brief.md`; pass 2 in `pedagogy2-review-brief.md`, the seven `pedagogy2-<chapters>.md` reports (each ends with an `## Applied` section), `pedagogy2-apply-brief.md` and `pedagogy2-dedup.md`; pass 3 (guessability only) in `pedagogy3-guessability-brief.md` and the seven `pedagogy3-<chapters>.md` reports, whose `## Applied` and `## Rebalance` sections list every renamed id.
 
 ## How the reviews ran
 
@@ -29,7 +29,8 @@ Pass 2 was stricter than pass 1 and ran on pass 1's output, which likely explain
 
 ### Guessable questions
 - **Answer position.** Options were rendered in authored order, and authors put the correct answer first far too often: across all mc questions the answer index was 0 in 253, 1 in 183, 2 in 18 and 3 in 2. A learner could score well by always picking the first option. Fixed in code, not content: `shuffleOptions` in `src/lib/grade.ts` permutes mc and multi options at render time and remaps the answer; `QuestionCard` shuffles after hydration and the exam shuffles each drawn question. Tests select options by `qa-option-<authored index>`, which is stable under shuffling.
-- **The longest option is right.** Correct options were often the only careful, qualified sentence among short ones. Fixed by balancing option length and giving distractors the same detail.
+- **The longest option is right.** Correct options were often the only careful, qualified sentence among short ones: after pass 2 the answer was the longest mc option 55.6% of the time. Pass 3 gave distractors the same detail and form, and the first attempt overcorrected (answer longest 13%, shortest 15%, against about 27% chance), which is just as guessable: "rule out the extremes" works. A rebalance brought it to 24.5% longest and 24.9% shortest. `npm run audit` now fails if either rate leaves the band from chance minus 5 points to chance, and warns on any single question whose answer stands out by length.
+- **Yes/no leaned "no".** Only 33.2% of yes/no questions answered "yes", so "no" was a winning guess. Pass 3 rewrote about 62 questions so the same rule is tested from the "yes" side (new ids, Checks updated); now 50.1%. The audit fails outside 48-52%.
 - **Absurd distractors.** "Para que pagues más", "Tocas la bocina y sales", "Taxis" as priority vehicles. Replaced by real misreadings a learner might hold (the right-hand rule applied where a sign overrides it, a rule from the learner's home country).
 - **Giveaways in the prompt.** "Según el CBR..." flagged the answer as the procedural one; yes/no questions restated a lesson sentence so the answer was "yes" by recognition. Rewritten as scenarios.
 
@@ -72,16 +73,17 @@ Reviewer proposals that were wrong and rejected: an autoweg default of 80 km/h (
 - **Duplicates.** The same rule was taught and tested in several chapters (lit BUS/LIJNBUS lane in three, leaving an accident scene in four, spitsstrook and invoegen in six, horn use in two, alcohol limits in two). Each topic now has one owning lesson; others keep a one-line pointer. Decisions per overlap: `audit/reviews/pedagogy2-dedup.md`.
 - **Checks far from their rule.** `<Check>`s were grouped at the end of a lesson or under the wrong heading; moved under the Rule they test.
 - **Forward and dangling references** ("se ve en las lecciones siguientes", "capítulo anterior" pointing at the wrong chapter). Replaced by the rule itself or a named lesson.
-- **YAML flow lists split on commas.** An option containing a comma, or a prompt containing ": ", silently became two options or failed to parse. Pass 1 found about 20 split options, four of which had shifted the marked answer; pass 2 hit the same trap several times and fixed it by quoting. Quote any flow-list item with a comma or a colon.
+- **YAML flow lists split on commas.** An option containing a comma, or a prompt containing ": ", silently became two options or failed to parse. Pass 1 found about 20 split options, four of which had shifted the marked answer; pass 2 hit the same trap several times and fixed it by quoting. One shifted index survived every review until pass 3 (`luces/02` `detenido-luces` marked "Solo luces de emergencia"; rvv:38 requires stadslicht and achterlicht). Quote any flow-list item with a comma or a colon.
 
 ## What was deliberately not changed
-- Content the law does not settle got no question: a phone at a red light (rvv:61a "tijdens het rijden"), a cyclist on a zebra (49.2 names only pedestrians and gehandicaptenvoertuigen), what an "uitgezonderd bestemmingsverkeer" plate does to a closure, verkeersbrigadier orders beyond "stop", dropping off a passenger under E2.
+- Content the law does not settle got no question: a phone at a red light (rvv:61a "tijdens het rijden"), a cyclist on a zebra (49.2 names only pedestrians and gehandicaptenvoertuigen), what an "uitgezonderd bestemmingsverkeer" plate does to a closure, verkeersbrigadier orders beyond "stop".
 - Unverified CBR passages were not cited even when useful (the Rijprocedure "Tot slot" passage on emergency vehicles at a red light, the funeral-procession line), because their section numbers could not be confirmed.
 - Recognition-only signs (J warnings with no consequence beyond rvv:19, K signs) stay as recognition; inventing a consequence would add an unsourced rule.
 
 ## Lessons for writing new content
 - Ask what a learner must do differently because of the rule, and test that in a situation. A question answerable by recognizing a lesson sentence is not a test.
-- Write distractors from real misreadings, of similar length and detail to the answer. Don't rely on authored order: the UI shuffles.
+- Write distractors from real misreadings, of similar length and detail to the answer, and don't make the answer the shortest either. Don't rely on authored order: the UI shuffles.
+- Keep the reason out of the prompt and the answer option; put it in the explain. A "yes" question whose prompt states the justification is answered by recognition.
 - Give the reason with the rule, or mark it as common sense, or leave it out. Never invent one.
 - Teach each rule in one lesson; point to it elsewhere.
 - Put each Check right under the Rule it tests.

@@ -70,7 +70,7 @@ questions:
     type: mc
     prompt: Estás parado ante un semáforo en rojo. Una ambulancia con luz azul y sirena se acerca por detrás y el cruce está libre. ¿Qué haces?
     options:
-      - Sigo en rojo y le dejo paso solo si es legal y seguro
+      - Me quedo parado ante el rojo y no cruzo para abrirle paso
       - Cruzo el semáforo en rojo con cuidado para abrirle camino
       - Avanzo hasta el centro del cruce para dejar libre el carril de la ambulancia
       - Doy marcha atrás hasta dejarle espacio suficiente para pasar

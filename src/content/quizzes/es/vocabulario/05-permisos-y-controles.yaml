@@ -43,7 +43,7 @@ questions:
 
   - id: permisos-y-controles-rijverbod-agente
     type: yesno
-    prompt: Un agente te para por conducir bajo los efectos del alcohol. ¿Puede imponerte en ese momento un rijverbod, sin esperar a ninguna condena?
+    prompt: Un agente te para y comprueba que el alcohol te impide conducir bien. ¿Puede imponerte él mismo un rijverbod en ese momento?
     answer: true
     explain: Lo que un agente puede imponer en el momento es un rijverbod de hasta 24 horas. La rijontzegging, en cambio, es una pena que solo se impone al condenar por una infracción.
     cites: ["wvw:179", "wvw:162"]

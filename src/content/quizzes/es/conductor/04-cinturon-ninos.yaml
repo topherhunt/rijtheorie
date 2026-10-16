@@ -23,9 +23,9 @@ questions:
   - id: cinturon-tres-detras
     type: mc
     prompt: Quieres llevar a tres adultos en el asiento trasero, que tiene dos cinturones. El trayecto es de solo 500 metros. ¿Qué dice la norma?
-    options: ["Puedes, porque el trayecto es de solo 500 metros y vas despacio", "No: no más pasajeros que cinturones, así que solo dos en ese asiento", "Puedes si el del medio va sin cinturón, porque es un trayecto tan corto", "Puedes si el del medio es el más delgado de los tres adultos"]
+    options: ["Puedes, porque el trayecto es de solo 500 metros y vas despacio", "No: no más pasajeros que cinturones, así que solo dos en ese asiento", "Puedes si el del medio va sin cinturón, porque es un trayecto tan corto", "Puedes si el del medio comparte el cinturón con uno de los de al lado"]
     answer: 1
-    explain: En los asientos con cinturones no se llevan más pasajeros que cinturones. Ni el trayecto corto ni la complexión de la persona cambian esto.
+    explain: En los asientos con cinturones no se llevan más pasajeros que cinturones. Ni el trayecto corto ni compartir un cinturón cambian esto.
     cites: ["rvv:59.1"]
 
   - id: cinturon-sin-cinturones

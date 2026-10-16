@@ -34,7 +34,7 @@ questions:
 
   - id: autosnelweg-gasolinera-sin-infraccion
     type: yesno
-    prompt: "Sales de la autosnelweg a una gasolinera (tankstation) que está junto a ella y paras el auto para repostar. En la autosnelweg está prohibido detenerse. ¿Puedes parar en la gasolinera?"
+    prompt: "Sales de la autosnelweg a una gasolinera (tankstation) que está junto a ella y paras el auto para repostar. ¿Puedes parar ahí?"
     answer: true
     explain: Los tankstations, parkeerplaatsen y paradas de bus junto a la autosnelweg no forman parte de ella, y la prohibición de stilstaan vale en la rijbaan de la autosnelweg. Por eso parar allí no es dejar el vehículo parado en la calzada de la autosnelweg.
     cites: ["rvv:1", "rvv:43.2"]
@@ -53,7 +53,7 @@ questions:
 
   - id: autosnelweg-vluchtstrook-prohibida
     type: yesno
-    prompt: "Hay un atasco en la autosnelweg y la vluchtstrook está libre. Sin ninguna emergencia, ¿está prohibido usarla para avanzar?"
+    prompt: "Hay un atasco en la autosnelweg y ves la vluchtstrook libre y decides usarla para adelantar la fila. ¿Es una infracción?"
     answer: true
     explain: Salvo en emergencias está prohibido usar la vluchtstrook, la vluchthaven o la berm. Una spitsstrook abierta con señal C23-01 es otra cosa, y se ve en otra lección.
     cites: ["rvv:43.3"]

@@ -43,7 +43,7 @@ questions:
     options:
       - Miro bien y sigo sin parar si no estorbo a nadie
       - Paro del todo antes de la línea, como con B7
-      - Sigo sin mirar más, porque no se ve a nadie
+      - Sigo sin parar, la vía se ve libre desde donde estoy
     answer: 0
     explain: B6 obliga a ceder el paso, no a parar. Si la vía está libre y compruebas que nadie tendrá que frenar ni esquivarte, puedes seguir. Parar siempre es la regla de B7, y no mirar es peligroso.
     cites: ["rvv:bijlage1.B6", "cbr-rijprocedure:3.3"]
@@ -53,9 +53,9 @@ questions:
     prompt: Llegas a un cruce con B7 y no hay línea de detención pintada. ¿Dónde te detienes?
     sign: B7
     options:
-      - Donde se vea bien el cruce y entre seguro
-      - Justo en el borde de la vía que cruzas, sin mirar más
-      - No hace falta detenerse si no se ve venir a ningún vehículo
+      - Donde se vea bien el cruce y pueda entrar seguro
+      - Justo en el borde de la calzada que vas a cruzar
+      - No me detengo si no se ve venir a ningún vehículo
     answer: 0
     explain: Con B7 hay que detenerse siempre. Sin stopstreep, el CBR indica parar donde el cruce se vea lo mejor posible. Que no venga nadie no elimina el stop.
     cites: ["cbr-rijprocedure:3.3", "rvv:bijlage1.B7"]

@@ -45,9 +45,9 @@ questions:
   - id: atencion-cansado-salir
     type: mc
     prompt: Vas a empezar un viaje largo y estás muy cansado porque dormiste poco. Según el CBR, ¿qué haces?
-    options: ["Descansar o posponer el viaje antes de salir", "Salir y poner la radio fuerte para mantenerme despierto", "Salir y parar solo cuando me dé mucho sueño al volante", "Salir y compensar con un café en cuanto arranque"]
+    options: ["Descansar o posponer el viaje antes de salir", "Salir y tomar un café fuerte para estar despejado todo el trayecto", "Salir, pero conducir despacio y evitando los adelantamientos", "Salir y parar a descansar solo si noto sueño en ruta"]
     answer: 0
-    explain: La guía del CBR dice que no se empieza un viaje cansado o irritado. La radio, parar tarde o el café no quitan el cansancio ni garantizan que reacciones a tiempo.
+    explain: La guía del CBR dice que no se empieza un viaje cansado o irritado. El café, ir más despacio o parar tarde no quitan el cansancio ni garantizan que reacciones a tiempo.
     cites: ["cbr-rijprocedure:2"]
 
   - id: atencion-irritado

@@ -39,7 +39,7 @@ questions:
   - id: usuarios-bici-a-mano-fietspad
     type: mc
     prompt: Llevas tu bicicleta a mano. En esa calle no hay trottoir ni voetpad, pero sí un fietspad junto a la calzada. ¿Por dónde caminas?
-    options: [Por el fietspad, Por la rijbaan, Por la berma, Montas y pedaleas por el fietspad]
+    options: [Por el fietspad, Por la rijbaan, Por la berma, "Por el fietspad, solo de noche"]
     answer: 0
     explain: Quien lleva a mano una bicicleta sigue las reglas de peatón (art. 2). El peatón usa el trottoir o el voetpad; si no hay, el fietspad o el fiets/bromfietspad; solo si tampoco hay, la berma o el borde de la rijbaan.
     cites: ["rvv:2.2", "rvv:4"]

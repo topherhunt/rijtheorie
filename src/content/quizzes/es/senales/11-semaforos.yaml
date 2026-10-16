@@ -49,7 +49,7 @@ questions:
 
   - id: sf-derecha-bici
     type: yesno
-    prompt: Con el panel "Rechtsaf voor (brom)fietsers vrij", ¿puede un ciclista girar a la derecha con luz roja sin dejar pasar al resto?
+    prompt: Con el panel "Rechtsaf voor (brom)fietsers vrij", un ciclista llega con luz roja y gira a la derecha. ¿Tiene prioridad sobre el resto del tráfico?
     answer: false
     explain: El rojo y el amarillo no le valen, pero debe dejar pasar primero al resto del tráfico.
     cites: ["rvv:68.5"]

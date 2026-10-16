@@ -20,7 +20,7 @@ questions:
     prompt: "Un amigo dice que su camión con un remolque ligero puede ir a 90 km/h en la autosnelweg, igual que tu auto con remolque. ¿Cuál es el máximo de ese camión con remolque?"
     options: ["90 km/h, porque el remolque no pasa de 3500 kg", "80 km/h, como otros vehículos de motor con remolque", "100 km/h, como una T100-bus con remolque ligero", "130 km/h, porque en la autosnelweg no hay señales"]
     answer: 1
-    explain: "El 90 es solo para auto, furgoneta, moto, vehículo de tres ruedas y T100-bus con un remolque de hasta 3500 kg. Cualquier otro vehículo de motor con remolque, como un camión, va a 80 (art. 22 f); que el remolque sea ligero no cambia el grupo."
+    explain: "El 90 es solo para auto, furgoneta, moto, vehículo de tres ruedas y T100-bus con un remolque de hasta 3500 kg. Cualquier otro vehículo de motor con remolque va a 80 (art. 22 f), y un camión ya tiene 80 por sí solo (art. 22 a); que el remolque sea ligero no cambia el grupo."
     cites: ["rvv:22"]
 
   - id: especial-camion-90

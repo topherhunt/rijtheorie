@@ -51,8 +51,8 @@ questions:
 
   - id: licht-puerta-sin-mirar-inaceptable
     type: yesno
-    prompt: "Tu auto está bien estacionado junto a la calzada. Abres de golpe la puerta del lado de la calle sin mirar, y un ciclista que pasa tiene que esquivarla. No hay choque y nadie se hace daño. ¿Has cometido una infracción?"
+    prompt: "Tu auto está bien estacionado junto a la calzada. Abres la puerta del lado de la calle y un ciclista que pasa tiene que esquivarla. No hay choque y nadie se hace daño. ¿Has cometido una infracción?"
     answer: true
-    explain: Nadie debe comportarse en la vía de modo que cause o pueda causar peligro o estorbo (art. 5 WVW); estar bien estacionado no te dispensa. El procedimiento CBR pide mirar el espejo interior, el exterior y por encima del hombro antes de abrir.
+    explain: Nadie debe comportarse en la vía de modo que cause o pueda causar peligro o estorbo (art. 5 WVW); estar bien estacionado no te dispensa, y da igual que no haya choque. El procedimiento CBR pide mirar el espejo interior, el exterior y por encima del hombro antes de abrir.
     cites: ["wvw:5", "cbr-rijprocedure:3.7"]
     exam: false

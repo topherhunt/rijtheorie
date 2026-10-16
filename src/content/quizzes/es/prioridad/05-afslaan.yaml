@@ -1,7 +1,7 @@
 questions:
   - id: afslaan-preseleccionar-derecha
     type: mc
-    prompt: Vas a girar a la derecha en una calle ancha. Si te quedas en el centro, los autos de detrás tendrían que esperarte sin poder pasar. ¿Cómo te colocas con tiempo?
+    prompt: Vas a girar a la derecha en una calle ancha. ¿Cómo te colocas con tiempo?
     options:
       - Lo más a la derecha posible de tu carril
       - En el centro de la vía, para una curva más amplia
@@ -12,7 +12,7 @@ questions:
 
   - id: afslaan-preseleccionar-izquierda
     type: mc
-    prompt: Vas a girar a la izquierda en una vía de doble sentido. Si te quedas a la derecha mientras esperas a los de frente, los de detrás querrán adelantarte por la izquierda. ¿Cómo te colocas con tiempo?
+    prompt: Vas a girar a la izquierda en una vía de doble sentido y tendrás que esperar a los de frente. ¿Cómo te colocas con tiempo?
     options:
       - Junto al eje, sin invadir el carril de frente
       - Lo más a la derecha posible, sin estorbar
@@ -113,7 +113,7 @@ questions:
     prompt: Esperas en el cruce, sin bloquearlo, para girar a la izquierda mientras pasan los de frente. ¿Cómo recomienda el CBR tener las ruedas delanteras?
     options: ["Rectas, sin girar el volante", Giradas a la izquierda, Giradas a la derecha, Da igual cómo estén]
     answer: 0
-    explain: El CBR pide mantener las ruedas delanteras rectas mientras esperas. No hace falta con semáforos ni si tu vía tiene prioridad.
+    explain: El CBR pide mantener las ruedas delanteras en lo posible rectas mientras esperas para girar.
     cites: ["cbr-rijprocedure:3.3"]
 
   - id: afslaan-der-izq

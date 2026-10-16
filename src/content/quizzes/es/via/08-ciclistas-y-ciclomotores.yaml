@@ -3,9 +3,9 @@ questions:
     type: mc
     prompt: Vas en un snorfiets con motor de gasolina y quieres usar un fietspad no obligatorio (G13). ¿Cómo puedes hacerlo?
     sign: G13
-    options: ["Con el motor a gasolina apagado", "Con el motor encendido, despacio", "Con el motor encendido, si está vacío", "No puedes, va siempre por la calzada"]
+    options: ["Con el motor a gasolina apagado", "Con el motor encendido, despacio", "Con el motor apagado, solo de noche", "No puedes, va siempre por la calzada"]
     answer: 0
-    explain: Las snorfietsen con motor de combustión pueden usar el fietspad onverplicht solo con el motor apagado. No está prohibido del todo, y ni la poca velocidad ni el camino vacío cambian la condición.
+    explain: Las snorfietsen con motor de combustión pueden usar el fietspad onverplicht solo con el motor apagado. No está prohibido del todo, y ni la poca velocidad ni la hora del día cambian la condición.
     cites: ["rvv:5.3"]
 
   - id: ciclistas-snorfiets-placa

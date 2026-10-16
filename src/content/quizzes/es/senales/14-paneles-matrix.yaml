@@ -2,7 +2,7 @@ questions:
   - id: mx-velocidad-baja
     type: mc
     prompt: Una señal fija muestra 100 km/h y el panel electrónico sobre tu carril muestra 80. ¿Qué velocidad máxima rige?
-    options: ["80 km/h, la menor de las dos señales", "100 km/h, porque la señal fija manda", "120 km/h, el máximo de la autosnelweg", "Cualquiera de las dos, a mi elección"]
+    options: ["80 km/h, la menor de las dos señales", "100 km/h, porque la señal fija manda", "130 km/h, el máximo de la autosnelweg", "Cualquiera de las dos, a mi elección"]
     answer: 0
     explain: Cuando una señal y un panel electrónico muestran velocidades, rige la más baja. La señal fija no manda sobre el panel.
     cites: ["rvv:63b.2"]
