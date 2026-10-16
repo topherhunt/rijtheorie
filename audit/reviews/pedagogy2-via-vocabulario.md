@@ -429,3 +429,37 @@ Verified (wvw:163.1-3 printed). The prompt says "razones médicas" nowhere, so t
 - **Whether holding a phone at a red light counts as "tijdens het rijden" (rvv:61a)** and whether touching a mounted phone is allowed. The text says only "vast te houden"; I proposed nothing.
 - **Overlap with chapters I did not review** (especiales/01, 02, 04, 07, 08; senales/12; vehiculo/01, 02, 04): I grepped and read headings only. The duplication findings assume those lessons cover the same rules, which the grep and cites suggest but I did not read end to end.
 - **Whether the purpose of the valve cap and the summer/winter tyre difference are taught in `vehiculo/01-neumaticos`**: the file mentions them (grep hit), but I did not read it.
+
+## Applied
+
+Per lesson (questions kept / new / removed; lesson changes):
+- via/01 (8 questions): 2 new (`weg-cerrado`, `fietspad-atajo`), 2 removed (`rijbaan-no`, `g7-estacionar`), 3 polished. Lesson: `berm` dropped from the intro, closed roads are not a weg, Rule `cbr-rijprocedure:3.3` on guiding marks.
+- via/02 (11): 2 new (`invoeg-velocidad`, `uitrijstrook-velocidad`), throwaway and `estrechos` polished. Lesson: Rule `cbr-rijprocedure:3.4`, note that only the lit BUS/LIJNBUS (art. 73) is covered, vluchtstrook "destinada a emergencias".
+- via/03 (14): 2 new (`franjas-coche`, `suggestie-giro`), 2 removed (`fietsstrook`, `suggestie`), 2 polished. Lesson: dashed-fietsstrook caveat and suggestiestrook rewritten with `cbr-rijprocedure:3.3`.
+- via/04 (8): 5 new, 3 kept, 6 removed (patines moved to via/07, columnas reduced to an rvv:2.3 pointer). Lesson: gehandicapten-on-rijbaan note.
+- via/05 (10): 2 new (`bromfiets-autoweg`, `brommobiel-cinturon`) replacing 2, 1 removed (`reglas-snorfiets`), 3 polished. Lesson: Rules rvv:42 and rvv:59.1, art. 7 list.
+- via/06 (9): `zona-limites` set `exam: false`, bromfiets items merged into `zona-bromfiets-fietspad-h1`, new `zona-invierno-ciclista`. Lesson: farolas do not change the night rule.
+- via/07 (8): 3 new, 3 removed, rest kept or polished. Lesson: Rule rvv:4.4 for patines, pointer to via/01 for parking.
+- via/08 (8): lesson rewritten (cyclist half now a pointer to via/03, Rule rvv:5.8); 8 new ids replace 8 removed.
+- via/09 (8): 3 removed, scenarios and polish; no new examples invented.
+- via/10 (8): 4 removed, 8 reworked; gestures replaced by a pointer to the senales/12 lesson.
+- vocab/01 (11): 3 new (`vluchthaven-parar`, `spitsstrook-a3`, `inrit-ceder`) replacing 2, `erf-situacion` polished; owner-edited `uitvoeg` and `berm` untouched. Lesson: uitrijstrook note, spitsstrook Rule with A3 variant, Rule 54 extended.
+- vocab/02 (8): 2 new (`motorrijtuig-cuales`, `control-bromfiets`), `brommobiel-autoweg` rewritten, 2 removed (`ruiter-calzada`, `regelaar-obedecer`). Lesson: brommobiel Rule rewritten, Rule `wvw:160.1`, pointers.
+- vocab/03 (12): `nino-*` throwaways and `examen-aceite/-frenos` rewritten, `examen-neumaticos` replaced by `examen-neumaticos-dano`, new `dode-hoek-invoegen`. Lesson: pointers to the vehicle chapter and dode hoek usage.
+- vocab/04 (8): `matrix-flecha-blanca` replaced by `matrix-flecha-blanca-prohibido`, new `matrix-a3`, `herido-irse` replaces `irse-del-lugar`, 2 duplicates removed (`bus-lane-panel`, `lijnbus-autobus`), `matrix-cruz` throwaway fixed. Lesson: A3 variant, pointers.
+- vocab/05 (9): new `ademanalyse` (wvw:163), `pruebas-obligadas` replaces `soplar-negarse` and `saliva-colaborar`, `kentekenbewijs-control` now a scenario, `rijverbod-24h` and `rijverbod-vs-ontzegging` replaced by `rijverbod-maximo` and `rijontzegging-condena`. Lesson: Rule retitled "Blaastest y speekseltest", separate ademanalyse Rule.
+
+Factual errors fixed:
+- vocab/02 brommobiel reasoning: it follows motorvoertuig rules via rvv:2a but cannot reach the 50/60 km/h minimum of rvv:42 (bromfiets at most 45 km/h, wvw:1.1.e).
+- vocab/05: ademanalyse is wvw:163, not 160.5.
+- via/03: "no rule for the suggestiestrook" replaced by Rijprocedure 3.3 (right turn allowed, no bicycle symbols); the "often red" colour claim removed.
+- vocab/01 and vocab/04: A3 speed-sign variant of rvv:73.a added.
+- No numeric errors; the via/06 numbers match rvv:20/21.
+
+Report items deliberately not applied:
+- Rule for a painted (not lit) busbaan or busstrook, and wagen rules for pedestrian columns: no verified source.
+- Effect of "uitgezonderd bestemmingsverkeer" on a geslotenverklaring; whether a note on a parked car satisfies wvw:7.2; hinder examples under wvw:5; phone at a red light (rvv:61a): the law does not settle them, so no questions.
+- A wvw:7 question on injury with identity given but no desamparo; verkeersbrigadier orders beyond "stop" (rvv:82.3): not settled.
+- Merging via/04 and via/07 (only de-duplicated); casco half for the brommobiel (unsourced); pure term-list vocabulary kept as vocabulary.
+- via/10 gestures replaced by a pointer rather than tested.
+- Several `explain` and `prompt` lines in via/07, 08, 09 and vocab/01 now single-quoted because they contain ": ".

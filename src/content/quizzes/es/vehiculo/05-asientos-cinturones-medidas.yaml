@@ -8,21 +8,21 @@ questions:
 
   - id: asientos-cinturones-medidas-airbag
     type: yesno
-    prompt: En un auto de 2021 se enciende el aviso de defecto del airbag. ¿Cumple los requisitos?
+    prompt: En tu auto de 2021 el aviso de defecto del airbag está encendido, aunque el auto arranca y frena con normalidad. ¿Cumple los requisitos?
     answer: false
     explain: Los avisos del airbag y del pretensor no deben indicar un defecto en autos posteriores a 2017.
     cites: ["rv:5.2.47"]
 
   - id: asientos-cinturones-medidas-lado
     type: yesno
-    prompt: ¿Puede un auto puesto en uso en 2020 tener asientos orientados de lado?
+    prompt: Te ofrecen un auto particular puesto en uso en 2020 con un banco en la parte trasera orientado de lado, para dos pasajeros. ¿Puede el auto tener esos asientos?
     answer: false
     explain: Los autos puestos en uso después de 2014 no pueden tenerlos.
     cites: ["rv:5.2.46"]
 
   - id: asientos-cinturones-medidas-barra
     type: yesno
-    prompt: La barra de remolque tiene una grieta. ¿Cumple?
+    prompt: Vas a enganchar un remolque y ves una grieta fina en la barra de remolque, pero solo es un trayecto corto. ¿Cumple?
     answer: false
     explain: La barra debe estar firmemente fijada y sin grietas.
     cites: ["rv:5.2.66"]
@@ -36,7 +36,7 @@ questions:
 
   - id: asientos-cinturones-medidas-dimensiones-cual
     type: mc
-    prompt: ¿Cuál de estas combinaciones de largo, ancho y alto cumple las dimensiones máximas de un auto?
+    prompt: Alquilas un auto muy grande para una boda y comparas las fichas de cuatro modelos. ¿Cuál cumple las dimensiones máximas de un auto?
     options: ["11,5 m, 2,50 m y 3,90 m", "12,5 m, 2,50 m y 3,90 m", "11,5 m, 2,60 m y 3,90 m", "11,5 m, 2,50 m y 4,20 m"]
     answer: 0
     explain: Un auto puede medir como máximo 12,00 m de largo, 2,55 m de ancho y 4,00 m de alto. Las otras tres pasan en una medida (largo, ancho o alto), y basta una para no cumplir.
@@ -69,3 +69,10 @@ questions:
     answer: false
     explain: Está prohibido conducir un vehículo que no cumple los requisitos, y un cinturón con el cierre defectuoso no los cumple. Que hoy no lo uses no cambia que el auto no cumple.
     cites: ["rv:5.1.1", "rv:5.2.47"]
+
+  - id: asientos-cinturones-medidas-placa
+    type: yesno
+    prompt: Montas en la parte trasera de tu auto un portabicicletas que tapa la placa. Las luces y los intermitentes sí se ven. ¿Cumple?
+    answer: false
+    explain: El kenteken debe ser legible y las placas no pueden estar tapadas. Que se vean las luces no compensa que la placa quede oculta.
+    cites: ["rv:5.2.1"]

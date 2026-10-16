@@ -16,13 +16,13 @@ questions:
     explain: E2 prohíbe stilstaan, y detenerse para que baje alguien también es stilstaan. La excepción de "bajar o subir un momento" existe solo para estacionar (E1), no para detenerse.
     cites: ["rvv:1", "rvv:bijlage1.E2"]
 
-  - id: e-lado
+  - id: e-e3-auto
     type: yesno
-    prompt: Una señal E1 está en el lado izquierdo de la calle. Tú estacionas en el lado derecho. ¿Te alcanza la prohibición?
-    sign: E1
-    answer: false
-    explain: E1, E2 y E3 solo valen para el lado de la vía donde están colocadas.
-    cites: ["rvv:65.2"]
+    prompt: Junto a una señal E3 hay un hueco libre en la calle, sin otras señales ni normas que lo impidan. ¿Puedes dejar ahí tu auto?
+    sign: E3
+    answer: true
+    explain: E3 prohíbe dejar bicicletas y ciclomotores (fietsen en bromfietsen). No menciona los autos, así que la señal no te afecta.
+    cites: ["rvv:bijlage1.E3"]
 
   - id: e-e8-categoria
     type: yesno
@@ -48,12 +48,28 @@ questions:
     explain: En un lugar destinado a carga y descarga inmediata no se puede estacionar.
     cites: ["rvv:24.1", "rvv:bijlage1.E7"]
 
+  - id: e-e8c-cargar
+    type: yesno
+    prompt: Tienes un auto eléctrico y ves una plaza E8c (solo para cargar vehículos eléctricos). No vas a cargarlo, solo quieres estacionar para ir a comprar. ¿Puedes?
+    sign: E8c
+    answer: false
+    explain: 'E8c es solo para cargar vehículos eléctricos. Ser eléctrico no basta: estacionar con otro fin que el indicado en la señal está prohibido.'
+    cites: ["rvv:24.1", "rvv:bijlage1.E8c"]
+
   - id: e-e6-discapacidad
     type: yesno
-    prompt: Quieres estacionar un momento en una plaza con esta señal. No tienes tarjeta de discapacidad. ¿Puedes?
+    prompt: Vas a estar veinte minutos haciendo una compra y quieres dejar tu auto en una plaza con esta señal. No tienes tarjeta de discapacidad. ¿Puedes?
     sign: E6
     answer: false
     explain: Solo puede estacionar quien tiene tarjeta válida visible (y transporta a esa persona) o un vehículo para personas con discapacidad.
+    cites: ["rvv:26.1"]
+
+  - id: e-e6-tarjeta
+    type: yesno
+    prompt: Llevas a tu abuela, que tiene la tarjeta de estacionamiento para discapacitados bien visible en el parabrisas, a una cita médica. Dejas el auto en una plaza con esta señal mientras ella entra. ¿Puedes?
+    sign: E6
+    answer: true
+    explain: Un auto con tarjeta visible puede estacionar en la plaza si el estacionamiento está directamente relacionado con el transporte de esa persona, como aquí.
     cites: ["rvv:26.1"]
 
   - id: e-vakken
@@ -66,11 +82,11 @@ questions:
 
   - id: e-e10-disco
     type: mc
-    prompt: ¿Qué debes hacer al estacionar en una zona con esta señal?
+    prompt: Estacionas tu auto en una plaza con línea azul, dentro de una zona con esta señal. ¿Qué debes hacer?
     sign: E10
-    options: ["Poner el disco de estacionamiento visible detrás del parabrisas", "Pagar en el parquímetro", "Dejar el motor encendido", "Nada, es solo informativo"]
+    options: ["Poner el disco de estacionamiento visible detrás del parabrisas", "Pagar en el parquímetro", "Dejar una nota con tu hora de llegada", "Dejar el motor encendido"]
     answer: 0
-    explain: En una parkeerschijf-zona el disco es obligatorio, y no puedes pasar del tiempo indicado.
+    explain: En las plazas con línea azul, un vehículo de motor de más de dos ruedas debe llevar el disco visible detrás del parabrisas, y no puedes pasar del tiempo indicado.
     cites: ["rvv:25.2", "rvv:bijlage1.E10"]
 
   - id: e-e10-redondeo
@@ -81,6 +97,14 @@ questions:
     answer: 0
     explain: Puedes redondear hacia arriba al siguiente medio o hora entera. 10:30 es el siguiente. Redondear hacia abajo no es lo que dice la ley.
     cites: ["rvv:25.4"]
+
+  - id: e-e10-moto
+    type: yesno
+    prompt: Dejas tu moto en una plaza con línea azul de una zona de disco. ¿Puedes hacerlo sin poner el disco?
+    sign: E10
+    answer: true
+    explain: La obligación de llevar disco en las plazas con línea azul es para vehículos de motor de más de dos ruedas. La moto tiene dos.
+    cites: ["rvv:25.2"]
 
   - id: e-e12-compras
     type: yesno

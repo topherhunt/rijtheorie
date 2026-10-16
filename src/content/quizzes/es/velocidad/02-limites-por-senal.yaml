@@ -1,12 +1,12 @@
 questions:
-  - id: senal-a1
+  - id: senal-recomendada-obligatoria
     type: mc
-    prompt: "¿Qué significa esta señal?"
-    options: [Velocidad máxima, Velocidad mínima, Velocidad recomendada, Fin de la velocidad máxima]
+    prompt: "Vas por una carretera normal fuera de la zona urbana, de día y con la calzada seca. Ves una señal A4 de 60 km/h antes de una curva abierta que ves entera, y tú vas a 80. ¿Qué es correcto?"
+    options: ["La A4 recomienda 60, no obliga; sigo a 80 si veo que puedo detenerme", "Debo bajar a 60 porque toda señal de velocidad es un máximo", "Debo bajar a 60 porque la curva lo exige por ley", "Puedo acelerar a 100 porque la A4 anula el máximo de 80"]
     answer: 0
-    explain: "A1 es la maximumsnelheid."
-    cites: ["rvv:bijlage1.A1"]
-    sign: A1
+    explain: "La A4 es una adviessnelheid: no manda ni prohíbe, así que no es un máximo como la A1. Aun así sigues obligado a poder detenerte dentro de lo que ves libre (art. 19); si en esa curva no lo consigues a 80, vas demasiado rápido. Y no anula el máximo de la vía."
+    cites: ["rvv:bijlage1.A4", "rvv:62", "rvv:19"]
+    sign: A4
 
   - id: senal-a2-general
     type: mc
@@ -17,23 +17,12 @@ questions:
     cites: ["rvv:bijlage1.A2", "rvv:21"]
     sign: A2
 
-  - id: senal-recomendada-obligatoria
-    type: yesno
-    prompt: "La señal A4 indica una velocidad recomendada. ¿Es un máximo que debes cumplir como una A1?"
-    answer: false
-    explain: "A4 es una recomendación (adviessnelheid). El máximo lo da la A1."
-    cites: ["rvv:bijlage1.A4", "rvv:62"]
-
   - id: senal-a4-curva
     type: mc
     prompt: "Antes de una curva cerrada y sin visibilidad ves una señal A4 de 40 km/h. El máximo legal de la vía es 80 y tú vas a 70. ¿Qué es correcto?"
-    options:
-      - "Hago bien, porque 70 está por debajo del máximo legal y la A4 es solo una recomendación"
-      - "La A4 no es un máximo legal, pero igual debo poder detenerme dentro de lo que veo libre; si a 70 no puedo, voy demasiado rápido"
-      - "Debo ir exactamente a 40 porque toda señal de velocidad es obligatoria"
-      - "La A4 solo importa si llueve"
+    options: ["Voy bien: 70 está bajo el máximo y la A4 solo recomienda", "Debo poder detenerme dentro de lo que veo libre; si a 70 no puedo, voy demasiado rápido", "Debo ir exactamente a 40 porque toda señal de velocidad es obligatoria", "La A4 solo cuenta si llueve, así que sigo a 70"]
     answer: 1
-    explain: "La A4 (adviessnelheid) no obliga, pero el art. 19 sí: debes poder detenerte dentro de la distancia que ves libre. Estar bajo el máximo no sustituye esa regla."
+    explain: "La A4 (adviessnelheid) no obliga, pero el art. 19 sí: debes poder detenerte dentro de la distancia que ves libre. En una curva sin visibilidad esa distancia es corta, y estar bajo el máximo legal no sustituye esa regla. Ir a 40 exactos tampoco es la regla: lo que cuenta es poder parar."
     cites: ["rvv:bijlage1.A4", "rvv:62", "rvv:19"]
     sign: A4
 
@@ -56,6 +45,15 @@ questions:
     answer: true
     explain: "Sin indicación del área, la señal vale en el área limitada por ella y por las señales de fin de zona colocadas con ella. Mientras no llegues a ese final, sigues dentro."
     cites: ["rvv:66.2"]
+    sign: A1
+
+  - id: senal-zona-fin
+    type: mc
+    prompt: "Circulas por un barrio dentro de la zona urbana con una A1 de 30 km/h con la palabra «zone». Pasas la señal que marca el fin de la zona y no ves ninguna otra señal de velocidad. ¿Qué máximo rige ahora para tu auto?"
+    options: [30 km/h, 50 km/h, 80 km/h, 15 km/h]
+    answer: 1
+    explain: "Al pasar el fin de la zona, la A1 de 30 deja de valer. Sigues dentro de la zona urbana, así que rige el máximo general de ahí: 50 km/h (art. 20). No son los 80 de fuera de la zona urbana, y seguir a 30 no es obligatorio."
+    cites: ["rvv:66.2", "babw:9", "rvv:20"]
     sign: A1
 
   - id: senal-onderbord
@@ -83,13 +81,13 @@ questions:
     cites: ["rvv:67.1"]
     sign: A1
 
-  - id: senal-a3
+  - id: senal-a3-panel-80
     type: mc
-    prompt: "Sobre tu carril hay un panel con un número en un círculo rojo. ¿Qué significa?"
-    options: [Velocidad máxima y el carril puede usarse, Velocidad mínima, Carril cerrado, Fin del atasco]
+    prompt: "En una autosnelweg con poco tráfico, el panel sobre tu carril muestra un 80 en un círculo rojo y tú ibas a 120. ¿Qué haces?"
+    options: ["Bajo a 80 como máximo y sigo por mi carril", "Cambio al carril de al lado porque el 80 es solo para este", "Sigo a 120 porque el máximo general es 130", "Salgo del carril porque está cerrado"]
     answer: 0
-    explain: "A3 es una velocidad máxima en un panel electrónico. El carril puede usarse."
-    cites: ["rvv:bijlage1.A3", "rvv:73"]
+    explain: "El A3 en un panel es una velocidad máxima y significa que el carril puede usarse, con esa velocidad como máximo. Prevalece sobre los 130 generales. Un carril cerrado se muestra con una cruz roja, no con un número."
+    cites: ["rvv:bijlage1.A3", "rvv:73", "rvv:62"]
     sign: A3
 
   - id: senal-a3-cruz-roja

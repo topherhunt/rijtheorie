@@ -27,31 +27,23 @@ questions:
   - id: conduccion-y-accidentes-matrix-cruz
     type: mc
     prompt: Sobre el carril por el que circulas se enciende una cruz roja en el panel. ¿Qué debes hacer?
-    options: [Seguir porque el panel solo recomienda, Dejar de usar ese carril y pasar a otro, Aumentar la velocidad para salir rápido, Detenerte en el carril]
+    options: [Seguir porque el panel solo recomienda, Dejar de usar ese carril y pasar a otro, Aumentar la velocidad para salir rápido, Seguir en el carril y usar la vluchtstrook]
     answer: 1
-    explain: La cruz roja significa que el carril no puede usarse.
+    explain: La cruz roja significa que el carril no puede usarse, y la vluchtstrook solo sirve en emergencias, no como sustituto del carril cerrado.
     cites: ["rvv:73"]
 
-  - id: conduccion-y-accidentes-matrix-flecha-blanca
-    type: mc
-    prompt: Sobre tu carril ves una flecha blanca en el panel. ¿Qué indica?
-    options: [Un preaviso de que más adelante habrá una cruz roja, Que el carril ya está cerrado, Que el carril es solo para bus, Que puedes aumentar la velocidad]
-    answer: 0
-    explain: La flecha blanca es una voorwaarschuwing (preaviso) de la cruz roja. La flecha verde es la que permite usar el carril.
-    cites: ["rvv:73"]
-
-  - id: conduccion-y-accidentes-bus-lane-panel
+  - id: conduccion-y-accidentes-matrix-flecha-blanca-prohibido
     type: yesno
-    prompt: Sobre un carril se ve la palabra BUS en el panel. ¿Puedes usarlo con tu auto?
+    prompt: En el panel de tu carril ves una flecha blanca. ¿Ya tienes prohibido usar ese carril?
     answer: false
-    explain: Con BUS el carril solo puede ser usado por un lijnbus y un autobus.
+    explain: La flecha blanca solo avisa de que más adelante vendrá una cruz roja. La prohibición de usar el carril la marca la cruz roja, no el preaviso.
     cites: ["rvv:73"]
 
-  - id: conduccion-y-accidentes-lijnbus-autobus
+  - id: conduccion-y-accidentes-matrix-a3
     type: yesno
-    prompt: Sobre un carril se ve la palabra LIJNBUS en el panel. Eres conductor de un autobús turístico (autobus) que no hace servicio de línea. ¿Puedes usarlo?
-    answer: false
-    explain: Con LIJNBUS el carril solo puede usarlo un lijnbus. Con la palabra BUS sí podría usarlo un autobus, pero aquí no.
+    prompt: En el panel sobre tu carril no hay flecha, sino una velocidad máxima (señal A3). ¿Puedes usar el carril?
+    answer: true
+    explain: El carril puede usarse tanto con la flecha verde como cuando el panel muestra una velocidad máxima con la señal A3.
     cites: ["rvv:73"]
 
   - id: conduccion-y-accidentes-gesloten-entrar
@@ -61,10 +53,9 @@ questions:
     explain: La geslotenverklaring prohíbe entrar en la vía y también usarla. Que el tramo sea corto no cambia nada.
     cites: ["rvv:1"]
 
-  - id: conduccion-y-accidentes-irse-del-lugar
-    type: mc
-    prompt: Chocas con otro auto y hay solo daños materiales (blikschade). ¿Cuándo puedes irte?
-    options: [Cuando hayas dado la oportunidad de establecer tu identidad y la de tu vehículo, Cuando creas que el daño es pequeño, Cuando el otro conductor se haya ido, "Nunca, aunque hayas dado tus datos"]
-    answer: 0
-    explain: Con daño material puedes irte solo si diste la oportunidad de establecer tu identidad y la del vehículo. Que el daño te parezca pequeño no cuenta.
+  - id: conduccion-y-accidentes-herido-irse
+    type: yesno
+    prompt: Tras un choque, el otro conductor tiene un golpe en la cabeza pero dice que se las arregla solo y que te puedes ir. ¿Puedes irte?
+    answer: false
+    explain: Si alguien ha sufrido lesiones, está prohibido irse del lugar. La excepción de haber dado tus datos vale solo para el daño material (blikschade).
     cites: ["wvw:7"]

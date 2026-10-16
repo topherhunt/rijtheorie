@@ -15,10 +15,10 @@ questions:
 
   - id: alcohol-principiante-quien
     type: mc
-    prompt: Obtuviste tu primer permiso a los 25 años, hace 3 años. ¿Qué límite de alcohol te corresponde?
-    options: ["El límite general (220 µg/l)", "El límite de principiante (88 µg/l)", "Ninguno, porque ya eres adulto", "Cero alcohol siempre"]
+    prompt: Obtuviste tu primer permiso a los 25 años, hace 3 años. ¿Qué límite de alcohol te corresponde al conducir?
+    options: ["El límite general (220 µg/l)", "El límite de principiante (88 µg/l)", "El de principiante, pero solo hasta los 30 años de edad", "Ninguno, porque ya eres adulto"]
     answer: 1
-    explain: Si el primer permiso se expidió a los 18 años o más, eres principiante durante los primeros 5 años.
+    explain: Si el primer permiso se expidió a los 18 años o más, eres principiante durante los primeros 5 años, sin importar tu edad. Que seas adulto no cambia el plazo.
     cites: ["wvw:8.3"]
 
   - id: alcohol-novel-100
@@ -42,33 +42,51 @@ questions:
     explain: Para el principiante el límite en sangre es de 0,2 mg/ml, y 0,3 lo supera. El límite general de 0,5 no es el tuyo.
     cites: ["wvw:8.3"]
 
-  - id: alcohol-sin-permiso
+  - id: alcohol-ciclista-novel
     type: yesno
-    prompt: Alguien conduce sin tener permiso. ¿Le corresponde el límite bajo de principiante?
-    answer: true
-    explain: El artículo 8 lid 4 aplica el límite de principiante a quien conduce sin permiso.
+    prompt: Sacaste el carnet B hace un año (a los 25). Esta noche vas en bicicleta y en un control soplas 150 µg/l. ¿Superas el límite de alcohol que te corresponde?
+    answer: false
+    explain: "El límite de principiante (88 µg/l) vale para quien conduce un vehículo de motor que exige permiso. En bicicleta rige el límite general de 220 µg/l, y 150 no lo supera. Ojo: aun así no puedes ir en bici si no estás en condiciones de hacerlo."
+    cites: ["wvw:8.2", "wvw:8.3", "wvw:8.1"]
+
+  - id: alcohol-begeleider-limite
+    type: yesno
+    prompt: Acompañas como begeleider a tu hija, que conduce con la begeleiderspas. Tú tienes el permiso desde hace 20 años y en un control soplas 150 µg/l. ¿Cometes una infracción de alcohol por la cifra?
+    answer: false
+    explain: El begeleider está sujeto al límite general de 220 µg/l, no al de 88 de los principiantes, que es solo para quien conduce. Con 150 no lo superas.
+    cites: ["wvw:8.2", "wvw:8.3"]
+
+  - id: alcohol-sin-permiso-limite
+    type: mc
+    prompt: Alguien conduce un coche sin haber obtenido nunca un permiso y en un control sopla 150 µg/l. ¿Qué límite se le aplica?
+    options: ["El general (220 µg/l), así que no supera el límite", "El de principiante (88 µg/l), así que sí lo supera", "Ninguno, porque sin permiso se trata como otra infracción", "Cero alcohol"]
+    answer: 1
+    explain: "Quien conduce sin permiso un vehículo de motor que lo exige se trata como principiante: le corresponde el límite de 88 µg/l. Conducir sin permiso es además otra infracción."
     cites: ["wvw:8.4"]
 
   - id: alcohol-capacidad
-    type: yesno
-    prompt: Estás por debajo del límite numérico pero te sientes mareado por lo que bebiste. ¿Puedes conducir?
-    answer: false
-    explain: Está prohibido conducir sin estar en condiciones, aunque estés bajo los límites numéricos.
+    type: mc
+    prompt: Has tomado dos copas, soplas 150 µg/l (por debajo del límite) pero te notas mareado y con la vista borrosa. Tienes que volver a casa. ¿Qué haces?
+    options: ["Conduzco: la cifra está por debajo del límite", "No conduzco: sin estar en condiciones de conducir está prohibido aunque no supere el límite", "Conduzco despacio y por calles tranquilas", "Conduzco solo si pongo la ventanilla abierta"]
+    answer: 1
+    explain: El artículo 8 lid 1 prohíbe conducir cuando no estás en condiciones de hacerlo, aunque estés bajo los límites numéricos.
     cites: ["wvw:8.1"]
 
-  - id: alcohol-prestar
-    type: yesno
-    prompt: Sabes que tu amigo bebió demasiado. ¿Puedes dejarle tu auto para que conduzca?
-    answer: false
-    explain: Está prohibido dejar conducir a alguien de quien sabes o deberías saber que no está en condiciones.
+  - id: alcohol-prestar-amigo
+    type: mc
+    prompt: Tu amigo se tambalea y arrastra las palabras después de la fiesta, pero te pide tu coche "para llegar antes". Sabes que ha bebido mucho. ¿Qué pasa si se lo dejas?
+    options: ["Nada para ti: si lo paran, la infracción es solo suya", "También cometes una infracción tú, por dejar conducir a quien sabes que no está en condiciones", "Solo es infracción si le pasa algo", "Está permitido si tú vas de copiloto"]
+    answer: 1
+    explain: Está prohibido dejar conducir a quien sabes, o deberías saber, que no está en condiciones. La infracción es tuya aunque no conduzcas.
     cites: ["wvw:8.6"]
 
-  - id: alcohol-negarse
-    type: yesno
-    prompt: La policía te pide soplar en la prueba de aliento. ¿Puedes negarte?
-    answer: false
-    explain: Debes colaborar con la prueba de aliento y otras pruebas.
-    cites: ["wvw:160.5"]
+  - id: alcohol-negarse-consecuencia
+    type: mc
+    prompt: Un agente sospecha que has bebido y te ordena soplar en el aparato. Te niegas porque "seguro que no llego al límite". ¿Qué puede pasar?
+    options: ["Nada, porque soplar es voluntario", "Negarte es una infracción por sí sola y te pueden retirar el permiso en el acto", "Solo te multan si luego un análisis de sangre da positivo", "Solo te piden que lo repitas al día siguiente"]
+    answer: 1
+    explain: Quien recibe la orden está obligado a soplar. Negarte tiene consecuencias propias, incluida la retirada inmediata del permiso (invordering), sin importar cuánto alcohol tuvieras.
+    cites: ["wvw:163", "wvw:164"]
 
   - id: alcohol-rijverbod-sin-cifra
     type: yesno
@@ -77,9 +95,10 @@ questions:
     explain: El rijverbod (art. 162) no depende de una cifra, sino de que por el efecto de la sustancia no estés en condiciones de conducir bien, y puede durar hasta 24 horas. Además, el artículo 8 lid 1 prohíbe conducir sin estar capaz aunque no superes el límite.
     cites: ["wvw:162.1", "wvw:8.1"]
 
-  - id: alcohol-sangre-orden
-    type: yesno
-    prompt: Si te niegas a la prueba de aliento, ¿se puede ordenar un análisis de sangre?
-    answer: true
-    explain: Si la prueba de aliento no se completa, te piden aceptar un análisis de sangre; si no lo aceptas, te lo pueden ordenar (art. 163).
+  - id: alcohol-sangre-sin-consentimiento
+    type: mc
+    prompt: No consigues completar la prueba de aliento y el agente te pide permiso para un análisis de sangre. Dices que no. ¿Qué ocurre?
+    options: ["Se acaba el procedimiento: sin tu consentimiento no hay análisis", "Un oficial autorizado puede ordenarte el análisis y debes cumplir la orden", "Te lo hacen solo si firmas después", "Solo pueden hacértelo si ya has causado un accidente"]
+    answer: 1
+    explain: Primero se te pide consentimiento. Si no lo das, el fiscal, un hulpofficier de justitie u otro funcionario autorizado puede ordenarte el análisis, y debes cumplirlo.
     cites: ["wvw:163"]

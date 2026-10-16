@@ -1,19 +1,11 @@
 questions:
   - id: mx-velocidad-baja
     type: mc
-    prompt: Una señal fija muestra 100 km/h y el panel electrónico sobre tu carril muestra 80. ¿Qué rige?
-    sign: A3
-    options: ["80 km/h", "100 km/h", "La media", "La que tú prefieras"]
+    prompt: Una señal fija muestra 100 km/h y el panel electrónico sobre tu carril muestra 80. ¿Qué velocidad máxima rige?
+    options: ["80 km/h", "100 km/h, porque la señal fija manda", "120 km/h, el máximo de la autosnelweg", "Cualquiera de las dos, a mi elección"]
     answer: 0
-    explain: Cuando señal y panel muestran velocidades, rige la más baja.
+    explain: Cuando una señal y un panel electrónico muestran velocidades, rige la más baja. La señal fija no manda sobre el panel.
     cites: ["rvv:63b.2"]
-
-  - id: mx-limite-general
-    type: yesno
-    prompt: Una señal de velocidad muestra más que el máximo general para tu vehículo. ¿Puedes ir a esa velocidad mayor?
-    answer: false
-    explain: Rige la velocidad más baja entre la señal y los máximos generales.
-    cites: ["rvv:63b"]
 
   - id: mx-f9-fin
     type: yesno
@@ -28,33 +20,32 @@ questions:
     prompt: Sobre tu carril aparece una cruz roja. ¿Qué haces?
     options: ["Cambio de carril y no lo uso", "Reduzco y lo sigo usando", "Lo uso solo si no hay tráfico", "Paro en el carril"]
     answer: 0
-    explain: "Cruz roja: el carril no puede usarse."
-    cites: ["rvv:73"]
+    explain: "Cruz roja: el carril no puede usarse. Parar en él sería además lo peor: bloquearías un carril cerrado y te detendrías en la calzada."
+    cites: ["rvv:73", "rvv:43.2"]
 
-  - id: mx-flecha-blanca
+  - id: mx-flecha-blanca-cambio
     type: mc
-    prompt: Ves una flecha blanca inclinada sobre tu carril. ¿Qué anuncia?
-    options: ["Una cruz roja más adelante", "El fin de las prohibiciones", "Un carril solo para buses", "Límite de velocidad"]
+    prompt: Ves una flecha blanca inclinada sobre tu carril. ¿Qué haces?
+    options: ["Me preparo para dejar el carril, porque más adelante habrá una cruz roja", "Sigo como si nada, porque la flecha blanca es solo informativa", "Acelero para pasar antes de que se cierre", "Paro, porque el carril ya está cerrado"]
     answer: 0
-    explain: La flecha blanca es el aviso previo de una cruz roja.
+    explain: La flecha blanca es el aviso previo de una cruz roja (art. 73). Todavía puedes usar el carril, pero debes prepararte para salir de él a tiempo.
     cites: ["rvv:73"]
 
-  - id: mx-spitsstrook
-    type: mc
-    prompt: ¿Qué es un spitsstrook?
+  - id: mx-spitsstrook-abierto
+    type: yesno
+    prompt: Hay cola en la autosnelweg y sobre la vluchtstrook de tu derecha se ilumina la señal C23-01. ¿Puedes usar esa franja como carril?
     sign: C23-01
-    options: ["Una vluchtstrook designada como carril por la señal C23-01", "Un carril exclusivo de bus", "Un apartadero", "Un carril de incorporación"]
-    answer: 0
-    explain: Es la vluchtstrook designada como carril por C23-01.
+    answer: true
+    explain: C23-01 convierte la vluchtstrook en spitsstrook, un carril más mientras la señal esté activa.
     cites: ["rvv:1", "rvv:bijlage1.C23-01"]
 
   - id: mx-c23-02-desalojar
     type: mc
     prompt: Circulas por un spitsstrook abierto y el panel muestra esta señal. ¿Qué haces?
     sign: C23-02
-    options: ["Paso a un carril normal de al lado, cruzando la línea continua si hace falta", "Sigo hasta el final del carril", "Me detengo en el carril", "Sigo si voy rápido"]
+    options: ["Salgo del spitsstrook, cruzando la línea continua si hace falta", "Sigo hasta el final del carril", "Me detengo en el carril", "Sigo si voy rápido"]
     answer: 0
-    explain: C23-02 ordena desalojar el spitsstrook. Para salir de él puedes cruzar la línea continua. Detenerte en el carril sería peor, y seguir es ignorar la orden.
+    explain: C23-02 (Spitsstrook vrijmaken) ordena dejar libre el spitsstrook. Para salir de él puedes cruzar la línea continua (art. 76.2). Detenerte en el carril sería peor, y seguir es ignorar la orden.
     cites: ["rvv:bijlage1.C23-02", "rvv:76.2"]
 
   - id: mx-c23-03-fin
@@ -65,24 +56,32 @@ questions:
     explain: C23-03 es el fin del spitsstrook. La franja vuelve a ser vluchtstrook, que salvo en emergencias no puedes usar.
     cites: ["rvv:bijlage1.C23-03", "rvv:43.3"]
 
-  - id: mx-vluchtstrook
+  - id: mx-vluchtstrook-salida
     type: yesno
-    prompt: Hay mucho tráfico en la autosnelweg. ¿Puedes usar la vluchtstrook (sin ser spitsstrook abierto) para adelantar?
+    prompt: Te has pasado de tu salida de la autosnelweg. ¿Puedes parar en la vluchtstrook para esperar a que haya hueco y volver atrás?
     answer: false
-    explain: Salvo en emergencias no puedes usar la vluchtstrook en una autosnelweg o autoweg.
+    explain: Salvo en emergencias no puedes usar la vluchtstrook (art. 43.3). Pasarte de salida es un error tuyo, no una emergencia.
     cites: ["rvv:43.3"]
 
-  - id: mx-parar-calzada
+  - id: mx-parar-pasajero
     type: yesno
-    prompt: En una autosnelweg, ¿puedes dejar tu auto detenido en la calzada?
+    prompt: Circulas por el carril derecho de una autosnelweg y tu pasajero quiere bajar ya. ¿Puedes pararte un momento en la calzada?
     answer: false
-    explain: No puedes dejar que tu vehículo se quede detenido en la calzada de una autosnelweg o autoweg.
+    explain: En la calzada de una autosnelweg o autoweg no puedes dejar tu vehículo detenido (art. 43.2), ni siquiera un momento.
     cites: ["rvv:43.2"]
 
   - id: mx-camion
     type: mc
-    prompt: Conduces un camión en una autosnelweg de tres carriles. ¿Qué carriles puedes usar?
-    options: ["Los dos de la derecha", "Los tres", "Solo el de la izquierda", "El del centro y el izquierdo"]
+    prompt: Conduces un camión en una autosnelweg de tres carriles y no tienes que preseleccionar. ¿Qué carriles puedes usar?
+    options: ["Los dos de la derecha", "Los tres", "Los dos de la izquierda", "El del centro y el izquierdo"]
     answer: 0
-    explain: Camiones y conjuntos de más de 7 m solo usan los dos carriles más a la derecha, salvo para preseleccionar.
+    explain: Un camión solo usa los dos carriles más a la derecha en una calzada de tres o más carriles, salvo para preseleccionar.
+    cites: ["rvv:43.4"]
+
+  - id: mx-caravana-carril
+    type: mc
+    prompt: Conduces un auto con caravana; juntos miden 9 m. Vas por una autosnelweg de tres carriles y no tienes que preseleccionar. ¿Qué carriles puedes usar?
+    options: ["Los dos de la derecha", "Los tres, porque un auto no es un camión", "Los dos de la izquierda", "Cualquiera, porque la caravana no es un vehículo a motor"]
+    answer: 0
+    explain: 'Un conjunto de vehículos de más de 7 m de longitud total solo usa los dos carriles más a la derecha (art. 43.4). Que el auto solo no sea un camión no importa: cuenta la longitud del conjunto.'
     cites: ["rvv:43.4"]

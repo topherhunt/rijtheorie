@@ -245,3 +245,41 @@ Status: the 7 m threshold and carril de la izquierda wording are from my reading
 - Exit priority at G6 (no article located); art. 65.3 practical scope; the meaning of "noodgeval"; whether F8 ends C/E/A signs; behaviour of a dead or flashing traffic light vs priority signs (not settled by the text, so no question proposed).
 - Exact F1 text, 43.4 threshold wording and D6 semantics in the proposals above: proposals are marked and must be re-read with `npm run law` before use.
 - Whether `npm run audit` accepts onderdeel-letter cites (see section 4, item 8).
+
+## Applied
+
+Per lesson (questions kept / added / removed; quiz size after):
+- 01 rangorde: kept 6, added 3, removed 4 (9). Lesson: practical reason for the order marked as not law text; Check tags updated.
+- 02 velocidad-prioridad: 13 questions; new A1/trailer examples, consequence lines for B1/B3/B4/B5, CBR 3.3 note for B6/B7 and the stop line; snorfiets-60 and B7-siempre replaced by applied questions.
+- 03 prohibiciones-c: kept 8, added 3, removed 3 (11). C signs apply to cyclists, onderbord exceptions, C5, milieuzone text corrected (petrol cars not closed; nul-emissiezone not covered by art. 86d).
+- 04 obligaciones-d: kept 4, added 5, removed 4 (9). D4/D5/D6/D7 geometry checked against the images, lane rule art. 65.1, D2 vs D3; "Qué es una D" section removed.
+- 05 estacionamiento-e: kept 11, added 4, removed 1 (15). E2 vs E1 model, E3 not for cars, E8c only for charging, motos need no disc, art. 25.3 added to the disc rule.
+- 06 otras-prohibiciones-f: kept 7, added 5, removed 5 (12). F1 only motor vehicles, F5/F6 pair, F8 softened to the bijlage wording, F10 begeleider of a rail vehicle, F11 bullet rewritten.
+- 07 tipos-de-via-g-h: kept 9, added 3, removed 5 (12). H1/H2 inverted description fixed; "mag en kan" fixed.
+- 08 peligros-j: kept 5, added 3, removed 8 (8). J14/tram rule moved next to J14; J22 vs L2 added; art. 49.4 exemption stated.
+- 09 direccion-informacion-k-l: kept 4, added 5, removed 7 (9). L4 rule (art. 78.1), L8/L9 only inform, L14 no longer asserts what counts as an emergency.
+- 10 onderborden: kept 4, added 5, removed 5 (9). New Bestemmingsverkeer section (art. 1 definition); duplicates of 07 and 09 removed.
+- 11 semaforos: 12 questions (kept 5 of 20 as is or polished: sf-amarillo, sf-derecha-bici, sf-tram-blanca, sf-overweg, sf-brug, sf-amarillo-intermitente; 6 new applied: amarillo-frenada, rojo-stopstreep, verde-cola, flecha-recto, bici-coche, overweg-cola; 14 removed). Lesson: "capítulo anterior" fixed, J32 moved to the traffic-light intro, stop line (art. 79), no blocking the junction on green (art. 14 + CBR 3.3), red plus green arrow, bicycle light is not yours in a car, art. 15a.1 at level crossings; lane-light section (art. 73) now lives only in lesson 14; pedestrian rule text kept without questions.
+- 12 agentes-y-controladores: 9 questions (kept ag-quien with a non-absurd distractor, ag-lampara-roja reworded, ag-stop-politie polished, 4 gesture questions; added ag-no-reconocible, ag-brigadier-verde; removed ag-agente-sobre-semaforo, ag-orden, ag-oral, ag-brigadier, ag-f10-rail, ag-gestos-anexo). Lesson: gesture-6 traffic-light analogy removed, F10 sign left to lesson 06, red lamp worded as a stopteken, brigadier only gives the stop instruction.
+- 13 marcas-viales: 14 questions (kept 7, added 7, removed 10). Lesson: 77.3 cited for busbaan/busstrook, vluchtstrook exception separated from art. 43.3, yellow-line shortcut marked as our reading, zebra section pointed to lesson 08, disc rule pointed to lesson 05, "marca de bloques" wording.
+- 14 paneles-matrix: 11 questions (kept 6, added 5 applied, removed 5). Lesson: art. 63b duplicate removed, BUS/LIJNBUS added to the lane-light rule, C23-02 softened to the bijlage wording, truck vs combination wording fixed, caravan example.
+
+Factual errors and resolution:
+- 07: H1/H2 inverted (H1 starts the bebouwde kom, H2 ends it) -- fixed in lesson and quiz.
+- 07: "se puede y se debe" for G1/G3 -- the bijlage says "mag en kan" (may and are able), not an obligation -- fixed in lesson and two explains.
+- 13: busbaan/busstrook exception cited 77.2 -- it is 77.3 (77.2 is the spitsstrook); fixed.
+- 13: vluchtstrook "exception" -- art. 76.2 only lifts the line-crossing ban; art. 43.3 still limits use to emergencies; lesson and questions rewritten with that distinction.
+- 12: gesture 6 compared to a yellow light -- unsourced analogy, removed; the bijlage gloss ("Kruispunt vrijmaken") stays.
+- 06: F8 "y las demás" -- softened to the bijlage wording.
+- 03: C22e treated as diesel-only; the sign text names milieuzone or nul-emissiezone -- clarified.
+- 05: "un momento" vs art. 1 (parkeren) in e-e6-discapacidad -- reworded.
+- 11/12/14: report items on onderdeel-letter cites -- existing cites that pass the audit were left; new cites use article or lid.
+
+Report items deliberately not applied:
+- Answer-position bias: superseded by the brief (the UI shuffles options).
+- Consequence lines for J6/J7/J20/J25/J27/J28/J31/J36 (08) and K5-K14 (09): no sourced consequence beyond art. 19, so left as recognition.
+- 05: E5 taxi and E13: not settled by the text, no question.
+- 08: cyclist on a zebra: art. 49.2 names pedestrians and gehandicaptenvoertuigen only, no question.
+- 13: edge-line proposal (76.1 does not cover the edge line): not settled beyond 76.1, no question; mv-fietsstrook kept (cross-chapter overlap with via/03 left for a later pass).
+- 14: mx-limite-general and the art. 63b duplicate removed instead of replaced (the number is tested in lesson 02).
+- Gesture images: not verifiable from the law text; descriptions come from `Gestures.astro`, whose Dutch glosses were checked against the lesson.

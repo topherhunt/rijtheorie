@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'preact/hooks';
 import { Feedback, QuestionInput, QuestionMedia, isComplete } from './QuestionCard.tsx';
 import { useStore } from '../useStore.ts';
-import { grade, type Response } from '../../lib/grade.ts';
+import { grade, shuffleOptions, type Response } from '../../lib/grade.ts';
 import { EXAM_SIZE, passMark } from '../../lib/exam.ts';
 import { GATE, balanced, gateStatus, type Check } from '../../lib/gate.ts';
 import type { ClientQuestion } from '../../lib/questions.ts';
@@ -85,7 +85,7 @@ export default function ExamIsland({ pool, all }: { pool: ClientQuestion[]; all:
           {n < EXAM_SIZE && ` (El examen real tiene ${EXAM_SIZE}; este curso todavía tiene menos preguntas, así que ajustamos el mínimo.)`}
         </p>
         <p class="mt-2 text-sm text-slate-600">No verás si aciertas hasta el final, como en el examen real.</p>
-        <button type="button" class={`qa-exam-start mt-4 ${btn}`} disabled={n === 0} onClick={() => setPhase({ kind: 'running', mode: 'exam', qs: balanced(pool, n) })}>Empezar el examen</button>
+        <button type="button" class={`qa-exam-start mt-4 ${btn}`} disabled={n === 0} onClick={() => setPhase({ kind: 'running', mode: 'exam', qs: balanced(pool, n).map((x) => shuffleOptions(x)) })}>Empezar el examen</button>
       </div>
     );
   }
@@ -113,7 +113,7 @@ export default function ExamIsland({ pool, all }: { pool: ClientQuestion[]; all:
         {g.placementLockedUntil ? (
           <p class="qa-placement-locked mt-3 text-sm text-red-700">Próximo intento: {new Date(g.placementLockedUntil).toLocaleString('es')}</p>
         ) : (
-          <button type="button" class={`qa-placement-start mt-4 ${btn}`} disabled={pn === 0} onClick={() => setPhase({ kind: 'running', mode: 'placement', qs: balanced(pool, pn) })}>Empezar la prueba de nivel</button>
+          <button type="button" class={`qa-placement-start mt-4 ${btn}`} disabled={pn === 0} onClick={() => setPhase({ kind: 'running', mode: 'placement', qs: balanced(pool, pn).map((x) => shuffleOptions(x)) })}>Empezar la prueba de nivel</button>
         )}
       </div>
     </div>

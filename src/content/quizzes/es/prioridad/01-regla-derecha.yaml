@@ -13,11 +13,12 @@ questions:
     explain: En un cruce sin señales cedes el paso a quien viene por tu derecha. B viene por tu derecha.
     cites: ["rvv:15.1"]
 
-  - id: regla-derecha-bici
-    type: yesno
-    prompt: En un cruce sin señales, un ciclista viene por tu derecha. ¿Debes cederle el paso?
-    answer: true
-    explain: Para la ley, los ciclistas son conductores (bestuurders). La regla de la derecha vale también para ellos.
+  - id: regla-derecha-bici-coche
+    type: mc
+    prompt: Llegas en tu auto a un cruce sin señales. Por tu derecha viene una bicicleta y por tu izquierda viene un auto, los dos para seguir recto. ¿A quién cedes el paso?
+    options: [A la bicicleta, Al auto de la izquierda, A los dos, A ninguno]
+    answer: 0
+    explain: Para la ley, el ciclista es un conductor (bestuurder), así que la regla de la derecha le da prioridad igual que a un auto. El auto de tu izquierda, en cambio, debe cederte el paso a ti.
     cites: ["rvv:15.1", "rvv:1"]
 
   - id: regla-derecha-tierra
@@ -47,3 +48,25 @@ questions:
     answer: [C, B, A]
     explain: Mira a la derecha de cada uno. C no tiene a nadie a su derecha, así que pasa primero. B tiene a C a su derecha, así que pasa cuando C ya pasó. Tú (A) tienes a B a tu derecha, así que pasas al final.
     cites: ["rvv:15.1"]
+
+  - id: regla-derecha-t
+    type: mc
+    prompt: Vas por la calle principal de un cruce en T sin señales y sigues recto. De la calle lateral sale un auto por tu derecha. ¿Quién pasa primero?
+    diagram:
+      arms: { e: {}, s: {}, w: {} }
+      vehicles:
+        - { label: A, kind: car, from: w, to: straight, you: true }
+        - { label: B, kind: car, from: s, to: right }
+      alt: Cruce en T sin señales. Tú (A) vienes del oeste y sigues recto. B sale de la calle lateral del sur, por tu derecha, y gira a la derecha.
+    options: [Tú (A), El auto B]
+    answer: 1
+    explain: Sin señales no importa cuál calle parezca la principal. B viene por tu derecha y por eso pasa primero.
+    cites: ["rvv:15.1"]
+
+  - id: regla-derecha-tram
+    type: mc
+    prompt: Llegas a un cruce sin señales ni semáforos y vas recto. Por tu derecha no viene nadie, y por tu izquierda se acerca un tranvía. ¿Quién pasa primero?
+    options: ["Tú, porque nadie viene por tu derecha", "El tranvía, aunque venga por tu izquierda"]
+    answer: 1
+    explain: Quien conduce cede el paso al tranvía, venga de donde venga (art. 15.2.b). Que nadie venga por tu derecha no te da la prioridad frente a él.
+    cites: ["rvv:15.2"]

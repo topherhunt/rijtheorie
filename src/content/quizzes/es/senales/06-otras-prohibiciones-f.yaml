@@ -7,14 +7,6 @@ questions:
     explain: F1 prohíbe que los vehículos de motor se adelanten entre sí.
     cites: ["rvv:bijlage1.F1"]
 
-  - id: f-f1-f3
-    type: yesno
-    prompt: Conduces un auto. En la vía hay una señal F3, que prohíbe adelantar a los camiones. ¿Puedes adelantar a otro auto?
-    sign: F3
-    answer: true
-    explain: F3 prohíbe adelantar a los camiones. Tú, en auto, no estás afectado.
-    cites: ["rvv:bijlage1.F3"]
-
   - id: f-f2-adelantar
     type: yesno
     prompt: Después de una señal F1 llegas a esta señal. No hay otras señales y la vía está libre. ¿Puedes ahora adelantar a otro auto?
@@ -27,19 +19,10 @@ questions:
     type: mc
     prompt: En una vía estrecha ves por tu lado la señal F5. ¿Qué haces si viene un vehículo de frente?
     sign: F5
-    options: ["Le dejo pasar y no sigo", "Paso yo primero", "Toco la bocina", "Elijo quién pasa según el tamaño"]
+    options: ["Le dejo pasar y no sigo hasta que haya pasado", "Sigo, pero sin acelerar", "Sigo si él va más despacio que yo", "Sigo si mi vehículo es más grande"]
     answer: 0
-    explain: "F5 prohíbe seguir si se acerca tráfico en sentido contrario: debes cederle el paso. El conductor de frente verá F6."
+    explain: 'F5 prohíbe seguir si se acerca tráfico en sentido contrario: debes esperar y dejarle pasar, sea cual sea la velocidad o el tamaño de cada uno. El conductor de frente verá F6.'
     cites: ["rvv:bijlage1.F5", "rvv:bijlage1.F6"]
-
-  - id: f-f6-significado
-    type: mc
-    prompt: ¿Qué significa esta señal para ti?
-    sign: F6
-    options: ["Los que vienen de frente deben dejarte pasar", "Tú debes dejar pasar al que viene", "Prohibido adelantar", "Calle de sentido único"]
-    answer: 0
-    explain: "F6: los conductores del sentido contrario deben dejarte pasar."
-    cites: ["rvv:bijlage1.F6"]
 
   - id: f-f7-vuelta
     type: yesno
@@ -57,29 +40,12 @@ questions:
     explain: F8 pone fin a todas las prohibiciones indicadas por señales, y la de F1 es una de ellas. Las de un panel electrónico las cierra F9.
     cites: ["rvv:bijlage1.F8", "rvv:bijlage1.F1"]
 
-  - id: f-f10-significado
-    type: mc
-    prompt: ¿Qué te ordena esta señal?
-    sign: F10
-    options: ["Parar", "Ceder el paso sin parar", "Reducir la velocidad", "Cambiar de carril"]
-    answer: 0
-    explain: F10 es la señal de stop (en la señal puede indicarse quién la usa o por qué).
-    cites: ["rvv:bijlage1.F10", "rvv:82.4"]
-
   - id: f-f10-paso-nivel
     type: yesno
-    prompt: Un acompañante de un tren te muestra una bandera roja. ¿Debes parar?
+    prompt: Cruzas una vía de tren y el begeleider del tren te muestra una bandera roja. ¿Debes parar?
     answer: true
-    explain: Los usuarios deben parar si un acompañante de un vehículo sobre rieles muestra F10, una bandera roja o una luz roja.
+    explain: Debes parar si el begeleider de un vehículo sobre rieles (tren o tranvía) muestra F10, una bandera roja o una luz roja.
     cites: ["rvv:82.4"]
-
-  - id: f-f13-auto
-    type: yesno
-    prompt: Conduces un auto. ¿Puedes usar el carril con esta señal?
-    sign: F13
-    answer: false
-    explain: F13 es un carril solo para autobuses de línea.
-    cites: ["rvv:bijlage1.F13"]
 
   - id: f-f19-quien
     type: mc
@@ -90,10 +56,44 @@ questions:
     explain: F19 reserva el carril para camiones y autobuses de línea. Los autos y las motos no pueden usarlo; los tranvías tienen su propio carril (F15 o F17).
     cites: ["rvv:bijlage1.F19"]
 
-  - id: f-f21-significado
+  - id: f-f1-ciclista
     type: yesno
-    prompt: ¿Puede tu auto usar una calzada con esta señal?
-    sign: F21
+    prompt: Hay una señal F1 y delante de tu auto va un ciclista lento. La vía está libre y es seguro. ¿Te prohíbe F1 adelantarlo?
+    sign: F1
     answer: false
-    explain: F21 reserva la calzada o el carril solo a camiones.
-    cites: ["rvv:bijlage1.F21"]
+    explain: F1 es un verbod para motorvoertuigen de adelantarse entre sí. Una bicicleta no es un motorvoertuig (art. 1), así que F1 no se aplica. Sigues teniendo que adelantar con seguridad.
+    cites: ["rvv:bijlage1.F1", "rvv:1"]
+
+  - id: f-f3-camion
+    type: yesno
+    prompt: Conduces un camión y ves una señal F3. Delante va un auto más lento. ¿Puedes adelantarlo?
+    sign: F3
+    answer: false
+    explain: F3 prohíbe a los camiones (vrachtauto's) adelantar a motorvoertuigen, y un auto lo es. La señal solo afecta a los camiones; si fueras en auto, podrías adelantar.
+    cites: ["rvv:bijlage1.F3", "rvv:1"]
+
+  - id: f-f6-prioridad
+    type: mc
+    prompt: En un paso estrecho ves esta señal de tu lado y de frente viene un auto. ¿Qué haces?
+    sign: F6
+    options: ["Sigo: el que viene de frente debe dejarme pasar", "Me detengo: él pasa primero", "Pasamos a la vez, cada uno por su lado", "Espero a que él decida si pasa"]
+    answer: 0
+    explain: F6 obliga a los conductores del sentido contrario a dejar pasar el tráfico que viene de tu lado. Es la otra cara de F5, que obliga a esperar al que la ve.
+    cites: ["rvv:bijlage1.F6", "rvv:bijlage1.F5"]
+
+  - id: f-f13-atasco
+    type: yesno
+    prompt: Tu carril está parado en un atasco y el carril de al lado, con esta señal, está vacío. ¿Puedes usarlo para avanzar?
+    sign: F13
+    answer: false
+    explain: F13 reserva el carril solo a autobuses de línea (lijnbussen). Que esté libre y tu carril parado no te da derecho a entrar.
+    cites: ["rvv:bijlage1.F13", "rvv:62"]
+
+  - id: f-f17-quien
+    type: mc
+    prompt: ¿Quiénes pueden usar un carril con esta señal?
+    sign: F17
+    options: ["Autobuses de línea y tranvías", "Autobuses de línea, tranvías y camiones", "Solo tranvías", "Autobuses de línea y camiones"]
+    answer: 0
+    explain: F17 reserva el carril para autobuses de línea y tranvías. Los camiones tienen F19 (con autobuses de línea) o F21 (solos); los autos no pueden usar ninguno de estos carriles.
+    cites: ["rvv:bijlage1.F17"]

@@ -1,15 +1,15 @@
 questions:
   - id: visibilidad-espejos-parabrisas-luz
     type: yesno
-    prompt: Pones una lámina oscura en el parabrisas y en las ventanillas delanteras de tu auto, y ahora dejan pasar solo el 50% de la luz. ¿Cumple?
+    prompt: Pones una lámina oscura en el parabrisas de tu auto y ahora deja pasar solo el 50% de la luz. ¿Cumple?
     answer: false
-    explain: El parabrisas y las ventanillas delanteras deben dejar pasar al menos el 55% de la luz. Con 50% no cumple.
+    explain: El parabrisas debe dejar pasar al menos el 55% de la luz. Con 50% no cumple.
     cites: ["rv:5.2.42"]
 
   - id: visibilidad-espejos-espejos
     type: multi
     prompt: ¿Qué espejos debe tener un auto puesto en uso en 2022?
-    options: [Espejo exterior izquierdo, Espejo exterior derecho, Espejo interior, Un espejo en el techo]
+    options: [Espejo exterior izquierdo, Espejo exterior derecho, Espejo interior, Un espejo adicional para el ángulo muerto]
     answer: [0, 1, 2]
     explain: Un auto puesto en uso después de enero de 2010 necesita espejo exterior izquierdo, derecho e interior.
     cites: ["rv:5.2.45"]
@@ -23,7 +23,7 @@ questions:
 
   - id: visibilidad-espejos-objetos
     type: yesno
-    prompt: ¿Puedes tener objetos que bloqueen la vista en el parabrisas si no los usas?
+    prompt: Cuelgas del parabrisas un ambientador grande y varias tarjetas que tapan parte de la vista hacia adelante, pero casi nunca los miras. ¿Cumple?
     answer: false
     explain: No puede haber objetos innecesarios que bloqueen la vista.
     cites: ["rv:5.2.42"]
@@ -39,7 +39,7 @@ questions:
     type: yesno
     prompt: Cambias el claxon de tu auto por uno que toca una melodía. ¿Está permitido?
     answer: false
-    explain: El auto debe tener un claxon de tono fijo y no puede llevar otros avisadores sonoros fuera de los permitidos por la ley.
+    explain: El claxon debe tener un tono fijo. Fuera de él solo se permiten el aviso de marcha atrás y la alarma antirrobo, no una melodía.
     cites: ["rv:5.2.71"]
 
   - id: visibilidad-espejos-velocimetro-noche
@@ -52,9 +52,9 @@ questions:
   - id: visibilidad-espejos-ajuste-exterior
     type: mc
     prompt: Ajustas el espejo exterior izquierdo antes de salir. ¿Cómo debe quedar?
-    options: [Sin ver nada de tu propio auto para ver más carretera, Viendo todavía justo el costado izquierdo del auto y la mayor parte posible de la carretera al lado y detrás, Apuntando sobre todo al cielo, Viendo solo el costado de tu auto]
+    options: [Sin ver el auto para ver más carretera, Viendo justo el costado del auto y la mayor parte posible de la carretera al lado y detrás, Con el horizonte en la mitad del espejo y el auto muy visible, Viendo mucha parte del auto para saber dónde termina]
     answer: 1
-    explain: En el espejo exterior debe verse justo el costado del auto y el mayor trozo posible de carretera al lado y detrás, con el horizonte a una cuarta parte desde arriba. Ver más cielo o solo tu auto te quita la vista de lo que viene.
+    explain: En el espejo exterior debe verse justo el costado del auto y el mayor trozo posible de carretera al lado y detrás, con el horizonte a una cuarta parte desde arriba. Ver demasiado del propio auto o dejarlo fuera de la vista te quita información útil.
     cites: ["cbr-rijprocedure:1"]
 
   - id: visibilidad-espejos-hombro-demasiado
@@ -66,14 +66,35 @@ questions:
 
   - id: visibilidad-espejos-estorbo
     type: yesno
-    prompt: Llevas una maleta que te toca el brazo y te estorba al girar el volante. ¿Está permitido?
+    prompt: Llevas un paquete grande en el asiento del copiloto que se desliza hacia ti en cada curva y te roza el brazo al girar el volante. ¿Puedes seguir así?
     answer: false
     explain: El conductor no puede ser estorbado por pasajeros, carga u otra cosa.
     cites: ["rv:5.18.3/1"]
 
   - id: visibilidad-espejos-interior
     type: yesno
-    prompt: ¿Es siempre obligatorio el espejo interior, incluso si da vista nula hacia atrás?
+    prompt: Conduces un auto con la parte trasera cerrada, sin luneta, de modo que el espejo interior no da ninguna vista hacia atrás. ¿Necesita ese auto un espejo interior?
     answer: false
-    explain: No hace falta si no da vista hacia atrás.
+    explain: El espejo interior no es obligatorio si no da vista hacia atrás. Los espejos exteriores siguen siendo obligatorios.
     cites: ["rv:5.2.45"]
+
+  - id: visibilidad-espejos-ventanilla-lateral
+    type: yesno
+    prompt: Tiñes la ventanilla lateral junto al conductor de modo que deja pasar el 45% de la luz. El parabrisas está intacto. ¿Cumple?
+    answer: false
+    explain: "El mínimo de 55% de transmisión de luz no vale solo para el parabrisas: también para las ventanillas laterales junto al asiento del conductor."
+    cites: ["rv:5.2.42"]
+
+  - id: visibilidad-espejos-desempanador
+    type: yesno
+    prompt: En tu auto de 2016 el limpiaparabrisas y el lavaparabrisas funcionan, pero el dispositivo para desempañar el parabrisas no. ¿Cumple?
+    answer: false
+    explain: Un auto puesto en uso después de septiembre de 1971 debe tener un dispositivo que funcione para descongelar y desempañar el parabrisas. Limpiar con las escobillas no lo sustituye.
+    cites: ["rv:5.2.44"]
+
+  - id: visibilidad-espejos-marcha-atras-aviso
+    type: yesno
+    prompt: Instalas en tu auto un aviso sonoro que suena cuando metes marcha atrás. ¿Está permitido, aunque no sea el claxon?
+    answer: true
+    explain: Aparte del claxon, la ley permite un aviso sonoro de marcha atrás y una alarma antirrobo. Lo que no se permite es un avisador con melodía u otro sonido.
+    cites: ["rv:5.2.71"]

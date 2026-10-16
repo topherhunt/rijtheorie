@@ -4,31 +4,31 @@ questions:
     prompt: "Conduces un auto con un remolque de masa máxima autorizada de 750 kg en una autosnelweg sin otras señales. ¿Cuál es tu velocidad máxima?"
     answer: 90
     unit: km/h
-    explain: "Un auto con remolque de hasta 3500 kg de masa máxima autorizada: 90 km/h (art. 22 onderdeel e)."
+    explain: "Un auto con remolque de hasta 3500 kg de masa máxima autorizada: 90 km/h (art. 22 onderdeel e). No son los 130 de la autosnelweg."
+    cites: ["rvv:22"]
+
+  - id: especial-remolque-limite-3500
+    type: mc
+    prompt: "Tu auto lleva un remolque cuya masa máxima autorizada es exactamente 3500 kg. Vas por una autosnelweg sin señales. ¿Cuál es tu máximo?"
+    options: [80 km/h, 90 km/h, 100 km/h, 130 km/h]
+    answer: 1
+    explain: "El 90 vale para remolques de 3500 kg o menos, y 3500 kg entra. Solo con más de 3500 kg pasas al grupo de 80 km/h."
     cites: ["rvv:22"]
 
   - id: especial-remolque-otros
-    type: number
-    prompt: "Un camión con remolque circula por una autosnelweg sin otras señales. ¿Cuál es su velocidad máxima?"
-    answer: 80
-    unit: km/h
-    explain: "Los demás vehículos de motor con remolque: 80 km/h."
+    type: mc
+    prompt: "Un amigo dice que su camión con un remolque ligero puede ir a 90 km/h en la autosnelweg, igual que tu auto con remolque. ¿Cuál es el máximo de ese camión con remolque?"
+    options: ["90 km/h, porque el remolque es ligero", "80 km/h, como todos los demás vehículos de motor con remolque", "100 km/h, como una T100-bus", "130 km/h, porque no hay señales"]
+    answer: 1
+    explain: "El 90 es solo para auto, furgoneta, moto, vehículo de tres ruedas y T100-bus con un remolque de hasta 3500 kg. Cualquier otro vehículo de motor con remolque, como un camión, va a 80 (art. 22 f); que el remolque sea ligero no cambia el grupo."
     cites: ["rvv:22"]
 
-  - id: especial-camion
-    type: number
-    prompt: "¿Cuál es la velocidad máxima de un camión (sin remolque) en una autosnelweg sin otras señales?"
-    answer: 80
-    unit: km/h
-    explain: "Los camiones tienen 80 km/h según el art. 22 onderdeel a."
-    cites: ["rvv:22"]
-
-  - id: especial-t100
-    type: number
-    prompt: "¿Cuál es la velocidad máxima de una T100-bus sin remolque?"
-    answer: 100
-    unit: km/h
-    explain: "Las T100-bussen tienen 100 km/h según el art. 22 onderdeel b."
+  - id: especial-camion-90
+    type: mc
+    prompt: "Vas por una autosnelweg sin señales y un camión sin remolque circula a 90 km/h junto a ti. ¿Cumple el máximo que le toca?"
+    options: ["No: un camión no puede pasar de 80 km/h", "Sí: el máximo general de la autosnelweg es 130", "Sí: los camiones tienen 100 km/h", "Solo si va vacío"]
+    answer: 0
+    explain: "Los camiones tienen su propio máximo de 80 km/h (art. 22 a), más bajo que el general. Va por debajo de 130, pero ese no es su tope, y el estar vacío no cambia la clase."
     cites: ["rvv:22"]
 
   - id: especial-autocaravana
@@ -36,47 +36,49 @@ questions:
     prompt: "Una autocaravana registrada como bedrijfsauto con masa máxima de 3800 kg circula en una autosnelweg sin otras señales. ¿Cuál es su máximo?"
     options: [80 km/h, 90 km/h, 100 km/h, 130 km/h]
     answer: 0
-    explain: "Autocaravanas registradas como bedrijfsauto con más de 3500 kg: 80 km/h."
+    explain: "Autocaravanas registradas como bedrijfsauto con más de 3500 kg: 80 km/h (art. 22 a). Pesa más de 3500, así que no vale el máximo general ni el de un auto con remolque."
     cites: ["rvv:22"]
 
-  - id: especial-brommobiel
-    type: number
-    prompt: "¿Cuál es la velocidad máxima de un brommobiel?"
-    answer: 45
-    unit: km/h
-    explain: "Art. 22 onderdeel c."
-    cites: ["rvv:22"]
+  - id: especial-camper-registro
+    type: mc
+    prompt: "Tu autocaravana está registrada como personenauto y pesa 3200 kg. En una autosnelweg sin señales y sin remolque, ¿se te aplica el 80 de las autocaravanas bedrijfsauto de más de 3500 kg?"
+    options: ["No: rige el máximo general, 130", "Sí: 80, como todas las autocaravanas", "Sí: 90, por ser un vehículo pesado", "No: rige 100"]
+    answer: 0
+    explain: "El 80 es para las autocaravanas registradas como bedrijfsauto con más de 3500 kg (art. 22 a). Una personenauto de 3200 kg no entra y sigue con el máximo general de la vía: 130 en la autosnelweg."
+    cites: ["rvv:22", "rvv:21"]
 
-  - id: especial-snorfiets
-    type: number
-    prompt: "¿Cuál es la velocidad máxima de una snorfiets?"
-    answer: 25
-    unit: km/h
-    explain: "Art. 22 onderdeel d."
+  - id: especial-snorfiets-brommobiel
+    type: mc
+    prompt: "En la calzada de una carretera normal fuera de la zona urbana, un snorfiets y un brommobiel circulan en el mismo sentido sin señales. ¿Qué máximos les tocan?"
+    options: ["Snorfiets 25 km/h y brommobiel 45 km/h", "Los dos 45 km/h", "Snorfiets 45 km/h y brommobiel 25 km/h", "Los dos 80 km/h, como las demás vías"]
+    answer: 0
+    explain: "El snorfiets va a 25 km/h (art. 22 d) y el brommobiel a 45 km/h (art. 22 c). Ninguno de los dos usa el 80 de las demás vías, que es para otros vehículos de motor, y el snorfiets no es una bromfiets de 45 aunque lo sea por definición."
     cites: ["rvv:22"]
 
   - id: especial-urbana
     type: number
-    prompt: "Conduces un auto con remolque dentro de la zona urbana sin señales. ¿Cuál es tu máximo?"
+    prompt: "Conduces un auto con un remolque de 750 kg y entras en una zona urbana (H1) sin otras señales de velocidad. ¿Cuál es tu máximo?"
     answer: 50
     unit: km/h
-    explain: "Los 90 del remolque valen solo si no rige un máximo más bajo; dentro de la zona urbana rigen 50."
+    explain: "El 90 del remolque vale solo si no rige ya un máximo más bajo; dentro de la zona urbana rigen 50 (art. 20). El remolque no te sube el límite, solo puede bajarlo."
     cites: ["rvv:22", "rvv:20"]
+    sign: H1
 
   - id: especial-remolque-senal-menor
     type: mc
     prompt: "Conduces un auto con un remolque de 750 kg por una autosnelweg. Una señal A1 indica 100 km/h (sin horario). ¿Cuál es tu máximo?"
     options: [80 km/h, 90 km/h, 100 km/h, 130 km/h]
     answer: 1
-    explain: "El 90 del art. 22 es más bajo que el 100 de la señal, así que rige el más bajo."
+    explain: "El 90 del art. 22 es más bajo que el 100 de la señal, así que rige el más bajo. Ir a 100 porque lo dice la señal sería pasarte del máximo de tu clase de vehículo."
     cites: ["rvv:22"]
+    sign: A1
 
   - id: especial-remolque-otra-via
     type: mc
     prompt: "Conduces un auto con un remolque de 750 kg por una carretera normal fuera de la zona urbana (ni autoweg ni autosnelweg, sin señales). ¿Cuál es tu máximo?"
     options: [70 km/h, 80 km/h, 90 km/h, 100 km/h]
     answer: 1
-    explain: "El 90 del remolque solo vale mientras no rija un máximo más bajo; en las demás vías fuera de la zona urbana el máximo general (80) ya es más bajo."
+    explain: "El 90 del remolque solo vale mientras no rija un máximo más bajo; en las demás vías fuera de la zona urbana el máximo general (80) ya es más bajo. El remolque no te da 90 donde el límite es 80."
     cites: ["rvv:22", "rvv:21"]
 
   - id: especial-remolque-pesado
@@ -84,5 +86,5 @@ questions:
     prompt: "Conduces un personenauto con un remolque de masa máxima autorizada de 4000 kg por una autosnelweg sin señales. ¿Cuál es tu máximo?"
     options: [80 km/h, 90 km/h, 100 km/h, 130 km/h]
     answer: 0
-    explain: "El 90 km/h solo vale con un remolque de hasta 3500 kg (onderdeel e). Con uno más pesado se aplica el 80 de onderdeel f."
+    explain: "El 90 km/h solo vale con un remolque de hasta 3500 kg (onderdeel e). Con uno más pesado tu combinación cae en el grupo de otros vehículos de motor con remolque (onderdeel f): 80."
     cites: ["rvv:22"]

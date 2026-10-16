@@ -7,44 +7,45 @@ questions:
     explain: El amarillo manda detenerse. Solo continúas si estás tan cerca que ya no puedes parar razonablemente.
     cites: ["rvv:68.1", "cbr-rijprocedure:3.3"]
 
-  - id: sf-amarillo-cerca
-    type: yesno
-    prompt: El semáforo se pone amarillo cuando estás tan cerca de la línea que ya no puedes parar razonablemente. ¿Puedes continuar?
-    answer: true
-    explain: Es la excepción del art. 68.1 para quien ya no puede detenerse razonablemente.
-    cites: ["rvv:68.1"]
-
-  - id: sf-rojo
+  - id: sf-amarillo-frenada
     type: mc
-    prompt: ¿Qué significa la luz roja fija en un semáforo de tres colores?
-    options: ["Detenerse", "Reducir la velocidad", "Pasar con cuidado", "Ceder el paso"]
+    prompt: Vas a 50 km/h y el semáforo pasa a amarillo cuando estás casi sobre la línea. Un camión viene pegado detrás de ti y frenar en seco crearía peligro. ¿Qué haces?
+    options: ["Continúo, porque ya no puedo parar razonablemente", "Freno a fondo, porque el amarillo siempre manda parar", "Acelero para cruzar antes del rojo", "Paro justo encima de la línea"]
     answer: 0
-    explain: "Rojo: debes detenerte."
-    cites: ["rvv:68.1"]
+    explain: El art. 68.1 te deja continuar si estás tan cerca que ya no puedes parar razonablemente, y el CBR concreta que no frenes si eso crea peligro para el tráfico de detrás. Frenar a fondo aquí es el error; acelerar tampoco es necesario.
+    cites: ["rvv:68.1", "cbr-rijprocedure:3.3"]
 
-  - id: sf-verde
+  - id: sf-rojo-stopstreep
     type: mc
-    prompt: ¿Qué significa la luz verde fija?
-    options: ["Puedes continuar", "Debes detenerte", "Ceda el paso siempre", "Solo puedes girar"]
+    prompt: Te acercas a un semáforo en rojo. Delante de él hay una línea blanca de parada. ¿Dónde te detienes?
+    options: ["Antes de la línea blanca", "Con las ruedas delanteras sobre la línea", "Pasada la línea, para ver mejor el semáforo", "Donde quede sitio, aunque pases la línea"]
     answer: 0
-    explain: "Verde: puedes avanzar (respetando el resto de reglas, por ejemplo ceder a quien corresponda al girar)."
-    cites: ["rvv:68.1"]
+    explain: Si debes detenerte (rojo) y hay una stopstreep para ti, paras antes de ella.
+    cites: ["rvv:68.1", "rvv:79"]
 
-  - id: sf-flecha
+  - id: sf-verde-cola
     type: mc
-    prompt: Una luz verde con una flecha hacia la derecha, ¿a qué dirección se aplica?
-    options: ["Solo a la dirección de la flecha", "A todas las direcciones", "A la izquierda", "A ninguna"]
+    prompt: Tienes verde, pero la cola de delante avanza tan despacio que, al volverse rojo, te quedarías parado en medio del cruce. ¿Qué haces?
+    options: ["Espero antes del cruce hasta poder dejarlo libre", "Entro, porque el verde me da paso", "Entro y toco la bocina para que avancen", "Entro solo si no vienen coches de los lados"]
     answer: 0
-    explain: Una flecha iluminada limita la luz a esa dirección.
-    cites: ["rvv:68.2"]
+    explain: El verde te deja avanzar, pero no te permite bloquear el cruce. Entras solo si puedes seguir de largo o dejarlo libre; que no vengan coches de los lados no cambia eso.
+    cites: ["rvv:14", "cbr-rijprocedure:3.3"]
 
-  - id: sf-bici
+  - id: sf-flecha-recto
     type: mc
-    prompt: Un semáforo muestra la imagen de una bicicleta. ¿A quién se aplica?
-    options: ["A ciclistas, ciclomotoristas en un fiets/bromfietspad y vehículos para discapacitados", "A todos los vehículos", "Solo a peatones", "Solo a autobuses"]
+    prompt: Tu semáforo está en rojo, pero a su lado se enciende una flecha verde hacia la derecha. Quieres seguir recto. ¿Qué haces?
+    options: ["Me quedo parado, porque la flecha solo vale para girar a la derecha", "Sigo recto, porque hay algo en verde", "Sigo recto si no viene nadie", "Giro a la izquierda, porque la flecha no lo prohíbe"]
     answer: 0
-    explain: Art. 68.3.
-    cites: ["rvv:68.3"]
+    explain: Una flecha iluminada hace que la luz valga solo para esa dirección. Para seguir recto sigue valiendo el rojo.
+    cites: ["rvv:68.2", "rvv:68.1"]
+
+  - id: sf-bici-coche
+    type: mc
+    prompt: Estás en tu coche ante un semáforo en rojo. Al lado, el semáforo con la imagen de una bicicleta está en verde. ¿Puedes avanzar?
+    options: ["No, esa luz es para ciclistas y yo sigo el semáforo de la calzada", "Sí, porque hay un verde delante", "Sí, si avanzo muy despacio", "Sí, si no hay ciclistas cerca"]
+    answer: 0
+    explain: La luz con la imagen de bicicleta vale para ciclistas, ciclomotoristas en un fiets/bromfietspad y vehículos para discapacitados, no para un coche.
+    cites: ["rvv:68.3", "rvv:68.1"]
 
   - id: sf-derecha-bici
     type: yesno
@@ -53,26 +54,12 @@ questions:
     explain: El rojo y el amarillo no le valen, pero debe dejar pasar primero al resto del tráfico.
     cites: ["rvv:68.5"]
 
-  - id: sf-carril-limitado
-    type: yesno
-    prompt: ¿Puede un semáforo valer solo para un carril?
-    answer: true
-    explain: Una luz puede limitarse a un carril.
-    cites: ["rvv:68.6"]
-
   - id: sf-tram-blanca
     type: mc
     prompt: Una luz blanca en un semáforo de tranvía o bus, ¿qué significa?
-    options: ["Vía libre en la dirección indicada", "Detenerse", "Peligro", "Fin del carril"]
+    options: ["Vía libre, solo en las direcciones indicadas", "Vía libre en cualquier dirección", "Detenerse", "Precaución, pasa un tranvía"]
     answer: 0
-    explain: La luz blanca (fija o intermitente) autoriza el paso, solo en las direcciones indicadas.
-    cites: ["rvv:70"]
-
-  - id: sf-tram-otros
-    type: yesno
-    prompt: Las luces de tranvía y bus, ¿valen también para otros vehículos que usan el carril o banda de bus a la que se refieren?
-    answer: true
-    explain: Valen también para otros vehículos que usen ese busbaan o busstrook.
+    explain: La luz blanca (fija o intermitente) autoriza el paso, y solo en las direcciones indicadas.
     cites: ["rvv:70"]
 
   - id: sf-overweg
@@ -83,75 +70,26 @@ questions:
     explain: "Rojo intermitente: debes detenerte. Blanco intermitente: no se acerca ningún tren."
     cites: ["rvv:71"]
 
-  - id: sf-overweg-blanca
+  - id: sf-overweg-cola
     type: mc
-    prompt: En un paso a nivel la luz blanca parpadea. ¿Qué indica?
-    options: ["No se acerca ningún tren", "Se acerca un tren", "El paso está cerrado", "Hay obras"]
+    prompt: La luz blanca del paso a nivel parpadea, pero la cola de delante te dejaría parado encima de las vías al otro lado. ¿Qué haces?
+    options: ["Espero antes del paso a nivel", "Entro, porque no viene ningún tren", "Entro y acelero para salir pronto", "Entro hasta la mitad y espero ahí"]
     answer: 0
-    explain: "Blanco intermitente: no se acerca ningún tren."
-    cites: ["rvv:71"]
+    explain: La luz blanca dice que no se acerca ningún tren, pero solo puedes entrar en un paso a nivel si puedes seguir de inmediato y dejarlo del todo libre.
+    cites: ["rvv:71", "rvv:15a.1"]
 
   - id: sf-brug
     type: mc
     prompt: En un puente móvil la luz está roja. ¿Qué haces?
-    options: ["Me detengo", "Paso con cuidado", "Paso si no se ve el barco", "Cedo y paso"]
+    options: ["Me detengo", "Paso si no hay ningún barco a la vista", "Paso con precaución a baja velocidad", "Paso si la barrera todavía está levantada"]
     answer: 0
     explain: "Rojo o rojo intermitente en un bruglicht: detenerse."
     cites: ["rvv:72"]
 
-  - id: sf-cruz-roja
-    type: mc
-    prompt: Sobre tu carril de la autosnelweg ves una cruz roja. ¿Qué significa?
-    options: ["No puedes usar ese carril", "Puedes usarlo a baja velocidad", "El carril es solo para autobuses", "Hay un accidente más adelante"]
-    answer: 0
-    explain: "Cruz roja: el carril no puede usarse."
-    cites: ["rvv:73"]
-
-  - id: sf-flecha-verde
-    type: mc
-    prompt: Sobre el carril ves una flecha verde. ¿Qué significa?
-    options: ["Puedes usar ese carril", "Debes cambiar de carril", "Carril cerrado", "Carril solo para camiones"]
-    answer: 0
-    explain: "Flecha verde: el carril puede usarse."
-    cites: ["rvv:73"]
-
-  - id: sf-bus-carril
-    type: mc
-    prompt: Sobre un carril hay una luz con la palabra LIJNBUS. ¿Quién puede usarlo?
-    options: ["Solo autobuses de línea", "Cualquier autobús", "Autobuses y taxis", "Todos"]
-    answer: 0
-    explain: "LIJNBUS: carril solo para lijnbus. BUS: lijnbus y autobús."
-    cites: ["rvv:73"]
-
-  - id: sf-peaton-rojo
-    type: mc
-    prompt: Eres peatón y la luz está en rojo cuando ya estás a mitad de la calle. ¿Qué haces?
-    options: ["Termino de cruzar sin demorarme", "Vuelvo al inicio", "Me quedo parado", "Corro hacia atrás"]
-    answer: 0
-    explain: Con rojo no empiezas a cruzar, pero quien ya está cruzando se apresura.
-    cites: ["rvv:74"]
-
-  - id: sf-peaton-verde-int
-    type: mc
-    prompt: Para los peatones, la luz verde intermitente significa...
-    options: ["Cruza, pronto será rojo", "No cruces", "Cruza sin límite", "Fin de la calle"]
-    answer: 0
-    explain: "Verde intermitente: cruza, pronto se pondrá en rojo."
-    cites: ["rvv:74"]
-
   - id: sf-amarillo-intermitente
     type: mc
-    prompt: Un semáforo muestra amarillo intermitente. ¿Qué indica?
-    options: ["Punto peligroso: precaución", "Detenerse", "Vía libre", "Fin de zona"]
+    prompt: El semáforo de un cruce muestra solo amarillo intermitente. ¿Qué haces?
+    options: ["Extremo la precaución, porque señala un punto peligroso", "Me detengo como con el rojo", "Me detengo como con un amarillo normal", "Cedo el paso a todos los demás"]
     answer: 0
-    explain: Amarillo intermitente señala un punto peligroso.
+    explain: Amarillo intermitente señala un punto peligroso y pide precaución; no es una orden de detenerte.
     cites: ["rvv:75"]
-
-  - id: sf-prioridad-luz
-    type: mc
-    prompt: Estás en un cruce con semáforo en verde y una señal de ceder el paso (B6). ¿Qué manda?
-    sign: B6
-    options: ["El semáforo", "La señal B6", "Ambos por igual", "La derecha"]
-    answer: 0
-    explain: Los semáforos mandan sobre los verkeerstekens de prioridad.
-    cites: ["rvv:64"]

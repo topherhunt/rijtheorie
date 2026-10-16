@@ -1,7 +1,7 @@
 /** @jsxImportSource preact */
-import { useState } from 'preact/hooks';
+import { useEffect, useState } from 'preact/hooks';
 import Junction from '../diagram/Junction.tsx';
-import { grade, type Response } from '../../lib/grade.ts';
+import { grade, shuffleOptions, type Response } from '../../lib/grade.ts';
 import type { ClientQuestion } from '../../lib/questions.ts';
 import { es } from '../../i18n/es.ts';
 
@@ -41,13 +41,14 @@ export function QuestionMedia({ q }: { q: ClientQuestion }) {
 
 /** Input controls; `value` is the in-progress response, `onChange` updates it. */
 export function QuestionInput({ q, value, onChange, disabled }: { q: ClientQuestion; value: Response | undefined; onChange: (r: Response | undefined) => void; disabled: boolean }) {
+  const key = (i: number) => (q.optionKeys ? q.optionKeys[i] : i);
   const btn = (selected: boolean) =>
     `qa-option block w-full rounded-lg border px-3 py-2 text-left ${selected ? 'border-brand-600 bg-brand-50 font-medium' : 'border-slate-300 bg-white hover:border-slate-400'} disabled:cursor-default`;
   switch (q.type) {
     case 'mc':
       return (
         <div class="flex flex-col gap-2">
-          {q.options.map((o, i) => <button type="button" key={i} class={btn(value === i)} disabled={disabled} onClick={() => onChange(i)}>{o}</button>)}
+          {q.options.map((o, i) => <button type="button" key={i} class={`${btn(value === i)} qa-option-${key(i)}`} disabled={disabled} onClick={() => onChange(i)}>{o}</button>)}
         </div>
       );
     case 'multi': {
@@ -56,7 +57,7 @@ export function QuestionInput({ q, value, onChange, disabled }: { q: ClientQuest
         <div class="flex flex-col gap-2">
           <p class="text-sm text-slate-500">{es.quiz.selectAll}</p>
           {q.options.map((o, i) => (
-            <button type="button" key={i} class={btn(sel.includes(i))} disabled={disabled} onClick={() => onChange(sel.includes(i) ? sel.filter((x) => x !== i) : [...sel, i])}>
+            <button type="button" key={i} class={`${btn(sel.includes(i))} qa-option-${key(i)}`} disabled={disabled} onClick={() => onChange(sel.includes(i) ? sel.filter((x) => x !== i) : [...sel, i])}>
               {sel.includes(i) ? '☑ ' : '☐ '}{o}
             </button>
           ))}
@@ -134,7 +135,11 @@ export function Feedback({ q, ok }: { q: ClientQuestion; ok: boolean }) {
 }
 
 /** Self-contained practice question: answer, check, see explanation, retry. Calls onGraded once per check. */
-export default function QuestionCard({ q, n, onGraded }: { q: ClientQuestion; n?: number; onGraded?: (ok: boolean) => void }) {
+export default function QuestionCard({ q: authored, n, onGraded }: { q: ClientQuestion; n?: number; onGraded?: (ok: boolean) => void }) {
+  // Shuffled only after hydration (a random server render would mismatch); options stay hidden until then so the authored order never shows.
+  const [shuffled, setShuffled] = useState<ClientQuestion | undefined>();
+  useEffect(() => setShuffled(shuffleOptions(authored)), [authored]);
+  const q = shuffled ?? authored;
   const [value, setValue] = useState<Response | undefined>();
   const [result, setResult] = useState<boolean | undefined>();
   const check = () => {
@@ -147,7 +152,9 @@ export default function QuestionCard({ q, n, onGraded }: { q: ClientQuestion; n?
     <div class={`qa-question qa-q-${q.id} rounded-xl border border-slate-200 bg-white p-4 shadow-sm`}>
       <p class="mb-2 font-medium">{n !== undefined && <span class="mr-2 text-slate-400">{n}.</span>}{q.prompt}</p>
       <QuestionMedia q={q} />
-      <QuestionInput q={q} value={value} onChange={setValue} disabled={result !== undefined} />
+      <div class={shuffled ? '' : 'invisible'}>
+        <QuestionInput q={q} value={value} onChange={setValue} disabled={result !== undefined} />
+      </div>
       {result === undefined ? (
         <button type="button" class="qa-check mt-4 rounded-lg bg-brand-600 px-4 py-2 font-semibold text-white disabled:opacity-40" disabled={!isComplete(q, value)} onClick={check}>{es.quiz.check}</button>
       ) : (

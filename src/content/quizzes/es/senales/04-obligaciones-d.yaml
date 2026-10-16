@@ -15,22 +15,13 @@ questions:
     explain: D2 te ordena pasar la señal por el lado que indica la flecha. Si la flecha apunta a la derecha, solo puedes pasar por la derecha.
     cites: ["rvv:bijlage1.D2", "rvv:62"]
 
-  - id: d-d3-isleta
-    type: yesno
-    prompt: Hay un obstáculo en la calzada con esta señal. ¿Puedes pasarlo por la izquierda?
-    sign: D3
-    answer: true
-    explain: D3 significa que la señal puede pasarse por ambos lados.
-    cites: ["rvv:bijlage1.D3"]
-
-  - id: d-d4-significado
+  - id: d-d2-d3-diferencia
     type: mc
-    prompt: Llegas a un cruce con esta señal. ¿Qué haces?
-    sign: D4
-    options: ["Sigo en la dirección que indica la flecha", "Puedo elegir cualquier dirección", "Solo cedo el paso", "Giro a la izquierda"]
+    prompt: Hay un obstáculo en la calzada y puedes pasarlo por el lado que quieras. ¿Cuál de estas señales lo permite?
+    options: ["D3", "D2 con la flecha a la derecha", "D2 con la flecha a la izquierda", "D4 con flecha recta"]
     answer: 0
-    explain: D4 te obliga a seguir la dirección de la flecha.
-    cites: ["rvv:bijlage1.D4"]
+    explain: D3 permite pasar la señal por ambos lados. D2 te fija el lado que marca la flecha, y D4 no trata de pasar un obstáculo sino de la dirección que debes seguir.
+    cites: ["rvv:bijlage1.D3", "rvv:bijlage1.D2", "rvv:bijlage1.D4"]
 
   - id: d-d4-recto
     type: yesno
@@ -40,27 +31,43 @@ questions:
     explain: 'D4 es un gebod: debes seguir la dirección que muestra la flecha. Solo puedes ir recto.'
     cites: ["rvv:bijlage1.D4", "rvv:62"]
 
+  - id: d-d5-derecha
+    type: mc
+    prompt: Tu casa queda recto, pero en el cruce hay esta señal con una flecha que gira a la derecha. ¿Qué haces?
+    sign: D5
+    options: ["Giro a la derecha: es la única dirección que puedo seguir", "Sigo recto: la flecha solo es un aviso", "Giro a la derecha o sigo recto, como prefiera", "Sigo recto si no viene nadie"]
+    answer: 0
+    explain: D5 es un gebod de seguir la dirección que muestra el dibujo, igual que D4. Que tu destino esté recto o que no venga nadie no cambia la orden.
+    cites: ["rvv:bijlage1.D5", "rvv:62"]
+
   - id: d-d6-varias
     type: yesno
-    prompt: Esta señal muestra flechas hacia adelante y hacia la derecha. ¿Puedes girar a la izquierda?
+    prompt: Tu destino queda a la izquierda. En el cruce hay esta señal con flechas hacia adelante y hacia la derecha. ¿Puedes girar a la izquierda?
     sign: D6
     answer: false
     explain: D6 te obliga a seguir una de las direcciones indicadas. Ir a la izquierda no es una de ellas.
-    cites: ["rvv:bijlage1.D6"]
+    cites: ["rvv:bijlage1.D6", "rvv:62"]
 
-  - id: d-d6-recto
+  - id: d-d7-recto
     type: yesno
-    prompt: Esta señal muestra flechas hacia adelante y hacia la derecha. ¿Puedes seguir recto?
-    sign: D6
-    answer: true
-    explain: Una de las direcciones indicadas es seguir recto.
-    cites: ["rvv:bijlage1.D6"]
+    prompt: Llegas a un cruce con esta señal, que muestra una flecha a la izquierda y otra a la derecha. Quieres seguir recto. ¿Puedes?
+    sign: D7
+    answer: false
+    explain: D7 te obliga a seguir una de las direcciones indicadas, que aquí son izquierda o derecha. Seguir recto no está entre ellas; es D6 la que permite recto y derecha.
+    cites: ["rvv:bijlage1.D7", "rvv:62"]
 
-  - id: d-familia
+  - id: d-d4-vs-d6
     type: mc
-    prompt: ¿Qué tipo de señal es una D (círculo azul con flecha blanca)?
-    options: ["Un gebod (orden)", "Un aviso de peligro", "Una prohibición", "Una información"]
+    prompt: En un cruce ves D4 con una flecha recta, y en otro D6 con flechas hacia adelante y hacia la derecha. ¿En cuál de los dos puedes girar a la derecha?
+    options: ["Solo en el de D6", "En los dos", "Solo en el de D4", "En ninguno"]
     answer: 0
-    explain: Las señales D son órdenes. Las C son prohibiciones, las J avisan de peligros.
-    cites: ["rvv:62", "rvv:bijlage1.D4"]
-    exam: false
+    explain: D4 te obliga a seguir la dirección única que muestra, aquí recto. D6 te deja elegir una de las direcciones indicadas, y la derecha es una de ellas.
+    cites: ["rvv:bijlage1.D4", "rvv:bijlage1.D6"]
+
+  - id: d-carril-limitada
+    type: yesno
+    prompt: La calzada tiene dos carriles y una D5 con flecha a la derecha vale solo para el carril derecho. Vas por el carril izquierdo y quieres seguir recto. ¿Te obliga a girar a la derecha?
+    sign: D5
+    answer: false
+    explain: Una señal puede limitarse a uno o varios carriles. Esta obliga a quien va por el carril derecho, no a quien va por el izquierdo.
+    cites: ["rvv:65.1", "rvv:bijlage1.D5"]

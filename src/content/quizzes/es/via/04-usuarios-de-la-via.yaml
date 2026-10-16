@@ -1,48 +1,40 @@
 questions:
-  - id: usuarios-quien-es-bestuurder
+  - id: usuarios-derecha-quienes
     type: multi
-    prompt: ¿Cuáles de estos usuarios son bestuurders?
-    options: [Un ciclista, Un jinete, Un conductor de auto, Un peatón]
-    answer: [0, 1, 2]
-    explain: Todos los usuarios excepto los peatones son bestuurders.
-    cites: ["rvv:1"]
+    prompt: La regla de circular lo más a la derecha posible vale para los bestuurders. ¿A cuáles de estos usuarios, que van por la rijbaan, les aplica?
+    options: [Un ciclista, Un jinete, Un peatón que camina por el borde de la calzada, Un conductor de gehandicaptenvoertuig]
+    answer: [0, 1, 3]
+    explain: Bestuurder es cualquier usuario de la vía salvo los peatones. El ciclista, el jinete y el conductor de un gehandicaptenvoertuig que va por la rijbaan lo son. El peatón no es bestuurder, aunque camine por el borde de la calzada.
+    cites: ["rvv:3.1", "rvv:1", "rvv:2.1"]
 
-  - id: usuarios-a-mano
+  - id: usuarios-jinete-derecha
     type: yesno
-    prompt: Llevas tu bicicleta a mano por la acera. ¿Se te aplican las reglas de peatón?
+    prompt: Un jinete a caballo circula por la rijbaan porque no hay ruiterpad. ¿Le aplica la regla de circular lo más a la derecha posible?
     answer: true
-    explain: Las reglas de peatones también valen para quien lleva a mano una motocicleta, bromfiets o bicicleta.
+    explain: Bestuurders son todos los usuarios de la vía salvo los peatones, así que el jinete es un bestuurder y le aplica el art. 3.1.
+    cites: ["rvv:3.1", "rvv:1", "rvv:8"]
+
+  - id: usuarios-peaton-quienes
+    type: multi
+    prompt: ¿A cuáles de estas personas se les aplican las reglas de peatón?
+    options: [Quien lleva su bicicleta a mano, Una persona que va con patines en línea, Un ciclista que pedalea, Un bromfietser que va montado en su ciclomotor]
+    answer: [0, 1]
+    explain: Las reglas de peatón valen también para quien lleva a mano una bicicleta, bromfiets o motocicleta y para quien se mueve con objetos que no son vehículos, como los patines. El ciclista y el bromfietser que van montados conducen un vehículo y no entran.
     cites: ["rvv:2.2"]
 
-  - id: usuarios-patines
-    type: mc
-    prompt: Te mueves con patines en línea. ¿Qué reglas te aplican como regla general?
-    options: [Las de los conductores de autos, Las de los peatones, Ninguna, Las de los ciclomotores]
-    answer: 1
-    explain: Las personas que se mueven con objetos que no son vehículos (como patines) siguen las reglas de peatones.
-    cites: ["rvv:2.2"]
-
-  - id: usuarios-patines-fietspad
+  - id: usuarios-gehandicapten-rijbaan
     type: yesno
-    prompt: Una calle tiene acera y, al lado, un fietspad. Una persona con patines en línea va por el fietspad. ¿Está en un sitio permitido?
-    answer: true
-    explain: Los patinadores siguen las reglas de los peatones, pero con su propia regla de lugar. Pueden usar el fietspad, el fiets/bromfietspad, el trottoir o el voetpad, sin tener que elegir la acera primero. Un peatón a pie, en cambio, usaría la acera.
-    cites: ["rvv:4.4"]
+    prompt: Un conductor de gehandicaptenvoertuig circula por la rijbaan porque la calle no tiene acera ni voetpad. ¿Se le aplican las reglas de peatón?
+    answer: false
+    explain: Las reglas de peatón le valen al conductor de un gehandicaptenvoertuig solo cuando usa un voetpad o un trottoir, o cruza de uno a otro. Por la rijbaan es un usuario más, un bestuurder.
+    cites: ["rvv:2.1", "rvv:1"]
 
-  - id: usuarios-gehandicapten
+  - id: usuarios-gehandicapten-cruzar
     type: yesno
-    prompt: Un conductor de gehandicaptenvoertuig que va por el voetpad, ¿sigue las reglas de peatones?
+    prompt: Un conductor de gehandicaptenvoertuig va por un trottoir y cruza la calle hasta el trottoir de enfrente. ¿Se le aplican las reglas de peatón mientras cruza?
     answer: true
-    explain: Las reglas de peatones también valen para el conductor de un gehandicaptenvoertuig cuando usa un voetpad o trottoir.
+    explain: Las reglas de peatón le valen al conductor de un gehandicaptenvoertuig cuando usa un voetpad o un trottoir y también cuando cruza de uno a otro.
     cites: ["rvv:2.1"]
-
-  - id: usuarios-columna
-    type: mc
-    prompt: Un cortejo fúnebre de peatones que sigue la calzada, ¿qué reglas se le aplican además de las de peatón?
-    options: [Ninguna más, Las de las wagens, Las de los vehículos de motor, Las de los ciclistas]
-    answer: 1
-    explain: A las columnas, desfiles y cortejos fúnebres de peatones que siguen la rijbaan se les aplican también las reglas de las wagens.
-    cites: ["rvv:2.3"]
 
   - id: usuarios-bici-a-mano-fietspad
     type: mc
@@ -60,9 +52,10 @@ questions:
     explain: Las reglas de peatón valen también para quien lleva a mano una motocicleta, bromfiets o bicicleta, así que usas el trottoir.
     cites: ["rvv:2.2", "rvv:4"]
 
-  - id: usuarios-jinete-derecha
-    type: yesno
-    prompt: Un jinete a caballo circula por la rijbaan porque no hay ruiterpad. ¿Le aplica la regla de circular lo más a la derecha posible?
-    answer: true
-    explain: Bestuurders son todos los usuarios de la vía salvo los peatones, así que el jinete es un bestuurder y le aplica el art. 3.1.
-    cites: ["rvv:3.1", "rvv:1", "rvv:8"]
+  - id: usuarios-moto-a-mano-sin-acera
+    type: mc
+    prompt: Llevas tu motocicleta a mano, caminando a su lado. La calle no tiene trottoir, voetpad, fietspad ni fiets/bromfietspad. ¿Por dónde vas?
+    options: ["Por la berma o el borde de la rijbaan", "Por el centro de la rijbaan, con luces", "Por la rijbaan, montado en la moto", "Por donde haya más espacio libre"]
+    answer: 0
+    explain: Quien lleva a mano una motocicleta sigue las reglas de peatón. Si no hay trottoir, voetpad ni fietspad, el peatón usa la berma o el borde de la rijbaan.
+    cites: ["rvv:2.2", "rvv:4.3"]

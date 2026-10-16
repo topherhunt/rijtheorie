@@ -1,9 +1,9 @@
 questions:
   - id: remolque-seis
     type: yesno
-    prompt: Remolcas un auto con una cuerda de 6 metros entre los dos vehículos. ¿Está permitido?
+    prompt: Remolcas un auto averiado con una barra y mides 5,3 metros entre la parte trasera de tu auto y la delantera del remolcado. ¿Está permitido?
     answer: false
-    explain: La distancia entre la parte trasera del que remolca y la delantera del remolcado no puede ser mayor de 5 m.
+    explain: La distancia entre la parte trasera del que remolca y la delantera del remolcado no puede ser mayor de 5 m, y 5,3 m ya lo es.
     cites: ["rvv:53"]
 
   - id: remolque-cinco-exacto
@@ -27,23 +27,18 @@ questions:
     explain: La luz amarilla o verde es la de vehículos de trabajo; la señal de urgencia de policía, bomberos y ambulancias es la luz azul con bocina de dos tonos.
     cites: ["rvv:30.1", "rvv:29.1", "rvv:50"]
 
-  - id: emergencia-pasar
-    type: yesno
-    prompt: ¿Debes dejar pasar a una ambulancia con luz azul y sirena?
-    answer: true
-    explain: Todos los usuarios de la vía deben dejar pasar a un vehículo prioritario.
-    cites: ["rvv:50"]
-
   - id: emergencia-peligro
-    type: yesno
-    prompt: Para dejar pasar a una ambulancia, ¿puedes hacer una maniobra que ponga en peligro a un ciclista?
-    answer: false
-    explain: "Hay que dejar pasar, pero sin causar peligro a otros: el artículo 5 de la WVW sigue vigente."
+    type: mc
+    prompt: Una ambulancia con luz azul y bocina de dos tonos se acerca por detrás. A tu derecha va un ciclista pegado al borde y no hay hueco para apartarte. ¿Qué haces?
+    options: ["Dejo pasar a la ambulancia sin poner en peligro al ciclista, por ejemplo reduciendo y apartándome cuando haya hueco", "Me aparto a la derecha de golpe porque la ambulancia tiene prioridad", "Acelero para salir de su camino", "Me detengo en seco en mi carril"]
+    answer: 0
+    explain: Hay que dejar pasar al vehículo prioritario, pero el artículo 5 de la WVW sigue prohibiendo maniobras que pongan en peligro a otros. Apartarte de golpe sobre el ciclista o frenar en seco crea otro peligro.
     cites: ["wvw:5", "rvv:50"]
 
-  - id: agente-indicaciones
-    type: yesno
-    prompt: Un agente de policía te indica con la mano que sigas o pares en un cruce. ¿Debes seguir su indicación?
-    answer: true
-    explain: Los usuarios de la vía deben seguir las indicaciones que dan los agentes en relación con el tráfico.
+  - id: agente-semaforo-verde
+    type: mc
+    prompt: Te acercas a un cruce con el semáforo en verde, pero un agente en el cruce te indica con la mano que pares. ¿Qué haces?
+    options: ["Paro, porque debo seguir las indicaciones del agente", "Sigo, porque el semáforo está en verde", "Sigo despacio y toco la bocina", "Paro solo si el agente lleva uniforme de tráfico"]
+    answer: 0
+    explain: Los usuarios de la vía deben seguir las indicaciones que dan los agentes en relación con el tráfico, también cuando contradicen el semáforo.
     cites: ["wvw:12.1"]

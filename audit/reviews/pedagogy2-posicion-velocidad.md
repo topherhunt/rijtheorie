@@ -493,3 +493,45 @@ No outright legal or numeric error found. Items to settle, not confirmed errors:
 - Exact last-sentence wording of rvv:11.2 for my posicion/06 proposal.
 - J17-J19 sign consequences (only sign names seen).
 - Sign images and component rendering were not examined.
+
+## Applied
+
+Counts are final questions per quiz. Note: the table above says 6 lessons need rework; the rework lessons are posicion/03, posicion/08, velocidad/01, 03, 04, 06.
+
+### Per lesson
+- posicion/01 (10 q): lesson adds the common-sense why of keeping right; removed regla, fietspad, dos-ciclistas, curva-ciega, peligro; kept and polished 6; 4 new (curva-sin-vista, fietspad-atasco, ciclistas-paralelo, fietsstrook-discontinua).
+- posicion/02 (12 q): lesson drops the definicion Check, adds the weefvak note (CBR 3.2), moves C23-01 after its explanation; removed definicion, cruz-roja, bus, camion-preseleccionar, prohibicion-otro-carril; 2 new (camion-giro-izquierda, limite-un-carril); flecha-blanca, cruz-roja-vlucht, atasco-excepcion rewritten as situations.
+- posicion/03 (14 q, rework): lesson adds the CBR 3.3 purpose of voorsorteren, a suggiestrook right-turn bullet and a "esperar para girar a la izquierda" procedure rule; removed derecha, fietsstrook-parte; 3 new; others rewritten.
+- posicion/04 (11 q): lesson adds the dode-hoek why; removed ciclomotor-senal; 1 new (autopista-coche-rapido); 4 rewritten as situations.
+- posicion/05 (15 q): lesson adds the art. 12 why (beperkt uitzicht); removed f1-camion, varios-obstaculos; 1 new (por-que-paso-cebra); 8 fixed.
+- posicion/06 (12 q): opening sentence now lists art. 11, 13 and 48 as the only exceptions; the voorsorteerstrook right-overtake is labelled procedure, not law; 6 questions fixed.
+- posicion/07 (10 q): "adelantar imposible" qualified (only if overtaking would be dangerous, without accelerating); removed tegemoetkomen-definicion and adelantado-peligro (replaced by adelantado-impedir-solo-peligro); 3 fixed.
+- posicion/08 (9 q, rework): common-sense notes for rvv:14 and J17-J19; removed atascos-carril and atascos-derecha (duplicates of rijstroken-atasco-excepcion and derecha-fila); 1 new (ritsen-carril-termina); 4 rewritten, 4 kept.
+- velocidad/01 (10 q, rework): lesson adds a one-line reason per road type, replaces "se ve en las lecciones siguientes" with art. 22 and signs lowering limits, and clarifies bromfiets 45 vs snorfiets; removed limites-otras (duplicate of h2-otra-via) and limites-bromfiets-fietspad; 1 new (bromfiets-calzada-vs-pad); numbers anchored in situations (sign H1, G1, G3); exceso-grave and senal-prevalece recast as situations.
+- velocidad/02 (11 q): babw:9 reduced to "a zone sign has an end sign" and babw:15 dropped; removed senal-a1 and senal-a3 (label recall); 2 new (zona-fin, a3-panel-80); recomendada-obligatoria and a4-curva rewritten with similar-length options.
+- velocidad/03 (8 q, rework): lesson states outside a single schedule the general max 130 applies, a two-schedule plate shows its own night limit, adds A2 and the art. 22 trailer cap, marks the RWS content as secondary policy; removed horario-noche, horario-rvv-130 and the old schedule items; 7 new situational items.
+- velocidad/04 (11 q, rework): Tip rewritten, camper-as-personenauto contrast added; removed camion, t100, brommobiel, snorfiets bare numbers; 4 new (remolque-limite-3500, camion-90, camper-registro, snorfiets-brommobiel); remolque-otros converted to a situation.
+- velocidad/05 (9 q): "(lección 6)" removed, one sentence added so 40 m vs 60 m works; removed adaptar-no-aumentar (duplicate of posicion/07 adelantado-no-acelerar); 1 new (poco-espacio); lento, curva, salida-curva, curva-ciega-subir (now has a Check) rewritten as situations.
+- velocidad/06 (8 q, rework): lesson now `secondary: true` with the physics in a `general` Rule, plus pointers to rvv:19 and the two-second rule; removed suma, reaccion, frenado-triple, causa-parte; 3 new applied items (frenado-vista-libre, por-que-distancia-seguimiento, lluvia-reaccion-rapida).
+- velocidad/07 (11 q): lesson adds the one-line two-second rationale and the "te siguen pegado" advice; 11 questions kept with ids, regla, mas, lluvia, opaco, fila, siguen and grave converted to situations (siguen now has a Check); 45 anchored.
+- velocidad/08 (10 q): lesson adds the G5/G6 definition Rule; removed estacionar-plaza-marcada, ciclista-15, g5-que-cambia (replaced by g5-tres-cambios with a harder distractor); 3 new (g6-salida, por-que-15, g5-tres-cambios); erf-velocidad anchored against the 50 of the zona urbana.
+
+### Factual errors and resolution
+1. velocidad/03, 120 vs 130: lesson now says single-schedule plate -> 130 outside; two-schedule plate -> its own night figure. The RWS source stays unverified (not printable) and is flagged secondary.
+2. posicion/06, CBR-only right-overtake: relabelled as procedure; art. 11 lists no such exception.
+3. velocidad/04, Tip: confirmed against rvv:22 f (other motor vehicles with a trailer, including a personenauto with a trailer over 3500 kg, 80); Tip rewritten.
+4. posicion/02, L11 scenario: L11 text verified; replaced with a 70 km/h sign plus plaque L11.
+5. posicion/08, art. 14: no exceptions printed; CBR exceptions are procedure only; not turned into absolute questions.
+6. velocidad/01, snorfiets 6 km/h on trottoir: verified in art. 20/21; omitted deliberately for a car learner.
+7. The report's `limites-autoweg-sin-senal` says 80 for an autoweg; rvv:21 says 100. Not used.
+8. The report's J17-J19 consequences are not in the law print (names only); written as sense/procedure.
+
+### Report items not applied
+- posicion/05 and posicion/06 "why passing on the right is dangerous": no source.
+- `adelantar-derecha-giro-izquierda-ejemplo` and `adelantado-tu-lado`: duplicate existing questions.
+- posicion/08 optional CBR note on keeping the junction free: would blur the green-light question.
+- velocidad/02 `senal-a1-con-zona` (A1 inside a zone): babw:9 does not settle it.
+- velocidad/04 `especial-remolque-carretera-normal`: duplicates `especial-remolque-otra-via`.
+- velocidad/07 `seguimiento-camion-delante`: duplicates opaco and lluvia-opaco.
+- velocidad/08 `erf-sin-gente`: duplicates `erf-vacio-mas-rapido`.
+- velocidad/06 `cbr-examenplan` cites replaced by `general` (secondary), not by a printable CBR cite.

@@ -1,10 +1,11 @@
 questions:
-  - id: como-usar-oficial
-    type: yesno
+  - id: como-usar-solo-este-curso
+    type: mc
     exam: false
-    prompt: Este curso es material oficial del CBR.
-    answer: false
-    explain: No. Es un curso no oficial hecho por voluntarios. Puede tener errores, por eso se recomienda estudiar también con material oficial o un curso acreditado.
+    prompt: Una compañera te dice que estudiar solo este curso basta, porque cada regla trae su fuente. Tú ves una regla que te sorprende. ¿Qué haces?
+    options: ["La compruebas en la fuente citada y, si dudas, en material actualizado", "La das por buena, porque lleva una cita y eso la hace oficial", "La das por buena mientras este curso no la contradiga en otra lección", "La ignoras y estudias solo las reglas que ya conocías"]
+    answer: 0
+    explain: El curso lo escriben voluntarios y puede tener errores o quedar desactualizado. La cita sirve justamente para que compruebes la regla; si el curso y la ley o el CBR dicen algo distinto, vale la fuente oficial.
     cites: ["curso"]
 
   - id: como-usar-conflicto
@@ -83,4 +84,22 @@ questions:
     options: [Una regla de ley, Una técnica para el examen que no es ley, Una pregunta del CBR, Una cita de un artículo]
     answer: 1
     explain: Los consejos son técnicas de examen. Las reglas de ley van en cuadros de regla con su fuente.
+    cites: ["curso"]
+
+  - id: como-usar-predecir
+    type: mc
+    exam: false
+    prompt: "Quieres sacarle más partido a una pregunta de práctica. Antes de mirar las opciones, ¿qué es lo más útil?"
+    options: ["Decidir qué harías tú y por qué, y después comparar con las opciones", "Leer las opciones y descartar las que suenan raras", "Buscar la opción que repite palabras de la lección", "Fijarte en cuál es la opción más larga"]
+    answer: 0
+    explain: Si decides primero, practicas aplicar la regla, que es lo que pide el examen. Descartar opciones por cómo suenan puede darte el acierto sin haber entendido la regla, y no te sirve cuando cambie la situación.
+    cites: ["curso"]
+
+  - id: como-usar-fallo
+    type: mc
+    exam: false
+    prompt: Fallaste una pregunta de prioridad en el Repaso. ¿Qué anotación en Notas te ayudará más?
+    options: ["La regla aplicable y el dato de la situación que decidía la respuesta", "Solo la letra de la opción correcta", "Solo el número de la lección para releerla entera", "Una frase como \"repasar prioridad\""]
+    answer: 0
+    explain: Para no repetir el error necesitas la regla y el dato que te la hizo aplicar (una señal, un tipo de vehículo, una dirección). La letra de la opción no te sirve, porque las opciones se mezclan cada vez.
     cites: ["curso"]

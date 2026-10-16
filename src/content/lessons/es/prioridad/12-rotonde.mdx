@@ -18,6 +18,8 @@ Una <T id="rotonde" /> es un nudo de vías, distinto de un cruce, donde el tráf
 Para entrar y para circular por la rotonda debes cumplir la obligación legal de ceder el paso. Antes de entrar, mira hacia delante y hacia la izquierda para ver si puedes entrar, y comprueba los espejos.
 </Rule>
 
+Por qué la izquierda: se circula en sentido contrario a las agujas del reloj, así que el tráfico que ya está dentro de la rotonda se acerca a tu entrada desde ese lado.
+
 <Junction
   kind="roundabout"
   arms={{ n: {}, e: {}, s: { sign: 'B6', shark: true }, w: {} }}
@@ -33,14 +35,16 @@ Si hay B6 en la entrada, el CBR pide una atención aún mayor al mirar y adaptar
 </Rule>
 
 <Rule cite="rvv:80, rvv:bijlage1.B6, rvv:15.1" title="Quién cede al entrar">
-Con B6 o dientes de tiburón en la entrada, cedes el paso a quien ya circula por la rotonda. Sin esas señales rige la regla general: cedes el paso a quien viene por tu derecha.
+Con B6 o dientes de tiburón en la entrada, cedes el paso a quien ya circula por la rotonda, aunque llegue por tu izquierda. Sin esas señales rige la regla general de los cruces: cedes el paso a quien viene por tu derecha. Como el tráfico de la rotonda te llega por la izquierda, entonces eres tú quien pasa primero, y quien circula por la rotonda debe dejarte entrar.
 </Rule>
 
-<Check id="rotonde-sin-d1" />
+Casi todas las rotondas tienen B6 y dientes de tiburón, pero no todas: mira siempre qué hay en tu entrada antes de decidir.
 
 <Check id="rotonde-b6-mirar" />
 
 <Check id="rotonde-entrar-ceder" />
+
+<Check id="rotonde-sin-b6-entrar" />
 
 ## Salir de la rotonda
 
@@ -56,13 +60,17 @@ Al salir, dejas pasar al tráfico que sigue circulando por la rotonda, incluido 
 
 ## Libertad en la rotonda
 
-<Rule cite="rvv:47, rvv:48" title="Circular fuera de la derecha y adelantar por la derecha">
-Cerca de las rotondas y sobre ellas, los motorvehículos y los ciclomotores que siguen la calzada pueden circular fuera del lado derecho. Además se permite adelantar por la derecha justo antes de una rotonda o sobre ella.
+<Rule cite="rvv:47, rvv:48, rvv:11.1" title="Circular fuera de la derecha y adelantar por la derecha">
+Justo antes de una rotonda y sobre ella, los motorvehículos y los ciclomotores que siguen la calzada pueden circular fuera del lado derecho (art. 47). Además se permite adelantar por la derecha (art. 48), aunque la regla general es adelantar por la izquierda (art. 11.1).
 </Rule>
 
-<Check id="rotonde-47" />
+Son permisos, no obligaciones, y valen solo en la rotonda y justo antes de ella. En una plaza redonda sin D1 no cuentan (ver arriba), y en una calle normal sigues adelantando por la izquierda.
+
+<Check id="rotonde-47-bromfiets" />
 
 <Check id="rotonde-adelantar" />
+
+<Check id="rotonde-sin-d1-adelantar" />
 
 ## Qué carril usar
 

@@ -6,45 +6,42 @@ questions:
     explain: Weg es todo camino abierto al tráfico público. No importa el dueño ni el pavimento.
     cites: ["wvw:1.1.b"]
 
-  - id: partes-via-rijbaan-no
-    type: multi
-    prompt: ¿Cuáles de estas partes de la vía NO son parte de la rijbaan?
-    options: [Un fietspad junto a la calzada, Un fiets/bromfietspad, La parte de la vía por donde circulan los coches, La parte de la vía por donde circulan los camiones]
-    answer: [0, 1]
-    explain: La rijbaan es la parte de la vía para vehículos en movimiento con la excepción de los fietspaden y los fiets/bromfietspaden. Los coches y los camiones circulan por la rijbaan.
+  - id: partes-via-weg-cerrado
+    type: yesno
+    prompt: Un camino asfaltado dentro del recinto de una fábrica solo lo usan los empleados y hay una barrera en la entrada. ¿Es una "weg" para la ley?
+    answer: false
+    explain: Weg es el camino abierto al tráfico público. Que esté asfaltado no basta, y un camino cerrado al público, como este, no es una vía.
+    cites: ["wvw:1.1.b"]
+
+  - id: partes-via-fietspad-atajo
+    type: yesno
+    prompt: Vas en coche por una calzada atascada y a tu derecha hay un fietspad vacío que lleva al mismo cruce. ¿Puedes usarlo como atajo para pasar la fila?
+    answer: false
+    explain: El fietspad no es parte de la rijbaan, y el conductor de un coche usa la rijbaan. Que el fietspad esté vacío no cambia a quién corresponde.
     cites: ["rvv:1", "rvv:10.1"]
 
   - id: partes-via-kruispunt
     type: multi
     prompt: ¿Cuáles de estas situaciones son un "kruispunt" para el RVV?
-    options: [Dos vías que se cruzan, Una vía que se divide en dos, Un tramo recto sin ninguna otra vía, Una vía que termina en un campo]
+    options: [Dos vías que se cruzan, Una vía que se divide en dos, Una vía recta que solo cambia de nombre, Dos vías paralelas que no se unen]
     answer: [0, 1]
-    explain: Un kruispunt es una kruising (cruce) o una splitsing (bifurcación) de vías.
+    explain: Un kruispunt es una kruising (cruce) o una splitsing (bifurcación) de vías. Una vía que solo cambia de nombre o dos vías paralelas no se cruzan ni se dividen.
     cites: ["rvv:1"]
 
   - id: partes-via-estacionar-donde
     type: mc
     prompt: Necesitas estacionar tu coche. ¿En cuál de estas partes de la vía puedes hacerlo?
-    options: ["En una parkeerhaven junto a la calzada", "En el fietspad, si no pasa ningún ciclista", "En el trottoir, si dejas espacio para los peatones", "En un ruiterpad, si estás solo cinco minutos"]
+    options: ["En una parkeerhaven junto a la calzada", "En un fietspad vacío, solo un momento", "En un trottoir ancho, dejando espacio", "En un ruiterpad poco usado, si es breve"]
     answer: 0
     explain: La parkeerhaven está pensada para vehículos estacionados. El trottoir, el voetpad, el fietspad, el fiets/bromfietspad y el ruiterpad están prohibidos para estacionar, y el poco tiempo o el poco tráfico no cambian nada.
     cites: ["rvv:1", "rvv:10.1"]
-
-  - id: partes-via-g7-estacionar
-    type: mc
-    prompt: Ves la señal G7 a la entrada de un camino a tu derecha, con un hueco libre. ¿Puedes entrar con tu coche para estacionar ahí?
-    sign: G7
-    options: ["Sí, es una parte de la vía como cualquier otra", "Sí, si no hay peatones a la vista", "No, el voetpad no se puede usar para estacionar", "Solo si pones las luces de emergencia"]
-    answer: 2
-    explain: Para estacionar puedes usar otras partes de la vía, pero nunca el trottoir, el voetpad, el fietspad, el fiets/bromfietspad ni el ruiterpad. La señal G7 marca un voetpad.
-    cites: ["rvv:10.1", "rvv:bijlage1.G7"]
 
   - id: partes-via-verdrijvingsvlak-atajo
     type: yesno
     prompt: Entre dos carriles hay una zona de la calzada cubierta de rayas diagonales (verdrijvingsvlak). El tráfico va lento y la zona está libre. ¿Puedes conducir por ella para adelantar la fila?
     answer: false
-    explain: Los conductores no pueden usar los verdrijvingsvlakken ni los puntstukken. Las excepciones del art. 77 (spitsstrook, busbaan, busstrook) no se aplican a un coche normal en una calzada normal.
-    cites: ["rvv:77", "rvv:1"]
+    explain: Los conductores no pueden usar los verdrijvingsvlakken ni los puntstukken, y las marcas que guían el tráfico se respetan. Las excepciones del art. 77 (spitsstrook, busbaan, busstrook) no se aplican a un coche normal en una calzada normal.
+    cites: ["rvv:77", "rvv:1", "cbr-rijprocedure:3.3"]
 
   - id: partes-via-puntstuk-atajo
     type: yesno

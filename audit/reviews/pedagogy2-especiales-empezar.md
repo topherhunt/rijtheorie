@@ -288,3 +288,34 @@ Status: verified against `gate.ts`, `ExamIsland.tsx` and BLUEPRINT. The `cites` 
 - C23-02 "vrijmaken": the law snapshot gives only titles; the driver's required action is unverified.
 - Priority at roundabouts (haaientanden, B6) belongs to the prioridad chapter, which I did not review.
 - Whether a standstill in a queue is "laten stilstaan" for art. 23.1d: the snapshots do not settle it.
+
+## Applied
+
+Per lesson (questions removed / added / kept):
+- empezar/01 el-examen: 6 removed, 1 added (`el-examen-aprobar-con-errores`), 8 kept; quiz 9. Lesson: "fail up to 6" sentence, new Checks, pointer to the study habits.
+- empezar/02 supuestos-e-idioma: 2 removed, 2 added (`supuestos-mi-vehiculo`, `supuestos-semaforo-verde`), 3 polished; quiz 12. Lesson: worked examples, Check for `supuestos-exceso`, Warn about interpreter pages reworded.
+- empezar/03 como-usar-el-curso: 1 replaced, 2 added (`como-usar-predecir`, `como-usar-fallo`); quiz 12. Lesson: new section "Cómo estudiar para entender" with a cited worked example.
+- empezar/04: not touched (prueba de nivel size is the lead's).
+- especiales/01: 4 removed, 3 added, 4 polished; quiz 14. Lesson: Check placement, `perdi-salida`, reason for minimum speed and hectometer markers, 22e line extended (moto, three-wheeler, T100 with trailer).
+- especiales/02: 3 removed, 5 added, 10 kept/polished; quiz 15. Lesson: reasons for yielding, speed mismatch, stop-at-first-part, short combined strip, merging from vluchtstrook/parkeerstrook/parkeerplaats.
+- especiales/03: 3 removed, 5 added, 7 polished or kept; quiz 15. Lesson: left-hand exit, "circa" for 600/300 m, two-lane uitrijstrook, yielding on the strip, jam exit, weefvak continue case.
+- especiales/04: 7 removed, 3 added, 5 polished, 3 kept; quiz 11. Lesson: A3 binding maximum with Rule, C23-02 wording softened.
+- especiales/05: 8 removed, 3 added, 2 polished, 7 kept; quiz 12. Lesson: common-sense reasons, neutral note on standing in a jam.
+- especiales/06: 6 removed, 1 added (`rotonde-no-bloquear-fietspad`), rest polished into scenarios; quiz 10. Entry priority untouched. `rotonde-sin-d1-adelantar-derecha` rewritten as a clear scenario.
+- especiales/07: 6 removed, 2 added (`overweg-blanca-luego-roja`, `overweg-sol-sin-luz`, plus `overweg-baliza-dos-rayas` replacing the number question), distractors fixed; quiz 11. Lesson Checks regrouped.
+- especiales/08: 3 removed, 2 added (`erf-estacionar-hueco`, `erf-bus-turistico-carriles`), restatements turned into situations; quiz 11. Lesson: bus-lane sentence (art. 81 "slechts", common-sense reason), art. 70.4 wording tightened.
+
+Factual errors and resolutions:
+- especiales/02 cited `cbr-rijprocedure:3.4` for the autopista merging-help bullets; they are in 3.2. Fixed (3.4 kept for following distance).
+- especiales/02 translated "zwaar verkeer dat niet voldoende snelheid kan maken" as dense traffic that cannot accelerate; it means heavy vehicles. Fixed.
+- especiales/01 stated a reason for wheels toward the guardrail ("pasajeros salen por la derecha") that the RWS page does not give. Removed.
+- especiales/01 missing the camper trap (rvv:22a, camper over 3500 kg registered as bedrijfsauto: 80 km/h) and the 22e extension. Added.
+- especiales/04: A3 stated as a binding maximum; supported by rvv:73, the A3 title and rvv:62 but the snapshot has no explicit "verbod" label, so phrased carefully.
+
+Not applied:
+- `spitsstrook-flecha-luego-cruz` (depends on unverified C23 semantics; C23-02 "vrijmaken" action unverified).
+- The idioma questions (cannot be verified locally).
+- Art. 76.1 second sentence and exception c (low priority).
+- A jam-versus-stilstaan question in the tunnel (law does not settle it; lesson says so neutrally).
+- Roundabout entry priority and the prueba de nivel size (out of scope).
+- Overweg: no rules invented for where to stop or what to do if stuck on the crossing; the yellow flashing light question was dropped (general light, not overweg specific), the lesson text keeps it.

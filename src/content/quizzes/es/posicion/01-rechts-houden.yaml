@@ -1,83 +1,77 @@
 questions:
-  - id: rechts-houden-regla
-    type: mc
-    prompt: ¿Qué dice la regla general sobre tu posición en la calzada?
-    options: [Debes circular por el centro de la calzada, Debes circular lo más a la derecha posible, Puedes elegir el lado que quieras si no hay tráfico, Debes circular por el carril izquierdo si vas rápido]
-    answer: 1
-    explain: Los conductores deben circular lo más a la derecha posible (rechts houden).
-    cites: ["rvv:3.1"]
-
   - id: rechts-houden-centro-carril
     type: mc
-    prompt: En un carril de ancho normal, ¿dónde esperan los examinadores que circules según la Rijprocedure B?
-    options: [Pegado a la línea derecha, En el centro del carril, Pegado a la línea izquierda, Sobre la línea que separa los carriles]
+    prompt: Circulas por un carril de ancho normal, sin tráfico delante ni detrás. ¿Dónde esperan los examinadores que te coloques según la Rijprocedure B?
+    options: [Pegado a la línea derecha para dejar sitio, En el centro del carril, Pegado a la línea izquierda para ver mejor, Sobre la línea que separa los carriles]
     answer: 1
-    explain: Según la Rijprocedure B, en carriles de ancho normal se circula por el centro del carril. Es un procedimiento recomendado, no un artículo de ley.
+    explain: Según la Rijprocedure B, en un carril de ancho normal se circula por el centro del carril. "Lo más a la derecha posible" no significa pegado a la línea. Es un procedimiento del examen, no un artículo de ley.
     cites: ["cbr-rijprocedure:3.2"]
 
   - id: rechts-houden-distancia-estacionados
     type: mc
-    prompt: Pasas junto a una fila de autos estacionados a tu derecha. ¿Qué distancia lateral recomienda la Rijprocedure B?
-    options: [Pegarte lo más posible a los autos, Una puerta de ancho como mínimo, Medio metro exacto, Da igual si no hay nadie]
+    prompt: Pasas junto a una fila continua de autos estacionados a tu derecha. ¿Qué margen lateral te piden según la Rijprocedure B?
+    options: [Pegarte lo más posible a los autos para dejar sitio, Como mínimo el ancho de una puerta, Unos diez centímetros bastan si vas despacio, El margen que quede sin invadir la línea central]
     answer: 1
-    explain: Se mantiene una distancia segura, equivalente al ancho de una puerta (portierbreedte), por si alguien abre la puerta.
+    explain: Se mantiene una distancia segura equivalente al ancho de una puerta (portierbreedte), por si alguien abre la puerta. Pegarte a los autos parece cortés, pero no deja margen.
     cites: ["cbr-rijprocedure:3.2"]
 
   - id: rechts-houden-huecos
     type: yesno
-    prompt: A tu derecha hay autos estacionados a trechos. Si no te metes en cada hueco, no invades la mitad de la calzada del tráfico que viene de frente. ¿Debes meterte en cada hueco?
+    prompt: A tu derecha hay autos estacionados a trechos. Pasando de largo por la línea recta no invadirías la mitad de la calzada del tráfico que viene de frente. ¿Debes meterte a la derecha en cada hueco?
     answer: false
-    explain: La Rijprocedure B dice que no te metas a la derecha en cada hueco si no es necesario, porque eso solo genera maniobras innecesarias.
+    explain: La Rijprocedure B dice que no te metas en cada hueco si no hacerlo no te obliga a ocupar la mitad de la calzada del tráfico contrario. Ir y venir de hueco en hueco no es "rechts houden" mejor, solo es una conducción inquieta.
     cites: ["cbr-rijprocedure:3.2"]
+
+  - id: rechts-houden-bici-ancha
+    type: mc
+    prompt: En una calle ancha vas detrás de dos ciclistas en la calzada y hay sitio de sobra. ¿Qué te pide la Rijprocedure B?
+    options: [Esquivarlos hacia la derecha cada vez que se acercan, Mantener una línea lo más recta posible sin crear un tráfico agitado, Adelantarlos por la derecha para no cruzar la línea central, Avisar con la bocina para que se aparten]
+    answer: 1
+    explain: En una calle ancha no hace falta ir y venir entre los ciclistas si eso crea un tráfico agitado; se mantiene una línea recta. Adelantar por la derecha no es lo normal (el adelantamiento se hace por la izquierda) y la bocina no tiene motivo.
+    cites: ["cbr-rijprocedure:3.2", "rvv:11.1"]
+
+  - id: rechts-houden-fietspad-atasco
+    type: mc
+    prompt: Hay una cola larga en la calzada y, al lado, un fietspad completamente libre. ¿Qué haces con tu auto?
+    options: [Sigues en la calzada, Pasas por el fietspad solo hasta el siguiente cruce, Usas el fietspad si vas a menos de 25 km/h, Usas el fietspad con las luces de emergencia]
+    answer: 0
+    explain: Un auto usa la rijbaan. El fietspad no es parte de la calzada y la ley no da ninguna excepción por atasco, velocidad o luces.
+    cites: ["rvv:10.1"]
 
   - id: rechts-houden-fietsstrook-continua
     type: yesno
-    prompt: Puedes circular con tu auto sobre un carril bici (fietsstrook) marcado con líneas continuas.
+    prompt: La calle es estrecha y hay un fietsstrook marcado con líneas continuas y sin ciclistas a la vista. ¿Puedes circular con tu auto sobre él para dejar sitio al tráfico?
     answer: false
-    explain: Los conductores que no son ciclistas ni vehículos para personas con discapacidad no pueden usar una fietsstrook con líneas continuas.
+    explain: Un fietsstrook con líneas continuas está prohibido para quien no sea ciclista o conductor de gehandicaptenvoertuig, aunque esté vacío.
     cites: ["rvv:10.2"]
 
-  - id: rechts-houden-fietspad
+  - id: rechts-houden-fietsstrook-discontinua
     type: mc
-    prompt: ¿Dónde circula un auto?
-    options: [En la calzada (rijbaan), En el carril bici separado (fietspad) si está libre, En la berma si hay poco tráfico, En cualquier parte si va despacio]
-    answer: 0
-    explain: Otros conductores distintos de ciclistas, ciclomotores, jinetes y vehículos para personas con discapacidad usan la calzada.
-    cites: ["rvv:10.1"]
+    prompt: En una calle ves un fietsstrook con líneas discontinuas. Un camión viene de frente y no quieres rozarlo. ¿Qué dice la Rijprocedure B sobre usar el fietsstrook con tu auto?
+    options: [Está prohibido igual que el de líneas continuas, Puedes usarlo si es deseable o necesario y sin estorbar a un ciclista, Debes usarlo siempre que esté libre, Solo puedes cruzarlo en perpendicular]
+    answer: 1
+    explain: Con líneas discontinuas la ley no lo prohíbe (rvv art. 10 lid 2 solo habla de líneas continuas), pero el fietsstrook sigue siendo para ciclistas. La Rijprocedure B lo permite solo si es deseable o necesario, sin estorbar nunca a un ciclista y evitando parar en él.
+    cites: ["rvv:10.2", "cbr-rijprocedure:3.3"]
 
-  - id: rechts-houden-dos-ciclistas
-    type: yesno
-    prompt: Dos ciclistas van uno al lado del otro en la calzada. ¿Es legal?
-    answer: true
-    explain: Los ciclistas pueden ir de dos en dos, uno al lado del otro.
-    cites: ["rvv:3.2"]
+  - id: rechts-houden-ciclistas-paralelo
+    type: mc
+    prompt: En una calle sin carril bici, dos ciclistas van uno al lado del otro y no te dejan pasar de inmediato. ¿Qué haces?
+    options: ["Tocas la bocina porque ocupan toda la calzada", "Esperas y adelantas por la izquierda cuando puedas hacerlo con seguridad", "Los adelantas por la derecha entre ellos y el borde", "Los adelantas ya, aunque haya poca visibilidad"]
+    answer: 1
+    explain: Los ciclistas pueden ir de dos en dos (rvv art. 3 lid 2), así que no infringen nada. Se adelanta por la izquierda (rvv art. 11) y solo cuando sea seguro; la bocina y la prisa no cambian eso.
+    cites: ["rvv:3.2", "rvv:11.1"]
 
   - id: rechts-houden-snorfiets
     type: yesno
-    prompt: Dos conductores de snorfiets (ciclomotor lento, 25 km/h) van uno al lado del otro. ¿Es legal?
+    prompt: Dos conductores de snorfiets (ciclomotor lento, 25 km/h) van uno al lado del otro por la calzada. ¿Es legal?
     answer: false
     explain: El permiso de ir de a dos en paralelo vale para ciclistas, no para los conductores de snorfiets.
     cites: ["rvv:3.2"]
 
-  - id: rechts-houden-bici-ancha
+  - id: rechts-houden-curva-sin-vista
     type: mc
-    prompt: En una calle ancha hay ciclistas en la calzada. ¿Qué indica la Rijprocedure B?
-    options: [Esquivarlos siempre hacia la derecha, No esquivarlos sin necesidad si eso crea un tráfico agitado y seguir una línea recta, Adelantarlos por la derecha, Tocar la bocina]
+    prompt: Entras en una curva a la izquierda sin ver lo que viene. Hay tráfico poco frecuente, así que te vas hacia el centro de la calzada para trazarla más suave. ¿Qué has hecho mal?
+    options: ["Nada, la curva se traza siempre por el centro", "No mantenerte lo bastante a la derecha en un lugar sin visibilidad", "Cambiar de carril sin avisar", "Ir demasiado cerca de la berma"]
     answer: 1
-    explain: En calles anchas no hace falta ir y venir entre los ciclistas; se mantiene una línea lo más recta posible.
-    cites: ["cbr-rijprocedure:3.2"]
-
-  - id: rechts-houden-curva-ciega
-    type: yesno
-    prompt: Según la WVW, no mantenerte lo suficiente a la derecha en un lugar sin visibilidad puede ser un ejemplo de infracción grave si lo haces a propósito y hay peligro de muerte o lesiones graves.
-    answer: true
-    explain: El art. 5a WVW enumera como ejemplo "onvoldoende rechts houden op onoverzichtelijke plaatsen".
-    cites: ["wvw:5a"]
-
-  - id: rechts-houden-peligro
-    type: mc
-    prompt: ¿Qué prohíbe en general la WVW art. 5?
-    options: [Conducir de noche, Comportarte de modo que se cause o pueda causarse peligro o estorbo al tráfico, Usar el carril izquierdo, Ir en paralelo con otro auto]
-    answer: 1
-    explain: El art. 5 WVW prohíbe comportarse de forma que se cause (o pueda causarse) peligro en la vía o que se estorbe al tráfico.
-    cites: ["wvw:5"]
+    explain: La regla es rechts houden (rvv art. 3 lid 1). Sin visibilidad, la ley (wvw art. 5a) cita como conducta grave "onvoldoende rechts houden op onoverzichtelijke plaatsen" si se hace a propósito y pone a otro en peligro de muerte o lesión grave.
+    cites: ["rvv:3.1", "wvw:5a"]

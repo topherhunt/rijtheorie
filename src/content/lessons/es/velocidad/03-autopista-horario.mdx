@@ -14,24 +14,33 @@ Pero en la práctica la velocidad se fija con señales. Cuentan las señales A1 
 
 <Rule cite="rws-maximumsnelheid" title="Rijkswaterstaat: velocidad máxima en autopista">
 - El máximo general en autopista es 130 km/h.
-- En la mayoría de las autopistas el límite es **100 km/h entre las 06.00 y las 19.00**. Fuera de ese horario rige 120 o 130 km/h en los tramos donde Rijkswaterstaat lo permite por seguridad y calidad de vida; la señal te dice cuál.
+- En la mayoría de las autopistas el límite es **100 km/h entre las 06.00 y las 19.00**; Rijkswaterstaat lo fija así por seguridad y calidad de vida.
 - En algunos tramos el límite de día ya es 130 km/h (desde 2025).
 - Una señal de 100 km/h **sin horario** vale todo el día.
-- Una señal con **horario de 6 a 19 h** vale solo en ese horario; fuera de él vale el máximo general.
-- Algunas señales muestran dos horarios: un límite de día y un límite de noche (por ejemplo 100 y 120).
+- Una señal con **un solo horario de 6 a 19 h** vale solo en ese horario; fuera de él vale el máximo general, **130 km/h**.
+- Algunas señales muestran **dos horarios**: un límite de día y un límite de noche (por ejemplo 100 y 120). Fuera del horario de día rige el límite que muestra la propia señal.
 - Donde de noche vale 130, no hace falta una señal de 130: solo se señalizan las excepciones.
 </Rule>
 
 <Signs codes="A1,A2" />
 
 <Check id="horario-dia" />
-<Check id="horario-sin-horario" />
-<Check id="horario-con-horario" />
-<Check id="horario-doble" />
-<Check id="horario-sin-senal" />
+<Check id="horario-noche-placa" />
+<Check id="horario-doble-dia" />
+<Check id="horario-doble-noche" />
+<Check id="horario-sin-senal-noche" />
+
+Una señal **A2** (fin de la velocidad máxima) termina la A1 que venía valiendo; desde ahí rige otra vez el máximo general, 130 km/h en la autosnelweg.
+
+<Rule cite="rvv:22" title="El remolque sigue mandando">
+Estos números son para tu auto sin más. Un auto con un remolque de hasta 3500 kg tiene un máximo propio de **90 km/h**, y ese tope vale aunque la señal o el horario permitan 100 o 130 (lo ves entero en la lección siguiente).
+</Rule>
+
+<Check id="horario-a2-fin" />
+<Check id="horario-remolque-noche" />
 
 <Warn>
-Estos horarios son de la política de Rijkswaterstaat y no figuran en el texto del RVV que usa el curso. Lee siempre las señales del tramo: pueden cambiar. Una señal en la ruta manda sobre lo que recuerdes.
+Estos horarios son de la política de Rijkswaterstaat (fuente secundaria) y no figuran en el texto del RVV que usa el curso. Lee siempre las señales del tramo: pueden cambiar. Una señal en la ruta manda sobre lo que recuerdes.
 </Warn>
 
 <Rule cite="rvv:62, rvv:63" title="La señal manda">

@@ -3,48 +3,75 @@ questions:
     type: yesno
     prompt: Una columna militar pasa por el cruce. Tú tienes prioridad. ¿Puedes cortarla?
     answer: false
-    explain: Los usuarios de la vía no pueden cortar una columna militar ni un cortejo fúnebre de motorvehículos.
+    explain: Los usuarios de la vía no pueden cortar una columna militar ni un cortejo fúnebre de motorvehículos, aunque tengas prioridad. Esa prioridad no cambia el art. 16.
     cites: ["rvv:16"]
 
-  - id: colonne-stoet
-    type: yesno
-    prompt: La prohibición de cortar también vale para un cortejo fúnebre de motorvehículos.
-    answer: true
-    explain: El art. 16 nombra a las militaire colonnes y a las uitvaartstoeten de motorvehículos.
+  - id: colonne-reconocer
+    type: mc
+    prompt: En un cruce ves varios coches que van seguidos. ¿Cuándo son un cortejo fúnebre al que se aplica el art. 16?
+    options:
+      - Cuando son motorvehículos que acompañan a un difunto y llevan los distintivos oficiales
+      - Cuando varios coches van seguidos con las luces encendidas
+      - Cuando son más de cinco coches seguidos que van al mismo sitio
+    answer: 0
+    explain: La definición pide motorvehículos que acompañan a un difunto o a sus cenizas y llevan los distintivos oficiales. Ir seguidos, con luces o en número no los convierte en cortejo.
+    cites: ["rvv:1", "rvv:16"]
+
+  - id: colonne-ciclista
+    type: mc
+    prompt: Vas en bicicleta y un cortejo fúnebre de motorvehículos con distintivos oficiales pasa por el cruce. Entre dos coches hay un hueco grande. ¿Puedes cruzar por ahí?
+    options:
+      - "No, el art. 16 también obliga a los ciclistas: espero a que termine de pasar"
+      - Sí, el art. 16 solo obliga a quienes van en coche
+      - Sí, si el hueco es lo bastante grande para pasar
+    answer: 0
+    explain: El art. 16 se dirige a los weggebruikers, todos los usuarios de la vía, ciclistas incluidos. El tamaño del hueco no importa.
     cites: ["rvv:16"]
 
   - id: colonne-excepciones
     type: multi
-    prompt: ¿Qué excepciones tienen los motorvehículos que van dentro de una columna militar?
+    prompt: ¿Qué ventajas tienen los motorvehículos que van dentro de una columna militar?
     options:
       - No tienen que dejar pasar a peatones en un paso de peatones
       - No tienen que dejar salir a un autobús de la parada
-      - Pueden cortar cualquier cruce sin mirar
-      - Pueden saltarse todas las señales
+      - No tienen que dejar pasar a una ambulancia con luz azul y sirena
+      - No tienen que parar ante un semáforo en rojo
     answer: [0, 1]
-    explain: Las excepciones nombradas son los arts. 49.3 y 56.2, no hay una exención general.
-    cites: ["rvv:49.3", "rvv:56.2"]
+    explain: Las excepciones son los arts. 49.3 y 56.2. Ninguna te exime del art. 50 (dejar pasar a un vehículo prioritario). El art. 68.4 solo deja seguir a quien empezó a pasar con verde, no ignorar un rojo.
+    cites: ["rvv:49.3", "rvv:56.2", "rvv:50", "rvv:68.4"]
 
-  - id: colonne-semaforo
-    type: yesno
-    prompt: Un motorvehículo de una columna militar que empezó a pasar el semáforo en verde puede seguir aunque cambie la luz.
-    answer: true
-    explain: El art. 68.4 lo permite para columnas militares.
+  - id: colonne-semaforo-militar
+    type: mc
+    prompt: Eres el cuarto camión de una columna militar. Entraste en el cruce con el semáforo en verde, pero se pone rojo antes de que salgas. ¿Qué haces?
+    options:
+      - Sigo hasta salir del cruce, porque empecé a pasar con verde
+      - Me detengo en medio del cruce hasta que vuelva el verde
+      - Me detengo, porque la luz roja obliga también a las columnas
+    answer: 0
+    explain: El art. 68.4 permite a los motorvehículos de una columna militar que empezaron a pasar con verde seguir aunque cambie la luz. Detenerte en medio del cruce lo bloquearía.
     cites: ["rvv:68.4"]
 
-  - id: colonne-semaforo-fuera
-    type: yesno
-    prompt: Tú no formas parte de la columna, pero el semáforo se pone amarillo mientras ellos pasan. ¿Tienes la misma exención?
-    answer: false
-    explain: La excepción es solo para los vehículos de la columna militar.
-    cites: ["rvv:68.4"]
+  - id: colonne-semaforo-civil
+    type: mc
+    prompt: Vas en tu coche particular detrás de una columna militar. La luz se pone roja cuando ya han pasado varios camiones, y aún quedan más por pasar. ¿Qué haces?
+    options:
+      - Me detengo ante el rojo, porque la excepción del art. 68.4 es solo para los vehículos de la columna
+      - Sigo detrás del último camión, como si formara parte de la columna
+      - Acelero para cruzar antes de que cierre el cruce
+    answer: 0
+    explain: Tú no perteneces a la columna, así que el rojo (art. 68.1) rige para ti. Seguir detrás de un camión no te da su excepción.
+    cites: ["rvv:68.1", "rvv:68.4"]
 
-  - id: colonne-peaton
-    type: yesno
-    prompt: Un motorvehículo de un cortejo fúnebre no está obligado a dejar pasar a un peatón en un paso de peatones.
-    answer: true
-    explain: El art. 49.3 los exceptúa.
-    cites: ["rvv:49.3"]
+  - id: colonne-peaton-quien
+    type: mc
+    prompt: Un cortejo fúnebre de motorvehículos cruza un paso de peatones donde espera un peatón. ¿Quién debe dejarlo pasar?
+    options:
+      - Los demás conductores sí, pero los coches del cortejo no
+      - Nadie, porque el cortejo tiene paso libre también para los demás conductores
+      - Todos, incluidos los coches del cortejo
+    answer: 0
+    explain: El art. 49.3 exime solo a los motorvehículos del cortejo de la obligación del art. 49.2. Los demás conductores siguen obligados, y la exención no se extiende a quien va fuera.
+    cites: ["rvv:49.2", "rvv:49.3"]
 
   - id: colonne-hueco
     type: yesno

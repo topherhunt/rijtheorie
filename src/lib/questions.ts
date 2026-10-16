@@ -6,7 +6,7 @@ import type { Question } from './schema.ts';
 
 export interface CiteLink { label: string; url: string; secondary: boolean }
 export interface ClientSign { code: string; es: string; nl: string; img: string }
-export type ClientQuestion = Question & { lessonId: string; citeLinks: CiteLink[]; signs: ClientSign[] };
+export type ClientQuestion = Question & { lessonId: string; citeLinks: CiteLink[]; signs: ClientSign[]; optionKeys?: number[] };
 
 export function citeLinks(cites: string[]): CiteLink[] {
   return cites.map((raw) => {

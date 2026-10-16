@@ -19,24 +19,25 @@ questions:
 
   - id: permisos-y-controles-kentekenbewijs-control
     type: yesno
-    prompt: Un agente te hace señal de parar y te pide la documentación. ¿Debes detener el auto y mostrar el kentekenbewijs y el rijbewijs?
+    prompt: Conduces sin haber cometido ninguna infracción y un agente competente te hace señal de parar. ¿Estás obligado a detenerte y mostrar tus documentos?
     answer: true
-    explain: Ante la primera orden de un agente competente, el conductor de un motorrijtuig debe detener el vehículo y mostrar el kentekenbewijs y el rijbewijs.
+    explain: La obligación nace de la primera orden del agente competente, no de que hayas cometido una infracción. El conductor de un motorrijtuig debe parar y mostrar el kentekenbewijs y el rijbewijs.
     cites: ["wvw:160.1"]
 
-  - id: permisos-y-controles-soplar-negarse
-    type: yesno
-    prompt: En un control un agente te pide soplar en el alcoholímetro (blaastest). ¿Puedes negarte?
-    answer: false
-    explain: Debes colaborar con el examen de aliento ante la primera orden del agente y seguir sus indicaciones.
+  - id: permisos-y-controles-pruebas-obligadas
+    type: mc
+    prompt: En un control, ¿a qué pruebas estás obligado a colaborar ante la primera orden de un agente competente?
+    options: [A la blaastest y a la speekseltest, Solo a la blaastest, Solo a la speekseltest, A ninguna sin orden de un juez]
+    answer: 0
+    explain: El art. 160.5 obliga a colaborar con el examen de aliento y con el de saliva, y a seguir las indicaciones del agente. No hace falta ninguna orden judicial.
     cites: ["wvw:160.5"]
 
-  - id: permisos-y-controles-saliva-colaborar
+  - id: permisos-y-controles-ademanalyse
     type: yesno
-    prompt: En un control un agente quiere hacerte una prueba de saliva (speekseltest). ¿Estás obligado a colaborar?
-    answer: true
-    explain: Ante la primera orden de un agente competente debes colaborar con el examen de saliva, igual que con el de aliento.
-    cites: ["wvw:160.5"]
+    prompt: Tras la prueba de soplar en el control, el agente sospecha que has superado el límite de alcohol y te ordena soplar en el aparato para el examen oficial de aliento (ademanalyse). ¿Puedes negarte?
+    answer: false
+    explain: Quien recibe esa orden está obligado a soplar en el aparato y a seguir las indicaciones del agente. La única excepción son las razones médicas especiales, que aquí no se dan.
+    cites: ["wvw:163"]
 
   - id: permisos-y-controles-rijverbod-sientes-bien
     type: mc
@@ -46,11 +47,12 @@ questions:
     explain: Durante el tiempo que dura el rijverbod (como máximo 24 horas) está prohibido conducir, aunque te sientas bien.
     cites: ["wvw:162"]
 
-  - id: permisos-y-controles-rijverbod-24h
-    type: yesno
-    prompt: Un agente te impone un rijverbod porque has consumido una sustancia y no puedes conducir bien. ¿Puede durar una semana?
-    answer: false
-    explain: El rijverbod dura el tiempo en que se espera que dure ese estado, como máximo 24 horas.
+  - id: permisos-y-controles-rijverbod-maximo
+    type: mc
+    prompt: Un agente te impone un rijverbod porque el alcohol te impide conducir bien. ¿Cuánto puede durar como máximo?
+    options: [Hasta 24 horas, Hasta 48 horas, Hasta 7 días, Hasta que un curso del CBR lo levante]
+    answer: 0
+    explain: El rijverbod dura el tiempo en que se espera que dure ese estado, como máximo 24 horas. No depende de un curso ni de un juez.
     cites: ["wvw:162"]
 
   - id: permisos-y-controles-rijontzegging-agente
@@ -60,10 +62,10 @@ questions:
     explain: La rijontzegging es una pena que se impone al condenar por una infracción. Lo que sí puede imponer un agente en el momento es un rijverbod de hasta 24 horas.
     cites: ["wvw:179", "wvw:162"]
 
-  - id: permisos-y-controles-rijverbod-vs-ontzegging
+  - id: permisos-y-controles-rijontzegging-condena
     type: mc
-    prompt: ¿Cuál es la diferencia entre un rijverbod y una rijontzegging?
-    options: ["El rijverbod lo impone un agente y dura como máximo 24 horas, la rijontzegging es una pena al condenar", El rijverbod lo impone un juez y la rijontzegging un agente, Son lo mismo, Los dos los impone el CBR]
+    prompt: Tras una condena por conducir ebrio, se te retira el derecho a conducir durante dos años. ¿Cómo se llama esa medida?
+    options: [Una rijontzegging, Un rijverbod, Una APK, Una EMA]
     answer: 0
-    explain: El rijverbod es inmediato y lo impone un agente competente por un máximo de 24 horas. La rijontzegging es una pena al condenar por ciertas infracciones.
-    cites: ["wvw:162", "wvw:179"]
+    explain: La rijontzegging es la pena que retira la bevoegdheid por un tiempo al condenar por ciertas infracciones. El rijverbod, en cambio, es la prohibición inmediata de hasta 24 horas que impone un agente.
+    cites: ["wvw:179", "wvw:162"]

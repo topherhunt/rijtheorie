@@ -32,55 +32,33 @@ questions:
     explain: La luz blanca solo dice que no se acerca ningún tren. Aun así solo puedes entrar si puedes seguir sin detenerte y dejar el paso completamente libre, y detenerte en el overweg está prohibido.
     cites: ["rvv:71", "rvv:15a", "rvv:23.1"]
 
-  - id: overweg-fila
-    type: yesno
-    prompt: Llegas a un paso a nivel con la vía libre, pero después del paso hay una fila de autos parados. ¿Puedes entrar y esperar encima de la vía?
-    answer: false
-    explain: Solo puedes entrar si puedes seguir sin detenerte y dejar el paso totalmente libre.
-    cites: ["rvv:15a", "rvv:23.1"]
-
-  - id: overweg-detenerse
-    type: yesno
-    prompt: ¿Está prohibido detenerte en un paso a nivel?
-    answer: true
-    explain: No puedes detenerte (stilstaan) en un overweg.
-    cites: ["rvv:23.1"]
-
   - id: overweg-tren-prioridad
     type: mc
-    prompt: En un paso a nivel, ¿quién pasa primero?
-    options: [Quien llega antes, El vehículo ferroviario, El de más velocidad, El de la derecha]
-    answer: 1
-    explain: En los pasos a nivel dejas pasar primero al vehículo ferroviario y dejas el paso totalmente libre.
+    prompt: Llegas a un paso a nivel y ves un tren que se acerca. ¿Quién pasa primero?
+    options:
+      - El tren, porque dejas pasar al vehículo ferroviario
+      - Tú, si llegaste antes al paso
+      - Tú, si cruzas a buena velocidad
+      - El que tenga prioridad por venir de la derecha
+    answer: 0
+    explain: En los pasos a nivel dejas pasar primero al vehículo ferroviario. Llegar antes o acelerar no cambia la regla.
     cites: ["rvv:15a"]
 
-  - id: overweg-blanca
+  - id: overweg-blanca-luego-roja
     type: mc
-    prompt: En un paso a nivel ves una luz blanca intermitente. ¿Qué significa?
-    options: [Alto, Precaución, No se acerca ningún tren, Un tren se acerca]
-    answer: 2
-    explain: La luz blanca intermitente significa que no se acerca ningún tren.
-    cites: ["rvv:71"]
-
-  - id: overweg-roja
-    type: mc
-    prompt: En un paso a nivel ves una luz roja intermitente. ¿Qué haces?
-    options: [Cruzas rápido, Te detienes, Reduces y cruzas, Tocas la bocina]
-    answer: 1
-    explain: La luz roja intermitente significa alto.
-    cites: ["rvv:71"]
-
-  - id: overweg-amarilla
-    type: mc
-    prompt: ¿Qué significa una luz amarilla intermitente?
-    options: [Alto, "Punto peligroso: precaución", Vía libre, Un tren se acerca]
-    answer: 1
-    explain: La luz amarilla intermitente indica un punto peligroso, donde se requiere precaución.
-    cites: ["rvv:75"]
+    prompt: En un paso a nivel la luz blanca intermitente está encendida y la salida está libre. Más adelante, en otro paso, ves una luz roja intermitente. ¿Qué haces?
+    options:
+      - Cruzas el primero y te detienes ante el segundo
+      - Te detienes en los dos, por si acaso
+      - Cruzas el primero y el segundo, este último más rápido
+      - Te detienes en el primero y cruzas el segundo
+    answer: 0
+    explain: La luz blanca intermitente indica que no se acerca ningún tren, y la roja intermitente significa alto. No hace falta detenerse ante la blanca ni cruzar con prisa ante la roja.
+    cites: ["rvv:71", "rvv:15a"]
 
   - id: overweg-begeleider
     type: multi
-    prompt: ¿Con cuáles de estas señales te debe detener un acompañante de un vehículo ferroviario (begeleider van een railvoertuig)?
+    prompt: Un acompañante de un vehículo ferroviario (begeleider van een railvoertuig) te hace señales en el paso a nivel. ¿Con cuáles debes detenerte?
     options:
       - Una señal F10
       - Una bandera roja
@@ -116,27 +94,32 @@ questions:
 
   - id: overweg-motor
     type: mc
-    prompt: ¿Cómo reduces el riesgo de que el motor se cale en un paso a nivel?
+    prompt: Tu auto se cala con facilidad al arrancar. Te acercas a un paso a nivel. ¿Qué te conviene hacer?
     options:
-      - Cruzas lo más lento posible
-      - Aprovechas la inercia del auto y haces que el arranque crítico ocurra lejos del paso
-      - Apagas el motor antes
-      - Cruzas en primera siempre
+      - Aprovechar la inercia y hacer el arranque más crítico lejos del paso
+      - Cambiar a primera justo encima de la vía para tener más fuerza
+      - Cruzar con la menor velocidad posible para ir seguro
+      - Apagar el motor antes de la vía y encenderlo al cruzar
+    answer: 0
+    explain: Un motor calado encima de la vía es el peor sitio posible. El procedimiento recomienda usar el impulso del auto y que el momento más crítico de arrancar ocurra lejos del paso.
+    cites: ["cbr-rijprocedure:3.6"]
+
+  - id: overweg-sol-sin-luz
+    type: mc
+    prompt: Vas de frente a un sol muy bajo y no ves ninguna luz roja en el paso a nivel que se acerca. ¿Qué haces?
+    options:
+      - Reduces y miras bien a ambos lados, porque el sol puede ocultar la luz roja
+      - Cruzas, porque sin luz roja visible no hay tren
+      - Cruzas si no oyes ninguna campana
+      - Cruzas, porque el sol bajo apaga las luces del paso
+    answer: 0
+    explain: El sol bajo puede hacer invisible la luz roja, y los equipos de seguridad también pueden fallar. No ver la luz no prueba que no venga un tren.
+    cites: ["cbr-rijprocedure:3.6"]
+
+  - id: overweg-baliza-dos-rayas
+    type: mc
+    prompt: Circulas hacia un paso a nivel y ves una baliza con 2 rayas diagonales. ¿A qué distancia aproximada está el paso?
+    options: [Unos 80 m, Unos 160 m, Unos 240 m, Unos 400 m]
     answer: 1
-    explain: El procedimiento recomienda usar el impulso del auto y arrancar lejos del paso.
-    cites: ["cbr-rijprocedure:3.6"]
-
-  - id: overweg-sol
-    type: yesno
-    prompt: Con el sol muy bajo de frente, ¿puede volverse invisible la luz roja de un paso a nivel?
-    answer: true
-    explain: El sol bajo puede cegar y hacer invisible la luz roja. Además los equipos pueden fallar.
-    cites: ["cbr-rijprocedure:3.6"]
-
-  - id: overweg-baliza-distancia
-    type: number
-    prompt: Cerca de un paso a nivel ves una baliza con 3 rayas diagonales. ¿A qué distancia aproximada está el paso?
-    answer: 240
-    unit: m
-    explain: Cada raya diagonal indica unos 80 m hasta el paso a nivel, así que 3 rayas son unos 240 m.
+    explain: Cada raya diagonal indica unos 80 m hasta el paso a nivel, así que 2 rayas son unos 160 m.
     cites: ["cbr-rijprocedure:3.6"]

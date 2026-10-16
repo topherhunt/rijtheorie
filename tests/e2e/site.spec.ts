@@ -37,12 +37,12 @@ test('every page has a report link that carries the page path and explains itsel
 test('lesson quiz: a correct answer shows correct feedback, a wrong one shows the explanation and source', async ({ page }) => {
   await page.goto(LESSON);
   const right = await question(page, 'regla-derecha-basica');
-  await right.locator('.qa-option').nth(1).click();
+  await right.locator('.qa-option-1').click();
   await right.locator('.qa-check').click();
   await expect(right.locator('.qa-feedback-correct')).toBeVisible();
 
   const wrong = await question(page, 'regla-derecha-tierra');
-  await wrong.locator('.qa-option').nth(0).click();
+  await wrong.locator('.qa-option-0').click();
   await wrong.locator('.qa-check').click();
   await expect(wrong.locator('.qa-feedback-wrong')).toBeVisible();
   await expect(wrong.locator('.qa-feedback-wrong .qa-cite')).toHaveAttribute('href', /wetten\.overheid\.nl.*BWBR0004825.*artikel=15/);
@@ -59,7 +59,7 @@ test('marking a lesson read shows a checkmark next to it on the home page', asyn
 test('the home page counts the questions of a lesson whose latest answer is correct', async ({ page }) => {
   await page.goto(LESSON);
   const q = await question(page, 'regla-derecha-basica');
-  await q.locator('.qa-option').nth(1).click();
+  await q.locator('.qa-option-1').click();
   await q.locator('.qa-check').click();
   await expect(q.locator('.qa-feedback-correct')).toBeVisible();
   await page.goto('/es/');

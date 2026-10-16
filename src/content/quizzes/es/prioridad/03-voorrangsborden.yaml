@@ -64,15 +64,6 @@ questions:
     explain: B5 es Voorrangskruispunt, zijweg rechts, así que sabes de antemano que puede aparecer tráfico desde una vía lateral por tu derecha (con B4 sería por la izquierda). Lo que termina la prioridad es B2, y ninguna de estas señales obliga a parar.
     cites: ["rvv:bijlage1.B5", "rvv:bijlage1.B4", "rvv:bijlage1.B2"]
 
-  - id: voorrangsborden-b4-lado
-    type: mc
-    prompt: Con la señal B4 en tu vía, ¿hacia qué lado miras primero para ver el tráfico que viene de la vía lateral?
-    sign: B4
-    options: [Hacia la izquierda, Hacia la derecha, Hacia atrás, "Hacia ningún lado, porque tienes prioridad"]
-    answer: 0
-    explain: "B4 es Voorrangskruispunt, zijweg links: la vía lateral se une por la izquierda. Tener prioridad no te dispensa de mirar ese lado."
-    cites: ["rvv:bijlage1.B4", "rvv:bijlage1.B5"]
-
   - id: voorrangsborden-b5-ceder
     type: mc
     prompt: Estás en una vía con B5. B viene por tu derecha por la vía lateral, que tiene B6 en su entrada. ¿Quién pasa primero?
@@ -88,16 +79,27 @@ questions:
     explain: Quien tiene delante B6 debe ceder el paso a los conductores de la vía que cruza (art. 80). Esa señal manda sobre la regla de la derecha, así que B cede aunque venga por tu derecha.
     cites: ["rvv:bijlage1.B6", "rvv:80", "rvv:63"]
 
-  - id: voorrangsborden-afbuigend
+  - id: voorrangsborden-b5-no-cede
     type: mc
-    prompt: Un panel debajo de la señal muestra que la vía con prioridad dobla a la izquierda. Sigues esa vía. Según el CBR, ¿qué cuenta como esa maniobra?
+    prompt: Vas por una vía con B5 y te acercas al cruce. Por la vía lateral de la derecha llega un auto a buena velocidad y no parece que vaya a detenerse en la B6. ¿Qué haces?
+    sign: B5
     options:
-      - Cuenta como ir recto
-      - Cuenta como girar a la izquierda
-      - Cuenta como dar la vuelta
-      - Cuenta como maniobra especial
+      - Adapto mi velocidad y freno a tiempo si hace falta, para evitar el choque
+      - Sigo a la misma velocidad, porque la prioridad es mía
+      - Toco el claxon y acelero para pasar antes que él
     answer: 0
-    explain: Con el onderbord afbuigende voorrang, seguir la vía que indica el panel cuenta como ir recto; salir de ella cuenta como girar.
+    explain: Tener prioridad no evita el choque. El CBR pide adaptar la velocidad cuando el tráfico de la vía lateral no da la impresión de ceder el paso, y frenar a tiempo si el otro no lo hace.
+    cites: ["cbr-rijprocedure:3.3"]
+
+  - id: voorrangsborden-afbuigend-recto
+    type: mc
+    prompt: Circulas por una vía con prioridad. Un panel debajo de la señal muestra que esa vía dobla a la izquierda, y tú sigues la curva. ¿Cómo cuenta esto para la prioridad?
+    options:
+      - Como ir recto, y mantienes tu prioridad
+      - Como girar a la izquierda, y cedes a quien venga de frente
+      - Como una maniobra especial, y cedes a todos
+    answer: 0
+    explain: Seguir el recorrido que indica el panel cuenta como ir recto. Solo si te desvías de ese recorrido cuentas como quien gira.
     cites: ["cbr-rijprocedure:3.3"]
 
   - id: voorrangsborden-afbuigend-salir
@@ -105,9 +107,8 @@ questions:
     prompt: Un panel de afbuigende voorrang indica que la vía con prioridad gira a la derecha. En el cruce no sigues esa vía sino que continúas recto. Según el CBR, ¿cómo cuenta tu maniobra?
     options:
       - Como girar (afslaan), con las obligaciones del art. 18
-      - Como ir recto, con prioridad
-      - Como dar la vuelta (keren)
-      - Como cambio de carril
+      - Como ir recto, y conservas la prioridad
+      - Como una maniobra especial (art. 54)
     answer: 0
     explain: Si sigues el trazado que indica el panel cuenta como recto; si te apartas de él, el CBR lo trata como afslaan, y entonces dejas pasar al tráfico de frente y al de tu lado (art. 18).
     cites: ["cbr-rijprocedure:3.3", "rvv:18.1"]

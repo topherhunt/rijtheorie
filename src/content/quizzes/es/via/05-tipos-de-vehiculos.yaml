@@ -7,19 +7,19 @@ questions:
     explain: Motorvoertuig excluye las bromfietsen, las bicicletas con asistencia al pedaleo, los gehandicaptenvoertuigen y los vehículos sobre rieles.
     cites: ["rvv:1"]
 
-  - id: vehiculos-bromfiets-no
+  - id: vehiculos-bromfiets-autoweg
     type: yesno
-    prompt: ¿Es una bromfiets un motorvoertuig para el RVV?
+    prompt: Un bromfietser quiere tomar una autoweg, donde el mínimo es de 50 km/h, y su bromfiets llega justo a 45 km/h. ¿Puede entrar con ella?
     answer: false
-    explain: La definición de motorvoertuig excluye las bromfietsen.
-    cites: ["rvv:1"]
+    explain: La autoweg solo la usan conductores de un motorvoertuig que pueda y esté autorizado a circular al menos a 50 km/h. La bromfiets no es un motorvoertuig, y además sus 45 km/h no llegan al mínimo.
+    cites: ["rvv:42", "rvv:1", "wvw:1.1"]
 
   - id: vehiculos-carril-izq-camion-furgoneta
     type: multi
     prompt: En una autosnelweg de tres carriles por sentido (sin necesidad de preseleccionar), ¿cuáles de estos vehículos tienen prohibido el carril izquierdo?
-    options: [Una furgoneta de mercancías de 3500 kg de masa máxima autorizada sin remolque, Un camión de 3600 kg de masa máxima, Un coche con un remolque en un conjunto de 8 m, Un coche de pasajeros de 4,5 m]
+    options: [Una furgoneta de mercancías de 3500 kg de masa máxima autorizada sin remolque, Un camión de 3600 kg de masa máxima, Un coche con remolque en un conjunto de 8 m, Un coche con remolque en un conjunto de 6,5 m]
     answer: [1, 2]
-    explain: El art. 43.4 prohíbe usar otros carriles que los dos de la derecha a los vrachtauto (más de 3500 kg) y a los conjuntos de más de 7 m. Hasta 3500 kg es un bestelauto, que no está incluido.
+    explain: El art. 43.4 prohíbe usar otros carriles que los dos de la derecha a los vrachtauto (más de 3500 kg) y a los conjuntos de más de 7 m. Hasta 3500 kg es un bestelauto, que no está incluido, y un conjunto de 6,5 m no supera los 7 m.
     cites: ["rvv:43.4", "rvv:1"]
 
   - id: vehiculos-minibus-bus-lane
@@ -36,21 +36,13 @@ questions:
     explain: Autobus es el vehículo construido para más de ocho personas sin contar al conductor. Con 8 pasajeros no lo es, así que no puedes usar un carril con BUS iluminado.
     cites: ["rvv:1", "rvv:73"]
 
-  - id: vehiculos-reglas-brommobiel
+  - id: vehiculos-brommobiel-cinturon
     type: mc
-    prompt: ¿Qué reglas sigue en general una brommobiel?
-    options: [Las de la bicicleta, Las del vehículo de motor, Las de los peatones, Las de la bromfiets en todo caso]
-    answer: 1
-    explain: Salvo que se diga otra cosa, la brommobiel sigue las reglas de los vehículos de motor y no las de la bromfiets.
-    cites: ["rvv:2a"]
-
-  - id: vehiculos-reglas-snorfiets
-    type: mc
-    prompt: ¿Qué reglas sigue en general una snorfiets?
-    options: [Las de la bicicleta, Las del vehículo de motor, Las de los peatones, Las de la brommobiel]
+    prompt: Viajas en una brommobiel con un pasajero adulto, y los dos asientos tienen cinturón. ¿Quién debe llevarlo puesto?
+    options: ["El conductor y el pasajero", "Solo el conductor", "Solo el pasajero", "Nadie, porque es una bromfiets"]
     answer: 0
-    explain: Salvo que se diga otra cosa, la snorfiets sigue las reglas de la bicicleta y no las de la bromfiets.
-    cites: ["rvv:2b"]
+    explain: El art. 59 nombra a la brommobiel junto al coche, así que el conductor y sus pasajeros usan el cinturón disponible. Que sea una bromfiets no exime, porque la brommobiel sigue las reglas de los vehículos de motor.
+    cites: ["rvv:59.1", "rvv:2a"]
 
   - id: vehiculos-speed-pedelec-g12a
     type: mc
@@ -63,11 +55,11 @@ questions:
 
   - id: vehiculos-brommobiel-g12a
     type: mc
-    prompt: Conduces una brommobiel (bromfiets de cuatro ruedas con carrocería). Junto a la calzada hay un camino con la señal G12a. ¿Por dónde vas?
+    prompt: Conduces una brommobiel (bromfiets de más de dos ruedas con carrocería). Junto a la calzada hay un camino con la señal G12a. ¿Por dónde vas?
     sign: G12a
-    options: ["Por el camino G12a, como cualquier bromfiets", Por la rijbaan, Por donde prefieras, Por el camino solo si va vacío]
+    options: ["Por el camino G12a, como cualquier bromfiets", Por la rijbaan, Por donde prefieras, Por el camino si no hay nadie en él]
     answer: 1
-    explain: Una brommobiel sigue las reglas de los vehículos de motor en lugar de las de la bromfiets (art. 2a), y los vehículos de motor usan la rijbaan (art. 10.1).
+    explain: Una brommobiel sigue las reglas de los vehículos de motor en lugar de las de la bromfiets (art. 2a), y los vehículos de motor usan la rijbaan (art. 10.1). El G12a no es para ella aunque el camino esté vacío.
     cites: ["rvv:2a", "rvv:10.1"]
 
   - id: vehiculos-ebike-g11
@@ -80,7 +72,7 @@ questions:
 
   - id: vehiculos-gehandicapten
     type: yesno
-    prompt: Un vehículo para una persona con discapacidad de 1,40 m de ancho, ¿es un gehandicaptenvoertuig según el RVV?
+    prompt: Un vehículo para una persona con discapacidad mide 1,40 m de ancho. ¿Es un gehandicaptenvoertuig, con derecho a circular por el trottoir como tal?
     answer: false
-    explain: El gehandicaptenvoertuig no puede ser más ancho que 1,10 m.
-    cites: ["rvv:1"]
+    explain: El gehandicaptenvoertuig no puede ser más ancho que 1,10 m. Con 1,40 m no lo es, y el permiso del art. 7 de usar el trottoir y los demás caminos es solo para los gehandicaptenvoertuigen.
+    cites: ["rvv:1", "rvv:7"]

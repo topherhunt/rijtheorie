@@ -14,6 +14,8 @@ Dentro de la <T id="bebouwde-kom" /> la velocidad máxima de los vehículos de m
 
 H1 marca el comienzo de la zona urbana y H2 el final. Al pasar H2 dejas de estar en la zona urbana y rigen los máximos de fuera (lo siguiente).
 
+El motivo es de sentido común: en una zona urbana hay peatones, ciclistas y cruces a cada paso, y el margen para frenar es corto.
+
 <Check id="limites-urbana" />
 
 ## Fuera de la zona urbana
@@ -27,15 +29,14 @@ Fuera de la zona urbana la velocidad máxima de los vehículos de motor es:
 
 <Signs codes="G1,G3" />
 
-G1 es la autosnelweg y G3 la autoweg. Todo lo demás, fuera de la zona urbana, es "otra vía".
+G1 es la autosnelweg y G3 la autoweg. Todo lo demás, fuera de la zona urbana, es "otra vía". Cuanto más "autopista" es la vía, más alto es el máximo; sentido común: la autosnelweg solo admite vehículos de motor que van a 60 km/h o más (más abajo), así que no mezcla tráfico muy lento con el rápido.
 
 <Check id="limites-autosnelweg" />
 <Check id="limites-autoweg" />
-<Check id="limites-otras" />
 <Check id="limites-h2-otra-via" />
 
 <Warn>
-Los 130 km/h de la autosnelweg son un máximo general. En la práctica, muchas autopistas tienen señales que lo bajan: se ve en las lecciones siguientes.
+Estos son máximos **generales**. Una señal de velocidad (art. 62 y 63) o el límite de tu clase de vehículo (por ejemplo con un remolque, art. 22) pueden bajarlos, y entonces rige el más bajo. Lo ves en las lecciones siguientes: no des por hecho que puedes ir al máximo general.
 </Warn>
 
 ## Velocidad mínima
@@ -58,7 +59,10 @@ En el RVV, «motorvoertuigen» no incluye los bromfietsen ni los gehandicaptenvo
 En la calzada, un <T id="bromfiets" /> y un vehículo para personas con discapacidad con motor van a un máximo de **45 km/h**, dentro y fuera de la zona urbana. En el fiets/bromfietspad: **30 km/h** dentro y **40 km/h** fuera.
 </Rule>
 
+El 45 es el límite de la bromfiets, no de todo ciclomotor pequeño: el snorfiets tiene su propio límite más bajo (lección 4).
+
 <Check id="limites-bromfiets" />
+<Check id="limites-bromfiets-calzada-vs-pad" />
 
 ## Las señales mandan
 
@@ -71,3 +75,4 @@ La Wegenverkeerswet prohíbe violar a propósito y de forma grave las reglas de 
 </Rule>
 
 <Check id="limites-senal-prevalece" />
+<Check id="limites-exceso-grave" />

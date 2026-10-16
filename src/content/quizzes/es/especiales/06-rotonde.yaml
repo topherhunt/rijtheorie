@@ -1,18 +1,10 @@
 questions:
-
   - id: rotonde-sin-d1-adelantar-derecha
     type: yesno
-    prompt: Estás en una plaza circular que no tiene señal D1. Un auto delante de ti va lento por el carril izquierdo. ¿Puedes adelantarlo por la derecha usando la excepción de las rotondas?
+    prompt: Estás en una plaza circular que no tiene señal D1. Un auto delante de ti va lento por el carril izquierdo. ¿Puedes adelantarlo por la derecha?
     answer: false
-    explain: Las excepciones legales de las rotondas (ir por un lugar distinto del lado derecho, adelantar por la derecha) valen solo en plazas marcadas con D1. Sin D1 no se aplican.
+    explain: Las excepciones legales de las rotondas (ir por un lugar distinto del lado derecho, adelantar por la derecha) valen solo en plazas marcadas con D1. Sin D1 esas excepciones no existen y se aplican las reglas generales.
     cites: ["rvv:48", "cbr-rijprocedure:3.6"]
-
-  - id: especial-rotonde-adelantar
-    type: yesno
-    prompt: En una rotonda (con D1), ¿está permitido adelantar por la derecha?
-    answer: true
-    explain: La ley permite adelantar por la derecha cerca de una rotonda o en ella.
-    cites: ["rvv:48"]
 
   - id: rotonde-quien-no-derecha
     type: multi
@@ -27,74 +19,73 @@ questions:
 
   - id: rotonde-mirar-entrar
     type: mc
-    prompt: Justo antes de entrar a una rotonda, ¿hacia dónde miras para decidir si puedes entrar?
-    options: [Hacia delante y hacia la izquierda, Solo hacia la derecha, Solo por el espejo, Hacia atrás]
+    prompt: Estás a punto de entrar a una rotonda y quieres saber si puedes hacerlo. ¿Hacia dónde miras justo antes de entrar?
+    options:
+      - Hacia delante y hacia la izquierda, además de los espejos para saber qué pasa detrás
+      - Solo hacia la derecha, de donde vendrían los ciclistas
+      - Solo hacia delante, para no perder de vista el auto que te precede
+      - Solo por el espejo interior
     answer: 0
-    explain: Mira hacia delante y a la izquierda, y también los espejos para ver lo que pasa detrás. Con B6, todavía con más atención.
+    explain: Justo antes de entrar miras hacia delante y a la izquierda, y usas los espejos para ver lo que pasa detrás. Antes, desde lejos, ya habías observado si venían ciclistas o ciclomotores por la derecha.
     cites: ["cbr-rijprocedure:3.6"]
 
-  - id: rotonde-b6-cruce
+  - id: rotonde-b6-entrar-izquierda
     type: mc
-    prompt: Llegas a un cruce de vías con una señal B6 y por la vía que cruza se acerca un auto. ¿Qué haces?
     sign: B6
+    prompt: Vas a entrar a una rotonda con esta señal en tu entrada. Un auto que ya circula por la rotonda se acerca por tu izquierda. ¿Quién pasa primero?
     options:
-      - Pasas primero, porque llegaste antes
-      - Le cedes el paso
-      - Pasas si ese auto va despacio
-      - Tocas la bocina y pasas
-    answer: 1
-    explain: B6 significa "cede el paso a los conductores de la vía que cruza". Quien viene por esa vía pasa antes que tú, sin importar quién llegó primero.
+      - El auto de la rotonda, porque B6 te obliga a ceder a quien circula por ella
+      - Tú, porque el auto viene por tu izquierda y la regla de la derecha te da prioridad
+      - Tú, porque quien entra a una rotonda tiene prioridad sobre quien ya circula
+      - Quien llegue antes al punto de entrada
+    answer: 0
+    explain: B6 te obliga a ceder el paso a los conductores de la vía que cruza, y en la entrada de una rotonda esa vía es la rotonda. La regla de la derecha solo valdría sin B6 ni dientes de tiburón; con la señal no importa que el auto llegue por tu izquierda.
     cites: ["rvv:bijlage1.B6"]
 
   - id: rotonde-salir-ceder
     type: mc
-    prompt: Vas a salir de una rotonda. ¿Qué haces con el tráfico que sigue dando vueltas?
+    prompt: Vas a salir de una rotonda y por el carril bici que la rodea se acerca un ciclista. ¿Qué haces?
     options:
-      - Pasas antes, porque sales
-      - Le cedes el paso
-      - Depende de la velocidad
-      - Tocas la bocina
-    answer: 1
-    explain: Al salir se deja pasar al tráfico que sigue en la rotonda, también el del carril bici independiente.
-    cites: ["cbr-rijprocedure:3.6"]
-
-  - id: rotonde-salir-mirar
-    type: mc
-    prompt: Al salir de la rotonda, ¿hacia qué lado miras por encima del hombro?
-    options: [Izquierdo, Derecho, Ninguno, Los dos]
-    answer: 1
-    explain: Para observar el tráfico a tu derecha miras por el espejo interior, el exterior derecho y por encima del hombro derecho.
-    cites: ["cbr-rijprocedure:3.6"]
-
-  - id: rotonde-primera-salida
-    type: mc
-    prompt: Vas a tomar la primera salida de una rotonda. ¿Qué intermitente pones al acercarte?
-    options: [Derecho, Izquierdo, Ninguno hasta salir, Los dos]
+      - Miras a la derecha (espejo interior, exterior derecho y hombro derecho) y le cedes el paso
+      - Miras a la izquierda y pasas primero, porque tú sales de la rotonda
+      - Miras a la derecha y pasas si el ciclista va despacio
+      - Tocas la bocina y sales
     answer: 0
-    explain: Para la primera salida, intermitente derecho al acercarte.
+    explain: Al salir se mira a la derecha y se deja pasar al tráfico que sigue en la rotonda, también a los ciclistas del carril bici.
+    cites: ["cbr-rijprocedure:3.6"]
+
+  - id: rotonde-no-bloquear-fietspad
+    type: mc
+    prompt: Hay cola para entrar a la rotonda y un carril bici independiente cruza justo antes de la entrada. ¿Dónde esperas?
+    options:
+      - Antes del carril bici, sin bloquearlo
+      - Encima del carril bici, para estar más cerca de la entrada
+      - Con las ruedas delanteras sobre el carril bici, con el intermitente puesto
+    answer: 0
+    explain: Al acercarte a la rotonda, circular por ella y salir no debes bloquear los carriles bici independientes (vrijliggende fietspaden).
     cites: ["cbr-rijprocedure:3.6"]
 
   - id: rotonde-tres-cuartos
     type: mc
-    prompt: Vas a dar tres cuartos de vuelta en una rotonda. ¿Qué intermitente pones al acercarte?
-    options: [Derecho, Izquierdo, Ninguno, Los dos]
-    answer: 1
-    explain: Para tres cuartos de vuelta, intermitente izquierdo al acercarte. Luego señalizas la salida.
-    cites: ["cbr-rijprocedure:3.6"]
-
-  - id: especial-rotonde-carril-cuarto
-    type: mc
-    prompt: Rotonda de tres carriles sin flechas. Vas a tomar la primera salida. ¿Qué carril usas?
-    options: [Izquierdo, Medio, Derecho, Cualquiera]
-    answer: 2
-    explain: Para un cuarto de vuelta se usa el carril derecho.
+    prompt: Te acercas a una rotonda y tu salida es la tercera, tres cuartos de vuelta. ¿Qué señalizas al acercarte?
+    options:
+      - Intermitente izquierdo, y después señalizas la salida
+      - Intermitente derecho, como en cualquier salida
+      - Ningún intermitente hasta tener la salida a la vista
+      - Los dos intermitentes a la vez
+    answer: 0
+    explain: Para tres cuartos de vuelta, intermitente izquierdo al acercarte; para la primera salida sería el derecho. Luego señalizas la salida.
     cites: ["cbr-rijprocedure:3.6"]
 
   - id: especial-rotonde-carril-media
     type: mc
-    prompt: Rotonda de tres carriles sin flechas. Vas a tomar la segunda salida (media vuelta). ¿Qué carril prefieres al entrar?
-    options: [Izquierdo, Medio, Derecho, Cualquiera]
-    answer: 1
+    prompt: Rotonda de tres carriles sin flechas. Vas a tomar la segunda salida (media vuelta). ¿Cómo usas los carriles?
+    options:
+      - Entras por el carril medio y, pasada la primera salida, pasas al derecho
+      - Entras por el carril derecho y sigues por él
+      - Entras por el carril izquierdo y pasas al medio en la salida
+      - Entras por el carril medio y sales desde él
+    answer: 0
     explain: "Media vuelta: de preferencia el carril medio y, pasada la primera salida, el derecho."
     cites: ["cbr-rijprocedure:3.6"]
 
@@ -111,19 +102,15 @@ questions:
     cites: ["cbr-rijprocedure:3.6"]
 
   - id: rotonde-no-siempre
-    type: yesno
-    prompt: ¿Se aplica siempre el procedimiento de carriles de las rotondas de tres carriles?
-    answer: false
-    explain: No vale en plazas asimétricas, rotondas sin carriles, rotondas con semáforos y flechas, con tráfico intenso ni para todos los vehículos.
-    cites: ["cbr-rijprocedure:3.6"]
-
-  - id: rotonde-turbo-carril
     type: mc
-    prompt: ¿Cuándo eliges el carril en una turborrotonda?
-    options: [Dentro de la rotonda, Antes de entrar, Justo antes de salir, Da igual]
-    answer: 1
-    explain: Elige el carril correcto antes de entrar a la turborrotonda.
-    cites: ["vvn-turborotonde"]
+    prompt: Llegas a una rotonda de tres carriles con semáforos y flechas pintadas en el pavimento. ¿Aplicas el procedimiento de carriles de las rotondas sin flechas?
+    options:
+      - No, usas el carril que corresponde a tu dirección según las flechas
+      - Sí, es el procedimiento general de todas las rotondas
+      - Sí, pero solo si no hay tráfico intenso
+    answer: 0
+    explain: El procedimiento no vale en plazas asimétricas, rotondas sin carriles, rotondas con semáforos y flechas, con tráfico intenso ni para todos los vehículos. Con flechas, usas el carril de tu dirección.
+    cites: ["cbr-rijprocedure:3.6"]
 
   - id: rotonde-turbo-cambiar
     type: yesno

@@ -7,53 +7,55 @@ questions:
     cites: ["rvv:19"]
 
   - id: adaptar-lento
-    type: yesno
-    prompt: "Sin necesidad, ¿conviene circular excepcionalmente despacio respecto al resto del tráfico?"
-    answer: false
-    explain: "Causa estorbo innecesario y puede ser peligroso."
+    type: mc
+    prompt: "Vas por una carretera normal seca y despejada, con máximo de 80, y llevas 40 km/h sin ningún motivo. Detrás tuyo se forma una cola. ¿Qué es lo correcto?"
+    options: ["Subir hasta una velocidad acorde al tráfico, sin pasar de 80", "Seguir a 40: más despacio siempre es más seguro", "Parar en el arcén para que pasen todos", "Poner las luces de emergencia y seguir"]
+    answer: 0
+    explain: "Sin necesidad, ir excepcionalmente lento respecto al resto del tráfico causa estorbo y puede ser peligroso. Ir más despacio no es seguro por sí solo; lo correcto es ajustarte a la situación y al tráfico, sin pasar del máximo."
     cites: ["cbr-rijprocedure:3.2", "wvw:5"]
 
   - id: adaptar-curva
     type: mc
-    prompt: "Te acercas a una curva. ¿Cuándo regulas la velocidad?"
-    options: [Antes de entrar en la curva, En medio de la curva, Al salir de la curva, No hace falta]
+    prompt: "Vas a 90 km/h en una carretera de 100 y ves que se acerca una curva cerrada. ¿Cuándo regulas la velocidad?"
+    options: ["Antes de entrar en la curva", "Cuando ya estoy en medio de la curva", "Al ver el final de la curva", "No hace falta: sigo a 90 si no pasa de 100"]
     answer: 0
-    explain: "Se adapta antes de entrar, para recorrerla de forma segura y responsable."
+    explain: "La velocidad se regula antes de entrar, para recorrer la curva de forma segura. Frenar ya dentro puede ser tarde, y estar bajo el máximo (100) no significa que 90 sea una velocidad adecuada para esa curva."
     cites: ["cbr-rijprocedure:3.2"]
 
   - id: adaptar-salida-curva
     type: mc
-    prompt: "Sales de una curva con visibilidad. ¿Qué haces con la velocidad?"
-    options: [La vuelvo a subir hasta el máximo vigente, Me quedo lento, Freno, La subo por encima del máximo]
+    prompt: "Sales de una curva cerrada a 50 km/h y ves que el tramo siguiente es recto, seco y despejado; el máximo es 80. ¿Qué haces con la velocidad?"
+    options: ["La subo de nuevo hasta el máximo vigente, según el tráfico", "Me quedo a 50 por si aparece otra curva", "Freno un poco más, por seguridad", "La subo por encima de 80, que está despejado"]
     answer: 0
-    explain: "Al salir se sube la velocidad conforme al máximo vigente."
+    explain: "Al salir de la curva, con visibilidad, se vuelve a subir la velocidad hasta el máximo vigente. Quedarte lento sin necesidad estorba al tráfico, y pasar del máximo nunca es opción."
     cites: ["cbr-rijprocedure:3.2"]
 
   - id: adaptar-curva-ciega-subir
     type: mc
-    prompt: "En una curva sin visibilidad, ¿cuándo subes la velocidad?"
-    options: [Cuando ves toda la curva, Al entrar, Nunca, Cuando aparece otro auto]
+    prompt: "Estás dentro de una curva sin visibilidad y todavía no ves cómo sigue la vía, aunque ya has pasado lo peor. ¿Cuándo empiezas a acelerar?"
+    options: ["Cuando veo la curva entera y su salida", "En cuanto paso el centro de la curva", "Cuando oigo que no viene nadie", "Cuando un auto de detrás me presiona"]
     answer: 0
-    explain: "En curvas sin visibilidad se sube la velocidad solo cuando la curva se ve completa."
-    cites: ["cbr-rijprocedure:3.2"]
+    explain: "En una curva sin visibilidad se sube la velocidad solo cuando la ves entera: hasta entonces no sabes qué hay delante. Que alguien te presione no cambia lo que ves libre (art. 19)."
+    cites: ["cbr-rijprocedure:3.2", "rvv:19"]
 
-  - id: adaptar-no-aumentar
-    type: yesno
-    prompt: "Alguien te está adelantando. ¿Debes aumentar tu velocidad?"
-    answer: false
-    explain: "Al ser adelantado no se aumenta la velocidad."
-    cites: ["cbr-rijprocedure:3.2"]
+  - id: adaptar-poco-espacio
+    type: mc
+    prompt: "Circulas por una calle estrecha dentro de la zona urbana con coches aparcados a ambos lados, peatones en la acera y ciclistas cerca. El máximo es 50. ¿Qué velocidad eliges?"
+    options: ["Menor de 50, porque hay poco espacio entre mi coche y los demás", "50, porque es el máximo permitido", "Menor de 50 solo si llueve", "50, porque los ciclistas se apartan"]
+    answer: 0
+    explain: "Cuanto menos espacio hay entre tú y otros, más despacio debes ir. El 50 es un tope, no la velocidad adecuada en cualquier calle, y que los demás tengan que apartarse no te libera de adaptar la velocidad."
+    cites: ["cbr-rijprocedure:3.2", "wvw:5"]
 
   - id: adaptar-niebla-bajo-maximo
     type: mc
     prompt: "Hay niebla densa y ves la vía libre solo hasta 40 m. A tu velocidad actual (80 km/h) necesitarías unos 60 m para detenerte. El máximo es 100 km/h. ¿Qué exige el art. 19?"
     options:
-      - "Nada: voy por debajo del máximo"
-      - "Reducir la velocidad hasta poder detenerme dentro de lo que veo libre"
-      - "Mantener 80 y encender las luces"
-      - "Seguir al auto de delante"
+      - "Nada: voy por debajo del máximo de 100"
+      - "Bajar hasta poder detenerme dentro de lo que veo"
+      - "Mantener 80 y encender las luces para que me vean"
+      - "Pegarme al auto de delante para guiarme"
     answer: 1
-    explain: "El art. 19 obliga a poder detenerse dentro de la distancia que ves libre. Estar bajo el máximo no basta."
+    explain: "El art. 19 obliga a poder detenerse dentro de la distancia que ves libre: aquí 40 m, y a 80 km/h necesitas 60. Estar bajo el máximo no basta, y pegarte al de delante te quita aún más margen."
     cites: ["rvv:19"]
 
   - id: adaptar-mojado-art19

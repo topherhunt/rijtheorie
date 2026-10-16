@@ -1,9 +1,9 @@
 questions:
-  - id: sanciones-accidente-rijverbod
+  - id: sanciones-accidente-rijverbod-aun-no-conduce
     type: yesno
-    prompt: Tienes un rijverbod vigente. ¿Puedes conducir si ya te sientes mejor?
-    answer: false
-    explain: Está prohibido conducir mientras dure el rijverbod.
+    prompt: Un agente ve a una persona que se tambalea y arrastra las palabras, con las llaves en la mano, abriendo la puerta de su auto. Todavía no ha arrancado. ¿Puede imponerle un rijverbod?
+    answer: true
+    explain: El rijverbod puede imponerse también a quien se dispone a conducir (aanstalten maakt), no solo a quien ya está al volante, y dura hasta 24 horas.
     cites: ["wvw:162"]
 
   - id: sanciones-accidente-huir
@@ -14,33 +14,40 @@ questions:
     explain: Está prohibido abandonar el lugar si hay daños a otra persona, salvo que hayas dado la oportunidad de verificar tu identidad y la del vehículo.
     cites: ["wvw:7"]
 
-  - id: sanciones-accidente-herido
+  - id: sanciones-accidente-desamparo
     type: yesno
-    prompt: Hubo un herido en un accidente en el que participaste. Nadie ha verificado aún tu identidad. ¿Está prohibido abandonar el lugar?
-    answer: true
-    explain: Con muertos, heridos o daños no puedes irte sin dar antes la oportunidad de verificar tu identidad. Y nunca puedes irte si dejas a un herido desamparado.
+    prompt: Atropellas a un ciclista que cae herido y no puede levantarse. Le das tu nombre y la matrícula, y un testigo los apunta. ¿Puedes irte del lugar?
+    answer: false
+    explain: Dar tu identidad te libera de la prohibición de irte cuando hay heridos o daños, pero nunca puedes irte si así dejas en estado de desamparo a una persona herida.
     cites: ["wvw:7"]
 
   - id: sanciones-accidente-ongeldig
     type: mc
-    prompt: Si no cooperas con el CBR, ¿qué pasa con tu permiso?
-    options: [Nada, El CBR lo declara inválido y debes entregarlo, Te dan uno nuevo, Solo te multan]
-    answer: 1
-    explain: El CBR declara el permiso inválido; entra en vigor el séptimo día tras la notificación.
+    prompt: El CBR te pidió un examen de aptitud y no cooperas. ¿Qué pasa con tu permiso?
+    options: ["El CBR lo declara inválido a partir del séptimo día tras notificarte, y debes entregarlo", "Queda suspendido solo hasta que pagues una multa", "Sigue válido y el CBR te vuelve a citar después", "Se invalida al instante, antes de notificarte"]
+    answer: 0
+    explain: Si no cooperas, el CBR declara el permiso inválido; la decisión entra en vigor el séptimo día después de la notificación y debes entregar el permiso.
     cites: ["wvw:132"]
 
   - id: sanciones-accidente-123b
     type: yesno
-    prompt: Te condenan otra vez por conducir bajo influencia dentro de 5 años de una condena anterior similar. ¿Puede tu permiso perder validez para todas las categorías?
+    prompt: Hace 3 años te condenaron (sentencia firme) por soplar 300 µg/l. Ahora te condenan por conducir con 650 µg/l. ¿Pierde tu permiso la validez para todas las categorías?
     answer: true
-    explain: En ese caso el permiso pierde validez y, para obtener uno nuevo, debes demostrar tu aptitud.
+    explain: El nuevo nivel supera 570 µg/l y tienes una condena anterior por alcohol dentro de los 5 años, a cualquier nivel. Se cumplen las dos condiciones del artículo 123b.
+    cites: ["wvw:123b"]
+
+  - id: sanciones-123b-nivel-bajo
+    type: yesno
+    prompt: Hace 3 años te condenaron (sentencia firme) por soplar 400 µg/l. Ahora te condenan solo por soplar 300 µg/l, sin otra circunstancia. ¿Pierde tu permiso la validez para todas las categorías por el artículo 123b?
+    answer: false
+    explain: El artículo 123b exige que la condena nueva sea de las graves (más de 570 µg/l, art. 8 lid 1 o 5, o negarte a lo ordenado por el art. 163). Con 300 µg/l no se cumple, aunque tengas un antecedente reciente.
     cites: ["wvw:123b"]
 
   - id: sanciones-accidente-carreras
     type: yesno
-    prompt: ¿Se pueden hacer carreras en una vía pública si no hay tráfico?
-    answer: false
-    explain: Las carreras en la vía pública están prohibidas.
+    prompt: Quedas con un amigo en una carretera pública a una hora tranquila para comparar cuál de vuestros autos acelera más rápido. ¿Infringes la ley?
+    answer: true
+    explain: El artículo 10 prohíbe participar en la vía en una competición, que incluye cualquier conducción para medir o comparar el rendimiento de vehículos o conductores. Que haya poco tráfico no lo cambia.
     cites: ["wvw:10"]
 
   - id: sanciones-multa-titular
@@ -57,13 +64,6 @@ questions:
     answer: 0
     explain: Con el 2.º strafpunt del beginnersrijbewijs, el OM te comunica al CBR.
     cites: ["rijksoverheid-beginners"]
-
-  - id: sanciones-velocidad-100-en-50
-    type: yesno
-    prompt: Conduces un auto a 100 km/h en un tramo limitado a 50 km/h y la policía te detiene en el momento. ¿Pueden retirarte el permiso en el acto?
-    answer: true
-    explain: Pasar el máximo por 50 km/h o más, siendo conductor de un vehículo de motor que no es bromfiets y con detención en el momento, permite el retiro inmediato del permiso.
-    cites: ["wvw:164.2"]
 
   - id: sanciones-velocidad-80-en-50
     type: yesno
@@ -88,11 +88,12 @@ questions:
     cites: ["wvw:179.1", "wvw:179.4"]
 
   - id: sanciones-rijontzegging-peligro-menos
-    type: yesno
-    prompt: Sin antecedentes, un juez te condena por conducir bajo influencia (art. 8) y a otra persona por poner en peligro el tráfico (art. 5). ¿Puede la rijontzegging del primero llegar a 5 años y la del segundo solo a 2?
-    answer: true
-    explain: El artículo 8 está entre las infracciones del primer apartado (hasta 5 años). El artículo 5 está en el segundo (hasta 2 años).
-    cites: ["wvw:179.1", "wvw:179.2"]
+    type: mc
+    prompt: Sin antecedentes, un juez te condena por poner en peligro el tráfico (art. 5), por ejemplo por haber frenado a propósito delante de otro conductor. ¿Hasta cuántos años de rijontzegging puede imponerte?
+    options: ["Hasta 2 años", "Hasta 5 años", "Hasta 10 años", "Hasta 1 año"]
+    answer: 0
+    explain: El artículo 5 está entre las infracciones del segundo apartado (hasta 2 años). Los 5 años son para las graves, como conducir bajo influencia o huir de un accidente.
+    cites: ["wvw:179.2", "wvw:179.1"]
 
   - id: sanciones-accidente-5h-danos
     type: yesno

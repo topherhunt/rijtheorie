@@ -8,10 +8,10 @@ questions:
 
   - id: documentos-control-parar
     type: mc
-    prompt: Un policía te hace señal de parar y te pide los documentos. ¿Qué debes hacer?
-    options: ["Seguir hasta un lugar más cómodo y mostrarlos allí", "Parar y mostrar los documentos a la primera orden", "Mostrarlos al día siguiente en la comisaría", "Solo mostrarlos si cometiste una infracción"]
-    answer: 1
-    explain: A la primera orden de un funcionario autorizado debes parar y mostrar correctamente los documentos pedidos.
+    prompt: Vas con prisa y un agente te hace señal de parar en un control rutinario; no has cometido ninguna infracción. ¿Qué debes hacer?
+    options: ["Parar y mostrar los documentos que te pida", "Seguir hasta un lugar más cómodo y mostrarlos allí", "Mostrarlos solo si el agente te acusa de algo", "Mostrarlos al día siguiente en la comisaría"]
+    answer: 0
+    explain: A la primera orden de un funcionario autorizado debes parar y mostrar correctamente los documentos, sin que haga falta una infracción previa ni un lugar más cómodo para ti.
     cites: ["wvw:160.1"]
 
   - id: documentos-control-auto-amigo
@@ -19,48 +19,52 @@ questions:
     prompt: Conduces el auto de un amigo y la policía te manda parar y pide los documentos. ¿Qué debes mostrar?
     options: ["Tu permiso de conducir y el kentekenbewijs (kentekencard) de ese auto", "Solo tu permiso, porque el auto no es tuyo", "Solo el kentekenbewijs, que lo lleva el dueño", "Tu DNI y el seguro"]
     answer: 0
-    explain: A la primera orden el conductor debe mostrar su permiso y el kentekenbewijs del vehículo que conduce (y el del remolque si lo arrastra), sea o no suyo. Para la kentekencard, la obligación rige desde que se entrega y en todo caso desde 14 días después de la tenaamstelling.
-    cites: ["wvw:160.1", "kr:22"]
-
-  - id: documentos-control-remolque
-    type: yesno
-    prompt: Conduces tu auto con un remolque que tiene su propio kentekenbewijs y la policía te manda parar. ¿Debes mostrar también el kentekenbewijs del remolque?
-    answer: true
-    explain: El artículo 160 lid 1 pide también las partes del kentekenbewijs del remolque cuando el vehículo lo arrastra.
+    explain: A la primera orden el conductor debe mostrar su permiso y el kentekenbewijs del vehículo que conduce (y el del remolque si lo arrastra), sea o no suyo.
     cites: ["wvw:160.1"]
 
-  - id: documentos-control-begeleider-soplar
+  - id: documentos-control-remolque
+    type: mc
+    prompt: Conduces tu auto con un remolque que tiene su propio kentekenbewijs y un agente te manda parar. ¿Qué documentos debes poder mostrar?
+    options: ["Mi permiso y el kentekenbewijs del auto y el del remolque", "Mi permiso y solo el kentekenbewijs del auto", "Solo el kentekenbewijs del remolque, que es lo que arrastro", "Mi permiso y el seguro del remolque"]
+    answer: 0
+    explain: El artículo 160 lid 1 pide tu permiso y el kentekenbewijs del vehículo que conduces, y también el del remolque cuando lo arrastras. Mostrar solo el del auto deja fuera una parte pedida.
+    cites: ["wvw:160.1"]
+
+  - id: documentos-control-begeleider-negarse
     type: yesno
-    prompt: Eres el begeleider de tu hijo de 17 años, que conduce, y la policía os para y te pide hacer la prueba de aliento previa a ti. ¿Estás obligado a colaborar, aunque no conduces?
-    answer: true
-    explain: El artículo 160 lid 5 obliga a colaborar con esas pruebas al conductor, a quien se dispone a conducir y al begeleider.
+    prompt: Eres el begeleider de tu hija de 17 años, que conduce. La policía os para y te pide soplar en la prueba de aliento previa. Tú dices que no conduces, así que no tienes que hacerlo. ¿Puedes negarte por eso?
+    answer: false
+    explain: El artículo 160 lid 5 obliga a colaborar con la prueba de aliento previa y con las demás pruebas no solo al conductor, sino también al begeleider. No conducir no te exime.
     cites: ["wvw:160.5"]
 
-  - id: documentos-control-ordenes-multiples
-    type: yesno
-    prompt: Un agente te sorprende cometiendo una infracción y te ordena apartar el auto de la calzada para no estorbar. ¿Debes obedecer la orden?
-    answer: true
-    explain: El artículo 160 lid 6 obliga al conductor a seguir las órdenes que el funcionario da, al encontrarlo en infracción, para proteger los intereses del tráfico.
+  - id: documentos-control-orden-infraccion
+    type: mc
+    prompt: Un agente te ve cometer una infracción y te ordena detenerte en un lado. Piensas seguir de largo, "ya me llegará la multa". ¿Qué dice la ley?
+    options: ["Debes obedecer la orden que te da para proteger el tráfico", "Puedes seguir y recibir la multa por correo después", "Solo debes parar si el agente va uniformado y en vehículo", "Puedes ignorar la orden si la infracción fue leve"]
+    answer: 0
+    explain: El artículo 160 lid 6 obliga a quien se encuentra cometiendo una infracción a seguir las órdenes del funcionario para proteger el tráfico. Que la infracción sea leve no cambia la obligación.
     cites: ["wvw:160.6"]
 
-  - id: documentos-control-185-aplicado
-    type: yesno
-    prompt: Te instalaste en los Países Bajos hace 120 días con un permiso válido de Colombia para la categoría B. ¿Puedes conducir aquí con ese permiso?
-    answer: true
-    explain: Con un permiso de fuera de la UE, el EEE y Suiza puedes conducir hasta 185 días después de instalarte; con 120 días todavía estás dentro del plazo.
-    cites: ["wvw:108.1.g"]
+  - id: documentos-control-indicaciones
+    type: mc
+    prompt: Un agente dirige el tráfico en un cruce con obras y te indica seguir recto. Tú querías girar a la derecha. ¿Qué haces?
+    options: ["Sigo recto, como indica el agente", "Giro a la derecha: es mi trayecto y no hay señal que lo prohíba", "Pregunto con la bocina si puedo girar", "Espero a que otro conductor gire primero"]
+    answer: 0
+    explain: Los usuarios de la vía deben seguir las indicaciones que dan los agentes y otros funcionarios autorizados sobre el tráfico (art. 12 WVW), aunque cambien tu plan.
+    cites: ["wvw:12.1"]
 
-  - id: documentos-control-185-pasado
-    type: yesno
-    prompt: Vives en los Países Bajos desde hace 200 días con un permiso válido de Colombia para la categoría B. ¿Puedes seguir conduciendo aquí solo con ese permiso?
-    answer: false
-    explain: La excepción del artículo 108 dura mientras no hayan pasado 185 días desde que te instalaste. Pasado ese plazo ese permiso ya no basta.
+  - id: documentos-control-185-aplicado
+    type: mc
+    prompt: Vives en los Países Bajos. Tú te instalaste hace 120 días y tu amiga hace 200 días, las dos con un permiso colombiano válido para la categoría B. ¿Quién puede conducir aquí solo con ese permiso?
+    options: ["Solo tú", "Solo tu amiga", "Las dos", "Ninguna de las dos"]
+    answer: 0
+    explain: Con un permiso de fuera de la UE, el EEE y Suiza se puede conducir hasta 185 días desde que te instalas. Tú vas por 120; tu amiga ya pasó el plazo y necesita un permiso neerlandés.
     cites: ["wvw:108.1.g", "wvw:107"]
 
   - id: documentos-control-ue-restante
-    type: number
-    prompt: Te instalas hoy en los Países Bajos con un permiso B válido de otro país de la UE, emitido hace 10 años. ¿Cuántos años más puedes seguir usándolo (como máximo 15 desde su emisión)?
-    answer: 5
-    unit: años
-    explain: Un permiso B de la UE puede usarse hasta que hayan pasado 15 años desde su emisión; si ya pasaron 10, quedan 5.
+    type: mc
+    prompt: Te instalas hoy en los Países Bajos con un permiso B de otro país de la UE, emitido hace 10 años. Según el artículo 108, ¿hasta cuándo puedes usarlo para la categoría B?
+    options: ["Hasta que pasen 15 años desde su emisión, es decir, 5 años más", "Durante 185 días desde que te instalaste", "Durante 15 años desde que te instalaste", "Hasta que pasen 5 años desde su emisión"]
+    answer: 0
+    explain: Un permiso B de la UE puede usarse hasta que hayan pasado 15 años desde su emisión; si ya pasaron 10, quedan 5. Los 185 días son para permisos de fuera de la UE, y el plazo de 5 años es el de las categorías C y D.
     cites: ["wvw:108.1.h"]

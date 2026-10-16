@@ -1,27 +1,19 @@
 questions:
   - id: dimlicht-cuando
     type: multi
-    prompt: ¿En qué situaciones debe un auto llevar las luces de cruce?
-    options: [De noche, De día con niebla densa que reduce mucho la visibilidad, De día con sol y buen tiempo, Siempre que llueve ligeramente sin afectar la visibilidad]
+    prompt: Según la ley, ¿en cuáles de estas situaciones debe un auto llevar las luces de cruce?
+    options: [De noche, De día con niebla densa que reduce mucho la visibilidad, De día con sol y buen tiempo, De día con cielo nublado y buena visibilidad]
     answer: [0, 1]
-    explain: La ley exige dimlicht de noche y de día cuando la visibilidad está seriamente reducida. Con sol y buen tiempo no es obligatorio.
+    explain: La ley exige dimlicht de noche y de día cuando la visibilidad está seriamente reducida. Con sol y buen tiempo, o nublado pero con buena visibilidad, la ley no lo exige.
     cites: ["rvv:32.1"]
 
-  - id: dimlicht-noche-def
+  - id: dimlicht-tras-puesta-sol
     type: mc
-    prompt: Según la ley, ¿qué es la "noche"?
-    options: [De 22:00 a 06:00, El periodo entre la puesta y la salida del sol, El periodo en que el alumbrado público está encendido, De 18:00 a 07:00]
-    answer: 1
-    explain: La ley define la noche por el sol, no por el reloj.
-    cites: ["rvv:1"]
-
-  - id: dimlicht-dia-def
-    type: mc
-    prompt: ¿Cómo define la ley el "día" (dag)?
-    options: [El periodo entre la salida y la puesta del sol, De 06:00 a 20:00, El periodo con luz suficiente para ver sin luces, Solo las horas de sol visible sin nubes]
+    prompt: En diciembre el sol se puso hace diez minutos, todavía queda algo de claridad y circulas por una carretera sin alumbrado. ¿Qué luces exige la ley?
+    options: [Luces de cruce porque para la ley ya es noche, Ninguna mientras todavía se vea algo, Solo luces de posición hasta que oscurezca del todo, Luces de cruce solo cuando salgan las estrellas]
     answer: 0
-    explain: Día = entre zonsopgang y zonsondergang.
-    cites: ["rvv:1"]
+    explain: La ley define la noche por el sol, no por la claridad ni por el reloj. Tras la puesta del sol hay que llevar dimlicht aunque todavía se vea algo.
+    cites: ["rvv:1", "rvv:32.1"]
 
   - id: dimlicht-visibilidad
     type: yesno
@@ -32,8 +24,8 @@ questions:
 
   - id: grootlicht-prohibido
     type: multi
-    prompt: ¿En cuáles de estas situaciones está prohibido llevar luces de carretera?
-    options: [De día, Al cruzarte con otro usuario de la vía, Al seguir de cerca a otro vehículo, Por una carretera oscura sin nadie delante ni de frente]
+    prompt: ¿En cuáles de estas situaciones no puedes llevar luces de carretera?
+    options: [De día en una carretera sin tráfico, De noche cuando se acerca otro vehículo de frente, De noche detrás de un camión a pocos metros, De noche en una carretera oscura sin nadie delante ni de frente]
     answer: [0, 1, 2]
     explain: Las tres primeras son las excepciones del artículo 32 lid 2. En una vía oscura y vacía las largas están permitidas.
     cites: ["rvv:32.2"]
@@ -59,31 +51,33 @@ questions:
     explain: De día las largas están prohibidas, aunque la visibilidad sea mala. Se usan luces de cruce.
     cites: ["rvv:32.2"]
 
-  - id: dagrijlicht-junto
-    type: yesno
-    prompt: ¿Pueden estar encendidas a la vez las luces de circulación diurna y las luces de cruce?
-    answer: false
-    explain: El dagrijlicht no se lleva junto con ninguna otra luz delantera.
-    cites: ["rvv:41.1"]
+  - id: dagrijlicht-niebla
+    type: mc
+    prompt: Tu auto lleva las luces de circulación diurna encendidas y de pronto entras en una niebla muy densa a mediodía. ¿Qué haces?
+    options: [Sigo solo con las diurnas porque son luces delanteras, Paso a las luces de cruce porque las diurnas no las sustituyen, Pongo las de cruce además de las diurnas, Paso a las largas porque las diurnas son débiles]
+    answer: 1
+    explain: Con visibilidad seriamente reducida la ley exige dimlicht. Las diurnas son opcionales, no sustituyen a las de cruce y no se llevan a la vez que otra luz delantera; las largas están prohibidas de día.
+    cites: ["rvv:41.1", "rvv:32.1", "rvv:32.2"]
 
   - id: dagrijlicht-obligatorio
     type: yesno
-    prompt: ¿La ley obliga a llevar luces de circulación diurna de día con buen tiempo?
+    prompt: Tu auto no tiene luces de circulación diurna y es mediodía con sol y buena visibilidad. ¿Debes llevar igualmente las luces de cruce?
     answer: false
-    explain: La ley dice que el conductor "puede" llevarlas. Lo obligatorio es el dimlicht cuando la visibilidad está seriamente reducida y de noche.
+    explain: Las diurnas son opcionales ("puede") y la ley exige dimlicht solo de noche o con visibilidad seriamente reducida. Con sol y buena visibilidad no hace falta ninguna.
     cites: ["rvv:41.1", "rvv:32.1"]
 
   - id: luz-trasera-junta
     type: mc
-    prompt: ¿Cuándo debe estar encendida la luz trasera?
-    options: [Solo con luces de cruce, "Siempre a la vez con largas, cruce, posición o antiniebla", Solo de noche y con lluvia, Solo si hay un vehículo detrás]
-    answer: 1
-    explain: Luz trasera y luz de la matrícula trasera acompañan siempre a las demás luces delanteras que se lleven.
+    prompt: Enciendes las luces antiniebla delanteras porque hay niebla. ¿Qué otras luces deben estar encendidas a la vez?
+    options: ["La luz trasera y la luz de la matrícula", "Ninguna más", "Solo la luz trasera, no la de la matrícula", "Solo las luces de posición"]
+    answer: 0
+    explain: Luz trasera y luz de la matrícula trasera acompañan siempre a largas, cruce, posición o antiniebla, no solo a las de cruce.
     cites: ["rvv:32.3"]
 
-  - id: dimlicht-principio
-    type: yesno
-    prompt: Según el CBR, ¿las luces no solo sirven para ver mejor sino también para que te vean?
-    answer: true
-    explain: "La Rijprocedure lo dice así: se lleva luz no solo para ver mejor, sino sobre todo para ser visto."
-    cites: ["cbr-rijprocedure:1"]
+  - id: dimlicht-todos-con-luces
+    type: mc
+    prompt: De día pasas por un tramo de sombra densa de árboles y todos los autos que ves llevan las luces de cruce. ¿Qué haces?
+    options: ["Pongo las de cruce, porque puedo suponer que hace falta y sirven para que me vean", "Las dejo apagadas porque brilla el sol", "Pongo las largas para ver mejor", "Pongo solo las de posición"]
+    answer: 0
+    explain: El CBR dice que si la mayoría de conductores lleva luces puedes suponer que son necesarias, y la sombra de los árboles cuenta entre las situaciones de visibilidad reducida. Las largas están prohibidas de día.
+    cites: ["cbr-rijprocedure:1", "rvv:32.2"]

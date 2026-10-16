@@ -43,16 +43,16 @@ questions:
 
   - id: categoria-be
     type: mc
-    prompt: ¿Qué categoría te permite conducir un auto de la categoría B con un remolque de hasta 3.500 kg de masa máxima?
-    options: [AM, BE, C1, T]
-    answer: 1
-    explain: La categoría BE cubre un vehículo de la categoría B con otro remolque de hasta 3.500 kg de masa máxima.
-    cites: ["rr:15.1"]
+    prompt: Tu auto tiene una masa máxima de 2.000 kg y el remolque, 2.500 kg (conjunto de 4.500 kg). Tienes la categoría B sin ningún código. ¿Qué te falta para conducirlo?
+    options: ["La categoría BE", "La categoría C1", "El código de los 4.250 kg", "Nada: el remolque pesa menos de 3.500 kg"]
+    answer: 0
+    explain: El conjunto pasa de 4.250 kg, así que ni siquiera el código de la categoría B sirve. Un remolque de hasta 3.500 kg con un auto de la categoría B es lo que cubre la BE. Que el remolque solo pese 2.500 kg no basta con la B.
+    cites: ["rr:15.1", "rr:15.5"]
 
   - id: categoria-b-lectura
     type: mc
-    prompt: Los límites de 750 kg y 3.500 kg para el remolque se miden por...
-    options: [El peso que lleva el remolque hoy, La masa máxima permitida del remolque y del conjunto, El peso del conductor, El largo del remolque]
-    answer: 1
-    explain: Se usa la masa máxima permitida según los papeles del vehículo, no la carga de hoy.
+    prompt: Tu remolque está vacío y hoy pesa 600 kg, pero en sus papeles figura una masa máxima de 1.200 kg. Tu auto tiene 1.800 kg de masa máxima. ¿Qué cuenta para saber si basta la categoría B?
+    options: ["Los 1.200 kg: se mira la masa máxima y el conjunto de 3.000 kg cabe en B", "Los 600 kg de hoy: como son menos de 750, basta B sin más", "Solo la masa del auto, porque el remolque no se cuenta", "Los 1.200 kg: pasa de 750 kg, así que necesitas BE"]
+    answer: 0
+    explain: Los límites se miden con la masa máxima permitida según los papeles, no con la carga de hoy. El remolque de 1.200 kg pasa de 750 kg, pero el conjunto (3.000 kg) no pasa de 3.500 kg, así que la B basta. Que pase de 750 kg solo exige mirar el conjunto, no la BE.
     cites: ["rr:15.1"]

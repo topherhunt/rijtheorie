@@ -20,11 +20,12 @@ questions:
     explain: Aunque mida más de 1,35 m y no necesite sistema infantil, debe usar el cinturón disponible. Además, al conductor se le prohíbe llevar a menores de 12 años de otra forma que la prescrita.
     cites: ["rvv:59.1", "rvv:59.8"]
 
-  - id: cinturon-mas-pasajeros
-    type: yesno
-    prompt: En el asiento trasero hay dos cinturones. ¿Puedes llevar tres pasajeros en esos asientos?
-    answer: false
-    explain: En los asientos con cinturones no se llevan más pasajeros que cinturones.
+  - id: cinturon-tres-detras
+    type: mc
+    prompt: Quieres llevar a tres adultos en el asiento trasero, que tiene dos cinturones. El trayecto es de solo 500 metros. ¿Qué dice la norma?
+    options: ["Puedes, porque el trayecto es corto", "No más pasajeros que cinturones: solo dos en ese asiento", "Puedes si el del medio va sin cinturón", "Puedes si el del medio es el más delgado"]
+    answer: 1
+    explain: En los asientos con cinturones no se llevan más pasajeros que cinturones. Ni el trayecto corto ni la complexión de la persona cambian esto.
     cites: ["rvv:59.1"]
 
   - id: cinturon-sin-cinturones
@@ -37,30 +38,39 @@ questions:
 
   - id: cinturon-menor-3
     type: yesno
-    prompt: En un auto sin cinturones ni sistemas de retención, ¿se puede llevar a un niño de 2 años?
+    prompt: Tienes un coche antiguo sin cinturones y quieres llevar a tu hija de 2 años en el asiento trasero. ¿Se puede?
     answer: false
-    explain: En ese caso no se llevan pasajeros menores de 3 años.
+    explain: En un auto sin cinturones ni sistemas de retención no se llevan pasajeros menores de 3 años, vayan donde vayan.
     cites: ["rvv:59.2"]
 
-  - id: cinturon-airbag
-    type: yesno
-    prompt: ¿Puedes poner una silla infantil orientada hacia atrás en el asiento delantero con el airbag activo?
-    answer: false
-    explain: Está prohibido, salvo que el airbag esté desactivado o se desactive automáticamente de forma suficiente.
+  - id: cinturon-taxi-nino
+    type: mc
+    prompt: Tomas un taxi con tu hijo de 5 años, que mide 1,10 m. El taxi no tiene sistema de retención infantil. ¿Dónde puede ir el niño?
+    options: ["En el asiento delantero, porque en un taxi no se exige el sistema infantil", "En un asiento que no sea el delantero", "En ninguna parte: sin sistema infantil no puede ir en taxi", "En el delantero, con el cinturón de adulto"]
+    answer: 1
+    explain: En un taxi el sistema infantil no es obligatorio, pero si no lo hay, un menor de 18 años y de menos de 1,35 m no va en un asiento delantero.
+    cites: ["rvv:59.5"]
+
+  - id: cinturon-airbag-bebe
+    type: mc
+    prompt: Tu coche solo tiene dos plazas y tienes que llevar a tu bebé en una silla orientada hacia atrás, en el asiento delantero. El airbag del copiloto está activo. ¿Qué haces?
+    options: ["Pongo la silla igual: la silla lo protege del airbag", "Desactivo el airbag antes (o compruebo que se desactiva automáticamente)", "Bajo el respaldo del asiento para alejar la silla del airbag", "Dejo que el copiloto lleve al bebé en brazos"]
+    answer: 1
+    explain: Una silla orientada hacia atrás no va en un asiento con airbag delantero activo, porque al inflarse golpearía la silla. Solo se permite si el airbag está desactivado o se desactiva automáticamente de forma suficiente.
     cites: ["rvv:59.3"]
 
   - id: cinturon-silla-adelante
     type: yesno
-    prompt: Una silla infantil orientada hacia ADELANTE va en el asiento delantero con el airbag activo. ¿Lo prohíbe el artículo 59 lid 3?
+    prompt: Llevas a tu hijo de 4 años en una silla orientada hacia ADELANTE, en el asiento delantero con el airbag activo. ¿Infringes la norma del airbag?
     answer: false
-    explain: El lid 3 prohíbe el sistema orientado hacia ATRÁS en un asiento con airbag delantero activo. Orientada hacia adelante no entra en esa prohibición.
+    explain: La prohibición es para el sistema orientado hacia ATRÁS en un asiento con airbag delantero activo. Orientada hacia adelante no entra en esa prohibición.
     cites: ["rvv:59.3"]
 
   - id: cinturon-arnes-flojo
     type: yesno
-    prompt: Llevas a un niño de 4 años en su silla homologada, pero dejas el arnés flojo para que esté más cómodo. ¿Infringes el artículo 59?
+    prompt: Llevas a un niño de 4 años en su silla homologada, pero dejas el arnés flojo para que esté más cómodo. ¿Infringes la norma?
     answer: true
-    explain: El lid 7 exige usar el cinturón o el sistema infantil de modo que su efecto protector no se vea afectado ni pueda verse afectado. Que la silla sea homologada no basta si la usas mal.
+    explain: Hay que usar el cinturón o el sistema infantil de modo que su efecto protector no se vea afectado. Que la silla sea homologada no basta si la usas mal.
     cites: ["rvv:59.7"]
 
   - id: cinturon-maletero
@@ -69,6 +79,14 @@ questions:
     answer: false
     explain: El artículo 58a exige que conductor y pasajeros vayan sentados en los asientos que son para ellos. El maletero no lo es, y hay asientos libres.
     cites: ["rvv:58a"]
+
+  - id: cinturon-responsable-nino
+    type: mc
+    prompt: Tu sobrino de 8 años, que mide 1,25 m, se niega a ir en su silla y tú arrancas igual. Si te para la policía, ¿quién incumple?
+    options: ["El niño, que no quiso", "Tú, que conduces: la norma prohíbe al conductor llevar a menores de 12 años de otra manera que la prescrita", "Nadie, si el niño llevaba el cinturón de adulto", "Los padres del niño, aunque no estuvieran en el coche"]
+    answer: 1
+    explain: La responsabilidad es de quien conduce, no del niño. Con 1,25 m le corresponde un sistema de retención infantil.
+    cites: ["rvv:59.1", "rvv:59.8"]
 
   - id: cinturon-casco-pasajero
     type: yesno

@@ -19,17 +19,15 @@ Un onderbord puede: (a) dar una explicación adicional de la señal; (b) si solo
 
 Ejemplo con tu auto: una señal C12 (cerrado para todos los vehículos de motor) con un panel que muestra solo un camión **limita** la prohibición a los camiones, y tú puedes entrar. Si el panel dice "uitgezonderd" y muestra una moto, la prohibición sigue valiendo para ti y solo la moto queda exceptuada. Un camión, ante "uitgezonderd" y el símbolo del camión, sí puede entrar.
 
-<Check id="ob-solo-simbolos" />
-
 <Check id="ob-c12-solo-camion" />
 
-<Check id="ob-uitgezonderd" />
+<Check id="ob-paneles-contrario" />
 
 <Check id="ob-c12-uitgezonderd-moto" />
 
 <Check id="ob-uitgezonderd-camion" />
 
-<Check id="ob-texto" />
+<Check id="ob-c1-uitgezonderd-bici" />
 
 <Warn>
 La palabra clave es "uitgezonderd". Sin ella, un panel con símbolos **restringe** la señal a esos usuarios; con ella, los **excluye**. Es fácil confundirlo en el examen.
@@ -47,8 +45,6 @@ Las señales E1, E2 y E3 (estacionamiento y parada) valen solo para el lado de l
 
 <Signs codes="E1,E2,E3" />
 
-<Check id="ob-carril-f1-l12" />
-
 <Check id="ob-lado-e1" />
 
 ## La palabra "zone"
@@ -59,7 +55,17 @@ Si sobre una señal aparece la palabra "zone", vale en el área indicada. Si no 
 
 <Signs codes="E10,E11" />
 
-<Check id="ob-zone-fin" />
+## Bestemmingsverkeer
+
+Junto a una calle cerrada verás a menudo un panel con la palabra *bestemmingsverkeer*. El art. 1 define el término: son los conductores cuyo destino son una o varias parcelas situadas en esa calle (o muy cerca de ella) y a las que solo se llega por ella, y también los conductores de autobuses de línea. Quien usa la calle como atajo para ir a otro sitio no es bestemmingsverkeer.
+
+<Rule cite="rvv:1" title="Bestemmingsverkeer">
+Es *bestemmingsverkeer* quien va a un lugar que solo se alcanza por la calle con la prohibición, y el conductor de un autobús de línea. Lo decide el destino del viaje, no vivir cerca ni cuánto tiempo estés en la calle.
+</Rule>
+
+<Check id="ob-bestemmingsverkeer" />
+
+<Check id="ob-bestemmingsverkeer-lijnbus" />
 
 ## Paneles de la zona ambiental (C22e)
 
@@ -70,3 +76,5 @@ La señal C22e cierra el acceso por requisitos de emisiones. Los paneles C22e4 a
 <Rule cite="rvv:86d">
 La zona ambiental C22e se aplica a autos, vehículos de empresa, camiones y autobuses con motor diésel, según el panel. Hay excepciones (art. 86d.3), como los vehículos de 40 años o más.
 </Rule>
+
+<Check id="ob-c22e-furgoneta" />

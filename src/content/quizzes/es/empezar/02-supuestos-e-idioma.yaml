@@ -1,26 +1,18 @@
 questions:
-  - id: supuestos-conductor
+  - id: supuestos-mi-vehiculo
     type: mc
     exam: false
-    prompt: Una pregunta del examen no dice qué vehículo conduces. ¿Qué debes suponer?
-    options: [Que conduces tu propio auto, Que eres el conductor del auto del CBR, Que eres un pasajero, Que eres un peatón]
-    answer: 1
-    explain: Según el plan del CBR, debes suponer que tú eres el conductor del auto del CBR.
-    cites: ["cbr-examenplan:1"]
-
-  - id: supuestos-otros-cumplen
-    type: yesno
-    exam: false
-    prompt: En una pregunta sin más datos, ¿debes suponer que los demás usuarios cumplen las reglas, por ejemplo la velocidad máxima permitida?
-    answer: true
-    explain: Es uno de los tres supuestos del CBR. Solo cambia si la imagen o la pregunta indican claramente otra cosa.
+    prompt: "Una pregunta dice: \"Quieres adelantar a un ciclista en una calle de un solo carril por sentido\". No dice qué vehículo conduces. ¿Desde qué punto de vista la contestas?"
+    options: ["Como conductor del auto del CBR, sin pensar en tu propio auto", "Como conductor de tu propio auto, con sus medidas y su motor", "Como ciclista, porque es quien sufre la maniobra", "Depende de si tu auto es más ancho que el del CBR"]
+    answer: 0
+    explain: Si la pregunta no nombra otro vehículo, eres el conductor del auto del CBR. Responder pensando en las medidas o la potencia de tu auto es el error típico.
     cites: ["cbr-examenplan:1"]
 
   - id: supuestos-lluvia
     type: mc
     exam: false
-    prompt: La imagen de una pregunta muestra una calle con fuerte lluvia. ¿Qué supuesto del CBR sigue valiendo?
-    options: [Que el clima es normal, Que el clima no es normal porque la imagen lo indica claramente, Que debes ignorar la imagen, Que la lluvia no afecta nunca la respuesta]
+    prompt: La imagen de una pregunta muestra una calle con fuerte lluvia. ¿Qué debes suponer sobre el clima?
+    options: ["Que el clima es normal, como en cualquier pregunta", "Que el clima no es normal, porque la imagen lo muestra claramente", "Que la lluvia solo cuenta si la pregunta la menciona por escrito", "Que debes responder como si la imagen mostrara un día seco"]
     answer: 1
     explain: El supuesto de condiciones normales no vale si la imagen o la pregunta indican claramente algo distinto. Una lluvia fuerte visible en la imagen lo cambia.
     cites: ["cbr-examenplan:1"]
@@ -29,24 +21,25 @@ questions:
     type: multi
     exam: false
     prompt: Según el CBR, ¿qué debes suponer al contestar una pregunta si no se indica nada distinto?
-    options: [Que eres el conductor del auto del CBR, Que los demás cumplen las reglas, Que las condiciones de la vía y del clima son normales, Que algún conductor se saltará una regla, Que es de noche]
+    options: [Que eres el conductor del auto del CBR, Que los demás cumplen las reglas, Que las condiciones de la vía y del clima son normales, Que algún conductor se saltará una regla, Que la vía está en obras]
     answer: [0, 1, 2]
     explain: Los tres supuestos son que eres el conductor del auto del CBR, que los demás cumplen las reglas y que la vía y el clima son normales.
     cites: ["cbr-examenplan:1"]
 
-  - id: supuestos-semaforo
-    type: yesno
+  - id: supuestos-semaforo-verde
+    type: mc
     exam: false
-    prompt: Cruzas con semáforo verde y no hay datos de que alguien vaya a saltarse el rojo. Para el examen, ¿debes suponer que los demás respetan su semáforo?
-    answer: true
-    explain: Sí. El examen supone que los otros usuarios cumplen las reglas, salvo que la pregunta o la imagen digan otra cosa.
+    prompt: Llegas a un cruce con semáforo en verde para ti. La imagen no muestra ningún vehículo cruzando ni nada raro. ¿Qué respuesta da el examen?
+    options: ["Pasas, porque supones que el tráfico cruzado respeta su semáforo en rojo", "Frenas y miras, porque alguien podría saltarse el rojo", "Pasas solo si ves el cruce completamente vacío", "Esperas a que cambie para estar seguro"]
+    answer: 0
+    explain: El examen parte de que los demás cumplen las reglas, y aquí nada en la imagen dice lo contrario. Frenar por si alguien se salta el rojo es prudencia de la calle, pero no es la respuesta que pide el examen.
     cites: ["cbr-examenplan:1"]
 
   - id: supuestos-exceso
     type: mc
     exam: false
     prompt: La pregunta dice claramente que un auto que viene hacia ti va a mucha más velocidad de la permitida. ¿Qué pasa con el supuesto de que los demás cumplen las reglas?
-    options: [Sigue valiendo igual, No vale en este caso porque la pregunta indica algo distinto, Vale solo de noche, Nunca vale]
+    options: ["Sigue valiendo: los demás cumplen las reglas en todo caso", "Ya no vale para ese auto, porque la pregunta indica claramente que no cumple", "Vale solo si el auto va por el carril contrario", "Ya no vale para ningún usuario de la imagen"]
     answer: 1
     explain: El supuesto se aplica salvo que la pregunta o la imagen indiquen claramente otra cosa. Aquí la pregunta lo dice.
     cites: ["cbr-examenplan:1"]

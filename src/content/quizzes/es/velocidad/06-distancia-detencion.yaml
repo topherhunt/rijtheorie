@@ -1,38 +1,20 @@
 questions:
-  - id: detencion-suma
-    type: mc
-    prompt: "¿Cómo se compone la distancia de detención (stopafstand)?"
-    options: [Distancia de reacción más distancia de frenado, Solo la distancia de frenado, Solo la distancia de reacción, Distancia de seguimiento más distancia de frenado]
-    answer: 0
-    explain: "La stopafstand es la reactieafstand más la remweg."
-    cites: ["cbr-examenplan"]
-    exam: false
-
-  - id: detencion-reaccion
-    type: mc
-    prompt: "¿Qué es la distancia de reacción?"
-    options: [Lo que recorres desde que ves el peligro hasta que empiezas a frenar, Lo que recorres frenando, El espacio con el auto de delante, La distancia hasta el semáforo]
-    answer: 0
-    explain: "Durante el tiempo de reacción el auto sigue a la misma velocidad."
-    cites: ["cbr-examenplan"]
-    exam: false
-
   - id: detencion-reaccion-calculo
     type: mc
     prompt: "Vas a 72 km/h y tu tiempo de reacción es de 1 segundo. ¿Cuántos metros recorres antes de empezar a frenar?"
     options: [10 m, 20 m, 40 m, 72 m]
     answer: 1
     explain: "72 km/h dividido por 3,6 son 20 m/s; en 1 s recorres 20 m. Los 72 m serían confundir km/h con metros."
-    cites: ["cbr-examenplan"]
+    cites: ["general"]
     exam: false
 
   - id: detencion-reaccion-108
     type: mc
-    prompt: "Vas a 108 km/h con un tiempo de reacción de 1 segundo. ¿Cuántos metros recorres hasta que empiezas a frenar?"
+    prompt: "En una autosnelweg vas a 108 km/h y el auto de delante frena de golpe. Tu tiempo de reacción es de 1 segundo. ¿Cuántos metros recorres hasta que empiezas a frenar?"
     options: [30 m, 54 m, 108 m, 15 m]
     answer: 0
     explain: "108 / 3,6 = 30 m/s, así que en 1 s recorres 30 m."
-    cites: ["cbr-examenplan"]
+    cites: ["general"]
     exam: false
 
   - id: detencion-reaccion-distraido
@@ -41,7 +23,7 @@ questions:
     options: [10 m, 20 m, 40 m, 4 veces más]
     answer: 1
     explain: "A 72 km/h vas a 20 m/s. Un segundo más de reacción son 20 m más. La distancia de reacción es proporcional al tiempo; no se cuadruplica."
-    cites: ["cbr-examenplan"]
+    cites: ["general"]
     exam: false
 
   - id: detencion-frenado-escala
@@ -50,16 +32,7 @@ questions:
     options: [20 m, 30 m, 40 m, 80 m]
     answer: 2
     explain: "La distancia de frenado crece con el cuadrado de la velocidad: al doble de velocidad, unas 4 veces (10 x 4 = 40 m). 20 m sería el error de suponer que crece de forma proporcional."
-    cites: ["cbr-examenplan"]
-    exam: false
-
-  - id: detencion-frenado-triple
-    type: mc
-    prompt: "Supón que a 30 km/h tu distancia de frenado es de unos 5 m. Aproximadamente, ¿cuánta necesitas a 90 km/h, el triple de velocidad?"
-    options: [15 m, 30 m, 45 m, 90 m]
-    answer: 2
-    explain: "Al triple de velocidad, la distancia de frenado es unas 3 x 3 = 9 veces mayor: 5 x 9 = 45 m. 15 m sería el error de multiplicar solo por 3."
-    cites: ["cbr-examenplan"]
+    cites: ["general"]
     exam: false
 
   - id: detencion-total-72
@@ -68,18 +41,32 @@ questions:
     options: [36 m, 44 m, 52 m, 72 m]
     answer: 2
     explain: "A 72 km/h la reacción se duplica (20 m) y el frenado se multiplica por unos 4 (32 m): 20 + 32 = 52 m. Duplicar el total (36 m) ignora que el frenado crece más rápido."
-    cites: ["cbr-examenplan"]
+    cites: ["general"]
     exam: false
 
-  - id: detencion-causa-parte
+  - id: detencion-frenado-vista-libre
     type: mc
-    prompt: "Vas cansado y distraído, y además la calzada está mojada. ¿Qué parte de la distancia de detención alarga el cansancio y cuál la calzada mojada?"
-    options:
-      - "El cansancio alarga la de reacción; la calzada mojada, la de frenado"
-      - "El cansancio alarga la de frenado; la calzada mojada, la de reacción"
-      - "Ambos alargan solo la de reacción"
-      - "Ambos alargan solo la de frenado"
+    prompt: "A 40 km/h tu distancia de frenado es de unos 10 m. Ves la vía libre solo en los próximos 25 m (curva sin visibilidad) y quieres pasar a 80 km/h. ¿Qué conclusión sacas, contando solo el frenado?"
+    options: ["A 80 necesito unos 40 m, más de los 25 que veo: no puedo ir a 80", "A 80 necesito unos 20 m, menos de 25: puedo ir a 80", "A 80 necesito unos 25 m, justo lo que veo: puedo ir a 80", "La distancia de frenado no depende de lo que veo libre"]
     answer: 0
-    explain: "El cansancio aumenta el tiempo de reacción (el auto sigue a la misma velocidad). La calzada mojada reduce la adherencia y alarga el frenado."
-    cites: ["cbr-examenplan"]
+    explain: "Al doble de velocidad el frenado es unas 4 veces mayor: 10 x 4 = 40 m. Con solo 25 m libres no te detienes a tiempo (art. 19), y eso sin contar la reacción. Calcular 20 m sería suponer que crece de forma proporcional."
+    cites: ["rvv:19", "general"]
+    exam: false
+
+  - id: detencion-por-que-distancia-seguimiento
+    type: mc
+    prompt: "Vas a 90 km/h (25 m/s) y dejas solo 10 m al auto de delante. Si frena de golpe, ¿qué es lo primero que te falta?"
+    options: ["Metros para cubrir tu reacción y el frenado", "Peso sobre el eje delantero", "Tiempo para encender los intermitentes", "Nada: 10 m son suficientes con buenos frenos"]
+    answer: 0
+    explain: "Tu distancia de detención es reacción más frenado. Con 1 s de reacción ya recorres 25 m antes de frenar, más que los 10 m que dejas; buenos frenos no recuperan lo que se pierde reaccionando."
+    cites: ["rvv:19", "general"]
+    exam: false
+
+  - id: detencion-lluvia-reaccion-rapida
+    type: mc
+    prompt: "Un amigo dice: \"Con lluvia no necesito más distancia, porque reacciono rápido\". Vas por una autosnelweg con calzada mojada. ¿Por qué se equivoca?"
+    options: ["Reaccionar rápido acorta la distancia de reacción, pero la calzada mojada alarga el frenado", "La lluvia alarga la distancia de reacción, aunque reacciones rápido", "Con lluvia el auto frena igual; el problema es la visibilidad", "Reaccionar rápido no cambia ninguna de las dos distancias"]
+    answer: 0
+    explain: "La distancia de reacción depende de tu tiempo de reacción y de la velocidad; el frenado depende de la adherencia, y mojado se alarga. Tu rapidez de reacción no arregla eso. La lluvia no alarga la reacción: la visibilidad es otro tema."
+    cites: ["general"]
     exam: false

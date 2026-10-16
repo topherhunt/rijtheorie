@@ -1,12 +1,16 @@
 ---
 title: Semáforos y luces
-summary: Semáforos de tres y dos colores, flechas, bicicletas, luces de tranvía y bus, pasos a nivel, puentes, carriles reversibles y peatones.
+summary: Semáforos de tres y dos colores, flechas, bicicletas, luces de tranvía y bus, pasos a nivel, puentes y peatones.
 cbrTopics: [verkeerstekens]
 ---
 
-Los <T id="verkeerslicht">semáforos</T> mandan sobre las señales de prioridad (art. 64). Aun así, un agente o un verkeersregelaar manda sobre el semáforo (capítulo anterior, rangorde).
+Los <T id="verkeerslicht">semáforos</T> mandan sobre las señales de prioridad (art. 64). Aun así, un agente o un verkeersregelaar manda sobre el semáforo (primera lección de este capítulo, rangorde).
 
 ## Semáforo de tres colores
+
+<Signs codes="J32" />
+
+La señal J32 avisa de que más adelante hay un semáforo.
 
 <Rule cite="rvv:68.1">
 Verde: puedes avanzar. Amarillo: debes detenerte, salvo que estés tan cerca que ya no puedas hacerlo razonablemente; en ese caso continúas. Rojo: debes detenerte.
@@ -16,25 +20,35 @@ Verde: puedes avanzar. Amarillo: debes detenerte, salvo que estés tan cerca que
 El amarillo no es "acelera": es "para". Solo sigues si estás tan cerca que ya no puedes parar razonablemente. La guía del CBR para el examen práctico (Rijprocedure B, 3.3) lo concreta así: no frenes si estás tan cerca que frenar crearía peligro para el tráfico de detrás. Si puedes parar con seguridad, para.
 </Tip>
 
+<Rule cite="rvv:79">
+Si debes detenerte (con rojo, o con amarillo cuando puedes parar), lo haces antes de la stopstreep, la línea blanca de parada, si hay una para ti.
+</Rule>
+
+<Rule cite="rvv:14, cbr-rijprocedure:3.3" title="Verde no es permiso para bloquear el cruce">
+Con verde sigues sin poder bloquear el cruce: entra solo si puedes seguir de largo o dejarlo libre. Si la cola de delante te dejaría parado en medio al cambiar el semáforo, espera antes del cruce.
+</Rule>
+
 <Check id="sf-amarillo" />
-<Check id="sf-rojo" />
+<Check id="sf-amarillo-frenada" />
+<Check id="sf-rojo-stopstreep" />
+<Check id="sf-verde-cola" />
 
 ### Flechas y bicicletas
 
 <Rule cite="rvv:68.2">
-Una flecha iluminada significa que la luz vale solo para esa dirección.
+Una flecha iluminada significa que la luz vale solo para esa dirección. Así, con rojo y una flecha verde a la derecha, solo puedes girar a la derecha; seguir recto sigue prohibido.
 </Rule>
 
 <Rule cite="rvv:68.3">
-Una luz con la imagen de una bicicleta vale para ciclistas, ciclomotoristas en un fiets/bromfietspad y vehículos para discapacitados.
+Una luz con la imagen de una bicicleta vale para ciclistas, ciclomotoristas en un fiets/bromfietspad y vehículos para discapacitados. Si conduces un coche, esa luz no es la tuya: sigues el semáforo de la calzada.
 </Rule>
 
 <Rule cite="rvv:68.6">
 Una luz puede limitarse a un solo carril.
 </Rule>
 
-<Check id="sf-flecha" />
-<Check id="sf-bici" />
+<Check id="sf-flecha-recto" />
+<Check id="sf-bici-coche" />
 
 ### Giro a la derecha libre para ciclistas
 
@@ -70,20 +84,21 @@ Luz blanca (fija o intermitente): vía libre. Amarilla: detenerse, con la misma 
 Pasos a nivel: luz blanca intermitente, no se acerca ningún tren. Luz roja intermitente: detente.
 </Rule>
 
+<Rule cite="rvv:15a.1">
+Aunque la luz blanca te deje pasar, solo puedes entrar en el paso a nivel si puedes seguir de inmediato y dejarlo del todo libre. Si la cola de delante te dejaría parado encima de las vías, espera antes.
+</Rule>
+
 <Rule cite="rvv:72">
 Puentes móviles: rojo o rojo intermitente, detente.
 </Rule>
 
 <Check id="sf-overweg" />
+<Check id="sf-overweg-cola" />
 <Check id="sf-brug" />
 
 ## Luces de carril
 
-<Rule cite="rvv:73">
-Flecha verde, o velocidad máxima indicada: puedes usar el carril. Cruz roja: no puedes usarlo (la vluchtstrook solo en emergencia). Flecha blanca: aviso previo de una cruz roja. La palabra BUS: carril solo para autobús de línea y autobús. La palabra LIJNBUS: carril solo para autobús de línea.
-</Rule>
-
-<Check id="sf-cruz-roja" />
+Las luces sobre el carril (flecha verde, cruz roja, flecha blanca, BUS y LIJNBUS) están en la lección de paneles electrónicos, al final de este capítulo.
 
 ## Peatones
 
@@ -91,14 +106,10 @@ Flecha verde, o velocidad máxima indicada: puedes usar el carril. Cruz roja: no
 Verde: cruza. Verde intermitente: cruza, pronto se pondrá en rojo. Rojo: no empieces, y si ya cruzas, acelera el paso. Si el rojo se sustituye por amarillo intermitente, los peatones pueden cruzar si dejan pasar primero al tráfico.
 </Rule>
 
-<Check id="sf-peaton-rojo" />
-
 ## Amarillo intermitente
 
 <Rule cite="rvv:75">
 Una luz amarilla intermitente señala un punto peligroso: ten precaución.
 </Rule>
-
-<Signs codes="J32" />
 
 <Check id="sf-amarillo-intermitente" />

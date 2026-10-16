@@ -1,62 +1,65 @@
 questions:
   - id: seguimiento-regla
     type: mc
-    prompt: "¿Qué dice la regla de los dos segundos?"
-    options: [Dejar la distancia que recorres en dos segundos, Dejar siempre dos metros, Dejar dos autos de distancia, Frenar durante dos segundos]
+    prompt: "Vas detrás de otro auto en una autosnelweg y quieres saber si dejas la distancia de seguimiento básica. ¿Cómo lo compruebas?"
+    options: ["Cuento dos segundos desde que el de delante pasa un poste hasta que lo paso yo", "Dejo siempre dos metros por cada auto", "Dejo la distancia de dos autos, sin importar la velocidad", "Cuento dos segundos desde que freno hasta que me detengo"]
     answer: 0
-    explain: "La volgafstand equivale a la distancia que recorres en dos segundos a tu velocidad."
+    explain: "La volgafstand básica es la distancia que recorres en dos segundos a tu velocidad, que se comprueba con un punto fijo. No es una distancia fija en metros ni en autos: depende de tu velocidad."
     cites: ["cbr-rijprocedure:3.2"]
 
   - id: seguimiento-calculo
     type: number
-    prompt: "Vas a 90 km/h. Con la regla de la mitad, ¿cuántos metros de distancia de seguimiento aproximados dejas?"
+    prompt: "Circulas a 90 km/h por una autosnelweg con calzada seca y buena visibilidad, detrás de un auto. Con la regla de la mitad, ¿cuántos metros aproximados dejas como punto de partida?"
     answer: 45
     unit: metros
-    explain: "La distancia en metros es aproximadamente la mitad de la velocidad en km/h: 90 / 2 = 45."
+    explain: "La distancia en metros es aproximadamente la mitad de la velocidad en km/h: 90 / 2 = 45. Es el punto de partida; con lluvia o detrás de un vehículo opaco se deja más."
     cites: ["cbr-rijprocedure:3.2"]
 
   - id: seguimiento-mas
     type: multi
-    prompt: "¿En cuáles de estas situaciones hace falta más distancia?"
-    options: [Detrás de un vehículo opaco, Con tiempo mojado, Cuando te siguen muy de cerca, Con la calzada seca y buena visibilidad]
+    prompt: "¿En cuáles de estas situaciones dejas más que los dos segundos de siempre?"
+    options: ["Vas detrás de una furgoneta que te tapa la vista", "Ha llovido y la calzada está mojada", "Un auto te sigue muy pegado", "Calzada seca, buena visibilidad y nadie pegado detrás"]
     answer: [0, 1, 2]
-    explain: "La Rijprocedure B lo pide detrás de un vehículo opaco, con tiempo mojado y cuando otro te sigue muy de cerca."
+    explain: "La Rijprocedure B pide más distancia detrás de un vehículo opaco, con tiempo mojado y cuando otro te sigue muy de cerca. Con calzada seca y buena visibilidad vale el punto de partida."
     cites: ["cbr-rijprocedure:3.2"]
 
   - id: seguimiento-lluvia
-    type: yesno
-    prompt: "Llueve. ¿Mantienes la misma distancia que con calzada seca?"
-    answer: false
-    explain: "Con tiempo mojado hace falta una distancia mayor."
+    type: mc
+    prompt: "Vas a 100 km/h con calzada seca, dejando unos 50 m. De pronto empieza a llover y la calzada se moja. ¿Qué haces con esa distancia?"
+    options: ["La aumento, porque con tiempo mojado hace falta más", "La mantengo: 50 m ya son dos segundos", "La reduzco para ver mejor al de delante", "La mantengo si llevo buenos neumáticos"]
+    answer: 0
+    explain: "Con tiempo mojado hace falta una distancia mayor que el punto de partida. Que 50 m sean dos segundos a 100 km/h es cierto, pero ese es el mínimo con seca, no con lluvia."
     cites: ["cbr-rijprocedure:3.2"]
 
   - id: seguimiento-opaco
-    type: yesno
-    prompt: "Vas detrás de una furgoneta que no te deja ver lo de delante. ¿Dejas más distancia?"
-    answer: true
-    explain: "Detrás de un vehículo opaco hace falta más distancia."
+    type: mc
+    prompt: "Con calzada seca vas detrás de una furgoneta alta que no te deja ver lo que pasa más adelante. ¿Qué haces?"
+    options: ["Dejo más distancia que los dos segundos de siempre", "Me pego a ella para ver mejor por los lados", "Mantengo los dos segundos: la calzada está seca", "Me pego a ella para que nadie se meta"]
+    answer: 0
+    explain: "Detrás de un vehículo opaco hace falta más distancia, porque no ves el peligro hasta que reacciona el de delante. Pegarte tapa aún más la vista."
     cites: ["cbr-rijprocedure:3.2"]
 
   - id: seguimiento-fila
     type: mc
-    prompt: "Estás en una fila de tráfico lento. ¿Qué distancia con el auto de delante recomienda la Rijprocedure B?"
-    options: [Lo más constante posible, Lo más corta posible, Cada vez menos, Ninguna]
+    prompt: "Estás en una fila de tráfico lento que avanza a tirones. ¿Qué distancia con el auto de delante recomienda la Rijprocedure B?"
+    options: ["La más constante posible", "La más corta posible, para que no se meta nadie", "Cada vez menos, para avanzar antes", "Ninguna: avanzo pegado al de delante"]
     answer: 0
-    explain: "En fila se mantiene la distancia lo más constante posible."
+    explain: "En una fila se mantiene la distancia lo más constante posible. Acortarla para que nadie se meta o para avanzar antes te quita el margen de frenado."
     cites: ["cbr-rijprocedure:3.2"]
 
   - id: seguimiento-grave
     type: yesno
-    prompt: "¿Aparece en el art. 5a WVW el ir muy cerca detrás de otro vehículo entre las conductas graves?"
+    prompt: "Un conductor va pegado a propósito a 120 km/h, a pocos metros del auto de delante, y pone a ese conductor en peligro de lesión grave. ¿Puede contar como una de las conductas graves del art. 5a de la Wegenverkeerswet?"
     answer: true
-    explain: "Sí: onderdeel h, zeer dicht achter een ander voertuig rijden."
+    explain: "Sí: ir muy cerca detrás de otro vehículo (zeer dicht achter een ander voertuig rijden) figura entre las conductas del art. 5a cuando se hace a propósito y pone a otro en peligro de muerte o lesión grave."
     cites: ["wvw:5a"]
 
   - id: seguimiento-siguen
-    type: yesno
-    prompt: "Un auto te sigue demasiado pegado. ¿Conviene dejar tú algo más de distancia delante?"
-    answer: true
-    explain: "Con un vehículo muy pegado detrás hace falta más distancia, y esa situación debe evitarse en lo posible."
+    type: mc
+    prompt: "Un auto te sigue demasiado pegado en una carretera mojada. ¿Qué haces?"
+    options: ["Dejo algo más de distancia con el de delante", "Freno de golpe para que se aparte", "Acelero para dejarlo atrás", "Mantengo todo igual y toco la bocina"]
+    answer: 0
+    explain: "Con un vehículo pegado detrás hace falta más distancia con el de delante: así frenas con suavidad y el de atrás gana tiempo. Frenar de golpe o acelerar sin necesidad aumenta el riesgo."
     cites: ["cbr-rijprocedure:3.2"]
 
   - id: seguimiento-punto-fijo

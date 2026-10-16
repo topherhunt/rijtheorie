@@ -1,48 +1,35 @@
 questions:
-  - id: spitsstrook-cruz-roja
-    type: mc
-    prompt: Sobre tu carril aparece una cruz roja. ¿Qué significa?
-    options:
-      - Reduce la velocidad a 50 km/h
-      - No puedes usar ese carril
-      - Puedes usar el carril, con precaución
-      - Solo se puede usar el carril si vas a salir
-    answer: 1
-    explain: La cruz roja significa que el carril no se puede usar.
-    cites: ["rvv:73"]
-
   - id: spitsstrook-cruz-vluchtstrook
     type: yesno
-    prompt: Hay una cruz roja sobre la vluchtstrook. ¿Puedes usarla en una emergencia?
+    prompt: Tu auto se avería y la vluchtstrook tiene una cruz roja sobre ella. ¿Puedes detenerte allí?
     answer: true
-    explain: Con una cruz roja, la vluchtstrook solo puede usarse en emergencias.
+    explain: La cruz roja prohíbe usar el carril, pero en la vluchtstrook deja una excepción, las emergencias. Una avería que te impide seguir es el caso para el que sirve la vluchtstrook.
     cites: ["rvv:73"]
 
   - id: spitsstrook-flecha-blanca
     type: mc
-    prompt: ¿Qué significa una flecha blanca en un panel sobre el carril?
+    prompt: El panel sobre tu carril pasa de flecha verde a flecha blanca. ¿Qué te dice?
     options:
-      - El carril está abierto
-      - Aviso previo de una cruz roja
-      - Debes salir de la autopista
-      - Velocidad máxima libre
-    answer: 1
-    explain: La flecha blanca es la señal de aviso previo de una cruz roja.
+      - Que más adelante habrá una cruz roja en este carril y debes prepararte
+      - Que debes cambiar de carril en este mismo momento
+      - Que el carril ya está cerrado
+      - Que ya no hay velocidad máxima en ese carril
+    answer: 0
+    explain: La flecha blanca es el aviso previo de una cruz roja. No es una orden de cambiar de carril ya ni cierra el carril todavía; te da tiempo para prepararte.
     cites: ["rvv:73"]
 
-  - id: spitsstrook-vel-panel
-    type: yesno
-    prompt: Un panel sobre tu carril muestra un número de velocidad en un círculo rojo (señal A3). ¿Puedes usar ese carril?
-    answer: true
-    explain: Con una flecha verde o una velocidad máxima (A3) el carril puede usarse.
-    cites: ["rvv:73", "rvv:bijlage1.A3"]
-
-  - id: spitsstrook-panel-electronico
-    type: yesno
-    prompt: ¿Pueden mostrarse señales de tráfico en un panel electrónico?
-    answer: true
-    explain: La ley lo permite expresamente.
-    cites: ["rvv:64a"]
+  - id: spitsstrook-velocidad-panel
+    type: mc
+    prompt: El panel sobre tu carril muestra 80 en un círculo rojo (señal A3). Hay poco tráfico y el límite general de esa vía sería 100 km/h. ¿Puedes ir a 100?
+    sign: A3
+    options:
+      - No, el número que muestra el panel es la velocidad máxima en ese carril
+      - Sí, el número es una recomendación cuando hay poco tráfico
+      - Sí, pero solo de día
+      - No, 80 es la velocidad mínima
+    answer: 0
+    explain: El artículo 73 habla de "maximumsnelheid, aangeduid door bord A3", y la señal A3 se titula "Maximumsnelheid op een electronisch signaleringsbord". El número es un máximo que hay que respetar, no un consejo.
+    cites: ["rvv:73", "rvv:bijlage1.A3", "rvv:62"]
 
   - id: spitsstrook-abierta-es-legal
     type: yesno
@@ -52,14 +39,18 @@ questions:
     explain: Con C23-01 la vluchtstrook está designada como rijstrook, y eso es la spitsstrook. Entonces es un carril de circulación. La prohibición de usar la vluchtstrook sin emergencia (art. 43 lid 3) vale cuando es una vluchtstrook corriente, sin esa señal.
     cites: ["rvv:1", "rvv:43.3"]
 
-  - id: spitsstrook-codigos
+  - id: spitsstrook-fin
     type: mc
-    prompt: ¿Qué significa esta señal?
+    prompt: Circulas por la spitsstrook abierta y ves la señal C23-03. ¿Qué significa para ti?
     sign: C23-03
-    options: [Spitsstrook open, Spitsstrook vrijmaken, Einde spitsstrook, Cruce de carriles]
-    answer: 2
-    explain: 'C23-03 es "einde spitsstrook", el fin de la spitsstrook. C23-01 es "open" y C23-02 "vrijmaken".'
-    cites: ["rvv:bijlage1.C23-03"]
+    options:
+      - Que la spitsstrook termina y sigues por los demás carriles
+      - Que la spitsstrook empieza en ese punto
+      - Que debes dejar libre el carril de tu derecha
+      - Que puedes seguir por la vluchtstrook hasta la salida
+    answer: 0
+    explain: C23-03 es "einde spitsstrook". Fuera de la spitsstrook, la vluchtstrook vuelve a ser vluchtstrook, y sin emergencia está prohibido usarla.
+    cites: ["rvv:bijlage1.C23-03", "rvv:43.3"]
 
   - id: spitsstrook-cruz-sin-emergencia
     type: yesno
@@ -76,54 +67,40 @@ questions:
     cites: ["rvv:73", "rvv:81"]
 
   - id: spitsstrook-linea
-    type: yesno
-    prompt: La spitsstrook está abierta (sin cruz roja) y entre tu carril y ella hay una línea continua. ¿Puedes cruzarla para ir a la spitsstrook?
-    answer: true
-    explain: "La regla de no cruzar líneas continuas tiene una excepción: cruzarla para llegar o salir de una vluchthaven, vluchtstrook o spitsstrook junto al carril que sigues."
-    cites: ["rvv:76.1", "rvv:76.2"]
-
-  - id: spitsstrook-linea-otra
-    type: yesno
-    prompt: Entre dos carriles normales hay una línea continua y no hay una línea discontinua de tu lado. ¿Puedes cruzarla?
-    answer: false
-    explain: Sin excepción (spitsstrook, vluchtstrook o vluchthaven, o línea discontinua de tu lado), la línea continua no se cruza.
+    type: mc
+    prompt: Vas por el carril derecho, la spitsstrook está abierta a tu derecha y entre tu carril y ella hay una línea continua. ¿Puedes cruzarla para pasar a la spitsstrook?
+    options:
+      - Sí, la ley permite cruzar una línea continua para llegar a una spitsstrook junto al carril que sigues
+      - No, una línea continua nunca se cruza
+      - Solo si hay una cruz roja en tu carril
+    answer: 0
+    explain: La regla general es no cruzar la línea continua, pero hay una excepción para llegar a (o salir de) una vluchthaven, una vluchtstrook o una spitsstrook junto al carril que sigues.
     cites: ["rvv:76.1", "rvv:76.2"]
 
   - id: spitsstrook-verdrijvingsvlak
     type: mc
-    prompt: ¿Cuándo puedes usar un verdrijvingsvlak o un puntstuk?
+    prompt: Sigues una spitsstrook que pasa por una bifurcación con un verdrijvingsvlak. ¿Puedes circular por él?
     options:
-      - Nunca
-      - Siempre, para tomar una salida más rápido
-      - Solo si sigues una spitsstrook que pasa por una bifurcación o unión
-      - Solo si no hay tráfico
-    answer: 2
-    explain: La regla es que no se usan. La excepción es seguir una spitsstrook que pasa por una splitsing o samenvoeging (y lo mismo con una busbaan o busstrook usada legalmente).
+      - Sí, la excepción permite usarlo mientras sigues la spitsstrook
+      - No, un verdrijvingsvlak o puntstuk no se usa nunca
+      - Solo si no viene tráfico por la bifurcación
+      - Solo si vas a una velocidad baja
+    answer: 0
+    explain: La regla es no usar el verdrijvingsvlak ni el puntstuk. La excepción es seguir una spitsstrook que pasa por una splitsing o samenvoeging (y lo mismo con una busbaan o busstrook usada legalmente).
     cites: ["rvv:77.1", "rvv:77.2", "rvv:77.3"]
 
   - id: spitsstrook-averia
     type: mc
-    prompt: Tienes una avería en una spitsstrook abierta. ¿A quién recomienda llamar Rijkswaterstaat?
-    options: [A la Wegenwacht, Al 112, A la policía local, A nadie]
+    prompt: Tu auto se avería en una spitsstrook abierta. ¿A quién recomienda llamar Rijkswaterstaat?
+    options: [A la Wegenwacht como en cualquier avería, Al 112, A la policía local, A tu aseguradora]
     answer: 1
-    explain: En una spitsstrook abierta, o en peligro agudo, se llama al 112.
+    explain: En una spitsstrook abierta, o en peligro agudo, se llama al 112 en lugar de a la Wegenwacht.
     cites: ["rws-pech"]
 
-  - id: spitsstrook-bus-palabra
+  - id: spitsstrook-bus-turistico
     type: mc
-    prompt: En el panel de un carril aparece la palabra BUS. ¿Quién puede usar el carril?
-    options:
-      - Solo la lijnbus
-      - La lijnbus y la autobus
-      - Todos los vehículos de motor
-      - Solo taxis y autobuses
-    answer: 1
-    explain: Con la palabra BUS solo pueden usarlo lijnbus y autobus. Con LIJNBUS, solo la lijnbus.
-    cites: ["rvv:73"]
-
-  - id: spitsstrook-lijnbus-palabra
-    type: yesno
-    prompt: En el panel de un carril aparece la palabra LIJNBUS. ¿Puede usarlo un autobús turístico (autobus no de línea)?
-    answer: false
-    explain: Con LIJNBUS solo puede usarlo un conductor de lijnbus.
+    prompt: Dos carriles tienen luces con una palabra, BUS en uno y LIJNBUS en el otro. Conduces un autobús turístico (autobus, no de línea). ¿Cuál puedes usar?
+    options: [Solo el carril con BUS, Solo el carril con LIJNBUS, Los dos, Ninguno]
+    answer: 0
+    explain: Con BUS pueden usar el carril la lijnbus y la autobus. Con LIJNBUS solo la lijnbus, así que un autobús turístico no puede.
     cites: ["rvv:73"]

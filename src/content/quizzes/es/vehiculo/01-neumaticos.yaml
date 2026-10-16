@@ -6,24 +6,18 @@ questions:
     explain: La profundidad de las ranuras principales debe ser de al menos 1,6 mm en toda la circunferencia. Con 1,4 mm el neumático ya no cumple.
     cites: ["rv:5.2.27"]
 
-  - id: neumaticos-dano
-    type: yesno
-    prompt: Un neumático tiene un corte profundo y se ve la carcasa. ¿Cumple los requisitos legales?
-    answer: false
-    explain: Los neumáticos no pueden tener daños en los que se vea la carcasa.
-    cites: ["rv:5.2.27"]
-
-  - id: neumaticos-bulto
-    type: yesno
-    prompt: Un neumático tiene un bulto en el costado. ¿Está permitido circular así?
-    answer: false
-    explain: Los neumáticos no pueden tener bultos.
+  - id: neumaticos-revision-cuatro
+    type: multi
+    prompt: Revisas los cuatro neumáticos antes de un viaje. ¿Cuáles de estos hallazgos hacen que el neumático NO cumpla los requisitos?
+    options: ["Un corte en el costado que deja ver la carcasa", "Un bulto en el costado", "3 mm de dibujo en toda la circunferencia", "1,5 mm de dibujo en una ranura principal"]
+    answer: [0, 1, 3]
+    explain: Un daño que deja ver la carcasa, un bulto y menos de 1,6 mm de dibujo incumplen rv:5.2.27. Con 3 mm uniformes el dibujo sí cumple; el error típico es rechazarlo por "parecer gastado".
     cites: ["rv:5.2.27"]
 
   - id: neumaticos-circunferencia
     type: mc
     prompt: El dibujo mide 3 mm en casi todo el neumático pero solo 1 mm en una parte de la circunferencia. ¿Cumple?
-    options: ["Sí, porque el promedio es mayor a 1,6 mm", "No, el mínimo se exige en toda la circunferencia", "Sí, si el neumático es nuevo", "Solo en verano"]
+    options: ["Sí, porque el promedio es mayor a 1,6 mm", "No, el mínimo se exige en toda la circunferencia", "Sí, si el neumático es nuevo", "Sí, si la parte gastada es pequeña"]
     answer: 1
     explain: El mínimo de 1,6 mm rige sobre toda la circunferencia del dibujo.
     cites: ["rv:5.2.27"]

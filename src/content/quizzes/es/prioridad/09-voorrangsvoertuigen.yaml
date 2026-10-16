@@ -6,16 +6,19 @@ questions:
       - Policía
       - Bomberos
       - Servicios de atención médica urgente
-      - Taxis
+      - Autobuses de línea
     answer: [0, 1, 2]
-    explain: El art. 29 nombra a la policía, los bomberos, los servicios de atención médica urgente y otros servicios de ayuda designados.
+    explain: El art. 29 nombra a la policía, los bomberos, los servicios de atención médica urgente y otros servicios de ayuda designados. Un autobús de línea no está entre ellos, aunque vaya con prisa.
     cites: ["rvv:29"]
 
-  - id: voorrangsvoertuigen-dejar
-    type: yesno
-    prompt: Se acerca una ambulancia con luz azul y sirena. ¿Debes dejarla pasar?
-    answer: true
-    explain: Todos los usuarios de la vía deben dejar pasar a un vehículo prioritario.
+  - id: voorrangsvoertuigen-sin-cruce
+    type: mc
+    prompt: Circulas por una calle recta, sin cruces, y una ambulancia con luz azul y sirena se acerca por detrás. ¿Se aplica el deber de dejarla pasar?
+    options:
+      - Sí, en cualquier punto de la vía, no solo en los cruces
+      - No, el art. 50 solo regula quién pasa primero en un cruce
+    answer: 0
+    explain: El art. 50 dice que los usuarios de la vía deben dejar pasar a un vehículo prioritario, sin limitarlo a los cruces. Pensar que solo vale en cruces es confundirlo con las reglas de prioridad.
     cites: ["rvv:50"]
 
   - id: voorrangsvoertuigen-ambulancia-izquierda
@@ -53,21 +56,35 @@ questions:
     explain: El art. 50 no depende de quién tenga la prioridad en el cruce.
     cites: ["rvv:50"]
 
-  - id: voorrangsvoertuigen-weggebruikers
-    type: yesno
-    prompt: La obligación de dejar pasar a un vehículo prioritario solo vale para quienes conducen autos.
-    answer: false
-    explain: La ley dice weggebruikers, es decir, todos los usuarios de la vía, incluidos ciclistas y peatones.
+  - id: voorrangsvoertuigen-ciclista
+    type: mc
+    prompt: Vas en bicicleta por la calzada y una ambulancia con luz azul y sirena viene por detrás. ¿Quién debe dejarla pasar?
+    options:
+      - Tú también, igual que los conductores de coche
+      - Solo los coches, porque los ciclistas no conducen un motorvehículo
+    answer: 0
+    explain: El art. 50 habla de weggebruikers, todos los usuarios de la vía. Ciclistas y peatones también deben dejar pasar, no solo quienes conducen autos.
     cites: ["rvv:50"]
 
   - id: voorrangsvoertuigen-semaforo-rojo
     type: mc
     prompt: Estás parado ante un semáforo en rojo. Una ambulancia con luz azul y sirena se acerca por detrás y el cruce está libre. ¿Qué haces?
     options:
-      - Sigues parado ante el rojo y le facilitas el paso solo si puedes hacerlo de forma legal y segura
-      - Cruzas en rojo con cuidado para abrirle camino
-      - Aceleras para salir de su camino cruzando el cruce
-      - Das marcha atrás para hacerle espacio
+      - Me quedo parado ante el rojo y le dejo paso solo si puedo hacerlo de forma legal y segura
+      - Cruzo el semáforo en rojo con cuidado para abrirle camino
+      - Avanzo hasta el centro del cruce para dejar libre el carril de la ambulancia
+      - Doy marcha atrás hasta dejarle espacio suficiente para pasar
     answer: 0
-    explain: El art. 50 te obliga a dejarla pasar, pero no describe cómo hacerlo; el art. 91 da libertad al conductor de la ambulancia, no a ti. El semáforo en rojo sigue significando stop para ti (art. 68.1).
+    explain: El art. 50 te obliga a dejarla pasar, pero no describe cómo hacerlo; el art. 91 da libertad al conductor de la ambulancia, no a ti. El semáforo en rojo sigue significando stop para ti (art. 68.1), así que cruzar o avanzar en rojo no es la respuesta por defecto.
     cites: ["rvv:50", "rvv:91", "rvv:68.1"]
+
+  - id: voorrangsvoertuigen-verde
+    type: mc
+    prompt: Tienes el semáforo en verde y ves venir por el cruce una ambulancia con luz azul y sirena que no se detiene en su rojo. ¿Qué haces?
+    options:
+      - Le dejo pasar, porque a un vehículo prioritario se le deja pasar aunque yo tenga verde
+      - Sigo, porque el verde me da paso y es ella quien debe parar
+      - Acelero para cruzar antes de que llegue
+    answer: 0
+    explain: El art. 50 te obliga a dejar pasar a un vehículo prioritario, y el art. 91 permite a su conductor desviarse de las reglas en la medida en que su tarea lo exija. Tu verde no cambia esa obligación.
+    cites: ["rvv:50", "rvv:91"]

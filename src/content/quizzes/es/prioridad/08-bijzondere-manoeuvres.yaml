@@ -1,23 +1,26 @@
 questions:
-  - id: bijzondere-manoeuvres-lista
+  - id: bijzondere-manoeuvres-lista-situaciones
     type: multi
-    prompt: ¿Cuáles de estas son maniobras especiales según el art. 54?
+    prompt: ¿En cuáles de estas situaciones debes dejar pasar a todo el tráfico por hacer una maniobra especial?
     options:
-      - Arrancar desde un estacionamiento
-      - Dar marcha atrás
-      - Salir de una uitrit a la vía
-      - Cambiar de carril
-      - Seguir recto por una vía con prioridad
-    answer: [0, 1, 2, 3]
-    explain: El art. 54 cita wegrijden, achteruitrijden, uit een uitrit de weg oprijden y van rijstrook wisselen, entre otros. Seguir recto no es maniobra especial.
-    cites: ["rvv:54"]
-
-  - id: bijzondere-manoeuvres-arrancar
-    type: yesno
-    prompt: Al arrancar desde el borde de la calzada, ¿debes dejar pasar también al tráfico que viene de frente?
-    answer: true
-    explain: El CBR indica que al arrancar dejas pasar a todo el tráfico, también al que viene de frente.
+      - Sales de la entrada de un garaje (uitrit) a la calle
+      - Pasas del carril de incorporación a la calzada principal
+      - Sigues recto por una vía con prioridad
+      - Arrancas cuando el semáforo se pone verde, tras esperar en la cola
+    answer: [0, 1]
+    explain: El art. 54 cita uit een uitrit de weg oprijden y van de invoegstrook de doorgaande rijbaan oprijden. Seguir recto no es una maniobra especial, y según el CBR arrancar tras una parada en el tráfico tampoco lo es.
     cites: ["rvv:54", "cbr-rijprocedure:3.1"]
+
+  - id: bijzondere-manoeuvres-arrancar-mirar
+    type: mc
+    prompt: Vas a arrancar desde el borde derecho de la calzada, donde estás estacionado. ¿Qué miras antes de salir, según el CBR?
+    options:
+      - Retrovisor interior, adelante, retrovisor exterior izquierdo y por encima del hombro izquierdo
+      - Solo el retrovisor interior, porque el tráfico viene de atrás
+      - Retrovisor exterior derecho y por encima del hombro derecho
+    answer: 0
+    explain: Al arrancar desde el lado derecho entras en el carril por tu izquierda, así que el tráfico que te alcanza viene por ese lado. El CBR indica esa secuencia, y además debes dejar pasar a todo el tráfico, también al de frente.
+    cites: ["cbr-rijprocedure:3.1", "rvv:54"]
 
   - id: bijzondere-manoeuvres-semaforo-arrancar
     type: yesno
@@ -34,13 +37,6 @@ questions:
     explain: Los conductores de motorvehículos deben avisar con el intermitente al arrancar.
     cites: ["rvv:55"]
 
-  - id: bijzondere-manoeuvres-uitrit-peaton
-    type: yesno
-    prompt: Sales de una uitrit y un peatón pasa por la acera. ¿Debes dejarlo pasar?
-    answer: true
-    explain: El CBR indica que en uitrit e inrit dejas pasar a todos, también a los peatones.
-    cites: ["rvv:54", "cbr-rijprocedure:3.6"]
-
   - id: bijzondere-manoeuvres-uitrit-izquierda
     type: mc
     prompt: Sales de una uitrit (salida de un garaje) a la calle. Por tu derecha no viene nadie, pero por tu izquierda se acerca una bicicleta y por la acera pasa un peatón. ¿A quién dejas pasar?
@@ -55,14 +51,13 @@ questions:
 
   - id: bijzondere-manoeuvres-uitrit-encuentro
     type: mc
-    prompt: Un auto sale de una uitrit y otro entra a ella al mismo tiempo. ¿Qué dice la ley y qué prefiere el CBR?
+    prompt: Un auto sale de una uitrit y otro entra a ella al mismo tiempo. Según la ley y la preferencia del CBR, ¿qué se espera?
     options:
-      - La ley obliga a ambos a dejarse pasar; el CBR prefiere dejar pasar al que sale
-      - Solo el que sale debe ceder
-      - Solo el que entra debe ceder
-      - Pasa el que está más a la derecha
+      - Ambos deben dejarse pasar según la ley, y el CBR prefiere que se deje pasar al que sale
+      - Solo el que sale debe ceder, por ley
+      - Solo el que entra debe ceder, por ley
     answer: 0
-    explain: Ambos hacen una maniobra especial, así que ambos deben dejar pasar. El CBR prefiere dejar pasar al que sale.
+    explain: Ambos hacen una maniobra especial, así que por ley ambos deben dejar pasar. Que se deje pasar al que sale es una preferencia del CBR, no una regla de la ley.
     cites: ["rvv:54", "cbr-rijprocedure:3.6"]
 
   - id: bijzondere-manoeuvres-inrit-situacion
@@ -79,10 +74,17 @@ questions:
 
   - id: bijzondere-manoeuvres-aparcar-uitrit
     type: yesno
-    prompt: Buscas dónde dejar el auto y ves un hueco justo delante de la entrada de un garaje. ¿Puedes aparcar ahí?
+    prompt: Quieres aparcar (dejar el auto estacionado una hora) y ves un hueco justo delante de la entrada de un garaje. ¿Puedes estacionar ahí?
     answer: false
-    explain: Está prohibido aparcar frente a una inrit o uitrit.
+    explain: El art. 24.1.b prohíbe estacionar (parkeren) delante de una inrit o uitrit.
     cites: ["rvv:24.1"]
+
+  - id: bijzondere-manoeuvres-parada-uitrit
+    type: yesno
+    prompt: Paras delante de la salida de un garaje solo el tiempo de que baje un pasajero, y arrancas enseguida. ¿Infringes la prohibición de estacionar frente a una uitrit?
+    answer: false
+    explain: Estacionar (parkeren) excluye la parada necesaria para que suban o bajen pasajeros de inmediato (art. 1), así que esa parada no cae en el art. 24.1.b. Si te quedaras esperando, sí sería estacionar.
+    cites: ["rvv:24.1", "rvv:1"]
 
   - id: bijzondere-manoeuvres-marcha-atras-situacion
     type: mc

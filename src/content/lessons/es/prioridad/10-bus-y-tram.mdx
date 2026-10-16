@@ -34,19 +34,31 @@ En un cruce, los conductores deben dar prioridad (*voorrang verlenen*) a los con
 
 <Check id="bus-tram-tranvia-frente" />
 
-<Check id="bus-tram-prioridad" />
-
-## El tranvía no tiene que dejar pasar al girar
+## Cuando el tranvía gira
 
 <Rule cite="rvv:18.3" title="Excepción para tranvías">
-Las reglas del art. 18 (dejar pasar al tráfico de frente y al de al lado cuando giras) **no** valen para el conductor de un tranvía.
+Las reglas del art. 18 (dejar pasar al tráfico de frente y al de al lado cuando giras) **no** valen para el conductor de un tranvía. Eso no cambia tu deber: sigues dándole prioridad (art. 15.2.b), también cuando gira a través de tu camino.
 </Rule>
 
-<Rule cite="rvv:11.5" title="Adelantar un tranvía">
-Se puede adelantar a un tranvía por la derecha.
+<Junction
+  arms={{ n: { tram: true }, e: {}, s: {}, w: {} }}
+  vehicles={[
+    { label: 'A', kind: 'car', from: 's', to: 'straight', you: true },
+    { label: 'B', kind: 'tram', from: 'n', to: 'left' },
+  ]}
+  alt="Cruce. Tú (A) vienes del sur y sigues recto. Un tranvía (B) viene de frente, del norte, y gira a la izquierda cruzando tu carril."
+  caption="El tranvía no tiene que dejarte pasar al girar, y tú le debes prioridad: pasa primero."
+/>
+
+<Check id="bus-tram-tranvia-gira" />
+
+## Adelantar un tranvía
+
+<Rule cite="rvv:11.5, rvv:11.1" title="Adelantar un tranvía">
+La regla general es adelantar por la izquierda (art. 11.1). El tranvía es la excepción: los conductores pueden adelantarlo también **por la derecha** (art. 11.5).
 </Rule>
 
-<Check id="bus-tram-adelantar" />
+<Check id="bus-tram-adelantar-derecha" />
 
 ## Tranvía o autobús detenido en una parada
 
@@ -60,7 +72,15 @@ Si quieres pasar un tranvía o autobús detenido por el lado donde suben y bajan
 No puedes dejar tu vehículo parado junto a la señal de parada de autobús (L3), a la altura de la marcación de bloques o, si no hay marcación, a menos de 12 metros de la señal.
 </Rule>
 
+Estar parado (*stilstaan*) en esa zona está prohibido aunque no dejes el coche ni lo aparques: vale también para esperar a alguien con el motor encendido. La única excepción es **dejar subir o bajar pasajeros de inmediato**.
+
+<Rule cite="rvv:23.2" title="Subir y bajar es la excepción">
+La prohibición de parar junto a la parada de autobús no vale para el onmiddellijk dejar subir o bajar pasajeros. Esa excepción es solo para la parada de autobús: no te autoriza a parar en un cruce, un paso de peatones u otros sitios del art. 23.1.
+</Rule>
+
 <Check id="bus-tram-parada-estacionar" />
+
+<Check id="bus-tram-parada-bajar" />
 
 <Rule cite="cbr-rijprocedure:3.6" title="Pasajeros">
 Presta atención a pasajeros que aparecen por delante o por detrás del autobús.
@@ -68,7 +88,7 @@ Presta atención a pasajeros que aparecen por delante o por detrás del autobús
 
 <Check id="bus-tram-pasajeros" />
 
-<Check id="bus-tram-pasajeros-delante" />
+<Check id="bus-tram-pasajeros-aparecen" />
 
 ## El autobús que quiere salir de la parada
 
@@ -76,9 +96,9 @@ Presta atención a pasajeros que aparecen por delante o por detrás del autobús
 Dentro de la zona urbana (<T id="bebouwde-kom" />), debes darle la oportunidad de salir de una parada (*bushalte*) a un autobús cuyo conductor avisa con el intermitente. Esta regla no vale para motorvehículos de una columna militar o cortejo fúnebre.
 </Rule>
 
-<Check id="bus-tram-salir-parada" />
+<Check id="bus-tram-salir-parada-situacion" />
 
-<Check id="bus-tram-colonne" />
+<Check id="bus-tram-colonne-resto" />
 
 <Tip>
 La pregunta típica es: ves un autobús con el intermitente puesto en una parada en zona urbana. Respuesta: lo dejas salir.

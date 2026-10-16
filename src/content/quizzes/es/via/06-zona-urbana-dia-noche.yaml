@@ -1,8 +1,9 @@
 questions:
   - id: zona-limites
     type: mc
+    exam: false
     prompt: ¿Quién decide dónde están los límites de una bebouwde kom?
-    options: [El CBR, El consejo municipal (gemeenteraad), El conductor, La policía en cada control]
+    options: [El CBR, El consejo municipal (gemeenteraad), El conductor, La provincia según el tamaño del pueblo]
     answer: 1
     explain: Los límites los fija una decisión del consejo municipal.
     cites: ["wvw:20a.1"]
@@ -33,21 +34,14 @@ questions:
     explain: Para las bromfietsen en la rijbaan el máximo es 45 km/h tanto dentro como fuera de la bebouwde kom. Lo que cambia con H1 y H2 es el límite de los vehículos de motor como el coche.
     cites: ["rvv:20", "rvv:21"]
 
-  - id: zona-bromfiets-fietspad
+  - id: zona-bromfiets-fietspad-h1
     type: number
-    prompt: Vas en bromfiets por un fiets/bromfietspad dentro de la bebouwde kom, sin otras señales de velocidad. ¿Cuál es tu velocidad máxima?
+    prompt: Vas en bromfiets por un fiets/bromfietspad fuera de la bebouwde kom, a 40 km/h, y llegas a la señal H1. No hay otras señales de velocidad. ¿Cuál es ahora tu velocidad máxima en ese camino?
+    sign: H1
     answer: 30
     unit: km/h
-    explain: En un fiets/bromfietspad dentro de la bebouwde kom la bromfiets tiene un máximo de 30 km/h; los 45 km/h son para la rijbaan.
-    cites: ["rvv:20"]
-
-  - id: zona-bromfiets-fietspad-fuera
-    type: number
-    prompt: Vas en bromfiets por un fiets/bromfietspad fuera de la bebouwde kom, sin otras señales de velocidad. ¿Cuál es tu velocidad máxima?
-    answer: 40
-    unit: km/h
-    explain: En un fiets/bromfietspad fuera de la bebouwde kom el máximo de la bromfiets es 40 km/h; los 45 km/h son para la rijbaan.
-    cites: ["rvv:21"]
+    explain: En un fiets/bromfietspad la bromfiets tiene 40 km/h fuera de la bebouwde kom y 30 km/h dentro, así que al pasar H1 debes bajar a 30. Los 45 km/h son solo para la rijbaan.
+    cites: ["rvv:20", "rvv:21", "rvv:bijlage1.H1"]
 
   - id: zona-noche-ciclista
     type: yesno
@@ -68,4 +62,11 @@ questions:
     prompt: Es una tarde de junio, las 21:30. El sol todavía no se ha puesto y se ve perfectamente. Vas en bicicleta. ¿Estás obligado a llevar las luces de la bicicleta?
     answer: false
     explain: Para el RVV todavía es de día (el sol no se ha puesto) y la visibilidad no está reducida, así que no es obligatorio. La hora del reloj no decide; decide el sol.
+    cites: ["rvv:1", "rvv:35.1"]
+
+  - id: zona-invierno-ciclista
+    type: yesno
+    prompt: Es una tarde de diciembre, las 17:30. El sol se puso hace una hora, pero la calle tiene farolas y se ve bien. Vas en bicicleta. ¿Estás obligado a llevar las luces de la bicicleta?
+    answer: true
+    explain: Para el RVV es de noche desde la puesta del sol, y de noche el ciclista debe llevar luces. Que haya farolas y buena visibilidad no cambia la definición.
     cites: ["rvv:1", "rvv:35.1"]

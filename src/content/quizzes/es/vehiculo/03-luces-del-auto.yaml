@@ -1,10 +1,17 @@
 questions:
-  - id: luces-del-auto-colores
+  - id: luces-del-auto-tercera-freno
+    type: yesno
+    prompt: Un auto puesto en uso en 2015 tiene sus dos luces de freno funcionando, pero no tiene tercera luz de freno. ¿Cumple los requisitos de luces?
+    answer: false
+    explain: Los autos puestos en uso después del 30 de septiembre de 2001 deben llevar, además de las dos luces de freno, una tercera luz de freno. Que las dos luces funcionen no suple la que falta.
+    cites: ["rv:5.2.51"]
+
+  - id: luces-del-auto-colores-cambio
     type: mc
-    prompt: ¿De qué color pueden ser las luces de freno de un auto?
-    options: [Solo blancas, Rojas o ámbar, Solo azules, Verdes]
-    answer: 1
-    explain: Las luces de freno son rojas o ámbar; la tercera luz de freno debe ser roja.
+    prompt: Quieres cambiar las luces de tu auto por otras de color. ¿Cuál de estos cambios está permitido?
+    options: [Luces de freno ámbar, Luces traseras de posición blancas, Una luz de marcha atrás roja, Luz de la matrícula azulada]
+    answer: 0
+    explain: Las luces de freno pueden ser rojas o ámbar. Las luces traseras deben ser rojas, la de marcha atrás blanca o amarilla y la de la matrícula blanca; un color válido para una luz no vale para otra.
     cites: ["rv:5.2.53"]
 
   - id: luces-del-auto-trasero-blanco
@@ -39,9 +46,9 @@ questions:
   - id: luces-del-auto-parpadean
     type: multi
     prompt: ¿Cuáles de estas luces de un auto particular pueden parpadear?
-    options: [Los intermitentes, Las luces de emergencia, Las luces de freno al hacer un frenado de emergencia, Las luces de cruce]
+    options: [Los intermitentes, Las luces de emergencia, Las luces de freno al hacer un frenado de emergencia, Las antiniebla delanteras]
     answer: [0, 1, 2]
-    explain: Solo los intermitentes, las luces de emergencia y las luces de freno del aviso de frenado de emergencia pueden parpadear. Las luces de cruce que parpadean están prohibidas.
+    explain: Solo los intermitentes, las luces de emergencia y las luces de freno del aviso de frenado de emergencia pueden parpadear. Unas luces de cruce o antiniebla que parpadean están prohibidas.
     cites: ["rv:5.2.64"]
 
   - id: luces-del-auto-testigo-antiniebla
@@ -53,14 +60,14 @@ questions:
 
   - id: luces-del-auto-azul
     type: yesno
-    prompt: ¿Puedes poner una luz azul intermitente en tu auto particular?
+    prompt: Quieres montar una luz azul intermitente en el techo de tu auto particular para que te dejen pasar en los atascos. ¿Está permitido?
     answer: false
     explain: Las luces azules intermitentes solo están permitidas para los servicios autorizados.
     cites: ["rv:5.2.65"]
 
   - id: luces-del-auto-deslumbrar
     type: yesno
-    prompt: Quieres instalar en tu auto unas luces adicionales muy potentes que deslumbran. Aparte de las luces largas, ¿está permitido?
+    prompt: Montas en el frente de tu auto unos faros adicionales muy potentes para ver mejor de noche, y a los coches que vienen de frente los deslumbran. Aparte de las luces largas, ¿está permitido?
     answer: false
     explain: La ley prohíbe luces que deslumbren, con la excepción de las luces largas.
     cites: ["rv:5.2.64"]

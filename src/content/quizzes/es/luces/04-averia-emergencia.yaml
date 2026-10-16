@@ -1,7 +1,7 @@
 questions:
   - id: triangulo-distancia
     type: number
-    prompt: ¿A qué distancia aproximada del vehículo se coloca el triángulo de emergencia?
+    prompt: Tu auto averiado es un obstáculo que no se ve a tiempo en una carretera normal y no tienes luces de emergencia. ¿A qué distancia aproximada de tu auto colocas el triángulo?
     answer: 30
     unit: m
     explain: La ley dice "ongeveer 30 meter" (unos 30 m) del vehículo.
@@ -17,18 +17,27 @@ questions:
 
   - id: triangulo-direccion
     type: mc
-    prompt: ¿Dónde se coloca el triángulo respecto al tráfico?
-    options: [En la dirección del tráfico para el que el vehículo es un peligro y bien visible, "Detrás del vehículo, pegado al parachoques", Delante del vehículo, En la berma sin importar la dirección]
+    prompt: Tu auto averiado está parado en una carretera de un solo sentido y el tráfico solo llega por detrás. ¿Dónde colocas el triángulo?
+    options: ["Sobre la vía, bien visible, a unos 30 m detrás de tu auto", "A unos 30 m delante de tu auto, hacia donde apunta el capó", "Pegado al parachoques trasero para que no se pierda", "En la berma a unos 30 m sin importar la dirección"]
     answer: 0
-    explain: Debe colocarse en la vía, bien visible, hacia el tráfico que se acerca y para el que eres un peligro.
+    explain: "El triángulo se coloca bien visible sobre la vía, a unos 30 m y en la dirección del tráfico para el que el vehículo es un peligro: aquí, el que viene por detrás."
     cites: ["rvv:58.2"]
 
-  - id: triangulo-moto
-    type: yesno
-    prompt: ¿La obligación del artículo 58 vale para un vehículo de motor de más de dos ruedas y para un remolque?
-    answer: true
-    explain: El artículo habla de motorvoertuigen op meer dan twee wielen en aanhangwagens.
+  - id: triangulo-vehiculos
+    type: multi
+    prompt: ¿Para cuáles de estos vehículos parados exige la ley el triángulo cuando son un obstáculo que no se ve a tiempo?
+    options: [Un auto, Un remolque, Una motocicleta, Una bicicleta]
+    answer: [0, 1]
+    explain: El artículo 58 vale para vehículos de motor de más de dos ruedas y para remolques. La motocicleta tiene dos ruedas y la bicicleta no es un vehículo de motor.
     cites: ["rvv:58.1"]
+
+  - id: averia-triangulo-sin-luces
+    type: mc
+    prompt: De noche tu auto se queda sin batería en la calzada, justo después de una curva, y las luces de emergencia no se encienden. Es un obstáculo que no se ve a tiempo. ¿Qué exige la ley?
+    options: ["Colocar el triángulo sobre la vía a unos 30 m hacia el tráfico que se acerca", "Nada, porque ya llamaste a la grúa", "Poner el triángulo pegado al auto para no alejarte", "Solo hace falta si es una autosnelweg"]
+    answer: 0
+    explain: El deber de triángulo solo se anula si el vehículo lleva luces de emergencia intermitentes. Sin ellas, un obstáculo que no se ve a tiempo se señala con el triángulo a unos 30 m.
+    cites: ["rvv:58.1", "rvv:58.2", "rvv:58.3"]
 
   - id: alarma-cuando
     type: multi
@@ -52,13 +61,6 @@ questions:
     explain: El artículo 58 lid 3 dice que el deber de triángulo no se aplica cuando hay luz intermitente de emergencia. Aun así, lo prudente es usar ambos si es seguro.
     cites: ["rvv:58.3"]
 
-  - id: autopista-averia-calzada
-    type: yesno
-    prompt: ¿Está permitido detener el auto en la calzada de una autosnelweg?
-    answer: false
-    explain: Está prohibido detenerse en la calzada de una autosnelweg o autoweg.
-    cites: ["rvv:43.2"]
-
   - id: autopista-vluchtstrook-no-emergencia
     type: yesno
     prompt: Quieres revisar el navegador y paras un momento en la vluchtstrook, sin ninguna emergencia. ¿Está permitido?
@@ -80,9 +82,3 @@ questions:
     explain: Dar la vuelta y la marcha atrás están prohibidos en una autosnelweg o autoweg.
     cites: ["rvv:43.1"]
 
-  - id: autopista-noche-luces
-    type: yesno
-    prompt: De noche, tu auto averiado está parado en la vluchtstrook. ¿Debe llevar luces de posición y luz trasera?
-    answer: true
-    explain: El artículo 38 lo exige en la vluchtstrook de una autosnelweg o autoweg.
-    cites: ["rvv:38"]

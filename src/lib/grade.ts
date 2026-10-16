@@ -31,3 +31,16 @@ export function shuffle<T>(xs: readonly T[], rand: () => number = Math.random): 
   }
   return a;
 }
+
+/**
+ * Same question with mc/multi options in random order and the answer remapped; authored order puts the answer first far too often.
+ * `optionKeys[i]` is the authored index of displayed option i (stable `qa-option-<n>` selectors).
+ */
+export function shuffleOptions<Q extends Question>(q: Q, rand: () => number = Math.random): Q & { optionKeys?: number[] } {
+  if (q.type !== 'mc' && q.type !== 'multi') return q;
+  const perm = shuffle(q.options.map((_, i) => i), rand);
+  const options = perm.map((i) => q.options[i]);
+  const answer = q.type === 'mc' ? perm.indexOf(q.answer) : q.answer.map((a) => perm.indexOf(a));
+  // TS cannot relate a spread of generic Q with a replaced union field back to Q; the shape is unchanged.
+  return { ...q, options, answer, optionKeys: perm } as unknown as Q & { optionKeys: number[] };
+}

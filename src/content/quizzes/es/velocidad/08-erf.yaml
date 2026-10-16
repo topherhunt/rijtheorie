@@ -1,10 +1,11 @@
 questions:
   - id: erf-velocidad
     type: number
-    prompt: "¿Cuál es la velocidad máxima dentro de un erf?"
+    prompt: "Vienes por una calle de la zona urbana (máximo general 50) y giras hacia una calle que empieza con la señal G5. ¿Cuál es tu máximo desde la G5?"
+    sign: G5
     answer: 15
     unit: km/h
-    explain: "Art. 45 RVV: no más de 15 km/h."
+    explain: "Dentro de un erf los conductores no pueden ir a más de 15 km/h (art. 45), aunque fuera de él rijan 50. El erf baja el límite que traías."
     cites: ["rvv:45"]
 
   - id: erf-vacio-mas-rapido
@@ -33,31 +34,30 @@ questions:
     explain: "Dentro de un erf los vehículos de motor solo pueden estacionar en plazas señaladas como tales (art. 46)."
     cites: ["rvv:46"]
 
-  - id: erf-estacionar-plaza-marcada
-    type: yesno
-    prompt: "Dentro de un erf hay una plaza de estacionamiento señalada como tal, libre. ¿Puedes estacionar tu auto en ella?"
-    answer: true
-    explain: "El art. 46 prohíbe estacionar en un erf salvo en plazas señaladas como tales; en ellas sí puedes."
-    cites: ["rvv:46"]
+  - id: erf-g6-salida
+    type: mc
+    prompt: "Sales de un erf por la señal G6 hacia una calle de la zona urbana sin ninguna señal de velocidad. ¿Qué máximo rige para tu auto desde la G6?"
+    options: [15 km/h, 50 km/h, 30 km/h, 80 km/h]
+    answer: 1
+    explain: "Los 15 km/h valen dentro del erf (art. 45). Al pasar la G6 termina el erf y, en una calle de la zona urbana sin señales, vuelve el máximo general de 50 km/h (art. 20). No sigues limitado a 15, pero tampoco rigen los 80 de fuera de la zona urbana."
+    cites: ["rvv:bijlage1.G6", "rvv:45", "rvv:20"]
+    sign: G6
 
-  - id: erf-ciclista-15
-    type: yesno
-    prompt: "Vas en bicicleta dentro de un erf. ¿Te afecta también el máximo de 15 km/h?"
-    answer: true
-    explain: "El art. 45 habla de «bestuurders», y según el art. 1 son todos los usuarios de la vía salvo los peatones; eso incluye a los ciclistas."
-    cites: ["rvv:45", "rvv:1"]
+  - id: erf-por-que-15
+    type: mc
+    prompt: "Un vecino te dice que en su erf nadie va a 15 km/h, que a 30 se ve igual. Según el procedimiento del CBR, ¿por qué el máximo es 15?"
+    options: ["A esa velocidad tú puedes reaccionar bien y los peatones tienen tiempo de reaccionar al auto", "Para que los autos no hagan ruido a los vecinos", "Porque los peatones tienen preferencia sobre cualquier vehículo", "Porque las calles de un erf siempre tienen baches"]
+    answer: 0
+    explain: "El CBR explica que a 15 km/h el conductor reacciona bien a lo que encuentre y los peatones tienen tiempo de reaccionar al auto. No es una regla de ruido ni de preferencia: en el erf todos tienen igual derecho de uso."
+    cites: ["cbr-rijprocedure:3.6", "rvv:45"]
 
-  - id: erf-g5-que-cambia
+  - id: erf-g5-tres-cambios
     type: multi
     prompt: "Conduces un auto y pasas una señal G5. ¿Qué es cierto desde ese momento?"
     sign: G5
-    options:
-      - "Mi máximo es 15 km/h"
-      - "Los peatones pueden usar la vía en todo su ancho"
-      - "Puedo estacionar en cualquier hueco"
-      - "Tengo preferencia sobre los peatones porque soy el vehículo"
-    answer: [0, 1]
-    explain: "Dentro del erf rigen 15 km/h (art. 45) y los peatones pueden usar todo el ancho (art. 44). Solo puedes estacionar en plazas señaladas (art. 46), y el procedimiento CBR dice que todos tienen igual derecho de uso."
+    options: ["Mi máximo es 15 km/h", "Los peatones pueden usar la vía en todo su ancho", "Solo puedo estacionar en plazas señaladas como tales", "El máximo de 15 km/h vale solo si hay peatones a la vista", "Tengo preferencia sobre los peatones porque soy el vehículo"]
+    answer: [0, 1, 2]
+    explain: "Dentro del erf rigen 15 km/h siempre (art. 45), los peatones pueden usar todo el ancho (art. 44) y solo puedes estacionar en plazas señaladas (art. 46). El 15 no depende de que haya gente a la vista, y el procedimiento CBR dice que todos tienen igual derecho de uso."
     cites: ["rvv:bijlage1.G5", "rvv:44", "rvv:45", "rvv:46", "cbr-rijprocedure:3.6"]
 
   - id: erf-pelota

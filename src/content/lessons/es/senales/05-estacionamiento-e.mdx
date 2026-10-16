@@ -12,10 +12,10 @@ Esta lección enseña a **reconocer** las señales E. Las reglas de dónde deten
 
 - **E1**: <T id="parkeren">prohibido estacionar</T>.
 - **E2**: prohibido <T id="stilstaan">detenerse</T>, aunque sea un momento. Es más estricta que E1.
-- **E3**: prohibido dejar bicicletas y ciclomotores.
+- **E3**: prohibido dejar bicicletas y ciclomotores. No habla de autos: tu auto no queda afectado por E3.
 
 <Rule cite="rvv:1, rvv:bijlage1.E1, rvv:bijlage1.E2" title="Qué puedes hacer con E1 y con E2">
-Con **E1** no puedes *parkeren*, y parkeren no incluye el tiempo justo para que suba o baje alguien ni para cargar o descargar de inmediato: un instante para dejar a un pasajero **sí** está permitido. Con **E2** no puedes *stilstaan* en absoluto, ni siquiera para eso.
+Con **E1** no puedes *parkeren*, y parkeren no incluye el tiempo justo para que suba o baje alguien ni para cargar o descargar de inmediato: un instante para dejar a un pasajero **sí** está permitido. Con **E2** no puedes *stilstaan* en absoluto, ni siquiera para eso. Por eso E2 es más estricta que E1: *stilstaan* es dejar el vehículo quieto, y *parkeren* es lo mismo salvo el tiempo de subir, bajar o cargar de inmediato.
 </Rule>
 
 <Check id="e-e1-pasajero" />
@@ -26,7 +26,7 @@ Con **E1** no puedes *parkeren*, y parkeren no incluye el tiempo justo para que 
 E1, E2 y E3 solo valen para el lado de la vía donde está la señal.
 </Rule>
 
-<Check id="e-lado" />
+<Check id="e-e3-auto" />
 
 ## Lugares donde sí puedes estacionar
 
@@ -36,7 +36,7 @@ E1, E2 y E3 solo valen para el lado de la vía donde está la señal.
 - **E5**: <T id="taxistandplaats" /> (parada de taxis).
 - **E6**: plaza para personas con discapacidad.
 - **E7**: zona para carga y descarga **inmediata** de mercancías.
-- **E8**: estacionamiento solo para la categoría de vehículo indicada (las variantes E8a, E8b y E8c: autocaravanas, dos ruedas en la acera, carga de vehículos eléctricos).
+- **E8**: estacionamiento solo para la categoría de vehículo indicada (las variantes E8a, E8b y E8c: autocaravanas, dos ruedas en la acera, **solo para cargar** vehículos eléctricos: tener un auto eléctrico no basta, hay que estar cargándolo).
 - **E9**: solo para titulares de permiso (<T id="vergunninghouders" />).
 
 <Rule cite="rvv:24.1" title="Estacionar donde no te toca">
@@ -53,7 +53,11 @@ Solo pueden estacionar en ella: un vehículo para personas con discapacidad, o u
 
 <Check id="e-e7-estacionar" />
 
+<Check id="e-e8c-cargar" />
+
 <Check id="e-e6-discapacidad" />
+
+<Check id="e-e6-tarjeta" />
 
 <Rule cite="rvv:24.4">
 Si la zona de estacionamiento tiene plazas marcadas (parkeervakken), solo puedes estacionar dentro de ellas.
@@ -66,16 +70,18 @@ Si la zona de estacionamiento tiene plazas marcadas (parkeervakken), solo puedes
 <Signs codes="E10,E11" />
 
 <Rule cite="rvv:25.1, rvv:25.2, rvv:bijlage1.E10" title="Zona de disco (blauwe zone)">
-En una <T id="parkeerschijf" />-zona (E10) solo puedes estacionar en plazas indicadas como tales o con **línea azul**. En las plazas con línea azul, un vehículo de motor de más de dos ruedas (como un auto) debe llevar el disco de estacionamiento bien visible, detrás del parabrisas. Si estacionas más tiempo del indicado en la señal, es una infracción. E11 marca el fin de la zona.
+En una <T id="parkeerschijf" />-zona (E10) solo puedes estacionar en plazas indicadas como tales o con **línea azul**. En las plazas con línea azul, un vehículo de motor de más de dos ruedas (como un auto) debe llevar el disco de estacionamiento bien visible, detrás del parabrisas. Una moto (dos ruedas) no necesita disco. Si estacionas más tiempo del indicado en la señal, es una infracción. E11 marca el fin de la zona.
 </Rule>
 
-<Rule cite="rvv:25.4" title="Cómo poner el disco">
-Puedes redondear la hora de llegada hacia arriba, a la hora entera o media hora siguiente. El tiempo permitido no puede haberse agotado.
+<Rule cite="rvv:25.3, rvv:25.4" title="Cómo poner el disco">
+El disco muestra en horas enteras o medias la hora en que empezaste a estacionar, y no puede ser un disco que avance solo. Puedes redondear la hora de llegada hacia arriba, a la hora entera o media hora siguiente. El tiempo permitido no puede haberse agotado.
 </Rule>
 
 <Check id="e-e10-disco" />
 
 <Check id="e-e10-redondeo" />
+
+<Check id="e-e10-moto" />
 
 ## Estacionar para cambiar de transporte o compartir auto
 

@@ -41,7 +41,7 @@ questions:
   - id: auto-y-equipo-nino-1-30
     type: mc
     prompt: Llevas en el asiento trasero a una niña de 10 años que mide 1,30 m. ¿Cómo debe ir?
-    options: [Con el cinturón normal de adulto, En un sistema de retención infantil con homologación, Sin cinturón si va en el asiento trasero, Con el cinturón y un cojín cualquiera]
+    options: [Con el cinturón normal de adulto, En un sistema de retención infantil con homologación, Con el cinturón y un cojín sin homologar, Solo con el cinturón de regazo]
     answer: 1
     explain: Un pasajero menor de 18 años y de menos de 1,35 m debe usar un sistema de retención infantil con homologación.
     cites: ["rvv:59"]
@@ -49,7 +49,7 @@ questions:
   - id: auto-y-equipo-nino-1-40
     type: mc
     prompt: Llevas en el asiento trasero a un niño de 11 años que mide 1,40 m. ¿Qué debe usar?
-    options: [El cinturón del auto como cualquier pasajero, Un sistema de retención infantil con homologación, "Nada, porque es menor", Dos cinturones a la vez]
+    options: [El cinturón del auto como cualquier pasajero, Un sistema de retención infantil con homologación, Un cojín elevador por ser menor, El cinturón del auto y un cojín elevador]
     answer: 0
     explain: La obligación del sistema de retención infantil vale para menores de 18 años y de menos de 1,35 m. Con 1,40 m no se cumple la segunda condición, así que usa el cinturón disponible.
     cites: ["rvv:59"]
@@ -63,24 +63,32 @@ questions:
 
   - id: auto-y-equipo-examen-aceite
     type: mc
-    prompt: En el examen práctico el examinador te pregunta por el nivel de aceite. ¿Qué se espera de ti?
-    options: [Que señales con qué se comprueba y expliques cómo, Que cambies el aceite, Que midas el nivel tú mismo con el motor caliente, Que digas la marca de aceite]
-    answer: 0
-    explain: El examinador no pide comprobar el nivel ni pregunta por tipos de aceite, pero sí que sepas indicar con qué se controla y cómo.
+    prompt: En el examen práctico el examinador te pregunta por el nivel de aceite. ¿Qué esperan de ti?
+    options: [Que midas tú el nivel con el motor caliente, Que nombres el tipo de aceite del motor, Que señales con qué se comprueba y expliques cómo, Que expliques de qué está compuesto el aceite]
+    answer: 2
+    explain: El examinador no te pide comprobar el nivel ni pregunta por tipos o composición del aceite; debes poder señalar con qué se controla y explicar cómo.
     cites: ["cbr-rijprocedure:3.7"]
 
   - id: auto-y-equipo-examen-frenos
     type: mc
     prompt: En el examen práctico, ¿qué debes poder hacer con el líquido de frenos (remvloeistof)?
-    options: [Señalar el depósito y explicar cómo se lee su nivel, Explicar su composición química, Medir su temperatura, Cambiarlo tú mismo]
-    answer: 0
-    explain: No se preguntan composición ni funcionamiento del líquido, pero sí que sepas señalar el depósito y explicar cómo se lee el nivel.
+    options: [Explicar de qué está compuesto, Señalar el depósito y explicar cómo se lee el nivel, Explicar cómo funciona dentro del sistema, Rellenarlo tú si está bajo]
+    answer: 1
+    explain: No se pregunta por el doble propósito, el funcionamiento ni la composición del líquido. Lo que se espera es señalar el depósito y explicar cómo se lee el nivel.
     cites: ["cbr-rijprocedure:3.7"]
 
-  - id: auto-y-equipo-examen-neumaticos
+  - id: auto-y-equipo-examen-neumaticos-dano
     type: multi
     prompt: Sobre los neumáticos, ¿cuáles de estos temas puede preguntarte el examinador del práctico?
-    options: [La profundidad del dibujo, La diferencia entre neumáticos de verano y de invierno, De qué materiales están hechos, Para qué sirve el tapón de la válvula]
-    answer: [0, 1, 3]
-    explain: Puede preguntar por la profundidad del dibujo, la diferencia verano/invierno, el riesgo de daños y para qué sirve el tapón de la válvula. No pregunta por la composición ni por los materiales.
+    options: [La profundidad del dibujo, De qué materiales están hechos, El riesgo de un neumático dañado, La composición química de la goma]
+    answer: [0, 2]
+    explain: Puede preguntar por la profundidad del dibujo, la diferencia entre neumáticos de verano e invierno, el riesgo de un neumático dañado y para qué sirve el tapón de la válvula. No pregunta por la composición ni por los materiales.
     cites: ["cbr-rijprocedure:3.7"]
+
+  - id: auto-y-equipo-dode-hoek-invoegen
+    type: mc
+    prompt: Vas a incorporarte a la doorgaande rijbaan desde un invoegstrook y has visto un hueco real. Además de los espejos, ¿qué haces justo antes de entrar?
+    options: [Miro por encima del hombro izquierdo para revisar la dode hoek, Toco la bocina para avisar de que entro, Miro hacia atrás hasta ver todo el carril, Miro solo el espejo interior]
+    answer: 0
+    explain: La dode hoek es la zona que los espejos no muestran, y justo antes de entrar se revisa con una mirada breve por encima del hombro izquierdo. No debe convertirse en mirar hacia atrás, porque puedes desviar el auto y no ves lo que pasa delante.
+    cites: ["cbr-rijprocedure:3.4"]

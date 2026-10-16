@@ -72,9 +72,9 @@ questions:
     type: mc
     prompt: Ves esta señal al principio de un camino al lado de la calzada. ¿Qué significa para quién?
     sign: G9
-    options: [Los jinetes deben usar ese camino, Los peatones deben usar ese camino, Los ciclistas pueden elegir ese camino, Los coches pueden aparcar en ese camino]
+    options: [Los jinetes deben usar ese camino, Los peatones deben usar ese camino, Los ciclistas pueden elegir ese camino, Los jinetes pueden usar ese camino o la calzada a su elección]
     answer: 0
-    explain: El G9 es un ruiterpad. Los jinetes deben usarlo. Un coche no puede aparcar en un ruiterpad.
+    explain: El G9 es un ruiterpad. Los jinetes deben usarlo, no tienen la opción de ir por la calzada. Los peatones y los ciclistas tienen sus propios caminos, y un coche no puede aparcar en un ruiterpad.
     cites: ["rvv:bijlage1.G9", "rvv:8.1", "rvv:10.1"]
 
   - id: sendas-peaton-fietspad
@@ -93,24 +93,24 @@ questions:
     explain: El G12 marca el fin del fietspad obligatorio. Sin fietspad obligatorio ni fiets/bromfietspad, los ciclistas usan la calzada.
     cites: ["rvv:bijlage1.G12", "rvv:5.2"]
 
-  - id: sendas-fietsstrook
-    type: mc
-    prompt: ¿Qué hace que una franja sea un fietsstrook?
-    options: [Que sea roja, "Que esté en la calzada, con líneas y dibujos de bicicleta", Que esté en la acera, Que tenga una señal G13]
-    answer: 1
-    explain: Fietsstrook es una parte de la rijbaan marcada con líneas continuas o discontinuas y con dibujos de bicicleta.
-    cites: ["rvv:1"]
-
   - id: sendas-fietsstrook-discontinua
     type: yesno
-    prompt: Una calle estrecha tiene un fietsstrook marcado con líneas discontinuas, sin ciclistas. ¿Puede tu coche circular sobre él?
+    prompt: En una calle estrecha viene un camión de frente y, para cruzaros, tendrías que apartarte sobre un fietsstrook de líneas discontinuas, sin ciclistas a la vista. ¿Puede tu coche usarlo?
     answer: true
-    explain: El fietsstrook es parte de la rijbaan, y el coche usa la rijbaan. La prohibición para el coche solo vale para el fietsstrook con líneas continuas. Un fietspad, en cambio, no es parte de la rijbaan.
-    cites: ["rvv:1", "rvv:10.1", "rvv:10.2"]
+    explain: El fietsstrook es parte de la rijbaan, y el coche usa la rijbaan. La prohibición para el coche solo vale para el fietsstrook con líneas continuas. Según el procedimiento del CBR, solo lo usas cuando la situación lo hace deseable o necesario y sin estorbar a ningún ciclista; un fietspad, en cambio, no es parte de la rijbaan.
+    cites: ["rvv:1", "rvv:10.1", "rvv:10.2", "cbr-rijprocedure:3.3"]
 
-  - id: sendas-suggestie
+  - id: sendas-franjas-coche
+    type: mc
+    prompt: ¿En cuál de estas franjas NO puede entrar tu coche?
+    options: ["Un fietsstrook de líneas continuas", "Un fietsstrook de líneas discontinuas, cuando la situación lo hace necesario", "Una suggestiestrook, al girar a la derecha", "Un carril de la calzada sin ninguna marca de bicicletas"]
+    answer: 0
+    explain: Solo el fietsstrook con líneas continuas está prohibido para el coche. El discontinuo es parte de la rijbaan y la ley no lo prohíbe; la suggestiestrook se puede usar al girar a la derecha; y un carril normal es tu sitio.
+    cites: ["rvv:10.2", "cbr-rijprocedure:3.3"]
+
+  - id: sendas-suggestie-giro
     type: yesno
-    prompt: Una franja roja al borde de la calzada, sin dibujos de bicicleta (una suggestiestrook), ¿es un fietsstrook según el RVV?
-    answer: false
-    explain: El RVV define el fietsstrook por sus líneas y sus dibujos de bicicleta. Una franja sin esos dibujos no cumple la definición; la palabra suggestiestrook no aparece en el RVV.
-    cites: ["rvv:1"]
+    prompt: Vas a girar a la derecha y, junto al borde de la calzada, hay una franja sin dibujos de bicicleta que sugiere un uso para ciclistas (suggestiestrook). ¿Puedes usarla para girar?
+    answer: true
+    explain: La suggestiestrook es parte de la rijbaan y, al girar a la derecha, puede usarse según el procedimiento del CBR. No tiene dibujos de bicicleta, así que no es un fietsstrook.
+    cites: ["cbr-rijprocedure:3.3", "rvv:1"]

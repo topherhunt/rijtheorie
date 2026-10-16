@@ -1,67 +1,49 @@
 questions:
   - id: invoegen-quien-cede
     type: mc
-    prompt: Estás en el invoegstrook y quieres pasar a la doorgaande rijbaan. ¿Quién cede el paso?
+    prompt: Vas por el invoegstrook y un auto circula ya muy cerca por el carril derecho de la calzada principal. Quieres pasar a la doorgaande rijbaan. ¿Quién deja pasar a quién?
     options:
-      - El tráfico de la calzada principal, porque tú ya estás en tu carril
-      - Tú, porque es una maniobra especial
-      - Quien vaya más rápido
-      - Nadie, se entra en orden
-    answer: 1
-    explain: Pasar del carril de incorporación a la calzada principal es una bijzondere manoeuvre, y quien la hace deja pasar primero al otro tráfico.
+      - Tú dejas pasar a ese auto, porque pasar a la calzada principal es una maniobra especial
+      - Ese auto te deja pasar, porque tú ya estás en tu carril
+      - Pasa primero quien vaya más rápido
+      - Nadie cede, se entra por orden de llegada
+    answer: 0
+    explain: Pasar del carril de incorporación a la calzada principal es una bijzondere manoeuvre, y quien la hace deja pasar primero al otro tráfico. Que ya estés en tu carril no te da prioridad.
     cites: ["rvv:54"]
-
-  - id: invoegen-definicion
-    type: yesno
-    prompt: ¿Es el invoegstrook parte de la doorgaande rijbaan?
-    answer: false
-    explain: La doorgaande rijbaan es la calzada sin los carriles de incorporación y de salida. El invoegstrook está separado de ella por una blokmarkering.
-    cites: ["rvv:1"]
-
-  - id: invoegen-intermitente-obligatorio
-    type: yesno
-    prompt: ¿Debes usar el intermitente al pasar del invoegstrook a la doorgaande rijbaan?
-    answer: true
-    explain: La ley obliga a usar el intermitente al subir a la doorgaande rijbaan y al cambiar de carril.
-    cites: ["rvv:55"]
 
   - id: invoegen-hombro
     type: mc
-    prompt: Justo antes de incorporarte, ¿hacia dónde miras por encima del hombro para revisar el ángulo muerto?
-    options: [Hacia el hombro izquierdo, Hacia el hombro derecho, A los dos hombros a la vez, No hace falta]
+    prompt: Justo antes de incorporarte, ¿cómo revisas el ángulo muerto?
+    options:
+      - Mirando por encima del hombro izquierdo
+      - Mirando por encima del hombro derecho
+      - Girando todo el cuerpo para mirar hacia atrás
+      - No hace falta si ya miraste los espejos
     answer: 0
-    explain: Entras hacia la izquierda, así que revisas el dode hoek por encima del hombro izquierdo.
+    explain: Entras hacia la izquierda, así que revisas el dode hoek por encima del hombro izquierdo. Girar todo el cuerpo es un error, porque pierdes de vista lo que pasa delante.
     cites: ["cbr-rijprocedure:3.4"]
 
   - id: invoegen-hombro-cuando
     type: mc
-    prompt: ¿Cuándo es mejor mirar por encima del hombro durante la incorporación?
+    prompt: Vas por el invoegstrook, hay un auto frenando delante de ti y todavía no se ve ningún hueco en la calzada principal. ¿Cuándo miras por encima del hombro?
     options:
-      - Todo el tiempo mientras estás en el carril
-      - Cuando aparece un hueco real, para no perder de vista el tráfico que frena delante
-      - Antes de empezar a acelerar
-      - Nunca; con los espejos basta
-    answer: 1
-    explain: Mirar por encima del hombro no debe ser demasiado frecuente ni largo. Se hace cuando hay un hueco real.
-    cites: ["cbr-rijprocedure:3.4"]
-
-  - id: invoegen-vel
-    type: mc
-    prompt: ¿A qué velocidad debes ir al final del invoegstrook?
-    options:
-      - Lo más lento posible, para ser prudente
-      - Casi igual a la del tráfico de la calzada principal
-      - Siempre 130 km/h
-      - La misma velocidad del auto de adelante en el carril, sea cual sea
-    answer: 1
-    explain: El carril sirve para adaptar la velocidad a la del tráfico de la calzada principal.
+      - Cuando aparece un hueco real, para no perder de vista el auto que frena delante
+      - Ahora mismo y sin parar, hasta que aparezca el hueco
+      - Nunca, con los espejos basta
+      - Solo antes de empezar a acelerar
+    answer: 0
+    explain: Mirar por encima del hombro no debe ser demasiado frecuente ni largo, porque no ves lo que pasa delante. Se hace cuando hay un hueco real.
     cites: ["cbr-rijprocedure:3.4"]
 
   - id: invoegen-vacia
-    type: yesno
-    prompt: La autopista está vacía. ¿Puedes entrar a la calzada principal nada más empezar el invoegstrook, sin usar la longitud que necesitas para mirar y acelerar?
-    answer: false
-    explain: El procedimiento recomienda usar el carril en la longitud necesaria incluso si la calzada está vacía, para mirar y acelerar.
+    type: mc
+    prompt: La autopista está vacía y tu invoegstrook es largo. ¿Qué haces?
+    options:
+      - Usas el carril con la longitud necesaria para mirar y acelerar, aunque no venga nadie
+      - Entras en cuanto empieza el carril, porque no hay a quién molestar
+      - Esperas parado al inicio del carril hasta que pase algún auto
+    answer: 0
+    explain: El procedimiento pide usar el carril en la longitud necesaria incluso si la calzada está vacía, para poder mirar como se debe y subir la velocidad.
     cites: ["cbr-rijprocedure:3.4"]
 
   - id: invoegen-intermitente
@@ -70,18 +52,22 @@ questions:
     options:
       - Apenas pones la rueda sobre la blokmarkering
       - Cuando todo el auto cruzó la blokmarkering
-      - Nunca, se apaga solo
-      - Al llegar a la segunda salida
+      - Al llegar al final del invoegstrook
+      - Cuando ya alcanzaste la velocidad del tráfico
     answer: 1
     explain: El procedimiento recomienda apagarlo cuando todo el vehículo ya cruzó la blokmarkering.
     cites: ["cbr-rijprocedure:3.4"]
 
   - id: invoegen-forzar
-    type: yesno
-    prompt: ¿Es correcto poner el intermitente y entrar para "obligar" a los demás a dejarte espacio?
-    answer: false
-    explain: El intermitente avisa, pero nunca debe usarse para forzar. La obligación de ceder el paso es tuya.
-    cites: ["cbr-rijprocedure:3.4", "rvv:54"]
+    type: mc
+    prompt: Hay mucho tráfico en la calzada principal y nadie te deja espacio. ¿Qué haces con el intermitente?
+    options:
+      - Lo pones a tiempo para avisar, sin usarlo para obligar a nadie a dejarte pasar
+      - Lo pones y entras de golpe, así los demás frenan y te dejan sitio
+      - No lo pones, para no molestar a quien viene
+    answer: 0
+    explain: La ley obliga a señalizar al subir a la doorgaande rijbaan, pero el intermitente nunca es un medio para forzar. La obligación de ceder el paso sigue siendo tuya.
+    cites: ["cbr-rijprocedure:3.4", "rvv:54", "rvv:55"]
 
   - id: invoegen-vluchtstrook
     type: mc
@@ -90,34 +76,98 @@ questions:
       - Sí, es el mismo carril
       - No, en principio no se usa para incorporarse
       - Sí, pero solo con el intermitente
-      - Sí, si es de noche
+      - Sí, si no viene nadie por la calzada
     answer: 1
     explain: Si el carril pasa a vluchtstrook, en principio no se usa para la incorporación. La vluchtstrook solo se usa en emergencias.
     cites: ["cbr-rijprocedure:3.4", "rvv:43.3"]
 
   - id: invoegen-parar
     type: mc
-    prompt: Tienes que parar en el invoegstrook por el tráfico. ¿Dónde es preferible hacerlo?
-    options: [En la primera parte del carril, Al final del carril, En el centro del carril, En la calzada principal]
+    prompt: Tienes que parar en un invoegstrook corto por el tráfico de la calzada. ¿Dónde es preferible hacerlo?
+    options:
+      - En la primera parte del carril, para usar el resto en tomar velocidad
+      - Al final del carril, lo más cerca posible de la calzada
+      - En el centro del carril, con margen por los dos lados
+      - En la calzada principal, para que te vean
     answer: 0
-    explain: Detenerte al inicio te deja espacio para acelerar luego. En una fila muy lenta "pides" espacio con contacto visual y el intermitente.
+    explain: Si paras al final ya no puedes entrar a la velocidad correcta y esperas más tiempo un hueco. Parando al inicio te queda carril para acelerar.
+    cites: ["cbr-rijprocedure:3.4"]
+
+  - id: invoegen-segundo-carril
+    type: mc
+    prompt: Sales del invoegstrook a una calzada con dos carriles y el segundo está libre. ¿Cómo pasas?
+    options:
+      - Entras al carril derecho y, si lo necesitas, cambias después al segundo
+      - Cruzas el carril derecho y entras directo al segundo en un solo movimiento
+      - Esperas al final del carril para cruzar los dos carriles de golpe
+    answer: 0
+    explain: El procedimiento no permite pasar en un solo movimiento del carril de incorporación a un carril que no sea el más a la derecha.
     cites: ["cbr-rijprocedure:3.4"]
 
   - id: invoegen-ayudar
     type: mc
-    prompt: Circulas por el carril derecho y te acercas a un invoegstrook donde hay tráfico que podría incorporarse sin problema. ¿Qué haces?
+    prompt: Circulas por el carril derecho y te acercas a un invoegstrook donde un auto tiene espacio real para incorporarse. ¿Qué haces?
     options:
-      - Pasas al carril izquierdo si hay espacio, para no molestar siempre
-      - No te mueves a la izquierda, porque ese tráfico tiene posibilidades reales de incorporarse
-      - Aceleras para pasar antes que ellos
-      - Frenas fuerte
+      - Pasas al carril izquierdo si hay espacio, para no molestar
+      - No te mueves a la izquierda, porque ese auto tiene posibilidades reales de incorporarse
+      - Aceleras para pasar antes que él
+      - Frenas con fuerza para dejarle el sitio
     answer: 1
-    explain: Si el tráfico del carril de incorporación tiene posibilidades reales, el procedimiento dice que no debes moverte a la izquierda. Ayudas cuando hay tráfico denso que no puede acelerar.
+    explain: Si el tráfico del carril de incorporación tiene posibilidades reales de entrar, el procedimiento dice que no debes moverte a la izquierda. Acelerar o frenar con fuerza solo crea riesgo.
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: invoegen-intermitente-sin-trafico
+    type: mc
+    prompt: La autopista está vacía y vas a pasar del invoegstrook a la doorgaande rijbaan. ¿Pones el intermitente?
+    options:
+      - Sí, la ley lo exige al subir a la doorgaande rijbaan aunque no venga nadie
+      - No, el intermitente es para avisar a otros y aquí no hay a quién avisar
+      - Solo si ves otro auto en el espejo
+    answer: 0
+    explain: El artículo 55 obliga a señalizar al subir a la doorgaande rijbaan sin condicionarlo a que haya otros usuarios cerca.
+    cites: ["rvv:55"]
+
+  - id: invoegen-vel-lenta
+    type: mc
+    prompt: Vas por el invoegstrook a 60 km/h y el tráfico de la calzada principal circula a unos 100 km/h. ¿Qué haces?
+    options:
+      - Aceleras en el carril hasta casi igualar su velocidad antes de entrar
+      - Entras a 60 km/h, porque ellos deben dejarte pasar
+      - Entras a 60 km/h con el intermitente puesto, para que te vean
+      - Esperas parado al final del carril
+    answer: 0
+    explain: Quien se incorpora cede, y eso incluye no meter en apuros al tráfico de la calzada. Por eso el carril sirve para igualar la velocidad. Entrar con una velocidad muy distinta puede considerarse una falta grave en el examen práctico.
+    cites: ["cbr-rijprocedure:3.4", "rvv:54"]
+
+  - id: invoegen-file-lenta
+    type: mc
+    prompt: En la calzada principal hay una fila casi parada y estás al inicio del invoegstrook. ¿Cómo consigues espacio?
+    options:
+      - Con contacto visual con los conductores y el intermitente, al inicio del carril
+      - Tocando la bocina para que te dejen pasar
+      - Avanzando hasta el final del carril para entrar en el primer hueco
+    answer: 0
+    explain: En una fila parada o muy lenta, el procedimiento pide "pedir" la oportunidad al inicio del carril con contacto visual y el intermitente. Ir hasta el final te deja sin espacio para entrar a la velocidad correcta.
     cites: ["cbr-rijprocedure:3.4"]
 
-  - id: invoegen-segundo-carril
-    type: yesno
-    prompt: Desde el invoegstrook, ¿es correcto pasar en un solo movimiento hasta el segundo carril, cruzando el carril derecho?
-    answer: false
-    explain: El procedimiento dice que no se pasa en un solo movimiento del carril de incorporación más allá del carril derecho.
-    cites: ["cbr-rijprocedure:3.4"]
+  - id: invoegen-ayudar-pesados
+    type: mc
+    prompt: Circulas por el carril derecho y en el invoegstrook ves un camión cargado que no consigue tomar velocidad, con la calzada muy ocupada. Según el procedimiento del CBR, ¿qué haces?
+    options:
+      - Ajustas tu velocidad y/o pasas al carril izquierdo para facilitarle la entrada
+      - Mantienes carril y velocidad, porque quien entra es quien debe ceder
+      - Aceleras para pasar antes de que llegue a la blokmarkering
+    answer: 0
+    explain: Legalmente cede quien se incorpora, pero el procedimiento del CBR pide ayudar cuando hay vehículos pesados que no logran tomar velocidad o varios conductores que no consiguen entrar.
+    cites: ["cbr-rijprocedure:3.2", "rvv:54"]
+
+  - id: invoegen-despues-adelantar
+    type: mc
+    prompt: Acabas de adelantar a un camión por el carril izquierdo y llegas a la altura de un invoegstrook con autos que se incorporan. ¿Vuelves ya al carril derecho?
+    options:
+      - No, no vuelves al carril derecho a la altura de un invoegstrook con tráfico incorporándose
+      - Sí, vuelves en cuanto puedes, por la regla de circular por la derecha
+      - Sí, si pones el intermitente derecho a tiempo
+    answer: 0
+    explain: Tras adelantar, el procedimiento pide no pasar al carril más a la derecha a la altura de un invoegstrook con tráfico incorporándose. El intermitente no cambia eso.
+    cites: ["cbr-rijprocedure:3.5"]

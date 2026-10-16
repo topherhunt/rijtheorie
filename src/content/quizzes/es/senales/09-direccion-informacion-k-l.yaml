@@ -1,61 +1,29 @@
 questions:
-  - id: kl-k2-preaviso
+
+  - id: kl-k2-salida
     type: mc
-    prompt: ¿Qué te da esta señal en una autosnelweg?
+    prompt: Circulas por una autosnelweg y quieres tomar la salida 14. Ves esta señal, que indica salida 14 a 1 km con sus destinos. ¿Qué te dice?
     sign: K2
-    options: ["Preaviso de salida con distancia, número y destinos", "Un desvío", "Un área de servicio", "El fin de la autopista"]
+    options: ["Que la salida 14 está a 1 km y es hora de prepararte", "Que la salida 14 empieza ya", "Que debes tomar la salida 14", "Que la salida 14 está cerrada"]
     answer: 0
-    explain: K2 es el preaviso de salida en una autosnelweg.
+    explain: K2 es un preaviso de salida, con distancia, número y destinos. No es una orden de salir ni marca el punto exacto de la salida; te deja tiempo para elegir carril.
     cites: ["rvv:bijlage1.K2"]
 
-
-  - id: kl-k9-omleiding
-    type: mc
-    prompt: ¿Qué indica esta señal?
-    sign: K9
-    options: ["Un desvío (omleiding)", "Calle sin salida", "Un destino de autopista", "Un barrio"]
-    answer: 0
-    explain: K9 es "Omleiding".
-    cites: ["rvv:bijlage1.K9"]
-
-
-  - id: kl-l5-fin-carril
-    type: mc
-    prompt: ¿Qué indica esta señal?
-    sign: L5
-    options: ["Fin de carril", "Bifurcación", "Preselección de carriles", "Estrechamiento"]
-    answer: 0
-    explain: L5 es "Einde rijstrook".
-    cites: ["rvv:bijlage1.L5"]
-
-
-  - id: kl-l8-sinsalida
-    type: mc
-    prompt: ¿Qué indica esta señal?
-    sign: L8
-    options: ["Calle sin salida", "Vía de sentido único", "Fin de zona urbana", "Callejón con prohibición"]
-    answer: 0
-    explain: L8 es "Doodlopende weg".
-    cites: ["rvv:bijlage1.L8"]
-
-
-  - id: kl-l16-l17
-    type: mc
-    prompt: ¿Qué indica esta señal?
-    sign: L17
-    options: ["Extintor", "Teléfono de emergencia", "Salida de emergencia", "Parada de bomberos"]
-    answer: 0
-    explain: L17 es el extintor. L16 es el teléfono de emergencia y L18 son ambos.
-    cites: ["rvv:bijlage1.L17"]
-
-
-  - id: kl-l13-parar
+  - id: kl-l4-direccion
     type: yesno
-    prompt: Estás dentro de un túnel (L13) y quieres detenerte un momento a mirar el mapa, sin que el tráfico te obligue. ¿Puedes?
-    sign: L13
+    prompt: Estás en un carril de preselección con una flecha a la izquierda y, en el cruce, decides seguir recto. ¿Puedes hacerlo desde ese carril?
+    sign: L4
     answer: false
-    explain: No puedes detenerte (stilstaan) en un túnel (art. 23.1.d), ni siquiera un momento.
-    cites: ["rvv:23.1.d", "rvv:bijlage1.L13"]
+    explain: Quien circula por la calzada debe seguir en el cruce la dirección que indica el carril de preselección en el que está (art. 78.1). Hay que elegir el carril antes de entrar en él, y L4 te avisa para eso.
+    cites: ["rvv:78.1", "rvv:bijlage1.L4"]
+
+  - id: kl-l8-entrar
+    type: yesno
+    prompt: Tu destino está en una calle con esta señal de calle sin salida (L8) y no hay otra señal. ¿Puedes entrar?
+    sign: L8
+    answer: true
+    explain: 'L8 es informativa (Doodlopende weg): avisa de que la calle no tiene salida, pero no la cierra. Una prohibición de entrada sería una señal C.'
+    cites: ["rvv:bijlage1.L8"]
 
   - id: kl-l3-pasajero
     type: mc
@@ -66,20 +34,28 @@ questions:
     explain: A la altura de la marca de bloques no puedes detenerte, salvo para el in- o uitstappen inmediato de pasajeros (art. 23.1.e y 23.2). Esperar a alguien o estacionar no entra en esa excepción, y las luces de emergencia no cambian nada.
     cites: ["rvv:23.1.e", "rvv:23.2", "rvv:bijlage1.L3"]
 
-  - id: kl-l3-espera
+  - id: kl-l3-12m
     type: yesno
-    prompt: Llegas a una parada de bus (L3) con marca de bloques en la calzada. Un amigo sale de una tienda en un minuto y quieres esperarlo junto a la marca, con el motor en marcha. ¿Puedes?
+    prompt: Una parada de bus tiene la señal L3 pero no hay marca de bloques en la calzada. Detienes tu auto a 8 m de la señal para esperar a un amigo. ¿Puedes?
     sign: L3
     answer: false
-    explain: Esperar a alguien es detenerse (stilstaan) y no es el in- o uitstappen inmediato de pasajeros, así que no está dentro de la excepción (art. 23.1.e y 23.2).
-    cites: ["rvv:23.1.e", "rvv:23.2", "rvv:bijlage1.L3"]
+    explain: Sin marca de bloques, no puedes detenerte (stilstaan) a menos de 12 m de la señal de parada (art. 23.1). Esperar a un amigo no es el in- o uitstappen inmediato de la excepción.
+    cites: ["rvv:23.1", "rvv:23.2", "rvv:bijlage1.L3"]
 
-  - id: kl-l14-descansar
+  - id: kl-l13-parar
     type: yesno
-    prompt: Ves L14 (vluchthaven) en una autosnelweg. Estás cansado pero tu auto funciona bien. ¿Puedes parar allí a descansar?
+    prompt: Estás dentro de un túnel (L13) y quieres detenerte un momento a mirar el mapa, sin que el tráfico te obligue. ¿Puedes?
+    sign: L13
+    answer: false
+    explain: No puedes detenerte (stilstaan) en un túnel (art. 23.1.d), ni siquiera un momento.
+    cites: ["rvv:23.1.d", "rvv:bijlage1.L13"]
+
+  - id: kl-l14-mapa
+    type: yesno
+    prompt: Circulas por una autosnelweg, tu auto funciona bien y quieres mirar el mapa del móvil. Ves una vluchthaven (L14) vacía. ¿Puedes parar allí?
     sign: L14
     answer: false
-    explain: Salvo en emergencias no puedes usar la vluchtstrook, la vluchthaven ni la berma (art. 43.3). Estar cansado no es una emergencia del vehículo.
+    explain: La vluchthaven, la vluchtstrook y la berma solo se pueden usar en casos de emergencia (art. 43.3). Mirar el mapa con el auto funcionando bien no es una emergencia.
     cites: ["rvv:43.3", "rvv:bijlage1.L14"]
 
   - id: kl-l14-averia

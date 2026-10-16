@@ -1,14 +1,14 @@
 questions:
-  - id: stilstaan-def-parkeren
+  - id: stilstaan-reloj
     type: mc
-    prompt: Según la ley, ¿qué es parkeren?
+    prompt: Dejas el auto junto a la acera y entras en una tienda cinco minutos. Otro conductor dice que "hasta diez minutos no cuenta como estacionar". ¿Qué dice la definición legal?
     options:
-      - Dejar el vehículo parado más de 10 minutos
-      - Dejar el vehículo parado salvo el tiempo necesario para subir o bajar personas, o cargar o descargar de inmediato
-      - Dejar el vehículo parado en una plaza señalada
-      - Dejar el vehículo parado con el motor apagado
+      - Tiene razón, parkeren empieza después de unos diez minutos
+      - Estás estacionando (parkeren), porque no fue para un ascenso, descenso, carga o descarga inmediatos
+      - Solo estás parado (stilstaan) si dejas el motor encendido
+      - Solo estás estacionando si la zona tiene una señal de parking
     answer: 1
-    explain: La ley define parkeren como dejar el vehículo parado, excepto durante el tiempo necesario para el ascenso o descenso inmediato de pasajeros o la carga o descarga inmediata de mercancías. No fija minutos.
+    explain: La ley define parkeren por el motivo y la inmediatez, no por minutos. Ir a una tienda no es subir, bajar, cargar o descargar de inmediato, así que estacionas aunque sean cinco minutos. El motor y las señales no cambian la definición.
     cites: ["rvv:1"]
 
   - id: stilstaan-subir-bajar
@@ -37,12 +37,17 @@ questions:
     explain: Esperar a alguien que todavía no sube o baja no es el tiempo necesario para el ascenso o descenso inmediato, así que cuenta como parkeren.
     cites: ["rvv:1"]
 
-  - id: stilstaan-doble-fila
-    type: yesno
-    prompt: ¿Está prohibido estacionar en doble fila?
-    answer: true
-    explain: La ley prohíbe estacionar en doble fila (dubbel parkeren).
-    cites: ["rvv:24.3"]
+  - id: stilstaan-doble-fila-espera
+    type: mc
+    prompt: Hay coches aparcados junto a la acera. Paras a su lado, en la calzada, y esperas veinte minutos a que tu pareja salga de una oficina. ¿Qué haces según la ley?
+    options:
+      - Solo estás parado, porque sigues sentado en el auto
+      - Estacionas (parkeren) y además en doble fila, que está prohibido
+      - Estacionas en doble fila, pero está permitido si pones las luces de emergencia
+      - Estacionas, pero no en doble fila porque los otros coches no te bloquean
+    answer: 1
+    explain: Esperar veinte minutos no es un ascenso inmediato, así que es parkeren (rvv:1), y hacerlo al lado de coches ya aparcados es estacionar en doble fila, que la ley prohíbe (rvv:24.3). Estar sentado en el auto o poner las luces de emergencia no lo cambia.
+    cites: ["rvv:1", "rvv:24.3"]
 
   - id: stilstaan-acera
     type: yesno

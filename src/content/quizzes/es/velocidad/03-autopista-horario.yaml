@@ -1,60 +1,71 @@
 questions:
   - id: horario-dia
     type: number
-    prompt: "En la mayoría de las autopistas, ¿cuál es el límite entre las 06.00 y las 19.00?"
+    prompt: "Son las 10.00 y circulas con tu auto por una autosnelweg. Ves una señal A1 de 100 km/h con el horario de 6 a 19 h. ¿Cuál es tu máximo?"
     answer: 100
     unit: km/h
-    explain: "Rijkswaterstaat indica 100 km/h entre las 06.00 y las 19.00 en la mayoría de autopistas."
-    cites: ["rws-maximumsnelheid"]
+    explain: "Dentro del horario de la señal (06.00 a 19.00) vale el 100. Los 130 del art. 21 son el máximo general, pero la señal con horario lo baja mientras está en vigor."
+    cites: ["rws-maximumsnelheid", "rvv:62"]
+    sign: A1
 
-  - id: horario-noche
+  - id: horario-noche-placa
     type: mc
-    prompt: "En una autopista con 100 km/h de 06.00 a 19.00, ¿qué límite rige fuera de ese horario?"
-    options: [120 o 130 km/h según el tramo, 100 km/h, 50 km/h, No hay límite]
-    answer: 0
-    explain: "Fuera de ese horario rige 120 o 130 km/h, según lo que Rijkswaterstaat permite en ese tramo; si de noche vale 130, no hay señal porque es el máximo general."
-    cites: ["rws-maximumsnelheid"]
-
-  - id: horario-sin-horario
-    type: yesno
-    prompt: "Una señal de 100 km/h en una autopista sin horario adicional, ¿vale las 24 horas?"
-    answer: true
-    explain: "Sin horario, la señal vale todo el día."
-    cites: ["rws-maximumsnelheid"]
-
-  - id: horario-con-horario
-    type: yesno
-    prompt: "Una señal de 100 km/h con horario de 6 a 19 h, ¿vale a las 22.00?"
-    answer: false
-    explain: "Solo vale dentro del horario; fuera de él vale el máximo general."
-    cites: ["rws-maximumsnelheid"]
-
-  - id: horario-doble
-    type: mc
-    prompt: "Una señal muestra 100 y debajo 120 con horarios diferentes. ¿Qué indica?"
-    options: [Un límite de día y otro de noche, Dos carriles distintos, Un mínimo y un máximo, Un límite para autos y otro para camiones]
-    answer: 0
-    explain: "Las señales con doble horario muestran un límite de día y uno de noche."
-    cites: ["rws-maximumsnelheid"]
-
-  - id: horario-sin-senal
-    type: yesno
-    prompt: "Donde de noche vale 130, ¿tiene que haber una señal que lo diga?"
-    answer: false
-    explain: "Solo se señalizan las desviaciones del máximo general."
-    cites: ["rws-maximumsnelheid"]
+    prompt: "Son las 22.00 y circulas con tu auto por la misma autosnelweg. La señal A1 de 100 km/h solo tiene el horario de 6 a 19 h. ¿Qué máximo rige?"
+    options: [100 km/h, 130 km/h, 120 km/h, 80 km/h]
+    answer: 1
+    explain: "Fuera del único horario de la señal, la señal no vale y rige el máximo general de la autosnelweg: 130 km/h. Seguir a 100 no es obligatorio; 120 solo lo daría una señal que lo muestre."
+    cites: ["rws-maximumsnelheid", "rvv:21"]
+    sign: A1
 
   - id: horario-senal-manda
-    type: yesno
-    prompt: "Recuerdas que el límite es 130 pero ves una señal de 100 km/h. ¿Cuál obedeces?"
-    answer: true
-    explain: "Las señales prevalecen sobre las reglas generales: obedeces los 100."
-    cites: ["rvv:62", "rvv:63"]
+    type: mc
+    prompt: "Son las 23.00. Recuerdas que de noche suele poder irse a 130, pero la señal que ves es una A1 de 100 km/h sin ningún horario. ¿Qué máximo rige?"
+    options: [100 km/h, 130 km/h, 120 km/h, El que tenga el tráfico]
+    answer: 0
+    explain: "Una señal sin horario vale las 24 horas, y las señales prevalecen sobre lo que recuerdes o sobre el máximo general. Los 130 de noche son solo donde no hay una señal que diga otra cosa."
+    cites: ["rws-maximumsnelheid", "rvv:62", "rvv:63"]
+    sign: A1
 
-  - id: horario-rvv-130
+  - id: horario-doble-noche
     type: number
-    prompt: "¿Cuál es el máximo que da el RVV (art. 21) a un auto en una autosnelweg, sin otras señales?"
+    prompt: "Son las 20.00 y ves una señal A1 con dos horarios: 100 km/h de 6 a 19 h y 120 km/h de 19 a 6 h. ¿Cuál es tu máximo con tu auto?"
+    answer: 120
+    unit: km/h
+    explain: "A las 20.00 estás fuera del horario de día, así que vale el límite de noche que muestra la propia señal: 120. No es el 100 de día ni el 130 general."
+    cites: ["rws-maximumsnelheid"]
+    sign: A1
+
+  - id: horario-doble-dia
+    type: mc
+    prompt: "Son las 08.00 y ves una señal A1 con dos horarios: 100 km/h de 6 a 19 h y 120 km/h de 19 a 6 h. Conduces tu auto sin remolque. ¿Qué máximo rige?"
+    options: [100 km/h, 120 km/h, 130 km/h, 90 km/h]
+    answer: 0
+    explain: "A las 08.00 estás dentro del horario de día de la señal, así que vale el 100. El 120 es solo para el horario de noche y el 130 es el máximo general, que la señal baja."
+    cites: ["rws-maximumsnelheid", "rvv:62"]
+    sign: A1
+
+  - id: horario-a2-fin
+    type: mc
+    prompt: "Circulas con tu auto por una autosnelweg a las 11.00 con una A1 de 100 km/h y pasas una señal A2. No ves ninguna otra señal. ¿Qué máximo rige ahora?"
+    options: [100 km/h, 130 km/h, 80 km/h, 120 km/h]
+    answer: 1
+    explain: "La A2 termina la velocidad máxima de la A1 y vuelve el máximo general de la autosnelweg: 130 km/h (art. 21). No sigue valiendo el 100, y el 120 no sale de ninguna señal."
+    cites: ["rvv:bijlage1.A2", "rvv:62", "rvv:21"]
+    sign: A2
+
+  - id: horario-remolque-noche
+    type: mc
+    prompt: "Son las 22.00 y llevas tu auto con un remolque de 750 kg por una autosnelweg. La señal A1 de 100 km/h solo tiene el horario de 6 a 19 h. ¿Qué máximo tienes?"
+    options: [130 km/h, 100 km/h, 90 km/h, 120 km/h]
+    answer: 2
+    explain: "Fuera del horario de la señal el máximo general sería 130, pero un auto con remolque de hasta 3500 kg tiene su propio máximo de 90 km/h (art. 22 e), que sigue mandando de día y de noche."
+    cites: ["rvv:22", "rvv:21", "rws-maximumsnelheid"]
+    sign: A1
+
+  - id: horario-sin-senal-noche
+    type: number
+    prompt: "A las 02.00 recorres con tu auto un tramo de autosnelweg sin ninguna señal de velocidad a la vista y sin remolque. ¿Cuál es tu máximo?"
     answer: 130
     unit: km/h
-    explain: "El RVV dice 130 km/h; las señales pueden bajarlo."
-    cites: ["rvv:21"]
+    explain: "Sin señal rige el máximo general, 130 km/h (art. 21). No hace falta que una señal diga 130 de noche: solo se señalizan los tramos donde se baja."
+    cites: ["rvv:21", "rws-maximumsnelheid"]

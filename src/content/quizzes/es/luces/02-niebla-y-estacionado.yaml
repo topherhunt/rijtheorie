@@ -1,32 +1,26 @@
 questions:
-  - id: mistachter-distancia
-    type: number
-    prompt: ¿La luz antiniebla trasera solo se permite si la niebla o la nieve reducen la visibilidad a menos de cuántos metros?
-    answer: 50
-    unit: m
-    explain: El límite legal es una visibilidad de menos de 50 metros.
+  - id: mistachter-40m
+    type: mc
+    prompt: Hay niebla y ves el auto de delante a unos 40 metros. ¿Qué dice la ley sobre tu luz antiniebla trasera?
+    options: [La puedes llevar porque ves a menos de 50 m, Solo la puedes llevar si además llueve, Solo la puedes llevar si ves a menos de 20 m, La debes llevar y no puedes encender las de cruce]
+    answer: 0
+    explain: La antiniebla trasera se puede llevar con niebla o nieve que reduce la visibilidad a menos de 50 metros. La lluvia no es condición, y la ley no fija 20 m.
     cites: ["rvv:34.2"]
 
-  - id: mistachter-lluvia
+  - id: mistlicht-lluvia-delante-detras
+    type: mc
+    prompt: Llueve con tanta intensidad que casi no ves. ¿Qué antiniebla permite la ley?
+    options: [Solo la delantera, Solo la trasera, Las dos, Ninguna de las dos]
+    answer: 0
+    explain: "El mistlicht delantero se permite con niebla, nieve o lluvia que reduce seriamente la visibilidad. La trasera se permite solo con niebla o nieve y menos de 50 m de visibilidad: la lluvia no cuenta."
+    cites: ["rvv:34.1", "rvv:34.2"]
+
+  - id: mistachter-80m
     type: yesno
-    prompt: Llueve muy fuerte y casi no ves. ¿Puedes llevar la luz antiniebla trasera?
+    prompt: Hay niebla y ves a 80 metros. Un amigo dice que enciendas la antiniebla trasera por si acaso. ¿Lo permite la ley?
     answer: false
-    explain: El artículo 34 lid 2 solo menciona niebla o nieve con menos de 50 m de visibilidad. La lluvia no cuenta.
+    explain: Con 80 m la visibilidad no es de menos de 50 m, así que la trasera no está permitida. Como los 50 m son el límite, el "por si acaso" no vale.
     cites: ["rvv:34.2"]
-
-  - id: mistachter-60m
-    type: yesno
-    prompt: Hay niebla y ves a 80 metros. ¿Puedes llevar la antiniebla trasera?
-    answer: false
-    explain: Con 80 m la visibilidad no es de menos de 50 m, así que no está permitida.
-    cites: ["rvv:34.2"]
-
-  - id: mistvoor-lluvia
-    type: yesno
-    prompt: ¿Pueden usarse las antiniebla delanteras cuando la lluvia reduce seriamente la visibilidad?
-    answer: true
-    explain: El artículo 34 lid 1 permite el mistlicht delantero con niebla, nieve o lluvia que reduce seriamente la visibilidad.
-    cites: ["rvv:34.1"]
 
   - id: mistvoor-dimlicht
     type: yesno
@@ -35,19 +29,12 @@ questions:
     explain: La ley dice que en ese caso no hace falta llevar dimlicht.
     cites: ["rvv:34.1"]
 
-  - id: mistvoor-sol
-    type: yesno
-    prompt: Es un día soleado y despejado. ¿Puedes llevar las antiniebla delanteras?
-    answer: false
-    explain: Solo se permiten con niebla, nieve o lluvia que reduzca seriamente la visibilidad.
-    cites: ["rvv:34.1"]
-
   - id: detenido-luces
     type: mc
     prompt: De noche, tu auto está parado en la vluchtstrook de una autosnelweg. ¿Qué luces debe llevar?
-    options: ["Ninguna, mejor apagarlo todo", Luces de posición (stadslicht) y luz trasera, Solo luces de carretera, Solo antiniebla traseras]
+    options: [Luces de posición (stadslicht) y luz trasera, Solo luces de emergencia, Solo la luz trasera, Solo luces de carretera]
     answer: 1
-    explain: Un vehículo de más de dos ruedas parado en la vluchtstrook lleva stadslicht y luz trasera de noche.
+    explain: Un vehículo de más de dos ruedas parado en la vluchtstrook lleva stadslicht y luz trasera de noche. Las luces de emergencia solas o la luz trasera sin las de posición no bastan.
     cites: ["rvv:38"]
 
   - id: detenido-dia-niebla
@@ -59,7 +46,7 @@ questions:
 
   - id: detenido-dos-ruedas
     type: yesno
-    prompt: De noche una motocicleta (dos ruedas) está parada sobre la calzada fuera de la zona urbana. ¿Le exige el artículo 38 llevar stadslicht y luz trasera?
+    prompt: De noche una motocicleta está parada sobre la calzada fuera de la zona urbana. ¿Le exige el artículo 38 llevar stadslicht y luz trasera?
     answer: false
     explain: El artículo 38 habla de vehículos de motor de más de dos ruedas, y la motocicleta tiene dos.
     cites: ["rvv:38"]

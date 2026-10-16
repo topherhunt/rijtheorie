@@ -13,43 +13,12 @@ questions:
     explain: "Salir de una uitrit es una maniobra especial: dejas pasar a todo el tráfico, peatones incluidos (art. 54). El CBR lo subraya expresamente."
     cites: ["rvv:54", "cbr-rijprocedure:3.6"]
 
-  - id: voorrang-of-voorlaten-peaton-recto
-    type: mc
-    prompt: Vas recto en un cruce normal, sin paso de cebra. Un peatón quiere cruzar tu calle. ¿Qué dice el CBR?
-    options:
-      - Por ley no hay voorrang para el peatón en el cruce, pero debes tener muy en cuenta su interés
-      - El peatón siempre tiene prioridad absoluta
-      - Puedes ignorarlo porque no es conductor
-      - Debes tocar la bocina para que espere
-    answer: 0
-    explain: El CBR indica que en los cruces los peatones no tienen voorrang por ley, pero hay que considerar su interés y su seguridad.
-    cites: ["cbr-rijprocedure:3.3"]
-
   - id: voorrang-of-voorlaten-detenerse
     type: yesno
     prompt: Ceder el paso (voorrang verlenen) siempre significa detenerse por completo.
     answer: false
     explain: Puedes ceder el paso reduciendo la velocidad si el otro no tiene que frenar ni esquivarte. Entre las señales de prioridad, solo B7 (Stop) obliga siempre a parar.
     cites: ["rvv:1", "rvv:bijlage1.B7"]
-
-  - id: voorrang-of-voorlaten-ambulancia
-    type: yesno
-    prompt: Una ambulancia con luces azules y sirena se acerca. ¿Todos los usuarios de la vía deben dejarla pasar?
-    answer: true
-    explain: El art. 50 obliga a todos los usuarios a dejar pasar a los vehículos prioritarios.
-    cites: ["rvv:50", "rvv:29"]
-
-  - id: voorrang-of-voorlaten-uitrit-izquierda
-    type: mc
-    prompt: Sales de una uitrit (salida de un garaje) a la calle. Por tu derecha no viene nadie, pero por tu izquierda se acerca una bicicleta y por la acera pasa un peatón. ¿A quién dejas pasar?
-    options:
-      - "A todos: a la bicicleta y al peatón"
-      - Solo a quien viene por tu derecha, o sea a nadie
-      - Solo a la bicicleta, porque el peatón no es conductor
-      - A nadie, porque estás saliendo de una propiedad privada y ellos van por la vía
-    answer: 0
-    explain: Salir de una uitrit es una maniobra especial (art. 54) y dejas pasar a todo el tráfico, también al que viene por la izquierda y a los peatones. La regla de la derecha no se aplica aquí. El CBR dice que no importa desde dónde ni qué tipo de usuario se acerque.
-    cites: ["rvv:54", "cbr-rijprocedure:3.6"]
 
   - id: voorrang-of-voorlaten-que-regla
     type: mc
@@ -68,9 +37,42 @@ questions:
     prompt: Vas recto por un cruce sin señales ni paso de cebra. Un ciclista llega por tu derecha por la calle que cruzas y un peatón se dispone a cruzar tu calle. ¿A quién debes dar voorrang según la regla de la derecha?
     options:
       - Al ciclista; al peatón la regla no le da voorrang, pero debes tener en cuenta su interés
-      - A los dos, porque ambos vienen por tu derecha
-      - Solo al peatón, porque es el más vulnerable
+      - A los dos, porque ambos son usuarios más vulnerables
+      - Solo al peatón, porque no es conductor
       - A ninguno, porque van por la calle que cruzas
     answer: 0
     explain: El art. 15.1 da voorrang a los bestuurders que vienen de la derecha, y el ciclista lo es; el peatón no (art. 1). El CBR añade que en los cruces debes tener muy en cuenta el interés de los peatones.
     cites: ["rvv:1", "rvv:15.1", "cbr-rijprocedure:3.3"]
+
+  - id: voorrang-of-voorlaten-ambulancia-b1
+    type: mc
+    prompt: Circulas por una vía con la señal B1, así que tienes prioridad. Por la vía lateral, que tiene B6, llega una ambulancia con luces azules y sirena, y no se detiene. ¿Quién cede?
+    options:
+      - Tú, porque todos deben dejar pasar al vehículo prioritario
+      - La ambulancia, porque tú tienes la prioridad de B1
+      - Quien llegue antes al cruce
+    answer: 0
+    explain: El art. 50 obliga a todos los usuarios a dejar pasar al voorrangsvoertuig. Una ambulancia con luces azules y sirena lo es (art. 29), y eso pesa más que tu prioridad de B1.
+    cites: ["rvv:50", "rvv:29"]
+
+  - id: voorrang-of-voorlaten-giro-ciclista
+    type: mc
+    prompt: Giras a la derecha en un cruce y un ciclista va recto, a tu lado por la misma calle. ¿A quién dejas pasar?
+    options:
+      - Al ciclista, porque quien gira deja pasar al tráfico que va a su lado en la misma vía
+      - A nadie, porque el ciclista sigue recto y tú giras
+      - Al ciclista solo si el cruce no tiene señales
+    answer: 0
+    explain: El art. 18.1 obliga a quien gira a dejar pasar al tráfico de frente y al que va a su lado o pegado detrás en la misma vía, haya o no señales. Que tú gires no te da preferencia.
+    cites: ["rvv:18.1"]
+
+  - id: voorrang-of-voorlaten-acercarse
+    type: mc
+    prompt: Te acercas a un cruce donde debes ceder el paso y por la vía que cruzas viene un auto. ¿Cómo te acercas, según el CBR?
+    options:
+      - Reduzco con tiempo para que el otro vea que le voy a ceder el paso
+      - Mantengo la velocidad y freno en el último momento
+      - Voy despacio pero sin frenar, y decido al llegar
+    answer: 0
+    explain: El CBR pide acercarse de manera que quien tiene prioridad confíe en que se la vas a ceder. Frenar tarde o dudar hasta el final le obliga a adivinar tus intenciones.
+    cites: ["cbr-rijprocedure:3.3"]

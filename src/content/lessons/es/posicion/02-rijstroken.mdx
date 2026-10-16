@@ -10,14 +10,12 @@ cbrTopics: [gebruik-weg]
 Un <T id="rijstrook" /> es la parte de la calzada marcada con líneas continuas o discontinuas y con ancho suficiente para vehículos de motor de más de dos ruedas.
 </Rule>
 
-<Check id="rijstroken-definicion" />
-
 ## Qué carril seguir
 
 <Rule cite="cbr-rijprocedure:3.2" title="En la práctica (procedimiento, no ley)">
 - Si la calzada está dividida en carriles, sigue en principio **el carril derecho**. Vale también para un <T id="spitsstrook" /> abierto.
 - Con niebla densa, nieve, lluvia fuerte, oscuridad y agua que salpica, sobre todo en autopistas, usa lo más posible el carril derecho: es tu posibilidad de escape.
-- En un <T id="weefvak" /> (marca de bloques, uno o más carriles a cada lado y señales de dirección encima) sigue en principio el carril más a la derecha de la dirección que llevas.
+- En un <T id="weefvak" /> (marca de bloques, uno o más carriles a cada lado y señales de dirección encima) sigue en principio el carril más a la derecha de la dirección que llevas. En principio no circules por las <T id="suggestiestrook">suggestiestroken</T> (sin dibujos) ni por los <T id="fietsstrook">fietsstroken</T> (líneas discontinuas).
 </Rule>
 
 <Check id="rijstroken-carril-defecto" />
@@ -38,7 +36,7 @@ En una <T id="autosnelweg" />, un conductor de un <T id="vrachtauto" /> o de un 
 
 <Check id="rijstroken-camion" />
 <Check id="rijstroken-remolque" />
-<Check id="rijstroken-camion-preseleccionar" />
+<Check id="rijstroken-camion-giro-izquierda" />
 
 ## Señales para un solo carril
 
@@ -48,7 +46,7 @@ Si la vía está dividida en carriles, la aplicación de una señal puede limita
 
 <Signs codes="L11,L12" />
 
-<Check id="rijstroken-prohibicion-otro-carril" />
+<Check id="rijstroken-limite-un-carril" />
 
 ## Luces sobre el carril
 
@@ -59,13 +57,13 @@ Si la vía está dividida en carriles, la aplicación de una señal puede limita
 - La palabra **BUS**: solo para conductores de autobús de línea y de autobús. **LIJNBUS**: solo para autobús de línea.
 </Rule>
 
+Cuando un <T id="spitsstrook" /> está abierto se señala con C23-01 y rige la regla de seguir el carril derecho también para él.
+
 <Sign code="C23-01" />
 
-Cuando un spitsstrook está abierto se señala con C23-01 y rige la regla de seguir el carril derecho también para él. Con la cruz roja no te escapas a la vluchtstrook: o cambias a otro carril libre, o no sigues.
+Si el carril que tienes delante muestra la cruz roja, tienes que cambiar a otro carril antes de llegar a ella: no puedes seguir por ese carril. La vluchtstrook no es una salida para no frenar; solo vale en caso de emergencia.
 
-<Check id="rijstroken-cruz-roja" />
 <Check id="rijstroken-cruz-roja-vlucht" />
 <Check id="rijstroken-flecha-blanca" />
 <Check id="rijstroken-luces-usar" />
-<Check id="rijstroken-bus" />
 <Check id="rijstroken-spitsstrook-seguir" />

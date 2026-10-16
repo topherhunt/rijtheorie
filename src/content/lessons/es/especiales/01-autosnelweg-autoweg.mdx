@@ -16,8 +16,6 @@ Los lugares de estacionamiento, las gasolineras y las paradas de bus que están 
 
 La consecuencia: las prohibiciones de las secciones siguientes (dar la vuelta, ir marcha atrás, dejar el vehículo parado en la calzada) valen en la autosnelweg o autoweg, no en esos lugares. Parar en una gasolinera para repostar no es dejar el vehículo parado en la calzada.
 
-<Check id="autosnelweg-gasolinera-parar" />
-
 ## Quién puede usarlas
 
 <Rule cite="rvv:42.1, rvv:42.2" title="Velocidad mínima">
@@ -26,7 +24,8 @@ Autosnelweg: solo <T id="motorvoertuig">vehículos de motor</T> que **puedan y t
 
 Por eso no pueden entrar las bicicletas, las bicicletas con pedaleo asistido, los ciclomotores (bromfiets, snorfiets, brommobiel) ni los vehículos para personas con discapacidad: la ley no los cuenta como vehículos de motor. Fíjate en las dos condiciones: el vehículo debe *poder* ir a esa velocidad (la mecánica) y *tener permiso* para hacerlo (la ley).
 
-<Check id="autosnelweg-vel-minima" />
+La razón es de sentido común: un vehículo lento en una vía pensada para tráfico rápido es un peligro y obliga a los demás a frenar bruscamente.
+
 <Check id="autosnelweg-quien-puede-entrar" />
 <Check id="autosnelweg-g3-vehiculo-lento" />
 <Check id="autosnelweg-brommobiel-autoweg" />
@@ -43,7 +42,8 @@ Por eso no pueden entrar las bicicletas, las bicicletas con pedaleo asistido, lo
 Si te pasas de tu salida, sigue hasta la siguiente. Nunca des marcha atrás ni uses la vluchtstrook para volver.
 </Warn>
 
-<Check id="autosnelweg-marcha-atras" />
+<Check id="autosnelweg-gasolinera-parar" />
+<Check id="autosnelweg-perdi-salida" />
 <Check id="autosnelweg-vluchtstrook-adelantar" />
 
 ## Camiones y combinaciones largas
@@ -53,6 +53,7 @@ En una autosnelweg, un <T id="vrachtauto" /> o un conjunto de vehículos de más
 </Rule>
 
 <Check id="autosnelweg-camion-carril" />
+<Check id="autosnelweg-conjunto-largo" />
 
 ## Velocidad máxima fuera de poblado
 
@@ -60,7 +61,7 @@ En una autosnelweg, un <T id="vrachtauto" /> o un conjunto de vehículos de más
 Fuera de la <T id="bebouwde-kom" />, para vehículos de motor: 130 km/h en autosnelweg, 100 km/h en autoweg y 80 km/h en las demás vías. Para algunos vehículos hay límites más bajos:
 - Camión (vrachtauto), autobús (no T100) y camper de más de 3500 kg registrada como bedrijfsauto: 80 km/h.
 - Autobús T100: 100 km/h.
-- Auto o furgoneta con remolque de hasta 3500 kg de masa máxima: 90 km/h.
+- Auto, furgoneta, moto, vehículo de tres ruedas o autobús T100 con remolque de hasta 3500 kg de masa máxima: 90 km/h.
 - Otros vehículos de motor con remolque: 80 km/h.
 </Rule>
 
@@ -69,15 +70,16 @@ Un <T id="brommobiel" /> no es un vehículo de motor en este sentido y no puede 
 Muchos tramos tienen señales con un límite menor, y las señales mandan sobre la regla general. Eso lo ves en el capítulo 3.
 
 <Check id="autosnelweg-vel-remolque" />
-<Check id="autosnelweg-vel-camion" />
+<Check id="autosnelweg-vel-moto-camion" />
+<Check id="autosnelweg-vel-camper-bedrijfsauto" />
 
 ## Si tienes una avería
 
 <Rule cite="rws-pech" title="Qué recomienda Rijkswaterstaat">
 - Si puedes, sigue hasta una <T id="vluchthaven" />, un lugar de estacionamiento o una gasolinera. Si no puedes, enciende las luces de emergencia y detente en la <T id="berm" />.
-- Con un guardarraíl, para lo más cerca posible con las ruedas delanteras giradas hacia él, así los pasajeros salen por la derecha.
+- Con un guardarraíl, para lo más cerca posible con las ruedas delanteras giradas hacia él.
 - Haz que todos pasen a la berma o detrás del guardarraíl, mejor con chaleco reflectante.
-- Da tu posición con el <T id="hectometerbordje" /> más cercano: número de la carretera, lectura y lado (izquierda o derecha).
+- Da tu posición con el <T id="hectometerbordje" /> más cercano: número de la carretera, lectura y lado (izquierda o derecha), para que quien viene a ayudarte sepa dónde estás.
 - Llama a la <T id="wegenwacht" />. En una spitsstrook abierta o en peligro agudo, llama al 112.
 </Rule>
 

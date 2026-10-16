@@ -9,17 +9,10 @@ questions:
   - id: accidente-danos
     type: mc
     prompt: Rozaste un auto estacionado y causaste daños, sin heridos. ¿Qué debes hacer para no cometer una infracción al irte?
-    options: ["Nada, no hay nadie", Dar la oportunidad de establecer tu identidad y la del vehículo en el lugar, Irte y llamar mañana, Irte sin dejar ningún dato]
+    options: ["Irte, porque nadie resultó herido", "Dar en el lugar la oportunidad de establecer tu identidad y la del vehículo", "Irte y llamar a tu aseguradora esa tarde", "Irte si no hay ningún testigo"]
     answer: 1
-    explain: Si das en el lugar la oportunidad de establecer tu identidad (y la del vehículo), la prohibición de abandonar el lugar por daños no se aplica.
+    explain: Si das en el lugar la oportunidad de establecer tu identidad (y la del vehículo), la prohibición de abandonar el lugar por daños no se aplica. Que no haya heridos o testigos, o avisar luego a la aseguradora, no sustituye eso.
     cites: ["wvw:7.2"]
-
-  - id: accidente-desamparo
-    type: yesno
-    prompt: ¿La excepción de dar tu identidad te permite dejar a un herido en estado de desamparo?
-    answer: false
-    explain: La excepción del apartado 2 solo cubre los casos a) y b); el c) no tiene excepción.
-    cites: ["wvw:7.1", "wvw:7.2"]
 
   - id: accidente-golpe-no-vi
     type: yesno
@@ -51,7 +44,7 @@ questions:
 
   - id: accidente-policia-parar
     type: yesno
-    prompt: Un agente te ordena parar y mostrar tu permiso de conducir. ¿Debes hacerlo?
+    prompt: Vas con prisa y un agente te ordena parar para mostrar tu permiso de conducir y los documentos del auto, aunque tú no has visto ninguna infracción. ¿Debes hacerlo?
     answer: true
     explain: A la primera orden debes detener el vehículo y mostrar los documentos.
     cites: ["wvw:160.1"]

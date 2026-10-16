@@ -2,24 +2,17 @@ questions:
   - id: voorsorteren-izquierda
     type: mc
     prompt: Vas a girar a la izquierda en una calle de doble sentido. ¿Dónde puedes preseleccionar?
-    options: [Lo más cerca posible del eje de la calzada, Lo más a la derecha posible, En el centro del carril derecho, Detrás del tráfico que viene de frente]
+    options: [Lo más cerca posible del eje de la calzada, Lo más a la derecha posible para no estorbar, En el centro del carril derecho, Detrás del tráfico que viene de frente]
     answer: 0
-    explain: Para girar a la izquierda se puede ir con tiempo lo más cerca posible de la wegas (eje de la calzada).
+    explain: Para girar a la izquierda se puede ir con tiempo lo más cerca posible de la wegas (eje de la calzada). Ir a la derecha es la posición para girar a la derecha.
     cites: ["rvv:17.1"]
 
   - id: voorsorteren-izquierda-unico-sentido
     type: mc
     prompt: Vas a girar a la izquierda desde una calzada de un solo sentido, sin tráfico en contra. ¿Dónde puedes preseleccionar?
-    options: [Lo más a la izquierda posible, Lo más a la derecha posible, En el centro, Pegado a la acera derecha]
+    options: [Lo más a la izquierda posible, Lo más a la derecha posible, Lo más cerca posible del eje de la calzada, Pegado a la acera derecha]
     answer: 0
-    explain: En calzadas para un solo sentido se preselecciona lo más a la izquierda posible.
-    cites: ["rvv:17.1"]
-
-  - id: voorsorteren-derecha
-    type: yesno
-    prompt: Para girar a la derecha, ¿puedes ir con tiempo lo más a la derecha posible?
-    answer: true
-    explain: Es lo que permite el art. 17 lid 1 onderdeel a.
+    explain: En calzadas para un solo sentido se preselecciona lo más a la izquierda posible; no hay tráfico de frente ni eje al que acercarse.
     cites: ["rvv:17.1"]
 
   - id: voorsorteren-obligatorio
@@ -29,66 +22,84 @@ questions:
     explain: El RVV dice que quien gira "mag" (puede) preseleccionar. Pero la Rijprocedure B lo considera lo mejor al girar, y lo exige cuando no hacerlo crea una situación insegura o estorba la fluidez.
     cites: ["rvv:17.1", "cbr-rijprocedure:3.3"]
 
+  - id: voorsorteren-por-que-izquierda
+    type: mc
+    prompt: Vas a girar a la izquierda en una calle de doble sentido y un auto viene pegado detrás de ti. ¿Qué riesgo evita acercarte al eje antes de girar?
+    options: [Que el auto de atrás te adelante por la izquierda hacia el tráfico que viene de frente, Que el auto de frente te ceda el paso sin querer, Que tengas que poner el intermitente demasiado pronto, Que el auto de atrás se vea obligado a detenerse del todo]
+    answer: 0
+    explain: Según la Rijprocedure B, al preseleccionar a la izquierda el de atrás no te adelanta por la izquierda hacia el tráfico de frente, y a menudo tiene sitio para pasarte por la derecha. El intermitente se pone igual en cualquier posición.
+    cites: ["cbr-rijprocedure:3.3"]
+
   - id: voorsorteren-no-estorbar
     type: mc
-    prompt: Según la Rijprocedure B, ¿cuándo puede ser mejor no preseleccionar?
-    options: [Si en posición preseleccionada y lento o parado estorbarías sin necesidad a ciclistas y ciclomotores, Nunca, Solo de noche, Solo en calles de un solo sentido]
-    answer: 0
-    explain: La Rijprocedure B dice que se evite estorbar sin necesidad a ciclistas y ciclomotores en posición preseleccionada.
+    prompt: Vas a girar a la derecha, pero tendrás que ir lento o parar, y por tu derecha circulan ciclistas y ciclomotores que tu coche preseleccionado frenaría. ¿Qué dice la Rijprocedure B?
+    options: ["Preseleccionas igual, porque siempre es lo mejor", "A veces es mejor no preseleccionar para no estorbar sin necesidad a ciclistas y ciclomotores", "Preseleccionas y les tocas la bocina para que pasen", "Pasas por el fietsstrook para dejarles la calzada"]
+    answer: 1
+    explain: La Rijprocedure B dice que a veces es mejor no preseleccionar si, parado o lento en esa posición, estorbarías sin necesidad a ciclistas y ciclomotores.
+    cites: ["cbr-rijprocedure:3.3"]
+
+  - id: voorsorteren-espera-giro-izquierda
+    type: mc
+    prompt: Esperas para girar a la izquierda mientras pasa el tráfico que viene de frente. ¿Cómo deja la Rijprocedure B las ruedas delanteras del auto?
+    options: [Giradas ya a la izquierda para arrancar antes, Lo más rectas posible, Giradas a la derecha para alejarte del eje, Como te resulte más cómodo]
+    answer: 1
+    explain: La Rijprocedure B pide mantener las ruedas delanteras lo más posible en posición "rechtuit". Es procedimiento, no ley; el motivo práctico es que, si te golpean por detrás, no te empujen hacia el tráfico de frente.
+    cites: ["cbr-rijprocedure:3.3"]
+
+  - id: voorsorteren-derecha-suggestiestrook
+    type: yesno
+    prompt: Vas a girar a la derecha y, al borde de la calzada, hay una franja roja sin dibujos de bicicleta (suggestiestrook). ¿Puedes usarla al girar?
+    answer: true
+    explain: Según la Rijprocedure B, al girar a la derecha se puede usar la suggestiestrook. No es un fietsstrook; no tiene dibujos de bicicleta ni una prohibición para el auto.
     cites: ["cbr-rijprocedure:3.3"]
 
   - id: voorsorteren-flecha
     type: mc
-    prompt: Estás en un carril de preselección con una flecha a la derecha y quieres seguir recto. ¿Qué haces?
-    options: [Sigo recto de todos modos, Debo seguir la dirección que indica el carril, Cambio de carril dentro del cruce, Giro a la izquierda]
-    answer: 1
-    explain: Quien sigue la calzada está obligado a seguir en el cruce la dirección que indica el carril de preselección en el que está.
-    cites: ["rvv:78.1"]
+    prompt: Estás en un carril de preselección con una flecha a la derecha y tenías pensado seguir recto. ¿Qué haces?
     sign: L4
-
-  - id: voorsorteren-fietsstrook-parte
-    type: yesno
-    prompt: Dentro de un carril de preselección hay una fietsstrook. ¿Forma parte del carril de preselección?
-    answer: true
-    explain: El art. 78 lid 1 dice que una fietsstrook situada en una voorsorteerstrook forma parte de ella.
+    options: [Sigo recto de todos modos, Sigo la dirección que indica el carril, Cambio de carril dentro del cruce, Giro a la izquierda desde ese carril]
+    answer: 1
+    explain: Quien sigue la calzada está obligado a seguir en el cruce la dirección que indica el carril de preselección en el que está. Si querías seguir recto, tenías que haber elegido otro carril antes.
     cites: ["rvv:78.1"]
 
   - id: voorsorteren-uitrijstrook
     type: mc
-    prompt: Sales de la calzada principal por un uitrijstrook con una flecha pintada. ¿Qué debes hacer a la altura de la flecha?
-    options: [Seguir la dirección que indica la flecha, Seguir recto, Cambiar a la calzada principal, Frenar y esperar]
+    prompt: Has tomado un uitrijstrook y, a la altura de las flechas pintadas, te das cuenta de que preferirías seguir por la autopista. ¿Qué haces?
+    options: [Sigo la dirección que indica el carril de salida, Vuelvo a la calzada principal cruzando la línea, Freno hasta parar y decidir, Sigo recto cruzando la línea de borde]
     answer: 0
-    explain: A la altura de las flechas hay que seguir la dirección que indica el carril de salida.
+    explain: Quien deja la calzada principal por un uitrijstrook tiene que seguir, a la altura de las flechas, la dirección que indica el carril en el que está. Por eso hay que decidir antes de entrar.
     cites: ["rvv:78.2"]
 
   - id: voorsorteren-mantener-carril
     type: mc
-    prompt: Con dos carriles de preselección a la derecha, ya elegiste uno. ¿Qué recomienda la Rijprocedure B?
-    options: [Seguir en el carril elegido lo más posible, Cambiar al otro carril cada vez que avanza más rápido, Girar desde el carril que quede libre, Pararte entre los dos]
+    prompt: Hay dos carriles de preselección hacia la derecha y ya elegiste el derecho. El izquierdo parece avanzar más rápido. ¿Qué recomienda la Rijprocedure B?
+    options: [Seguir en el carril elegido lo más posible, Cambiar de carril cada vez que el otro avanza más, Girar desde el carril que quede libre en cada momento, Quedarte entre los dos para elegir al final]
     answer: 0
-    explain: Mantener el carril elegido da un tráfico más tranquilo.
+    explain: Mantener el carril elegido da un tráfico más tranquilo; cambiar a cada rato lo vuelve inquieto.
     cites: ["cbr-rijprocedure:3.3"]
 
   - id: voorsorteren-espacio-ciclistas
-    type: yesno
-    prompt: Estás en un carril de preselección abierto a todos los que van en esa dirección. ¿Debes dejar a tu derecha espacio suficiente para ciclistas y ciclomotores?
-    answer: true
-    explain: La Rijprocedure B pide dejar espacio libre a la derecha para ciclistas y ciclomotores.
+    type: mc
+    prompt: Estás en un carril de preselección a la derecha abierto a todos los que van en esa dirección. ¿Qué haces con el espacio a tu derecha?
+    options: [Lo dejo libre para ciclistas y ciclomotores, Me pego al borde para dejar sitio a los de atrás, Lo dejo libre solo si ya hay un ciclista, Lo ocupo porque el carril es mío]
+    answer: 0
+    explain: La Rijprocedure B pide dejar a tu derecha espacio suficiente para ciclistas y ciclomotores. Pegarte al borde parece cortés, pero no deja ese espacio.
     cites: ["cbr-rijprocedure:3.3"]
 
   - id: voorsorteren-intermitente
     type: mc
-    prompt: ¿Cuándo debes dar la señal para girar según la Rijprocedure B?
-    options: [Con tiempo y después de mirar, Cuando ya estás girando, Solo si hay otros autos, Después de la curva]
+    prompt: Estás a unos 100 metros del cruce donde vas a girar a la izquierda y ya miraste por el retrovisor. ¿Cuándo das la señal según la Rijprocedure B?
+    options: ["Ahora, con tiempo y después de mirar", "Cuando ya empiezas a girar el volante", "Cuando llegues al eje de la calzada", "Solo si ves otros autos cerca"]
     answer: 0
-    explain: Hay que avisar con tiempo, después de haber mirado, y terminar la señal tras la curva. La obligación de avisar viene del art. 17 lid 2.
+    explain: Hay que avisar con tiempo, después de haber mirado, para que los demás ajusten su conducción, y terminar la señal tras la curva. La obligación de avisar viene del art. 17 lid 2.
     cites: ["rvv:17.2", "cbr-rijprocedure:3.3"]
 
   - id: voorsorteren-ceder-lado
-    type: yesno
-    prompt: Vas a girar. Un ciclista viene muy cerca detrás de ti por el costado. ¿Debes dejarlo pasar?
-    answer: true
-    explain: Quien gira tiene que dejar pasar al tráfico que viene de frente por la misma vía y al que va a su lado o muy cerca detrás, a izquierda o derecha.
+    type: mc
+    prompt: Giras a la derecha en un cruce. Un ciclista viene por tu derecha, a tu altura, y sigue recto. ¿Quién deja pasar a quién?
+    options: [Tú le dejas pasar a él, Él te deja pasar a ti porque tú giras, El más rápido pasa primero, Los dos entran a la vez]
+    answer: 0
+    explain: Quien gira tiene que dejar pasar al tráfico que viene de frente y al que va a su lado o muy cerca detrás, a izquierda o a derecha. El que gira cede, aunque tenga que esperar.
     cites: ["rvv:18.1"]
 
   - id: voorsorteren-izquierda-derecha

@@ -1,33 +1,19 @@
 questions:
-  - id: parte-peaton-borde
-    type: yesno
-    prompt: No hay trottoir, voetpad, fietspad ni fiets/bromfietspad. ¿Puede el peatón ir por la berma?
-    answer: true
-    explain: Si no hay trottoir, voetpad, fietspad ni fiets/bromfietspad, el peatón usa la berma o el borde exterior de la rijbaan.
-    cites: ["rvv:4"]
-
-  - id: parte-patines
+  - id: parte-derecha-ciclista
     type: mc
-    prompt: Vas en patines en línea y no hay trottoir, voetpad, fietspad ni fiets/bromfietspad. ¿Dónde puedes ir?
-    options: [Por la berma, Por la rijbaan, Por ningún lado, Solo por el ruiterpad]
-    answer: 1
-    explain: Quien se mueve con objetos que no son vehículos usa el fietspad, el fiets/bromfietspad, el trottoir o el voetpad, y si no existen, la rijbaan.
+    prompt: Vas en bicicleta por una rijbaan donde no hay fietspad, y la calle está vacía. ¿Dónde circulas?
+    options: ["Lo más a la derecha posible", "Por el centro, para que te vean mejor", "Por donde quieras mientras no venga nadie", "Por la izquierda, para ver a los coches de frente"]
+    answer: 0
+    explain: Los bestuurders deben circular lo más a la derecha posible, y el ciclista que va por la rijbaan lo es. Que la calle esté vacía no cambia la regla.
+    cites: ["rvv:3.1", "rvv:5.2"]
+
+  - id: parte-peaton-sin-camino
+    type: mc
+    prompt: Caminas por una carretera donde no hay trottoir, voetpad, fietspad ni fiets/bromfietspad. ¿Por dónde vas?
+    options: ["Por la berma o el borde exterior de la rijbaan", "Por el centro de la rijbaan", "Por un ruiterpad, si lo hay", "Por donde haya más espacio, sin regla"]
+    answer: 0
+    explain: El peatón usa el trottoir o el voetpad; si no hay, el fietspad o el fiets/bromfietspad; y solo si tampoco hay, la berma o el borde exterior de la rijbaan.
     cites: ["rvv:4"]
-
-  - id: parte-columna
-    type: yesno
-    prompt: Una columna de peatones que forma un desfile, ¿puede usar la rijbaan?
-    answer: true
-    explain: Los peatones pueden usar la rijbaan si forman una columna, un desfile o un cortejo fúnebre.
-    cites: ["rvv:9"]
-
-  - id: parte-estacionar
-    type: multi
-    prompt: Para estacionar, ¿en cuáles de estas partes NO puedes dejar el auto?
-    options: [Trottoir, Fietspad, Ruiterpad, Parkeerhaven]
-    answer: [0, 1, 2]
-    explain: Los conductores pueden usar otras partes para estacionar, excepto el trottoir, el voetpad, el fietspad, el fiets/bromfietspad y el ruiterpad.
-    cites: ["rvv:10.1"]
 
   - id: parte-peaton-con-acera-y-fietspad
     type: yesno
@@ -36,13 +22,20 @@ questions:
     explain: El peatón usa el trottoir o el voetpad; el fietspad solo si faltan el trottoir y el voetpad.
     cites: ["rvv:4"]
 
-  - id: parte-patines-trottoir
+  - id: parte-patines
     type: mc
-    prompt: Vas en patines en línea por una calle que tiene trottoir y rijbaan. ¿Por dónde vas?
-    options: [Por el trottoir, Por la rijbaan, Por la berma, Por el ruiterpad]
-    answer: 0
-    explain: Quien se mueve con objetos que no son vehículos usa el fietspad, el fiets/bromfietspad, el trottoir o el voetpad, y la rijbaan solo si no existe ninguno de ellos.
-    cites: ["rvv:4"]
+    prompt: Vas en patines en línea y no hay trottoir, voetpad, fietspad ni fiets/bromfietspad. ¿Dónde puedes ir?
+    options: [Por la berma, Por la rijbaan, Por ningún lado, Solo por el ruiterpad]
+    answer: 1
+    explain: Quien se mueve con objetos que no son vehículos usa el fietspad, el fiets/bromfietspad, el trottoir o el voetpad, y si no existen, la rijbaan.
+    cites: ["rvv:4.4"]
+
+  - id: parte-patines-fietspad
+    type: yesno
+    prompt: Patinas con patines en línea por una calle que tiene trottoir y también un fietspad. ¿Puedes ir por el fietspad?
+    answer: true
+    explain: 'Quien va con patines no sigue el orden de los peatones: puede usar el fietspad, el fiets/bromfietspad, el trottoir o el voetpad, sin preferencia entre ellos.'
+    cites: ["rvv:4.4"]
 
   - id: parte-jinete-fietspad
     type: mc
@@ -59,3 +52,10 @@ questions:
     answer: [0, 1, 2]
     explain: El art. 7 le permite el trottoir, el voetpad, el fietspad, el fiets/bromfietspad y la rijbaan. El ruiterpad y la berma no están en la lista.
     cites: ["rvv:7"]
+
+  - id: parte-columna
+    type: yesno
+    prompt: Un cortejo fúnebre de peatones avanza por la rijbaan de una calle que tiene trottoir. ¿Está permitido?
+    answer: true
+    explain: Los peatones pueden usar la rijbaan si forman una columna, un desfile o un cortejo fúnebre, aunque haya trottoir.
+    cites: ["rvv:9"]

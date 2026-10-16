@@ -12,6 +12,8 @@ En los Países Bajos hay muchos cruces sin señales, sobre todo en barrios y zon
 En un <T id="kruispunt" /> cedes el paso a quien viene **por tu derecha**.
 </Rule>
 
+La razón es práctica: con una sola regla igual para todos, cada conductor sabe quién pasa cuando ninguna señal lo decide.
+
 A un cruce así se le llama <T id="gelijkwaardig-kruispunt" />: ninguna de las vías tiene prioridad por señales.
 
 <Junction
@@ -36,7 +38,7 @@ La ley habla de <T id="bestuurder">conductores</T>, y para la ley un conductor e
 Muchos alumnos piensan que el auto siempre va antes que la bicicleta. No es así: en un cruce sin señales, la bicicleta que viene por tu derecha pasa primero.
 </Warn>
 
-<Check id="regla-derecha-bici" />
+<Check id="regla-derecha-bici-coche" />
 
 ## Excepción 1: camino sin pavimentar
 
@@ -54,11 +56,29 @@ Si vienes de un <T id="onverharde-weg" />, cedes el paso a quien va por una <T i
   caption="Tú vienes del camino de tierra: B pasa primero, aunque viene por tu izquierda."
 />
 
+## En un cruce en T
+
+La regla vale igual en un cruce en T. Quien va por la calle principal también cede a quien sale de la calle lateral si este viene por su derecha.
+
+<Junction
+  arms={{ e: {}, s: {}, w: {} }}
+  vehicles={[
+    { label: 'A', kind: 'car', from: 'w', to: 'straight', you: true },
+    { label: 'B', kind: 'car', from: 's', to: 'right' },
+  ]}
+  alt="Cruce en T sin señales. Tú (A) vienes del oeste y sigues recto hacia el este. Otro auto (B) viene de la calle lateral del sur, es decir, por tu derecha, y gira a la derecha."
+  caption="B sale de la calle lateral por tu derecha: B pasa primero, aunque tú vayas por la calle principal."
+/>
+
+<Check id="regla-derecha-t" />
+
 ## Excepción 2: el tranvía
 
 <Rule cite="rvv:15.2.b">
 Cedes el paso al <T id="tram" />, venga de donde venga (salvo que señales o semáforos digan otra cosa).
 </Rule>
+
+<Check id="regla-derecha-tram" />
 
 <Tip>
 En las preguntas de prioridad, primero busca señales, marcas o un agente. Solo si no hay nada, aplica la regla de la derecha, y después revisa las dos excepciones: ¿hay un camino sin pavimentar? ¿hay un tranvía?

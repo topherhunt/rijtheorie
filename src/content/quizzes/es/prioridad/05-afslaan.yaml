@@ -1,19 +1,43 @@
 questions:
   - id: afslaan-preseleccionar-derecha
     type: mc
-    prompt: Vas a girar a la derecha. ¿Dónde puedes colocarte antes de girar?
-    options: [Lo más a la derecha posible, En el centro de la vía, Lo más a la izquierda, Da igual]
+    prompt: Vas a girar a la derecha en una calle ancha. Si te quedas en el centro, los autos de detrás tendrían que esperarte sin poder pasar. ¿Cómo te colocas con tiempo?
+    options:
+      - Lo más a la derecha posible
+      - En el centro de la vía, para tomar la curva con más amplitud
+      - Junto al eje, para ver mejor el cruce
     answer: 0
-    explain: Para girar a la derecha puedes preseleccionar lo más a la derecha posible.
-    cites: ["rvv:17.1"]
+    explain: El art. 17.1 permite colocarte lo más a la derecha posible para girar a la derecha, y el CBR lo pide cuando no hacerlo entorpece el tráfico o es inseguro. Quedarte en el centro hace esperar a los de detrás.
+    cites: ["rvv:17.1", "cbr-rijprocedure:3.3"]
 
   - id: afslaan-preseleccionar-izquierda
     type: mc
-    prompt: Vas a girar a la izquierda en una vía de doble sentido. ¿Dónde puedes colocarte antes de girar?
-    options: [Junto al eje de la vía, Lo más a la derecha, Fuera de la calzada, Sobre el eje contrario]
+    prompt: Vas a girar a la izquierda en una vía de doble sentido. Si te quedas a la derecha mientras esperas a los de frente, los de detrás querrán adelantarte por la izquierda. ¿Cómo te colocas con tiempo?
+    options:
+      - Junto al eje de la vía
+      - Lo más a la derecha posible, para no estorbar
+      - Sobre el carril contrario, para ver mejor
     answer: 0
-    explain: Para girar a la izquierda puedes colocarte junto al eje (tegen de wegas). En una vía de un solo sentido, a la izquierda.
-    cites: ["rvv:17.1"]
+    explain: El art. 17.1 permite colocarte junto al eje para girar a la izquierda. El CBR explica que así el tráfico de detrás no te adelanta por la izquierda y puede pasar por la derecha.
+    cites: ["rvv:17.1", "cbr-rijprocedure:3.3"]
+
+  - id: afslaan-senal-posicion
+    type: yesno
+    prompt: Te colocas junto al eje para girar a la izquierda. Como ya se ve que vas a girar, no pones el intermitente. ¿Es correcto?
+    answer: false
+    explain: El art. 17.2 obliga a dar la señal con el intermitente o con el brazo antes de girar. Tu posición en la vía no la sustituye.
+    cites: ["rvv:17.2"]
+
+  - id: afslaan-senal-cuando
+    type: mc
+    prompt: Vas a girar. ¿Cuándo das el intermitente, según el CBR?
+    options:
+      - Con tiempo, después de haber mirado, y lo apago al terminar el giro
+      - Justo al empezar a mover el volante, para no confundir a nadie
+      - Solo cuando hay otros vehículos a la vista
+    answer: 0
+    explain: El CBR pide señalizar con tiempo y tras mirar, para que los demás puedan adaptarse. El art. 17.2 obliga a señalizar en cualquier caso, haya o no tráfico a la vista.
+    cites: ["cbr-rijprocedure:3.3", "rvv:17.2"]
 
   - id: afslaan-izquierda-frente
     type: mc
@@ -65,7 +89,7 @@ questions:
       - Al tráfico que viene de frente por la misma vía
       - Al tráfico que va a tu lado en la misma vía
       - Al tráfico que va pegado detrás de ti en la misma vía
-      - A nadie, porque el que gira tiene prioridad
+      - Al tráfico de la vía que entras, que viene de frente por ella
     answer: [0, 1, 2]
     explain: El art. 18.1 cita al tráfico de frente y al que va al lado o muy cerca detrás de ti, en la misma vía.
     cites: ["rvv:18.1"]
@@ -84,12 +108,16 @@ questions:
     explain: "B no tiene a nadie por su derecha y pasa primero. C tiene a B a su derecha, así que pasa después. A tiene a C a su derecha y además gira a la izquierda: va último."
     cites: ["rvv:15.1", "rvv:18.1"]
 
-  - id: afslaan-bloquear
-    type: yesno
-    prompt: Puedes quedarte parado en medio del cruce aunque bloquees a otros, si luego saldrás pronto.
-    answer: false
-    explain: No se permite bloquear un cruce.
-    cites: ["rvv:14"]
+  - id: afslaan-no-bloquear
+    type: mc
+    prompt: Tienes semáforo en verde para girar a la izquierda, pero la calle a la que entras tiene cola y no hay sitio para tu auto al otro lado del cruce. ¿Qué haces?
+    options:
+      - Espero antes del cruce hasta que haya sitio para salir
+      - Entro y espero dentro del cruce, porque tengo verde
+      - Entro hasta la mitad para que me dejen sitio
+    answer: 0
+    explain: El art. 14 prohíbe bloquear un cruce y el CBR pide entrar solo si puedes salir de él. Tener verde no te autoriza a quedarte atravesado cuando el semáforo cambie.
+    cites: ["rvv:14", "cbr-rijprocedure:3.3"]
 
   - id: afslaan-ruedas
     type: mc
@@ -118,9 +146,8 @@ questions:
     prompt: Vas a girar a la derecha y miras por encima del hombro derecho. ¿Qué compruebas con esa mirada?
     options:
       - El tráfico que va a tu lado derecho, junto a tu vehículo
-      - El tráfico que viene de frente
-      - Si el semáforo cambia
-      - La distancia al auto de delante
+      - El tráfico que viene de frente por la vía a la que entras
+      - Si el auto de detrás mantiene la distancia
     answer: 0
     explain: Mirar por encima del hombro permite ver el tráfico que va junto a tu vehículo. No debe convertirse en mirar hacia atrás durante mucho tiempo, porque entonces no ves lo que pasa delante.
     cites: ["cbr-rijprocedure:3.3"]

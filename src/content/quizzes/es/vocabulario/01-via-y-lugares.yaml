@@ -17,11 +17,11 @@ questions:
     cites: ["cbr-examenplan:4"]
     exam: false
 
-  - id: via-y-lugares-vluchtstrook-uso
+  - id: via-y-lugares-vluchthaven-parar
     type: yesno
-    prompt: Circulas por una autosnelweg y quieres parar a leer un mensaje. La vluchtstrook está libre y no hay ninguna emergencia. ¿Puedes parar ahí?
+    prompt: Circulas por una autoweg y ves una vluchthaven libre junto a la calzada. Quieres parar un momento a mirar el mapa, sin ninguna emergencia. ¿Puedes entrar en ella?
     answer: false
-    explain: En una autosnelweg o autoweg la vluchtstrook solo se puede usar en un noodgeval (emergencia). Leer un mensaje no lo es.
+    explain: En una autosnelweg o autoweg está prohibido usar la vluchtstrook, la vluchthaven o la berm salvo en un noodgeval. Mirar el mapa no es una emergencia.
     cites: ["rvv:43.3"]
 
   - id: via-y-lugares-berm-adelantar
@@ -39,12 +39,19 @@ questions:
     explain: Con la cruz roja el carril no se puede usar, y la vluchtstrook solo se usa en emergencias. Solo una flecha verde habilita el carril.
     cites: ["rvv:73", "rvv:1"]
 
-  - id: via-y-lugares-invoeg-ceder
+  - id: via-y-lugares-spitsstrook-a3
+    type: yesno
+    prompt: Sobre la spitsstrook de una autosnelweg se ilumina un panel con una velocidad máxima (señal A3). No hay cruz roja. ¿Puedes circular por ese carril?
+    answer: true
+    explain: Con una flecha verde o con una velocidad máxima iluminada (A3) el carril puede usarse. Solo la cruz roja lo cierra, y entonces la vluchtstrook queda para emergencias.
+    cites: ["rvv:73"]
+
+  - id: via-y-lugares-inrit-ceder
     type: mc
-    prompt: Circulas por una invoegstrook y te incorporas a la doorgaande rijbaan. ¿Quién debe dejar pasar al otro?
-    options: [Tú dejas pasar al tráfico de la doorgaande rijbaan, El tráfico de la doorgaande rijbaan te deja pasar siempre, Pasa quien llegue primero, Pasa el que va más rápido]
+    prompt: Circulas por una calle y giras a la izquierda para entrar en el garaje de una casa (una inrit). Viene un coche de frente por la calzada. ¿Quién debe dejar pasar al otro?
+    options: [Tú dejas pasar al coche que viene de frente, El coche de frente te deja pasar a ti porque ya has puesto el intermitente, Pasa quien llegue antes al garaje, Pasa quien vaya más despacio]
     answer: 0
-    explain: Quien pasa de la invoegstrook a la doorgaande rijbaan hace una maniobra especial y deja pasar al resto del tráfico.
+    explain: 'Girar para entrar en una inrit es una maniobra especial del art. 54: quien la hace deja pasar al resto del tráfico. El intermitente avisa, pero no te da preferencia.'
     cites: ["rvv:54"]
 
   - id: via-y-lugares-uitrit-ceder
@@ -57,9 +64,9 @@ questions:
   - id: via-y-lugares-erf-situacion
     type: multi
     prompt: Entras en un erf. ¿Cuáles de estas afirmaciones son correctas?
-    options: [No puedes ir a más de 15 km/h, Los peatones pueden usar el camino en todo su ancho, Puedes ir a 30 km/h si no hay nadie, Un coche puede aparcar en cualquier sitio libre]
+    options: [No puedes ir a más de 15 km/h, Los peatones pueden usar el camino en todo su ancho, Puedes ir a 30 km/h si no hay nadie, Los peatones deben apartarse a un lado del camino]
     answer: [0, 1]
-    explain: En un erf el máximo es 15 km/h y los peatones pueden usar toda la anchura. No hay excepción "si no hay nadie", y un vehículo de motor solo puede aparcar en plazas señaladas.
+    explain: En un erf el máximo es 15 km/h y los peatones pueden usar toda la anchura. No hay excepción "si no hay nadie", y los peatones no tienen que apartarse.
     cites: ["rvv:44", "rvv:45", "rvv:46"]
 
   - id: via-y-lugares-erf-aparcar

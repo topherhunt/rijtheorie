@@ -451,3 +451,44 @@ No clear legal error found in parar/ after printing rvv:10, 23, 24, 25, 26, 27, 
 - Whether indicating is required when passing a cyclist (rvv:55 text names overtaking other motor-vehicle drivers; not settled).
 - Tyre summer/winter content and valve-cap purpose: no source in the repo snapshots; do not invent.
 - The "military column exemption" for the bus-stop duty was not verified.
+
+## Applied
+
+Per lesson (questions: removed / added / kept-or-polished with same id; lesson-text changes).
+
+- vehiculo/01 neumaticos: -2 (`neumaticos-dano`, `neumaticos-bulto`) / +1 (`neumaticos-revision-cuatro`) / polished `neumaticos-circunferencia`; summary and CBR-check text corrected (no season rule), common-sense why added. 12 questions.
+- vehiculo/02 frenos: -1 (`frenos-sin-frenos`) / +2 (`frenos-parkeerrem-2012`, `frenos-parkeerrem-ruedas`) / polished `frenos-fugas`, `frenos-losbreek-suelto` (answer position changed, id kept as meaning is unchanged); common-sense whys. 10 questions.
+- vehiculo/03 luces del auto: -1 (`luces-del-auto-colores`) / +2 (`luces-del-auto-colores-cambio`, `luces-del-auto-tercera-freno`) / polished deslumbrar, parpadean, azul; hazard-light year condition added. 10 questions.
+- vehiculo/04 visibilidad y espejos: 0 removed / +3 (`visibilidad-espejos-ventanilla-lateral`, `-desempanador`, `-marcha-atras-aviso`) / 6 polished; window wording and horn rule fixed. 14 questions.
+- vehiculo/05 asientos y cinturones: 0 / +1 (`asientos-cinturones-medidas-placa`) / 4 polished; intro, belt-use sentence and pointer to the child-belt lesson in El conductor. 11 questions.
+- vehiculo/06 carga y remolque: -2 (`carga-remolque-dos-remolques`, `carga-remolque-luces-remolque`) / +1 (`carga-remolque-intermitente-lateral`) / 5 rewritten (asegurada, suelta, luces, stootbalk, conjunto-19); pointer to the brakes lesson. 14 questions.
+- luces/01 dimlicht y grootlicht: -4 (`dimlicht-noche-def`, `dimlicht-dia-def`, `dagrijlicht-junto`, `dimlicht-principio`) / +3 (`dimlicht-tras-puesta-sol`, `dagrijlicht-niebla`, `dimlicht-todos-con-luces`) / 4 polished; lesson rewritten (law vs CBR practice, "lluvia", why for high beams), Checks added. 11 questions.
+- luces/02 niebla y estacionado: -3 (`mistvoor-lluvia`, `mistvoor-sol`, `mistachter-distancia`) plus `mistachter-lluvia` and `mistachter-60m` replaced / +3 (`mistachter-40m`, `mistlicht-lluvia-delante-detras`, `mistachter-80m`) / `detenido-luces` options fixed; made the single home of rvv:38 with common-sense why. 11 questions.
+- luces/03 intermitentes y bocina: -3 (`bocina-saludo`, `bocina-peligro`, `rafaga-peligro`) / +1 (`bocina-primero-evitar`) / 3 polished; CBR rule (remove the danger first, signal only if that fails) added. 10 questions.
+- luces/04 avería y emergencia: -3 (`triangulo-moto`, `autopista-averia-calzada`, `autopista-noche-luces`) / +2 (`triangulo-vehiculos`, `averia-triangulo-sin-luces`) / `triangulo-distancia`, `triangulo-direccion` rewritten; rvv:38 rule now points to luces/02. 11 questions.
+- luces/05 accidente: -1 (`accidente-desamparo`) / 0 / polished `accidente-danos`, `accidente-policia-parar`; wvw:5/6/7/160/12 re-verified; missing `<Check>` for `accidente-policia-parar` added. 8 questions.
+- luces/06 remolque y emergencias: -2 (`emergencia-pasar`, `agente-indicaciones`) / +1 (`agente-semaforo-verde`) / polished `remolque-seis`, `emergencia-peligro`; dangling sentence repaired, pointer to prioridad lesson "Vehículos prioritarios". 6 questions.
+- parar/01 stilstaan y parkeren: -2 (`stilstaan-def-parkeren`, `stilstaan-doble-fila`) / +2 (`stilstaan-reloj`, `stilstaan-doble-fila-espera`) / rest kept (`stilstaan-lugar-previsto` stays `exam: false`); dubbel parkeren explained (labelled as common sense since the law does not define it). 9 questions.
+- parar/02 stilstaan verboden: -6 (`stilstaanverbod-tunel`, `-amarilla`, `-subir-bushalte`, `-subir-oversteek`, `-e2`, `-orden-prohibido`) / +4 (`stilstaanverbod-subir-donde`, `-e2-aparcar`, `-lista-multi`, `-bus-marca`) / kept and polished `-kruispunt`, `-fietsstrook`, `-busstrook`, `-amarilla-pasajero`; why paragraph (common sense), block-marking-over-12-m sentence, E2 includes parkeren. 11 questions.
+- parar/03 parkeren verboden (rework): -4 (`parkeerverbod-e1`, `-e3`, `-cruce-parar`, `-laden`) / +4 (`parkeerverbod-e1-carga`, `-e3-bici`, `-cruce-5m`, `-laden-tienda`) / `-inrit`, `-voorrangsweg`, `-e9` converted to scenarios (same ids); why paragraph and "what E1/E3 mean for you" added. 13 questions.
+- parar/04 parkeergelegenheden (rework): -5 (`gelegenheid-e4`, `-categoria`, `-horas`, `-zona`, `-e10-fin`) / +5 (`gelegenheid-horas-e7`, `-zona-area`, `-e11-fuera`, `-e5-taxi`, `-e10-dentro-tiempo`) / `-vakken` and others kept; E5 now taught through rvv:24.1, E11 and an hours example added. 11 questions.
+- parar/05 parkeerschijf y gehandicapten: -2 (`schijf-kaart-tres-horas`, `schijf-kaart-solo-transporte`) / +2 (`schijf-kaart-e1-dos-horas`, `schijf-kaart-amarilla-cuatro`) / 7 polished with scenarios; explicit sentence "con tarjeta no necesitas el disco del art. 25, pero hasta 3 horas debes mostrarlo" (rvv:85.4). 11 questions.
+- parar/06 luces y puertas: -3 (`licht-buiten-bebouwde-kom`, `licht-dag-buena-vista`, `licht-puerta-miradas`) / +1 (`licht-puerta-ciclista`) / rewrote `licht-dag-zicht`, `licht-aanhanger`, `licht-wagen`, `licht-puerta-tiempo`; rvv:38 now a pointer to luces/02, why for the door check added. 7 questions.
+
+### Factual errors and resolutions
+
+- vehiculo/04 horn: "no puedes poner otros avisadores sonoros" was overstated; rv:5.2.71 lid 5 allows a reversing warning and an anti-theft signal. Fixed text and added `visibilidad-espejos-marcha-atras-aviso`.
+- vehiculo/04 "ventanillas delanteras": rv:5.2.42 says the side windows next to the driver's seat. Reworded.
+- vehiculo/03 hazard lights listed as mandatory without a date: rv:5.2.51 applies to cars in use after 31 Dec 1997. Added the condition.
+- luces/01 "lluvia fuerte" and "la regla práctica del CBR coincide": the CBR lists "regen" and its "in beginsel dimlicht" sits in the night/impaired-visibility context. Rewritten.
+- luces/02 `mistachter-60m` id said 60 m but the prompt said 80 m: replaced by `mistachter-80m`.
+- parar/01: the report's 20-minute wait scenario needed "doble fila" to be defined; the law (rvv:24.3) does not define it, so the lesson says so and calls the meaning common sense.
+
+### Report items deliberately not applied
+
+- vehiculo/01: the proposed 2.5 mm centre / 1.2 mm edge tread rule is not settled by the law text (main grooves vs circumference); not used. No tyre-season rule exists in the law; the "solo en verano" wording was removed. The equal-pressure-per-axle question (lid 9) was not added: it applies only when the manufacturer prescribes none and the scenario is unrealistic.
+- luces/05: `general` cites (first-aid steps, Sr art. 450) cannot be verified in the snapshots and stay secondary; no new first-aid questions.
+- luces/06: the military column / funeral exemption (rvv:56.2) was not added; no claim about rear lights with DRL-only.
+- parar/05: `schijf-kaart-sin-pasajero` not added; it duplicates `schijf-e6-no-persona`. Covered instead by the E1/amarilla 3-hour questions.
+- parar/06: CBR anticipation text about a car that "juist is gestopt" (door opening) not used; I could not confirm its section number in the CBR source.
+- parar/02: no new question on the lesson's "única excepción escrita" for E2; the law does not settle whether dropping off under E2 is allowed.

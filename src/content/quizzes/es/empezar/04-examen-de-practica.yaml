@@ -35,13 +35,13 @@ questions:
     explain: Las condiciones son responder todas las preguntas, que la última respuesta a cada una sea correcta, 98 de las últimas 100 correctas y acierto en días distintos. No hay límite de semanas ni hace falta descargar nada.
     cites: ["curso"]
 
-  - id: examen-practica-nivel-minimo
-    type: number
+  - id: examen-practica-nivel-tamano
+    type: mc
     exam: false
-    prompt: La prueba de nivel tiene al menos una pregunta de cada lección y un mínimo total. ¿Cuál es ese mínimo?
-    answer: 40
-    unit: preguntas
-    explain: La prueba de nivel tiene como mínimo 40 preguntas, con al menos una por lección.
+    prompt: ¿Cómo es la prueba de nivel?
+    options: ["20 preguntas de todo el curso, y hay que acertarlas todas", "20 preguntas de todo el curso, y basta con acertar 18", "50 preguntas como el examen real, y basta con acertar 44", "Una pregunta de cada lección, y basta con acertar la mayoría"]
+    answer: 0
+    explain: Son 20 preguntas repartidas por todo el curso y hay que acertarlas todas. Las 50 preguntas con 44 aciertos son el examen de práctica, que la prueba de nivel desbloquea.
     cites: ["curso"]
 
   - id: examen-practica-nivel-espera

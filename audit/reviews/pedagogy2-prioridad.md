@@ -269,3 +269,39 @@ Rebalance option lengths when applying.
 - A blue light with no horn is not a voorrangsvoertuig (art. 1/29 inference only).
 - Diagram YAML syntax in proposed questions (checked content only, not the exact `diagram` schema).
 - Exact option/answer schema of yesno items in the quiz files (I followed AUTHORING.md field names; the apply agent should match existing files).
+
+## Applied
+
+Per lesson (questions kept / removed / added; lesson text):
+
+- 01 regla-derecha: 6 questions (1 kept, 2 polished-in-place, 3 added: `bici-coche`, `t`, `tram`; `bici` replaced). Lesson: why sentence, T-junction section, tram check.
+- 02 voorrang-of-voorlaten: 8 questions (5 kept or polished; added `ambulancia-b1`, `giro-ciclista`, `acercarse`; removed `peaton-recto`, `ambulancia`, `uitrit-izquierda`). Lesson: voorrang verlenen example and art. 18 cyclist example.
+- 03 voorrangsborden: 9 questions (added `b5-no-cede`, `afbuigend-recto`; removed `b4-lado`, `afbuigend`; `afbuigend-salir` polished). Lesson: CBR 3.3 afbuigende voorrang Rule, title now "B1 a B5".
+- 04 haaientanden-b6-b7: 10 questions (6 kept or polished; added `b6-libre`, `b7-sin-stopstreep`, `t-izquierda`, `bici-b6`; removed 7 recall or absurd-distractor items). Lesson: T-junction and four new Checks.
+- 05 afslaan: 13 questions (voorsorteren questions rewritten with hindering context, `bloquear` turned into a green-light exit-queue scenario, added `senal-posicion`, `senal-cuando`). Lesson: signal timing paragraph and "no entres si no puedes salir".
+- 06 afslaan-fiets: 8 questions (added `atras`, `pegado-sin-dientes`, `haaientanden`, `doble-sentido`, `bromfiets`; removed `bici-bestuurder`, `cruce-propio`, `pegado`). Lesson: two-question rule replaces vague "casi siempre".
+- 07 zebrapad: 10 questions (added `semaforo-cuando`, `quienes`, `adelantar-detenido`; removed `dificultad`, `gehandicapten`, `semaforo`, `adelantar`; options polished). Lesson: art. 49.2 does not name cyclists.
+- 08 bijzondere-manoeuvres: 13 questions (added `lista-situaciones`, `arrancar-mirar`, `parada-uitrit`; removed `lista`, `arrancar`, `uitrit-peaton`; `uitrit-encuentro` and `aparcar-uitrit` reworded). Lesson: parkeren vs stilstaan for art. 24.1.b.
+- 09 voorrangsvoertuigen: 8 questions (added `sin-cruce`, `ciclista`, `verde` replacing `dejar`, `weggebruikers`; `quien` distractor "Taxis" replaced by "Autobuses de línea"; `semaforo-rojo` options balanced). Lesson: Checks updated.
+- 10 bus-y-tram: 10 questions (added `tranvia-gira`, `adelantar-derecha`, `pasajeros-aparecen`, `salir-parada-situacion`, `colonne-resto`, `parada-bajar`; removed `prioridad`, `adelantar`, `pasajeros-delante`, `salir-parada`, `colonne`; `pasajeros` and `parada-estacionar` reworked). Lesson: art. 11.5 moved to its own section with 11.1, art. 23.2 Rule added, stilstaan explained.
+- 11 colonne-y-stoet: 8 questions (added `reconocer`, `ciclista`, `semaforo-militar`, `semaforo-civil`, `peaton-quien`; removed `stoet`, `semaforo`, `semaforo-fuera`, `peaton`; `excepciones` distractors replaced; `hueco` kept). Lesson: recognition and why added.
+- 12 rotonde: 11 questions (added `sin-d1-adelantar`, `47-bromfiets`; removed `sin-d1`, `47`; `b6-mirar`, `salir`, `espejos-salir`, `adelantar` reworked; `salir-ciclista` and lane questions kept). Lesson: counter-clockwise reason for looking left, arts. 47/48 explained as permissions limited to the roundabout and just before it. The entry-priority sentence ("Sin esas señales rige la regla general...") was left untouched (lead).
+- 13 que-manda: 11 questions (hierarchy-style: added `b1-derecha`, `brigadier-parar`, `stop-rws`; removed `reglas-senales`, `brigadier`, `stop-politie`; `semaforo-b6`, `b1-semaforo-rojo`, `quien`, `gebod`, `stopstreep` reworked). Lesson: Tip replaced by a plain four-level list, art. 62 Rule added, art. 83 now names Rijkswaterstaat inspectors, missing Checks added.
+
+Possible factual errors:
+
+1. Lesson 12 roundabout entry rule: out of scope, left to the lead.
+2. Lesson 10 "Solo por la izquierda" distractor: removed; the question now frames art. 11.5 as the exception to art. 11.1.
+3. Lesson 13 art. 83: fixed, Rijkswaterstaat weginspecteurs also show the lit stop sign (verified with `npm run law -- rvv:83`).
+4. Lesson 09 red-light claim: softened; the lesson and question say only that art. 50 does not say how to let the vehicle pass and that the red keeps its meaning for you (arts. 50, 68.1); no claim about breaking a rule to prevent an accident was added because I could not place the CBR "Tot slot" passage in a citable section.
+5. Lesson 08 `uitrit-encuentro`: fixed, the law obliges both drivers; the CBR only prefers that the exiting driver goes first.
+
+Report items not applied:
+
+- Diagram syntax with `[w,e,s]` arms: used the object form `arms: { ... }` the components expect.
+- 05(a) separate `<Rule rvv:17.2>`: existing Rule already covers 17.1 and 17.2.
+- 09 CBR "Tot slot" reference: see item 4. "Blue light without horn" point: unverified, not asserted.
+- 11 CBR line on letting funeral followers pass: the section number was not confirmed, so not cited.
+- 12 indicators on roundabouts question: unverified, not written. 13 lights-out / flashing-yellow question: unverified, not written.
+- 03 title change was optional; applied.
+- Several unchanged "Tú (A) / El auto B" diagram questions kept as is.

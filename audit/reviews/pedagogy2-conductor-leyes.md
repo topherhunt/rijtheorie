@@ -421,3 +421,42 @@ Verdict counts: OK 0, minor issues 5, needs rework 8.
 - How YAML options reach the renderer: only that `shuffle(` is not called outside `gate.ts`. If a different mechanism randomises order, the answer-position finding changes.
 - Whether any hidden `<Check>` in lessons uses the same ids as the quiz (I treated Checks and quiz Qs as the same ids).
 - Proposed `novel-amb` AM handling and the `cinturon-taxi-nino` back-seat belt remark are unverified; the YAML above is a draft for the apply agent to check with `npm run law`.
+
+## Applied
+
+Per lesson (kept = id unchanged, possibly polished; new = new id; removed = id deleted):
+
+- conductor/01 alcohol: 14 questions (8 kept, 6 new, 4 removed). Checks moved under the rules that teach them; new Rule on who is outside the novice limit (begeleider, cyclists); refusal Rule now says who orders the blood test and that refusal is an infraction on its own.
+- conductor/02 drogas: 9 questions (5 kept, 4 new, 3 removed). 8.5 Rule says the substance list and limits are set elsewhere; added that being under a blood limit does not authorize driving if affected; leaflet action sentence.
+- conductor/03 atencion: 9 questions (6 kept, 3 new, 3 removed). Horn Rule and "prisa antes de un obstáculo" Rule moved to conductor/07; bicycle bullet and reasons for tiredness/anger added; "puede poder causar" wording fixed.
+- conductor/04 cinturon-ninos: 13 questions (9 kept, 4 new, 2 removed). New taxi section (rvv:59.5); height reason sentence.
+- conductor/05 usuarios-vulnerables: 10 questions (6 kept, 4 new/renamed, 3 removed). Children anticipation sentence; new Rule on the look sequence before a right turn (cbr-rijprocedure:3); bus-sale prompt fixed.
+- conductor/06 conduccion-ecologica: 10 questions (7 kept polished, 1 new `eco-parada-corta`, 1 kept as `eco-presion-habito` replacing `eco-neumaticos`, `eco-luces` and `eco-rpm-alta` rewritten). Lesson now says what the exam checks (behaviour); options equalised, "Según el CBR" giveaways removed.
+- conductor/07 paciencia-agresion: 11 questions (kept 9 polished, 2 new: `paciencia-bocina-peligro`, `paciencia-adelantar-rojo`, plus `paciencia-frenazo`). Owns the horn topic; received the "no adelantar a toda prisa" rule from conductor/03 with its why; social-behaviour questions are now scenarios without "Según el CBR" giveaways.
+- leyes/01 categoria-b: 8 questions (6 kept, `categoria-be` and `categoria-b-lectura` rewritten as scenarios, same ids). Checks moved under their Rules.
+- leyes/02 edad-vigencia: 14 questions (13 kept, 1 new `edad-vigencia-vencido`); number questions turned into dated scenarios; vigencia Checks moved after the rr:25a Rule; forward reference to the sanctions lesson removed (rijverbod/begeleidingsverbod now explained in place); consequence of an expired permit added (wvw:107); option wording fixed ("cambiar tu apellido", address change replaces "40 años").
+- leyes/03 documentos-control: 9 questions (kept 6 polished, new `documentos-control-begeleider-negarse`, `documentos-control-orden-infraccion`, `documentos-control-indicaciones`; removed `-begeleider-soplar`, `-ordenes-multiples`, `-185-pasado`). kr:22 mention removed from `auto-amigo`; 185-day pair merged into one scenario; `ue-restante` turned into mc without the formula parenthetical.
+- leyes/04 kenteken-apk-seguro (secondary): 11 questions (8 kept, 3 new: `-conductor-kenteken`, `kenteken-apk-gasolina-joven`, `kenteken-apk-antes`). Driver liability for kenteken/keuringsbewijs added (wvw:36.6, 40.4, 72.3); "otros combustibles (por ejemplo diésel y GLP)"; `tapar` fixed; remolque wording "masa máxima"; APK recall turned into scenarios; kr:22 Check moved under its Rule.
+- leyes/05 alcohol-conductor-novel: 8 questions (5 kept polished, 1 new `alcohol-experiencia-sangre-15`; removed `-experiencia-sangre-06`, `-novel-dejar`, `-novel-drogas`, `-novel-begeleider-300`). Overlap with conductor/01 resolved: conductor/01 owns limits, 8.1/8.6 and refusal; leyes/05 owns the novice timeline and invordering thresholds. AM-then-B case added (7 years from AM, any of the three 8.3 cases applies).
+- leyes/06 sanciones-accidente (secondary): 14 questions (kept `huir`, `ongeldig` and others polished; new `-rijverbod-aun-no-conduce`, `-desamparo`, `sanciones-123b-nivel-bajo`; `-123b` rewritten; removed `-rijverbod`, `-herido`, `-velocidad-100-en-50`). Section headings added so each Check sits under its section; 164.2 and 123b rewritten precisely.
+
+### Factual errors fixed
+
+- leyes/06: "Lo que en neerlandés se llama *puntenrijbewijs* para el alcohol es la regla de reincidencia del art. 123b" was unsourced and contradicted the Rijksoverheid title: deleted.
+- leyes/06: the 164.2 Rule said refusal of the preliminary breath test; 164.2.c is refusal of an order under art. 163 lid 2/6/7 (evidential test). Rewritten.
+- leyes/06: 123b was described as "conducir bajo influencia ... puede". The law needs a new conviction of the serious kind (more than 570 µg/l or 1.3 mg/ml, 8.1, 8.5, or refusal under 163) and a prior conviction for any art. 8 alcohol/drug offence or refusal within 5 years. Rewritten; question about it replaced.
+- leyes/05: the 8.3 timeline wording kept; the AM-then-B interaction was missing (cases are alternatives, so 7 years from the AM applies even when 5 years from the B have passed).
+- conductor/03 vs 07: the horn Rule was duplicated; now only in conductor/07.
+- conductor/05 `vulnerables-bus-sale`: prompt described the wrong bus position; fixed (bus at a stop on the right, rvv:56.1).
+- leyes/02: "Después de cambiar tu nombre sin actualizar el permiso" contradicted wvw:123.1.g (the change itself invalidates); fixed.
+- leyes/04: APK intervals verified against anwb-apk (4 years then 2, yearly from 8; others 3 then yearly). Diesel/GLP are not explicitly named on the fetched page text, only "other fuel types", so the lesson now says "otros combustibles (por ejemplo diésel y GLP)" and keeps `secondary: true`.
+
+### Report items deliberately not applied
+
+- conductor/03: no question on rvv:61a at a red light (law does not settle whether it counts as "tijdens het rijden").
+- conductor/02: the report's `drogas-escenario-fiesta` (the substance "leaving the body") is ambiguous against 8.5; replaced by `drogas-bici-fiesta` and `drogas-bajo-limite-afectado`.
+- conductor/04: the back-seat belt remark in `cinturon-taxi-nino` and the wheelchair detail (59.4) are not added; unverified.
+- conductor/05: the order-type `giro-derecha-ciclista` question was done as mc sequence questions.
+- leyes/02: the 17-year-old novice-alcohol scenario was not added here (covered in leyes/05).
+- leyes/03: no new question on `ue-restante` (108.1.h does not settle the interaction with the permit's own validity).
+- leyes/06: no questions on rvv:60.2.a or on driving at a red light; 179 lid 5 not added; driver kenteken liability left to leyes/04.

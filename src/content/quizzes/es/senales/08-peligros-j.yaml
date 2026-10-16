@@ -1,71 +1,4 @@
 questions:
-  - id: j-j2-significado
-    type: mc
-    prompt: ¿Qué avisa esta señal?
-    sign: J2
-    options: ["Curva a la derecha", "Curva a la izquierda", "Curvas en S", "Cruce peligroso"]
-    answer: 0
-    explain: J2 es curva a la derecha. J3 es a la izquierda.
-    cites: ["rvv:bijlage1.J2"]
-
-
-  - id: j-j4-s
-    type: mc
-    prompt: ¿Qué avisa esta señal?
-    sign: J4
-    options: ["Curvas en S, la primera a la derecha", "Curvas en S, la primera a la izquierda", "Una sola curva a la derecha", "Carretera estrecha"]
-    answer: 0
-    explain: J4 son curvas en S que empiezan hacia la derecha. J5 empieza hacia la izquierda.
-    cites: ["rvv:bijlage1.J4"]
-
-
-  - id: j-j10-j11
-    type: mc
-    prompt: ¿Qué avisa esta señal?
-    sign: J11
-    options: ["Paso a nivel sin barreras", "Paso a nivel con barreras", "Cruce de tranvía", "Puente móvil"]
-    answer: 0
-    explain: J11 es "Overweg zonder slagbomen". J10 es con barreras.
-    cites: ["rvv:bijlage1.J11"]
-
-
-  - id: j-j17-estrechamiento
-    type: mc
-    prompt: ¿Qué avisa esta señal?
-    sign: J17
-    options: ["Estrechamiento de calzada", "Calle sin salida", "Fin de carril", "Vía de sentido único"]
-    answer: 0
-    explain: J17 es "Rijbaanversmalling".
-    cites: ["rvv:bijlage1.J17"]
-
-
-  - id: j-j21-ninos
-    type: mc
-    prompt: ¿Qué avisa esta señal?
-    sign: J21
-    options: ["Niños", "Peatones", "Paso de peatones", "Ciclistas"]
-    answer: 0
-    explain: J21 es "Kinderen". J22 es la voetgangersoversteekplaats y J23 son peatones.
-    cites: ["rvv:bijlage1.J21"]
-
-
-  - id: j-j37-onderbord
-    type: yesno
-    prompt: La señal J37 (peligro) lleva debajo un panel. ¿El panel dice de qué peligro se trata?
-    sign: J37
-    answer: true
-    explain: En J37 el tipo de peligro se indica en el onderbord.
-    cites: ["rvv:bijlage1.J37"]
-
-
-  - id: j-triangulo
-    type: mc
-    prompt: ¿Qué clase de señal es un triángulo con borde rojo?
-    options: ["Un aviso de peligro", "Una prohibición", "Una orden", "Una información de dirección"]
-    answer: 0
-    explain: "Los triángulos son señales J: avisan de un peligro."
-    cites: ["rvv:bijlage1.J8"]
-    exam: false
 
   - id: j-j22-ceder
     type: mc
@@ -75,14 +8,6 @@ questions:
     answer: 0
     explain: Debes dejar pasar a los peatones que cruzan o están a punto de cruzar en el paso de peatones (art. 49.2). La bocina solo se usa para evitar un peligro inminente (art. 28), no para apurar a nadie.
     cites: ["rvv:49.2", "rvv:28", "rvv:bijlage1.J22"]
-
-  - id: j-j22-adelantar
-    type: yesno
-    prompt: Vas detrás de un auto lento que se acerca a un paso de peatones anunciado por J22. La calzada está libre a tu izquierda. ¿Puedes adelantarlo justo antes del paso?
-    sign: J22
-    answer: false
-    explain: Está prohibido adelantar un vehículo justo antes de un paso de peatones o sobre él (art. 12), aunque la calzada esté libre.
-    cites: ["rvv:12", "rvv:bijlage1.J22"]
 
   - id: j-j10-cola
     type: yesno
@@ -114,7 +39,33 @@ questions:
     type: mc
     prompt: J33 te avisa de un atasco más adelante. La carretera hace una curva y no ves dónde termina la cola. ¿Cómo debes ir?
     sign: J33
-    options: ["A una velocidad con la que puedas detenerte dentro de la distancia que ves libre", "A la velocidad máxima de la vía, porque el triángulo solo avisa", "A 30 km/h exactos hasta ver la cola"]
+    options: ["A una velocidad con la que puedas detenerte dentro de la distancia que ves libre", "A la velocidad máxima de la vía, porque el triángulo solo avisa", "Despacio solo si veo ya la cola"]
     answer: 0
     explain: Debes poder detenerte dentro de la distancia que ves libre (art. 19). El triángulo no impone una velocidad, pero esa regla te obliga a frenar hasta poder parar antes de la cola que aún no ves.
     cites: ["rvv:19", "rvv:bijlage1.J33"]
+
+  - id: j-j2-curva-ciega
+    type: mc
+    prompt: Circulas en auto por una carretera con máximo 80 km/h y ves J2, curva a la derecha. Un seto alto te deja ver solo 40 metros de carretera libre. ¿Qué haces?
+    sign: J2
+    options: ["Reduzco hasta poder detenerme dentro de lo que veo libre", "Mantengo 80, porque es el máximo permitido", "Toco la bocina antes de la curva y sigo a 80", "Reduzco solo si veo a alguien de frente"]
+    answer: 0
+    explain: Debes poder detener el auto dentro de la distancia que ves libre (art. 19), y el límite de 80 no te autoriza a ir tan rápido. La bocina solo vale para un peligro inminente (art. 28), y esperar a ver a alguien ya sería tarde.
+    cites: ["rvv:19", "rvv:28", "rvv:bijlage1.J2"]
+
+  - id: j-l2-ceder
+    type: yesno
+    prompt: Ves un cuadrado azul con un triángulo blanco y un peatón (L2) justo en el paso, y un peatón se dispone a cruzar. ¿Debes dejarle pasar?
+    sign: L2
+    answer: true
+    explain: L2 marca la voetgangersoversteekplaats. Ante ella debes dejar pasar a los peatones que cruzan o están a punto de cruzar (art. 49.2), igual que si te la hubiera anunciado J22.
+    cites: ["rvv:49.2", "rvv:bijlage1.L2"]
+
+  - id: j-j22-por-que-no-adelantar
+    type: mc
+    prompt: Un auto circula delante de ti y se acerca a un paso de peatones anunciado por J22. La calzada está libre a tu izquierda. ¿Por qué no debes adelantarlo justo antes del paso?
+    sign: J22
+    options: ["Porque puede estar parando por un peatón que tú no ves", "Porque en un paso de peatones el límite es 30 km/h", "Porque solo puedes adelantar con una línea discontinua", "Porque el paso es una zona sin prioridad para ti"]
+    answer: 0
+    explain: Está prohibido adelantar justo antes de un paso de peatones o sobre él (art. 12), aunque la calzada esté libre. La razón práctica es que el auto delantero puede frenar por un peatón que su carrocería te tapa. Ni hay un límite de 30 en el paso ni depende de las líneas.
+    cites: ["rvv:12", "rvv:bijlage1.J22"]

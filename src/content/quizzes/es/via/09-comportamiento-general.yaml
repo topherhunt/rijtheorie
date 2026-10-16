@@ -1,33 +1,32 @@
 questions:
-  - id: general-peligro
-    type: mc
-    prompt: ¿A quién se aplica la prohibición de comportarse de manera que cause peligro en la vía?
-    options: [Solo a los conductores de auto, A todos, Solo a quienes tienen permiso, Solo a los peatones]
-    answer: 1
-    explain: El art. 5 WVW prohíbe a todos comportarse de manera que se cause o pueda causarse peligro, o que el tráfico sea obstaculizado.
-    cites: ["wvw:5"]
-
-  - id: general-posible
+  - id: general-peaton-posible
     type: yesno
-    prompt: Un comportamiento que PUEDE causar peligro, aunque no pase nada, ¿está prohibido por el art. 5 WVW?
+    prompt: Un peatón se queda parado en medio de la calzada sin ningún motivo, y los coches tendrían que esquivarlo. Nadie ha chocado todavía. ¿Le aplica la prohibición del art. 5 WVW?
     answer: true
-    explain: La regla dice "se cause o pueda causarse". El peligro posible también cuenta.
+    explain: El art. 5 vale para todos, no solo para los conductores, y prohíbe comportarse de manera que se cause o pueda causarse peligro. No hace falta que ya haya pasado algo.
     cites: ["wvw:5"]
 
-  - id: general-obstaculizar
+  - id: general-obstaculizar-parar
     type: yesno
-    prompt: ¿Prohíbe el art. 5 WVW solo el peligro, y no el obstaculizar el tráfico?
-    answer: false
-    explain: Prohíbe tanto causar peligro como obstaculizar el tráfico (o poder obstaculizarlo).
+    prompt: Detienes tu coche sin motivo en medio de una calle estrecha y los vehículos de detrás no pueden pasar. Nadie corre peligro. ¿Cubre esto el art. 5 WVW?
+    answer: true
+    explain: El art. 5 prohíbe no solo causar peligro, sino también comportarse de manera que el tráfico sea o pueda ser obstaculizado. Que nadie corra peligro no basta para quedar fuera.
     cites: ["wvw:5"]
 
   - id: general-culpa
     type: multi
     prompt: ¿Qué consecuencias de un accidente culpable cubre el art. 6 WVW?
-    options: [Muerte de otro, Lesiones graves, Lesiones que causan enfermedad temporal o impiden las actividades normales, Rayones en la pintura]
+    options: [Muerte de otro, Lesiones graves de otro, Lesiones de otro que causan enfermedad temporal o impiden sus actividades normales, Daños solo materiales en el vehículo de otro]
     answer: [0, 1, 2]
-    explain: El art. 6 se refiere a muerte, lesiones graves y lesiones con enfermedad temporal o impedimento de las actividades normales.
+    explain: El art. 6 se refiere a la muerte de otro, a lesiones graves y a lesiones que provocan enfermedad temporal o impiden las actividades normales. Los daños solo materiales no están en la lista.
     cites: ["wvw:6"]
+
+  - id: general-art6-solo-chapa
+    type: yesno
+    prompt: Por tu culpa chocas contra un coche aparcado y solo hay daños materiales, sin heridos. ¿Se aplica el art. 6 WVW?
+    answer: false
+    explain: 'El art. 6 exige que alguien muera o sufra lesiones. Pero esto no te deja libre: el art. 7 sigue prohibiendo irte del lugar si causaste daños a otro, salvo que hayas dado oportunidad adecuada de establecer tu identidad y la de tu vehículo.'
+    cites: ["wvw:6", "wvw:7.1", "wvw:7.2"]
 
   - id: general-huir
     type: yesno
@@ -38,11 +37,11 @@ questions:
 
   - id: general-identidad
     type: mc
-    prompt: Causaste daños a otro vehículo. ¿Qué te permite irte legalmente del lugar?
-    options: ["Nada: nunca puedes irte", Haber dado oportunidad adecuada de establecer tu identidad y la de tu vehículo, Haberte disculpado, Que el otro conductor no haya llegado]
-    answer: 1
-    explain: Según el art. 7.2, no se aplica la prohibición a quien dio oportunidad adecuada de establecer su identidad y la del vehículo de motor.
-    cites: ["wvw:7.2"]
+    prompt: Causaste daños a otro vehículo y no hay heridos. ¿Qué te permite irte legalmente del lugar?
+    options: ["Haber dado oportunidad adecuada de establecer tu identidad y la de tu vehículo", "Haberte disculpado con el otro conductor y prometido pagar los daños", "Haber comprobado que los daños son pequeños y que nadie ha salido herido", "Haber visto que el otro conductor no estaba enfadado y no quería dar problemas"]
+    answer: 0
+    explain: Según el art. 7.2, la prohibición no se aplica a quien dio oportunidad adecuada de establecer su identidad y la del vehículo de motor. Disculparte, que los daños sean pequeños o que el otro no se queje no sustituye esa oportunidad.
+    cites: ["wvw:7.1", "wvw:7.2"]
 
   - id: general-herido
     type: yesno
@@ -53,7 +52,7 @@ questions:
 
   - id: general-sabiendo
     type: yesno
-    prompt: ¿Aplica la prohibición de abandonar el lugar solo si estás seguro de que hubo daños o heridos?
+    prompt: Al maniobrar junto a un coche aparcado notas un golpe seco y no ves daños desde tu asiento. Un conductor razonable sospecharía que pudo causarlos. ¿Puedes irte sin más?
     answer: false
-    explain: Se aplica si lo sabes o debieras sospecharlo razonablemente.
+    explain: La prohibición de abandonar el lugar se aplica si sabes, o debes sospechar razonablemente, que causaste daños. No hace falta que estés seguro.
     cites: ["wvw:7.1"]

@@ -16,9 +16,9 @@ questions:
 
   - id: intermitente-girar
     type: yesno
-    prompt: ¿Debes dar señal con el intermitente antes de girar?
+    prompt: Vas a girar a la derecha en una calle vacía, sin nadie delante ni detrás. ¿Debes dar igualmente la señal con el intermitente?
     answer: true
-    explain: Antes de girar hay que dar señal con el intermitente o con el brazo.
+    explain: "Antes de girar hay que dar señal con el intermitente o con el brazo, también cuando no ves a nadie: el artículo no depende de si hay otros usuarios."
     cites: ["rvv:17.2"]
 
   - id: intermitente-prioridad
@@ -35,20 +35,6 @@ questions:
     explain: Arrancar exige señal con el intermitente y es una maniobra especial en la que se cede el paso.
     cites: ["rvv:55", "rvv:54"]
 
-  - id: bocina-saludo
-    type: yesno
-    prompt: ¿Puedes tocar la bocina para saludar a un conocido?
-    answer: false
-    explain: La bocina solo se puede usar para evitar un peligro inminente.
-    cites: ["rvv:28", "rvv:31"]
-
-  - id: bocina-peligro
-    type: yesno
-    prompt: Un niño cruza corriendo hacia la calzada sin mirar y no te ve. ¿Puedes tocar la bocina?
-    answer: true
-    explain: Es un caso de peligro inminente, el uso permitido de la bocina.
-    cites: ["rvv:28"]
-
   - id: bocina-apurar
     type: yesno
     prompt: El auto de delante no arranca cuando se pone el verde. ¿Puedes tocarle la bocina para que avance?
@@ -58,24 +44,16 @@ questions:
 
   - id: rafaga-ceder
     type: yesno
-    prompt: Quieres dejar pasar a otro conductor y le haces una ráfaga con las luces. ¿Es lo correcto según la ley?
+    prompt: En una calle estrecha quieres dejar pasar a otro conductor que viene de frente y le haces una ráfaga con las luces. ¿Es lo correcto según la ley?
     answer: false
     explain: Las ráfagas de luz, igual que la bocina, solo se permiten para evitar un peligro inminente.
     cites: ["rvv:28", "rvv:31"]
 
-  - id: rafaga-peligro
-    type: mc
-    prompt: ¿Para qué puedes usar los knippersignalen (ráfagas de luz)?
-    options: [Para dar las gracias, Para avisar a un conductor que va a cometer un error cualquiera, Solo para evitar un peligro inminente, Para pedir paso en una calle estrecha]
-    answer: 2
-    explain: El artículo 28 limita bocina y ráfagas a evitar un peligro inminente.
-    cites: ["rvv:28"]
-
   - id: ruido-innecesario
     type: yesno
-    prompt: ¿Está prohibido hacer ruido innecesario con un vehículo de motor?
-    answer: true
-    explain: El artículo 57 lo prohíbe a conductores de vehículos de motor, ciclomotores y snorfietsen.
+    prompt: Esperas en un semáforo en rojo y el conductor de al lado acelera a fondo en vacío para que se oiga el motor. ¿Está permitido?
+    answer: false
+    explain: Los conductores de vehículos de motor, ciclomotores y snorfietsen no deben hacer ruido innecesario. Que no haya peligro no lo convierte en un ruido necesario.
     cites: ["rvv:57"]
 
   - id: bus-parada
@@ -84,3 +62,11 @@ questions:
     answer: true
     explain: Dentro de la bebouwde kom debes dejar que el autobús salga de la parada.
     cites: ["rvv:56.1"]
+
+  - id: bocina-primero-evitar
+    type: mc
+    prompt: Un ciclista delante de ti, a la derecha, empieza a desviarse hacia tu carril sin mirar. Aún tienes tiempo y espacio. ¿Qué haces primero?
+    options: [Intentar quitar el peligro bajando la velocidad o esquivando, Tocar la bocina de inmediato, Hacer ráfagas con las luces, Acelerar para pasar antes]
+    answer: 0
+    explain: El CBR espera que primero intentes quitar el peligro (reducir la velocidad, esquivar, parar). La bocina o la ráfaga se reservan para cuando prevés que eso no bastará, y solo para evitar un peligro inminente.
+    cites: ["cbr-rijprocedure:2", "rvv:28"]

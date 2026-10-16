@@ -2,61 +2,45 @@ questions:
 
   - id: c-c2-significado
     type: mc
-    prompt: Llegas a una calle y ves esta señal frente a ti. ¿Qué significa?
+    prompt: Llegas en auto a una calle y ves esta señal frente a ti. ¿Qué haces?
     sign: C2
-    options: ["No puedes entrar en esta dirección", "Calle de sentido único en tu dirección: puedes entrar", "Cerrado en ambos sentidos", "Solo pueden entrar los residentes"]
+    options: ["No entro: en esta dirección está cerrado", "Entro: es una calle de sentido único en mi dirección", "No entro: está cerrado en ambos sentidos", "Entro solo si no viene nadie de frente"]
     answer: 0
-    explain: "C2 es un eenrichtingsweg visto desde el lado prohibido: en esta dirección está cerrado para vehículos."
+    explain: "C2 es un eenrichtingsweg visto desde el lado prohibido: en esta dirección está cerrado para vehículos. No es C1, que cierra en ambos sentidos, y que no venga nadie no cambia la prohibición."
     cites: ["rvv:bijlage1.C2"]
 
   - id: c-c6-c12
     type: mc
     prompt: Conduces un auto y ves esta señal. ¿Puedes entrar?
     sign: C6
-    options: ["No, está cerrado para vehículos de motor de más de dos ruedas", "Sí, solo está cerrado para camiones", "Sí, solo está cerrado para motocicletas", "Sí, si vas despacio"]
+    options: ["No, está cerrado para vehículos de motor de más de dos ruedas", "Sí, solo está cerrado para camiones", "Sí, solo está cerrado para motocicletas", "Sí, los autos particulares no cuentan"]
     answer: 0
     explain: C6 cierra los vehículos de motor de más de dos ruedas. Tu auto lo es.
     cites: ["rvv:bijlage1.C6"]
 
-  - id: c-c12-motos
-    type: yesno
-    prompt: Con esta señal, ¿puede entrar una motocicleta?
-    sign: C12
-    answer: false
-    explain: C12 cierra todos los vehículos de motor, motos incluidas.
-    cites: ["rvv:bijlage1.C12"]
-
-  - id: c-c7-auto
-    type: yesno
-    prompt: Con esta señal, ¿puede entrar tu auto?
-    sign: C7
-    answer: true
-    explain: C7 cierra solo los camiones. Un auto puede entrar.
-    cites: ["rvv:bijlage1.C7"]
+  - id: c-c6-moto
+    type: mc
+    prompt: Vas en moto y tu amigo en auto por la misma calle. Ante esta señal, ¿quién puede entrar?
+    sign: C6
+    options: ["Los dos", "Solo yo, en moto", "Solo mi amigo, en auto", "Ninguno de los dos"]
+    answer: 1
+    explain: C6 cierra los vehículos de motor de más de dos ruedas, así que el auto queda fuera y la moto pasa. Si fuera C12, que cierra todos los vehículos de motor, la moto tampoco pasaría.
+    cites: ["rvv:bijlage1.C6", "rvv:bijlage1.C12"]
 
   - id: c-c10-remolque
     type: yesno
     prompt: Conduces un auto con remolque. ¿Puedes entrar donde hay esta señal?
     sign: C10
     answer: false
-    explain: C10 cierra los vehículos de motor con remolque.
+    explain: C10 cierra los vehículos de motor con remolque. El auto sin remolque sí pasaría, pero con remolque no.
     cites: ["rvv:bijlage1.C10"]
 
-  - id: c-c22e-milieuzone
-    type: mc
-    prompt: Esta señal marca una zona con restricción por emisiones. ¿A qué vehículos se aplica una milieuzone?
-    sign: C22e
-    options: ["Autos, furgonetas, camiones o autobuses diésel, según el panel", "Todos los vehículos de gasolina", "Solo a motocicletas", "A todos los vehículos de motor"]
-    answer: 0
-    explain: La prohibición de una milieuzone se aplica a vehículos con motor diésel, según la clase de emisión que indique el panel.
-    cites: ["rvv:86d.1", "rvv:bijlage1.C22e"]
-
   - id: c-c1-peaton
-    type: multi
-    prompt: Una calle tiene en su entrada esta señal. ¿Quién de estos todavía puede pasar por ella?
+    type: mc
+    prompt: Una calle tiene en su entrada esta señal. ¿Cuál de estos todavía puede pasar por ella?
     sign: C1
     options: ["Un peatón", "Un ciclista", "Un auto", "Un ciclomotor (bromfiets)"]
-    answer: [0]
+    answer: 0
     explain: C1 cierra para voertuigen, jinetes y conductores de animales. El peatón no es un voertuig, así que pasa. La bicicleta, el auto y el ciclomotor sí lo son.
     cites: ["rvv:bijlage1.C1", "rvv:1"]
 
@@ -91,3 +75,21 @@ questions:
     answer: false
     explain: C19 cierra los vehículos que, con la carga incluida, sean más altos de lo indicado. La furgoneta sola cabe, pero con la carga no.
     cites: ["rvv:bijlage1.C19"]
+
+  - id: c-c22e-benzine
+    type: mc
+    prompt: Conduces un auto de gasolina y llegas a esta señal de una milieuzone. ¿Qué dice la ley?
+    sign: C22e
+    options: ["Puedo entrar: la prohibición de una milieuzone alcanza a los vehículos con motor diésel", "No puedo entrar: C22e cierra todos los autos, sea cual sea su motor", "No puedo entrar: solo pasan los autos eléctricos", "Puedo entrar solo si el auto tiene 40 años o más"]
+    answer: 0
+    explain: El art. 86d dice que la geslotenverklaring de una milieuzone se aplica a autos, vehículos de empresa, camiones y autobuses con dieselmotor. Un auto de gasolina no queda cerrado. La excepción de los 40 años es para vehículos que sí estarían cerrados.
+    cites: ["rvv:86d.1", "rvv:bijlage1.C22e"]
+
+  - id: c-c22e-diesel-antiguo
+    type: mc
+    prompt: Conduces un auto diésel, matriculado por primera vez hace 45 años, y llegas a la señal de una milieuzone. ¿Puedes entrar?
+    sign: C22e
+    options: ["Sí, la prohibición no se aplica a vehículos de cuarenta años o más", "No, es diésel y la milieuzone cierra los diésel", "No, los autos antiguos contaminan más", "Sí, pero solo si tiene un panel que lo permita"]
+    answer: 0
+    explain: El art. 86d.1 cierra los autos diésel, pero el 86d.3 exceptúa los vehículos con fecha de primera admisión de cuarenta años o más. Que sea diésel es lo que te haría pensar que no pasas.
+    cites: ["rvv:86d.1", "rvv:86d.3"]

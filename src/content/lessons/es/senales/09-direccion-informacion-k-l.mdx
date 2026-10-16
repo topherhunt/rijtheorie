@@ -17,7 +17,7 @@ Las señales K te guían. No dan órdenes, pero necesitas entenderlas para elegi
 - **K3**: cartel de decisión de salida hacia un área de servicio.
 - **K4**: cartel alto con panel por carril para la dirección que continúa y panel de salida.
 
-<Check id="kl-k2-preaviso" />
+<Check id="kl-k2-salida" />
 
 ### Fuera de la autosnelweg
 
@@ -36,20 +36,22 @@ Las señales K te guían. No dan órdenes, pero necesitas entenderlas para elegi
 - **K12 y K13**: indicador de barrios dentro de la zona urbana (con nombres o números).
 - **K14**: ruta para transporte de ciertas mercancías peligrosas.
 
-<Check id="kl-k9-omleiding" />
-
 ## L: información
 
 ### Carriles
 
 <Signs codes="L4,L5,L6,L7,L10,L11,L12" />
 
-- **L4**: preselección de carriles.
+- **L4**: preselección de carriles: te dice qué carril va a cada dirección en el cruce que viene.
 - **L5**: fin de carril. **L6**: bifurcación. **L7**: número de carriles que continúan.
 - **L10**: preaviso de una medida de tráfico en la dirección indicada.
 - **L11**: la señal de arriba vale solo para los carriles indicados. **L12**: solo para el carril indicado.
 
-<Check id="kl-l5-fin-carril" />
+<Rule cite="rvv:78.1, rvv:bijlage1.L4" title="L4: elige el carril antes del cruce">
+Quien circula por la calzada y está en un carril de preselección (<T id="voorsorteerstrook" />) debe seguir en el cruce la dirección que ese carril indica (art. 78.1). Por eso L4 sirve para elegir carril a tiempo, antes de entrar en él.
+</Rule>
+
+<Check id="kl-l4-direccion" />
 
 <Rule cite="rvv:65.1, rvv:bijlage1.L11, rvv:bijlage1.L12">
 Si la vía está dividida en carriles, una señal puede aplicarse a uno o varios de ellos. L11 y L12 lo indican. Si circulas por un carril que el panel no nombra, esa señal no te alcanza.
@@ -66,14 +68,16 @@ Si la vía está dividida en carriles, una señal puede aplicarse a uno o varios
 - **L8**: calle sin salida (<T id="doodlopende-weg" />). **L9**: preaviso de calle sin salida.
 - **L20**: <T id="uitwijkplaats">apartadero</T> a la derecha. **L21**: a la izquierda.
 
-<Check id="kl-l8-sinsalida" />
+L8 y L9 solo **informan**: no cierran la calle. Si quieres entrar, puedes; lo que cierra una calle son las señales C.
+
+<Check id="kl-l8-entrar" />
 
 <Rule cite="rvv:23.1.e, rvv:23.2" title="L3: no te detengas en la parada">
 Junto a la parada de bus no puedes <T id="stilstaan" /> a la altura de la marca de bloques (o a menos de 12 m de la señal si no hay marca). La única excepción es el tiempo inmediato para que suban o bajen pasajeros.
 </Rule>
 
 <Check id="kl-l3-pasajero" />
-<Check id="kl-l3-espera" />
+<Check id="kl-l3-12m" />
 
 ### Túneles y emergencias
 
@@ -90,11 +94,9 @@ No puedes detenerte (stilstaan) en un túnel.
 
 <Check id="kl-l13-parar" />
 
-<Check id="kl-l16-l17" />
-
 <Rule cite="rvv:43.3, rvv:1" title="L14 y L15: solo para emergencias">
-En una autosnelweg o autoweg solo puedes usar la vluchtstrook, la <T id="vluchthaven" /> y la berma en caso de emergencia, como una avería. No son un lugar para descansar ni para mirar el mapa.
+En una autosnelweg o autoweg solo puedes usar la vluchtstrook, la <T id="vluchthaven" /> y la berma en caso de emergencia, como una avería. La ley no define "emergencia", pero parar a mirar el mapa del móvil o a descansar con el auto funcionando bien no lo es.
 </Rule>
 
-<Check id="kl-l14-descansar" />
+<Check id="kl-l14-mapa" />
 <Check id="kl-l14-averia" />

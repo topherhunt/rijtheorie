@@ -1,86 +1,80 @@
 questions:
   - id: adelantado-no-acelerar
     type: mc
-    prompt: "Un auto empieza a adelantarte. ¿Qué haces con tu velocidad?"
-    options: [No la aumento, La aumento para que pase rápido, La aumento solo en rectas, Freno hasta parar]
+    prompt: Un auto empieza a adelantarte por la izquierda en una recta. ¿Qué haces con tu velocidad?
+    options: [No la aumento, La aumento para que pase rápido, La aumento solo si la recta es larga, Freno hasta parar]
     answer: 0
-    explain: "Según la Rijprocedure B, al ser adelantado no se aumenta la velocidad."
+    explain: Según la Rijprocedure B, al ser adelantado no se aumenta la velocidad. Acelerar parece ayudar, pero alarga el adelantamiento.
     cites: ["cbr-rijprocedure:3.2"]
 
   - id: adelantado-lado
     type: mc
-    prompt: "Te adelantan por la izquierda y hay espacio a tu derecha. ¿Qué haces, si hace falta?"
+    prompt: Te adelantan por la izquierda y hay espacio a tu derecha. ¿Qué haces, si hace falta?
     options: [Me aparto a la derecha, Me aparto a la izquierda, Me quedo exactamente donde estoy, Cruzo al carril contrario]
     answer: 0
-    explain: "Si te adelantan por la izquierda, te apartas a la derecha si es necesario y posible."
-    cites: ["cbr-rijprocedure:3.2"]
-
-  - id: adelantado-peligro
-    type: yesno
-    prompt: "Un auto quiere adelantarte, pero el espacio es tan poco que podría ser peligroso. ¿Puedes ir de modo que adelantarte sea imposible?"
-    answer: true
-    explain: "Sí, pero solo cuando al ser adelantado pudiera surgir una situación peligrosa."
-    cites: ["cbr-rijprocedure:3.2"]
-
-  - id: adelantado-contra
-    type: multi
-    prompt: "Mientras te adelantan, el tráfico que viene de frente está en peligro. ¿Qué puedes hacer tú, el adelantado?"
-    options: [Bajar la velocidad, Apartarte, Parar si hace falta, Acelerar para que pase antes]
-    answer: [0, 1, 2]
-    explain: "Debes tratar de eliminar la situación: bajar la velocidad, apartarte o parar. Acelerar contradice la regla de no aumentar la velocidad."
-    cites: ["cbr-rijprocedure:3.2"]
-
-  - id: adelantado-motos
-    type: mc
-    prompt: "Circulas lento en una fila y una moto se acerca por el lado. ¿Qué haces?"
-    options: ['No reduzco el espacio y, si puedo, lo amplío', Me quedo en el centro del carril sin moverme, Cierro el hueco, Toco la bocina]
-    answer: 0
-    explain: "Las motos adelantan por la izquierda o la derecha según el espacio. Conduce de modo que no reduzcas el espacio disponible y, si puedes, amplíalo apartándote."
-    cites: ["cbr-rijprocedure:3.2"]
-
-  - id: tegemoetkomen-definicion
-    type: mc
-    prompt: "¿Cuándo se habla de tegemoetkomen en la Rijprocedure B?"
-    options: [Cuando el espacio no alcanza para pasar uno junto al otro sin estorbarse, Siempre que pasa un auto de frente, Solo en autopistas, Solo con ciclistas]
-    answer: 0
-    explain: "Solo si el espacio disponible no alcanza para pasar uno junto al otro sin estorbarse."
-    cites: ["cbr-rijprocedure:3.2"]
-
-  - id: tegemoetkomen-derecha
-    type: yesno
-    prompt: "Al apartarte a la derecha para cruzarte con otro vehículo, ¿debes tener en cuenta a quienes están en el lado derecho de la vía?"
-    answer: true
-    explain: "Sí, hay que tener en cuenta a los usuarios que están a ese lado de la vía."
+    explain: Si te adelantan por la izquierda, te apartas a la derecha si es necesario y posible.
     cites: ["cbr-rijprocedure:3.2"]
 
   - id: adelantado-derecha-izquierda
     type: mc
-    prompt: "Un vehículo te adelanta por la derecha y, si hace falta, hay sitio a tu izquierda. ¿Qué haces?"
+    prompt: Un vehículo te adelanta por la derecha y, si hace falta, hay sitio a tu izquierda. ¿Qué haces?
     options: [Me aparto a la izquierda, Me aparto a la derecha, Acelero para que no pase, Me quedo donde estoy aunque no quepa]
     answer: 0
-    explain: "Si te adelantan por la derecha te apartas a la izquierda, al revés que cuando te adelantan por la izquierda. Apartarte hacia el lado por donde te adelantan cerraría el espacio."
+    explain: Si te adelantan por la derecha te apartas a la izquierda, al revés que cuando te adelantan por la izquierda. Apartarte hacia el lado por donde te adelantan cerraría el espacio.
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: adelantado-impedir-solo-peligro
+    type: mc
+    prompt: En una calle estrecha un auto quiere adelantarte, pero si lo hace quedaría peligrosamente pegado a un ciclista que viene de frente. ¿Qué haces?
+    options: ["Conduzco de modo que adelantarme sea imposible, sin acelerar, porque sería peligroso", "Acelero para que no pueda adelantarme", "Freno de golpe para que se quede atrás", "Dejo el espacio justo para que nadie pueda pasar"]
+    answer: 0
+    explain: La Rijprocedure B permite conducir de modo que adelantar sea imposible solo cuando ser adelantado podría crear una situación peligrosa, y sin aumentar la velocidad. No es un permiso para cerrar el paso cuando se puede adelantar con seguridad.
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: adelantado-contra
+    type: multi
+    prompt: Te adelantan por la izquierda y el tráfico que viene de frente queda en peligro. ¿Qué puedes hacer tú, el adelantado?
+    options: [Bajar la velocidad, Apartarte, Parar si hace falta, Acelerar para que pase antes]
+    answer: [0, 1, 2]
+    explain: 'Según la Rijprocedure B debes tratar de eliminar la situación: bajar la velocidad, apartarte o parar. Acelerar contradice la regla específica de no aumentar la velocidad mientras te adelantan.'
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: adelantado-motos
+    type: mc
+    prompt: Circulas lento en una fila y una moto se acerca por el lado. ¿Qué haces?
+    options: ['No reduzco el espacio y, si puedo, lo amplío', Me quedo en el centro del carril sin moverme, Cierro el hueco para que no pase, Toco la bocina para que se espere]
+    answer: 0
+    explain: Las motos pueden adelantar por la izquierda o la derecha según el espacio. Conduce de modo que no reduzcas el espacio disponible y, si puedes, amplíalo apartándote.
     cites: ["cbr-rijprocedure:3.2"]
 
   - id: tegemoetkomen-ciclistas-estrecho
     type: mc
-    prompt: "Conduces por una calzada muy estrecha y vienen muchos ciclistas de frente. ¿Qué haces?"
+    prompt: Conduces por una calzada muy estrecha y vienen muchos ciclistas de frente. ¿Qué haces?
     options: [Reduzco más la velocidad o incluso paro, Mantengo la velocidad y toco la bocina, Acelero para pasar antes, Me aparto lo menos posible]
     answer: 0
-    explain: "Con una calzada muy estrecha, sobre todo con muchos ciclistas, hay que reducir más o incluso parar. Mantener la velocidad no deja margen si falta espacio."
+    explain: Con una calzada muy estrecha, sobre todo con muchos ciclistas, hay que reducir más o incluso parar. Mantener la velocidad no deja margen si falta espacio.
     cites: ["cbr-rijprocedure:3.2"]
 
   - id: tegemoetkomen-sin-espacio
     type: mc
-    prompt: "Te encuentras de frente con otro auto en una calle donde no caben los dos. ¿Quién debe resolverlo?"
-    options: ["Los dos, con contacto visual o gestos, y parando si hace falta", Solo yo porque llegué primero, Solo el otro porque viene de frente, Gana quien toque la bocina primero]
+    prompt: Te encuentras de frente con otro auto en una calle donde no caben los dos. ¿Quién debe resolverlo?
+    options: ["Los dos, con contacto visual o gestos, y parando si hace falta", Solo yo porque llegué primero, Solo el otro porque viene de frente, El que conduzca el vehículo más grande]
     answer: 0
-    explain: "Los dos conductores tienen la misma obligación (art. 5 WVW) uno hacia el otro. Si no cabéis, paras y lo resolvéis con contacto visual o gestos."
+    explain: Los dos conductores tienen la misma obligación (art. 5 WVW) uno hacia el otro. Si no cabéis, paras y lo resolvéis con contacto visual o gestos.
     cites: ["cbr-rijprocedure:3.2", "wvw:5"]
 
   - id: tegemoetkomen-obstaculos-ambos
     type: mc
-    prompt: "Hay obstáculos a ambos lados de la calzada y no hay ancho para cruzarte con el tráfico de frente. ¿Qué haces?"
-    options: [Me coloco de modo que me vean a tiempo, Me meto en el hueco rápido antes de que lleguen, Me pego a los obstáculos de la derecha, Cierro los ojos a los demás y sigo]
+    prompt: Hay obstáculos a ambos lados de la calzada y no hay ancho para cruzarte con el tráfico de frente. ¿Qué haces?
+    options: [Me coloco de modo que me vean a tiempo, Me meto en el hueco rápido antes de que lleguen, Me pego a los obstáculos de la derecha, Sigo sin cambiar nada y espero que cedan]
     answer: 0
-    explain: "Con obstáculos a ambos lados y poco ancho, te colocas de forma que te vean a tiempo, para que el otro pueda ajustar su marcha."
+    explain: Con obstáculos a ambos lados y poco ancho, te colocas de forma que te vean a tiempo, para que el otro pueda ajustar su marcha.
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: tegemoetkomen-derecha
+    type: mc
+    prompt: Te cruzas con otro auto en una calle estrecha y vas a apartarte a la derecha, donde hay un grupo de peatones esperando en el borde. ¿Qué haces?
+    options: ["Tengo en cuenta a quienes están en ese lado y ajusto cuánto me aparto", "Me aparto igual: el otro auto es quien tiene que ceder", "Toco la bocina a los peatones para que se aparten", "Me aparto lo máximo posible a la derecha para dejar sitio"]
+    answer: 0
+    explain: La Rijprocedure B pide pensar en quienes están en el lado derecho de la vía al apartarte a la derecha. Apartarte al máximo a ciegas puede poner en peligro a los peatones.
     cites: ["cbr-rijprocedure:3.2"]

@@ -12,7 +12,6 @@ cbrTopics: [verkeerstekens, wetgeving]
 A1 indica la <T id="maximumsnelheid" /> en km/h: es un máximo, no puedes pasarlo mientras la señal valga para ti. A2 es su final: desde ahí vuelve el máximo general del lugar (50 dentro de la zona urbana; fuera, 80, 100 o 130 según la vía).
 </Rule>
 
-<Check id="senal-a1" />
 <Check id="senal-a2-general" />
 
 <Rule cite="rvv:bijlage1.A4, rvv:62, rvv:19" title="A4 y A5">
@@ -29,15 +28,12 @@ A4 es una <T id="adviessnelheid" /> (recomendada) y A5 su final. Es una recomend
 Si sobre una señal está la palabra "zone" con una indicación del área, la señal vale en esa área. Si no hay indicación, vale en el área limitada por esa señal y las señales de fin de zona colocadas con ella.
 </Rule>
 
-<Rule cite="babw:9" title="Zone con A1">
-La palabra "zone" puede ponerse sobre la señal A1 y otras.
-</Rule>
-
-<Rule cite="babw:15" title="30 y 60 km/h">
-Para colocar una A1 de 30 o 60 km/h, el decreto de tráfico (verkeersbesluit) debe indicar cómo se cumplen las condiciones legales para esa vía o zona.
+<Rule cite="babw:9" title="Zone con A1: tiene final">
+La palabra "zone" puede ponerse sobre la señal A1 y otras. Si no indica el área, en la zona hay señales que marcan **dónde termina**. Al pasar esa señal de fin de zona, la A1 deja de valer y vuelve el máximo general del lugar.
 </Rule>
 
 <Check id="senal-zona-calles" />
+<Check id="senal-zona-fin" />
 
 ## Solo para un carril o un tipo de usuario
 
@@ -63,5 +59,5 @@ Un onderbord puede explicar la señal, limitarla a ciertos usuarios o excluirlos
 La A3 es una velocidad máxima en un panel electrónico. En las rijstrooklichten, una velocidad máxima de la señal A3 (o una flecha verde) significa que el carril puede usarse, con esa velocidad como máximo. Una **cruz roja** significa que el carril no puede usarse; una flecha blanca avisa de que más adelante habrá una cruz roja.
 </Rule>
 
-<Check id="senal-a3" />
+<Check id="senal-a3-panel-80" />
 <Check id="senal-a3-cruz-roja" />

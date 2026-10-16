@@ -14,9 +14,6 @@ En <T id="fileverkeer" />, si la calzada tiene carriles del mismo sentido, no es
 Las filas pueden adelantarse por la derecha.
 </Rule>
 
-<Check id="atascos-carril" />
-<Check id="atascos-derecha" />
-
 <Rule cite="cbr-rijprocedure:3.2, cbr-rijprocedure:2" title="Procedimiento">
 - En una fila, mantén la distancia con el auto de delante lo más constante posible.
 - Cuando se forma una fila u otro embotellamiento, no aceleres de forma llamativa para cerrar un hueco que otro conductor quería usar.
@@ -24,12 +21,13 @@ Las filas pueden adelantarse por la derecha.
 </Rule>
 
 <Check id="atascos-distancia-aplicada" />
+<Check id="atascos-no-cerrar" />
 <Check id="atascos-luces" />
 
 ## No bloquees un cruce
 
 <Rule cite="rvv:14" title="Cruce libre">
-Los conductores no pueden bloquear un <T id="kruispunt" />.
+Los conductores no pueden bloquear un <T id="kruispunt" />. Sentido común: si entras sin poder salir, el tráfico transversal queda parado detrás de ti.
 </Rule>
 
 <Rule cite="cbr-rijprocedure:2" title="Procedimiento">
@@ -46,7 +44,7 @@ En un estrechamiento de la calzada (<T id="rijbaanversmalling" />) deja espacio 
 </Rule>
 
 <Rule cite="rvv:bijlage1.J17, rvv:bijlage1.J18, rvv:bijlage1.J19" title="Señales de estrechamiento">
-J17 avisa de un estrechamiento de la calzada, J18 de un estrechamiento por la derecha y J19 por la izquierda.
+J17 avisa de un estrechamiento de la calzada, J18 de un estrechamiento por la derecha y J19 por la izquierda. Lo que haces al verlas es sentido común: te preparas para el cremallera, mirando quién viene del otro lado.
 </Rule>
 
 <Signs codes="J17,J18,J19" />
@@ -60,6 +58,6 @@ No es un derecho que otro te ceda: la ley dice que quien se incorpora cede. Cede
 </Warn>
 
 <Check id="atascos-cremallera" />
+<Check id="atascos-ritsen-carril-termina" />
 <Check id="atascos-incorporo-ceder" />
 <Check id="atascos-ritsen-ayuda" />
-<Check id="atascos-no-cerrar" />

@@ -18,7 +18,9 @@ cbrTopics: [verkeerstekens]
 A1 es la velocidad máxima (maximumsnelheid). A4 es la velocidad recomendada (adviessnelheid): un consejo, no un límite.
 </Rule>
 
-<Check id="velocidad-a1-significado" />
+Lo que cuenta es el número de la señal: si A1 indica menos que el máximo general de la vía, ese número es tu máximo desde la señal hasta A2, aunque la vía "permitiría" más.
+
+<Check id="velocidad-a1-limite" />
 
 <Check id="velocidad-a4-recomendada" />
 
@@ -37,21 +39,21 @@ A2 (*Einde maximumsnelheid*) cierra el límite de la señal anterior. No te deja
 Algunos vehículos tienen un límite propio más bajo (camiones, remolques, ciclomotores). Si el cartel permite más que ese límite, vale el más bajo.
 
 <Rule cite="rvv:63b.1, rvv:22" title="Gana la velocidad más baja">
-Cuando una señal indica una velocidad más alta que el máximo del tipo de vehículo (por ejemplo, 80 km/h para un camión según el art. 22, o 25 km/h para una snorfiets), vale la velocidad más baja.
+Cuando una señal indica una velocidad más alta que el máximo del tipo de vehículo (por ejemplo, 80 km/h para un camión o 90 km/h para un auto con un remolque de hasta 3500 kg, según el art. 22), vale la velocidad más baja.
 </Rule>
 
 <Check id="velocidad-camion-100" />
 
-<Check id="velocidad-snorfiets-60" />
+<Check id="velocidad-remolque-a1" />
 
 ## Familia B: prioridad
 
 <Signs codes="B1,B2,B3,B4,B5,B6,B7" />
 
-- **B1**, <T id="voorrangsweg" />: vía con prioridad.
+- **B1**, <T id="voorrangsweg" />: vía con prioridad. Tienes voorrang: los demás deben dejarte seguir sin estorbo.
 - **B2**: fin de la vía con prioridad.
-- **B3**: cruce con prioridad (<T id="voorrangskruispunt" />).
-- **B4 y B5**: cruce con prioridad donde una vía lateral entra por la izquierda (B4) o por la derecha (B5).
+- **B3**: cruce con prioridad (<T id="voorrangskruispunt" />). En ese cruce la prioridad es tuya.
+- **B4 y B5**: cruce con prioridad donde una vía lateral entra por la izquierda (B4) o por la derecha (B5). Te avisan de por dónde puede salir alguien que debe cederte el paso.
 - **B6**: debes ceder el paso a los conductores de la vía que cruzas.
 - **B7**: **stop**. Debes detenerte y ceder el paso a los conductores de la vía que cruzas.
 
@@ -64,8 +66,12 @@ B6: *verleen voorrang aan bestuurders op de kruisende weg.* Dar voorrang signifi
 <Check id="velocidad-b6-b7-via-libre" />
 
 <Rule cite="rvv:63, rvv:15.1" title="Una señal manda sobre la regla de la derecha">
-Con B6 o B7 delante, cedes aunque el otro venga por tu izquierda: la señal pasa por encima de la regla general. Después de un B2 (*Einde voorrangsweg*) ya no hay señal que lo cambie, y en un cruce sin señales ni semáforo vuelve la regla general: das voorrang a quien viene por tu derecha.
+Con B6 o B7 delante, cedes aunque el otro venga por tu izquierda: la señal pasa por encima de la regla general. Con B1, B3, B4 o B5 pasa lo contrario: la regla de la derecha deja de aplicarse en ese cruce y la prioridad es tuya. Después de un B2 (*Einde voorrangsweg*) ya no hay señal que lo cambie, y en un cruce sin señales ni semáforo vuelve la regla general: das voorrang a quien viene por tu derecha.
 </Rule>
+
+<Check id="velocidad-b3-derecha" />
+
+<Check id="velocidad-b5-lateral" />
 
 <Check id="velocidad-b2-efecto" />
 
@@ -74,11 +80,11 @@ Si hay una <T id="stopstreep" /> para ti y la ley te obliga a parar, paras detr�
 </Rule>
 
 <Tip>
-Práctica del CBR: ante B7, para delante de la línea de detención. Si no hay línea, para donde puedas ver bien el cruce y entrar con seguridad (Rijprocedure B, 3.3).
+Práctica del CBR: ante B7, para delante de la línea de detención. Si no hay línea, para donde puedas ver bien el cruce y entrar con seguridad. Ante B6 o B7, el CBR pide mirar con aún más atención, y acercarte de modo que el que tiene prioridad confíe en que se la vas a dar (Rijprocedure B, 3.3).
 </Tip>
 
-<Check id="velocidad-b7-siempre" />
-
 <Check id="velocidad-b7-donde" />
+
+<Check id="velocidad-b7-sin-linea" />
 
 Las reglas completas de prioridad (quién pasa primero en cada situación) están en el capítulo 4. Aquí aprendes qué te obliga a hacer cada señal; cómo se combinan en cada cruce lo practicas allí.

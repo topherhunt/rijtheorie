@@ -1,38 +1,11 @@
 questions:
-  - id: el-examen-aciertos
-    type: number
+  - id: el-examen-aprobar-con-errores
+    type: mc
     exam: false
-    prompt: ¿Cuántas preguntas debes contestar bien, como mínimo, para aprobar el examen teórico de auto?
-    answer: 44
-    unit: preguntas
-    explain: El examen tiene 50 preguntas que cuentan y hay que acertar al menos 44.
-    cites: ["cbr-examenplan:1"]
-
-  - id: el-examen-cuentan
-    type: number
-    exam: false
-    prompt: ¿Cuántas preguntas que cuentan para el resultado tiene el examen?
-    answer: 50
-    unit: preguntas
-    explain: Son 50 preguntas que cuentan. Aparte hay 2 preguntas de prueba que no cuentan.
-    cites: ["cbr-examenplan:1"]
-
-  - id: el-examen-total-pantalla
-    type: number
-    exam: false
-    prompt: Cuentas todas las preguntas que verás en la pantalla, las que cuentan y las de prueba. ¿Cuántas son?
-    answer: 52
-    unit: preguntas
-    explain: 50 preguntas que cuentan más 2 preguntas de prueba suman 52.
-    cites: ["cbr-examenplan:1"]
-
-  - id: el-examen-errores-max
-    type: number
-    exam: false
-    prompt: Si en el examen todo cuenta (50 preguntas), ¿cuántas respuestas incorrectas como máximo puedes tener y aun así aprobar?
-    answer: 6
-    unit: errores
-    explain: Necesitas 44 aciertos de 50, así que puedes fallar 6 como máximo.
+    prompt: En tu examen fallas 5 de las 50 preguntas que cuentan y 1 de las 2 preguntas de prueba. ¿Cuál es el resultado?
+    options: ["Apruebas: 45 aciertos de 50 cuentan, y la de prueba no cuenta", "Suspendes: sumas 6 errores y el máximo son 5", "Suspendes: hay que acertar las dos preguntas de prueba", "Depende de cuál de las dos de prueba fallaste"]
+    answer: 0
+    explain: Solo cuentan las 50 preguntas normales y necesitas 44 aciertos, así que con 5 errores tienes 45 y apruebas. La pregunta de prueba que fallaste no suma ningún error, y tú no sabes cuáles son, por eso conviene responder todas con cuidado.
     cites: ["cbr-examenplan:1"]
 
   - id: el-examen-testvragen
@@ -42,24 +15,6 @@ questions:
     answer: false
     explain: No se ve cuáles son las preguntas de prueba. No cuentan para el resultado, pero tú no sabes cuáles son, así que responde todas con cuidado.
     cites: ["cbr-examenplan:1"]
-
-  - id: el-examen-prueba-cuentan
-    type: mc
-    exam: false
-    prompt: ¿Qué pasa con las 2 preguntas de prueba (testvragen) del examen?
-    options: [Cuentan como cualquier otra, No cuentan para el resultado final, Solo cuentan si fallas más de 6 preguntas, Se corrigen aparte y se suman al final]
-    answer: 1
-    explain: Las testvragen no cuentan para el resultado final.
-    cites: ["cbr-examenplan:1"]
-
-  - id: el-examen-sleepvraag
-    type: mc
-    exam: false
-    prompt: En una sleepvraag con tres vehículos en un cruce, ¿qué número recibe el vehículo que pasa primero?
-    options: ["1", "2", "3", Depende del color del vehículo]
-    answer: 0
-    explain: "En la sleepvraag arrastras números a la imagen: el que puede pasar primero recibe el 1, el siguiente el 2 y el último el 3."
-    cites: ["cbr-vragen"]
 
   - id: el-examen-invulvraag
     type: mc

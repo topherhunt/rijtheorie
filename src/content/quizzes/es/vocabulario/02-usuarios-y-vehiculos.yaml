@@ -19,17 +19,25 @@ questions:
 
   - id: usuarios-y-vehiculos-brommobiel-autoweg
     type: yesno
-    prompt: Una brommobiel se acerca a la entrada de una autoweg. ¿Puede entrar?
+    prompt: Una brommobiel, construida para un máximo de 45 km/h, se acerca a la entrada de una autoweg. ¿Puede entrar?
     answer: false
-    explain: La autoweg es solo para vehículos de motor (motorvoertuigen). Una brommobiel es una bromfiets, y las bromfietsen quedan fuera de esa definición.
-    cites: ["rvv:42", "rvv:1"]
+    explain: Aunque la brommobiel siga las reglas de los motorvoertuigen, la autoweg exige poder ir al menos a 50 km/h (art. 42), y una bromfiets no pasa de 45 km/h. Seguir esas reglas no le da esa velocidad.
+    cites: ["rvv:42", "rvv:2a", "wvw:1.1"]
 
-  - id: usuarios-y-vehiculos-motorrijtuig-bromfiets
+  - id: usuarios-y-vehiculos-motorrijtuig-cuales
+    type: multi
+    prompt: Según la WVW, ¿cuáles de estos vehículos son un motorrijtuig?
+    options: [Una bromfiets, Una brommobiel, Una bicicleta con pedaleo asistido, Una bicicleta normal]
+    answer: [0, 1]
+    explain: La WVW llama motorrijtuig a todo vehículo con fuerza mecánica, salvo las bicicletas con pedaleo asistido. La bromfiets y la brommobiel entran; la bicicleta con pedaleo asistido queda excluida expresamente y la normal no tiene motor.
+    cites: ["wvw:1.1"]
+
+  - id: usuarios-y-vehiculos-control-bromfiets
     type: yesno
-    prompt: Según la WVW, ¿una bromfiets es un motorrijtuig?
+    prompt: Circulas en bromfiets y un agente competente te ordena parar para pedirte la documentación. ¿Estás obligado a detenerte y mostrarla?
     answer: true
-    explain: La WVW llama motorrijtuig a todo vehículo con fuerza mecánica salvo las bicicletas con pedaleo asistido, así que incluye a la bromfiets. El RVV, en cambio, deja a la bromfiets fuera de "motorvoertuigen".
-    cites: ["wvw:1.1", "rvv:1"]
+    explain: La obligación de parar y mostrar los documentos cuando lo ordena el agente recae en el bestuurder de un motorrijtuig, y la bromfiets lo es. Que sea ciclomotor y no coche no te libera.
+    cites: ["wvw:160.1", "wvw:1.1"]
 
   - id: usuarios-y-vehiculos-voorrangsvoertuig
     type: mc
@@ -38,21 +46,6 @@ questions:
     answer: 0
     explain: Es un voorrangsvoertuig y los usuarios de la vía deben dejarlo pasar, es decir, permitirle seguir sin estorbos. No tienes prioridad sobre él ni debes bloquear el paso.
     cites: ["rvv:50", "rvv:29", "rvv:1"]
-
-  - id: usuarios-y-vehiculos-ruiter-calzada
-    type: yesno
-    prompt: Una jinete va por la calzada de una calle donde no hay ruiterpad. ¿Está permitido?
-    answer: true
-    explain: Los jinetes usan el ruiterpad, y si no existe pueden usar la berm o la calzada.
-    cites: ["rvv:8"]
-
-  - id: usuarios-y-vehiculos-regelaar-obedecer
-    type: multi
-    prompt: Estás en un cruce y alguien dirige el tráfico con gestos. ¿A cuáles de estas personas estás obligado a obedecer?
-    options: [Un agente de policía en servicio, Un verkeersregelaar autorizado y reconocible como tal, Un peatón cualquiera que decide dirigir el tráfico por su cuenta, El pasajero del auto de delante]
-    answer: [0, 1]
-    explain: Debes seguir las indicaciones de los agentes competentes y de los verkeersregelaars competentes y reconocibles. Una persona sin esa condición no tiene ese poder.
-    cites: ["rvv:82"]
 
   - id: usuarios-y-vehiculos-tegenpartij-irse
     type: yesno

@@ -1,75 +1,76 @@
 questions:
   - id: eco-hora-punta
     type: mc
-    prompt: Puedes salir a las 7:00 o a las 8:30, cuando suele haber atasco en tu ruta. Según el CBR, ¿qué conviene para gastar menos y contaminar menos?
-    options: ["Elegir el momento y la ruta para evitar las horas y tramos con atasco", "Salir a cualquier hora y compensar acelerando más", "Salir en hora punta, porque con atasco el motor consume menos", "No importa la hora, solo la marcha que uses"]
+    prompt: Puedes salir a las 7:00 o a las 8:30, cuando suele haber atasco en tu ruta. ¿Qué conviene para gastar menos y contaminar menos?
+    options: ["Salir a la hora y por la ruta que evitan los atascos", "Salir a cualquier hora y compensar acelerando más", "Salir en hora punta, porque con atasco el motor consume menos", "Da igual la hora, solo importa la marcha que uses"]
     answer: 0
-    explain: La guía del CBR dice que el momento y la ruta se eligen para evitar horas y tramos propensos a atascos.
+    explain: Estar atascado gasta más combustible. La guía del CBR pide elegir el momento y la ruta para evitar horas y tramos con atasco.
     cites: ["cbr-rijprocedure:1"]
 
   - id: eco-peso
     type: yesno
-    prompt: Volviste de vacaciones y tu cofre de techo está vacío, pero lo dejas puesto en tu trayecto diario. Según el CBR, ¿es lo más adecuado?
+    prompt: Volviste de vacaciones y tu cofre de techo está vacío, pero lo dejas puesto en tu trayecto diario. ¿Es lo más adecuado para gastar poco?
     answer: false
-    explain: El CBR desaconseja llevar peso innecesario y accesorios que aumentan la resistencia al aire, como los cofres de techo, cuando no se usan.
+    explain: El peso innecesario y los accesorios que aumentan la resistencia al aire, como los cofres de techo, hacen gastar más. Si no los usas, quítalos.
     cites: ["cbr-rijprocedure:1"]
 
-  - id: eco-neumaticos
+  - id: eco-presion-habito
     type: mc
-    prompt: No has revisado la presión de los neumáticos desde hace dos meses. Según el CBR, ¿qué corresponde?
-    options: ["Ya toca revisarla, porque se hace una vez al mes", "Todavía no, se revisa una vez al año", "Solo hace falta antes de las vacaciones", "Solo si el auto vibra"]
+    prompt: Llevas meses sin mirar la presión de los neumáticos y últimamente el coche te parece "pesado" y gasta más. ¿Qué es lo adecuado?
+    options: ["Revisar la presión ahora y hacerlo como costumbre periódica", "Esperar a que un neumático se vea claramente desinflado", "Mirarla solo antes de las vacaciones", "Subir la marcha para compensar el gasto"]
     answer: 0
-    explain: La guía del CBR indica revisar la presión de los neumáticos cada mes como parte de la preparación del viaje.
+    explain: La guía del CBR incluye revisar la presión de los neumáticos como parte de la preparación, de forma periódica. Neumáticos con poca presión aumentan el consumo, y subir de marcha no lo arregla.
     cites: ["cbr-rijprocedure:1"]
 
   - id: eco-luneta
     type: yesno
-    prompt: Ya se desempañó la luneta trasera, pero sigues con la luneta calefactada y el aire acondicionado encendidos "por costumbre". Según el CBR, ¿conviene apagarlos?
+    prompt: Ya se desempañó la luneta trasera, pero sigues con la luneta calefactada y el aire acondicionado encendidos "por costumbre". ¿Conviene apagarlos?
     answer: true
     explain: El CBR pide no tener encendidos sin necesidad los consumidores de energía como el aire acondicionado y la calefacción de lunas, porque consumen combustible.
     cites: ["cbr-rijprocedure:1"]
 
   - id: eco-rpm-alta
     type: mc
-    prompt: En un tramo sin tráfico delante, el motor de tu auto manual gira a 3.500 rpm en tercera. Según el CBR, ¿qué haces para consumir menos?
-    options: ["Subir de marcha y cambiar entre 2.000 y 2.500 rpm", "Mantener la marcha para tener potencia", "Bajar a segunda", "Poner el punto muerto"]
-    answer: 0
-    explain: Conducir en una marcha relativamente alta reduce el consumo. El CBR indica cambiar entre 2.000 y 2.500 rpm cuando es seguro y no frena el tráfico.
+    prompt: En un tramo sin tráfico delante, el motor de tu auto manual gira muy alto en tercera y no hay motivo para ello. ¿Qué haces para consumir menos?
+    options: ["Mantengo la marcha: así tengo más potencia disponible", "Bajo a segunda para tener más freno motor", "Subo de marcha: una marcha más alta reduce el consumo", "Pongo el punto muerto y dejo rodar"]
+    answer: 2
+    explain: "Conducir en una marcha relativamente alta reduce el consumo, siempre que sea seguro y no frene el tráfico. El punto muerto no ahorra: el motor sigue gastando al ralentí."
     cites: ["cbr-rijprocedure:1"]
 
   - id: eco-salida-semaforo
     type: mc
-    prompt: El semáforo se pone en verde y no hay nadie cerca delante de ti. Según el CBR, ¿cómo aceleras?
-    options: ["Con decisión, pisando el pedal al menos hasta la mitad de su recorrido", "Con el pedal apenas rozado, para gastar lo mínimo", "A fondo hasta alcanzar las 4.000 rpm", "Con el pie en el embrague mientras aceleras suave"]
-    answer: 0
-    explain: Si la distancia con el auto de delante lo permite, el CBR recomienda acelerar con decisión, al menos hasta la mitad del recorrido del pedal. Acelerar muy flojo alarga la aceleración sin ahorrar de verdad.
+    prompt: El semáforo se pone en verde y no hay nadie cerca delante de ti. ¿Cómo aceleras para gastar poco?
+    options: ["Con el pedal apenas rozado, para gastar lo mínimo", "A fondo hasta que el motor llegue a sus revoluciones máximas", "Con decisión, sin aceleración tímida ni a fondo", "Muy despacio con el pie a medias en el embrague"]
+    answer: 2
+    explain: Si la distancia con el auto de delante lo permite, el CBR recomienda acelerar con decisión, al menos hasta la mitad del recorrido del pedal. Acelerar muy flojo alarga la aceleración sin ahorrar de verdad; a fondo gasta de más.
     cites: ["cbr-rijprocedure:1"]
 
   - id: eco-semaforo-adelante
     type: mc
-    prompt: Ves que el semáforo, 200 m adelante, estará en rojo cuando llegues y tendrás que parar. Según el CBR, ¿qué haces?
-    options: ["Levantar el pie del acelerador ya, dejar el auto engranado y pisar el embrague justo antes del ralentí", "Seguir acelerando y frenar fuerte al final", "Poner el punto muerto enseguida", "Pisar el embrague desde lejos y rodar"]
-    answer: 0
-    explain: Soltar el acelerador con anticipación corta el consumo de combustible. Se mantiene el auto engranado y se pisa el embrague justo antes de que el motor llegue al ralentí.
+    prompt: Ves que el semáforo, 200 m adelante, estará en rojo cuando llegues y tendrás que parar. ¿Qué haces?
+    options: ["Sigo acelerando y freno fuerte al final", "Pongo el punto muerto enseguida y ruedo hasta la línea", "Piso el embrague desde lejos y dejo que ruede", "Levanto el pie ya, dejo el auto engranado y piso el embrague justo antes de parar"]
+    answer: 3
+    explain: Soltar el acelerador con anticipación, con el auto engranado, corta el consumo mientras el auto sigue rodando. Se pisa el embrague justo antes de que el motor llegue al ralentí.
     cites: ["cbr-rijprocedure:1"]
 
   - id: eco-crucero
-    type: yesno
-    prompt: Circulas por una carretera larga con poco tráfico y tu auto tiene control de crucero. Según el CBR, ¿es buena idea usarlo para mantener una velocidad constante?
-    answer: true
-    explain: El CBR dice que el uso correcto del control de crucero favorece una velocidad constante y reduce el consumo, cuando está disponible y es aplicable.
+    type: mc
+    prompt: Circulas por una carretera larga con poco tráfico y tu auto tiene control de crucero. ¿Qué te ayuda más a mantener una velocidad constante y gastar menos?
+    options: ["Ir acelerando y soltando según me parezca", "Usar el control de crucero cuando sea seguro", "Ir pegado al auto de delante para seguir su ritmo", "Ir un poco más rápido para llegar antes y compensar"]
+    answer: 1
+    explain: El CBR dice que el control de crucero ayuda a mantener una velocidad constante. Pegarte al de delante resta seguridad y obliga a frenar y acelerar.
     cites: ["cbr-rijprocedure:1"]
 
   - id: eco-paso-a-nivel
     type: yesno
-    prompt: Esperas en un paso a nivel con barrera cerrada y calculas que el tren tardará unos tres minutos. Es seguro y podrías volver a arrancar enseguida. Según el CBR, ¿conviene apagar el motor?
+    prompt: Esperas en un paso a nivel con barrera cerrada y calculas que el tren tardará unos tres minutos. Es seguro y podrías volver a arrancar enseguida. ¿Conviene apagar el motor?
     answer: true
-    explain: El CBR recomienda apagar el motor en paradas de más de un minuto, siempre que la seguridad lo permita, y mantener encendidas las luces obligatorias.
+    explain: En una parada larga y segura se apaga el motor (un motor al ralentí gasta y contamina sin que avances), y se mantienen encendidas las luces obligatorias.
     cites: ["cbr-rijprocedure:1"]
 
-  - id: eco-luces
+  - id: eco-parada-corta
     type: yesno
-    prompt: Apagas el motor en una parada larga de noche. ¿Debes mantener las luces obligatorias encendidas?
-    answer: true
-    explain: Al apagar el motor se mantienen las luces que son obligatorias.
+    prompt: Esperas en un semáforo en rojo que sabes que dura solo unos 20 segundos. ¿Te pide la guía del CBR que apagues el motor?
+    answer: false
+    explain: La guía habla de apagar el motor cuando prevés estar parado más de un minuto, siempre que sea seguro. En una parada de pocos segundos no se pide.
     cites: ["cbr-rijprocedure:1"]

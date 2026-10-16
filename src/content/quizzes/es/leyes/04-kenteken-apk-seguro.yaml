@@ -7,11 +7,12 @@ questions:
     cites: ["wam:2.1"]
 
   - id: kenteken-apk-seguro-tapar
-    type: yesno
-    prompt: ¿Puedes tapar la matrícula con un portabicicletas sin hacer nada más?
-    answer: false
-    explain: El kenteken debe verse. Si el portabultos tapa la placa, debe llevar una placa con el mismo kenteken.
-    cites: ["wvw:40", "rv:5.18.7/1.f"]
+    type: mc
+    prompt: Vas a viajar con un portabicicletas cargado que tapa la matrícula trasera. ¿Qué es lo correcto?
+    options: ["Poner en el portabicicletas una placa con el mismo kenteken", "Nada, si la matrícula delantera sigue visible", "Quitar la matrícula trasera mientras llevo el portabicicletas", "Tapar el portabicicletas con una lona"]
+    answer: 0
+    explain: El kenteken debe verse. Si el portabultos o la carga tapan la placa, el portabultos debe llevar una placa con el mismo kenteken (y su luz si es obligatoria).
+    cites: ["wvw:40", "rv:5.18.7/1"]
 
   - id: kenteken-apk-seguro-camaras
     type: yesno
@@ -22,7 +23,7 @@ questions:
 
   - id: kenteken-apk-seguro-remolque
     type: mc
-    prompt: Tu remolque pesa como máximo 600 kg y no tiene matrícula propia. ¿Qué placa lleva?
+    prompt: Tu remolque tiene una masa máxima de 600 kg y no tiene matrícula propia. ¿Qué placa lleva?
     options: ["Ninguna", "La del auto que lo arrastra", "Una placa temporal de papel", "La de tu casa"]
     answer: 1
     explain: Un remolque de hasta 750 kg sin kenteken propio lleva el kenteken del vehículo que lo arrastra.
@@ -34,6 +35,13 @@ questions:
     answer: false
     explain: La obligación rige desde que la kentekencard se entrega, y en todo caso desde 14 días después de la tenaamstelling. Aún no se cumple ninguna de las dos.
     cites: ["kr:22"]
+
+  - id: kenteken-apk-seguro-conductor-kenteken
+    type: yesno
+    prompt: Un amigo te presta su auto, y su placa trasera se soltó y viaja en el maletero, con lo que el kenteken ya no se ve en la parte de atrás. Lo conduces tú. ¿Puedes ser responsable tú, y no solo tu amigo?
+    answer: true
+    explain: Según los artículos 40 y 36, además del propietario o poseedor responde el conductor cuando se circula con el vehículo.
+    cites: ["wvw:40.4", "wvw:36.6"]
 
   - id: kenteken-apk-seguro-apk-prestado
     type: yesno
@@ -51,9 +59,23 @@ questions:
     cites: ["anwb-apk"]
 
   - id: kenteken-apk-gasolina-vieja
+    type: yesno
+    prompt: Compras un auto de gasolina de 9 años. El vendedor te dice que su último APK fue hace 14 meses. ¿Está el APK al día?
+    answer: false
+    explain: Un auto de gasolina de 8 años o más pasa el APK cada año, así que el plazo ya venció. Los 2 años son para el tramo de 4 a 8 años del auto.
+    cites: ["anwb-apk"]
+
+  - id: kenteken-apk-gasolina-joven
+    type: yesno
+    prompt: Tu auto de gasolina tiene 5 años y pasó el APK hace 18 meses. ¿Todavía está dentro del plazo?
+    answer: true
+    explain: Entre los 4 y los 8 años de edad, un auto de gasolina pasa el APK cada 2 años. A los 18 meses aún falta para el siguiente. A partir de los 8 años sería cada año.
+    cites: ["anwb-apk"]
+
+  - id: kenteken-apk-antes
     type: mc
-    prompt: Tu auto de gasolina tiene 9 años. ¿Cada cuánto debe pasar el APK?
-    options: ["Cada año", "Cada 2 años", "Cada 4 años", "Solo cuando se vende"]
+    prompt: El APK de tu auto de gasolina de 5 años vence el 1 de junio y lo haces el 20 de abril. ¿Cuándo vence el nuevo?
+    options: ["El 1 de junio, dos años después", "El 20 de abril, dos años después", "El 20 de abril del año siguiente", "El 1 de junio del año siguiente"]
     answer: 0
-    explain: Los de gasolina pasan el primer APK a los 4 años, después cada 2 años y desde que cumplen 8 años, cada año.
+    explain: Hacer el APK hasta 2 meses antes del vencimiento no cambia la fecha de vencimiento, así que se cuenta desde el 1 de junio. Para este auto el intervalo es de 2 años.
     cites: ["anwb-apk"]

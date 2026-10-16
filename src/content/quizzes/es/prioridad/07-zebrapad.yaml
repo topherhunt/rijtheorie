@@ -16,43 +16,44 @@ questions:
   - id: zebrapad-ciego
     type: mc
     prompt: Ves a una persona con bastón blanco con anillos rojos cruzando. ¿Qué debes hacer?
-    options: [Dejarla pasar, Tocar la bocina, Pasar rápido, Esperar solo si hay paso de peatones]
+    options: [Dejarla pasar, Pasar antes de que llegue a tu carril, Esperar solo si hay paso de peatones]
     answer: 0
     explain: Los ciegos con bastón blanco con anillos rojos y las personas que se mueven con dificultad siempre deben ser dejadas pasar.
     cites: ["rvv:49.1"]
 
-  - id: zebrapad-dificultad
-    type: yesno
-    prompt: La obligación de dejar pasar a las personas que se mueven con dificultad solo vale en el paso de peatones.
-    answer: false
-    explain: El art. 49.1 no limita esa obligación al paso de peatones.
-    cites: ["rvv:49.1"]
-
-  - id: zebrapad-gehandicapten
-    type: yesno
-    prompt: Un vehículo para personas con discapacidad cruza un paso de peatones. ¿Debes dejarlo pasar como a un peatón?
-    answer: true
-    explain: El art. 49.2 cubre a peatones y a conductores de gehandicaptenvoertuigen.
-    cites: ["rvv:49.2"]
-
-  - id: zebrapad-semaforo
-    type: yesno
-    prompt: El semáforo peatonal está en rojo para los peatones. ¿Aplica la obligación de dejar pasar del art. 49.2?
-    answer: false
-    explain: Con luz roja de peatones no aplica la obligación de dejarlos pasar.
-    cites: ["rvv:49.4"]
+  - id: zebrapad-semaforo-cuando
+    type: mc
+    prompt: Llegas a un paso de peatones con semáforo para peatones. ¿Cuándo rige tu obligación de dejar pasar del art. 49.2?
+    options:
+      - Cuando los peatones no tienen luz roja ni amarilla intermitente
+      - Solo cuando el paso no tiene semáforo
+      - Siempre que haya algún peatón en la acera, sea cual sea la luz
+    answer: 0
+    explain: El art. 49.4 dice que el deber del 49.2 no rige si los peatones tienen luz roja o amarilla intermitente. Con luz verde para ellos sí rige, aunque haya semáforo. Y un peatón en la acera que no cruza ni va a cruzar no activa la obligación.
+    cites: ["rvv:49.2", "rvv:49.4"]
 
   - id: zebrapad-amarillo
     type: mc
-    prompt: Con luz amarilla intermitente para peatones, ¿qué es correcto?
+    prompt: Te acercas a un paso con la luz amarilla intermitente para los peatones, y un peatón ya está cruzando. ¿Qué haces?
     options:
-      - Los peatones pueden cruzar si dejan pasar al tráfico, y tú sigues teniéndolos en cuenta
-      - Los peatones tienen prioridad absoluta
-      - Los peatones no pueden cruzar
-      - Debes parar siempre
+      - Lo tengo en cuenta y dejo que termine de cruzar, aunque la ley ya no me obligue
+      - Acelero, porque con amarillo intermitente el peatón debe dejarme pasar
+      - Paso sin cambiar nada, porque el art. 49.2 ya no se aplica
     answer: 0
-    explain: Con amarillo intermitente los peatones pueden cruzar siempre que dejen pasar al resto del tráfico, pero el CBR dice que debes tenerlos en cuenta.
-    cites: ["rvv:74.2", "cbr-rijprocedure:3.6"]
+    explain: Con amarillo intermitente el art. 49.4 quita el deber del 49.2 y es el peatón quien debe dejar pasar al tráfico (art. 74.2). Aun así, el CBR pide tener en cuenta a los peatones que cruzan, así que no aceleras contra uno que ya está en el paso.
+    cites: ["rvv:49.4", "rvv:74.2", "cbr-rijprocedure:2"]
+
+  - id: zebrapad-quienes
+    type: multi
+    prompt: Te acercas a un paso de peatones. ¿A cuáles de estas personas debes dejar pasar?
+    options:
+      - Un peatón parado en el borde, a punto de cruzar
+      - Una persona ciega con bastón blanco con anillos rojos que cruza 30 m antes del paso
+      - El conductor de un vehículo para personas con discapacidad que cruza por el paso
+      - Un peatón que ya cruzó y camina por la acera
+    answer: [0, 1, 2]
+    explain: El art. 49.2 cubre a peatones y conductores de gehandicaptenvoertuigen que cruzan o están a punto de cruzar el paso. El art. 49.1 obliga con ciegos y personas que se mueven con dificultad en cualquier lugar. Quien ya cruzó y camina por la acera ya no cruza ni va a cruzar.
+    cites: ["rvv:49.1", "rvv:49.2"]
 
   - id: zebrapad-colonne
     type: yesno
@@ -61,17 +62,21 @@ questions:
     explain: El art. 49.3 los exceptúa de la obligación del art. 49.2.
     cites: ["rvv:49.3"]
 
-  - id: zebrapad-adelantar
-    type: yesno
-    prompt: Puedes adelantar a otro vehículo justo antes de un paso de peatones si la vía está libre.
-    answer: false
-    explain: Está prohibido adelantar justo antes de un paso de peatones o sobre él.
+  - id: zebrapad-adelantar-detenido
+    type: mc
+    prompt: Un auto va despacio delante de ti justo antes de un paso de peatones y el carril contrario está libre. ¿Puedes adelantarlo?
+    options:
+      - "No: está prohibido adelantar justo antes del paso, porque el auto puede tapar a un peatón"
+      - Sí, si no viene nadie de frente y adelantas rápido
+      - Sí, pero solo si no hay ningún peatón a la vista
+    answer: 0
+    explain: El art. 12 prohíbe adelantar vlak voor o sobre un paso de peatones, haya o no tráfico de frente. Quien adelanta no ve a un peatón que el vehículo adelantado tapa.
     cites: ["rvv:12"]
 
   - id: zebrapad-vehiculo-detenido
     type: mc
     prompt: Hay un auto detenido delante del paso de peatones por otro motivo. ¿Qué dice el CBR?
-    options: [Pasar con muchísimo cuidado, Adelantarlo, Tocar la bocina, Seguir sin cambiar nada]
+    options: [Pasar con muchísimo cuidado, Adelantarlo si el carril contrario está libre, Seguir sin cambiar nada]
     answer: 0
     explain: El auto detenido puede tapar a un peatón que cruza, así que pasa con gran cuidado.
     cites: ["cbr-rijprocedure:3.6"]
@@ -86,7 +91,7 @@ questions:
   - id: zebrapad-girar-derecha
     type: mc
     prompt: Giras a la derecha hacia una calle lateral. Justo al entrar hay un paso de peatones y un peatón empieza a cruzar. ¿Quién pasa primero?
-    options: [El peatón, "Tú, porque estabas en la vía principal", Quien llegó primero al cruce, El que vaya más rápido]
+    options: [El peatón, "Tú, porque estabas en la vía principal", Quien llegó primero al cruce]
     answer: 0
     explain: La obligación del art. 49.2 vale para cualquier conductor que se encuentre con peatones que cruzan o están a punto de cruzar por un paso de peatones, también si acabas de girar.
     cites: ["rvv:49.2"]

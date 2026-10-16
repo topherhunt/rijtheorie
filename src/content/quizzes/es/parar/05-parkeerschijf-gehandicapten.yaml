@@ -1,46 +1,50 @@
 questions:
   - id: schijf-blauwe-streep
     type: yesno
-    prompt: En una zona de disco (E10), ¿puedes estacionar en cualquier lugar libre sin línea azul ni marca de plaza?
+    prompt: Estás en una zona de disco (E10) y ves un hueco libre sin línea azul ni marca de plaza. Vas a quedarte veinte minutos con el disco puesto. ¿Puedes estacionar allí?
     answer: false
-    explain: En una zona de disco solo puedes estacionar en plazas señaladas o con línea azul.
+    explain: En una zona de disco solo puedes estacionar en plazas señaladas como tales o con línea azul. Tener el disco no convierte cualquier hueco en una plaza permitida.
     cites: ["rvv:25.1"]
 
   - id: schijf-voorruit
     type: mc
-    prompt: ¿Dónde pones el disco de estacionamiento si tu auto tiene parabrisas?
-    options: [Detrás del parabrisas, En el tablero bajo el parabrisas pero oculto, En el maletero, En la ventana trasera]
+    prompt: Tu auto tiene parabrisas y estacionas en un lugar con línea azul. ¿Dónde pones el disco?
+    options:
+      - Detrás del parabrisas, bien visible
+      - En la ventana trasera, porque ahí no estorba
+      - En la guantera, y lo muestras si te lo piden
+      - Debajo del limpiaparabrisas, por fuera
     answer: 0
-    explain: Si el vehículo tiene parabrisas, el disco va detrás del parabrisas y debe ser bien visible.
+    explain: Un vehículo a motor de más de dos ruedas necesita un disco bien visible, y si tiene parabrisas el disco va detrás de él. En la guantera no se ve, y la ventana trasera o el exterior no son lo que dice la ley.
     cites: ["rvv:25.2"]
 
   - id: schijf-automatisch
     type: yesno
-    prompt: ¿Puedes usar un disco que mueve solo la hora de llegada mientras estás estacionado?
+    prompt: Compras un disco electrónico que avanza solo la hora de llegada mientras estás estacionado, para ganar tiempo en la zona azul. ¿Puedes usarlo?
     answer: false
-    explain: Un disco con mecanismo que cambia automáticamente la hora de llegada no se puede usar.
+    explain: Un disco con mecanismo que desplaza automáticamente la hora de llegada no se puede usar. El disco debe mostrar la hora en que empezaste a estacionar.
     cites: ["rvv:25.3"]
 
   - id: schijf-afronden
     type: mc
-    prompt: Llegas a las 10:10. ¿A qué hora puedes poner el disco?
+    prompt: Llegas a las 10:10 a un lugar con línea azul. ¿A qué hora puedes poner el disco?
     options: [10:30, 10:00, 11:00, 9:30]
     answer: 0
-    explain: Puedes redondear hacia arriba a la siguiente hora entera o media. Las 10:10 pasan a las 10:30.
+    explain: Puedes redondear hacia arriba a la siguiente hora entera o media, nunca hacia abajo. Las 10:10 pasan a las 10:30.
     cites: ["rvv:25.4"]
 
   - id: schijf-uren
     type: yesno
-    prompt: Un cartel adicional indica días y horas para el disco. Fuera de esos días y horas, ¿necesitas el disco?
+    prompt: Un cartel adicional bajo la zona de disco dice "ma-za 9-18 uur". Es domingo a las 11:00 y estacionas en un lugar con línea azul sin disco. ¿Incumples las reglas del disco?
     answer: false
-    explain: Las reglas del disco solo valen en los días y horas indicados.
+    explain: Con un cartel de días y horas, las reglas del disco solo valen en esos días y horas. El domingo no rigen.
     cites: ["rvv:25.5"]
 
   - id: schijf-e6-sin-tarjeta
     type: yesno
-    prompt: Estacionas en una plaza E6 sin tarjeta de estacionamiento para discapacitados. ¿Puedes?
+    prompt: Hay una plaza E6 libre junto a la tienda. No tienes tarjeta de estacionamiento para discapacitados y solo vas a quedarte cinco minutos. ¿Puedes estacionar allí?
     answer: false
-    explain: En una plaza E6 solo pueden estacionar los vehículos y casos que enumera el artículo 26.
+    explain: En una plaza E6 solo puede estacionar un gehandicaptenvoertuig, un auto con tarjeta válida y visible (para el transporte de la persona titular) o el vehículo para el que está reservada. Que sean cinco minutos no cambia la lista.
     cites: ["rvv:26.1"]
 
   - id: schijf-e6-tarjeta
@@ -54,27 +58,32 @@ questions:
     type: yesno
     prompt: Tienes la tarjeta de un familiar, pero vas solo a hacer compras. ¿Puedes usar una plaza E6?
     answer: false
-    explain: El estacionamiento debe relacionarse directamente con el transporte de la persona con discapacidad.
+    explain: El estacionamiento debe relacionarse directamente con el transporte de la persona con discapacidad. La tarjeta no es un permiso para quien la lleva.
     cites: ["rvv:26.1"]
 
   - id: schijf-kaart-schijf
     type: yesno
-    prompt: Con la tarjeta válida visible y en un caso de transporte de una persona con discapacidad, ¿se aplica la regla del disco del artículo 25?
+    prompt: Llevas a tu madre, titular de la tarjeta válida y visible, y estacionas en un lugar con línea azul. ¿Se aplica la regla del disco del artículo 25 a tu auto?
     answer: false
-    explain: El artículo 25 no se aplica a quien tiene la tarjeta, si el estacionamiento se relaciona con el transporte.
-    cites: ["rvv:85.1", "rvv:85.3"]
+    explain: El artículo 25 no se aplica a quien tiene la tarjeta, si el estacionamiento se relaciona directamente con el transporte de la persona con discapacidad. Hasta tres horas, sin embargo, sigues necesitando un disco visible con la hora de inicio (artículo 85, lid 4).
+    cites: ["rvv:85.1", "rvv:85.3", "rvv:85.4"]
 
-  - id: schijf-kaart-tres-horas
-    type: number
-    prompt: Con la tarjeta de estacionamiento para discapacitados, ¿hasta cuántas horas seguidas puedes estacionar pese a una señal E1 o una línea amarilla discontinua?
-    answer: 3
-    unit: horas
-    explain: Las excepciones valen si no estacionas más de tres horas, y debes tener un disco visible con la hora de inicio.
-    cites: ["rvv:85.1", "rvv:85.4"]
+  - id: schijf-kaart-e1-dos-horas
+    type: mc
+    prompt: Con la tarjeta válida, para llevar a su titular, estacionas dos horas bajo una señal E1 (parkeerverbod) en tu lado de la calle. ¿Qué es correcto?
+    sign: E1
+    options:
+      - Está permitido si muestras un disco con la hora de inicio
+      - Está permitido sin disco, porque la tarjeta basta
+      - Está prohibido, porque E1 vale para todos
+      - Está permitido solo los primeros diez minutos
+    answer: 0
+    explain: Con la tarjeta y para ese transporte, la señal E1 no se aplica si no estacionas más de tres horas, y en esos casos debes mostrar el disco con la hora de inicio. Sin disco o con más de tres horas, no cumples.
+    cites: ["rvv:85.1", "rvv:85.3", "rvv:85.4"]
 
-  - id: schijf-kaart-solo-transporte
+  - id: schijf-kaart-amarilla-cuatro
     type: yesno
-    prompt: ¿Valen las excepciones de la tarjeta aunque el estacionamiento no tenga relación con el transporte de la persona con discapacidad?
+    prompt: Con la tarjeta válida, para llevar a su titular, estacionas cuatro horas junto a una línea amarilla discontinua con el disco puesto. ¿Está permitido?
     answer: false
-    explain: Las excepciones valen únicamente si el estacionamiento se relaciona directamente con ese transporte.
-    cites: ["rvv:85.3"]
+    explain: La excepción para la línea amarilla discontinua (y la E1) vale solo si no estacionas más de tres horas. A las cuatro horas ya no se aplica.
+    cites: ["rvv:85.1", "rvv:85.3", "rvv:24.1"]

@@ -1,16 +1,4 @@
 questions:
-  - id: autosnelweg-vel-minima
-    type: mc
-    prompt: ¿Qué vehículos pueden usar una autosnelweg?
-    options:
-      - Cualquier vehículo, incluidas las bicicletas
-      - Solo vehículos de motor que puedan y tengan permiso para ir al menos a 60 km/h
-      - Solo vehículos de motor que puedan y tengan permiso para ir al menos a 50 km/h
-      - Solo autos y motos
-    answer: 1
-    explain: La autosnelweg exige 60 km/h como mínimo (la autoweg, 50 km/h). Los dos requisitos, poder y tener permiso, deben cumplirse.
-    cites: ["rvv:42.1"]
-
   - id: autosnelweg-quien-puede-entrar
     type: multi
     prompt: Ves la señal G1 al inicio de una carretera. ¿Cuáles de estos vehículos pueden usar esa vía?
@@ -51,18 +39,6 @@ questions:
     explain: Los tankstations, parkeerplaatsen y paradas de bus junto a la autosnelweg no forman parte de ella, y la prohibición de stilstaan vale en la rijbaan de la autosnelweg. Por eso parar allí no es dejar el vehículo parado en la calzada de la autosnelweg.
     cites: ["rvv:1", "rvv:43.2"]
 
-  - id: autosnelweg-marcha-atras
-    type: multi
-    prompt: En una autosnelweg, ¿qué cosas te prohíbe la ley hacer?
-    options:
-      - Dar la vuelta
-      - Ir marcha atrás
-      - Dejar el vehículo parado en la calzada
-      - Ir por el carril de la derecha
-    answer: [0, 1, 2]
-    explain: Están prohibidos keren, achteruitrijden y stilstaan en la rijbaan. Ir por el carril derecho está permitido (y es lo habitual).
-    cites: ["rvv:43.1", "rvv:43.2"]
-
   - id: autosnelweg-perdi-salida
     type: mc
     prompt: Te pasaste de tu salida en la autosnelweg y no hay nadie detrás. ¿Qué haces?
@@ -86,19 +62,24 @@ questions:
     type: mc
     prompt: Conduces un camión (vrachtauto) en una autosnelweg con 4 carriles por sentido. ¿Qué carriles puedes usar?
     options:
-      - Cualquiera
-      - Solo los dos carriles de más a la derecha, salvo si tienes que hacer voorsorteren
-      - Solo el carril de la derecha
-      - Solo los dos carriles de más a la izquierda
+      - Cualquiera de los cuatro
+      - Solo los dos de más a la derecha, salvo que debas hacer voorsorteren
+      - Solo el de la derecha
+      - Los tres de la derecha, porque la regla empieza con 3 carriles
     answer: 1
     explain: En una rijbaan con tres o más carriles, el camión solo puede usar los dos de más a la derecha. La prohibición no vale si debes colocarte para una salida o bifurcación.
     cites: ["rvv:43.4"]
 
-  - id: autosnelweg-camion-largo
-    type: yesno
-    prompt: Un auto con un remolque largo forma un conjunto de más de 7 m. ¿Tiene la misma restricción de carriles que un camión en una autosnelweg con 3 o más carriles?
-    answer: true
-    explain: La regla vale para vrachtauto y también para cualquier conjunto de vehículos de más de 7 m de longitud total.
+  - id: autosnelweg-conjunto-largo
+    type: mc
+    prompt: Conduces un auto con un remolque largo y el conjunto mide 9 m. En una autosnelweg de 3 carriles por sentido, ¿cuándo puedes usar el carril de más a la izquierda?
+    options:
+      - Solo si debes hacer voorsorteren para tomar una salida o bifurcación a la izquierda
+      - Solo para adelantar a un vehículo más lento
+      - Siempre, porque la regla es para camiones y tu vehículo es un auto
+      - Nunca, la prohibición no admite ninguna excepción
+    answer: 0
+    explain: La restricción de los dos carriles de la derecha vale para el vrachtauto y para cualquier conjunto de más de 7 m, aunque lo tire un auto. La ley solo la levanta cuando debes voorsorteren. Adelantar no es una excepción.
     cites: ["rvv:43.4"]
 
   - id: autosnelweg-vel-remolque
@@ -109,17 +90,30 @@ questions:
     explain: Un auto con remolque de hasta 3500 kg de masa máxima va como máximo a 90 km/h.
     cites: ["rvv:22"]
 
-  - id: autosnelweg-vel-camion
-    type: number
-    prompt: ¿Cuál es el límite legal de un camión (vrachtauto) en una autosnelweg fuera de poblado, sin señales de límite?
-    answer: 80
-    unit: km/h
-    explain: Camiones y autobuses (que no sean T100) tienen un máximo de 80 km/h, más bajo que el de 130 km/h de los autos.
+  - id: autosnelweg-vel-moto-camion
+    type: mc
+    prompt: Fuera de poblado y sin señales de límite, en una autosnelweg van una moto con un remolque de hasta 3500 kg y un camión (vrachtauto). ¿Qué máximo legal tiene cada uno?
+    options:
+      - Moto con remolque 90 km/h, camión 80 km/h
+      - Moto con remolque 130 km/h, camión 80 km/h
+      - Moto con remolque 80 km/h, camión 90 km/h
+      - Los dos 90 km/h
+    answer: 0
+    explain: "Con un remolque de hasta 3500 kg, no solo el auto va a 90 km/h: también la moto y el vehículo de tres ruedas. El camión tiene su propio límite de 80 km/h. El 130 es solo para el vehículo sin remolque."
+    cites: ["rvv:22"]
+
+  - id: autosnelweg-vel-camper-bedrijfsauto
+    type: mc
+    prompt: Conduces una camper de más de 3500 kg registrada como bedrijfsauto, sin remolque, por una autosnelweg fuera de poblado y sin señales de límite. ¿Cuál es el máximo legal?
+    options: [80 km/h, 90 km/h, 100 km/h, 130 km/h]
+    answer: 0
+    explain: Una camper de más de 3500 kg en la categoría bedrijfsauto tiene el mismo límite que el camión, 80 km/h. El 130 de la autosnelweg es el límite general para el auto, no para este vehículo.
     cites: ["rvv:22"]
 
   - id: autosnelweg-vel-general
     type: mc
-    prompt: Sin señales de límite y fuera de poblado, ¿cuál es el máximo legal de un auto sin remolque en una autoweg?
+    prompt: Conduces un auto sin remolque por una vía que empieza con la señal G3, fuera de poblado y sin otras señales de límite. ¿Cuál es el máximo legal?
+    sign: G3
     options: [80 km/h, 90 km/h, 100 km/h, 130 km/h]
     answer: 2
     explain: Fuera de poblado, el máximo legal es 130 en autosnelweg, 100 en autoweg y 80 en las demás vías.
@@ -132,7 +126,7 @@ questions:
       - Con el número de la salida más cercana
       - Con el número de la carretera, la lectura del hectometerbordje más cercano y el lado
       - Con el nombre del pueblo más cercano
-      - No hace falta, el teléfono lo detecta
+      - Con la dirección de la gasolinera más cercana
     answer: 1
     explain: Rijkswaterstaat recomienda dar el número de la carretera, la lectura del poste hectométrico y si estás a la izquierda o a la derecha.
     cites: ["rws-pech"]
@@ -144,7 +138,7 @@ questions:
       - Lo más lejos posible del guardarraíl
       - Lo más cerca posible, con las ruedas delanteras giradas hacia el guardarraíl
       - Con las ruedas delanteras giradas hacia la calzada
-      - Mitad en la calzada para que te vean
+      - Paralelo al guardarraíl y a unos metros, para poder rodear el auto
     answer: 1
-    explain: Rijkswaterstaat recomienda quedar lo más cerca posible del guardarraíl, con las ruedas delanteras giradas hacia él, para que los pasajeros puedan salir por la derecha.
+    explain: Rijkswaterstaat recomienda quedar lo más cerca posible del guardarraíl, con las ruedas delanteras giradas hacia él. Dejar el auto alejado del guardarraíl o con las ruedas hacia la calzada es lo contrario de lo que recomienda.
     cites: ["rws-pech"]

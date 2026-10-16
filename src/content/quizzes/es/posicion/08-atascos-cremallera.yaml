@@ -1,76 +1,70 @@
 questions:
-  - id: atascos-carril
-    type: yesno
-    prompt: "Hay una fila y varios carriles en tu sentido. ¿Estás obligado a seguir el carril más a la derecha?"
-    answer: false
-    explain: "En fileverkeer no es obligatorio seguir el carril más a la derecha."
-    cites: ["rvv:13.1"]
-
-  - id: atascos-derecha
+  - id: atascos-distancia-aplicada
     type: mc
-    prompt: "Una fila está parada en el carril izquierdo y el derecho circula. ¿Puedes pasar la fila por la derecha?"
-    options: [Sí (las filas pueden adelantarse por la derecha), No (solo por la izquierda), Solo si eres ciclista, Solo con permiso]
+    prompt: Vas en una fila que avanza y para a tirones. ¿Cómo llevas la distancia con el auto de delante?
+    options: [Lo más constante posible, Muy pegado para que nadie se cuele, Acercándome y alejándome según lo que haga el de delante, Solo me preocupo si frena fuerte]
     answer: 0
-    explain: "El art. 13 lid 2 permite adelantar filas por la derecha."
-    cites: ["rvv:13.2"]
+    explain: En fila mantienes la distancia lo más constante posible. Acercarte y alejarte según el de delante crea frenazos que se propagan hacia atrás.
+    cites: ["cbr-rijprocedure:3.2"]
+
+  - id: atascos-no-cerrar
+    type: mc
+    prompt: Se forma una fila y ves que un auto del carril de al lado quiere ocupar el hueco que hay delante de ti. ¿Qué haces?
+    options: [Lo dejo entrar sin acelerar para cerrar el hueco, Acelero de golpe para cerrar el hueco antes que él, Acorto la distancia con el de delante para que no quepa, Toco la bocina para que se quede donde está]
+    answer: 0
+    explain: La Rijprocedure B pide no acelerar de forma llamativa para cerrar un hueco que otro conductor quería usar; es una conducta social que irrita y puede provocar un roce.
+    cites: ["cbr-rijprocedure:2"]
 
   - id: atascos-luces
-    type: multi
-    prompt: "¿En cuáles de estas situaciones usas las luces de emergencia según la Rijprocedure B?"
-    options: [Cuando se forma una fila y debes frenar de golpe, Cuando paras en un lugar de poca visibilidad, Cuando paras y por oscuridad o clima no te verían a tiempo, Cuando estás estacionado en un lugar permitido sin problemas]
-    answer: [0, 1, 2]
-    explain: "Las luces de emergencia avisan a los que vienen detrás en los tres primeros casos."
+    type: mc
+    prompt: Circulas por una autopista y, detrás de una curva, ves una cola parada y tienes que frenar fuerte. ¿Qué haces con las luces para los que vienen detrás?
+    options: ["Pongo las luces de emergencia", "Pongo el intermitente derecho", "Pongo las luces largas", "No hago nada: las luces de freno bastan"]
+    answer: 0
+    explain: La Rijprocedure B pide las luces de emergencia (waarschuwingslichten) para avisar a los de atrás si debes reducir o parar de repente, sobre todo cuando se forma una fila o paras en un lugar con poca visibilidad.
     cites: ["cbr-rijprocedure:2"]
 
   - id: atascos-cruce
     type: yesno
-    prompt: "La fila avanza lento y tu salida del cruce está ocupada. ¿Puedes entrar al cruce y quedarte parado en él?"
+    prompt: La fila avanza a tirones. Estás a punto de entrar a un cruce sin semáforo y delante del cruce hay sitio solo para la mitad de tu auto. ¿Entras para no perder tu turno?
     answer: false
-    explain: "Los conductores no pueden bloquear un cruce. Espera antes de entrar."
+    explain: Los conductores no pueden bloquear un cruce (art. 14). Esperas antes de entrar, aunque otro se cuele delante.
     cites: ["rvv:14"]
-
-  - id: atascos-cremallera
-    type: mc
-    prompt: "Un carril se estrecha y los autos del otro carril quieren entrar. ¿Qué pide la Rijprocedure B?"
-    options: [Dejarles espacio (ritsen), Cerrarles el paso, Acelerar para no dejarlos, Pararte en medio]
-    answer: 0
-    explain: "En un estrechamiento se deja espacio a quienes adelantan, intercalándose uno a uno."
-    cites: ["cbr-rijprocedure:2"]
-
-  - id: atascos-no-cerrar
-    type: yesno
-    prompt: "Se forma una fila. ¿Es correcto acelerar de forma llamativa para cerrar un hueco que otro conductor quería usar?"
-    answer: false
-    explain: "La Rijprocedure B pide evitar esa conducta, que irrita a otros."
-    cites: ["cbr-rijprocedure:2"]
-
-  - id: atascos-distancia-aplicada
-    type: mc
-    prompt: "Vas en una fila que avanza y para a tirones. ¿Cómo llevas la distancia con el auto de delante?"
-    options: [Lo más constante posible, Muy pegado para que nadie se cuele, Acercándome y alejándome según lo que haga el de delante, Solo me preocupo si frena fuerte]
-    answer: 0
-    explain: "En fila mantienes la distancia lo más constante posible. Acercarte y alejarte según el de delante crea frenazos que se propagan hacia atrás."
-    cites: ["cbr-rijprocedure:3.2"]
 
   - id: atascos-cruce-semaforo-verde
     type: yesno
-    prompt: "Tienes semáforo en verde, pero la fila de delante está parada y al otro lado del cruce no hay sitio para tu auto. ¿Entras al cruce?"
+    prompt: Tienes semáforo en verde, pero la fila de delante está parada y al otro lado del cruce no hay sitio para tu auto. ¿Entras al cruce?
     answer: false
-    explain: "Los conductores no pueden bloquear un cruce. El verde te da paso, pero no te autoriza a quedarte parado en medio del cruce, y menos si bloqueas el tráfico transversal."
+    explain: Los conductores no pueden bloquear un cruce. El verde te da paso, pero no te autoriza a quedarte parado en medio del cruce, y menos si bloqueas el tráfico transversal.
     cites: ["rvv:14", "cbr-rijprocedure:2"]
+
+  - id: atascos-cremallera
+    type: mc
+    prompt: En un estrechamiento de la calzada los autos del otro carril quieren entrar delante de ti. ¿Qué pide la Rijprocedure B?
+    options: ["Dejarles espacio, uno a uno (ritsen)", "Cerrarles el paso para ir primero", "Acelerar para que no se cuelen", "Pararme en medio hasta que pasen todos"]
+    answer: 0
+    explain: En un estrechamiento se deja espacio a los demás, intercalándose uno a uno. Cerrar el paso bloquea a todos.
+    cites: ["cbr-rijprocedure:2", "cbr-rijprocedure:3.2"]
+
+  - id: atascos-ritsen-carril-termina
+    type: mc
+    prompt: Dos carriles se juntan en uno; el tuyo sigue y el otro termina. Hay cola. Un auto del otro carril quiere entrar delante de ti. ¿Qué pide la Rijprocedure B?
+    options: ["Dejo pasar uno por uno, alternando, sin cerrarle el paso", "Acorto la distancia con el de delante para que no entre", "Le toco la bocina para que espere detrás de todos", "Me paso yo al otro carril"]
+    answer: 0
+    explain: 'Por ley quien cambia de carril cede (art. 54), pero la Rijprocedure B pide ritsen: dejar entrar de uno en uno. Cerrar el paso bloquea a todos y no es comportamiento social.'
+    cites: ["cbr-rijprocedure:2", "rvv:54"]
 
   - id: atascos-incorporo-ceder
     type: mc
-    prompt: "Vas por un carril de incorporación y llegas a la calzada principal con tráfico. ¿Quién debe dejar pasar a quién?"
+    prompt: Vas por un carril de incorporación y llegas a la calzada principal con tráfico. ¿Quién debe dejar pasar a quién?
     options: [Yo dejo pasar al tráfico de la calzada principal, El tráfico de la calzada principal me deja pasar a mí, Pasa primero el más rápido, Pasa primero el más grande]
     answer: 0
-    explain: "Quien se incorpora a la calzada principal desde un carril de incorporación debe dejar pasar al resto del tráfico. Que otros te dejen paso es cortesía, no un derecho."
+    explain: Quien se incorpora a la calzada principal desde un carril de incorporación debe dejar pasar al resto del tráfico. Que otros te dejen paso es cortesía, no un derecho.
     cites: ["rvv:54"]
 
   - id: atascos-ritsen-ayuda
     type: mc
-    prompt: "Circulas por la calzada principal de una autosnelweg y ves en el carril de incorporación un camión que no logra coger velocidad. ¿Qué haces si puedes?"
+    prompt: Circulas por la calzada principal de una autosnelweg y ves en el carril de incorporación un camión que no logra coger velocidad. ¿Qué haces si puedes?
     options: [Ajusto mi velocidad o me muevo a la izquierda para dejarle sitio, Acelero para que no entre, Freno de golpe en mi carril, Toco la bocina para que se detenga]
     answer: 0
-    explain: "La Rijprocedure B pide ayudar a incorporarse al tráfico pesado que no coge velocidad, ajustando tu velocidad o moviéndote a la izquierda. La obligación legal de ceder sigue siendo de quien se incorpora."
+    explain: La Rijprocedure B pide ayudar a incorporarse al tráfico pesado que no coge velocidad, ajustando tu velocidad o moviéndote a la izquierda. La obligación legal de ceder sigue siendo de quien se incorpora.
     cites: ["cbr-rijprocedure:2", "cbr-rijprocedure:3.2"]

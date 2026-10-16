@@ -6,11 +6,12 @@ questions:
     explain: Que sea legal no importa. Si una sustancia reduce tu capacidad y no estás en condiciones, está prohibido conducir.
     cites: ["wvw:8.1"]
 
-  - id: drogas-bicicleta
-    type: yesno
-    prompt: ¿La prohibición de conducir bajo influencia de sustancias vale también para una bicicleta?
-    answer: true
-    explain: El artículo 8 lid 1 habla de conducir un vehículo, sin limitarlo a vehículos de motor.
+  - id: drogas-bici-fiesta
+    type: mc
+    prompt: Sales de una fiesta tras consumir una droga y notas que reaccionas con lentitud. Tu casa está cerca y vuelves en bicicleta. ¿Qué dice la ley?
+    options: ["Está permitido: la prohibición es solo para vehículos de motor", "Está prohibido: la regla vale para cualquier vehículo, también la bicicleta", "Está permitido si vas despacio", "Está permitido si es de noche y hay poco tráfico"]
+    answer: 1
+    explain: El artículo 8 lid 1 habla de conducir un vehículo, sin limitarlo a los de motor. Si la sustancia te deja sin condiciones, tampoco puedes ir en bici.
     cites: ["wvw:8.1"]
 
   - id: drogas-limite-sin-sentirse-mal
@@ -20,12 +21,13 @@ questions:
     explain: El artículo 8 lid 5 prohíbe conducir con una concentración en sangre superior al límite de la sustancia listada. No depende de cómo te sientas.
     cites: ["wvw:8.5"]
 
-  - id: drogas-acompanar
-    type: yesno
-    prompt: Acompañas a un conductor en práctica y estás bajo influencia de una sustancia que reduce tu capacidad. ¿Es una infracción?
-    answer: true
-    explain: El artículo 8 lid 1 prohíbe conducir y también acompañar en ese estado.
-    cites: ["wvw:8.1"]
+  - id: drogas-bajo-limite-afectado
+    type: mc
+    prompt: Consumiste una droga y un análisis de sangre no supera el límite de esa sustancia, pero sigues mareado y con los reflejos lentos. ¿Puedes conducir?
+    options: ["Sí, porque no superas el límite", "No: si no estás en condiciones de conducir, está prohibido aunque no superes el límite", "Sí, si conduces despacio", "Sí, pero solo en trayectos cortos"]
+    answer: 1
+    explain: El límite en sangre es una infracción aparte. La regla de fondo del artículo 8 lid 1 prohíbe conducir sin estar capaz, superes o no el límite.
+    cites: ["wvw:8.1", "wvw:8.5"]
 
   - id: drogas-acompanante-limite
     type: yesno
@@ -34,18 +36,27 @@ questions:
     explain: El artículo 8 lid 5 prohíbe expresamente actuar como begeleider por encima del límite.
     cites: ["wvw:8.5"]
 
-  - id: drogas-prestar
-    type: yesno
-    prompt: Sabes que un amigo consumió drogas. ¿Puedes dejarle conducir tu auto?
-    answer: false
-    explain: Está prohibido dejar conducir a quien sabes o deberías saber que no está en condiciones.
+  - id: drogas-begeleider-medicamento
+    type: mc
+    prompt: Vas a acompañar como begeleider a tu hijo que conduce. Has tomado un medicamento que avisa de somnolencia y te notas adormilado, pero "tú no conduces". ¿Qué haces?
+    options: ["Lo acompaño: el acompañante no conduce", "No lo acompaño: la prohibición alcanza también al begeleider", "Lo acompaño si me siento con el cinturón puesto", "Lo acompaño si él conduce despacio"]
+    answer: 1
+    explain: El artículo 8 lid 1 prohíbe también acompañar como begeleider cuando una sustancia te deja sin condiciones. Que no conduzcas no te exime.
+    cites: ["wvw:8.1"]
+
+  - id: drogas-prestar-medicamento
+    type: mc
+    prompt: Tu pareja acaba de tomar un medicamento cuyo prospecto dice que no se conduzca, y está adormilada. Te pide el coche para ir a la farmacia. ¿Qué ocurre si se lo das?
+    options: ["Nada para ti: la responsable es ella", "También infringes tú: está prohibido dejar conducir a quien sabes que no está en condiciones", "Solo infringes si ocurre un accidente", "Es legal si el trayecto es corto"]
+    answer: 1
+    explain: Dejar conducir a alguien de quien sabes, o deberías saber, que no está en condiciones es una infracción tuya. Que el trayecto sea corto no cambia nada.
     cites: ["wvw:8.6"]
 
   - id: drogas-saliva
     type: yesno
-    prompt: La policía quiere hacerte una prueba de saliva. ¿Debes colaborar?
+    prompt: Un agente te pide una prueba de saliva. Estás seguro de no haber consumido nada y te parece una molestia. ¿Debes colaborar?
     answer: true
-    explain: Debes colaborar con las pruebas que ordene la policía.
+    explain: La obligación de colaborar con las pruebas que ordena la policía no depende de que tú creas que no hace falta.
     cites: ["wvw:160.5"]
 
   - id: drogas-rijverbod-aanstalten

@@ -16,7 +16,7 @@ F1: *Verbod voor motorvoertuigen om elkaar onderling in te halen.* F3: *Verbod v
 </Rule>
 
 <Warn>
-F3 prohíbe adelantar solo a los camiones. Tú, en auto, puedes adelantar donde hay F3 (y puedes adelantar camiones). Con F1, en cambio, la prohibición te afecta a ti.
+F3 prohíbe adelantar solo a los camiones. Tú, en auto, puedes adelantar donde hay F3 (y puedes adelantar camiones). Con F1, en cambio, la prohibición te afecta a ti. Pero F1 habla solo de *motorvoertuigen* entre sí: una bicicleta o un ciclomotor no son motorvoertuigen (art. 1), así que F1 no te prohíbe adelantarlos (adelantar con seguridad sigue siendo tu deber).
 </Warn>
 
 <Rule cite="rvv:bijlage1.F2, rvv:62" title="Cuándo vuelves a poder adelantar">
@@ -25,7 +25,9 @@ Mientras vale F1 no puedes adelantar a otro vehículo de motor. Después de F2 v
 
 <Check id="f-f1-auto" />
 
-<Check id="f-f1-f3" />
+<Check id="f-f3-camion" />
+
+<Check id="f-f1-ciclista" />
 
 <Check id="f-f2-adelantar" />
 
@@ -33,8 +35,10 @@ Mientras vale F1 no puedes adelantar a otro vehículo de motor. Después de F2 v
 
 <Signs codes="F5,F6" />
 
-- **F5**: no sigas si viene tráfico de frente: ceda el paso al que viene.
+- **F5**: no sigas si viene tráfico de frente: espera y deja pasar al que viene.
 - **F6**: los conductores que vienen de frente deben dejarte pasar a ti.
+
+Son una pareja para un paso estrecho: lo que F5 te ordena a ti, F6 se lo da a quien viene de frente. Quien ve F5 espera; quien ve F6 pasa primero.
 
 <Rule cite="rvv:bijlage1.F5, rvv:bijlage1.F6">
 F5: *Verbod voor bestuurders door te gaan bij nadering van verkeer uit tegengestelde richting.* F6: *Bestuurders uit tegengestelde richting moeten verkeer dat van deze richting nadert voor laten gaan.*
@@ -42,7 +46,7 @@ F5: *Verbod voor bestuurders door te gaan bij nadering van verkeer uit tegengest
 
 <Check id="f-f5-f6" />
 
-<Check id="f-f6-significado" />
+<Check id="f-f6-prioridad" />
 
 ## Cambio de sentido y fin de prohibiciones
 
@@ -53,7 +57,7 @@ F5: *Verbod voor bestuurders door te gaan bij nadering van verkeer uit tegengest
 - **F9**: fin de todas las prohibiciones indicadas en un panel electrónico.
 
 <Rule cite="rvv:bijlage1.F7, rvv:bijlage1.F8, rvv:62" title="Qué te obliga F7 y qué cierra F8">
-Con F7 no puedes dar la vuelta en ese tramo. F8 cierra las prohibiciones de los carteles (F1, F3, F7 y las demás), pero no las de un panel electrónico: esas las cierra F9.
+Con F7 no puedes dar la vuelta en ese tramo. F8 (*Einde van alle door verkeersborden aangegeven verboden*) pone fin a las prohibiciones indicadas por señales, como la de F1. Las de un panel electrónico las cierra F9.
 </Rule>
 
 <Check id="f-f7-vuelta" />
@@ -65,10 +69,8 @@ Con F7 no puedes dar la vuelta en ese tramo. F8 cierra las prohibiciones de los 
 <Signs codes="F10" />
 
 <Rule cite="rvv:bijlage1.F10, rvv:82.4">
-F10: *Stop.* En la señal puede indicarse quién la usa o por qué. Si un acompañante de un vehículo sobre rieles (por ejemplo, en un paso a nivel) te muestra una señal F10, una bandera roja o una luz roja, debes parar.
+F10: *Stop.* En la señal puede indicarse quién la usa o por qué. Si un *begeleider* de un vehículo sobre rieles (un tren o un tranvía, por ejemplo en un paso a nivel) te muestra una señal F10, una bandera roja o una luz roja, debes parar.
 </Rule>
-
-<Check id="f-f10-significado" />
 
 <Check id="f-f10-paso-nivel" />
 
@@ -86,15 +88,15 @@ F10: *Stop.* En la señal puede indicarse quién la usa o por qué. Si un acompa
 F13: *Rijbaan of -strook uitsluitend ten behoeve van lijnbussen.* F21: *Rijbaan of -strook uitsluitend ten behoeve van vrachtauto's.* Un auto no puede usarlos. F19 admite a camiones y a autobuses de línea, pero no a autos ni a motos; F17, a autobuses de línea y tranvías.
 </Rule>
 
-<Check id="f-f13-auto" />
+<Check id="f-f13-atasco" />
 
 <Check id="f-f19-quien" />
 
-<Check id="f-f21-significado" />
+<Check id="f-f17-quien" />
 
 ## Otras
 
 <Signs codes="F11,F12" />
 
-- **F11**: uso obligatorio del carril para ser adelantado, solo para tractores, vehículos de velocidad limitada y máquinas móviles.
+- **F11**: carril o calzada para ser adelantado (*passeerbaan*), de uso obligatorio y solo para tractores agrícolas y forestales, vehículos de velocidad limitada y máquinas móviles.
 - **F12**: fin.

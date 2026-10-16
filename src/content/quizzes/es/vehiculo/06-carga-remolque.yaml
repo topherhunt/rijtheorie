@@ -1,17 +1,18 @@
 questions:
   - id: carga-remolque-asegurada
     type: mc
-    prompt: ¿Para qué situaciones debe estar asegurada la carga?
-    options: [Solo para ruta recta, Para frenadas fuertes y maniobras bruscas también, Solo con lluvia, Solo en autopista]
+    prompt: Llevas cajas pesadas en el maletero abierto de una furgoneta pequeña y solo vas a recorrer 10 km por una carretera tranquila. ¿Hasta qué punto debe estar asegurada la carga?
+    options: [Basta con que aguante si conduzco despacio y en recta, Debe aguantar también una frenada fuerte o una maniobra brusca, Solo hace falta si llueve, Solo hace falta en autopista]
     answer: 1
-    explain: Debe soportar frenadas fuertes, maniobras bruscas y mal pavimento sin caerse.
+    explain: "La carga debe soportar frenadas fuertes, maniobras bruscas y mal pavimento sin caerse. La distancia corta o la carretera tranquila no cambian eso: la frenada de emergencia puede llegar en cualquier trayecto."
     cites: ["rv:5.18.6/1"]
 
   - id: carga-remolque-suelta
-    type: yesno
-    prompt: Llevas arena suelta en un remolque abierto y puede volar. ¿Debes taparla?
-    answer: true
-    explain: La carga suelta que puede caerse o volar debe taparse bien.
+    type: mc
+    prompt: Llevas arena suelta en un remolque abierto y el viento puede levantarla. ¿Qué debes hacer?
+    options: ["Taparla bien porque puede volar y molestar a otros", "Atarla con cuerdas como si fueran cajas", "Ir más rápido para que no se caiga", "Nada, porque la arena pesa"]
+    answer: 0
+    explain: La carga suelta que no se puede fijar debe taparse bien si puede caerse o volar y causar peligro o molestia. Atarla no funciona con arena suelta.
     cites: ["rv:5.18.6/2"]
 
   - id: carga-remolque-escalera-1-5
@@ -23,17 +24,18 @@ questions:
 
   - id: carga-remolque-stootbalk
     type: mc
-    prompt: Con tu auto reciente llevas un tubo que sobresale 0,80 m por detrás, y su parte de abajo está a 0,70 m del suelo. ¿Qué más hace falta?
-    options: ["Nada, porque está dentro de 1,00 m", "Una barra de protección firme a no más de 0,60 m del final del tubo", Una bandera roja en el extremo, "Reducir lo que sobresale a 0,50 m"]
+    prompt: Con tu auto puesto en uso en 2020 llevas un tubo que sobresale 0,80 m por detrás, y su parte de abajo está a 0,70 m del suelo. ¿Qué más hace falta?
+    options: ["Nada, porque está dentro de 1,00 m", "Una barra de protección firme a no más de 0,60 m del final del tubo", Una bandera roja en el extremo, Una luz de freno adicional en el extremo del tubo]
     answer: 1
     explain: Si la parte de abajo de la carga que sobresale está a más de 0,55 m del suelo, hace falta una stootbalk firme a no más de 0,60 m del final. Estar dentro de 1,00 m no basta.
     cites: ["rv:5.18.12/1"]
 
   - id: carga-remolque-luces
-    type: yesno
-    prompt: Tu carga tapa las luces traseras. ¿Es suficiente con no hacer nada?
-    answer: false
-    explain: Si el portabultos o la carga tapan luces, el portabultos debe llevar sus propias luces; la carga no puede tapar luces ni matrícula, salvo que lleve las suyas propias.
+    type: mc
+    prompt: Llevas bicicletas en un portabultos trasero que tapa las luces traseras del auto. ¿Qué es lo correcto?
+    options: ["Ir despacio con las luces de emergencia puestas", "El portabultos debe llevar sus propias luces traseras, de freno, reflectores e intermitentes", "Poner cinta reflectante en las bicicletas", "Nada, si es de día"]
+    answer: 1
+    explain: Si el portabultos o la carga tapan luces, el portabultos debe llevar sus propias luces traseras, de freno, reflectores e intermitentes. Ir despacio, cinta o el día no sustituyen a las luces.
     cites: ["rv:5.18.12/1", "rv:5.18.7/1"]
 
   - id: carga-remolque-tablas-lados
@@ -73,26 +75,12 @@ questions:
     explain: No puedes pasar la carga máxima del techo que fija el fabricante del auto. Que la baca aguante más no cambia ese límite.
     cites: ["rv:5.18.7/2"]
 
-  - id: carga-remolque-dos-remolques
-    type: yesno
-    prompt: Con tu auto enganchas un remolque y detrás de él un segundo remolque. ¿Está permitido?
-    answer: false
-    explain: Con un vehículo de motor no puedes arrastrar más de un remolque.
-    cites: ["rv:5.18.1/1"]
-
   - id: carga-remolque-holgura
     type: yesno
     prompt: El enganche de tu remolque tiene 5 mm de holgura total entre el auto y el remolque, pero está bien asegurado. ¿Está en regla?
     answer: false
     explain: La holgura total en la unión entre el vehículo que arrastra y el arrastrado no puede pasar de 3 mm, aunque el enganche esté asegurado.
     cites: ["rv:5.18.54"]
-
-  - id: carga-remolque-luces-remolque
-    type: yesno
-    prompt: Pisas el freno mientras arrastras un remolque. ¿Debe mostrar el remolque la luz de freno también?
-    answer: true
-    explain: Las luces del remolque deben funcionar de modo que sus funciones coincidan con las del vehículo que lo arrastra.
-    cites: ["rv:5.18.38/1"]
 
   - id: carga-remolque-sin-datos-900
     type: yesno
@@ -103,7 +91,14 @@ questions:
 
   - id: carga-remolque-conjunto-19
     type: yesno
-    prompt: Un auto con su remolque mide 19 m en total. ¿Puede circular así?
+    prompt: Tu auto mide 4,8 m y quieres enganchar un remolque largo de 13,5 m. ¿Puede circular el conjunto así?
     answer: false
-    explain: El conjunto de auto y remolque no puede medir más de 18,00 m.
+    explain: Las dos longitudes suman más de 18,3 m y el conjunto de auto y remolque no puede medir más de 18,00 m.
     cites: ["rv:5.18.11/7"]
+
+  - id: carga-remolque-intermitente-lateral
+    type: yesno
+    prompt: Vas a enganchar un remolque a un auto que tiene intermitentes delanteros y traseros, pero ninguno en los costados. ¿Cumple el auto con remolque?
+    answer: false
+    explain: Un auto que arrastra un remolque debe tener un intermitente lateral en cada costado. Los intermitentes delanteros y traseros no sustituyen a los laterales.
+    cites: ["rv:5.18.37"]

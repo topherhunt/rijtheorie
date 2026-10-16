@@ -53,9 +53,28 @@ Con B6 en tu vía, los otros tienen prioridad sobre ti. A menudo verás también
 
 <Check id="haaientanden-b6-giro" />
 
+### En un cruce en T
+
+Los dientes de tiburón o B6 funcionan igual en un cruce en T: la calle lateral cede a la calle principal en los dos sentidos, también si giras a la izquierda.
+
+<Junction
+  arms={{ e: {}, s: { shark: true }, w: {} }}
+  vehicles={[
+    { label: 'A', kind: 'car', from: 's', to: 'left', you: true },
+    { label: 'B', kind: 'car', from: 'e', to: 'straight' },
+    { label: 'C', kind: 'car', from: 'w', to: 'straight' },
+  ]}
+  alt="Cruce en T. Tú (A) vienes de la calle lateral del sur, con dientes de tiburón frente a ti, y giras a la izquierda. B viene del este por tu derecha y C viene del oeste por tu izquierda, los dos en recto por la calle principal."
+  caption="Cedes el paso a B y a C: giras a la izquierda, pero los dos circulan por la vía que cruzas."
+/>
+
+<Check id="haaientanden-t-izquierda" />
+
 <Warn>
 B6 no te obliga a parar. Obliga a ceder el paso: si la vía está libre, puedes seguir sin detenerte. Lo que no puedes hacer es obligar al otro a frenar o a esquivarte.
 </Warn>
+
+<Check id="haaientanden-b6-libre" />
 
 ## B7: stop
 
@@ -69,6 +88,8 @@ La diferencia clave: con B6 cedes el paso y solo te detienes si hace falta. Con 
 
 <Check id="haaientanden-b7-parar" />
 
+<Check id="haaientanden-b7-sin-stopstreep" />
+
 ## Cómo acercarte
 
 <Rule cite="cbr-rijprocedure:3.3" title="Acercarse a B6 y B7">
@@ -80,6 +101,8 @@ Si eres tú quien tiene prioridad pero ves que el tráfico de una vía lateral n
 </Rule>
 
 <Check id="haaientanden-acercarse" />
+
+<Check id="haaientanden-bici-b6" />
 
 ## Orden de varios vehículos
 

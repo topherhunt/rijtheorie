@@ -2,9 +2,9 @@ questions:
   - id: cambiar-carril-ceder
     type: mc
     prompt: Cambias de un carril a otro y en el carril al que entras viene un auto desde atrás. ¿Quién cede el paso?
-    options: [Tú (quien cambia de carril), El auto que viene por el carril al que entras, El más rápido, El que tenga el intermitente puesto]
+    options: ["Tú, que cambias de carril", "El auto que viene por el carril al que entras", "El más rápido de los dos", "El que tenga el intermitente puesto"]
     answer: 0
-    explain: Cambiar de carril es una maniobra especial, y quien la hace debe dejar pasar al resto del tráfico.
+    explain: Cambiar de carril es una maniobra especial, y quien la hace debe dejar pasar al resto del tráfico. Que tú ya tengas el intermitente no te da preferencia.
     cites: ["rvv:54"]
 
   - id: cambiar-carril-incorporacion
@@ -15,19 +15,27 @@ questions:
     explain: El art. 54 cita el cambio de carril, la incorporación a la calzada principal y la entrada al carril de salida. Seguir recto en tu carril no es una maniobra especial.
     cites: ["rvv:54"]
 
+  - id: cambiar-carril-autopista-coche-rapido
+    type: mc
+    prompt: Quieres pasar al carril izquierdo de una autopista y ya tienes el intermitente puesto. Por el retrovisor ves un auto que se acerca rápido por ese carril. ¿Qué haces?
+    options: ["Lo dejo pasar y cambio cuando haya un hueco seguro", "Cambio ya, porque mi intermitente me da preferencia", "Cambio y acelero para quedar delante de él", "Freno para que me deje sitio"]
+    answer: 0
+    explain: Quien cambia de carril hace una maniobra especial y deja pasar al resto del tráfico (rvv art. 54). El intermitente solo avisa, no da preferencia, y el hueco hay que mirarlo antes de empezar.
+    cites: ["rvv:54", "rvv:55"]
+
   - id: cambiar-carril-lugar-ajeno
     type: yesno
-    prompt: Otro conductor se prepara claramente para ocupar un hueco en el carril de al lado. ¿Está permitido que tú cambies de carril y tomes ese lugar?
+    prompt: En una calzada de dos carriles, el conductor de al lado se prepara claramente para ocupar el hueco que hay delante de ti, en tu carril. ¿Puedes meterte tú antes en ese hueco, si hay sitio?
     answer: false
-    explain: La Rijprocedure B no permite cambiar de carril y ocupar un lugar para el que otro conductor se está preparando de forma clara.
+    explain: La Rijprocedure B no permite cambiar de carril y ocupar un lugar para el que otro conductor se está preparando de forma clara. Que el hueco esté libre no basta.
     cites: ["cbr-rijprocedure:3.5"]
 
   - id: cambiar-carril-intermitente
     type: mc
-    prompt: ¿Cuándo das la señal con el intermitente para cambiar de carril según la Rijprocedure B?
-    options: [Después de haber mirado y con bastante antelación antes de empezar el movimiento, Mientras ya estás cruzando la línea, Solo si ves otro auto, Antes de mirar]
+    prompt: Vas a cambiar de carril. ¿Cuándo das la señal con el intermitente según la Rijprocedure B?
+    options: ["Después de mirar y con bastante antelación antes de empezar el movimiento", "Mientras ya estás cruzando la línea", "Antes de mirar, para que los demás se aparten", "Solo si ves otro auto"]
     answer: 0
-    explain: Primero se mira si se puede hacer sin peligro ni estorbo, y luego se avisa con tiempo antes de empezar.
+    explain: Primero se mira si el cambio se puede hacer sin peligro ni estorbo, y luego se avisa con tiempo antes de empezar. Avisar antes de mirar no sirve si luego no puedes cambiar.
     cites: ["cbr-rijprocedure:3.5", "rvv:55"]
 
   - id: cambiar-carril-orden-mirar
@@ -39,41 +47,35 @@ questions:
     cites: ["cbr-rijprocedure:3.5"]
 
   - id: cambiar-carril-hombro-largo
-    type: yesno
-    prompt: Para estar más seguro, ¿es buena idea mirar por encima del hombro un buen rato?
-    answer: false
-    explain: Mirar demasiado o demasiado tiempo puede cambiar tu rumbo sin querer, y no ves lo que ocurre delante del auto.
+    type: mc
+    prompt: Para cambiar de carril miras por encima del hombro durante varios segundos, por si acaso. ¿Qué problema tiene según la Rijprocedure B?
+    options: [Puedes desviar el rumbo sin querer y no ves lo que pasa delante del auto, Los retrovisores dejan de ser útiles para el resto del trayecto, Tienes que repetir toda la secuencia de miradas desde el principio, Obligas al auto de atrás a frenar]
+    answer: 0
+    explain: La mirada por encima del hombro es solo para el ángulo muerto. Si es larga o frecuente, puede cambiar tu rumbo sin querer y no ves lo que pasa delante.
     cites: ["cbr-rijprocedure:3.5"]
 
   - id: cambiar-carril-varios
-    type: yesno
-    prompt: Estás en el carril derecho y quieres ir al izquierdo de una autovía de tres carriles. ¿Puedes cruzar los dos carriles en un solo movimiento?
-    answer: false
-    explain: "Cruzar varios carriles en una sola maniobra no está permitido: hay que hacerlo carril por carril."
+    type: mc
+    prompt: Vas por el carril derecho de una autovía de tres carriles y quieres llegar al izquierdo. ¿Cómo lo haces según la Rijprocedure B?
+    options: ["Paso al carril del medio, voy un rato recto y luego paso al izquierdo", "Cruzo los dos carriles en un solo movimiento suave", "Cruzo los dos carriles rápido para estorbar menos", "Espero a que el tráfico me abra los dos carriles"]
+    answer: 0
+    explain: 'Cruzar varios carriles en una sola maniobra no está permitido: se hace carril por carril, yendo un rato en línea recta entre un cambio y otro.'
     cites: ["cbr-rijprocedure:3.5"]
 
   - id: cambiar-carril-curva
     type: mc
-    prompt: Vas por una curva con varios carriles en tu sentido. ¿Qué recomienda la Rijprocedure B?
-    options: [Seguir el carril elegido y cambiar después de la curva (tras ir un rato en línea recta), Cambiar de carril en medio de la curva, Pasar al carril interior, Pasar al carril exterior]
-    answer: 0
-    explain: En una curva se sigue el carril elegido. Después de la curva y un rato recto, se puede cambiar.
-    cites: ["cbr-rijprocedure:3.5"]
-
-  - id: cambiar-carril-ciclomotor-senal
-    type: mc
-    prompt: Vas en una bromfiets y quieres cambiar de carril. ¿Cómo puedes dar la señal?
-    options: [Solo con el intermitente, Con el intermitente o con el brazo, Solo con el brazo, No hace falta si miras bien]
+    prompt: Estás en una curva larga con tres carriles. Tu carril va más lento que el de la izquierda, que está libre. ¿Qué recomienda la Rijprocedure B?
+    options: ["Cambiar ya, aprovechando que está libre", "Seguir en tu carril y cambiar después de la curva, tras ir un rato recto", "Pasar al carril exterior para ganar espacio", "Frenar dentro de la curva para dejar pasar"]
     answer: 1
-    explain: El art. 55 obliga a los conductores de vehículos de motor a usar el intermitente y deja a los bromfietsers elegir entre el intermitente y el brazo.
-    cites: ["rvv:55"]
+    explain: En una curva con varios carriles del mismo sentido se sigue el carril elegido; se cambia después de la curva, cuando hayas ido un rato en línea recta.
+    cites: ["cbr-rijprocedure:3.5"]
 
   - id: cambiar-carril-velocidad-antes
     type: mc
-    prompt: Quieres pasar al carril izquierdo, donde el tráfico va mucho más rápido que tú. ¿Qué haces antes de cambiar?
-    options: [Adapto primero mi velocidad a la del tráfico de ese carril, Cambio y acelero después, Cambio y toco la bocina, Freno para que me dejen pasar]
+    prompt: Vas a 80 por el carril derecho y quieres pasar al izquierdo, donde van a 110. Hay un hueco largo. ¿Qué haces?
+    options: ["Acelero hacia el ritmo de ese carril y cambio cuando ya voy a una velocidad parecida", "Cambio enseguida porque hay hueco y acelero después", "Cambio enseguida con el intermitente puesto, que avisa a los demás", "Cambio y toco la bocina para que frenen"]
     answer: 0
-    explain: Según la Rijprocedure B se cambia de carril cuando la velocidad ya está bien adaptada al resto del tráfico. Cambiar primero y acelerar después te mete delante de quien viene más rápido.
+    explain: Según la Rijprocedure B se cambia de carril cuando la velocidad ya está adaptada al resto del tráfico. Cambiar primero y acelerar después te mete delante de quien viene más rápido.
     cites: ["cbr-rijprocedure:3.5"]
 
   - id: cambiar-carril-sin-lineas

@@ -13,12 +13,19 @@ questions:
     explain: Si hay una línea discontinua de tu lado, la excepción del art. 76.2 lo permite.
     cites: ["rvv:76.2"]
 
-  - id: mv-excepcion-vluchtstrook
+  - id: mv-vluchtstrook-emergencia
     type: yesno
-    prompt: Una línea continua separa tu carril de una vluchtstrook. ¿Puedes cruzarla para llegar a ella?
+    prompt: Tu coche se avería en una autosnelweg. Una línea continua te separa de la vluchtstrook. ¿Puedes cruzarla para llegar a ella?
     answer: true
-    explain: Cruzar para llegar a una vluchtstrook contigua es una excepción del art. 76.2.
-    cites: ["rvv:76.2"]
+    explain: El art. 76.2 levanta la prohibición de cruzar la línea para llegar a una vluchtstrook, y el art. 43.3 permite usarla en emergencias. Una avería lo es.
+    cites: ["rvv:76.2", "rvv:43.3"]
+
+  - id: mv-vluchtstrook-cola
+    type: yesno
+    prompt: Hay cola en la autosnelweg y la vluchtstrook está libre, separada por una línea continua. ¿Puedes cruzar la línea y avanzar por la vluchtstrook?
+    answer: false
+    explain: La excepción del art. 76.2 solo levanta la prohibición de cruzar la línea. Usar la vluchtstrook sin emergencia sigue prohibido (art. 43.3), y una cola no lo es.
+    cites: ["rvv:76.2", "rvv:43.3"]
 
   - id: mv-flechas
     type: mc
@@ -28,18 +35,11 @@ questions:
     explain: En un cruce sigues la dirección del voorsorteerstrook en que estás.
     cites: ["rvv:78.1"]
 
-  - id: mv-flechas-salida
-    type: yesno
-    prompt: En un uitrijstrook con flechas, ¿debes seguir la dirección de las flechas?
-    answer: true
-    explain: Art. 78.2.
-    cites: ["rvv:78.2"]
-
   - id: mv-verdrijvingsvlak
     type: yesno
-    prompt: ¿Puedes circular sobre un verdrijvingsvlak (zona rayada) para adelantar?
+    prompt: Hay cola y quieres adelantarla usando un verdrijvingsvlak (zona rayada) en una bifurcación. ¿Puedes?
     answer: false
-    explain: Los conductores no pueden usar verdrijvingsvlakken ni puntstukken, salvo las excepciones del art. 77.2.
+    explain: Los conductores no pueden usar verdrijvingsvlakken ni puntstukken, salvo las excepciones del art. 77.2 y 77.3 (seguir una spitsstrook o un carril de bus).
     cites: ["rvv:77.1"]
 
   - id: mv-puntstuk-spits
@@ -51,40 +51,17 @@ questions:
 
   - id: mv-haaientanden
     type: mc
-    prompt: Delante de ti hay triángulos blancos pintados en el suelo (haaientanden). ¿Qué significan?
-    options: ["Cede el paso a los conductores de la vía que cruzas", "Detente siempre", "Tienes prioridad", "Zona de estacionamiento"]
+    prompt: Delante de ti hay triángulos blancos pintados en el suelo (haaientanden) y por la vía que cruzas viene un coche. ¿Qué haces?
+    options: ["Le cedo el paso", "Paso, porque yo sigo recto", "Paso, porque llegué primero", "Le cedo solo si va por la derecha"]
     answer: 0
-    explain: Los haaientanden mandan ceder el paso a la vía que cruza.
+    explain: Los haaientanden mandan ceder el paso a los conductores de la vía que cruzas, vengan por donde vengan y llegues cuando llegues.
     cites: ["rvv:80"]
 
-  - id: mv-stopstreep
-    type: mc
-    prompt: Debes detenerte en un cruce con línea de detención. ¿Dónde lo haces?
-    options: ["Antes de la línea", "Sobre la línea", "Pasada la línea", "Donde quieras"]
-    answer: 0
-    explain: Debes detenerte antes de la stopstreep que te corresponde.
-    cites: ["rvv:79"]
-
-  - id: mv-cebra-ceder
+  - id: mv-bus-coche
     type: yesno
-    prompt: Un peatón está a punto de cruzar por un paso de peatones. ¿Debes cederle el paso?
-    answer: true
-    explain: Debes dar paso a peatones que cruzan o están a punto de cruzar.
-    cites: ["rvv:49.2"]
-
-  - id: mv-cebra-adelantar
-    type: yesno
-    prompt: ¿Puedes adelantar a otro vehículo sobre un paso de peatones?
+    prompt: La calzada está atascada y hay un carril con la palabra BUS pintada, libre. Conduces tu coche. ¿Puedes usarlo para adelantar la cola?
     answer: false
-    explain: No puedes adelantar justo antes de un paso de peatones ni sobre él.
-    cites: ["rvv:12"]
-
-  - id: mv-bus
-    type: mc
-    prompt: Un carril de bus lleva la palabra LIJNBUS. ¿Quién puede usarlo?
-    options: ["Autobuses de línea y tranvías", "Todos los autobuses", "Taxis", "Cualquier vehículo"]
-    answer: 0
-    explain: Con LIJNBUS el carril es solo para lijnbus o tranvía. Con BUS también para autobús.
+    explain: El carril BUS es solo para autobuses de línea, autobuses y tranvías (art. 81). Un coche no está en la lista, aunque el carril esté libre.
     cites: ["rvv:81"]
 
   - id: mv-fietsstrook
@@ -94,33 +71,30 @@ questions:
     explain: Los demás conductores no pueden usar fietsstroken con líneas continuas.
     cites: ["rvv:10.2"]
 
-  - id: mv-amarilla-continua
-    type: mc
-    prompt: Hay una línea amarilla continua junto a la calzada. ¿Qué no puedes hacer?
-    options: ["Detenerte (ni siquiera un momento)", "Circular", "Pasar lentamente", "Usar el intermitente"]
-    answer: 0
-    explain: Junto a una línea amarilla continua no puedes detenerte (stilstaan).
-    cites: ["rvv:23.1"]
-
-  - id: mv-amarilla-discontinua
-    type: mc
-    prompt: Hay una línea amarilla discontinua junto a la calzada. ¿Qué no puedes hacer?
-    options: ["Estacionar", "Detenerte unos instantes para dejar a alguien", "Circular", "Girar"]
-    answer: 0
-    explain: Junto a una línea amarilla discontinua no puedes estacionar.
-    cites: ["rvv:24.1"]
-
-  - id: mv-disco
+  - id: mv-amarilla-pasajero
     type: yesno
-    prompt: Estacionas en una zona de disco. ¿Puedes redondear tu hora de llegada a la hora entera o media siguiente?
-    answer: true
-    explain: El art. 25 permite redondear al alza a la hora entera o media siguiente.
-    cites: ["rvv:25"]
+    prompt: Junto a una línea amarilla continua, paras unos segundos para que baje tu pasajero y sigues. ¿Está permitido?
+    answer: false
+    explain: Junto a una línea amarilla continua no puedes detenerte (stilstaan), ni siquiera un momento. La única excepción para dejar pasajeros es la parada de bus (art. 23.2).
+    cites: ["rvv:23.1", "rvv:23.2"]
 
-  - id: mv-5m
-    type: number
-    prompt: ¿A cuántos metros de un cruce no puedes estacionar?
-    answer: 5
-    unit: m
-    explain: No puedes estacionar a menos de 5 m de un cruce.
+  - id: mv-amarilla-disc-pasajero
+    type: yesno
+    prompt: Junto a una línea amarilla discontinua, paras unos segundos para que baje tu pasajero y sigues. ¿Está permitido?
+    answer: true
+    explain: La línea discontinua solo prohíbe estacionar (art. 24.1). Estacionar no incluye el tiempo necesario para que suba o baje un pasajero (art. 1). Dejar el coche allí un rato sí estaría prohibido.
+    cites: ["rvv:24.1", "rvv:1"]
+
+  - id: mv-5m-cruce
+    type: yesno
+    prompt: Quieres dejar el coche aparcado una hora a 3 m de un cruce, en una calle sin ninguna línea pintada. ¿Puedes?
+    answer: false
+    explain: No puedes estacionar a menos de 5 m de un cruce (art. 24.1), aunque no haya líneas ni señales.
     cites: ["rvv:24.1"]
+
+  - id: mv-5m-cebra
+    type: yesno
+    prompt: Paras 3 m antes de un paso de peatones solo para que baje tu pasajero. ¿Puedes?
+    answer: false
+    explain: No puedes detenerte (stilstaan) sobre un paso de peatones ni a menos de 5 m de él (art. 23.1). La excepción para pasajeros del art. 23.2 vale solo en la parada de bus.
+    cites: ["rvv:23.1", "rvv:23.2"]

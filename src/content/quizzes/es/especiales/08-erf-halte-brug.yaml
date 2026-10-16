@@ -15,48 +15,41 @@ questions:
     explain: Los peatones pueden usar todo el ancho de las vías dentro de un erf. Por eso hay que conducir a la defensiva y contar con encontrarlos en cualquier parte.
     cites: ["rvv:44"]
 
-  - id: erf-estacionar
+  - id: erf-estacionar-hueco
     type: mc
-    prompt: Dentro de un erf, ¿dónde puede estacionar un auto?
+    prompt: Quieres dejar tu auto dentro de un erf. Junto a una fachada hay un espacio libre sin ninguna marca ni señal de estacionamiento. ¿Puedes estacionar ahí?
     options:
-      - En cualquier lugar donde no moleste
-      - Solo en lugares señalados o marcados como estacionamiento
-      - En el borde de la calzada
-      - En ninguna parte
-    answer: 1
-    explain: Los conductores de vehículos de motor solo pueden estacionar en los lugares señalados o marcados como estacionamiento.
-    cites: ["rvv:46"]
-
-  - id: erf-zona-disco
-    type: yesno
-    prompt: Un erf es además zona de disco (parkeerschijf-zone). ¿Valen también las reglas de estacionamiento con disco?
-    answer: true
-    explain: Si el erf es también zona de disco, valen los artículos 25 y 26.
+      - No, solo puedes estacionar en los lugares señalados o marcados como estacionamiento
+      - Sí, siempre que no estorbes a los peatones
+      - Sí, si dejas el auto bien pegado a la fachada
+      - Sí, si es solo por unos minutos
+    answer: 0
+    explain: En un erf los vehículos de motor solo pueden estacionar en los lugares señalados o marcados como estacionamiento. Que el espacio esté libre o que no estorbe no basta.
     cites: ["rvv:46"]
 
   - id: erf-parada-pasar
     type: mc
-    prompt: Vas a pasar junto a un tranvía parado, por el lado donde bajan los pasajeros. ¿Qué haces?
+    prompt: Un tranvía está parado en su parada y quieres pasar por el lado donde suben y bajan los pasajeros. ¿Qué haces?
     options:
-      - Pasas rápido para no bloquear
-      - Les das oportunidad de subir y bajar
-      - Tocas la bocina
-      - Pasas por el otro lado siempre
-    answer: 1
-    explain: Debes darles oportunidad de subir y bajar si pasas por el lado donde lo hacen.
-    cites: ["rvv:52"]
+      - Les das oportunidad de subir y bajar antes de pasar
+      - Pasas despacio sin detenerte, porque el tranvía ya está parado
+      - Tocas la bocina para que se aparten
+      - Pasas con las luces de emergencia puestas
+    answer: 0
+    explain: Si pasas por el lado donde suben y bajan los pasajeros, tienes que darles oportunidad de hacerlo. Además pueden cruzar de repente por delante o por detrás del tranvía.
+    cites: ["rvv:52", "cbr-rijprocedure:3.6"]
 
   - id: erf-parada-salida
     type: mc
-    prompt: Estás en una calle dentro de la bebouwde kom (zona urbana). Un bus parado en la parada pone el intermitente. ¿Qué haces?
+    prompt: Estás en una calle dentro de la bebouwde kom (zona urbana). Un bus parado en la parada pone el intermitente para salir. ¿Qué haces?
     options:
-      - Le dejas salir de la parada
-      - Pasas antes que él
-      - Le tocas la bocina
-      - Frenas fuerte sin avisar
+      - Le dejas salir de la parada antes de pasar
+      - Pasas antes que él si tienes sitio
+      - Le tocas la bocina para que espere
+      - Aceleras para adelantarlo antes de que arranque
     answer: 0
-    explain: Dentro de la bebouwde kom debes dar oportunidad de salir a un bus que avisa con el intermitente.
-    cites: ["rvv:56"]
+    explain: Dentro de la bebouwde kom debes dejar salir de la parada a un bus que avisa con el intermitente. Si las luces de freno del bus se apagan, probablemente va a arrancar.
+    cites: ["rvv:56", "cbr-rijprocedure:3.6"]
 
   - id: erf-parada-fuera
     type: yesno
@@ -67,41 +60,39 @@ questions:
     exam: false
 
   - id: erf-parada-charco
-    type: yesno
-    prompt: Hay gente esperando en una parada y un charco junto a ellos. Según el procedimiento, ¿pasas por el charco a la velocidad normal?
-    answer: false
-    explain: El procedimiento dice que no hay que pasar por charcos (o solo con muy poca velocidad) junto a gente que espera, para no salpicarles.
+    type: mc
+    prompt: Hay gente esperando en una parada y un charco entre tú y ellos. ¿Qué haces?
+    options:
+      - Reduces mucho o evitas el charco para no salpicarles
+      - Pasas a velocidad normal, porque el charco es cosa de la calle
+      - Pasas rápido para que el agua caiga lejos
+      - Tocas la bocina para que se aparten
+    answer: 0
+    explain: El procedimiento dice que hay que dejar espacio y bajar la velocidad cuando hay gente esperando, y no salpicarles con charcos.
     cites: ["cbr-rijprocedure:3.6"]
 
-  - id: erf-bus-quien
+  - id: erf-bus-turistico-carriles
     type: mc
-    prompt: Un carril tiene escrita la palabra BUS. ¿Quién puede usarlo?
+    prompt: Conduces un autobús turístico (autobus, no lijnbus). Hay un carril con la palabra BUS y otro con la palabra LIJNBUS. ¿Cuál puedes usar?
     options:
-      - Lijnbus, autobus y tranvía
-      - Solo lijnbus
-      - Todos los vehículos de motor
-      - Solo tranvías
+      - Solo el de BUS
+      - Solo el de LIJNBUS
+      - Los dos, porque ambos son para autobuses
+      - Ninguno de los dos
     answer: 0
-    explain: En carriles con BUS pueden ir lijnbus, autobus y tram.
-    cites: ["rvv:81"]
-
-  - id: erf-bus-lijnbus
-    type: mc
-    prompt: Un carril tiene escrita la palabra LIJNBUS. ¿Puede usarlo un autobús turístico?
-    options:
-      - Sí, porque es un autobús
-      - No, solo lijnbus y tranvía
-      - Sí, si lleva pasajeros
-      - Sí, con límite de velocidad
-    answer: 1
-    explain: Con LIJNBUS solo pueden usarlo lijnbus y tram.
+    explain: En un carril BUS pueden ir lijnbus, autobus y tranvía. En un carril LIJNBUS solo lijnbus y tranvía, así que un autobus turístico no puede usarlo.
     cites: ["rvv:81"]
 
   - id: erf-bus-semaforo
-    type: yesno
-    prompt: Usas legalmente un carril de bus y hay un semáforo de tranvía y bus para ese carril. ¿Tienes que obedecerlo?
-    answer: true
-    explain: Los tram/buslichten también valen para otros vehículos que usan una busbaan o busstrook.
+    type: mc
+    prompt: Circulas por un carril de bus que puedes usar legalmente, y el semáforo de tranvía y bus de ese carril está en rojo. ¿Qué haces?
+    options:
+      - Te detienes, porque esos semáforos también valen para ti
+      - Sigues, porque esos semáforos son solo para buses y tranvías
+      - Sigues si no viene ningún bus ni tranvía
+      - Te detienes solo si eres un autobús
+    answer: 0
+    explain: Los semáforos de tranvía y bus (tram/buslichten) también valen para los vehículos, distintos de un lijnbus, que usan el carril al que se refiere la luz.
     cites: ["rvv:70.4"]
 
   - id: erf-carril-f17-quien
@@ -119,8 +110,12 @@ questions:
 
   - id: erf-puente
     type: mc
-    prompt: Llegas a un puente móvil y ves luz roja o roja intermitente. ¿Qué significa?
-    options: [Precaución, Alto, Puedes pasar despacio, El puente está libre]
-    answer: 1
-    explain: En las luces del puente, rojo o rojo intermitente significa alto.
+    prompt: Te acercas a un puente móvil y las luces del puente muestran rojo intermitente. Todavía no ves el puente levantado. ¿Qué haces?
+    options:
+      - Te detienes ante el puente
+      - Reduces y cruzas con cuidado
+      - Cruzas rápido antes de que se levante
+      - Cruzas si no ves ningún barco
+    answer: 0
+    explain: En las luces de un puente móvil, rojo o rojo intermitente significa alto, aunque el puente aún no se haya movido.
     cites: ["rvv:72"]
