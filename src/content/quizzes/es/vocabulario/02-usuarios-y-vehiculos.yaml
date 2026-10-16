@@ -32,13 +32,6 @@ questions:
     explain: La WVW llama motorrijtuig a todo vehículo con fuerza mecánica, salvo las bicicletas con pedaleo asistido. La bromfiets y la brommobiel entran; la bicicleta con pedaleo asistido queda excluida expresamente y la normal no tiene motor.
     cites: ["wvw:1.1"]
 
-  - id: usuarios-y-vehiculos-control-bromfiets
-    type: yesno
-    prompt: Circulas en bromfiets y un agente competente te ordena parar para pedirte la documentación. ¿Estás obligado a detenerte y mostrarla?
-    answer: true
-    explain: La obligación de parar y mostrar los documentos cuando lo ordena el agente recae en el bestuurder de un motorrijtuig, y la bromfiets lo es. Que sea ciclomotor y no coche no te libera.
-    cites: ["wvw:160.1", "wvw:1.1"]
-
   - id: usuarios-y-vehiculos-voorrangsvoertuig
     type: mc
     prompt: Por detrás se acerca un vehículo con luz azul intermitente y bocina de dos tonos. ¿Qué debes hacer?

@@ -1,12 +1,4 @@
 questions:
-  - id: atascos-distancia-aplicada
-    type: mc
-    prompt: Vas en una fila que avanza y para a tirones. ¿Cómo llevas la distancia con el auto de delante?
-    options: [Lo más constante posible, Muy pegado para que nadie se cuele, Acercándome y alejándome según lo que haga el de delante, Solo me preocupo si frena fuerte]
-    answer: 0
-    explain: En fila mantienes la distancia lo más constante posible. Acercarte y alejarte según el de delante crea frenazos que se propagan hacia atrás.
-    cites: ["cbr-rijprocedure:3.2"]
-
   - id: atascos-no-cerrar
     type: mc
     prompt: Se forma una fila y ves que un auto del carril de al lado quiere ocupar el hueco que hay delante de ti. ¿Qué haces?

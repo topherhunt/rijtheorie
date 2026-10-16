@@ -78,15 +78,6 @@ questions:
     cites: ["cbr-rijprocedure:3.6"]
     exam: false
 
-  - id: rotonde-carril-media
-    type: mc
-    prompt: Rotonda de tres carriles sin flechas, vas a seguir recto (media vuelta). ¿Qué carril es preferible al acercarte?
-    options: [El central, El derecho, El izquierdo, Da igual]
-    answer: 0
-    explain: Para la media vuelta, el CBR prefiere el carril central en la vía de acceso.
-    cites: ["cbr-rijprocedure:3.6"]
-    exam: false
-
   - id: rotonde-carril-dos
     type: mc
     prompt: Rotonda de dos carriles sin flechas, vas a seguir recto (media vuelta). ¿Qué carril usas?

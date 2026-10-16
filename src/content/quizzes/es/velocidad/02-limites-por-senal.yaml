@@ -89,10 +89,3 @@ questions:
     explain: "El A3 en un panel es una velocidad máxima y significa que el carril puede usarse, con esa velocidad como máximo. Prevalece sobre los 130 generales. Un carril cerrado se muestra con una cruz roja, no con un número."
     cites: ["rvv:bijlage1.A3", "rvv:73", "rvv:62"]
     sign: A3
-
-  - id: senal-a3-cruz-roja
-    type: yesno
-    prompt: "En una autosnelweg, el panel sobre tu carril muestra una cruz roja y el del carril de al lado un 100. ¿Puedes seguir por tu carril?"
-    answer: false
-    explain: "Una cruz roja significa que el carril no puede usarse (art. 73 b). El 100 del carril vecino es la velocidad máxima de ese carril, que sí puede usarse."
-    cites: ["rvv:73"]

@@ -46,21 +46,6 @@ questions:
     explain: Un pasajero menor de 18 años y de menos de 1,35 m debe usar un sistema de retención infantil con homologación.
     cites: ["rvv:59"]
 
-  - id: auto-y-equipo-nino-1-40
-    type: mc
-    prompt: Llevas en el asiento trasero a un niño de 11 años que mide 1,40 m. ¿Qué debe usar?
-    options: [El cinturón del auto como cualquier pasajero, Un sistema de retención infantil con homologación, Un cojín elevador por ser menor, El cinturón del auto y un cojín elevador]
-    answer: 0
-    explain: La obligación del sistema de retención infantil vale para menores de 18 años y de menos de 1,35 m. Con 1,40 m no se cumple la segunda condición, así que usa el cinturón disponible.
-    cites: ["rvv:59"]
-
-  - id: auto-y-equipo-silla-airbag
-    type: yesno
-    prompt: Quieres llevar a un bebé en una silla orientada hacia atrás en el asiento del copiloto, que tiene airbag frontal activo. ¿Está permitido?
-    answer: false
-    explain: Solo está permitido si el airbag se ha desactivado o se desactiva automáticamente de forma suficiente.
-    cites: ["rvv:59"]
-
   - id: auto-y-equipo-examen-aceite
     type: mc
     prompt: En el examen práctico el examinador te pregunta por el nivel de aceite. ¿Qué esperan de ti?
@@ -84,11 +69,3 @@ questions:
     answer: [0, 2]
     explain: Puede preguntar por la profundidad del dibujo, la diferencia entre neumáticos de verano e invierno, el riesgo de un neumático dañado y para qué sirve el tapón de la válvula. No pregunta por la composición ni por los materiales.
     cites: ["cbr-rijprocedure:3.7"]
-
-  - id: auto-y-equipo-dode-hoek-invoegen
-    type: mc
-    prompt: Vas a incorporarte a la doorgaande rijbaan desde un invoegstrook y has visto un hueco real. Además de los espejos, ¿qué haces justo antes de entrar?
-    options: [Miro por encima del hombro izquierdo para revisar la dode hoek, Toco la bocina para avisar de que entro, Miro hacia atrás hasta ver todo el carril, Miro solo el espejo interior]
-    answer: 0
-    explain: La dode hoek es la zona que los espejos no muestran, y justo antes de entrar se revisa con una mirada breve por encima del hombro izquierdo. No debe convertirse en mirar hacia atrás, porque puedes desviar el auto y no ves lo que pasa delante.
-    cites: ["cbr-rijprocedure:3.4"]

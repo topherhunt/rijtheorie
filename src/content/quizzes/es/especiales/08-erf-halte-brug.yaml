@@ -39,18 +39,6 @@ questions:
     explain: Si pasas por el lado donde suben y bajan los pasajeros, tienes que darles oportunidad de hacerlo. Además pueden cruzar de repente por delante o por detrás del tranvía.
     cites: ["rvv:52", "cbr-rijprocedure:3.6"]
 
-  - id: erf-parada-salida
-    type: mc
-    prompt: Estás en una calle dentro de la bebouwde kom (zona urbana). Un bus parado en la parada pone el intermitente para salir. ¿Qué haces?
-    options:
-      - Le dejas salir de la parada antes de pasar
-      - Pasas antes que él si tienes sitio
-      - Le tocas la bocina para que espere
-      - Aceleras para adelantarlo antes de que arranque
-    answer: 0
-    explain: Dentro de la bebouwde kom debes dejar salir de la parada a un bus que avisa con el intermitente. Si las luces de freno del bus se apagan, probablemente va a arrancar.
-    cites: ["rvv:56", "cbr-rijprocedure:3.6"]
-
   - id: erf-parada-fuera
     type: yesno
     prompt: Según el artículo 56, ¿tiene que dejar salir de la parada a un bus que pone el intermitente fuera de la bebouwde kom?
@@ -70,18 +58,6 @@ questions:
     answer: 0
     explain: El procedimiento dice que hay que dejar espacio y bajar la velocidad cuando hay gente esperando, y no salpicarles con charcos.
     cites: ["cbr-rijprocedure:3.6"]
-
-  - id: erf-bus-turistico-carriles
-    type: mc
-    prompt: Conduces un autobús turístico (autobus, no lijnbus). Hay un carril con la palabra BUS y otro con la palabra LIJNBUS. ¿Cuál puedes usar?
-    options:
-      - Solo el de BUS
-      - Solo el de LIJNBUS
-      - Los dos, porque ambos son para autobuses
-      - Ninguno de los dos
-    answer: 0
-    explain: En un carril BUS pueden ir lijnbus, autobus y tranvía. En un carril LIJNBUS solo lijnbus y tranvía, así que un autobus turístico no puede usarlo.
-    cites: ["rvv:81"]
 
   - id: erf-bus-semaforo
     type: mc

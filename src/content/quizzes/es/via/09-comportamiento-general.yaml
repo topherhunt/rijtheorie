@@ -28,31 +28,10 @@ questions:
     explain: 'El art. 6 exige que alguien muera o sufra lesiones. Pero esto no te deja libre: el art. 7 sigue prohibiendo irte del lugar si causaste daños a otro, salvo que hayas dado oportunidad adecuada de establecer tu identidad y la de tu vehículo.'
     cites: ["wvw:6", "wvw:7.1", "wvw:7.2"]
 
-  - id: general-huir
-    type: yesno
-    prompt: Chocas con otro auto y le haces daños. ¿Puedes irte sin más porque no hay heridos?
-    answer: false
-    explain: No puedes abandonar el lugar si causaste daños a otro, salvo que hayas dado oportunidad adecuada de establecer tu identidad y la del vehículo.
-    cites: ["wvw:7.1", "wvw:7.2"]
-
-  - id: general-identidad
-    type: mc
-    prompt: Causaste daños a otro vehículo y no hay heridos. ¿Qué te permite irte legalmente del lugar?
-    options: ["Haber dado oportunidad adecuada de establecer tu identidad y la de tu vehículo", "Haberte disculpado con el otro conductor y prometido pagar los daños", "Haber comprobado que los daños son pequeños y que nadie ha salido herido", "Haber visto que el otro conductor no estaba enfadado y no quería dar problemas"]
-    answer: 0
-    explain: Según el art. 7.2, la prohibición no se aplica a quien dio oportunidad adecuada de establecer su identidad y la del vehículo de motor. Disculparte, que los daños sean pequeños o que el otro no se queje no sustituye esa oportunidad.
-    cites: ["wvw:7.1", "wvw:7.2"]
-
-  - id: general-herido
-    type: yesno
-    prompt: Un herido queda desamparado si te vas. ¿Te libra la excepción de haber dado tus datos?
-    answer: false
-    explain: La excepción del 7.2 no cubre la prohibición de dejar a un herido en estado de desamparo.
-    cites: ["wvw:7.1", "wvw:7.2"]
-
-  - id: general-sabiendo
-    type: yesno
-    prompt: Al maniobrar junto a un coche aparcado notas un golpe seco y no ves daños desde tu asiento. Un conductor razonable sospecharía que pudo causarlos. ¿Puedes irte sin más?
-    answer: false
-    explain: La prohibición de abandonar el lugar se aplica si sabes, o debes sospechar razonablemente, que causaste daños. No hace falta que estés seguro.
-    cites: ["wvw:7.1"]
+  - id: general-art6-y-art7
+    type: multi
+    prompt: Por tu culpa chocas contra un motociclista, que queda herido de gravedad e inconsciente en el suelo. Dejas una nota con tu nombre en su moto y te vas. ¿Qué artículos de la WVW infringes?
+    options: ["El art. 6, por causar un accidente con lesiones graves", "El art. 7, por irte dejando a un herido en desamparo", "Ninguno, porque dejaste tu identidad en la nota", "El art. 10, por competir en la vía"]
+    answer: [0, 1]
+    explain: El art. 6 cubre el accidente culpable con lesiones graves, y el art. 7 prohíbe irte cuando dejas a un herido desamparado; la excepción de dar tus datos no cubre ese caso. El art. 10 trata de competiciones en la vía, que aquí no hay.
+    cites: ["wvw:6", "wvw:7.1", "wvw:7.2"]

@@ -21,13 +21,6 @@ questions:
     explain: Si el primer permiso se expidió a los 18 años o más, eres principiante durante los primeros 5 años, sin importar tu edad. Que seas adulto no cambia el plazo.
     cites: ["wvw:8.3"]
 
-  - id: alcohol-novel-100
-    type: yesno
-    prompt: Obtuviste tu primer permiso B a los 30 años, hace 2 años. En un control soplas 100 µg/l. ¿Cometes una infracción de alcohol?
-    answer: true
-    explain: Siguen los 5 años de principiante (primer permiso a los 18 o más), y el límite para ti es de 88 µg/l. Con 100 lo superas.
-    cites: ["wvw:8.3"]
-
   - id: alcohol-fin-periodo-novel
     type: yesno
     prompt: Tu primer permiso, de la categoría B, lo obtuviste a los 19 años, hace 6 años. En un control soplas 150 µg/l. ¿Cometes una infracción de alcohol por la cifra?

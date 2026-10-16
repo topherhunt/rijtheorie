@@ -64,13 +64,6 @@ questions:
     explain: El carril BUS es solo para autobuses de línea, autobuses y tranvías (art. 81). Un coche no está en la lista, aunque el carril esté libre.
     cites: ["rvv:81"]
 
-  - id: mv-fietsstrook
-    type: yesno
-    prompt: Conduces un auto. ¿Puedes usar un fietsstrook con líneas continuas?
-    answer: false
-    explain: Los demás conductores no pueden usar fietsstroken con líneas continuas.
-    cites: ["rvv:10.2"]
-
   - id: mv-amarilla-pasajero
     type: yesno
     prompt: Junto a una línea amarilla continua, paras unos segundos para que baje tu pasajero y sigues. ¿Está permitido?

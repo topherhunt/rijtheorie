@@ -6,21 +6,6 @@ questions:
     explain: El rijverbod puede imponerse también a quien se dispone a conducir (aanstalten maakt), no solo a quien ya está al volante, y dura hasta 24 horas.
     cites: ["wvw:162"]
 
-  - id: sanciones-accidente-huir
-    type: mc
-    prompt: Chocas con un auto estacionado y rompes un espejo. No hay nadie cerca. ¿Qué dice la ley?
-    options: [Puedes irte porque el daño es pequeño, No puedes irte sin dar la oportunidad de verificar tu identidad, Solo debes llamar al seguro al día siguiente, Puedes irte si pagas en efectivo]
-    answer: 1
-    explain: Está prohibido abandonar el lugar si hay daños a otra persona, salvo que hayas dado la oportunidad de verificar tu identidad y la del vehículo.
-    cites: ["wvw:7"]
-
-  - id: sanciones-accidente-desamparo
-    type: yesno
-    prompt: Atropellas a un ciclista que cae herido y no puede levantarse. Le das tu nombre y la matrícula, y un testigo los apunta. ¿Puedes irte del lugar?
-    answer: false
-    explain: Dar tu identidad te libera de la prohibición de irte cuando hay heridos o daños, pero nunca puedes irte si así dejas en estado de desamparo a una persona herida.
-    cites: ["wvw:7"]
-
   - id: sanciones-accidente-ongeldig
     type: mc
     prompt: El CBR te pidió un examen de aptitud y no cooperas. ¿Qué pasa con tu permiso?
@@ -108,4 +93,3 @@ questions:
     answer: false
     explain: El artículo 184 solo cubre el aviso voluntario dentro de las 12 horas siguientes al accidente. A las 20 horas ya no.
     cites: ["wvw:184"]
-

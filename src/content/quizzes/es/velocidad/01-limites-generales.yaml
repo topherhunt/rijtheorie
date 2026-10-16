@@ -72,10 +72,3 @@ questions:
     explain: "H2 es el fin de la zona urbana. Fuera de ella, en las demás vías, el máximo del art. 21 es 80 km/h."
     cites: ["rvv:21", "rvv:bijlage1.H2"]
     sign: H2
-
-  - id: limites-minimo-aplicado
-    type: yesno
-    prompt: "Tu vehículo de motor, por su construcción, no puede superar los 40 km/h. ¿Puedes entrar en una autoweg?"
-    answer: false
-    explain: "La autoweg solo la puede usar un vehículo de motor con el que se puede y se permite ir a 50 km/h o más (art. 42 lid 2)."
-    cites: ["rvv:42.2"]

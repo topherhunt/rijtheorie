@@ -17,35 +17,6 @@ questions:
     cites: ["cbr-examenplan:4"]
     exam: false
 
-  - id: conduccion-y-accidentes-movil-mano
-    type: yesno
-    prompt: Conduces y sostienes el móvil en la mano para cambiar de canción. ¿Está permitido?
-    answer: false
-    explain: Está prohibido sostener un teléfono, una tableta o un reproductor de música mientras conduces.
-    cites: ["rvv:61a"]
-
-  - id: conduccion-y-accidentes-matrix-cruz
-    type: mc
-    prompt: Sobre el carril por el que circulas se enciende una cruz roja en el panel. ¿Qué debes hacer?
-    options: [Seguir porque el panel solo recomienda, Dejar de usar ese carril y pasar a otro, Aumentar la velocidad para salir rápido, Seguir en el carril y usar la vluchtstrook]
-    answer: 1
-    explain: La cruz roja significa que el carril no puede usarse, y la vluchtstrook solo sirve en emergencias, no como sustituto del carril cerrado.
-    cites: ["rvv:73"]
-
-  - id: conduccion-y-accidentes-matrix-flecha-blanca-prohibido
-    type: yesno
-    prompt: En el panel de tu carril ves una flecha blanca. ¿Ya tienes prohibido usar ese carril?
-    answer: false
-    explain: La flecha blanca solo avisa de que más adelante vendrá una cruz roja. La prohibición de usar el carril la marca la cruz roja, no el preaviso.
-    cites: ["rvv:73"]
-
-  - id: conduccion-y-accidentes-matrix-a3
-    type: yesno
-    prompt: En el panel sobre tu carril no hay flecha, sino una velocidad máxima (señal A3). ¿Puedes usar el carril?
-    answer: true
-    explain: El carril puede usarse tanto con la flecha verde como cuando el panel muestra una velocidad máxima con la señal A3.
-    cites: ["rvv:73"]
-
   - id: conduccion-y-accidentes-gesloten-entrar
     type: yesno
     prompt: Una calle tiene una geslotenverklaring para tu categoría de vehículo, sin ninguna excepción indicada. Quieres cortar camino solo por 200 metros. ¿Puedes entrar?
@@ -53,9 +24,29 @@ questions:
     explain: La geslotenverklaring prohíbe entrar en la vía y también usarla. Que el tramo sea corto no cambia nada.
     cites: ["rvv:1"]
 
-  - id: conduccion-y-accidentes-herido-irse
-    type: yesno
-    prompt: Tras un choque, el otro conductor tiene un golpe en la cabeza pero dice que se las arregla solo y que te puedes ir. ¿Puedes irte?
-    answer: false
-    explain: Si alguien ha sufrido lesiones, está prohibido irse del lugar. La excepción de haber dado tus datos vale solo para el daño material (blikschade).
-    cites: ["wvw:7"]
+  - id: conduccion-y-accidentes-matrixbord-def
+    type: mc
+    prompt: ¿Qué es un "matrixbord"?
+    options: [Un panel electrónico sobre los carriles de la autopista, Un semáforo de un cruce, Una señal de prohibición fija, Un mapa de la ruta]
+    answer: 0
+    explain: Un matrixbord es el panel electrónico encima de los carriles de la autopista que muestra velocidades, flechas o una cruz roja.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: conduccion-y-accidentes-adviessnelheid-def
+    type: mc
+    prompt: ¿Qué es la "adviessnelheid"?
+    options: [La velocidad recomendada, La velocidad máxima permitida, La velocidad mínima, La velocidad media del tráfico]
+    answer: 0
+    explain: Adviessnelheid es la velocidad recomendada (señal A4); no es el límite legal, que se llama maximumsnelheid.
+    cites: ["cbr-examenplan:4"]
+    exam: false
+
+  - id: conduccion-y-accidentes-schadeformulier-def
+    type: mc
+    prompt: ¿Qué es el "schadeformulier"?
+    options: [El parte amistoso de accidente, La multa por un accidente, El permiso de conducir, El seguro del auto]
+    answer: 0
+    explain: El Europees schadeformulier es el formulario europeo de declaración de accidente que rellenan los implicados.
+    cites: ["cbr-examenplan:4"]
+    exam: false

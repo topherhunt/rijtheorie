@@ -31,14 +31,6 @@ questions:
     explain: En una autosnelweg o autoweg está prohibido usar la berm (igual que la vluchtstrook y la vluchthaven) salvo en un noodgeval. Adelantar no es una emergencia.
     cites: ["rvv:43.3"]
 
-  - id: via-y-lugares-spitsstrook-cruz
-    type: mc
-    prompt: En una autosnelweg con spitsstrook, el panel sobre ese carril muestra una cruz roja. ¿Qué haces?
-    options: [Circulo por ese carril si hay poco tráfico, No circulo por ese carril y lo uso solo en una emergencia, Circulo por él si voy despacio, Circulo por él solo para adelantar]
-    answer: 1
-    explain: Con la cruz roja el carril no se puede usar, y la vluchtstrook solo se usa en emergencias. Solo una flecha verde habilita el carril.
-    cites: ["rvv:73", "rvv:1"]
-
   - id: via-y-lugares-spitsstrook-a3
     type: yesno
     prompt: Sobre la spitsstrook de una autosnelweg se ilumina un panel con una velocidad máxima (señal A3). No hay cruz roja. ¿Puedes circular por ese carril?
@@ -75,11 +67,3 @@ questions:
     answer: false
     explain: Un vehículo de motor solo puede aparcar en un erf en plazas señaladas o marcadas como parkeerplaats.
     cites: ["rvv:46"]
-
-  - id: via-y-lugares-autoweg-velocidad
-    type: mc
-    prompt: Un vehículo de motor solo puede alcanzar 55 km/h como máximo. ¿A qué vía puede entrar?
-    options: [A la autosnelweg y a la autoweg, Solo a la autoweg, Solo a la autosnelweg, A ninguna de las dos]
-    answer: 1
-    explain: La autoweg exige poder circular al menos a 50 km/h y la autosnelweg al menos a 60 km/h. Con 55 km/h solo cumple la autoweg.
-    cites: ["rvv:42"]

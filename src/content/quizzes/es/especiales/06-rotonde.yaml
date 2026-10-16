@@ -1,11 +1,4 @@
 questions:
-  - id: rotonde-sin-d1-adelantar-derecha
-    type: yesno
-    prompt: Estás en una plaza circular que no tiene señal D1. Un auto delante de ti va lento por el carril izquierdo. ¿Puedes adelantarlo por la derecha?
-    answer: false
-    explain: Las excepciones legales de las rotondas (ir por un lugar distinto del lado derecho, adelantar por la derecha) valen solo en plazas marcadas con D1. Sin D1 esas excepciones no existen y se aplican las reglas generales.
-    cites: ["rvv:48", "cbr-rijprocedure:3.6"]
-
   - id: rotonde-quien-no-derecha
     type: multi
     prompt: Estás en una rotonda marcada con D1. ¿Cuáles de estos conductores que siguen la calzada tienen el permiso especial de ir por un lugar distinto del lado derecho de la calzada?
@@ -16,43 +9,6 @@ questions:
     answer: [0, 1]
     explain: El art. 47 da ese permiso a los conductores de vehículos de motor y a los bromfietsers que siguen la calzada, cerca de las rotondas o en ellas. No nombra a los ciclistas.
     cites: ["rvv:47"]
-
-  - id: rotonde-mirar-entrar
-    type: mc
-    prompt: Estás a punto de entrar a una rotonda y quieres saber si puedes hacerlo. ¿Hacia dónde miras justo antes de entrar?
-    options:
-      - Hacia delante y hacia la izquierda, además de los espejos para saber qué pasa detrás
-      - Solo hacia la derecha, de donde vendrían los ciclistas
-      - Solo hacia delante, para no perder de vista el auto que te precede
-      - Solo por el espejo interior
-    answer: 0
-    explain: Justo antes de entrar miras hacia delante y a la izquierda, y usas los espejos para ver lo que pasa detrás. Antes, desde lejos, ya habías observado si venían ciclistas o ciclomotores por la derecha.
-    cites: ["cbr-rijprocedure:3.6"]
-
-  - id: rotonde-b6-entrar-izquierda
-    type: mc
-    sign: B6
-    prompt: Vas a entrar a una rotonda con esta señal en tu entrada. Un auto que ya circula por la rotonda se acerca por tu izquierda. ¿Quién pasa primero?
-    options:
-      - El auto de la rotonda, porque B6 te obliga a ceder a quien circula por ella
-      - Tú, porque el auto viene por tu izquierda y la regla de la derecha te da prioridad
-      - Tú, porque quien entra a una rotonda tiene prioridad sobre quien ya circula
-      - Quien llegue antes al punto de entrada
-    answer: 0
-    explain: B6 te obliga a ceder el paso a los conductores de la vía que cruza, y en la entrada de una rotonda esa vía es la rotonda. La regla de la derecha solo valdría sin B6 ni dientes de tiburón; con la señal no importa que el auto llegue por tu izquierda.
-    cites: ["rvv:bijlage1.B6"]
-
-  - id: rotonde-salir-ceder
-    type: mc
-    prompt: Vas a salir de una rotonda y por el carril bici que la rodea se acerca un ciclista. ¿Qué haces?
-    options:
-      - Miras a la derecha (espejo interior, exterior derecho y hombro derecho) y le cedes el paso
-      - Miras a la izquierda y pasas primero, porque tú sales de la rotonda
-      - Miras a la derecha y pasas si el ciclista va despacio
-      - Tocas la bocina y sales
-    answer: 0
-    explain: Al salir se mira a la derecha y se deja pasar al tráfico que sigue en la rotonda, también a los ciclistas del carril bici.
-    cites: ["cbr-rijprocedure:3.6"]
 
   - id: rotonde-no-bloquear-fietspad
     type: mc

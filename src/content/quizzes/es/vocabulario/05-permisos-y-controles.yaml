@@ -17,13 +17,6 @@ questions:
     cites: ["cbr-examenplan:4"]
     exam: false
 
-  - id: permisos-y-controles-kentekenbewijs-control
-    type: yesno
-    prompt: Conduces sin haber cometido ninguna infracción y un agente competente te hace señal de parar. ¿Estás obligado a detenerte y mostrar tus documentos?
-    answer: true
-    explain: La obligación nace de la primera orden del agente competente, no de que hayas cometido una infracción. El conductor de un motorrijtuig debe parar y mostrar el kentekenbewijs y el rijbewijs.
-    cites: ["wvw:160.1"]
-
   - id: permisos-y-controles-pruebas-obligadas
     type: mc
     prompt: En un control, ¿a qué pruebas estás obligado a colaborar ante la primera orden de un agente competente?
@@ -31,13 +24,6 @@ questions:
     answer: 0
     explain: El art. 160.5 obliga a colaborar con el examen de aliento y con el de saliva, y a seguir las indicaciones del agente. No hace falta ninguna orden judicial.
     cites: ["wvw:160.5"]
-
-  - id: permisos-y-controles-ademanalyse
-    type: yesno
-    prompt: Tras la prueba de soplar en el control, el agente sospecha que has superado el límite de alcohol y te ordena soplar en el aparato para el examen oficial de aliento (ademanalyse). ¿Puedes negarte?
-    answer: false
-    explain: Quien recibe esa orden está obligado a soplar en el aparato y a seguir las indicaciones del agente. La única excepción son las razones médicas especiales, que aquí no se dan.
-    cites: ["wvw:163"]
 
   - id: permisos-y-controles-rijverbod-sientes-bien
     type: mc

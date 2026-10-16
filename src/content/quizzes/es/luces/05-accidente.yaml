@@ -42,13 +42,6 @@ questions:
     explain: El artículo 6 prohíbe comportarse de modo que, por tu culpa, ocurra un accidente en el que otra persona sufra lesiones graves.
     cites: ["wvw:6"]
 
-  - id: accidente-policia-parar
-    type: yesno
-    prompt: Vas con prisa y un agente te ordena parar para mostrar tu permiso de conducir y los documentos del auto, aunque tú no has visto ninguna infracción. ¿Debes hacerlo?
-    answer: true
-    explain: A la primera orden debes detener el vehículo y mostrar los documentos.
-    cites: ["wvw:160.1"]
-
   - id: accidente-ayuda-112
     type: order
     prompt: "Llegas a un accidente con un herido. Ordena los pasos:"

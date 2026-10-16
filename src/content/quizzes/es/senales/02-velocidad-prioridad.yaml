@@ -32,15 +32,6 @@ questions:
     explain: Un auto con remolque de hasta 3500 kg tiene un máximo propio de 90 km/h (art. 22). La señal permite más, así que vale la velocidad más baja. Los 80 km/h son el máximo de otros motorvoertuigen con remolque, no el tuyo.
     cites: ["rvv:63b.1", "rvv:22"]
 
-  - id: velocidad-a2-efecto
-    type: number
-    prompt: Conduces un auto por una carretera normal fuera de la zona urbana (no es autoweg ni autosnelweg). Una señal A1 de 30 km/h por obras es seguida por esta señal y no hay otras señales de velocidad. ¿Qué velocidad máxima rige después?
-    sign: A2
-    answer: 80
-    unit: km/h
-    explain: 'A2 solo cierra el límite de 30. No te deja ir libre: vuelve el límite general, que fuera de la zona urbana en las demás vías es 80 km/h.'
-    cites: ["rvv:bijlage1.A2", "rvv:21"]
-
   - id: velocidad-a2-kom
     type: number
     prompt: Dentro de la zona urbana, una señal A1 de 30 km/h es seguida por esta señal y no hay otras señales de velocidad. ¿Qué velocidad máxima tiene tu auto después?

@@ -13,13 +13,6 @@ questions:
     explain: El artículo 53 prohíbe una distancia de MÁS de 5 metros; con 5 metros exactos está permitido.
     cites: ["rvv:53"]
 
-  - id: emergencia-ciclista
-    type: yesno
-    prompt: Vas en bicicleta y se acerca por detrás una ambulancia con luz azul y bocina de dos tonos. ¿Estás obligado a dejarla pasar?
-    answer: true
-    explain: El artículo 50 se dirige a todos los weggebruikers, no solo a los conductores de auto. También un ciclista debe dejar pasar al vehículo prioritario.
-    cites: ["rvv:50", "rvv:29.1"]
-
   - id: emergencia-amarilla
     type: yesno
     prompt: Ves un vehículo de trabajo con luz amarilla destellante, sin luz azul ni bocina de dos tonos. ¿Es la señal de urgencia que obliga a dejar pasar?
@@ -35,10 +28,9 @@ questions:
     explain: Hay que dejar pasar al vehículo prioritario, pero el artículo 5 de la WVW sigue prohibiendo maniobras que pongan en peligro a otros. Apartarte de golpe sobre el ciclista o frenar en seco crea otro peligro.
     cites: ["wvw:5", "rvv:50"]
 
-  - id: agente-semaforo-verde
-    type: mc
-    prompt: Te acercas a un cruce con el semáforo en verde, pero un agente en el cruce te indica con la mano que pares. ¿Qué haces?
-    options: ["Paro, porque debo seguir las indicaciones del agente", "Sigo, porque el semáforo está en verde", "Sigo despacio y toco la bocina", "Paro solo si el agente lleva uniforme de tráfico"]
-    answer: 0
-    explain: Los usuarios de la vía deben seguir las indicaciones que dan los agentes en relación con el tráfico, también cuando contradicen el semáforo.
-    cites: ["wvw:12.1"]
+  - id: emergencia-peaton
+    type: yesno
+    prompt: Cruzas la calle a pie y se acerca una ambulancia con luz azul y bocina de dos tonos. ¿Estás obligado a dejarla pasar?
+    answer: true
+    explain: El artículo 50 obliga a todos los usuarios de la vía, peatones incluidos, a dejar pasar a un vehículo prioritario.
+    cites: ["rvv:50"]

@@ -56,13 +56,6 @@ questions:
     explain: Los conductores de vehículos de motor, ciclomotores y snorfietsen no deben hacer ruido innecesario. Que no haya peligro no lo convierte en un ruido necesario.
     cites: ["rvv:57"]
 
-  - id: bus-parada
-    type: yesno
-    prompt: En una calle dentro de la zona urbana, el autobús pone el intermitente para salir de la parada. ¿Debes darle la oportunidad de salir?
-    answer: true
-    explain: Dentro de la bebouwde kom debes dejar que el autobús salga de la parada.
-    cites: ["rvv:56.1"]
-
   - id: bocina-primero-evitar
     type: mc
     prompt: Un ciclista delante de ti, a la derecha, empieza a desviarse hacia tu carril sin mirar. Aún tienes tiempo y espacio. ¿Qué haces primero?

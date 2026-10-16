@@ -1,12 +1,4 @@
 questions:
-  - id: ordenes-quien
-    type: multi
-    prompt: ¿Cuáles de estas personas pueden darte órdenes que debes seguir, si son competentes y reconocibles?
-    options: [Un funcionario competente, Un militar de la Koninklijke Marechaussee, Un verkeersregelaar, Un conductor de otro coche que te hace señas]
-    answer: [0, 1, 2]
-    explain: Debes seguir las órdenes orales o con gestos de funcionarios competentes, de la Koninklijke Marechaussee y de verkeersregelaars competentes y reconocibles. Otro conductor no tiene esa competencia.
-    cites: ["rvv:82.1"]
-
   - id: ordenes-sin-distintivo
     type: yesno
     prompt: Una persona sin uniforme ni ningún distintivo que la haga reconocible como agente o controlador te hace señas con la mano para que pares. ¿Estás obligado a obedecerla como a un agente?
@@ -21,30 +13,6 @@ questions:
     answer: 1
     explain: Debes parar cuando quien acompaña a un vehículo sobre rieles muestra F10, una bandera roja o una lámpara roja.
     cites: ["rvv:82.4"]
-
-  - id: ordenes-stop-politie
-    type: mc
-    prompt: Un auto de la policía muestra en su panel luminoso la palabra "stop politie" en letras rojas. ¿Qué debes hacer?
-    options: [Parar, Reducir y seguir si la vía está libre, Seguir despacio, Pasar si hay hueco]
-    answer: 0
-    explain: Debes parar cuando te muestran un stopteken, es decir, una lámpara roja o un panel luminoso de la policía o de Rijkswaterstaat con "stop" o "stop politie".
-    cites: ["rvv:83"]
-
-  - id: ordenes-sobre-senal
-    type: mc
-    prompt: Un semáforo está en verde, pero un agente competente y reconocible te hace señal de parar. ¿Qué haces?
-    options: ["Sigo: el semáforo manda", "Paro: la orden del agente va por encima", "Sigo si no veo a nadie cruzar", "Paro solo si el agente está cerca del semáforo"]
-    answer: 1
-    explain: Las órdenes van por encima de las señales y de las reglas de tráfico. El verde no te autoriza a seguir, y no hay condición de distancia ni de peatones.
-    cites: ["rvv:84"]
-
-  - id: ordenes-agente-semaforo-rojo
-    type: mc
-    prompt: Estás parado ante un semáforo en rojo y un agente competente y reconocible te hace gestos para que avances. ¿Qué haces?
-    options: ["Avanzo: la indicación del agente va por encima del semáforo", "Espero al verde: un rojo siempre se respeta", "Espero y toco el claxon para avisar", "Avanzo cuando lo hayan hecho otros coches"]
-    answer: 0
-    explain: Las órdenes del agente van por encima de las señales, también del semáforo en rojo. Esperar al verde sería desobedecer la indicación.
-    cites: ["rvv:84", "rvv:82.1"]
 
   - id: ordenes-agente-regla-derecha
     type: mc
@@ -61,3 +29,10 @@ questions:
     answer: [0, 1, 2]
     explain: El art. 12 WVW permite esas órdenes solo en interés de la seguridad, del mantenimiento y utilidad de la vía, o de la libertad del tráfico (y de estudios de tráfico autorizados por el ministro). La comodidad de otros conductores no está en la lista.
     cites: ["wvw:12"]
+
+  - id: ordenes-practica-verkeersregelaar
+    type: yesno
+    prompt: Durante el examen práctico de un curso de verkeersregelaar, una persona con la ropa prescrita para controladores te indica con gestos que pares. ¿Debes obedecerla?
+    answer: true
+    explain: El art. 82.1 incluye a quienes actúan como controladores en las prácticas o el examen de un curso de verkeersregelaar, mientras duran y con la ropa prescrita.
+    cites: ["rvv:82.1"]

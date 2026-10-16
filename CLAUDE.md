@@ -8,6 +8,7 @@ Read before working:
 - `docs/AUTHORING.md` -- how to write lessons and questions (components, question types, sourcing).
 - `docs/AUDIT.md` -- correctness audit and red-team procedure (run it after any content change).
 - `docs/PROCESS.md` -- how the content was produced: sources used, decisions made and why.
+- `docs/PEDAGOGY.md` -- problems the pedagogy reviews found in the first-draft lessons and how they were fixed; read its last section before writing content.
 - `docs/VERIFICATION.md` -- what has been checked, how, and what still needs a human; secondary-source content. Update it when you verify or add unverified content.
 
 Hard rules for this project:

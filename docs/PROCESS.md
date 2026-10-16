@@ -29,6 +29,7 @@ How the material was produced and why it looks the way it does. Update the relev
 ## Verification
 - What was checked, by whom and how, and what is still unverified: VERIFICATION.md. Short version: mechanical audit, author self-check, two red-team passes by independent model agents, no human expert yet.
 - Most red-team findings were partial statements (a rule given without its exception or condition), invented emphasis ("solo", "única") and Dutch terms not wired to the glossary. Watch for these when writing new content.
+- Two pedagogy reviews (memorization, missing whys, guessable questions, duplicates) and what they changed: PEDAGOGY.md, which ends with the lessons for writing new content.
 - Topics the exam or a safe driver needs but the law snapshots don't cover (APK intervals, fines and points, helping at an accident, shark-teeth direction) are taught from secondary sources or general knowledge at the owner's request, flagged amber to learners and listed in VERIFICATION.md for follow-up. Otherwise, claims no source supports are cut rather than re-cited.
 
 ## Content writing rules

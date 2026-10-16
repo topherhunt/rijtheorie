@@ -46,13 +46,6 @@ questions:
     explain: La Rijprocedure B pide mantener las ruedas delanteras lo más posible en posición "rechtuit". Es procedimiento, no ley; el motivo práctico es que, si te golpean por detrás, no te empujen hacia el tráfico de frente.
     cites: ["cbr-rijprocedure:3.3"]
 
-  - id: voorsorteren-derecha-suggestiestrook
-    type: yesno
-    prompt: Vas a girar a la derecha y, al borde de la calzada, hay una franja roja sin dibujos de bicicleta (suggestiestrook). ¿Puedes usarla al girar?
-    answer: true
-    explain: Según la Rijprocedure B, al girar a la derecha se puede usar la suggestiestrook. No es un fietsstrook; no tiene dibujos de bicicleta ni una prohibición para el auto.
-    cites: ["cbr-rijprocedure:3.3"]
-
   - id: voorsorteren-flecha
     type: mc
     prompt: Estás en un carril de preselección con una flecha a la derecha y tenías pensado seguir recto. ¿Qué haces?
@@ -101,11 +94,3 @@ questions:
     answer: 0
     explain: Quien gira tiene que dejar pasar al tráfico que viene de frente y al que va a su lado o muy cerca detrás, a izquierda o a derecha. El que gira cede, aunque tenga que esperar.
     cites: ["rvv:18.1"]
-
-  - id: voorsorteren-izquierda-derecha
-    type: mc
-    prompt: Giras a la izquierda en un cruce. Un auto que viene de frente gira a la derecha en el mismo cruce. ¿Quién deja pasar a quién?
-    options: [Tú le dejas pasar a él, Él te deja pasar a ti, El más rápido pasa primero, Los dos entran a la vez]
-    answer: 0
-    explain: Quien gira a la izquierda debe dejar pasar a los que vienen de frente y giran a la derecha en el mismo cruce.
-    cites: ["rvv:18.2"]

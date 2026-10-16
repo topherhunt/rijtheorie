@@ -40,13 +40,6 @@ questions:
     explain: La Rijprocedure B cita cruces sin visibilidad sin semáforos, curvas y pendientes sin visibilidad (salvo carriles marcados sin invadir el contrario) y pasos a nivel solo con luces intermitentes. En una vía recta y despejada el adelantamiento puede ser posible.
     cites: ["cbr-rijprocedure:3.5"]
 
-  - id: adelantar-parado-paso
-    type: yesno
-    prompt: Un auto está parado justo antes de un paso de peatones y el carril de al lado está libre. ¿Puedes adelantarlo por la izquierda?
-    answer: false
-    explain: Está prohibido adelantar un vehículo justo antes de un paso de peatones o encima de él, aunque esté parado y el carril contrario esté libre. Puede haber un peatón cruzando que no ves.
-    cites: ["rvv:12"]
-
   - id: adelantar-por-que-paso-cebra
     type: mc
     prompt: Detrás de un autobús lento ves delante un paso de peatones sin semáforo. Hay hueco libre a la izquierda. ¿Por qué no puedes adelantar justo antes del paso?

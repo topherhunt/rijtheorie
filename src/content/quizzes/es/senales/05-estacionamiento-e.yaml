@@ -89,15 +89,6 @@ questions:
     explain: En las plazas con línea azul, un vehículo de motor de más de dos ruedas debe llevar el disco visible detrás del parabrisas, y no puedes pasar del tiempo indicado.
     cites: ["rvv:25.2", "rvv:bijlage1.E10"]
 
-  - id: e-e10-redondeo
-    type: mc
-    prompt: Llegas a una plaza de disco a las 10:10. ¿Qué hora puedes poner en el disco?
-    sign: E10
-    options: ["10:30, el siguiente medio hora", "10:00", "10:10 exactas, no se puede redondear", "11:00"]
-    answer: 0
-    explain: Puedes redondear hacia arriba al siguiente medio o hora entera. 10:30 es el siguiente. Redondear hacia abajo no es lo que dice la ley.
-    cites: ["rvv:25.4"]
-
   - id: e-e10-moto
     type: yesno
     prompt: Dejas tu moto en una plaza con línea azul de una zona de disco. ¿Puedes hacerlo sin poner el disco?

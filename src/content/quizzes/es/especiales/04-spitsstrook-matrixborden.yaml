@@ -6,31 +6,6 @@ questions:
     explain: La cruz roja prohíbe usar el carril, pero en la vluchtstrook deja una excepción, las emergencias. Una avería que te impide seguir es el caso para el que sirve la vluchtstrook.
     cites: ["rvv:73"]
 
-  - id: spitsstrook-flecha-blanca
-    type: mc
-    prompt: El panel sobre tu carril pasa de flecha verde a flecha blanca. ¿Qué te dice?
-    options:
-      - Que más adelante habrá una cruz roja en este carril y debes prepararte
-      - Que debes cambiar de carril en este mismo momento
-      - Que el carril ya está cerrado
-      - Que ya no hay velocidad máxima en ese carril
-    answer: 0
-    explain: La flecha blanca es el aviso previo de una cruz roja. No es una orden de cambiar de carril ya ni cierra el carril todavía; te da tiempo para prepararte.
-    cites: ["rvv:73"]
-
-  - id: spitsstrook-velocidad-panel
-    type: mc
-    prompt: El panel sobre tu carril muestra 80 en un círculo rojo (señal A3). Hay poco tráfico y el límite general de esa vía sería 100 km/h. ¿Puedes ir a 100?
-    sign: A3
-    options:
-      - No, el número que muestra el panel es la velocidad máxima en ese carril
-      - Sí, el número es una recomendación cuando hay poco tráfico
-      - Sí, pero solo de día
-      - No, 80 es la velocidad mínima
-    answer: 0
-    explain: El artículo 73 habla de "maximumsnelheid, aangeduid door bord A3", y la señal A3 se titula "Maximumsnelheid op een electronisch signaleringsbord". El número es un máximo que hay que respetar, no un consejo.
-    cites: ["rvv:73", "rvv:bijlage1.A3", "rvv:62"]
-
   - id: spitsstrook-abierta-es-legal
     type: yesno
     prompt: Sobre la vluchtstrook hay un panel C23-01 (spitsstrook open) y no hay ninguna emergencia. ¿Puedes circular por ella como por un carril más?
@@ -96,11 +71,3 @@ questions:
     answer: 1
     explain: En una spitsstrook abierta, o en peligro agudo, se llama al 112 en lugar de a la Wegenwacht.
     cites: ["rws-pech"]
-
-  - id: spitsstrook-bus-turistico
-    type: mc
-    prompt: Dos carriles tienen luces con una palabra, BUS en uno y LIJNBUS en el otro. Conduces un autobús turístico (autobus, no de línea). ¿Cuál puedes usar?
-    options: [Solo el carril con BUS, Solo el carril con LIJNBUS, Los dos, Ninguno]
-    answer: 0
-    explain: Con BUS pueden usar el carril la lijnbus y la autobus. Con LIJNBUS solo la lijnbus, así que un autobús turístico no puede.
-    cites: ["rvv:73"]

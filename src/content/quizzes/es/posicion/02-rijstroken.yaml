@@ -53,22 +53,6 @@ questions:
     explain: La prohibición de usar el carril izquierdo no vale cuando tienes que preseleccionar (voorsorteren). Salir a la izquierda es preseleccionar; la salida desde otro carril no es posible sin cruzar el tráfico.
     cites: ["rvv:43.4"]
 
-  - id: rijstroken-cruz-roja-vlucht
-    type: mc
-    prompt: En una autosnelweg se enciende una cruz roja sobre tu carril. A tu derecha hay una vluchtstrook libre y no hay ninguna emergencia. ¿Qué haces?
-    options: [Paso a la vluchtstrook para no frenar, Cambio a un carril libre sin cruz roja cuando puedo hacerlo con seguridad, Sigo en mi carril si no veo ningún obstáculo, Me detengo en mi carril hasta que se apague]
-    answer: 1
-    explain: Con la cruz roja el carril no puede usarse, y la vluchtstrook solo vale en caso de emergencia; no es una vía de escape para no frenar. Hay que pasar a un carril libre. Parar en el carril tampoco es una opción.
-    cites: ["rvv:73", "rvv:43.3"]
-
-  - id: rijstroken-flecha-blanca
-    type: mc
-    prompt: Circulas por un carril y, sobre él, ves una flecha blanca. ¿Qué debes entender?
-    options: [Que el carril sigue libre y puedes acelerar, Que pronto habrá una cruz roja y debes prepararte para dejar el carril, Que el carril es solo para autobuses, Que debes parar en la vluchtstrook]
-    answer: 1
-    explain: 'Una flecha blanca es el preaviso de una cruz roja: cambia de carril a tiempo y con seguridad. No es una luz de "carril libre" ni una orden de parar.'
-    cites: ["rvv:73"]
-
   - id: rijstroken-luces-usar
     type: multi
     prompt: Conduces un coche. ¿En cuáles de estos carriles puedes circular?
@@ -76,14 +60,6 @@ questions:
     answer: [0, 2]
     explain: La flecha verde o la velocidad máxima de la señal A3 significan que el carril puede usarse. La cruz roja lo prohíbe, y con BUS iluminado solo lo usan el lijnbus y el autobus, no un coche.
     cites: ["rvv:73"]
-
-  - id: rijstroken-limite-un-carril
-    type: yesno
-    prompt: En una calzada de tres carriles, una señal de velocidad máxima de 70 km/h lleva debajo la placa L11, que marca solo el carril derecho. Tú circulas por el carril izquierdo. ¿Te afecta ese límite?
-    sign: L11
-    answer: false
-    explain: En una calzada dividida en carriles, una señal puede limitarse a uno o varios carriles, y la placa L11 indica a cuáles. Para los demás carriles no vale; tu carril izquierdo sigue con el límite general.
-    cites: ["rvv:65.1", "rvv:bijlage1.L11"]
 
   - id: rijstroken-spitsstrook-seguir
     type: mc

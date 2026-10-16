@@ -83,30 +83,3 @@ questions:
     answer: 0
     explain: Dentro de la zona urbana el art. 56.1 te obliga a dar al autobús que avisa la oportunidad de salir de la parada. Que tú circules por la calzada no te da prioridad frente a él.
     cites: ["rvv:56.1"]
-
-  - id: bus-tram-colonne-resto
-    type: mc
-    prompt: En zona urbana, un autobús con el intermitente quiere salir de la parada mientras pasan los coches de un cortejo fúnebre. ¿Quién puede no dejarle salir?
-    options:
-      - Solo los motorvehículos que forman parte del cortejo
-      - Todos los que pasen en ese momento, porque el cortejo tiene prioridad en la calle
-      - Nadie, porque el art. 56 no prevé excepciones
-    answer: 0
-    explain: El art. 56.2 exceptúa solo a los motorvehículos de la columna militar o del cortejo fúnebre. Tú, si circulas fuera del cortejo, sigues obligado por el art. 56.1.
-    cites: ["rvv:56.1", "rvv:56.2"]
-
-  - id: bus-tram-parada-estacionar
-    type: yesno
-    sign: L3
-    prompt: Junto a la señal de parada de autobús (L3) quieres esperar a un amigo con el motor encendido, a 8 metros de la señal. No hay marcación de bloques en el pavimento y nadie sube ni baja. ¿Puedes dejar el auto parado ahí?
-    answer: false
-    explain: Sin marcación de bloques, el art. 23.1 prohíbe dejar el vehículo parado (stilstaan) a menos de 12 metros de la señal, también para esperar a alguien. Que no lo aparques ni lo dejes solo no cambia nada.
-    cites: ["rvv:23.1"]
-
-  - id: bus-tram-parada-bajar
-    type: yesno
-    sign: L3
-    prompt: Estás a 8 metros de la señal de parada de autobús (L3), sin marcación de bloques. Paras solo unos segundos para dejar bajar a tu hija y sigues. ¿Está permitido?
-    answer: true
-    explain: El art. 23.2 exceptúa de la prohibición de la parada de autobús el dejar subir o bajar pasajeros de inmediato. La excepción vale solo para ese caso, no para esperar a nadie.
-    cites: ["rvv:23.1", "rvv:23.2"]

@@ -1,11 +1,4 @@
 questions:
-  - id: licht-dag-zicht
-    type: yesno
-    prompt: Tu auto se ha averiado y está parado de día, con niebla densa, en una vluchtstrook de una autosnelweg. ¿Debe llevar luz de posición y luz trasera?
-    answer: true
-    explain: Fuera de la zona urbana, un vehículo parado en una vluchtstrook junto a una autosnelweg lleva stadslicht y luz trasera de noche y también de día si la visibilidad está seriamente reducida.
-    cites: ["rvv:38"]
-
   - id: licht-aanhanger
     type: mc
     prompt: Dejas un remolque desenganchado, de noche, sobre la calzada fuera de la zona urbana. ¿Qué luces debe llevar?

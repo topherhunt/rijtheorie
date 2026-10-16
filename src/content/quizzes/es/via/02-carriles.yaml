@@ -51,34 +51,3 @@ questions:
     answer: false
     explain: Con BUS iluminado el carril solo lo usan los conductores de un lijnbus y de un autobus. Un coche no está entre ellos.
     cites: ["rvv:73"]
-
-  - id: carriles-lijnbus-luz
-    type: mc
-    prompt: Sobre un carril se ilumina la palabra LIJNBUS. Conduces un autobús turístico (autobus, no de línea). ¿Puedes usar ese carril?
-    options: ["Sí, un autobus siempre puede", "No, solo los conductores de un lijnbus", "Sí, si no hay ningún lijnbus a la vista", "Sí, a menos de 30 km/h"]
-    answer: 1
-    explain: Con LIJNBUS el carril solo lo usan los conductores de un lijnbus. Con BUS iluminado sí podría usarlo un autobus; la palabra LIJNBUS es más restrictiva.
-    cites: ["rvv:73"]
-
-  - id: carriles-vlucht-atajo
-    type: yesno
-    prompt: Estás en una autosnelweg con tráfico lento en tu carril. A tu derecha hay una vluchtstrook libre y no hay ninguna señal C23-01. ¿Puedes usarla para avanzar más rápido?
-    answer: false
-    explain: Fuera de una emergencia está prohibido usar la vluchtstrook en una autosnelweg o autoweg. El tráfico lento no es una emergencia.
-    cites: ["rvv:43.3"]
-
-  - id: carriles-vlucht-averia
-    type: mc
-    prompt: En una autosnelweg, ¿en cuál de estas situaciones puedes usar la vluchtstrook (sin ninguna señal C23-01)?
-    options: [Hay tráfico lento en tu carril, Tu coche se avería y no puedes seguir, Necesitas mirar el mapa del móvil, Quieres dejar pasar a un coche más rápido]
-    answer: 1
-    explain: La vluchtstrook solo puede usarse en caso de emergencia, como una avería que te impide continuar. Los otros tres casos no son emergencias.
-    cites: ["rvv:43.3"]
-
-  - id: carriles-spits-abierto
-    type: yesno
-    prompt: Ves la señal C23-01 sobre la vluchtstrook de tu derecha. Vas en un coche normal, sin ninguna emergencia. ¿Puedes circular por esa franja?
-    sign: C23-01
-    answer: true
-    explain: Con C23-01 la franja es un spitsstrook abierto, es decir, un carril de circulación. La prohibición de usar la vluchtstrook fuera de emergencias no se aplica mientras está abierto como spitsstrook.
-    cites: ["rvv:1", "rvv:bijlage1.C23-01"]

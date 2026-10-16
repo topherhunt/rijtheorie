@@ -8,14 +8,6 @@ questions:
     explain: La autosnelweg es solo para vehículos de motor que pueden y son capaces de ir al menos a 60 km/h. Una bromfiets no es un motorvoertuig para el RVV (art. 1), aunque tenga motor.
     cites: ["rvv:42.1", "rvv:1", "rvv:bijlage1.G1"]
 
-  - id: gh-g3-lento
-    type: yesno
-    prompt: Ves G3 (autoweg). Conduces un vehículo de motor que, por construcción, no puede pasar de 40 km/h. ¿Puedes usar esa autoweg?
-    sign: G3
-    answer: false
-    explain: La autoweg es solo para vehículos de motor que pueden y son capaces de ir al menos a 50 km/h. Uno que no es capaz de llegar a 50 no puede entrar.
-    cites: ["rvv:42.2", "rvv:bijlage1.G3"]
-
   - id: gh-erf-velocidad
     type: number
     prompt: Entras con tu auto en un camino dentro de un erf. No hay nadie a la vista. ¿Qué velocidad máxima rige?
@@ -49,23 +41,6 @@ questions:
     explain: Los conductores que no son ciclistas, jinetes ni peatones usan la calzada (rijbaan), y la rijbaan no incluye los fietspaden. "No obligatorio" habla de los ciclistas, no te abre el camino a ti.
     cites: ["rvv:10.1", "rvv:1", "rvv:bijlage1.G13"]
 
-  - id: gh-bromfiets-g11
-    type: mc
-    prompt: Conduces un ciclomotor (bromfiets). Junto a la calzada hay un carril bici con la señal G11 y no hay ningún fiets/bromfietspad. ¿Por dónde circulas?
-    sign: G11
-    options: ["Por el carril bici G11", "Por la calzada", "Por la acera"]
-    answer: 1
-    explain: El bromfietser usa el fiets/bromfietspad y, si no existe, la calzada. El G11 es para ciclistas, no para ciclomotores.
-    cites: ["rvv:6.1", "rvv:6.2", "rvv:bijlage1.G11"]
-
-  - id: gh-remolque-autosnelweg
-    type: number
-    prompt: Conduces un auto con un remolque de masa máxima autorizada de 750 kg por una autosnelweg sin otras señales de velocidad. ¿Cuál es tu velocidad máxima?
-    answer: 90
-    unit: km/h
-    explain: El máximo general de la autosnelweg es 130 km/h, pero un auto con un remolque de hasta 3500 kg de masa máxima tiene un máximo propio de 90 km/h, y vale el más bajo.
-    cites: ["rvv:22", "rvv:21", "rvv:63b.1"]
-
   - id: gh-zone
     type: mc
     prompt: Sobre una señal está escrita la palabra "zone", sin indicar un área. ¿Hasta dónde vale?
@@ -73,14 +48,6 @@ questions:
     answer: 0
     explain: Sin indicar el área, la señal vale hasta la señal que marca el fin de la zona.
     cites: ["rvv:66.2"]
-
-  - id: gh-g1-vs-g3-55
-    type: mc
-    prompt: Conduces un vehículo de motor que, por construcción, no puede pasar de 55 km/h. ¿Dónde puedes entrar?
-    options: ["Solo en una autoweg (G3)", "Solo en una autosnelweg (G1)", "En las dos", "En ninguna de las dos"]
-    answer: 0
-    explain: La autoweg exige un vehículo que pueda y sea capaz de ir al menos a 50 km/h, y el tuyo llega a 55. La autosnelweg pide al menos 60, y no los alcanza.
-    cites: ["rvv:42.1", "rvv:42.2"]
 
   - id: gh-h1-inicio
     type: mc
@@ -90,12 +57,3 @@ questions:
     answer: 0
     explain: H1 marca el inicio de la bebouwde kom, donde rige el máximo de 50 km/h para vehículos de motor. H2 es la que la termina. El erf lo marca G5, y las zonas de 30 las marca una señal A1 con la palabra zone.
     cites: ["rvv:bijlage1.H1", "rvv:20"]
-
-  - id: gh-h2-fin
-    type: mc
-    prompt: Circulas en auto a 50 km/h por una calle del pueblo y pasas esta señal, en una carretera normal (no autoweg ni autosnelweg) sin otras señales de velocidad. ¿Qué máximo rige después?
-    sign: H2
-    options: ["80 km/h", "50 km/h", "100 km/h", "130 km/h"]
-    answer: 0
-    explain: H2 marca el fin de la bebouwde kom. Fuera de ella, en las vías que no son autoweg ni autosnelweg, el máximo general es 80 km/h. 100 es de la autoweg y 130 de la autosnelweg.
-    cites: ["rvv:bijlage1.H2", "rvv:21"]

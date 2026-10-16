@@ -108,17 +108,6 @@ questions:
     explain: "B no tiene a nadie por su derecha y pasa primero. C tiene a B a su derecha, así que pasa después. A tiene a C a su derecha y además gira a la izquierda: va último."
     cites: ["rvv:15.1", "rvv:18.1"]
 
-  - id: afslaan-no-bloquear
-    type: mc
-    prompt: Tienes semáforo en verde para girar a la izquierda, pero la calle a la que entras tiene cola y no hay sitio para tu auto al otro lado del cruce. ¿Qué haces?
-    options:
-      - Espero antes del cruce hasta que haya sitio para salir
-      - Entro y espero dentro del cruce, porque tengo verde
-      - Entro hasta la mitad para que me dejen sitio
-    answer: 0
-    explain: El art. 14 prohíbe bloquear un cruce y el CBR pide entrar solo si puedes salir de él. Tener verde no te autoriza a quedarte atravesado cuando el semáforo cambie.
-    cites: ["rvv:14", "cbr-rijprocedure:3.3"]
-
   - id: afslaan-ruedas
     type: mc
     prompt: Esperas en el cruce, sin bloquearlo, para girar a la izquierda mientras pasan los de frente. ¿Cómo recomienda el CBR tener las ruedas delanteras?

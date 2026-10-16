@@ -31,28 +31,12 @@ questions:
     explain: Con el semáforo de peatones en rojo no rige la obligación especial del artículo 49, pero el artículo 5 sigue vigente y te prohíbe causar peligro. Por eso no sigues contra alguien que ya está cruzando.
     cites: ["rvv:49.4", "wvw:5"]
 
-  - id: vulnerables-bus-parado
-    type: mc
-    prompt: Un autobús está detenido en la parada y varios pasajeros están bajando por el lado por el que quieres pasar. ¿Qué haces?
-    options: ["Paso despacio, a paso de peatón, entre el autobús y los pasajeros", "Espero a que los pasajeros terminen de bajar y se aparten", "Paso rápido antes de que lleguen a mi lado", "Paso tocando la bocina para que se aparten"]
-    answer: 1
-    explain: "Si quieres pasar por el lado donde suben o bajan los pasajeros, debes darles la oportunidad de hacerlo. Pasar despacio no se la da: los estorbas."
-    cites: ["rvv:52"]
-
   - id: vulnerables-bus-parado-lado
     type: yesno
     prompt: Un autobús está detenido y los pasajeros bajan por el lado contrario al que quieres pasar. ¿Tienes que esperar por esos pasajeros?
     answer: false
     explain: La obligación vale para pasar por el lado donde los pasajeros suben o bajan. Por el otro lado no los estorbas.
     cites: ["rvv:52"]
-
-  - id: vulnerables-bus-sale
-    type: mc
-    prompt: Circulas dentro de una zona urbana. Un autobús parado en su parada, a tu derecha, pone el intermitente para volver a la calzada, y podrías pasar antes de que se incorpore. ¿Qué haces?
-    options: ["Le dejo salir: debo darle la oportunidad de salir de la parada", "Paso rápido antes de que se incorpore", "Hago ráfagas de luces para que espere", "Le dejo salir solo si el autobús lleva pasajeros"]
-    answer: 0
-    explain: Dentro de la zona urbana debes dar al autobús la oportunidad de salir de la parada cuando lo indica con el intermitente.
-    cites: ["rvv:56.1"]
 
   - id: vulnerables-giro-secuencia
     type: mc
@@ -68,12 +52,4 @@ questions:
     options: ["Giro: si no está en el espejo, ya no está", "Miro por encima del hombro derecho: puede estar en el ángulo muerto", "Toco la bocina y giro", "Me quedo mirando atrás todo el tiempo necesario hasta verlo"]
     answer: 1
     explain: "Lo que no sale en el espejo puede estar en el ángulo muerto, y ahí se mira por encima del hombro. Pero no debes quedarte mirando atrás mucho tiempo: el auto puede desviarse y no ves lo que ocurre delante."
-    cites: ["cbr-rijprocedure:3"]
-
-  - id: vulnerables-dode-hoek-fietspad
-    type: mc
-    prompt: Vas a cruzar un fietspad que corre paralelo a tu calle. ¿Cómo revisas si puedes cruzar?
-    options: ["Miro el espejo exterior y el ángulo muerto mientras el auto sigue en línea recta", "Solo miro hacia delante, porque los ciclistas deben cederme el paso", "Giro el volante hacia el fietspad y miro después", "Miro hacia atrás un buen rato con el auto ya cruzando"]
-    answer: 0
-    explain: El CBR pide revisar el espejo exterior y el ángulo muerto antes de cruzar fietspaden, y hacerlo mientras el auto va en línea recta. Mirar atrás mucho tiempo desvía el auto y no ves lo que hay delante.
     cites: ["cbr-rijprocedure:3"]

@@ -31,14 +31,6 @@ questions:
     explain: La flecha blanca es el aviso previo de una cruz roja (art. 73). Todavía puedes usar el carril, pero debes prepararte para salir de él a tiempo.
     cites: ["rvv:73"]
 
-  - id: mx-spitsstrook-abierto
-    type: yesno
-    prompt: Hay cola en la autosnelweg y sobre la vluchtstrook de tu derecha se ilumina la señal C23-01. ¿Puedes usar esa franja como carril?
-    sign: C23-01
-    answer: true
-    explain: C23-01 convierte la vluchtstrook en spitsstrook, un carril más mientras la señal esté activa.
-    cites: ["rvv:1", "rvv:bijlage1.C23-01"]
-
   - id: mx-c23-02-desalojar
     type: mc
     prompt: Circulas por un spitsstrook abierto y el panel muestra esta señal. ¿Qué haces?
@@ -48,21 +40,6 @@ questions:
     explain: C23-02 (Spitsstrook vrijmaken) ordena dejar libre el spitsstrook. Para salir de él puedes cruzar la línea continua (art. 76.2). Detenerte en el carril sería peor, y seguir es ignorar la orden.
     cites: ["rvv:bijlage1.C23-02", "rvv:76.2"]
 
-  - id: mx-c23-03-fin
-    type: yesno
-    prompt: Pasas la señal C23-03 y a tu derecha sigue la franja de asfalto. ¿Puedes seguir usándola para avanzar?
-    sign: C23-03
-    answer: false
-    explain: C23-03 es el fin del spitsstrook. La franja vuelve a ser vluchtstrook, que salvo en emergencias no puedes usar.
-    cites: ["rvv:bijlage1.C23-03", "rvv:43.3"]
-
-  - id: mx-vluchtstrook-salida
-    type: yesno
-    prompt: Te has pasado de tu salida de la autosnelweg. ¿Puedes parar en la vluchtstrook para esperar a que haya hueco y volver atrás?
-    answer: false
-    explain: Salvo en emergencias no puedes usar la vluchtstrook (art. 43.3). Pasarte de salida es un error tuyo, no una emergencia.
-    cites: ["rvv:43.3"]
-
   - id: mx-parar-pasajero
     type: yesno
     prompt: Circulas por el carril derecho de una autosnelweg y tu pasajero quiere bajar ya. ¿Puedes pararte un momento en la calzada?
@@ -70,18 +47,10 @@ questions:
     explain: En la calzada de una autosnelweg o autoweg no puedes dejar tu vehículo detenido (art. 43.2), ni siquiera un momento.
     cites: ["rvv:43.2"]
 
-  - id: mx-camion
+  - id: mx-bus-lijnbus-turistico
     type: mc
-    prompt: Conduces un camión en una autosnelweg de tres carriles y no tienes que preseleccionar. ¿Qué carriles puedes usar?
-    options: ["Los dos de la derecha", "Los tres", "Los dos de la izquierda", "El del centro y el izquierdo"]
+    prompt: Conduces un autobús turístico (autobus, no de línea) y sobre un carril se ilumina una palabra. ¿Con cuál puedes usar ese carril?
+    options: ["Con BUS, pero no con LIJNBUS", "Con LIJNBUS, pero no con BUS", "Con las dos palabras", "Con ninguna de las dos"]
     answer: 0
-    explain: Un camión solo usa los dos carriles más a la derecha en una calzada de tres o más carriles, salvo para preseleccionar.
-    cites: ["rvv:43.4"]
-
-  - id: mx-caravana-carril
-    type: mc
-    prompt: Conduces un auto con caravana; juntos miden 9 m. Vas por una autosnelweg de tres carriles y no tienes que preseleccionar. ¿Qué carriles puedes usar?
-    options: ["Los dos de la derecha", "Los tres, porque un auto no es un camión", "Los dos de la izquierda", "Cualquiera, porque la caravana no es un vehículo a motor"]
-    answer: 0
-    explain: 'Un conjunto de vehículos de más de 7 m de longitud total solo usa los dos carriles más a la derecha (art. 43.4). Que el auto solo no sea un camión no importa: cuenta la longitud del conjunto.'
-    cites: ["rvv:43.4"]
+    explain: BUS admite lijnbus y autobus; LIJNBUS admite solo el autobús de línea. Un autobús turístico no es lijnbus.
+    cites: ["rvv:73"]

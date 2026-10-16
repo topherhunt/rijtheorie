@@ -25,23 +25,6 @@ questions:
     explain: 'L8 es informativa (Doodlopende weg): avisa de que la calle no tiene salida, pero no la cierra. Una prohibición de entrada sería una señal C.'
     cites: ["rvv:bijlage1.L8"]
 
-  - id: kl-l3-pasajero
-    type: mc
-    prompt: Junto a una parada de bus (L3, con marca de bloques) necesitas detener tu auto. ¿Qué es lícito?
-    sign: L3
-    options: ["Detenerme el tiempo inmediato para que baje un pasajero", "Detenerme 5 minutos a esperar a alguien", "Estacionar si pongo las luces de emergencia"]
-    answer: 0
-    explain: A la altura de la marca de bloques no puedes detenerte, salvo para el in- o uitstappen inmediato de pasajeros (art. 23.1.e y 23.2). Esperar a alguien o estacionar no entra en esa excepción, y las luces de emergencia no cambian nada.
-    cites: ["rvv:23.1.e", "rvv:23.2", "rvv:bijlage1.L3"]
-
-  - id: kl-l3-12m
-    type: yesno
-    prompt: Una parada de bus tiene la señal L3 pero no hay marca de bloques en la calzada. Detienes tu auto a 8 m de la señal para esperar a un amigo. ¿Puedes?
-    sign: L3
-    answer: false
-    explain: Sin marca de bloques, no puedes detenerte (stilstaan) a menos de 12 m de la señal de parada (art. 23.1). Esperar a un amigo no es el in- o uitstappen inmediato de la excepción.
-    cites: ["rvv:23.1", "rvv:23.2", "rvv:bijlage1.L3"]
-
   - id: kl-l13-parar
     type: yesno
     prompt: Estás dentro de un túnel (L13) y quieres detenerte un momento a mirar el mapa, sin que el tráfico te obligue. ¿Puedes?

@@ -62,14 +62,6 @@ questions:
     explain: La luz blanca (fija o intermitente) autoriza el paso, y solo en las direcciones indicadas.
     cites: ["rvv:70"]
 
-  - id: sf-overweg
-    type: mc
-    prompt: En un paso a nivel ves una luz roja intermitente. ¿Qué haces?
-    options: ["Me detengo", "Paso rápido", "Reduzco y paso", "Toco la bocina y paso"]
-    answer: 0
-    explain: "Rojo intermitente: debes detenerte. Blanco intermitente: no se acerca ningún tren."
-    cites: ["rvv:71"]
-
   - id: sf-overweg-cola
     type: mc
     prompt: La luz blanca del paso a nivel parpadea, pero la cola de delante te dejaría parado encima de las vías al otro lado. ¿Qué haces?

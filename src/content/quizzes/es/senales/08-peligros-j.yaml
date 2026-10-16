@@ -60,12 +60,3 @@ questions:
     answer: true
     explain: L2 marca la voetgangersoversteekplaats. Ante ella debes dejar pasar a los peatones que cruzan o están a punto de cruzar (art. 49.2), igual que si te la hubiera anunciado J22.
     cites: ["rvv:49.2", "rvv:bijlage1.L2"]
-
-  - id: j-j22-por-que-no-adelantar
-    type: mc
-    prompt: Un auto circula delante de ti y se acerca a un paso de peatones anunciado por J22. La calzada está libre a tu izquierda. ¿Por qué no debes adelantarlo justo antes del paso?
-    sign: J22
-    options: ["Porque puede estar parando por un peatón que tú no ves", "Porque en un paso de peatones el límite es 30 km/h", "Porque solo puedes adelantar con una línea discontinua", "Porque el paso es una zona sin prioridad para ti"]
-    answer: 0
-    explain: Está prohibido adelantar justo antes de un paso de peatones o sobre él (art. 12), aunque la calzada esté libre. La razón práctica es que el auto delantero puede frenar por un peatón que su carrocería te tapa. Ni hay un límite de 30 en el paso ni depende de las líneas.
-    cites: ["rvv:12", "rvv:bijlage1.J22"]

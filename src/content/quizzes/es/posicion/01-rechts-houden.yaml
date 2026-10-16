@@ -38,21 +38,6 @@ questions:
     explain: Un auto usa la rijbaan. El fietspad no es parte de la calzada y la ley no da ninguna excepción por atasco, velocidad o luces.
     cites: ["rvv:10.1"]
 
-  - id: rechts-houden-fietsstrook-continua
-    type: yesno
-    prompt: La calle es estrecha y hay un fietsstrook marcado con líneas continuas y sin ciclistas a la vista. ¿Puedes circular con tu auto sobre él para dejar sitio al tráfico?
-    answer: false
-    explain: Un fietsstrook con líneas continuas está prohibido para quien no sea ciclista o conductor de gehandicaptenvoertuig, aunque esté vacío.
-    cites: ["rvv:10.2"]
-
-  - id: rechts-houden-fietsstrook-discontinua
-    type: mc
-    prompt: En una calle ves un fietsstrook con líneas discontinuas. Un camión viene de frente y no quieres rozarlo. ¿Qué dice la Rijprocedure B sobre usar el fietsstrook con tu auto?
-    options: [Está prohibido igual que el de líneas continuas, Puedes usarlo si es deseable o necesario y sin estorbar a un ciclista, Debes usarlo siempre que esté libre, Solo puedes cruzarlo en perpendicular]
-    answer: 1
-    explain: Con líneas discontinuas la ley no lo prohíbe (rvv art. 10 lid 2 solo habla de líneas continuas), pero el fietsstrook sigue siendo para ciclistas. La Rijprocedure B lo permite solo si es deseable o necesario, sin estorbar nunca a un ciclista y evitando parar en él.
-    cites: ["rvv:10.2", "cbr-rijprocedure:3.3"]
-
   - id: rechts-houden-ciclistas-paralelo
     type: mc
     prompt: En una calle sin carril bici, dos ciclistas van uno al lado del otro y no te dejan pasar de inmediato. ¿Qué haces?
